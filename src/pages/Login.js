@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { useStateValue } from "state/State";
 import ApiRequest from "utils/ApiRequest";
@@ -94,9 +94,9 @@ const Login = ({ history }) => {
                 </button>
               </div>
               <div className="control">
-                <NavLink to="#" className="button is-link">
-                  Redefinir a palavra-passe
-                </NavLink>
+                <Link to="/recover-password" className="button is-link">
+                  Recuperar a palavra-passe
+                </Link>
               </div>
             </div>
           </form>

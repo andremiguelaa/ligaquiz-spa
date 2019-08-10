@@ -11,6 +11,7 @@ import RouteWithTitle from "utils/RouteWithTitle";
 import Header from "partials/Header";
 import Home from "pages/Home";
 import Login from "pages/Login";
+import ResetPassword from "pages/ResetPassword";
 import Register from "pages/Register";
 import NoMatch from "pages/NoMatch";
 
@@ -35,6 +36,12 @@ const App = () => (
                     exact
                     path="/login"
                     component={Login}
+                  />
+                  <RouteWithTitle
+                    title="Liga Quiz | Recuperar palavra-passe"
+                    exact
+                    path="/recover-password"
+                    component={ResetPassword}
                   />
                   <RouteWithTitle
                     title="Liga Quiz | Registar"

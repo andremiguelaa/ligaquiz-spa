@@ -1,22 +1,23 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { useStateValue } from "state/State";
+import logo from "img/logo.png";
 
 const Header = () => {
   const [{ user }] = useStateValue();
   return (
     <header>
       <nav
-        className="navbar has-shadow is-fixed-top"
+        className="navbar is-fixed-top is-light"
         role="navigation"
         aria-label="main navigation"
       >
         <div className="container">
           <div className="navbar-brand">
-            <NavLink to="/" className="navbar-item">
-              <img src="/img/logo.png" alt="logo" />
-            </NavLink>
+            <Link to="/" className="navbar-item">
+              <img src={logo} alt="logo" />
+            </Link>
             <button className="navbar-burger burger">
               <span aria-hidden="true" />
               <span aria-hidden="true" />
@@ -28,12 +29,12 @@ const Header = () => {
               <div className="navbar-item">
                 {!user && (
                   <div className="buttons">
-                    <NavLink to="/login" className="button is-light">
+                    <Link to="/login" className="button is-light">
                       Entrar
-                    </NavLink>
-                    <NavLink to="/register" className="button is-primary">
+                    </Link>
+                    <Link to="/register" className="button is-primary">
                       Registar
-                    </NavLink>
+                    </Link>
                   </div>
                 )}
               </div>
