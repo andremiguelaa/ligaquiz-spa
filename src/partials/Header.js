@@ -1,6 +1,7 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { useStateValue } from 'state/State';
+import React from "react";
+import { NavLink } from "react-router-dom";
+
+import { useStateValue } from "state/State";
 
 const Header = () => {
   const [{ user }] = useStateValue();
@@ -16,11 +17,11 @@ const Header = () => {
             <NavLink to="/" className="navbar-item">
               <img src="/img/logo.png" alt="logo" />
             </NavLink>
-            <a className="navbar-burger burger">
-              <span aria-hidden="true"></span>
-              <span aria-hidden="true"></span>
-              <span aria-hidden="true"></span>
-            </a>
+            <button className="navbar-burger burger">
+              <span aria-hidden="true" />
+              <span aria-hidden="true" />
+              <span aria-hidden="true" />
+            </button>
           </div>
           <div className="navbar-menu">
             <div className="navbar-end">

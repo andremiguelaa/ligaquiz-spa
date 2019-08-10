@@ -1,37 +1,42 @@
-import React, { useState } from 'react';
-import Cookies from 'js-cookie';
-import { useStateValue } from 'state/State';
+import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
+
+import { useStateValue } from "state/State";
+import ApiRequest from "utils/ApiRequest";
+import { setLoginData } from "utils/Auth";
 
 const Login = ({ history }) => {
   const [formData, setformData] = useState({
-    email: '',
-    password: ''
+    email: "",
+    password: ""
   });
 
   const [errorMessage, setErrorMessage] = useState(null);
   const [submitting, setSubmitting] = useState(false);
 
-  const [state, dispatch] = useStateValue();
+  const [{ user }, dispatch] = useStateValue();
 
-  const handleSubmit = () => {
+  useEffect(() => {
+    if (user) {
+      history.push("/");
+    }
+  });
+
+  const handleSubmit = event => {
     event.preventDefault();
     setSubmitting(true);
     setErrorMessage(null);
-    axios
-      .post('/api/session', formData)
+    ApiRequest.post("session", formData)
       .then(({ data: { data } }) => {
-        const validity = Math.round(
-          (Date.parse(data.expires_at) - Date.now()) / 1000 / 60 / 60 / 24 / 2
-        );
-        Cookies.set('BEARER-TOKEN', data.access_token, { expires: validity });
-        dispatch({
-          type: 'user.login',
-          payload: data.user
-        });
-        history.push('/');
+        setLoginData(data, dispatch);
+        history.push("/");
       })
       .catch(error => {
-        setErrorMessage(error.response.data.message);
+        try {
+          setErrorMessage(error.response.data.message);
+        } catch (error) {
+          setErrorMessage("server error");
+        }
         setSubmitting(false);
       });
   };
@@ -49,7 +54,7 @@ const Login = ({ history }) => {
                   className="input"
                   type="email"
                   required
-                  onChange={() => {
+                  onChange={event => {
                     setformData({
                       ...formData,
                       email: event.target.value
@@ -57,7 +62,7 @@ const Login = ({ history }) => {
                   }}
                 />
                 <span className="icon is-small is-left">
-                  <i className="fa fa-envelope"></i>
+                  <i className="fa fa-envelope" />
                 </span>
               </div>
             </div>
@@ -69,7 +74,7 @@ const Login = ({ history }) => {
                   type="password"
                   name="password"
                   required
-                  onChange={() => {
+                  onChange={event => {
                     setformData({
                       ...formData,
                       password: event.target.value
@@ -77,7 +82,7 @@ const Login = ({ history }) => {
                   }}
                 />
                 <span className="icon is-small is-left">
-                  <i className="fa fa-key"></i>
+                  <i className="fa fa-key" />
                 </span>
               </div>
               {errorMessage && <p className="help is-danger">{errorMessage}</p>}
@@ -89,9 +94,9 @@ const Login = ({ history }) => {
                 </button>
               </div>
               <div className="control">
-                <a href="#" className="button is-link">
+                <NavLink to="#" className="button is-link">
                   Redefinir a palavra-passe
-                </a>
+                </NavLink>
               </div>
             </div>
           </form>
