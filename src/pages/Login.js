@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { Trans } from "@lingui/macro";
 
 import { useStateValue } from "state/State";
 import ApiRequest from "utils/ApiRequest";
@@ -44,11 +45,15 @@ const Login = ({ history }) => {
   return (
     <div className="column is-4-widescreen is-offset-4-widescreen is-8-tablet is-offset-2-tablet">
       <article className="message">
-        <div className="message-header">Entrar</div>
+        <div className="message-header">
+          <Trans>Entrar</Trans>
+        </div>
         <div className="message-body">
           <form onSubmit={handleSubmit}>
             <div className="field">
-              <label className="label">E-Mail</label>
+              <label className="label">
+                <Trans>E-Mail</Trans>
+              </label>
               <div className="control has-icons-left">
                 <input
                   className="input"
@@ -67,7 +72,9 @@ const Login = ({ history }) => {
               </div>
             </div>
             <div className="field">
-              <label className="label">Palavra-passe</label>
+              <label className="label">
+                <Trans>Palavra-passe</Trans>
+              </label>
               <div className="control has-icons-left">
                 <input
                   className="input"
@@ -93,12 +100,12 @@ const Login = ({ history }) => {
                   className={`button is-primary ${submitting && "is-loading"}`}
                   disabled={submitting}
                 >
-                  Entrar
+                  <Trans>Entrar</Trans>
                 </button>
               </div>
               <div className="control">
                 <Link to="/recover-password" className="button is-link">
-                  Recuperar a palavra-passe
+                  <Trans>Recuperar palavra-passe</Trans>
                 </Link>
               </div>
             </div>

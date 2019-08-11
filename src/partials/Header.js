@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import OutsideClickHandler from "react-outside-click-handler";
+import { Trans } from "@lingui/macro";
 
 import { useStateValue } from "state/State";
 import logo from "img/logo.png";
@@ -33,10 +34,10 @@ const Header = () => {
                 <div className="navbar-item">
                   <div className="buttons">
                     <Link to="/login" className="button is-light">
-                      Entrar
+                      <Trans>Entrar</Trans>
                     </Link>
                     <Link to="/register" className="button is-primary">
-                      Registar
+                      <Trans>Registar</Trans>
                     </Link>
                   </div>
                 </div>
@@ -63,14 +64,16 @@ const Header = () => {
                   <div className="navbar-dropdown is-right">
                     <Link to="/national-ranking" className="navbar-item">
                       <i className="fa fa-btn fa-trophy" />
-                      &nbsp;Ranking nacional
+                      &nbsp;<Trans>Ranking nacional</Trans>
                     </Link>
                     <Link to="/logout" className="navbar-item">
                       <i className="fa fa-btn fa-sign-out" />
-                      &nbsp;Sair
+                      &nbsp;<Trans>Sair</Trans>
                     </Link>
                     <hr className="navbar-divider" />
-                    <div className="navbar-item">Versão 4.0</div>
+                    <div className="navbar-item">
+                      <Trans>Versão 4.0</Trans>
+                    </div>
                   </div>
                 </div>
               )}

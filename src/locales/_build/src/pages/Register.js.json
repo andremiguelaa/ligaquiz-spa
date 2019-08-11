@@ -1,0 +1,58 @@
+{
+  "Registo": {
+    "origin": [
+      [
+        "src/pages/Register.js",
+        8
+      ]
+    ]
+  },
+  "Nome": {
+    "origin": [
+      [
+        "src/pages/Register.js",
+        14
+      ]
+    ]
+  },
+  "Apelido": {
+    "origin": [
+      [
+        "src/pages/Register.js",
+        25
+      ]
+    ]
+  },
+  "E-Mail": {
+    "origin": [
+      [
+        "src/pages/Register.js",
+        36
+      ]
+    ]
+  },
+  "Palavra-passe": {
+    "origin": [
+      [
+        "src/pages/Register.js",
+        47
+      ]
+    ]
+  },
+  "Confirmação da palavra-passe": {
+    "origin": [
+      [
+        "src/pages/Register.js",
+        58
+      ]
+    ]
+  },
+  "Registar": {
+    "origin": [
+      [
+        "src/pages/Register.js",
+        74
+      ]
+    ]
+  }
+}

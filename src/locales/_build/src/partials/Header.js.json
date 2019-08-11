@@ -1,0 +1,42 @@
+{
+  "Entrar": {
+    "origin": [
+      [
+        "src/partials/Header.js",
+        37
+      ]
+    ]
+  },
+  "Registar": {
+    "origin": [
+      [
+        "src/partials/Header.js",
+        40
+      ]
+    ]
+  },
+  "Ranking nacional": {
+    "origin": [
+      [
+        "src/partials/Header.js",
+        67
+      ]
+    ]
+  },
+  "Sair": {
+    "origin": [
+      [
+        "src/partials/Header.js",
+        71
+      ]
+    ]
+  },
+  "Versão 4.0": {
+    "origin": [
+      [
+        "src/partials/Header.js",
+        75
+      ]
+    ]
+  }
+}

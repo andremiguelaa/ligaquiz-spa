@@ -1,0 +1,38 @@
+{
+  "Entrar": {
+    "origin": [
+      [
+        "src/pages/Login.js",
+        49
+      ],
+      [
+        "src/pages/Login.js",
+        103
+      ]
+    ]
+  },
+  "E-Mail": {
+    "origin": [
+      [
+        "src/pages/Login.js",
+        55
+      ]
+    ]
+  },
+  "Palavra-passe": {
+    "origin": [
+      [
+        "src/pages/Login.js",
+        76
+      ]
+    ]
+  },
+  "Recuperar palavra-passe": {
+    "origin": [
+      [
+        "src/pages/Login.js",
+        108
+      ]
+    ]
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "Liga Quiz": {
+    "origin": [
+      [
+        "src/App.js",
+        40
+      ],
+      [
+        "src/App.js",
+        46
+      ],
+      [
+        "src/App.js",
+        54
+      ],
+      [
+        "src/App.js",
+        62
+      ],
+      [
+        "src/App.js",
+        70
+      ],
+      [
+        "src/App.js",
+        76
+      ]
+    ]
+  },
+  "Entrar": {
+    "origin": [
+      [
+        "src/App.js",
+        47
+      ]
+    ]
+  },
+  "Recuperar palavra-passe": {
+    "origin": [
+      [
+        "src/App.js",
+        55
+      ]
+    ]
+  },
+  "Registo": {
+    "origin": [
+      [
+        "src/App.js",
+        63
+      ]
+    ]
+  },
+  "Sair": {
+    "origin": [
+      [
+        "src/App.js",
+        70
+      ]
+    ]
+  },
+  "Página não encontrada": {
+    "origin": [
+      [
+        "src/App.js",
+        77
+      ]
+    ]
+  }
+}
