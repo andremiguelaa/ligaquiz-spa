@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+@import "font-awesome/scss/font-awesome.scss";
+
+$body-size: 14px;
+$table-background-color: transparent;
+$primary: #007a66;
+$success: #11883c;
+$danger: #eb0030;
+
+@import "bulma";
+
+.navbar-link {
+  border: none;
+  background-color: transparent;
+  font-size: inherit;
+}
+
+.navbar-item {
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  font-size: inherit;
+  cursor: pointer;
+}

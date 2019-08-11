@@ -8,9 +8,12 @@ axios.defaults.baseURL =
     ? "http://api.ligaquiz.test/"
     : "https://api.ligaquiz.pt/";
 
-const token = Cookies.get("BEARER-TOKEN");
-if (token) {
-  axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
-}
+export const setBearerToken = token => {
+  if (token) {
+    axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+  }
+};
+
+setBearerToken(Cookies.get("BEARER-TOKEN"));
 
 export default axios;

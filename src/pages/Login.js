@@ -89,7 +89,10 @@ const Login = ({ history }) => {
             </div>
             <div className="field is-grouped">
               <div className="control">
-                <button className="button is-primary" disabled={submitting}>
+                <button
+                  className={`button is-primary ${submitting && "is-loading"}`}
+                  disabled={submitting}
+                >
                   Entrar
                 </button>
               </div>

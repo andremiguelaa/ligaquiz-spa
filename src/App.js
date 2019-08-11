@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Switch } from "react-router-dom";
 
-import "styles/App.sass";
+import "styles/App.scss";
 import { StateProvider } from "state/State";
 import { initialState, MainReducer } from "state/MainReducer";
 
@@ -13,6 +13,7 @@ import Home from "pages/Home";
 import Login from "pages/Login";
 import ResetPassword from "pages/ResetPassword";
 import Register from "pages/Register";
+import Logout from "pages/Logout";
 import NoMatch from "pages/NoMatch";
 
 const App = () => (
@@ -48,6 +49,12 @@ const App = () => (
                     exact
                     path="/register"
                     component={Register}
+                  />
+                  <RouteWithTitle
+                    title="Liga Quiz | Sair"
+                    exact
+                    path="/logout"
+                    component={Logout}
                   />
                   <RouteWithTitle
                     title="Liga Quiz | Página não encontrada"
