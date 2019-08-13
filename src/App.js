@@ -16,6 +16,7 @@ import RouteWithTitle from "utils/RouteWithTitle";
 import Header from "partials/Header";
 import Home from "pages/Home";
 import Login from "pages/Login";
+import RecoverPassword from "pages/RecoverPassword";
 import ResetPassword from "pages/ResetPassword";
 import Register from "pages/Register";
 import Logout from "pages/Logout";
@@ -56,6 +57,14 @@ const App = () => (
                           )}`}
                           exact
                           path="/recover-password"
+                          component={RecoverPassword}
+                        />
+                        <RouteWithTitle
+                          title={`${i18n._(t`Liga Quiz`)} | ${i18n._(
+                            t`Redefinir palavra-passe`
+                          )}`}
+                          exact
+                          path="/reset-password/:token"
                           component={ResetPassword}
                         />
                         <RouteWithTitle

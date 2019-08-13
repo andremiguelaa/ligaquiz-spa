@@ -3,27 +3,31 @@
     "origin": [
       [
         "src/App.js",
-        40
+        41
       ],
       [
         "src/App.js",
-        46
+        47
       ],
       [
         "src/App.js",
-        54
+        55
       ],
       [
         "src/App.js",
-        62
+        63
       ],
       [
         "src/App.js",
-        70
+        71
       ],
       [
         "src/App.js",
-        76
+        79
+      ],
+      [
+        "src/App.js",
+        85
       ]
     ]
   },
@@ -31,7 +35,7 @@
     "origin": [
       [
         "src/App.js",
-        47
+        48
       ]
     ]
   },
@@ -39,7 +43,15 @@
     "origin": [
       [
         "src/App.js",
-        55
+        56
+      ]
+    ]
+  },
+  "Redefinir palavra-passe": {
+    "origin": [
+      [
+        "src/App.js",
+        64
       ]
     ]
   },
@@ -47,7 +59,7 @@
     "origin": [
       [
         "src/App.js",
-        63
+        72
       ]
     ]
   },
@@ -55,7 +67,7 @@
     "origin": [
       [
         "src/App.js",
-        70
+        79
       ]
     ]
   },
@@ -63,7 +75,7 @@
     "origin": [
       [
         "src/App.js",
-        77
+        86
       ]
     ]
   }

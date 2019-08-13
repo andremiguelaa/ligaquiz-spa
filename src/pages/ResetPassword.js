@@ -1,38 +1,136 @@
-import React from "react";
+import React, { useState } from "react";
 import { Trans } from "@lingui/macro";
 
-const RecoverPassword = () => {
+import ApiRequest from "utils/ApiRequest";
+
+const ResetPassword = ({
+  match: {
+    params: { token }
+  }
+}) => {
+  const [formData, setformData] = useState({
+    password: "",
+    password2: "",
+    token: token
+  });
+
+  const [errorMessage, setErrorMessage] = useState(null);
+  const [success, setSuccess] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleSubmit = event => {
+    event.preventDefault();
+    setSubmitting(true);
+    setErrorMessage(null);
+    ApiRequest.patch("password-reset", formData)
+      .then(() => {
+        setSuccess(true);
+      })
+      .catch(error => {
+        try {
+          setErrorMessage(error.response.data.message);
+        } catch (error) {
+          setErrorMessage("server error");
+        }
+      })
+      .finally(() => {
+        setSubmitting(false);
+      });
+  };
+
   return (
     <div className="column is-4-widescreen is-offset-4-widescreen is-8-tablet is-offset-2-tablet">
-      <article className="message">
+      <article className={`message ${success && `is-success`}`}>
         <div className="message-header">
-          <Trans>Recuperar palavra-passe</Trans>
+          <Trans>Redefinir palavra-passe</Trans>
         </div>
         <div className="message-body">
-          <form>
-            <div className="field">
-              <label className="label">
-                <Trans>E-Mail</Trans>
-              </label>
-              <div className="control has-icons-left">
-                <input className="input" type="email" required />
-                <span className="icon is-small is-left">
-                  <i className="fa fa-envelope" />
-                </span>
+          {!success ? (
+            <form onSubmit={handleSubmit}>
+              <div className="field">
+                <label className="label">
+                  <Trans>Palavra-passe</Trans>
+                </label>
+                <div className="control has-icons-left">
+                  <input
+                    type="password"
+                    name="password"
+                    className="input"
+                    minLength={6}
+                    onChange={event => {
+                      setformData({
+                        ...formData,
+                        password: event.target.value
+                      });
+                    }}
+                  />
+                  <span className="icon is-small is-left">
+                    <i className="fa fa-key" />
+                  </span>
+                </div>
               </div>
-            </div>
-            <div className="field is-grouped">
-              <div className="control">
-                <button className="button is-primary">
-                  <Trans>Submeter</Trans>
-                </button>
+              <div className="field">
+                <label className="label">
+                  <Trans>Confirmação da palavra-passe</Trans>
+                </label>
+                <div className="control has-icons-left">
+                  <input
+                    type="password"
+                    name="password_confirmation"
+                    className="input"
+                    onChange={event => {
+                      setformData({
+                        ...formData,
+                        password2: event.target.value
+                      });
+                    }}
+                  />
+                  <span className="icon is-small is-left">
+                    <i className="fa fa-key" />
+                  </span>
+                </div>
+                {errorMessage === "invalid_token" && (
+                  <p className="help is-danger">
+                    <Trans>
+                      O pedido de redefinição de palavra-passe é inválido
+                    </Trans>
+                  </p>
+                )}
+                {errorMessage === "expired_token" && (
+                  <p className="help is-danger">
+                    <Trans>
+                      O pedido de redefinição de palavra-passe expirou
+                    </Trans>
+                  </p>
+                )}
               </div>
-            </div>
-          </form>
+              <div className="field is-grouped">
+                <div className="control">
+                  <button
+                    className={`button is-primary ${submitting &&
+                      "is-loading"}`}
+                    disabled={
+                      submitting ||
+                      (formData.password.length >= 6 &&
+                        formData.password !== formData.password2)
+                    }
+                  >
+                    <Trans>Submeter</Trans>
+                  </button>
+                </div>
+              </div>
+            </form>
+          ) : (
+            <Trans>
+              Palavra-passe alterada com sucesso.
+              <br />
+              Clica em "Entrar" e usa as novas credenciais.
+            </Trans>
+          )}
         </div>
       </article>
     </div>
   );
 };
 
-export default RecoverPassword;
+export default ResetPassword;

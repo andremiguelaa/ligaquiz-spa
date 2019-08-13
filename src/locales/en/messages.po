@@ -22,32 +22,38 @@ msgid "Apelido"
 msgstr "Surname"
 
 #: src/pages/Register.js:58
+#: src/pages/ResetPassword.js:74
 msgid "Confirmação da palavra-passe"
 msgstr "Password confirmation"
 
 #: src/pages/Login.js:55
+#: src/pages/RecoverPassword.js:46
 #: src/pages/Register.js:36
-#: src/pages/ResetPassword.js:15
 msgid "E-Mail"
 msgstr "E-Mail"
 
-#: src/App.js:47
+#: src/App.js:48
 #: src/pages/Login.js:49
 #: src/pages/Login.js:103
 #: src/partials/Header.js:37
 msgid "Entrar"
 msgstr "Login"
 
+#: src/pages/RecoverPassword.js:81
+msgid "Enviámos-te um e-mail, segue as instruções para definir uma nova palavra-passe."
+msgstr "We sent you an e-mail, follow its instructions to set a new password"
+
 #: src/pages/NoMatch.js:14
 msgid "Esta página não existe."
 msgstr "This page does not exist"
 
-#: src/App.js:40
-#: src/App.js:46
-#: src/App.js:54
-#: src/App.js:62
-#: src/App.js:70
-#: src/App.js:76
+#: src/App.js:41
+#: src/App.js:47
+#: src/App.js:55
+#: src/App.js:63
+#: src/App.js:71
+#: src/App.js:79
+#: src/App.js:85
 #: src/pages/Home.js:8
 msgid "Liga Quiz"
 msgstr "Quiz League"
@@ -56,42 +62,61 @@ msgstr "Quiz League"
 msgid "Nome"
 msgstr "Name"
 
+#: src/pages/ResetPassword.js:101
+msgid "O pedido de redefinição de palavra-passe expirou"
+msgstr "Your password change request expired"
+
+#: src/pages/ResetPassword.js:94
+msgid "O pedido de redefinição de palavra-passe é inválido"
+msgstr "Your password change request is not valid"
+
 #: src/pages/Login.js:76
 #: src/pages/Register.js:47
+#: src/pages/ResetPassword.js:52
 msgid "Palavra-passe"
 msgstr "Password"
 
-#: src/App.js:77
+#: src/pages/ResetPassword.js:124
+msgid "Palavra-passe alterada com sucesso.<0/>Clica em \"Entrar\" e usa as novas credenciais."
+msgstr "Password changed successfully.<0/>Click on \"Login\" and use the new credentials."
+
+#: src/App.js:86
 #: src/pages/NoMatch.js:10
 msgid "Página não encontrada"
-msgstr "Paga not found"
+msgstr "Page not found"
 
 #: src/partials/Header.js:67
 msgid "Ranking nacional"
 msgstr "Portuguese ranking"
 
-#: src/App.js:55
+#: src/App.js:56
 #: src/pages/Login.js:108
-#: src/pages/ResetPassword.js:9
+#: src/pages/RecoverPassword.js:39
 msgid "Recuperar palavra-passe"
 msgstr "Recover password"
+
+#: src/App.js:64
+#: src/pages/ResetPassword.js:45
+msgid "Redefinir palavra-passe"
+msgstr "Reset password"
 
 #: src/pages/Register.js:74
 #: src/partials/Header.js:40
 msgid "Registar"
 msgstr "Register"
 
-#: src/App.js:63
+#: src/App.js:72
 #: src/pages/Register.js:8
 msgid "Registo"
 msgstr "Registration"
 
-#: src/App.js:70
+#: src/App.js:79
 #: src/partials/Header.js:71
 msgid "Sair"
 msgstr "Logout"
 
-#: src/pages/ResetPassword.js:27
+#: src/pages/RecoverPassword.js:75
+#: src/pages/ResetPassword.js:118
 msgid "Submeter"
 msgstr "Submit"
 
