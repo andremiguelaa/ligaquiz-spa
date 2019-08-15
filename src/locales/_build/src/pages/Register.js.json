@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/pages/Register.js",
-        8
+        50
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/pages/Register.js",
-        14
+        57
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/pages/Register.js",
-        25
+        79
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/pages/Register.js",
-        36
+        101
       ]
     ]
   },
@@ -35,7 +35,7 @@
     "origin": [
       [
         "src/pages/Register.js",
-        47
+        122
       ]
     ]
   },
@@ -43,7 +43,23 @@
     "origin": [
       [
         "src/pages/Register.js",
-        58
+        145
+      ]
+    ]
+  },
+  "Não existe nenhum registo com este e-mail.": {
+    "origin": [
+      [
+        "src/pages/Register.js",
+        173
+      ]
+    ]
+  },
+  "Erro de servidor. Tenta mais tarde.": {
+    "origin": [
+      [
+        "src/pages/Register.js",
+        178
       ]
     ]
   },
@@ -51,7 +67,15 @@
     "origin": [
       [
         "src/pages/Register.js",
-        74
+        192
+      ]
+    ]
+  },
+  "Utilizador registado com sucesso.<0/>Clica em \"Entrar\" e usa as tuas credenciais.": {
+    "origin": [
+      [
+        "src/pages/Register.js",
+        198
       ]
     ]
   }
