@@ -24,7 +24,7 @@ const RecoverPassword = () => {
         try {
           setErrorMessage(error.response.data.message);
         } catch (error) {
-          setErrorMessage("server error");
+          setErrorMessage("server_error");
         }
       })
       .finally(() => {
@@ -61,10 +61,22 @@ const RecoverPassword = () => {
                     <i className="fa fa-envelope" />
                   </span>
                 </div>
-                {errorMessage && (
-                  <p className="help is-danger">{errorMessage}</p>
-                )}
               </div>
+              {errorMessage && (
+                <div className="field">
+                  <p className="help is-danger">
+                    {{
+                      mail_not_found: (
+                        <Trans>
+                          Não existe nenhum registo com este e-mail.
+                        </Trans>
+                      )
+                    }[errorMessage] || (
+                      <Trans>Erro de servidor. Tenta mais tarde.</Trans>
+                    )}
+                  </p>
+                </div>
+              )}
               <div className="field is-grouped">
                 <div className="control">
                   <button

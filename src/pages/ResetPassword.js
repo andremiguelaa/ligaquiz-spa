@@ -30,7 +30,7 @@ const ResetPassword = ({
         try {
           setErrorMessage(error.response.data.message);
         } catch (error) {
-          setErrorMessage("server error");
+          setErrorMessage("server_error");
         }
       })
       .finally(() => {
@@ -89,30 +89,34 @@ const ResetPassword = ({
                     <i className="fa fa-key" />
                   </span>
                 </div>
-                {errorMessage === "invalid_token" && (
-                  <p className="help is-danger">
-                    <Trans>
-                      O pedido de redefinição de palavra-passe é inválido
-                    </Trans>
-                  </p>
-                )}
-                {errorMessage === "expired_token" && (
-                  <p className="help is-danger">
-                    <Trans>
-                      O pedido de redefinição de palavra-passe expirou
-                    </Trans>
-                  </p>
-                )}
               </div>
+              {errorMessage && (
+                <div className="field">
+                  <p className="help is-danger">
+                    {{
+                      expired_token: (
+                        <Trans>
+                          O pedido de redefinição de palavra-passe expirou
+                        </Trans>
+                      ),
+                      invalid_token: (
+                        <Trans>
+                          O pedido de redefinição de palavra-passe é inválido
+                        </Trans>
+                      )
+                    }[errorMessage] || (
+                      <Trans>Erro de servidor. Tenta mais tarde.</Trans>
+                    )}
+                  </p>
+                </div>
+              )}
               <div className="field is-grouped">
                 <div className="control">
                   <button
                     className={`button is-primary ${submitting &&
                       "is-loading"}`}
                     disabled={
-                      submitting ||
-                      (formData.password.length >= 6 &&
-                        formData.password !== formData.password2)
+                      submitting || formData.password !== formData.password2
                     }
                   >
                     <Trans>Submeter</Trans>

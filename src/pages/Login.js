@@ -36,7 +36,7 @@ const Login = ({ history }) => {
         try {
           setErrorMessage(error.response.data.message);
         } catch (error) {
-          setErrorMessage("server error");
+          setErrorMessage("server_error");
         }
         setSubmitting(false);
       });
@@ -92,8 +92,18 @@ const Login = ({ history }) => {
                   <i className="fa fa-key" />
                 </span>
               </div>
-              {errorMessage && <p className="help is-danger">{errorMessage}</p>}
             </div>
+            {errorMessage && (
+              <div className="field">
+                <p className="help is-danger">
+                  {{
+                    wrong_credentials: <Trans>Credenciais erradas.</Trans>
+                  }[errorMessage] || (
+                    <Trans>Erro de servidor. Tenta mais tarde.</Trans>
+                  )}
+                </p>
+              </div>
+            )}
             <div className="field is-grouped">
               <div className="control">
                 <button
