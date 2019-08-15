@@ -78,14 +78,9 @@ const Header = () => {
               )}
               {user && (
                 <div
-                  className={classNames(
-                    "navbar-item",
-                    "is-hoverable",
-                    "has-dropdown",
-                    {
-                      "is-active": menuDropdownOpen
-                    }
-                  )}
+                  className={classNames("navbar-item", "has-dropdown", {
+                    "is-active": menuDropdownOpen
+                  })}
                 >
                   <OutsideClickHandler
                     onOutsideClick={() => {
