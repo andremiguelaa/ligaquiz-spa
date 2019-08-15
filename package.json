@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@lingui/react": "^2.8.3",
+    "classnames": "^2.2.6",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-scripts": "3.0.1"

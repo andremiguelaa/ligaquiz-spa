@@ -2,13 +2,23 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import OutsideClickHandler from "react-outside-click-handler";
 import { Trans } from "@lingui/macro";
+import classNames from "classnames";
+import Cookies from "js-cookie";
 
 import { useStateValue } from "state/State";
 import logo from "img/logo.png";
 
 const Header = () => {
-  const [{ user }] = useStateValue();
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [{ settings, user }, dispatch] = useStateValue();
+  const [menuDropdownOpen, setMenuDropdownOpen] = useState(false);
+
+  const changeLanguage = lang => {
+    Cookies.set("language", lang, { expires: 365 });
+    dispatch({
+      type: "settings.language",
+      payload: lang
+    });
+  };
 
   return (
     <header>
@@ -30,7 +40,31 @@ const Header = () => {
           </div>
           <div className="navbar-menu">
             <div className="navbar-end">
-              {!user ? (
+              <div className="navbar-item">
+                <div className="buttons are-small">
+                  <button
+                    className={classNames("button", {
+                      "is-outlined": settings.language === "pt",
+                      "is-light": settings.language !== "pt"
+                    })}
+                    onClick={() => changeLanguage("pt")}
+                  >
+                    <i className="fa fa-btn fa-flag" />
+                    &nbsp;PT
+                  </button>
+                  <button
+                    className={classNames("button", {
+                      "is-outlined": settings.language === "en",
+                      "is-light": settings.language !== "en"
+                    })}
+                    onClick={() => changeLanguage("en")}
+                  >
+                    <i className="fa fa-btn fa-flag" />
+                    &nbsp;EN
+                  </button>
+                </div>
+              </div>
+              {!user && (
                 <div className="navbar-item">
                   <div className="buttons">
                     <Link to="/login" className="button is-light">
@@ -41,21 +75,28 @@ const Header = () => {
                     </Link>
                   </div>
                 </div>
-              ) : (
+              )}
+              {user && (
                 <div
-                  className={`navbar-item has-dropdown ${dropdownOpen &&
-                    "is-active"}`}
+                  className={classNames(
+                    "navbar-item",
+                    "is-hoverable",
+                    "has-dropdown",
+                    {
+                      "is-active": menuDropdownOpen
+                    }
+                  )}
                 >
                   <OutsideClickHandler
                     onOutsideClick={() => {
-                      setDropdownOpen(false);
+                      setMenuDropdownOpen(false);
                     }}
                     display="flex"
                   >
                     <button
                       className="navbar-link"
                       onClick={() => {
-                        setDropdownOpen(!dropdownOpen);
+                        setMenuDropdownOpen(!menuDropdownOpen);
                       }}
                     >
                       André

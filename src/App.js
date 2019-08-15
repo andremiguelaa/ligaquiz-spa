@@ -4,15 +4,14 @@ import { BrowserRouter, Switch } from "react-router-dom";
 import { I18nProvider, I18n } from "@lingui/react";
 import { t } from "@lingui/macro";
 
+import catalogPt from "locales/pt/messages.js";
 import catalogEn from "locales/en/messages.js";
 
 import "styles/App.scss";
-import { StateProvider } from "state/State";
-import { initialState, MainReducer } from "state/MainReducer";
 
+import { useStateValue } from "state/State";
 import Auth from "utils/Auth";
 import RouteWithTitle from "utils/RouteWithTitle";
-
 import Header from "partials/Header";
 import Home from "pages/Home";
 import Login from "pages/Login";
@@ -22,11 +21,12 @@ import Register from "pages/Register";
 import Logout from "pages/Logout";
 import NoMatch from "pages/NoMatch";
 
-const catalogs = { en: catalogEn };
+const catalogs = { pt: catalogPt, en: catalogEn };
 
-const App = () => (
-  <StateProvider initialState={initialState} reducer={MainReducer}>
-    <I18nProvider language="en" catalogs={catalogs}>
+const App = () => {
+  const [{ settings }] = useStateValue();
+  return (
+    <I18nProvider language={settings.language} catalogs={catalogs}>
       <BrowserRouter>
         <Auth>
           <Header />
@@ -97,7 +97,7 @@ const App = () => (
         </Auth>
       </BrowserRouter>
     </I18nProvider>
-  </StateProvider>
-);
+  );
+};
 
 export default App;
