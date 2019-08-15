@@ -56,7 +56,9 @@ const ResetPassword = ({
                     type="password"
                     name="password"
                     className="input"
+                    required
                     minLength={6}
+                    maxLength={255}
                     onChange={event => {
                       setformData({
                         ...formData,
@@ -77,7 +79,12 @@ const ResetPassword = ({
                   <input
                     type="password"
                     name="password_confirmation"
-                    className="input"
+                    required
+                    minLength={6}
+                    maxLength={255}
+                    className={`input ${formData.password2.length &&
+                      formData.password !== formData.password2 &&
+                      "is-danger"}`}
                     onChange={event => {
                       setformData({
                         ...formData,
