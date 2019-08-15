@@ -21,7 +21,7 @@ import Register from "pages/Register";
 import Logout from "pages/Logout";
 import NoMatch from "pages/NoMatch";
 
-const catalogs = { pt: catalogPt, en: catalogEn };
+export const catalogs = { pt: catalogPt, en: catalogEn };
 
 const App = () => {
   const [{ settings }] = useStateValue();

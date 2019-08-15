@@ -1,7 +1,14 @@
 import Cookies from "js-cookie";
 
+import { catalogs } from "App";
+
+const userLanguage = navigator.language.substring(0, 2);
+const defaultLanguage = Object.keys(catalogs).includes(userLanguage)
+  ? userLanguage
+  : "pt";
+
 export const settingsInitialState = {
-  language: Cookies.get("language") ? Cookies.get("language") : "pt"
+  language: Cookies.get("language") ? Cookies.get("language") : defaultLanguage
 };
 
 export const settingsReducer = (state, { type, payload }) => {
