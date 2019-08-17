@@ -4,6 +4,7 @@ import OutsideClickHandler from "react-outside-click-handler";
 import { Trans } from "@lingui/macro";
 import classNames from "classnames";
 import Cookies from "js-cookie";
+import { catalogs } from "App";
 
 import { useStateValue } from "state/State";
 import logo from "img/logo.png";
@@ -42,24 +43,17 @@ const Header = () => {
             <div className="navbar-end">
               <div className="navbar-item">
                 <div className="buttons are-small">
-                  <button
-                    className={classNames("button", {
-                      "is-outlined": settings.language === "pt",
-                      "is-light": settings.language !== "pt"
-                    })}
-                    onClick={() => changeLanguage("pt")}
-                  >
-                    PT
-                  </button>
-                  <button
-                    className={classNames("button", {
-                      "is-outlined": settings.language === "en",
-                      "is-light": settings.language !== "en"
-                    })}
-                    onClick={() => changeLanguage("en")}
-                  >
-                    EN
-                  </button>
+                  {Object.keys(catalogs).map(language => (
+                    <button
+                      className={classNames("button", {
+                        "is-outlined": settings.language === language,
+                        "is-light": settings.language !== language
+                      })}
+                      onClick={() => changeLanguage(language)}
+                    >
+                      {language.toUpperCase()}
+                    </button>
+                  ))}
                 </div>
               </div>
               {!user && (
