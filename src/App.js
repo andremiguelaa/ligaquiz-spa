@@ -20,14 +20,14 @@ const App = () => {
   return (
     <Auth>
       <I18nProvider language={settings.language} catalogs={catalogs}>
-        <I18n>
-          {({ i18n }) => (
-            <BrowserRouter>
-              <Header />
-              <main>
-                <section className="section">
-                  <div className="container">
-                    <div className="columns">
+        <BrowserRouter>
+          <Header />
+          <main>
+            <section className="section">
+              <div className="container">
+                <div className="columns">
+                  <I18n>
+                    {({ i18n }) => (
                       <Switch>
                         {routes.map(route => {
                           const title = route.root
@@ -51,13 +51,13 @@ const App = () => {
                           );
                         })}
                       </Switch>
-                    </div>
-                  </div>
-                </section>
-              </main>
-            </BrowserRouter>
-          )}
-        </I18n>
+                    )}
+                  </I18n>
+                </div>
+              </div>
+            </section>
+          </main>
+        </BrowserRouter>
       </I18nProvider>
     </Auth>
   );
