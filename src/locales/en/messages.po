@@ -39,7 +39,7 @@ msgstr "E-Mail"
 #: src/pages/Login.js:49
 #: src/pages/Login.js:113
 #: src/partials/Header.js:69
-#: src/routes.js:22
+#: src/routes.js:21
 msgid "Entrar"
 msgstr "Login"
 
@@ -58,8 +58,9 @@ msgstr "Server error. Try again later."
 msgid "Esta página não existe."
 msgstr "This page does not exist"
 
+#: src/App.js:37
 #: src/pages/Home.js:8
-#: src/routes.js:15
+#: src/routes.js:14
 msgid "Liga Quiz"
 msgstr "Quiz League"
 
@@ -91,7 +92,7 @@ msgid "Palavra-passe alterada com sucesso.<0/>Clica em \"Entrar\" e usa as novas
 msgstr "Password changed successfully.<0/>Click on \"Login\" and use the new credentials."
 
 #: src/pages/NoMatch.js:10
-#: src/routes.js:57
+#: src/routes.js:51
 msgid "Página não encontrada"
 msgstr "Page not found"
 
@@ -101,12 +102,12 @@ msgstr "Portuguese ranking"
 
 #: src/pages/Login.js:118
 #: src/pages/RecoverPassword.js:44
-#: src/routes.js:29
+#: src/routes.js:27
 msgid "Recuperar palavra-passe"
 msgstr "Recover password"
 
 #: src/pages/ResetPassword.js:45
-#: src/routes.js:36
+#: src/routes.js:33
 msgid "Redefinir palavra-passe"
 msgstr "Reset password"
 
@@ -116,12 +117,12 @@ msgid "Registar"
 msgstr "Register"
 
 #: src/pages/Register.js:50
-#: src/routes.js:43
+#: src/routes.js:39
 msgid "Registo"
 msgstr "Registration"
 
 #: src/partials/Header.js:105
-#: src/routes.js:50
+#: src/routes.js:45
 msgid "Sair"
 msgstr "Logout"
 
@@ -137,7 +138,3 @@ msgstr "User registerd successfully.<0/>Click on \"Login\" and use your credenti
 #: src/partials/Header.js:109
 msgid "Versão 4.0"
 msgstr "Version 4.0"
-
-#: src/App.js:38
-msgid "{0}"
-msgstr ""
