@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        69
+        62
       ]
     ]
   },
@@ -11,15 +11,15 @@
     "origin": [
       [
         "src/partials/Header.js",
-        72
+        65
       ]
     ]
   },
-  "Ranking nacional": {
+  "Painel de controlo": {
     "origin": [
       [
         "src/partials/Header.js",
-        101
+        94
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        105
+        98
       ]
     ]
   },
@@ -35,7 +35,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        109
+        102
       ]
     ]
   }

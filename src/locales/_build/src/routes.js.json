@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/routes.js",
-        14
+        15
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/routes.js",
-        21
+        20
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/routes.js",
-        27
+        25
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/routes.js",
-        33
+        30
       ]
     ]
   },
@@ -35,7 +35,7 @@
     "origin": [
       [
         "src/routes.js",
-        39
+        35
       ]
     ]
   },
@@ -43,7 +43,19 @@
     "origin": [
       [
         "src/routes.js",
+        40
+      ]
+    ]
+  },
+  "Painel de controlo": {
+    "origin": [
+      [
+        "src/routes.js",
         45
+      ],
+      [
+        "src/routes.js",
+        50
       ]
     ]
   },
@@ -51,7 +63,7 @@
     "origin": [
       [
         "src/routes.js",
-        51
+        55
       ]
     ]
   }

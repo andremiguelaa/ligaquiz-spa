@@ -1,22 +1,22 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import OutsideClickHandler from "react-outside-click-handler";
-import { Trans } from "@lingui/macro";
-import classNames from "classnames";
-import Cookies from "js-cookie";
-import { catalogs } from "App";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import OutsideClickHandler from 'react-outside-click-handler';
+import { Trans } from '@lingui/macro';
+import classNames from 'classnames';
+import Cookies from 'js-cookie';
+import { catalogs } from 'App';
 
-import { useStateValue } from "state/State";
-import logo from "img/logo.png";
+import { useStateValue } from 'state/State';
+import logo from 'img/logo.png';
 
 const Header = () => {
   const [{ settings, user }, dispatch] = useStateValue();
   const [menuDropdownOpen, setMenuDropdownOpen] = useState(false);
 
   const changeLanguage = lang => {
-    Cookies.set("language", lang, { expires: 365 });
+    Cookies.set('language', lang, { expires: 365 });
     dispatch({
-      type: "settings.language",
+      type: 'settings.language',
       payload: lang
     });
   };
@@ -24,7 +24,7 @@ const Header = () => {
   return (
     <header>
       <nav
-        className="navbar is-fixed-top is-light"
+        className="navbar is-fixed-top has-shadow"
         role="navigation"
         aria-label="main navigation"
       >
@@ -45,10 +45,9 @@ const Header = () => {
                 <div className="buttons are-small">
                   {Object.keys(catalogs).map(language => (
                     <button
-                      className={classNames("button", {
-                        "is-outlined": settings.language === language,
-                        "is-light": settings.language !== language
-                      })}
+                      key={language}
+                      disabled={settings.language === language}
+                      className="button"
                       onClick={() => changeLanguage(language)}
                     >
                       {language.toUpperCase()}
@@ -70,8 +69,8 @@ const Header = () => {
               )}
               {user && (
                 <div
-                  className={classNames("navbar-item", "has-dropdown", {
-                    "is-active": menuDropdownOpen
+                  className={classNames('navbar-item', 'has-dropdown', {
+                    'is-active': menuDropdownOpen
                   })}
                 >
                   <OutsideClickHandler
@@ -90,9 +89,9 @@ const Header = () => {
                     </button>
                   </OutsideClickHandler>
                   <div className="navbar-dropdown is-right">
-                    <Link to="/national-ranking" className="navbar-item">
-                      <i className="fa fa-btn fa-trophy" />
-                      &nbsp;<Trans>Ranking nacional</Trans>
+                    <Link to="/control-panel" className="navbar-item">
+                      <i className="fa fa-btn fa-cogs" />
+                      &nbsp;<Trans>Painel de controlo</Trans>
                     </Link>
                     <Link to="/logout" className="navbar-item">
                       <i className="fa fa-btn fa-sign-out" />

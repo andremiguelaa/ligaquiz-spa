@@ -1,8 +1,8 @@
 import {
   settingsInitialState,
   settingsReducer
-} from "state/reducers/SettingsReducer";
-import { userInitialState, userReducer } from "state/reducers/UserReducer";
+} from 'state/reducers/SettingsReducer';
+import { userInitialState, userReducer } from 'state/reducers/UserReducer';
 
 export const initialState = {
   settings: settingsInitialState,

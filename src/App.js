@@ -1,16 +1,16 @@
-import React from "react";
-import { BrowserRouter, Switch } from "react-router-dom";
-import { I18nProvider, I18n } from "@lingui/react";
-import { t } from "@lingui/macro";
+import React from 'react';
+import { BrowserRouter, Switch } from 'react-router-dom';
+import { I18nProvider, I18n } from '@lingui/react';
+import { t } from '@lingui/macro';
 
-import catalogPt from "locales/pt/messages.js";
-import catalogEn from "locales/en/messages.js";
-import "styles/App.scss";
-import routes from "routes";
-import { useStateValue } from "state/State";
-import Auth from "utils/Auth";
-import RouteWithTitle from "utils/RouteWithTitle";
-import Header from "partials/Header";
+import catalogPt from 'locales/pt/messages.js';
+import catalogEn from 'locales/en/messages.js';
+import 'styles/App.scss';
+import routes from 'routes';
+import { useStateValue } from 'state/State';
+import Auth from 'utils/Auth';
+import RouteWithTitle from 'utils/RouteWithTitle';
+import Header from 'partials/Header';
 
 export const catalogs = { pt: catalogPt, en: catalogEn };
 
@@ -21,16 +21,16 @@ const App = () => {
       <I18nProvider language={settings.language} catalogs={catalogs}>
         <BrowserRouter>
           <Header />
-          <main>
-            <section className="section">
-              <div className="container">
-                <div className="columns">
+          <main className="container">
+            <div className="columns">
+              <div className="column is-10-widescreen is-offset-1-widescreen">
+                <div className="section">
                   <I18n>
                     {({ i18n }) => (
                       <Switch>
                         {routes.map(route => {
                           const title =
-                            route.path === "/"
+                            route.path === '/'
                               ? catalogs[settings.language].messages[
                                   route.title.props.id
                                 ]
@@ -51,7 +51,7 @@ const App = () => {
                   </I18n>
                 </div>
               </div>
-            </section>
+            </div>
           </main>
         </BrowserRouter>
       </I18nProvider>

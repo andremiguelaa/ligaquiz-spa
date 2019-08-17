@@ -1,19 +1,19 @@
-import Cookies from "js-cookie";
+import Cookies from 'js-cookie';
 
-import { catalogs } from "App";
+import { catalogs } from 'App';
 
 const userLanguage = navigator.language.substring(0, 2);
 const defaultLanguage = Object.keys(catalogs).includes(userLanguage)
   ? userLanguage
-  : "pt";
+  : 'pt';
 
 export const settingsInitialState = {
-  language: Cookies.get("language") ? Cookies.get("language") : defaultLanguage
+  language: Cookies.get('language') ? Cookies.get('language') : defaultLanguage
 };
 
 export const settingsReducer = (state, { type, payload }) => {
   switch (type) {
-    case "settings.language":
+    case 'settings.language':
       return {
         ...state,
         language: payload

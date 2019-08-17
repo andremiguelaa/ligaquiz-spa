@@ -11,3 +11,11 @@ $body-size: 14px;
   background-color: transparent;
   font-size: inherit;
 }
+
+.tabs {
+  padding: 0 0.1px;
+}
+
+.message .tabs a:not(.button):not(.tag):not(.dropdown-item) {
+  text-decoration: none;
+}
