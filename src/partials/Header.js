@@ -49,8 +49,7 @@ const Header = () => {
                     })}
                     onClick={() => changeLanguage("pt")}
                   >
-                    <i className="fa fa-btn fa-flag" />
-                    &nbsp;PT
+                    PT
                   </button>
                   <button
                     className={classNames("button", {
@@ -59,8 +58,7 @@ const Header = () => {
                     })}
                     onClick={() => changeLanguage("en")}
                   >
-                    <i className="fa fa-btn fa-flag" />
-                    &nbsp;EN
+                    EN
                   </button>
                 </div>
               </div>
