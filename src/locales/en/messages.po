@@ -31,24 +31,24 @@ msgid "Credenciais erradas."
 msgstr "Wrong credentials."
 
 #: src/pages/Login.js:55
-#: src/pages/RecoverPassword.js:46
+#: src/pages/RecoverPassword.js:51
 #: src/pages/Register.js:101
 msgid "E-Mail"
 msgstr "E-Mail"
 
-#: src/App.js:50
 #: src/pages/Login.js:49
 #: src/pages/Login.js:113
-#: src/partials/Header.js:64
+#: src/partials/Header.js:69
+#: src/routes.js:22
 msgid "Entrar"
 msgstr "Login"
 
-#: src/pages/RecoverPassword.js:93
+#: src/pages/RecoverPassword.js:98
 msgid "Enviámos-te um e-mail, segue as instruções para definir uma nova palavra-passe."
 msgstr "We sent you an e-mail, follow its instructions to set a new password"
 
 #: src/pages/Login.js:102
-#: src/pages/RecoverPassword.js:75
+#: src/pages/RecoverPassword.js:80
 #: src/pages/Register.js:178
 #: src/pages/ResetPassword.js:115
 msgid "Erro de servidor. Tenta mais tarde."
@@ -58,14 +58,8 @@ msgstr "Server error. Try again later."
 msgid "Esta página não existe."
 msgstr "This page does not exist"
 
-#: src/App.js:43
-#: src/App.js:49
-#: src/App.js:57
-#: src/App.js:65
-#: src/App.js:73
-#: src/App.js:81
-#: src/App.js:87
 #: src/pages/Home.js:8
+#: src/routes.js:15
 msgid "Liga Quiz"
 msgstr "Quiz League"
 
@@ -73,7 +67,7 @@ msgstr "Quiz League"
 msgid "Nome"
 msgstr "Name"
 
-#: src/pages/RecoverPassword.js:70
+#: src/pages/RecoverPassword.js:75
 #: src/pages/Register.js:173
 msgid "Não existe nenhum registo com este e-mail."
 msgstr "There is no registration with this e-mail."
@@ -96,42 +90,42 @@ msgstr "Password"
 msgid "Palavra-passe alterada com sucesso.<0/>Clica em \"Entrar\" e usa as novas credenciais."
 msgstr "Password changed successfully.<0/>Click on \"Login\" and use the new credentials."
 
-#: src/App.js:88
 #: src/pages/NoMatch.js:10
+#: src/routes.js:57
 msgid "Página não encontrada"
 msgstr "Page not found"
 
-#: src/partials/Header.js:102
+#: src/partials/Header.js:101
 msgid "Ranking nacional"
 msgstr "Portuguese ranking"
 
-#: src/App.js:58
 #: src/pages/Login.js:118
-#: src/pages/RecoverPassword.js:39
+#: src/pages/RecoverPassword.js:44
+#: src/routes.js:29
 msgid "Recuperar palavra-passe"
 msgstr "Recover password"
 
-#: src/App.js:66
 #: src/pages/ResetPassword.js:45
+#: src/routes.js:36
 msgid "Redefinir palavra-passe"
 msgstr "Reset password"
 
 #: src/pages/Register.js:192
-#: src/partials/Header.js:67
+#: src/partials/Header.js:72
 msgid "Registar"
 msgstr "Register"
 
-#: src/App.js:74
 #: src/pages/Register.js:50
+#: src/routes.js:43
 msgid "Registo"
 msgstr "Registration"
 
-#: src/App.js:81
-#: src/partials/Header.js:106
+#: src/partials/Header.js:105
+#: src/routes.js:50
 msgid "Sair"
 msgstr "Logout"
 
-#: src/pages/RecoverPassword.js:87
+#: src/pages/RecoverPassword.js:92
 #: src/pages/ResetPassword.js:129
 msgid "Submeter"
 msgstr "Submit"
@@ -140,6 +134,10 @@ msgstr "Submit"
 msgid "Utilizador registado com sucesso.<0/>Clica em \"Entrar\" e usa as tuas credenciais."
 msgstr "User registerd successfully.<0/>Click on \"Login\" and use your credentials."
 
-#: src/partials/Header.js:110
+#: src/partials/Header.js:109
 msgid "Versão 4.0"
 msgstr "Version 4.0"
+
+#: src/App.js:38
+msgid "{0}"
+msgstr ""

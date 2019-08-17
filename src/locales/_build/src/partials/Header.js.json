@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        64
+        69
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        67
+        72
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        102
+        101
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        106
+        105
       ]
     ]
   },
@@ -35,7 +35,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        110
+        109
       ]
     ]
   }

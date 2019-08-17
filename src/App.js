@@ -12,14 +12,10 @@ import "styles/App.scss";
 import { useStateValue } from "state/State";
 import Auth from "utils/Auth";
 import RouteWithTitle from "utils/RouteWithTitle";
+
+import routes from "routes";
+
 import Header from "partials/Header";
-import Home from "pages/Home";
-import Login from "pages/Login";
-import RecoverPassword from "pages/RecoverPassword";
-import ResetPassword from "pages/ResetPassword";
-import Register from "pages/Register";
-import Logout from "pages/Logout";
-import NoMatch from "pages/NoMatch";
 
 export const catalogs = { pt: catalogPt, en: catalogEn };
 
@@ -37,56 +33,15 @@ const App = () => {
                   <I18n>
                     {({ i18n }) => (
                       <Switch>
-                        <RouteWithTitle
-                          title={i18n._(t`Liga Quiz`)}
-                          exact
-                          path="/"
-                          component={Home}
-                        />
-                        <RouteWithTitle
-                          title={`${i18n._(t`Liga Quiz`)} | ${i18n._(
-                            t`Entrar`
-                          )}`}
-                          exact
-                          path="/login"
-                          component={Login}
-                        />
-                        <RouteWithTitle
-                          title={`${i18n._(t`Liga Quiz`)} | ${i18n._(
-                            t`Recuperar palavra-passe`
-                          )}`}
-                          exact
-                          path="/recover-password"
-                          component={RecoverPassword}
-                        />
-                        <RouteWithTitle
-                          title={`${i18n._(t`Liga Quiz`)} | ${i18n._(
-                            t`Redefinir palavra-passe`
-                          )}`}
-                          exact
-                          path="/reset-password/:token"
-                          component={ResetPassword}
-                        />
-                        <RouteWithTitle
-                          title={`${i18n._(t`Liga Quiz`)} | ${i18n._(
-                            t`Registo`
-                          )}`}
-                          exact
-                          path="/register"
-                          component={Register}
-                        />
-                        <RouteWithTitle
-                          title={`${i18n._(t`Liga Quiz`)} | ${i18n._(t`Sair`)}`}
-                          exact
-                          path="/logout"
-                          component={Logout}
-                        />
-                        <RouteWithTitle
-                          title={`${i18n._(t`Liga Quiz`)} | ${i18n._(
-                            t`Página não encontrada`
-                          )}`}
-                          component={NoMatch}
-                        />
+                        {routes.map(route => {
+                          let { slug, ...rest } = route;
+                          const title = i18n._(t`${route.title.props.id}`);
+                          rest = {
+                            ...rest,
+                            title
+                          };
+                          return <RouteWithTitle key={route.slug} {...rest} />;
+                        })}
                       </Switch>
                     )}
                   </I18n>
