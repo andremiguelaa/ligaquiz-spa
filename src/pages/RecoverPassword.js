@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { Trans } from "@lingui/macro";
 
+import { useStateValue } from "state/State";
 import ApiRequest from "utils/ApiRequest";
 
 const RecoverPassword = () => {
+  const [{ settings }] = useStateValue();
   const [formData, setformData] = useState({
     email: ""
   });
@@ -16,7 +18,10 @@ const RecoverPassword = () => {
     event.preventDefault();
     setSubmitting(true);
     setErrorMessage(null);
-    ApiRequest.post("password-reset", formData)
+    ApiRequest.post("password-reset", {
+      ...formData,
+      language: settings.language
+    })
       .then(() => {
         setSuccess(true);
       })
