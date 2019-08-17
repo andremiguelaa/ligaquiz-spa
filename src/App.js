@@ -18,11 +18,11 @@ export const catalogs = { pt: catalogPt, en: catalogEn };
 const App = () => {
   const [{ settings }] = useStateValue();
   return (
-    <I18nProvider language={settings.language} catalogs={catalogs}>
-      <I18n>
-        {({ i18n }) => (
-          <BrowserRouter>
-            <Auth>
+    <Auth>
+      <I18nProvider language={settings.language} catalogs={catalogs}>
+        <I18n>
+          {({ i18n }) => (
+            <BrowserRouter>
               <Header />
               <main>
                 <section className="section">
@@ -55,11 +55,11 @@ const App = () => {
                   </div>
                 </section>
               </main>
-            </Auth>
-          </BrowserRouter>
-        )}
-      </I18n>
-    </I18nProvider>
+            </BrowserRouter>
+          )}
+        </I18n>
+      </I18nProvider>
+    </Auth>
   );
 };
 
