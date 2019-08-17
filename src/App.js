@@ -30,18 +30,20 @@ const App = () => {
                     {({ i18n }) => (
                       <Switch>
                         {routes.map(route => {
-                          const title = route.root
-                            ? catalogs[settings.language].messages[
-                                route.title.props.id
-                              ]
-                            : `${i18n._(t`Liga Quiz`)} | ${
-                                catalogs[settings.language].messages[
+                          const title =
+                            route.path === "/"
+                              ? catalogs[settings.language].messages[
                                   route.title.props.id
                                 ]
-                              }`;
+                              : `${i18n._(t`Liga Quiz`)} | ${
+                                  catalogs[settings.language].messages[
+                                    route.title.props.id
+                                  ]
+                                }`;
                           const newProps = {
                             ...route,
-                            title
+                            title,
+                            exact: !!route.path
                           };
                           return (
                             <RouteWithTitle

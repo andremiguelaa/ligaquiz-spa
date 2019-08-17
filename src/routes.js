@@ -12,38 +12,31 @@ import NoMatch from "pages/NoMatch";
 export default [
   {
     title: <Trans>Liga Quiz</Trans>,
-    root: true,
-    exact: true,
     path: "/",
     component: Home
   },
   {
     title: <Trans>Entrar</Trans>,
-    exact: true,
     path: "/login",
     component: Login
   },
   {
     title: <Trans>Recuperar palavra-passe</Trans>,
-    exact: true,
     path: "/recover-password",
     component: RecoverPassword
   },
   {
     title: <Trans>Redefinir palavra-passe</Trans>,
-    exact: true,
     path: "/reset-password/:token",
     component: ResetPassword
   },
   {
     title: <Trans>Registo</Trans>,
-    exact: true,
     path: "/register",
     component: Register
   },
   {
     title: <Trans>Sair</Trans>,
-    exact: true,
     path: "/logout",
     component: Logout
   },
