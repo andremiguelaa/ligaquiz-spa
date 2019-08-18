@@ -1,5 +1,4 @@
 import React from 'react';
-import { Redirect } from 'react-router';
 import { Link } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 import classNames from 'classnames';
@@ -26,9 +25,6 @@ const ControlPanel = ({
 }) => {
   if (page && !Object.keys(pages).includes(page)) {
     return <NoMatch />;
-  }
-  if (!page) {
-    return <Redirect to="/control-panel/profile" />;
   }
   return (
     <article className="message">
