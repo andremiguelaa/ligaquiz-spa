@@ -1,14 +1,14 @@
 import React from 'react';
 import { Trans } from '@lingui/macro';
 
-import Home from 'pages/Home';
-import Login from 'pages/Login';
-import RecoverPassword from 'pages/RecoverPassword';
-import ResetPassword from 'pages/ResetPassword';
-import Register from 'pages/Register';
-import Logout from 'pages/Logout';
-import ControlPanel from 'pages/ControlPanel';
-import NoMatch from 'pages/NoMatch';
+import Home from 'components/Home';
+import Login from 'components/Login';
+import RecoverPassword from 'components/RecoverPassword';
+import ResetPassword from 'components/ResetPassword';
+import Register from 'components/Register';
+import Logout from 'components/Logout';
+import ControlPanel from 'components/ControlPanel';
+import NoMatch from 'components/NoMatch';
 
 export default [
   {

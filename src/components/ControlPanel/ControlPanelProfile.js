@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 
 import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
-import ControlPanelProfileAvatar from 'pages/ControlPanel/ControlPanelProfileAvatar';
+import ControlPanelProfileAvatar from 'components/ControlPanel/ControlPanelProfileAvatar';
 
 const ControlPanelProfile = () => {
   const [{ user }, dispatch] = useStateValue();

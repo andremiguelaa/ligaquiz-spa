@@ -89,7 +89,7 @@ const Header = () => {
                     </button>
                   </OutsideClickHandler>
                   <div className="navbar-dropdown is-right">
-                    <Link to="/control-panel" className="navbar-item">
+                    <Link to="/control-panel/profile" className="navbar-item">
                       <i className="fa fa-btn fa-cogs" />
                       &nbsp;<Trans>Painel de controlo</Trans>
                     </Link>
