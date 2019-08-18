@@ -5,6 +5,12 @@ export const userReducer = (state, { type, payload }) => {
     case 'user.login':
       return payload;
 
+    case 'user.patch':
+      return {
+        ...state,
+        ...payload
+      };
+
     case 'user.logout':
       return userInitialState;
 

@@ -1,10 +1,11 @@
 @charset "utf-8";
 
-@import "font-awesome/scss/font-awesome.scss";
+@import 'font-awesome/scss/font-awesome.scss';
 
 $body-size: 14px;
 
-@import "bulma";
+@import 'bulma';
+@import 'styles/Toasts.scss';
 
 .navbar-link {
   border: none;
@@ -18,4 +19,11 @@ $body-size: 14px;
 
 .message .tabs a:not(.button):not(.tag):not(.dropdown-item) {
   text-decoration: none;
+}
+
+.tabs + .message-body {
+  padding-top: 0;
+  border-width: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }

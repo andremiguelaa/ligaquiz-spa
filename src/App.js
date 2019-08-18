@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Switch } from 'react-router-dom';
 import { I18nProvider, I18n } from '@lingui/react';
 import { t } from '@lingui/macro';
+import { ToastContainer } from 'react-toastify';
 
 import catalogPt from 'locales/pt/messages.js';
 import catalogEn from 'locales/en/messages.js';
@@ -53,6 +54,7 @@ const App = () => {
               </div>
             </div>
           </main>
+          <ToastContainer />
         </BrowserRouter>
       </I18nProvider>
     </Auth>

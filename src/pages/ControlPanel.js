@@ -1,17 +1,34 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { Trans } from "@lingui/macro";
-import NoMatch from "pages/NoMatch";
-import ControlPanelRanking from "pages/ControlPanel/ControlPanelRanking";
-import classNames from "classnames";
+import React from 'react';
+import { Redirect } from 'react-router';
+import { Link } from 'react-router-dom';
+import { Trans } from '@lingui/macro';
+import classNames from 'classnames';
+
+import NoMatch from 'pages/NoMatch';
+import ControlPanelProfile from 'pages/ControlPanel/ControlPanelProfile';
+import ControlPanelRanking from 'pages/ControlPanel/ControlPanelRanking';
+
+const pages = {
+  profile: {
+    title: <Trans>Perfil</Trans>,
+    component: <ControlPanelProfile />
+  },
+  ranking: {
+    title: <Trans>Ranking</Trans>,
+    component: <ControlPanelRanking />
+  }
+};
 
 const ControlPanel = ({
   match: {
     params: { page }
   }
 }) => {
-  if (page && !["ranking"].includes(page)) {
+  if (page && !Object.keys(pages).includes(page)) {
     return <NoMatch />;
+  }
+  if (!page) {
+    return <Redirect to="/control-panel/profile" />;
   }
   return (
     <article className="message">
@@ -22,21 +39,20 @@ const ControlPanel = ({
       </div>
       <div className="tabs is-fullwidth">
         <ul>
-          <li
-            className={classNames({
-              "is-active": page && page === "ranking"
-            })}
-          >
-            <Link to="/control-panel/ranking">Ranking</Link>
-          </li>
+          {Object.entries(pages).map(([key, value]) => (
+            <li
+              key={key}
+              className={classNames({
+                'is-active': page && page === key
+              })}
+            >
+              <Link to={`/control-panel/${key}`}>{value.title}</Link>
+            </li>
+          ))}
         </ul>
       </div>
-      <div className="content">
-        {
-          {
-            ranking: <ControlPanelRanking />
-          }[page]
-        }
+      <div className="message-body">
+        <div className="content">{pages[page].component}</div>
       </div>
     </article>
   );

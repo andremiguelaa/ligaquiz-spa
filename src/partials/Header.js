@@ -85,7 +85,7 @@ const Header = () => {
                         setMenuDropdownOpen(!menuDropdownOpen);
                       }}
                     >
-                      André
+                      {user.name}
                     </button>
                   </OutsideClickHandler>
                   <div className="navbar-dropdown is-right">

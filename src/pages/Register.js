@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Trans } from '@lingui/macro';
+import classNames from 'classnames';
 
 import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
@@ -13,7 +14,7 @@ const Register = ({ history }) => {
     password2: ''
   });
 
-  const [errorMessage, setErrorMessage] = useState(null);
+  const [error, setError] = useState(null);
   const [success, setSuccess] = useState(false);
   const [submitting, setSubmitting] = useState(false);
 
@@ -28,16 +29,16 @@ const Register = ({ history }) => {
   const handleSubmit = event => {
     event.preventDefault();
     setSubmitting(true);
-    setErrorMessage(null);
+    setError(null);
     ApiRequest.post('users', formData)
       .then(() => {
         setSuccess(true);
       })
       .catch(error => {
         try {
-          setErrorMessage(error.response.data.message);
+          setError(error.response.data);
         } catch (error) {
-          setErrorMessage('server_error');
+          setError({ message: 'server_error' });
         }
         setSubmitting(false);
       });
@@ -107,7 +108,9 @@ const Register = ({ history }) => {
                     <input
                       type="email"
                       required
-                      className="input"
+                      className={classNames('input', {
+                        'is-danger': error && error.data && error.data.email
+                      })}
                       onChange={event => {
                         setformData({
                           ...formData,
@@ -119,6 +122,14 @@ const Register = ({ history }) => {
                       <i className="fa fa-envelope" />
                     </span>
                   </div>
+                  {error &&
+                    error.data &&
+                    error.data.email &&
+                    error.data.email.includes('validation.unique') && (
+                      <p className="help is-danger">
+                        <Trans>Já existe uma conta com este e-mail.</Trans>
+                      </p>
+                    )}
                 </div>
                 <div className="field">
                   <label className="label">
@@ -131,6 +142,7 @@ const Register = ({ history }) => {
                       minLength={6}
                       maxLength={255}
                       className="input"
+                      autoComplete="new-password"
                       onChange={event => {
                         setformData({
                           ...formData,
@@ -168,18 +180,10 @@ const Register = ({ history }) => {
                     </span>
                   </div>
                 </div>
-                {errorMessage && (
+                {error && error.message !== 'validation_error' && (
                   <div className="field">
                     <p className="help is-danger">
-                      {{
-                        mail_not_found: (
-                          <Trans>
-                            Não existe nenhum registo com este e-mail.
-                          </Trans>
-                        )
-                      }[errorMessage] || (
-                        <Trans>Erro de servidor. Tenta mais tarde.</Trans>
-                      )}
+                      <Trans>Erro de servidor. Tenta mais tarde.</Trans>
                     </p>
                   </div>
                 )}
