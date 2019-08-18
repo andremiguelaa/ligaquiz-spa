@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/components/ControlPanel.js",
-        12
+        14
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/components/ControlPanel.js",
-        16
+        18
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/components/ControlPanel.js",
-        33
+        39
       ]
     ]
   }

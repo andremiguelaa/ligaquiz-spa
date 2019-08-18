@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
+import Cookies from 'js-cookie';
 
 import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
-import { deleteLoginData } from 'utils/Auth';
 import Loading from 'utils/Loading';
 import Forbidden from 'components/Forbidden';
 
@@ -12,7 +12,10 @@ const Logout = ({ history }) => {
   useEffect(() => {
     if (user) {
       ApiRequest.delete('session').finally(() => {
-        deleteLoginData(dispatch);
+        Cookies.remove('BEARER-TOKEN');
+        dispatch({
+          type: 'user.logout'
+        });
         history.push('/');
       });
     }

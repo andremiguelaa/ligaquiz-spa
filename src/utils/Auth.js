@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Cookies from 'js-cookie';
+import { toast } from 'react-toastify';
+import { Trans } from '@lingui/macro';
 
 import { useStateValue } from 'state/State';
 import Loading from 'utils/Loading';
@@ -19,13 +21,6 @@ export const setLoginData = (data, dispatch) => {
   });
 };
 
-export const deleteLoginData = dispatch => {
-  Cookies.remove('BEARER-TOKEN');
-  dispatch({
-    type: 'user.logout'
-  });
-};
-
 export default props => {
   const [, dispatch] = useStateValue();
   const [loading, setLoading] = useState(true);
@@ -37,7 +32,11 @@ export default props => {
           setLoginData(data, dispatch);
         })
         .catch(() => {
-          deleteLoginData(dispatch);
+          toast.error(<Trans>A tua sessão expirou.</Trans>, {
+            hideProgressBar: true,
+            closeButton: false
+          });
+          Cookies.remove('BEARER-TOKEN');
         })
         .finally(() => {
           setLoading(false);

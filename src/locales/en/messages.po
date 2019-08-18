@@ -17,14 +17,18 @@ msgstr ""
 msgid "<0>A Liga Quiz é um jogo de cultura geral onde a confiança na honestidade dos jogadores é crucial.</0><1><2>É expressamente proibido usar qualquer fonte externa para obter respostas às perguntas</2>. Isto inclui:</1><3><4>Pedir pistas/respostas a outras pessoas</4><5>Usar a Internet, livros ou outro material de consulta para pesquisa de pistas/respostas</5><6>Usar calculadoras, instrumentos musicais ou outros equipamentos para ajudar à resposta</6></3><7>Apenas papel e caneta/lápis são permitidos.</7><8><9>Pede-se também a todos os jogadores que joguem todos os dias</9>. As faltas adulteram a veracidade da classificação final e podem levar à descida de divisão ao incumpridor.</8>"
 msgstr "<0>Quiz League is a general knowledge game where the trust in players honesty is essential.</0><1><2>It's completly forbidden the use of any external source to obtain answers</2>. This includes:</1><3><4>Ask for hints/answers to another people</4><5>Use Internet, books or any other resource to looking for hints/answers</5><6>Use calculators, musical instruments or any other devices to help getting the answer</6></3><7>Only paper and pen/pencil are permitted.</7><8><9>Additionally, we ask to all players to play everyday</9>. The forfeits distort the final ranking trustiness and can lead to the relegation of the player.</8>"
 
+#: src/utils/Auth.js:42
+msgid "A tua sessão expirou."
+msgstr "Your session expired."
+
 #: src/components/ControlPanel/ControlPanelProfile.js:85
-#: src/components/Register.js:83
+#: src/components/Register.js:82
 msgid "Apelido"
 msgstr "Surname"
 
 #: src/components/ControlPanel/ControlPanelProfile.js:164
-#: src/components/Register.js:160
-#: src/components/ResetPassword.js:79
+#: src/components/Register.js:159
+#: src/components/ResetPassword.js:86
 msgid "Confirmação da palavra-passe"
 msgstr "Password confirmation"
 
@@ -32,34 +36,34 @@ msgstr "Password confirmation"
 msgid "Conta actualizada com sucesso."
 msgstr "Account updated successfully."
 
-#: src/components/Login.js:104
+#: src/components/Login.js:103
 msgid "Credenciais erradas."
 msgstr "Wrong credentials."
 
 #: src/components/ControlPanel/ControlPanelProfile.js:108
-#: src/components/Login.js:59
-#: src/components/RecoverPassword.js:54
-#: src/components/Register.js:105
+#: src/components/Login.js:58
+#: src/components/RecoverPassword.js:59
+#: src/components/Register.js:104
 msgid "E-Mail"
 msgstr "E-Mail"
 
-#: src/components/Login.js:51
-#: src/components/Login.js:118
+#: src/components/Login.js:50
+#: src/components/Login.js:117
 #: src/partials/Header.js:62
 #: src/routes.js:20
 msgid "Entrar"
 msgstr "Login"
 
-#: src/components/RecoverPassword.js:101
+#: src/components/RecoverPassword.js:106
 msgid "Enviámos-te um e-mail, segue as instruções para definir uma nova palavra-passe."
 msgstr "We sent you an e-mail, follow its instructions to set a new password"
 
 #: src/components/ControlPanel/ControlPanelProfile.js:189
 #: src/components/ControlPanel/ControlPanelProfileAvatar.js:103
-#: src/components/Login.js:106
-#: src/components/RecoverPassword.js:83
-#: src/components/Register.js:186
-#: src/components/ResetPassword.js:118
+#: src/components/Login.js:105
+#: src/components/RecoverPassword.js:88
+#: src/components/Register.js:185
+#: src/components/ResetPassword.js:125
 msgid "Erro de servidor. Tenta mais tarde."
 msgstr "Server error. Try again later."
 
@@ -89,7 +93,7 @@ msgid "Imagem de perfil actualizada com sucesso."
 msgstr "Profile image updated successfully."
 
 #: src/components/ControlPanel/ControlPanelProfile.js:134
-#: src/components/Register.js:130
+#: src/components/Register.js:129
 msgid "Já existe uma conta com este e-mail."
 msgstr "There is another account using this e-mail."
 
@@ -104,23 +108,31 @@ msgid "Máximo 200 KB"
 msgstr "Max. 200 KB"
 
 #: src/components/ControlPanel/ControlPanelProfile.js:62
-#: src/components/Register.js:61
+#: src/components/Register.js:60
 msgid "Nome"
 msgstr "Name"
 
-#: src/components/RecoverPassword.js:78
+#: src/components/Forbidden.js:10
+msgid "Não autorizado"
+msgstr "Non authorized"
+
+#: src/components/RecoverPassword.js:83
 msgid "Não existe nenhum registo com este e-mail."
 msgstr "There is no registration with this e-mail."
 
-#: src/components/ResetPassword.js:108
+#: src/components/Forbidden.js:14
+msgid "Não tens permissões para aceder a esta página."
+msgstr "You have no permission to see this page."
+
+#: src/components/ResetPassword.js:115
 msgid "O pedido de redefinição de palavra-passe expirou"
 msgstr "Your password change request expired"
 
-#: src/components/ResetPassword.js:113
+#: src/components/ResetPassword.js:120
 msgid "O pedido de redefinição de palavra-passe é inválido"
 msgstr "Your password change request is not valid"
 
-#: src/components/ControlPanel.js:33
+#: src/components/ControlPanel.js:39
 #: src/partials/Header.js:94
 #: src/routes.js:45
 #: src/routes.js:50
@@ -128,17 +140,17 @@ msgid "Painel de controlo"
 msgstr "Control panel"
 
 #: src/components/ControlPanel/ControlPanelProfile.js:140
-#: src/components/Login.js:80
-#: src/components/Register.js:136
-#: src/components/ResetPassword.js:55
+#: src/components/Login.js:79
+#: src/components/Register.js:135
+#: src/components/ResetPassword.js:62
 msgid "Palavra-passe"
 msgstr "Password"
 
-#: src/components/ResetPassword.js:138
+#: src/components/ResetPassword.js:145
 msgid "Palavra-passe alterada com sucesso.<0/>Clica em \"Entrar\" e usa as novas credenciais."
 msgstr "Password changed successfully.<0/>Click on \"Login\" and use the new credentials."
 
-#: src/components/ControlPanel.js:12
+#: src/components/ControlPanel.js:14
 msgid "Perfil"
 msgstr "Profile"
 
@@ -147,27 +159,27 @@ msgstr "Profile"
 msgid "Página não encontrada"
 msgstr "Page not found"
 
-#: src/components/ControlPanel.js:16
+#: src/components/ControlPanel.js:18
 msgid "Ranking"
 msgstr "Ranking"
 
-#: src/components/Login.js:123
-#: src/components/RecoverPassword.js:46
+#: src/components/Login.js:122
+#: src/components/RecoverPassword.js:51
 #: src/routes.js:25
 msgid "Recuperar palavra-passe"
 msgstr "Recover password"
 
-#: src/components/ResetPassword.js:47
+#: src/components/ResetPassword.js:54
 #: src/routes.js:30
 msgid "Redefinir palavra-passe"
 msgstr "Reset password"
 
-#: src/components/Register.js:199
+#: src/components/Register.js:198
 #: src/partials/Header.js:65
 msgid "Registar"
 msgstr "Register"
 
-#: src/components/Register.js:53
+#: src/components/Register.js:52
 #: src/routes.js:35
 msgid "Registo"
 msgstr "Registration"
@@ -177,12 +189,12 @@ msgstr "Registration"
 msgid "Sair"
 msgstr "Logout"
 
-#: src/components/RecoverPassword.js:95
-#: src/components/ResetPassword.js:132
+#: src/components/RecoverPassword.js:100
+#: src/components/ResetPassword.js:139
 msgid "Submeter"
 msgstr "Submit"
 
-#: src/components/Register.js:205
+#: src/components/Register.js:204
 msgid "Utilizador registado com sucesso.<0/>Clica em \"Entrar\" e usa as tuas credenciais."
 msgstr "User registerd successfully.<0/>Click on \"Login\" and use your credentials."
 
@@ -192,4 +204,4 @@ msgstr "Version 4.0"
 
 #: src/components/ControlPanel/ControlPanelProfile.js:141
 msgid "deixa em branco para não alterar"
-msgstr "leave it blank to keep current password"
+msgstr "leave it blank to keep"
