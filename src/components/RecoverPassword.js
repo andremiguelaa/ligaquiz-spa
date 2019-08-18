@@ -3,9 +3,10 @@ import { Trans } from '@lingui/macro';
 
 import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
+import Forbidden from 'components/Forbidden';
 
 const RecoverPassword = () => {
-  const [{ settings }] = useStateValue();
+  const [{ user, settings }] = useStateValue();
   const [formData, setformData] = useState({
     email: ''
   });
@@ -13,6 +14,10 @@ const RecoverPassword = () => {
   const [errorMessage, setErrorMessage] = useState(null);
   const [success, setSuccess] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+
+  if (user) {
+    return <Forbidden />;
+  }
 
   const handleSubmit = event => {
     event.preventDefault();

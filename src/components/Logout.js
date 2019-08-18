@@ -4,6 +4,7 @@ import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
 import { deleteLoginData } from 'utils/Auth';
 import Loading from 'utils/Loading';
+import Forbidden from 'components/Forbidden';
 
 const Logout = ({ history }) => {
   const [{ user }, dispatch] = useStateValue();
@@ -16,6 +17,10 @@ const Logout = ({ history }) => {
       });
     }
   });
+
+  if (!user) {
+    return <Forbidden />;
+  }
 
   return <Loading />;
 };

@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 
 import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
 import { setLoginData } from 'utils/Auth';
+import Forbidden from 'components/Forbidden';
 
 const Login = ({ history }) => {
   const [formData, setformData] = useState({
@@ -17,11 +18,9 @@ const Login = ({ history }) => {
 
   const [{ user }, dispatch] = useStateValue();
 
-  useEffect(() => {
-    if (user) {
-      history.push('/');
-    }
-  });
+  if (user) {
+    return <Forbidden />;
+  }
 
   const handleSubmit = event => {
     event.preventDefault();

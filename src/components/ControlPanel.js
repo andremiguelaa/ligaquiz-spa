@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 import classNames from 'classnames';
 
+import { useStateValue } from 'state/State';
 import NoMatch from 'components/NoMatch';
+import Forbidden from 'components/Forbidden';
 import ControlPanelProfile from 'components/ControlPanel/ControlPanelProfile';
 import ControlPanelRanking from 'components/ControlPanel/ControlPanelRanking';
 
@@ -23,8 +25,12 @@ const ControlPanel = ({
     params: { page }
   }
 }) => {
+  const [{ user }] = useStateValue();
   if (page && !Object.keys(pages).includes(page)) {
     return <NoMatch />;
+  }
+  if (!user) {
+    return <Forbidden />;
   }
   return (
     <article className="message">

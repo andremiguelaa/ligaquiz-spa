@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Trans } from '@lingui/macro';
 import classNames from 'classnames';
 
 import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
+import Forbidden from 'components/Forbidden';
 
-const Register = ({ history }) => {
+const Register = () => {
   const [formData, setformData] = useState({
     name: '',
     surname: '',
@@ -20,11 +21,9 @@ const Register = ({ history }) => {
 
   const [{ user }] = useStateValue();
 
-  useEffect(() => {
-    if (user) {
-      history.push('/');
-    }
-  });
+  if (user) {
+    return <Forbidden />;
+  }
 
   const handleSubmit = event => {
     event.preventDefault();
