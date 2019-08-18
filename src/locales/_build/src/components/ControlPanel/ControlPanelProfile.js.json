@@ -1,0 +1,82 @@
+{
+  "Conta actualizada com sucesso.": {
+    "origin": [
+      [
+        "src/components/ControlPanel/ControlPanelProfile.js",
+        37
+      ]
+    ]
+  },
+  "Nome": {
+    "origin": [
+      [
+        "src/components/ControlPanel/ControlPanelProfile.js",
+        62
+      ]
+    ]
+  },
+  "Apelido": {
+    "origin": [
+      [
+        "src/components/ControlPanel/ControlPanelProfile.js",
+        85
+      ]
+    ]
+  },
+  "E-Mail": {
+    "origin": [
+      [
+        "src/components/ControlPanel/ControlPanelProfile.js",
+        108
+      ]
+    ]
+  },
+  "Já existe uma conta com este e-mail.": {
+    "origin": [
+      [
+        "src/components/ControlPanel/ControlPanelProfile.js",
+        134
+      ]
+    ]
+  },
+  "Palavra-passe": {
+    "origin": [
+      [
+        "src/components/ControlPanel/ControlPanelProfile.js",
+        140
+      ]
+    ]
+  },
+  "deixa em branco para não alterar": {
+    "origin": [
+      [
+        "src/components/ControlPanel/ControlPanelProfile.js",
+        141
+      ]
+    ]
+  },
+  "Confirmação da palavra-passe": {
+    "origin": [
+      [
+        "src/components/ControlPanel/ControlPanelProfile.js",
+        164
+      ]
+    ]
+  },
+  "Erro de servidor. Tenta mais tarde.": {
+    "origin": [
+      [
+        "src/components/ControlPanel/ControlPanelProfile.js",
+        189
+      ]
+    ]
+  },
+  "Gravar": {
+    "origin": [
+      [
+        "src/components/ControlPanel/ControlPanelProfile.js",
+        201
+      ]
+    ]
+  }
+}

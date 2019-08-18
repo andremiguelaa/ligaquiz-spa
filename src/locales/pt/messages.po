@@ -13,117 +13,161 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/pages/Home.js:13
+#: src/components/Home.js:13
 msgid "<0>A Liga Quiz é um jogo de cultura geral onde a confiança na honestidade dos jogadores é crucial.</0><1><2>É expressamente proibido usar qualquer fonte externa para obter respostas às perguntas</2>. Isto inclui:</1><3><4>Pedir pistas/respostas a outras pessoas</4><5>Usar a Internet, livros ou outro material de consulta para pesquisa de pistas/respostas</5><6>Usar calculadoras, instrumentos musicais ou outros equipamentos para ajudar à resposta</6></3><7>Apenas papel e caneta/lápis são permitidos.</7><8><9>Pede-se também a todos os jogadores que joguem todos os dias</9>. As faltas adulteram a veracidade da classificação final e podem levar à descida de divisão ao incumpridor.</8>"
 msgstr "<0>A Liga Quiz é um jogo de cultura geral onde a confiança na honestidade dos jogadores é crucial.</0><1><2>É expressamente proibido usar qualquer fonte externa para obter respostas às perguntas</2>. Isto inclui:</1><3><4>Pedir pistas/respostas a outras pessoas</4><5>Usar a Internet, livros ou outro material de consulta para pesquisa de pistas/respostas</5><6>Usar calculadoras, instrumentos musicais ou outros equipamentos para ajudar à resposta</6></3><7>Apenas papel e caneta/lápis são permitidos.</7><8><9>Pede-se também a todos os jogadores que joguem todos os dias</9>. As faltas adulteram a veracidade da classificação final e podem levar à descida de divisão ao incumpridor.</8>"
 
-#: src/pages/Register.js:82
+#: src/components/ControlPanel/ControlPanelProfile.js:85
+#: src/components/Register.js:83
 msgid "Apelido"
 msgstr "Apelido"
 
-#: src/pages/Register.js:148
-#: src/pages/ResetPassword.js:79
+#: src/components/ControlPanel/ControlPanelProfile.js:164
+#: src/components/Register.js:160
+#: src/components/ResetPassword.js:79
 msgid "Confirmação da palavra-passe"
 msgstr "Confirmação da palavra-passe"
 
-#: src/pages/Login.js:104
+#: src/components/ControlPanel/ControlPanelProfile.js:37
+msgid "Conta actualizada com sucesso."
+msgstr "Conta actualizada com sucesso."
+
+#: src/components/Login.js:104
 msgid "Credenciais erradas."
 msgstr "Credenciais erradas."
 
-#: src/pages/Login.js:59
-#: src/pages/RecoverPassword.js:54
-#: src/pages/Register.js:104
+#: src/components/ControlPanel/ControlPanelProfile.js:108
+#: src/components/Login.js:59
+#: src/components/RecoverPassword.js:54
+#: src/components/Register.js:105
 msgid "E-Mail"
 msgstr "E-Mail"
 
-#: src/pages/Login.js:51
-#: src/pages/Login.js:118
+#: src/components/Login.js:51
+#: src/components/Login.js:118
 #: src/partials/Header.js:62
 #: src/routes.js:20
 msgid "Entrar"
 msgstr "Entrar"
 
-#: src/pages/RecoverPassword.js:101
+#: src/components/RecoverPassword.js:101
 msgid "Enviámos-te um e-mail, segue as instruções para definir uma nova palavra-passe."
 msgstr "Enviámos-te um e-mail, segue as instruções para definir uma nova palavra-passe."
 
-#: src/pages/Login.js:106
-#: src/pages/RecoverPassword.js:83
-#: src/pages/Register.js:181
-#: src/pages/ResetPassword.js:118
+#: src/components/ControlPanel/ControlPanelProfile.js:189
+#: src/components/ControlPanel/ControlPanelProfileAvatar.js:103
+#: src/components/Login.js:106
+#: src/components/RecoverPassword.js:83
+#: src/components/Register.js:186
+#: src/components/ResetPassword.js:118
 msgid "Erro de servidor. Tenta mais tarde."
 msgstr "Erro de servidor. Tenta mais tarde."
 
-#: src/pages/NoMatch.js:14
+#: src/components/ControlPanel/ControlPanelProfileAvatar.js:83
+msgid "Escolhe uma imagem"
+msgstr "Escolhe uma imagem"
+
+#: src/components/NoMatch.js:14
 msgid "Esta página não existe."
 msgstr "Esta página não existe."
 
-#: src/App.js:37
-#: src/pages/Home.js:8
+#: src/components/ControlPanel/ControlPanelProfileAvatar.js:101
+msgid "Ficheiro inválido."
+msgstr "Ficheiro inválido."
+
+#: src/components/ControlPanel/ControlPanelProfile.js:201
+#: src/components/ControlPanel/ControlPanelProfileAvatar.js:114
+msgid "Gravar"
+msgstr "Gravar"
+
+#: src/components/ControlPanel/ControlPanelProfileAvatar.js:66
+msgid "Imagem de perfil"
+msgstr "Imagem de perfil"
+
+#: src/components/ControlPanel/ControlPanelProfileAvatar.js:41
+msgid "Imagem de perfil actualizada com sucesso."
+msgstr "Imagem de perfil actualizada com sucesso."
+
+#: src/components/ControlPanel/ControlPanelProfile.js:134
+#: src/components/Register.js:130
+msgid "Já existe uma conta com este e-mail."
+msgstr "Já existe uma conta com este e-mail."
+
+#: src/App.js:38
+#: src/components/Home.js:8
 #: src/routes.js:15
 msgid "Liga Quiz"
 msgstr "Liga Quiz"
 
-#: src/pages/Register.js:60
+#: src/components/ControlPanel/ControlPanelProfileAvatar.js:90
+msgid "Máximo 200 KB"
+msgstr "Máximo 200 KB"
+
+#: src/components/ControlPanel/ControlPanelProfile.js:62
+#: src/components/Register.js:61
 msgid "Nome"
 msgstr "Nome"
 
-#: src/pages/RecoverPassword.js:78
-#: src/pages/Register.js:176
+#: src/components/RecoverPassword.js:78
 msgid "Não existe nenhum registo com este e-mail."
 msgstr "Não existe nenhum registo com este e-mail."
 
-#: src/pages/ResetPassword.js:108
+#: src/components/ResetPassword.js:108
 msgid "O pedido de redefinição de palavra-passe expirou"
 msgstr "O pedido de redefinição de palavra-passe expirou"
 
-#: src/pages/ResetPassword.js:113
+#: src/components/ResetPassword.js:113
 msgid "O pedido de redefinição de palavra-passe é inválido"
 msgstr "O pedido de redefinição de palavra-passe é inválido"
 
-#: src/pages/ControlPanel.js:20
+#: src/components/ControlPanel.js:33
 #: src/partials/Header.js:94
 #: src/routes.js:45
 #: src/routes.js:50
 msgid "Painel de controlo"
 msgstr "Painel de controlo"
 
-#: src/pages/Login.js:80
-#: src/pages/Register.js:125
-#: src/pages/ResetPassword.js:55
+#: src/components/ControlPanel/ControlPanelProfile.js:140
+#: src/components/Login.js:80
+#: src/components/Register.js:136
+#: src/components/ResetPassword.js:55
 msgid "Palavra-passe"
 msgstr "Palavra-passe"
 
-#: src/pages/ResetPassword.js:138
+#: src/components/ResetPassword.js:138
 msgid "Palavra-passe alterada com sucesso.<0/>Clica em \"Entrar\" e usa as novas credenciais."
 msgstr "Palavra-passe alterada com sucesso.<0/>Clica em \"Entrar\" e usa as novas credenciais."
 
-#: src/pages/NoMatch.js:10
+#: src/components/ControlPanel.js:12
+msgid "Perfil"
+msgstr "Perfil"
+
+#: src/components/NoMatch.js:10
 #: src/routes.js:55
 msgid "Página não encontrada"
 msgstr "Página não encontrada"
 
-#: src/partials/Header.js:96
-#~ msgid "Ranking nacional"
-#~ msgstr "Ranking nacional"
+#: src/components/ControlPanel.js:16
+msgid "Ranking"
+msgstr "Ranking"
 
-#: src/pages/Login.js:123
-#: src/pages/RecoverPassword.js:46
+#: src/components/Login.js:123
+#: src/components/RecoverPassword.js:46
 #: src/routes.js:25
 msgid "Recuperar palavra-passe"
 msgstr "Recuperar palavra-passe"
 
-#: src/pages/ResetPassword.js:47
+#: src/components/ResetPassword.js:47
 #: src/routes.js:30
 msgid "Redefinir palavra-passe"
 msgstr "Redefinir palavra-passe"
 
-#: src/pages/Register.js:195
+#: src/components/Register.js:199
 #: src/partials/Header.js:65
 msgid "Registar"
 msgstr "Registar"
 
-#: src/pages/Register.js:52
+#: src/components/Register.js:53
 #: src/routes.js:35
 msgid "Registo"
 msgstr "Registo"
@@ -133,15 +177,19 @@ msgstr "Registo"
 msgid "Sair"
 msgstr "Sair"
 
-#: src/pages/RecoverPassword.js:95
-#: src/pages/ResetPassword.js:132
+#: src/components/RecoverPassword.js:95
+#: src/components/ResetPassword.js:132
 msgid "Submeter"
 msgstr "Submeter"
 
-#: src/pages/Register.js:201
+#: src/components/Register.js:205
 msgid "Utilizador registado com sucesso.<0/>Clica em \"Entrar\" e usa as tuas credenciais."
 msgstr "Utilizador registado com sucesso.<0/>Clica em \"Entrar\" e usa as tuas credenciais."
 
 #: src/partials/Header.js:102
 msgid "Versão 4.0"
 msgstr "Versão 4.0"
+
+#: src/components/ControlPanel/ControlPanelProfile.js:141
+msgid "deixa em branco para não alterar"
+msgstr "deixa em branco para não alterar"

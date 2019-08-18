@@ -2,7 +2,7 @@
   "Página não encontrada": {
     "origin": [
       [
-        "src/pages/NoMatch.js",
+        "src/components/NoMatch.js",
         10
       ]
     ]
@@ -10,7 +10,7 @@
   "Esta página não existe.": {
     "origin": [
       [
-        "src/pages/NoMatch.js",
+        "src/components/NoMatch.js",
         14
       ]
     ]

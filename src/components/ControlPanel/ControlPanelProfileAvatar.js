@@ -80,7 +80,7 @@ const ControlPanelProfileAvatar = () => {
                 <i className="fa fa-upload" />
               </span>
               <span className="file-label">
-                <Trans>Escolhe uma imagem*</Trans>
+                <Trans>Escolhe uma imagem</Trans>*
               </span>
             </span>
           </label>

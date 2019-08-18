@@ -2,11 +2,11 @@
   "Entrar": {
     "origin": [
       [
-        "src/pages/Login.js",
+        "src/components/Login.js",
         51
       ],
       [
-        "src/pages/Login.js",
+        "src/components/Login.js",
         118
       ]
     ]
@@ -14,7 +14,7 @@
   "E-Mail": {
     "origin": [
       [
-        "src/pages/Login.js",
+        "src/components/Login.js",
         59
       ]
     ]
@@ -22,7 +22,7 @@
   "Palavra-passe": {
     "origin": [
       [
-        "src/pages/Login.js",
+        "src/components/Login.js",
         80
       ]
     ]
@@ -30,7 +30,7 @@
   "Credenciais erradas.": {
     "origin": [
       [
-        "src/pages/Login.js",
+        "src/components/Login.js",
         104
       ]
     ]
@@ -38,7 +38,7 @@
   "Erro de servidor. Tenta mais tarde.": {
     "origin": [
       [
-        "src/pages/Login.js",
+        "src/components/Login.js",
         106
       ]
     ]
@@ -46,7 +46,7 @@
   "Recuperar palavra-passe": {
     "origin": [
       [
-        "src/pages/Login.js",
+        "src/components/Login.js",
         123
       ]
     ]

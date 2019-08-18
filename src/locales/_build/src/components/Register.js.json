@@ -2,80 +2,80 @@
   "Registo": {
     "origin": [
       [
-        "src/pages/Register.js",
-        52
+        "src/components/Register.js",
+        53
       ]
     ]
   },
   "Nome": {
     "origin": [
       [
-        "src/pages/Register.js",
-        60
+        "src/components/Register.js",
+        61
       ]
     ]
   },
   "Apelido": {
     "origin": [
       [
-        "src/pages/Register.js",
-        82
+        "src/components/Register.js",
+        83
       ]
     ]
   },
   "E-Mail": {
     "origin": [
       [
-        "src/pages/Register.js",
-        104
+        "src/components/Register.js",
+        105
+      ]
+    ]
+  },
+  "Já existe uma conta com este e-mail.": {
+    "origin": [
+      [
+        "src/components/Register.js",
+        130
       ]
     ]
   },
   "Palavra-passe": {
     "origin": [
       [
-        "src/pages/Register.js",
-        125
+        "src/components/Register.js",
+        136
       ]
     ]
   },
   "Confirmação da palavra-passe": {
     "origin": [
       [
-        "src/pages/Register.js",
-        148
-      ]
-    ]
-  },
-  "Não existe nenhum registo com este e-mail.": {
-    "origin": [
-      [
-        "src/pages/Register.js",
-        176
+        "src/components/Register.js",
+        160
       ]
     ]
   },
   "Erro de servidor. Tenta mais tarde.": {
     "origin": [
       [
-        "src/pages/Register.js",
-        181
+        "src/components/Register.js",
+        186
       ]
     ]
   },
   "Registar": {
     "origin": [
       [
-        "src/pages/Register.js",
-        195
+        "src/components/Register.js",
+        199
       ]
     ]
   },
   "Utilizador registado com sucesso.<0/>Clica em \"Entrar\" e usa as tuas credenciais.": {
     "origin": [
       [
-        "src/pages/Register.js",
-        201
+        "src/components/Register.js",
+        205
       ]
     ]
   }

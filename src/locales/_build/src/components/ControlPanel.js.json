@@ -1,0 +1,26 @@
+{
+  "Perfil": {
+    "origin": [
+      [
+        "src/components/ControlPanel.js",
+        12
+      ]
+    ]
+  },
+  "Ranking": {
+    "origin": [
+      [
+        "src/components/ControlPanel.js",
+        16
+      ]
+    ]
+  },
+  "Painel de controlo": {
+    "origin": [
+      [
+        "src/components/ControlPanel.js",
+        33
+      ]
+    ]
+  }
+}
