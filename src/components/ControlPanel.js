@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 import classNames from 'classnames';
 
-import NoMatch from 'components/NoMatchMatch';
-import ControlPanelProfile from 'components/ControlPanel/ControlPanelProfileofile';
-import ControlPanelRanking from 'components/ControlPanel/ControlPanelRankingnking';
+import NoMatch from 'components/NoMatch';
+import ControlPanelProfile from 'components/ControlPanel/ControlPanelProfile';
+import ControlPanelRanking from 'components/ControlPanel/ControlPanelRanking';
 
 const pages = {
   profile: {
