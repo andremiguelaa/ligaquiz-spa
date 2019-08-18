@@ -6,11 +6,13 @@ import Loading from 'utils/Loading';
 import ApiRequest, { setBearerToken } from 'utils/ApiRequest';
 
 export const setLoginData = (data, dispatch) => {
-  const validity = Math.round(
-    (Date.parse(data.expires_at) - Date.now()) / 1000 / 60 / 60 / 24 / 2
-  );
-  Cookies.set('BEARER-TOKEN', data.access_token, { expires: validity });
-  setBearerToken(data.access_token);
+  if (data.access_token) {
+    const validity = Math.round(
+      (Date.parse(data.expires_at) - Date.now()) / 1000 / 60 / 60 / 24 / 2
+    );
+    Cookies.set('BEARER-TOKEN', data.access_token, { expires: validity });
+    setBearerToken(data.access_token);
+  }
   dispatch({
     type: 'user.login',
     payload: data.user
