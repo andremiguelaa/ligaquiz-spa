@@ -35,7 +35,7 @@ const Avatar = () => {
     setSubmitting(true);
     setError(null);
     ApiRequest.patch('users', formData)
-      .then(() => {
+      .then(({ data: { data: { user } } }) => {
         setSubmitting(false);
         toast.success(
           <Trans>Imagem de perfil actualizada com sucesso.</Trans>,
@@ -46,7 +46,7 @@ const Avatar = () => {
         );
         dispatch({
           type: 'user.patch',
-          payload: formData
+          payload: user
         });
       })
       .catch(error => {

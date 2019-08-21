@@ -32,7 +32,7 @@ const Profile = () => {
       newFormData = omit(formData, ['password', 'password2']);
     }
     ApiRequest.patch('users', newFormData)
-      .then(() => {
+      .then(({ data: { data: { user } } }) => {
         setSubmitting(false);
         toast.success(<Trans>Conta actualizada com sucesso.</Trans>, {
           hideProgressBar: true,
@@ -40,7 +40,7 @@ const Profile = () => {
         });
         dispatch({
           type: 'user.patch',
-          payload: omit(newFormData, ['password', 'password2'])
+          payload: user
         });
       })
       .catch(error => {
