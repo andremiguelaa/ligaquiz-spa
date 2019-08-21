@@ -45,5 +45,5 @@ export default props => {
       setLoading(false);
     }
   }, [dispatch, setLoading]);
-  return <>{!loading ? props.children : <Loading />}</>;
+  return <>{!loading ? props.children : <Loading type="full" />}</>;
 };

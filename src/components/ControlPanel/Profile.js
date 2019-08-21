@@ -6,9 +6,9 @@ import { toast } from 'react-toastify';
 
 import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
-import ControlPanelProfileAvatar from 'components/ControlPanel/ControlPanelProfileAvatar';
+import ProfileAvatar from './Profile/Avatar';
 
-const ControlPanelProfile = () => {
+const Profile = () => {
   const [{ user }, dispatch] = useStateValue();
 
   const [formData, setformData] = useState({
@@ -205,10 +205,10 @@ const ControlPanelProfile = () => {
         </form>
       </div>
       <div className="column is-6">
-        <ControlPanelProfileAvatar />
+        <ProfileAvatar />
       </div>
     </div>
   );
 };
 
-export default ControlPanelProfile;
+export default Profile;

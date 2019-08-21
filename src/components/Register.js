@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
-import Forbidden from 'components/Forbidden';
+import Forbidden from './Forbidden';
 
 const Register = () => {
   const [formData, setformData] = useState({

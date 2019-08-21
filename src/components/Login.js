@@ -5,7 +5,7 @@ import { Trans } from '@lingui/macro';
 import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
 import { setLoginData } from 'utils/Auth';
-import Forbidden from 'components/Forbidden';
+import Forbidden from './Forbidden';
 
 const Login = ({ history }) => {
   const [formData, setformData] = useState({

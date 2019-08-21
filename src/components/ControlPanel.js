@@ -4,19 +4,19 @@ import { Trans } from '@lingui/macro';
 import classNames from 'classnames';
 
 import { useStateValue } from 'state/State';
-import NoMatch from 'components/NoMatch';
-import Forbidden from 'components/Forbidden';
-import ControlPanelProfile from 'components/ControlPanel/ControlPanelProfile';
-import ControlPanelRanking from 'components/ControlPanel/ControlPanelRanking';
+import NoMatch from './NoMatch';
+import Forbidden from './Forbidden';
+import Profile from './ControlPanel/Profile';
+import Ranking from './ControlPanel/Ranking';
 
 const pages = {
   profile: {
     title: <Trans>Perfil</Trans>,
-    component: <ControlPanelProfile />
+    component: <Profile />
   },
   ranking: {
     title: <Trans>Ranking</Trans>,
-    component: <ControlPanelRanking />
+    component: <Ranking />
   }
 };
 

@@ -3,7 +3,7 @@ import { Trans } from '@lingui/macro';
 
 import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
-import Forbidden from 'components/Forbidden';
+import Forbidden from './Forbidden';
 
 const ResetPassword = ({
   match: {

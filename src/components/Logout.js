@@ -4,7 +4,7 @@ import Cookies from 'js-cookie';
 import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
 import Loading from 'utils/Loading';
-import Forbidden from 'components/Forbidden';
+import Forbidden from './Forbidden';
 
 const Logout = ({ history }) => {
   const [{ user }, dispatch] = useStateValue();

@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
 
-const ControlPanelProfileAvatar = () => {
+const Avatar = () => {
   const [{ user }, dispatch] = useStateValue();
   const [formData, setformData] = useState({
     id: user.id,
@@ -119,4 +119,4 @@ const ControlPanelProfileAvatar = () => {
   );
 };
 
-export default ControlPanelProfileAvatar;
+export default Avatar;
