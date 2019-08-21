@@ -25,7 +25,7 @@ const Logout = ({ history }) => {
     return <Forbidden />;
   }
 
-  return <Loading />;
+  return <Loading type="full" />;
 };
 
 export default Logout;
