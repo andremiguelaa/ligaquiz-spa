@@ -8,10 +8,12 @@ import { catalogs } from 'App';
 
 import { useStateValue } from 'state/State';
 import logo from 'img/logo.png';
+import classes from './Header.module.scss';
 
 const Header = () => {
   const [{ settings, user }, dispatch] = useStateValue();
   const [menuDropdownOpen, setMenuDropdownOpen] = useState(false);
+  const [menuBurgerOpen, setMenuBurgerOpen] = useState(false);
 
   const changeLanguage = lang => {
     Cookies.set('language', lang, { expires: 365 });
@@ -33,13 +35,30 @@ const Header = () => {
             <Link to="/" className="navbar-item">
               <img src={logo} alt="logo" />
             </Link>
-            <button className="navbar-burger burger">
-              <span aria-hidden="true" />
-              <span aria-hidden="true" />
-              <span aria-hidden="true" />
-            </button>
+            <div className={classes.burgerWrapper}>
+              <OutsideClickHandler
+                onOutsideClick={() => {
+                  setMenuBurgerOpen(false);
+                }}
+              >
+                <button
+                  className={classNames('navbar-burger', classes.burger)}
+                  onClick={() => {
+                    setMenuBurgerOpen(!menuBurgerOpen);
+                  }}
+                >
+                  <span aria-hidden="true" />
+                  <span aria-hidden="true" />
+                  <span aria-hidden="true" />
+                </button>
+              </OutsideClickHandler>
+            </div>
           </div>
-          <div className="navbar-menu">
+          <div
+            className={classNames('navbar-menu', {
+              'is-active': menuBurgerOpen
+            })}
+          >
             <div className="navbar-end">
               <div className="navbar-item">
                 <div className="buttons are-small">
