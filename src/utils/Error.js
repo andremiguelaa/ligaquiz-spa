@@ -4,7 +4,7 @@ import classes from './Error.module.scss';
 
 export const Error = ({ children }) => (
   <>
-    <div className={classes.error}>
+    <div className={classes.icon}>
       <i className="fa fa-bomb" />
     </div>
     <div className={classes.content}>
