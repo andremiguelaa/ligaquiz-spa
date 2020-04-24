@@ -7,9 +7,7 @@ export const EmptyState = ({ children }) => (
     <div className={classes.icon}>
       <i className="fa fa-meh-o" />
     </div>
-    <div className={classes.content}>
-        {children}
-    </div>
+    {children && <div className={classes.content}>{children}</div>}
   </>
 );
 

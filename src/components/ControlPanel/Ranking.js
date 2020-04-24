@@ -1,27 +1,75 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Trans } from '@lingui/macro';
 
 import ApiRequest from 'utils/ApiRequest';
 import Loading from 'utils/Loading';
 import Error from 'utils/Error';
 import EmptyState from 'utils/EmptyState';
+import Modal from 'utils/Modal';
 
 const Ranking = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [data, setData] = useState();
-  useEffect(() => {
+  const [modalState, setModalState] = useState({
+    type: undefined,
+    title: '',
+    open: false,
+    action: () => {},
+    doingAction: false,
+    onClose: () => {
+      setModalState({
+        ...modalState,
+        open: false,
+      });
+    },
+  });
+
+  const getNationalRanking = () => {
+    setLoading(true);
     ApiRequest.get('national-rankings')
-      .then(({ data }) => {
-        setData(data.data);
+    .then(({ data }) => {
+      setData(data.data);
+    })
+    .catch(() => {
+      setError(true);
+    })
+    .then(() => {
+      setLoading(false);
+    });
+  }
+
+  useEffect(() => {
+    getNationalRanking();
+  }, []);
+
+  const modalStateRef = useRef(modalState);
+
+  useEffect(() => {
+    modalStateRef.current = modalState;
+  }, [modalState]);
+
+  const deleteRanking = (date) => {
+    setModalState({
+      ...modalStateRef.current,
+      doingAction: true,
+    });
+    ApiRequest.delete('national-rankings', { data: { month: date } })
+      .then(() => {
+        setModalState({
+          ...modalStateRef.current,
+          doingAction: false,
+          open: false,
+        });
+        getNationalRanking();
       })
       .catch(() => {
-        setError(true);
+        //
       })
       .then(() => {
-        setLoading(false);
+        //
       });
-  }, []);
+  };
 
   if (loading) {
     return <Loading />;
@@ -51,14 +99,18 @@ const Ranking = () => {
         <table className="table is-fullwidth is-hoverable is-striped">
           <thead>
             <tr>
-              <th><Trans>Mês</Trans></th>
-              <th><Trans>Acções</Trans></th>
+              <th>
+                <Trans>Mês</Trans>
+              </th>
+              <th>
+                <Trans>Acções</Trans>
+              </th>
             </tr>
           </thead>
           <tbody>
             {data.map((entry) => {
               return (
-                <tr>
+                <tr key={entry}>
                   <td>{entry}</td>
                   <td>
                     <a href="#">
@@ -69,9 +121,26 @@ const Ranking = () => {
                       <i className="fa fa-edit"></i> Editar
                     </a>
                     &nbsp;&nbsp;
-                    <a href="#">
+                    <button
+                      className="link"
+                      onClick={() =>
+                        setModalState({
+                          ...modalState,
+                          open: true,
+                          type: 'danger',
+                          title: <Trans>Apagar ranking mensal</Trans>,
+                          body: (
+                            <Trans>
+                              Tens a certeza que queres apagar este ranking
+                              mensal ({entry}) e todos os quizzes associados?
+                            </Trans>
+                          ),
+                          action: () => deleteRanking(entry),
+                        })
+                      }
+                    >
                       <i className="fa fa-trash"></i> Apagar
-                    </a>
+                    </button>
                   </td>
                 </tr>
               );
@@ -83,6 +152,15 @@ const Ranking = () => {
           <Trans>Sem registos</Trans>
         </EmptyState>
       )}
+      <Modal
+        type={modalState.type}
+        open={modalState.open}
+        title={modalState.title}
+        body={modalState.body}
+        action={modalState.action}
+        doingAction={modalState.doingAction}
+        onClose={modalState.onClose}
+      />
     </>
   );
 };

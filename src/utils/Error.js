@@ -7,9 +7,7 @@ export const Error = ({ children }) => (
     <div className={classes.icon}>
       <i className="fa fa-bomb" />
     </div>
-    <div className={classes.content}>
-        {children}
-    </div>
+    {children && <div className={classes.content}>{children}</div>}
   </>
 );
 
