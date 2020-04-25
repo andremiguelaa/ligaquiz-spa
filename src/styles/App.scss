@@ -44,19 +44,14 @@ $body-size: 14px;
   }
 }
 
-button.link {
-  border: none;
-  background-color: transparent;
-  text-decoration: underline;
-  padding: 0;
-  font-size: inherit;
-  cursor: pointer;
-}
-
 .message-actions {
   padding: 1.25em 1.5em;
   border-top: 1px solid $grey-lighter;
   .button:not(:last-child) {
     margin-right: 0.5em;
   }
+}
+
+.is-vertical-middle {
+  vertical-align: middle !important;
 }

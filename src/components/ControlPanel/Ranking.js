@@ -8,6 +8,7 @@ import Error from 'utils/Error';
 import Modal from 'utils/Modal';
 
 import List from './Ranking/List';
+import Add from './Ranking/Add';
 
 const Ranking = () => {
   const [loading, setLoading] = useState(true);
@@ -15,6 +16,7 @@ const Ranking = () => {
   const [data, setData] = useState();
   const [monthToDelete, setMonthToDelete] = useState();
   const [deleting, setDeleting] = useState(false);
+  const [page, setPage] = useState('list');
 
   useEffect(() => {
     setLoading(true);
@@ -60,15 +62,25 @@ const Ranking = () => {
 
   return (
     <>
-      <List data={data} setMonthToDelete={setMonthToDelete} />
+      {
+        {
+          list: (
+            <List
+              data={data}
+              setPage={setPage}
+              setMonthToDelete={setMonthToDelete}
+            />
+          ),
+          add: <Add data={data} setPage={setPage} />,
+        }[page]
+      }
       <Modal
         type="danger"
         open={monthToDelete}
         title={<Trans>Apagar ranking mensal</Trans>}
         body={
           <Trans>
-            Tens a certeza que queres apagar este ranking mensal (
-            {monthToDelete}) e todos os quizzes associados?
+            {`Tens a certeza que queres apagar este ranking mensal (${monthToDelete}) e todos os quizzes associados?`}
           </Trans>
         }
         action={() => deleteRanking(monthToDelete)}

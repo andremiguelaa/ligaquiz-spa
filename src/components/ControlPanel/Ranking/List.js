@@ -2,17 +2,17 @@ import React from 'react';
 import { Trans } from '@lingui/macro';
 import EmptyState from 'utils/EmptyState';
 
-const List = ({ data, setMonthToDelete }) => {
+const List = ({ data, setPage, setMonthToDelete }) => {
   return (
     <>
-      <a href="#" className="button is-primary">
+      <button onClick={() => setPage('add')} className="button is-primary">
         <span className="icon">
           <i className="fa fa-plus"></i>
         </span>
         <span>
           <Trans>Adicionar ranking mensal</Trans>
         </span>
-      </a>
+      </button>
       <br />
       <br />
       {data.length ? (
@@ -22,7 +22,7 @@ const List = ({ data, setMonthToDelete }) => {
               <th>
                 <Trans>Mês</Trans>
               </th>
-              <th>
+              <th className="has-text-right">
                 <Trans>Acções</Trans>
               </th>
             </tr>
@@ -31,22 +31,25 @@ const List = ({ data, setMonthToDelete }) => {
             {data.map((entry) => {
               return (
                 <tr key={entry}>
-                  <td>{entry}</td>
+                  <td className="is-vertical-middle">
+                    <a href="#">{entry}</a>
+                  </td>
                   <td>
-                    <a href="#">
-                      <i className="fa fa-eye"></i> Ver
-                    </a>
-                    &nbsp;&nbsp;
-                    <a href="#">
-                      <i className="fa fa-edit"></i> Editar
-                    </a>
-                    &nbsp;&nbsp;
-                    <button
-                      className="link"
-                      onClick={() => setMonthToDelete(entry)}
-                    >
-                      <i className="fa fa-trash"></i> Apagar
-                    </button>
+                    <div className="buttons has-addons is-pulled-right">
+                      <button className="button">
+                        <span className="icon is-small">
+                          <i className="fa fa-edit"></i>
+                        </span>
+                      </button>
+                      <button
+                        className="button is-danger"
+                        onClick={() => setMonthToDelete(entry)}
+                      >
+                        <span className="icon">
+                          <i className="fa fa-trash"></i>
+                        </span>
+                      </button>
+                    </div>
                   </td>
                 </tr>
               );
