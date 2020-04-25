@@ -11,63 +11,35 @@ const Ranking = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [data, setData] = useState();
-  const [modalState, setModalState] = useState({
-    type: undefined,
-    title: '',
-    open: false,
-    action: () => {},
-    doingAction: false,
-    onClose: () => {
-      setModalState({
-        ...modalState,
-        open: false,
-      });
-    },
-  });
+  const [monthToDelete, setMonthToDelete] = useState();
+  const [deleting, setDeleting] = useState(false);
 
-  const getNationalRanking = () => {
+  useEffect(() => {
     setLoading(true);
     ApiRequest.get('national-rankings')
-    .then(({ data }) => {
-      setData(data.data);
-    })
-    .catch(() => {
-      setError(true);
-    })
-    .then(() => {
-      setLoading(false);
-    });
-  }
-
-  useEffect(() => {
-    getNationalRanking();
-  }, []);
-
-  const modalStateRef = useRef(modalState);
-
-  useEffect(() => {
-    modalStateRef.current = modalState;
-  }, [modalState]);
-
-  const deleteRanking = (date) => {
-    setModalState({
-      ...modalStateRef.current,
-      doingAction: true,
-    });
-    ApiRequest.delete('national-rankings', { data: { month: date } })
-      .then(() => {
-        setModalState({
-          ...modalStateRef.current,
-          doingAction: false,
-          open: false,
-        });
-        getNationalRanking();
+      .then(({ data }) => {
+        setData(data.data);
       })
       .catch(() => {
-        //
+        setError(true);
       })
       .then(() => {
-        //
+        setLoading(false);
+      });
+  }, []);
+
+  const deleteRanking = (date) => {
+    setDeleting(true);
+    ApiRequest.delete('national-rankings', { data: { month: date } })
+      .then(() => {
+        setData(data.filter((item) => item !== date));
+        setMonthToDelete();
+      })
+      .catch(() => {
+        setError(true);
+      })
+      .then(() => {
+        setDeleting(false);
       });
   };
 
@@ -123,21 +95,7 @@ const Ranking = () => {
                     &nbsp;&nbsp;
                     <button
                       className="link"
-                      onClick={() =>
-                        setModalState({
-                          ...modalState,
-                          open: true,
-                          type: 'danger',
-                          title: <Trans>Apagar ranking mensal</Trans>,
-                          body: (
-                            <Trans>
-                              Tens a certeza que queres apagar este ranking
-                              mensal ({entry}) e todos os quizzes associados?
-                            </Trans>
-                          ),
-                          action: () => deleteRanking(entry),
-                        })
-                      }
+                      onClick={() => setMonthToDelete(entry)}
                     >
                       <i className="fa fa-trash"></i> Apagar
                     </button>
@@ -153,13 +111,18 @@ const Ranking = () => {
         </EmptyState>
       )}
       <Modal
-        type={modalState.type}
-        open={modalState.open}
-        title={modalState.title}
-        body={modalState.body}
-        action={modalState.action}
-        doingAction={modalState.doingAction}
-        onClose={modalState.onClose}
+        type="danger"
+        open={monthToDelete}
+        title={<Trans>Apagar ranking mensal</Trans>}
+        body={
+          <Trans>
+            Tens a certeza que queres apagar este ranking mensal (
+            {monthToDelete}) e todos os quizzes associados?
+          </Trans>
+        }
+        action={() => deleteRanking(monthToDelete)}
+        doingAction={deleting}
+        onClose={() => setMonthToDelete()}
       />
     </>
   );
