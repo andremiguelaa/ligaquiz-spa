@@ -17,30 +17,38 @@ msgstr ""
 msgid "<0>A Liga Quiz é um jogo de cultura geral onde a confiança na honestidade dos jogadores é crucial.</0><1><2>É expressamente proibido usar qualquer fonte externa para obter respostas às perguntas</2>. Isto inclui:</1><3><4>Pedir pistas/respostas a outras pessoas</4><5>Usar a Internet, livros ou outro material de consulta para pesquisa de pistas/respostas</5><6>Usar calculadoras, instrumentos musicais ou outros equipamentos para ajudar à resposta</6></3><7>Apenas papel e caneta/lápis são permitidos.</7><8><9>Pede-se também a todos os jogadores que joguem todos os dias</9>. As faltas adulteram a veracidade da classificação final e podem levar à descida de divisão ao incumpridor.</8>"
 msgstr "<0>Quiz League is a general knowledge game where the trust in players honesty is essential.</0><1><2>It's completly forbidden the use of any external source to obtain answers</2>. This includes:</1><3><4>Ask for hints/answers to another people</4><5>Use Internet, books or any other resource to looking for hints/answers</5><6>Use calculators, musical instruments or any other devices to help getting the answer</6></3><7>Only paper and pen/pencil are permitted.</7><8><9>Additionally, we ask to all players to play everyday</9>. The forfeits distort the final ranking trustiness and can lead to the relegation of the player.</8>"
 
-#: src/utils/Auth.js:42
+#: src/utils/Auth.js:35
 msgid "A tua sessão expirou."
 msgstr "Your session expired."
 
-#: src/components/ControlPanel/ControlPanelProfile.js:85
+#: src/components/ControlPanel/Ranking.js:80
+msgid "Acções"
+msgstr "Actions"
+
+#: src/components/ControlPanel/Ranking.js:67
+msgid "Adicionar ranking mensal"
+msgstr "Add monthly ranking"
+
+#: src/components/ControlPanel/Ranking.js:118
+msgid "Apagar ranking mensal"
+msgstr "Delete monthly ranking"
+
+#: src/components/ControlPanel/Profile.js:90
 #: src/components/Register.js:82
 msgid "Apelido"
 msgstr "Surname"
 
-#: src/components/ControlPanel/ControlPanelProfile.js:164
+#: src/components/ControlPanel/Profile.js:169
 #: src/components/Register.js:159
 #: src/components/ResetPassword.js:86
 msgid "Confirmação da palavra-passe"
 msgstr "Password confirmation"
 
-#: src/components/ControlPanel/ControlPanelProfile.js:37
-msgid "Conta actualizada com sucesso."
-msgstr "Account updated successfully."
-
 #: src/components/Login.js:103
 msgid "Credenciais erradas."
 msgstr "Wrong credentials."
 
-#: src/components/ControlPanel/ControlPanelProfile.js:108
+#: src/components/ControlPanel/Profile.js:113
 #: src/components/Login.js:58
 #: src/components/RecoverPassword.js:59
 #: src/components/Register.js:104
@@ -49,7 +57,7 @@ msgstr "E-Mail"
 
 #: src/components/Login.js:50
 #: src/components/Login.js:117
-#: src/partials/Header.js:62
+#: src/partials/Header.js:81
 #: src/routes.js:20
 msgid "Entrar"
 msgstr "Login"
@@ -58,8 +66,8 @@ msgstr "Login"
 msgid "Enviámos-te um e-mail, segue as instruções para definir uma nova palavra-passe."
 msgstr "We sent you an e-mail, follow its instructions to set a new password"
 
-#: src/components/ControlPanel/ControlPanelProfile.js:189
-#: src/components/ControlPanel/ControlPanelProfileAvatar.js:103
+#: src/components/ControlPanel/Profile/Avatar.js:103
+#: src/components/ControlPanel/Ranking.js:55
 #: src/components/Login.js:105
 #: src/components/RecoverPassword.js:88
 #: src/components/Register.js:185
@@ -67,7 +75,7 @@ msgstr "We sent you an e-mail, follow its instructions to set a new password"
 msgid "Erro de servidor. Tenta mais tarde."
 msgstr "Server error. Try again later."
 
-#: src/components/ControlPanel/ControlPanelProfileAvatar.js:83
+#: src/components/ControlPanel/Profile/Avatar.js:83
 msgid "Escolhe uma imagem"
 msgstr "Choose an image"
 
@@ -75,24 +83,24 @@ msgstr "Choose an image"
 msgid "Esta página não existe."
 msgstr "This page does not exist"
 
-#: src/components/ControlPanel/ControlPanelProfileAvatar.js:101
+#: src/components/ControlPanel/Profile/Avatar.js:101
 msgid "Ficheiro inválido."
 msgstr "Invalid file."
 
-#: src/components/ControlPanel/ControlPanelProfile.js:201
-#: src/components/ControlPanel/ControlPanelProfileAvatar.js:114
+#: src/components/ControlPanel/Profile/Avatar.js:114
+#: src/components/ControlPanel/Profile.js:201
 msgid "Gravar"
 msgstr "Save"
 
-#: src/components/ControlPanel/ControlPanelProfileAvatar.js:66
+#: src/components/ControlPanel/Profile/Avatar.js:66
 msgid "Imagem de perfil"
 msgstr "Profile image"
 
-#: src/components/ControlPanel/ControlPanelProfileAvatar.js:41
+#: src/components/ControlPanel/Profile/Avatar.js:41
 msgid "Imagem de perfil actualizada com sucesso."
 msgstr "Profile image updated successfully."
 
-#: src/components/ControlPanel/ControlPanelProfile.js:134
+#: src/components/ControlPanel/Profile.js:139
 #: src/components/Register.js:129
 msgid "Já existe uma conta com este e-mail."
 msgstr "There is another account using this e-mail."
@@ -103,11 +111,15 @@ msgstr "There is another account using this e-mail."
 msgid "Liga Quiz"
 msgstr "Quiz League"
 
-#: src/components/ControlPanel/ControlPanelProfileAvatar.js:90
+#: src/components/ControlPanel/Profile/Avatar.js:90
 msgid "Máximo 200 KB"
 msgstr "Max. 200 KB"
 
-#: src/components/ControlPanel/ControlPanelProfile.js:62
+#: src/components/ControlPanel/Ranking.js:77
+msgid "Mês"
+msgstr "Month"
+
+#: src/components/ControlPanel/Profile.js:67
 #: src/components/Register.js:60
 msgid "Nome"
 msgstr "Name"
@@ -119,6 +131,14 @@ msgstr "Non authorized"
 #: src/components/RecoverPassword.js:83
 msgid "Não existe nenhum registo com este e-mail."
 msgstr "There is no registration with this e-mail."
+
+#: src/components/ControlPanel/Profile.js:56
+msgid "Não foi possível actualizar o perfil."
+msgstr "Profile could not be update."
+
+#: src/components/ControlPanel/Ranking.js:40
+msgid "Não foi possível apagar o ranking mensal."
+msgstr "Monthly ranking could not be deleted."
 
 #: src/components/Forbidden.js:14
 msgid "Não tens permissões para aceder a esta página."
@@ -133,13 +153,13 @@ msgid "O pedido de redefinição de palavra-passe é inválido"
 msgstr "Your password change request is not valid"
 
 #: src/components/ControlPanel.js:39
-#: src/partials/Header.js:94
+#: src/partials/Header.js:113
 #: src/routes.js:45
 #: src/routes.js:50
 msgid "Painel de controlo"
 msgstr "Control panel"
 
-#: src/components/ControlPanel/ControlPanelProfile.js:140
+#: src/components/ControlPanel/Profile.js:145
 #: src/components/Login.js:79
 #: src/components/Register.js:135
 #: src/components/ResetPassword.js:62
@@ -154,6 +174,10 @@ msgstr "Password changed successfully.<0/>Click on \"Login\" and use the new cre
 msgid "Perfil"
 msgstr "Profile"
 
+#: src/components/ControlPanel/Profile.js:43
+msgid "Perfil actualizado com sucesso."
+msgstr "Profile successfully updated."
+
 #: src/components/NoMatch.js:10
 #: src/routes.js:55
 msgid "Página não encontrada"
@@ -162,6 +186,10 @@ msgstr "Page not found"
 #: src/components/ControlPanel.js:18
 msgid "Ranking"
 msgstr "Ranking"
+
+#: src/components/ControlPanel/Ranking.js:37
+msgid "Ranking mensal apagado com sucesso."
+msgstr "Montlhy ranking successfully deleted."
 
 #: src/components/Login.js:122
 #: src/components/RecoverPassword.js:51
@@ -175,7 +203,7 @@ msgid "Redefinir palavra-passe"
 msgstr "Reset password"
 
 #: src/components/Register.js:198
-#: src/partials/Header.js:65
+#: src/partials/Header.js:84
 msgid "Registar"
 msgstr "Register"
 
@@ -184,24 +212,32 @@ msgstr "Register"
 msgid "Registo"
 msgstr "Registration"
 
-#: src/partials/Header.js:98
+#: src/partials/Header.js:117
 #: src/routes.js:40
 msgid "Sair"
 msgstr "Logout"
+
+#: src/components/ControlPanel/Ranking.js:112
+msgid "Sem registos"
+msgstr "No records"
 
 #: src/components/RecoverPassword.js:100
 #: src/components/ResetPassword.js:139
 msgid "Submeter"
 msgstr "Submit"
 
+#: src/components/ControlPanel/Ranking.js:120
+msgid "Tens a certeza que queres apagar este ranking mensal ({monthToDelete}) e todos os quizzes associados?"
+msgstr "Do you really want to delete this monthy ranking ({monthToDelete}) and all related quizzes?"
+
 #: src/components/Register.js:204
 msgid "Utilizador registado com sucesso.<0/>Clica em \"Entrar\" e usa as tuas credenciais."
 msgstr "User registerd successfully.<0/>Click on \"Login\" and use your credentials."
 
-#: src/partials/Header.js:102
+#: src/partials/Header.js:121
 msgid "Versão 4.0"
 msgstr "Version 4.0"
 
-#: src/components/ControlPanel/ControlPanelProfile.js:141
+#: src/components/ControlPanel/Profile.js:146
 msgid "deixa em branco para não alterar"
 msgstr "leave it blank to keep"

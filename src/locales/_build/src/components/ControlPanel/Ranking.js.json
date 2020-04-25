@@ -1,0 +1,74 @@
+{
+  "Ranking mensal apagado com sucesso.": {
+    "origin": [
+      [
+        "src/components/ControlPanel/Ranking.js",
+        37
+      ]
+    ]
+  },
+  "Não foi possível apagar o ranking mensal.": {
+    "origin": [
+      [
+        "src/components/ControlPanel/Ranking.js",
+        40
+      ]
+    ]
+  },
+  "Erro de servidor. Tenta mais tarde.": {
+    "origin": [
+      [
+        "src/components/ControlPanel/Ranking.js",
+        55
+      ]
+    ]
+  },
+  "Adicionar ranking mensal": {
+    "origin": [
+      [
+        "src/components/ControlPanel/Ranking.js",
+        67
+      ]
+    ]
+  },
+  "Mês": {
+    "origin": [
+      [
+        "src/components/ControlPanel/Ranking.js",
+        77
+      ]
+    ]
+  },
+  "Acções": {
+    "origin": [
+      [
+        "src/components/ControlPanel/Ranking.js",
+        80
+      ]
+    ]
+  },
+  "Sem registos": {
+    "origin": [
+      [
+        "src/components/ControlPanel/Ranking.js",
+        112
+      ]
+    ]
+  },
+  "Apagar ranking mensal": {
+    "origin": [
+      [
+        "src/components/ControlPanel/Ranking.js",
+        118
+      ]
+    ]
+  },
+  "Tens a certeza que queres apagar este ranking mensal ({monthToDelete}) e todos os quizzes associados?": {
+    "origin": [
+      [
+        "src/components/ControlPanel/Ranking.js",
+        120
+      ]
+    ]
+  }
+}

@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Trans } from '@lingui/macro';
+import { toast } from 'react-toastify';
 
 import ApiRequest from 'utils/ApiRequest';
 import Loading from 'utils/Loading';
@@ -33,12 +34,13 @@ const Ranking = () => {
     ApiRequest.delete('national-rankings', { data: { month: date } })
       .then(() => {
         setData(data.filter((item) => item !== date));
-        setMonthToDelete();
+        toast.success(<Trans>Ranking mensal apagado com sucesso.</Trans>);
       })
       .catch(() => {
-        setError(true);
+        toast.error(<Trans>Não foi possível apagar o ranking mensal.</Trans>);
       })
       .then(() => {
+        setMonthToDelete();
         setDeleting(false);
       });
   };
@@ -116,8 +118,7 @@ const Ranking = () => {
         title={<Trans>Apagar ranking mensal</Trans>}
         body={
           <Trans>
-            Tens a certeza que queres apagar este ranking mensal (
-            {monthToDelete}) e todos os quizzes associados?
+            Tens a certeza que queres apagar este ranking mensal ({monthToDelete}) e todos os quizzes associados?
           </Trans>
         }
         action={() => deleteRanking(monthToDelete)}

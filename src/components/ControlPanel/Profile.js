@@ -7,6 +7,7 @@ import { toast } from 'react-toastify';
 import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
 import ProfileAvatar from './Profile/Avatar';
+import ControlPanel from 'components/ControlPanel';
 
 const Profile = () => {
   const [{ user }, dispatch] = useStateValue();
@@ -17,13 +18,13 @@ const Profile = () => {
     surname: user.surname,
     email: user.email,
     password: '',
-    password2: ''
+    password2: '',
   });
 
   const [error, setError] = useState(null);
   const [submitting, setSubmitting] = useState(false);
 
-  const handleSubmit = event => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     setSubmitting(true);
     setError(null);
@@ -32,23 +33,27 @@ const Profile = () => {
       newFormData = omit(formData, ['password', 'password2']);
     }
     ApiRequest.patch('users', newFormData)
-      .then(({ data: { data: { user } } }) => {
-        setSubmitting(false);
-        toast.success(<Trans>Conta actualizada com sucesso.</Trans>, {
-          hideProgressBar: true,
-          closeButton: false
-        });
-        dispatch({
-          type: 'user.patch',
-          payload: user
-        });
-      })
-      .catch(error => {
+      .then(
+        ({
+          data: {
+            data: { user },
+          },
+        }) => {
+          setSubmitting(false);
+          toast.success(<Trans>Perfil actualizado com sucesso.</Trans>);
+          dispatch({
+            type: 'user.patch',
+            payload: user,
+          });
+        }
+      )
+      .catch((error) => {
         try {
           setError(error.response.data);
         } catch (error) {
           setError({ message: 'server_error' });
         }
+        toast.error(<Trans>Não foi possível actualizar o perfil.</Trans>);
         setSubmitting(false);
       });
   };
@@ -68,10 +73,10 @@ const Profile = () => {
                 maxLength={255}
                 className="input"
                 defaultValue={user.name}
-                onChange={event => {
+                onChange={(event) => {
                   setformData({
                     ...formData,
-                    name: event.target.value
+                    name: event.target.value,
                   });
                 }}
               />
@@ -91,10 +96,10 @@ const Profile = () => {
                 maxLength={255}
                 className="input"
                 defaultValue={user.surname}
-                onChange={event => {
+                onChange={(event) => {
                   setformData({
                     ...formData,
-                    surname: event.target.value
+                    surname: event.target.value,
                   });
                 }}
               />
@@ -112,13 +117,13 @@ const Profile = () => {
                 type="email"
                 required
                 className={classNames('input', {
-                  'is-danger': error && error.data && error.data.email
+                  'is-danger': error && error.data && error.data.email,
                 })}
                 defaultValue={user.email}
-                onChange={event => {
+                onChange={(event) => {
                   setformData({
                     ...formData,
-                    email: event.target.value
+                    email: event.target.value,
                   });
                 }}
               />
@@ -147,10 +152,10 @@ const Profile = () => {
                 maxLength={255}
                 className="input"
                 autoComplete="new-password"
-                onChange={event => {
+                onChange={(event) => {
                   setformData({
                     ...formData,
-                    password: event.target.value
+                    password: event.target.value,
                   });
                 }}
               />
@@ -168,13 +173,15 @@ const Profile = () => {
                 type="password"
                 minLength={6}
                 maxLength={255}
-                className={`input ${formData.password2.length &&
+                className={`input ${
+                  formData.password2.length &&
                   formData.password !== formData.password2 &&
-                  'is-danger'}`}
-                onChange={event => {
+                  'is-danger'
+                }`}
+                onChange={(event) => {
                   setformData({
                     ...formData,
-                    password2: event.target.value
+                    password2: event.target.value,
                   });
                 }}
               />
@@ -183,13 +190,6 @@ const Profile = () => {
               </span>
             </div>
           </div>
-          {error && error.message !== 'validation_error' && (
-            <div className="field">
-              <p className="help is-danger">
-                <Trans>Erro de servidor. Tenta mais tarde.</Trans>
-              </p>
-            </div>
-          )}
           <div className="field">
             <div className="control">
               <button

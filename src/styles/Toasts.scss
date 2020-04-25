@@ -59,15 +59,12 @@
 
 .Toastify__toast {
   position: relative;
+  border-radius: 4px;
+  padding: 1.25rem 2.5rem 1.25rem 1.5rem;
   min-height: 64px;
   box-sizing: border-box;
   margin-bottom: 1rem;
-  padding: 8px;
-  border-radius: 1px;
-  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1), 0 2px 15px 0 rgba(0, 0, 0, 0.05);
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   max-height: 800px;
   overflow: hidden;
@@ -96,7 +93,6 @@
 }
 .Toastify__toast-body {
   margin: auto 0;
-  -ms-flex: 1;
   flex: 1;
 }
 
@@ -107,26 +103,50 @@
 }
 
 .Toastify__close-button {
-  color: #fff;
-  font-weight: bold;
-  font-size: 14px;
-  background: transparent;
-  outline: none;
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  -webkit-appearance: none;
+  background-color: rgba(10, 10, 10, 0.2);
   border: none;
-  padding: 0;
+  border-radius: 290486px;
   cursor: pointer;
-  opacity: 0.7;
-  transition: 0.3s ease;
-  -ms-flex-item-align: start;
-  align-self: flex-start;
-}
-.Toastify__close-button--default {
-  color: #000;
-  opacity: 0.3;
-}
-.Toastify__close-button:hover,
-.Toastify__close-button:focus {
-  opacity: 1;
+  pointer-events: auto;
+  display: inline-block;
+  flex-grow: 0;
+  flex-shrink: 0;
+  font-size: 0;
+  height: 20px;
+  max-height: 20px;
+  max-width: 20px;
+  min-height: 20px;
+  min-width: 20px;
+  outline: 0;
+  vertical-align: top;
+  width: 20px;
+  &::before,
+  &::after {
+    background-color: #fff;
+    content: '';
+    display: block;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform-origin: center center;
+  }
+  &::before {
+    height: 2px;
+    width: 50%;
+  }
+  &::after {
+    height: 50%;
+    width: 2px;
+  }
+  &:focus,
+  &:hover {
+    background-color: rgba(10, 10, 10, 0.3);
+  }
 }
 
 @keyframes Toastify__trackProgress {
@@ -558,5 +578,3 @@
 .Toastify__slide-exit--bottom-center {
   animation-name: Toastify__slideOutDown;
 }
-
-/*# sourceMappingURL=ReactToastify.css.map */

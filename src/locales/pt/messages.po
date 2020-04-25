@@ -17,30 +17,38 @@ msgstr ""
 msgid "<0>A Liga Quiz é um jogo de cultura geral onde a confiança na honestidade dos jogadores é crucial.</0><1><2>É expressamente proibido usar qualquer fonte externa para obter respostas às perguntas</2>. Isto inclui:</1><3><4>Pedir pistas/respostas a outras pessoas</4><5>Usar a Internet, livros ou outro material de consulta para pesquisa de pistas/respostas</5><6>Usar calculadoras, instrumentos musicais ou outros equipamentos para ajudar à resposta</6></3><7>Apenas papel e caneta/lápis são permitidos.</7><8><9>Pede-se também a todos os jogadores que joguem todos os dias</9>. As faltas adulteram a veracidade da classificação final e podem levar à descida de divisão ao incumpridor.</8>"
 msgstr "<0>A Liga Quiz é um jogo de cultura geral onde a confiança na honestidade dos jogadores é crucial.</0><1><2>É expressamente proibido usar qualquer fonte externa para obter respostas às perguntas</2>. Isto inclui:</1><3><4>Pedir pistas/respostas a outras pessoas</4><5>Usar a Internet, livros ou outro material de consulta para pesquisa de pistas/respostas</5><6>Usar calculadoras, instrumentos musicais ou outros equipamentos para ajudar à resposta</6></3><7>Apenas papel e caneta/lápis são permitidos.</7><8><9>Pede-se também a todos os jogadores que joguem todos os dias</9>. As faltas adulteram a veracidade da classificação final e podem levar à descida de divisão ao incumpridor.</8>"
 
-#: src/utils/Auth.js:42
+#: src/utils/Auth.js:35
 msgid "A tua sessão expirou."
 msgstr "A tua sessão expirou."
 
-#: src/components/ControlPanel/ControlPanelProfile.js:85
+#: src/components/ControlPanel/Ranking.js:80
+msgid "Acções"
+msgstr "Acções"
+
+#: src/components/ControlPanel/Ranking.js:67
+msgid "Adicionar ranking mensal"
+msgstr "Adicionar ranking mensal"
+
+#: src/components/ControlPanel/Ranking.js:118
+msgid "Apagar ranking mensal"
+msgstr "Apagar ranking mensal"
+
+#: src/components/ControlPanel/Profile.js:90
 #: src/components/Register.js:82
 msgid "Apelido"
 msgstr "Apelido"
 
-#: src/components/ControlPanel/ControlPanelProfile.js:164
+#: src/components/ControlPanel/Profile.js:169
 #: src/components/Register.js:159
 #: src/components/ResetPassword.js:86
 msgid "Confirmação da palavra-passe"
 msgstr "Confirmação da palavra-passe"
 
-#: src/components/ControlPanel/ControlPanelProfile.js:37
-msgid "Conta actualizada com sucesso."
-msgstr "Conta actualizada com sucesso."
-
 #: src/components/Login.js:103
 msgid "Credenciais erradas."
 msgstr "Credenciais erradas."
 
-#: src/components/ControlPanel/ControlPanelProfile.js:108
+#: src/components/ControlPanel/Profile.js:113
 #: src/components/Login.js:58
 #: src/components/RecoverPassword.js:59
 #: src/components/Register.js:104
@@ -49,7 +57,7 @@ msgstr "E-Mail"
 
 #: src/components/Login.js:50
 #: src/components/Login.js:117
-#: src/partials/Header.js:62
+#: src/partials/Header.js:81
 #: src/routes.js:20
 msgid "Entrar"
 msgstr "Entrar"
@@ -58,8 +66,8 @@ msgstr "Entrar"
 msgid "Enviámos-te um e-mail, segue as instruções para definir uma nova palavra-passe."
 msgstr "Enviámos-te um e-mail, segue as instruções para definir uma nova palavra-passe."
 
-#: src/components/ControlPanel/ControlPanelProfile.js:189
-#: src/components/ControlPanel/ControlPanelProfileAvatar.js:103
+#: src/components/ControlPanel/Profile/Avatar.js:103
+#: src/components/ControlPanel/Ranking.js:55
 #: src/components/Login.js:105
 #: src/components/RecoverPassword.js:88
 #: src/components/Register.js:185
@@ -67,7 +75,7 @@ msgstr "Enviámos-te um e-mail, segue as instruções para definir uma nova pala
 msgid "Erro de servidor. Tenta mais tarde."
 msgstr "Erro de servidor. Tenta mais tarde."
 
-#: src/components/ControlPanel/ControlPanelProfileAvatar.js:83
+#: src/components/ControlPanel/Profile/Avatar.js:83
 msgid "Escolhe uma imagem"
 msgstr "Escolhe uma imagem"
 
@@ -75,24 +83,24 @@ msgstr "Escolhe uma imagem"
 msgid "Esta página não existe."
 msgstr "Esta página não existe."
 
-#: src/components/ControlPanel/ControlPanelProfileAvatar.js:101
+#: src/components/ControlPanel/Profile/Avatar.js:101
 msgid "Ficheiro inválido."
 msgstr "Ficheiro inválido."
 
-#: src/components/ControlPanel/ControlPanelProfile.js:201
-#: src/components/ControlPanel/ControlPanelProfileAvatar.js:114
+#: src/components/ControlPanel/Profile/Avatar.js:114
+#: src/components/ControlPanel/Profile.js:201
 msgid "Gravar"
 msgstr "Gravar"
 
-#: src/components/ControlPanel/ControlPanelProfileAvatar.js:66
+#: src/components/ControlPanel/Profile/Avatar.js:66
 msgid "Imagem de perfil"
 msgstr "Imagem de perfil"
 
-#: src/components/ControlPanel/ControlPanelProfileAvatar.js:41
+#: src/components/ControlPanel/Profile/Avatar.js:41
 msgid "Imagem de perfil actualizada com sucesso."
 msgstr "Imagem de perfil actualizada com sucesso."
 
-#: src/components/ControlPanel/ControlPanelProfile.js:134
+#: src/components/ControlPanel/Profile.js:139
 #: src/components/Register.js:129
 msgid "Já existe uma conta com este e-mail."
 msgstr "Já existe uma conta com este e-mail."
@@ -103,11 +111,15 @@ msgstr "Já existe uma conta com este e-mail."
 msgid "Liga Quiz"
 msgstr "Liga Quiz"
 
-#: src/components/ControlPanel/ControlPanelProfileAvatar.js:90
+#: src/components/ControlPanel/Profile/Avatar.js:90
 msgid "Máximo 200 KB"
 msgstr "Máximo 200 KB"
 
-#: src/components/ControlPanel/ControlPanelProfile.js:62
+#: src/components/ControlPanel/Ranking.js:77
+msgid "Mês"
+msgstr "Mês"
+
+#: src/components/ControlPanel/Profile.js:67
 #: src/components/Register.js:60
 msgid "Nome"
 msgstr "Nome"
@@ -119,6 +131,14 @@ msgstr "Não autorizado"
 #: src/components/RecoverPassword.js:83
 msgid "Não existe nenhum registo com este e-mail."
 msgstr "Não existe nenhum registo com este e-mail."
+
+#: src/components/ControlPanel/Profile.js:56
+msgid "Não foi possível actualizar o perfil."
+msgstr "Não foi possível actualizar o perfil."
+
+#: src/components/ControlPanel/Ranking.js:40
+msgid "Não foi possível apagar o ranking mensal."
+msgstr "Não foi possível apagar o ranking mensal."
 
 #: src/components/Forbidden.js:14
 msgid "Não tens permissões para aceder a esta página."
@@ -133,13 +153,13 @@ msgid "O pedido de redefinição de palavra-passe é inválido"
 msgstr "O pedido de redefinição de palavra-passe é inválido"
 
 #: src/components/ControlPanel.js:39
-#: src/partials/Header.js:94
+#: src/partials/Header.js:113
 #: src/routes.js:45
 #: src/routes.js:50
 msgid "Painel de controlo"
 msgstr "Painel de controlo"
 
-#: src/components/ControlPanel/ControlPanelProfile.js:140
+#: src/components/ControlPanel/Profile.js:145
 #: src/components/Login.js:79
 #: src/components/Register.js:135
 #: src/components/ResetPassword.js:62
@@ -154,6 +174,10 @@ msgstr "Palavra-passe alterada com sucesso.<0/>Clica em \"Entrar\" e usa as nova
 msgid "Perfil"
 msgstr "Perfil"
 
+#: src/components/ControlPanel/Profile.js:43
+msgid "Perfil actualizado com sucesso."
+msgstr "Perfil actualizado com sucesso."
+
 #: src/components/NoMatch.js:10
 #: src/routes.js:55
 msgid "Página não encontrada"
@@ -162,6 +186,10 @@ msgstr "Página não encontrada"
 #: src/components/ControlPanel.js:18
 msgid "Ranking"
 msgstr "Ranking"
+
+#: src/components/ControlPanel/Ranking.js:37
+msgid "Ranking mensal apagado com sucesso."
+msgstr "Ranking mensal apagado com sucesso."
 
 #: src/components/Login.js:122
 #: src/components/RecoverPassword.js:51
@@ -175,7 +203,7 @@ msgid "Redefinir palavra-passe"
 msgstr "Redefinir palavra-passe"
 
 #: src/components/Register.js:198
-#: src/partials/Header.js:65
+#: src/partials/Header.js:84
 msgid "Registar"
 msgstr "Registar"
 
@@ -184,24 +212,32 @@ msgstr "Registar"
 msgid "Registo"
 msgstr "Registo"
 
-#: src/partials/Header.js:98
+#: src/partials/Header.js:117
 #: src/routes.js:40
 msgid "Sair"
 msgstr "Sair"
+
+#: src/components/ControlPanel/Ranking.js:112
+msgid "Sem registos"
+msgstr "Sem registos"
 
 #: src/components/RecoverPassword.js:100
 #: src/components/ResetPassword.js:139
 msgid "Submeter"
 msgstr "Submeter"
 
+#: src/components/ControlPanel/Ranking.js:120
+msgid "Tens a certeza que queres apagar este ranking mensal ({monthToDelete}) e todos os quizzes associados?"
+msgstr "Tens a certeza que queres apagar este ranking mensal ({monthToDelete}) e todos os quizzes associados?"
+
 #: src/components/Register.js:204
 msgid "Utilizador registado com sucesso.<0/>Clica em \"Entrar\" e usa as tuas credenciais."
 msgstr "Utilizador registado com sucesso.<0/>Clica em \"Entrar\" e usa as tuas credenciais."
 
-#: src/partials/Header.js:102
+#: src/partials/Header.js:121
 msgid "Versão 4.0"
 msgstr "Versão 4.0"
 
-#: src/components/ControlPanel/ControlPanelProfile.js:141
+#: src/components/ControlPanel/Profile.js:146
 msgid "deixa em branco para não alterar"
 msgstr "deixa em branco para não alterar"
