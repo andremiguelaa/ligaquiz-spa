@@ -5,8 +5,9 @@ import { toast } from 'react-toastify';
 import ApiRequest from 'utils/ApiRequest';
 import Loading from 'utils/Loading';
 import Error from 'utils/Error';
-import EmptyState from 'utils/EmptyState';
 import Modal from 'utils/Modal';
+
+import List from './Ranking/List';
 
 const Ranking = () => {
   const [loading, setLoading] = useState(true);
@@ -59,66 +60,15 @@ const Ranking = () => {
 
   return (
     <>
-      <a href="#" className="button is-primary">
-        <span className="icon">
-          <i className="fa fa-plus"></i>
-        </span>
-        <span>
-          <Trans>Adicionar ranking mensal</Trans>
-        </span>
-      </a>
-      <br />
-      <br />
-      {data.length ? (
-        <table className="table is-fullwidth is-hoverable is-striped">
-          <thead>
-            <tr>
-              <th>
-                <Trans>Mês</Trans>
-              </th>
-              <th>
-                <Trans>Acções</Trans>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {data.map((entry) => {
-              return (
-                <tr key={entry}>
-                  <td>{entry}</td>
-                  <td>
-                    <a href="#">
-                      <i className="fa fa-eye"></i> Ver
-                    </a>
-                    &nbsp;&nbsp;
-                    <a href="#">
-                      <i className="fa fa-edit"></i> Editar
-                    </a>
-                    &nbsp;&nbsp;
-                    <button
-                      className="link"
-                      onClick={() => setMonthToDelete(entry)}
-                    >
-                      <i className="fa fa-trash"></i> Apagar
-                    </button>
-                  </td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
-      ) : (
-        <EmptyState>
-          <Trans>Sem registos</Trans>
-        </EmptyState>
-      )}
+      <List data={data} setMonthToDelete={setMonthToDelete} />
       <Modal
         type="danger"
         open={monthToDelete}
         title={<Trans>Apagar ranking mensal</Trans>}
         body={
           <Trans>
-            Tens a certeza que queres apagar este ranking mensal ({monthToDelete}) e todos os quizzes associados?
+            Tens a certeza que queres apagar este ranking mensal (
+            {monthToDelete}) e todos os quizzes associados?
           </Trans>
         }
         action={() => deleteRanking(monthToDelete)}

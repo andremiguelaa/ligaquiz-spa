@@ -17,7 +17,7 @@ const pages = {
   ranking: {
     title: <Trans>Ranking</Trans>,
     component: <Ranking />
-  }
+  },
 };
 
 const ControlPanel = ({
