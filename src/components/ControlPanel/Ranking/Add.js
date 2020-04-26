@@ -28,7 +28,7 @@ const Add = ({
 
   useEffect(() => {
     const addedIndividualQuizTypes = formData.individualQuizzes.map(
-      (individualQuiz) => individualQuiz.type
+      (individualQuiz) => individualQuiz.individual_quiz_type
     );
     const filteredIndividualQuizTypes = individualQuizTypes.filter(
       (type) => !addedIndividualQuizTypes.includes(type)
@@ -43,11 +43,15 @@ const Add = ({
       individualQuizzes: [
         ...formData.individualQuizzes,
         {
-          type,
-          players: [],
+          individual_quiz_type: type,
+          results: [],
         },
       ],
     });
+  };
+
+  const saveRanking = () => {
+    console.log(formData);
   };
 
   return (
@@ -101,7 +105,7 @@ const Add = ({
         </div>
         {formData.individualQuizzes.map((individualQuiz) => (
           <Event
-            key={individualQuiz.type}
+            key={individualQuiz.individual_quiz_type}
             individualQuiz={individualQuiz}
             individualQuizPlayers={individualQuizPlayers}
             formData={formData}
@@ -128,12 +132,16 @@ const Add = ({
         ) : null}
         <div className="columns">
           <div className="column">
-            <button type="button" className="button is-primary">
+            <button
+              type="button"
+              className="button is-primary"
+              onClick={saveRanking}
+            >
               <span className="icon">
                 <i className="fa fa-plus"></i>
               </span>
               <span>
-                <Trans>Inserir ranking mensal</Trans>
+                <Trans>Guardar ranking mensal</Trans>
               </span>
             </button>
           </div>

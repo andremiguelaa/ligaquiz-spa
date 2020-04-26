@@ -3,6 +3,7 @@ import { Trans } from '@lingui/macro';
 
 import Modal from 'utils/Modal';
 import { individualQuizTypeOptions } from '../Add/options';
+import Player from './Event/Player';
 
 const Event = ({
   individualQuiz,
@@ -22,7 +23,7 @@ const Event = ({
   const getNonSelectedPlayers = () =>
     individualQuizPlayersIds.filter(
       (playerId) =>
-        !individualQuiz.players
+        !individualQuiz.results
           .map((player) => player.individual_quiz_player_id)
           .includes(playerId)
     );
@@ -30,7 +31,8 @@ const Event = ({
   const removeEvent = () => {
     let newIndividualQuizzes = [...formData.individualQuizzes];
     newIndividualQuizzes = newIndividualQuizzes.filter(
-      (quiz) => quiz.type !== individualQuiz.type
+      (quiz) =>
+        quiz.individual_quiz_type !== individualQuiz.individual_quiz_type
     );
     setFormData({
       ...formData,
@@ -40,11 +42,12 @@ const Event = ({
 
   const addPlayers = (players) => {
     const individualQuizIndex = formData.individualQuizzes.findIndex(
-      (event) => individualQuiz.key === event.key
+      (event) =>
+        individualQuiz.individual_quiz_type === event.individual_quiz_type
     );
     const newIndividualQuizzes = [...formData.individualQuizzes];
     players.forEach((id) => {
-      newIndividualQuizzes[individualQuizIndex].players.push({
+      newIndividualQuizzes[individualQuizIndex].results.push({
         individual_quiz_player_id: id,
         result: undefined,
       });
@@ -57,12 +60,13 @@ const Event = ({
 
   const removePlayer = () => {
     const individualQuizIndex = formData.individualQuizzes.findIndex(
-      (event) => individualQuiz.key === event.key
+      (event) =>
+        individualQuiz.individual_quiz_type === event.individual_quiz_type
     );
     const newIndividualQuizzes = [...formData.individualQuizzes];
-    newIndividualQuizzes[individualQuizIndex].players = newIndividualQuizzes[
+    newIndividualQuizzes[individualQuizIndex].results = newIndividualQuizzes[
       individualQuizIndex
-    ].players.filter(
+    ].results.filter(
       (player) => player.individual_quiz_player_id !== playerToRemove
     );
     setFormData({
@@ -78,7 +82,7 @@ const Event = ({
         <div className="column">
           <div className="box">
             <label className="label">
-              {individualQuizTypeOptions(individualQuiz.type)}
+              {individualQuizTypeOptions(individualQuiz.individual_quiz_type)}
             </label>
             <div className="field has-addons">
               <div className="control">
@@ -91,7 +95,7 @@ const Event = ({
                   }}
                   disabled={
                     !(
-                      individualQuiz.players.length <
+                      individualQuiz.results.length <
                       individualQuizPlayers.length
                     )
                   }
@@ -119,51 +123,14 @@ const Event = ({
                 </button>
               </div>
             </div>
-            {individualQuiz.players.map((player) => {
-              const playerInfo = individualQuizPlayers.find(
-                (individualQuizPlayer) =>
-                  individualQuizPlayer.id === player.individual_quiz_player_id
-              );
-              return (
-                <div
-                  className="field has-addons"
-                  key={player.individual_quiz_player_id}
-                >
-                  <div className="control">
-                    <div type="button" className="button" disabled>
-                      <span className="icon">
-                        <i className="fa fa-user"></i>
-                      </span>
-                      <span>
-                        {playerInfo.name} {playerInfo.surname}
-                      </span>
-                    </div>
-                  </div>
-                  <div className="control has-icons-left">
-                    <input className="input" type="number" />
-                    <span className="icon is-small is-left">
-                      <i className="fa fa-star" />
-                    </span>
-                  </div>
-                  <div className="control">
-                    <button
-                      type="button"
-                      className="button is-danger"
-                      onClick={() =>
-                        setPlayerToRemove(player.individual_quiz_player_id)
-                      }
-                    >
-                      <span className="icon">
-                        <i className="fa fa-trash"></i>
-                      </span>
-                      <span>
-                        <Trans>Remover jogador</Trans>
-                      </span>
-                    </button>
-                  </div>
-                </div>
-              );
-            })}
+            {individualQuiz.results.map((player) => (
+              <Player
+                key={player.individual_quiz_player_id}
+                player={player}
+                individualQuizPlayers={individualQuizPlayers}
+                setPlayerToRemove={setPlayerToRemove}
+              />
+            ))}
           </div>
         </div>
       </div>
