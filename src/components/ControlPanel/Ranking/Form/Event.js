@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Trans } from '@lingui/macro';
 
 import Modal from 'utils/Modal';
-import { individualQuizTypeOptions } from '../Add/options';
+import { individualQuizTypeOptions } from './options';
 import Player from './Event/Player';
 
 const Event = ({
@@ -14,7 +14,7 @@ const Event = ({
   const [removeEventModal, setRemoveEventModal] = useState(false);
   const [addPlayersModal, setAddPlayersModal] = useState();
   const [playersToAdd, setPlayersToAdd] = useState([]);
-  
+
   const individualQuizPlayersIds = individualQuizPlayers.map(
     (player) => player.id
   );
@@ -124,9 +124,12 @@ const Event = ({
             {individualQuiz.results.map((player) => (
               <Player
                 key={player.individual_quiz_player_id}
+                individualQuiz={individualQuiz}
                 player={player}
                 individualQuizPlayers={individualQuizPlayers}
                 removePlayer={removePlayer}
+                formData={formData}
+                setFormData={setFormData}
               />
             ))}
           </div>

@@ -1,17 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { Trans } from '@lingui/macro';
 
+import ApiRequest from 'utils/ApiRequest';
 import Modal from 'utils/Modal';
-import { individualQuizTypeOptions, monthListOptions } from './Add/options';
-import Event from './Add/Event';
+import { individualQuizTypeOptions, monthListOptions } from './Form/options';
+import Event from './Form/Event';
 
-const Add = ({
+const Form = ({
   monthList,
   individualQuizTypes,
   individualQuizPlayers,
   setPage,
 }) => {
   const validMonthListOptions = monthListOptions(monthList);
+  const [backModal, setBackModal] = useState(false);
 
   const [formData, setFormData] = useState({
     month: validMonthListOptions[0],
@@ -50,8 +52,24 @@ const Add = ({
     });
   };
 
+  const saveDisabled =
+    !formData.individualQuizzes.length ||
+    formData.individualQuizzes.some(
+      (quiz) =>
+        quiz.results.length === 0 || quiz.results.some((result) => !result.result)
+    );
+
   const saveRanking = () => {
-    console.log(formData);
+    formData.individualQuizzes.forEach((quiz) => {
+      ApiRequest.post('individual-quizzes', {
+        ...quiz,
+        month: formData.month,
+      })
+        .then()
+        .catch((error) => {
+          console.log(error);
+        });
+    });
   };
 
   return (
@@ -60,7 +78,7 @@ const Add = ({
         <div className="column">
           <button
             type="button"
-            onClick={() => setPage('list')}
+            onClick={() => setBackModal(true)}
             className="button"
           >
             <span className="icon">
@@ -136,6 +154,7 @@ const Add = ({
               type="button"
               className="button is-primary"
               onClick={saveRanking}
+              disabled={saveDisabled}
             >
               <span className="icon">
                 <i className="fa fa-plus"></i>
@@ -180,8 +199,26 @@ const Add = ({
           onClose={() => setIndividualQuizTypeModal(false)}
         />
       )}
+      {backModal && (
+        <Modal
+          type="danger"
+          open={backModal}
+          title={<Trans>Voltar à listagem</Trans>}
+          body={
+            <Trans>
+              Todos os dados deste formulário serão descartados.
+              <br />
+              Tens a certeza que queres voltar à listagem?
+            </Trans>
+          }
+          action={() => {
+            setPage('list');
+          }}
+          onClose={() => setBackModal(false)}
+        />
+      )}
     </>
   );
 };
 
-export default Add;
+export default Form;

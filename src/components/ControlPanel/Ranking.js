@@ -8,7 +8,7 @@ import Error from 'utils/Error';
 import Modal from 'utils/Modal';
 
 import List from './Ranking/List';
-import Add from './Ranking/Add';
+import Form from './Ranking/Form';
 
 const Ranking = () => {
   const [error, setError] = useState(false);
@@ -19,7 +19,6 @@ const Ranking = () => {
   const [monthToDelete, setMonthToDelete] = useState();
   const [deleting, setDeleting] = useState(false);
   const [page, setPage] = useState('list');
-  const [individualQuizTypes, setIndividualQuizTypes] = useState();
 
   useEffect(() => {
     ApiRequest.get('national-rankings')
@@ -36,7 +35,7 @@ const Ranking = () => {
       .catch(() => {
         setError(true);
       });
-      ApiRequest.get('individual-quiz-players')
+    ApiRequest.get('individual-quiz-players')
       .then(({ data }) => {
         setIndividualQuizPlayers(data.data);
       })
@@ -68,7 +67,7 @@ const Ranking = () => {
       </Error>
     );
   }
-  
+
   if (!monthList || !individualQuizTypes || !individualQuizPlayers) {
     return <Loading />;
   }
@@ -85,7 +84,7 @@ const Ranking = () => {
             />
           ),
           add: (
-            <Add
+            <Form
               monthList={monthList}
               individualQuizTypes={individualQuizTypes}
               individualQuizPlayers={individualQuizPlayers}

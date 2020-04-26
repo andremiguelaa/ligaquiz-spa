@@ -3,12 +3,41 @@ import { Trans } from '@lingui/macro';
 
 import Modal from 'utils/Modal';
 
-const Player = ({ player, individualQuizPlayers, removePlayer }) => {
+const Player = ({
+  individualQuiz,
+  player,
+  individualQuizPlayers,
+  removePlayer,
+  formData,
+  setFormData,
+}) => {
   const [playerToRemove, setPlayerToRemove] = useState();
   const playerInfo = individualQuizPlayers.find(
     (individualQuizPlayer) =>
       individualQuizPlayer.id === player.individual_quiz_player_id
   );
+
+  const updatePlayerResult = (score) => {
+    const individualQuizIndex = formData.individualQuizzes.findIndex(
+      (quiz) =>
+        individualQuiz.individual_quiz_type === quiz.individual_quiz_type
+    );
+    const newIndividualQuizzes = [...formData.individualQuizzes];
+
+    const playerIndex = newIndividualQuizzes[
+      individualQuizIndex
+    ].results.findIndex(
+      (result) =>
+        player.individual_quiz_player_id === result.individual_quiz_player_id
+    );
+    newIndividualQuizzes[individualQuizIndex].results[
+      playerIndex
+    ].result = score;
+    setFormData({
+      ...formData,
+      individualQuizzes: newIndividualQuizzes,
+    });
+  };
   return (
     <>
       <div className="field has-addons">
@@ -23,7 +52,13 @@ const Player = ({ player, individualQuizPlayers, removePlayer }) => {
           </div>
         </div>
         <div className="control has-icons-left">
-          <input className="input" type="number" />
+          <input
+            className="input"
+            type="number"
+            onChange={(event) => {
+              updatePlayerResult(event.target.value);
+            }}
+          />
           <span className="icon is-small is-left">
             <i className="fa fa-star" />
           </span>
