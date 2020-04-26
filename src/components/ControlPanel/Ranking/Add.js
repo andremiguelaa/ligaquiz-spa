@@ -35,7 +35,7 @@ const Add = ({
     );
     setAvailableIndividualQuizTypes(filteredIndividualQuizTypes);
     setChosenIndividualQuizType(filteredIndividualQuizTypes[0]);
-  }, [formData.individualQuizzes]);
+  }, [formData.individualQuizzes, individualQuizTypes]);
 
   const addEvent = (type) => {
     setFormData({
@@ -43,7 +43,6 @@ const Add = ({
       individualQuizzes: [
         ...formData.individualQuizzes,
         {
-          key: Date.now(),
           type,
           players: [],
         },
@@ -102,7 +101,7 @@ const Add = ({
         </div>
         {formData.individualQuizzes.map((individualQuiz) => (
           <Event
-            key={individualQuiz.key}
+            key={individualQuiz.type}
             individualQuiz={individualQuiz}
             individualQuizPlayers={individualQuizPlayers}
             formData={formData}
