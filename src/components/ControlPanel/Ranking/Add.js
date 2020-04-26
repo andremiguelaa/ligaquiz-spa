@@ -3,6 +3,7 @@ import { Trans } from '@lingui/macro';
 
 import Modal from 'utils/Modal';
 import { individualQuizTypeOptions, monthListOptions } from './Add/options';
+import Event from './Add/Event';
 
 const Add = ({
   monthList,
@@ -47,22 +48,6 @@ const Add = ({
           players: [],
         },
       ],
-    });
-  };
-
-  const addPlayerToEvent = (individualQuiz) => {
-    const individualQuizIndex = formData.individualQuizzes.findIndex(
-      (element) => individualQuiz.key === element.key
-    );
-    const newIndividualQuizzes = [...formData.individualQuizzes];
-    newIndividualQuizzes[individualQuizIndex].players.push({
-      key: Date.now(),
-      individual_quiz_player_id: undefined,
-      result: undefined,
-    });
-    setFormData({
-      ...formData,
-      individualQuizzes: newIndividualQuizzes,
     });
   };
 
@@ -116,75 +101,13 @@ const Add = ({
           </div>
         </div>
         {formData.individualQuizzes.map((individualQuiz) => (
-          <div className="columns" key={individualQuiz.key}>
-            <div className="column">
-              <div className="box">
-                <label className="label">
-                  {individualQuizTypeOptions(individualQuiz.type)}
-                </label>
-                <div className="field has-addons">
-                  <div className="control">
-                    <button
-                      type="button"
-                      className="button"
-                      onClick={() => addPlayerToEvent(individualQuiz)}
-                    >
-                      <span className="icon">
-                        <i className="fa fa-plus"></i>
-                      </span>
-                      <span>
-                        <Trans>Adicionar jogador</Trans>
-                      </span>
-                    </button>
-                  </div>
-                  <div className="control">
-                    <button type="button" className="button is-danger">
-                      <span className="icon">
-                        <i className="fa fa-trash"></i>
-                      </span>
-                      <span>
-                        <Trans>Remover prova</Trans>
-                      </span>
-                    </button>
-                  </div>
-                </div>
-                {individualQuiz.players.map((player) => (
-                  <div className="field has-addons" key={player.key}>
-                    <div className="control has-icons-left">
-                      <div className="select">
-                        <select>
-                          {individualQuizPlayers.map((player) => (
-                            <option key={player.id} value={player.id}>
-                              {player.name} {player.surname}
-                            </option>
-                          ))}
-                        </select>
-                      </div>
-                      <div className="icon is-small is-left">
-                        <i className="fa fa-user"></i>
-                      </div>
-                    </div>
-                    <div className="control has-icons-left">
-                      <input className="input" type="number" />
-                      <span className="icon is-small is-left">
-                        <i className="fa fa-star" />
-                      </span>
-                    </div>
-                    <div className="control">
-                      <button type="button" className="button is-danger">
-                        <span className="icon">
-                          <i className="fa fa-trash"></i>
-                        </span>
-                        <span>
-                          <Trans>Remover jogador</Trans>
-                        </span>
-                      </button>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+          <Event
+            key={individualQuiz.key}
+            individualQuiz={individualQuiz}
+            individualQuizPlayers={individualQuizPlayers}
+            formData={formData}
+            setFormData={setFormData}
+          />
         ))}
         {availableIndividualQuizTypes.length ? (
           <div className="columns">
@@ -217,37 +140,39 @@ const Add = ({
           </div>
         </div>
       </form>
-      <Modal
-        type="info"
-        open={individualQuizTypeModal}
-        title={<Trans>Escolher tipo de prova</Trans>}
-        body={
-          <div className="control has-icons-left">
-            <div className="select">
-              <select
-                onChange={(event) => {
-                  setChosenIndividualQuizType(event.target.value);
-                }}
-              >
-                {availableIndividualQuizTypes.map((individualQuizType) =>
-                  individualQuizTypeOptions(
-                    individualQuizType,
-                    <option value={individualQuizType} />
-                  )
-                )}
-              </select>
+      {individualQuizTypeModal && (
+        <Modal
+          type="info"
+          open={individualQuizTypeModal}
+          title={<Trans>Escolher tipo de prova</Trans>}
+          body={
+            <div className="control has-icons-left">
+              <div className="select">
+                <select
+                  onChange={(event) => {
+                    setChosenIndividualQuizType(event.target.value);
+                  }}
+                >
+                  {availableIndividualQuizTypes.map((individualQuizType) =>
+                    individualQuizTypeOptions(
+                      individualQuizType,
+                      <option value={individualQuizType} />
+                    )
+                  )}
+                </select>
+              </div>
+              <div className="icon is-small is-left">
+                <i className="fa fa-trophy"></i>
+              </div>
             </div>
-            <div className="icon is-small is-left">
-              <i className="fa fa-trophy"></i>
-            </div>
-          </div>
-        }
-        action={() => {
-          addEvent(chosenIndividualQuizType);
-          setIndividualQuizTypeModal(false);
-        }}
-        onClose={() => setIndividualQuizTypeModal(false)}
-      />
+          }
+          action={() => {
+            addEvent(chosenIndividualQuizType);
+            setIndividualQuizTypeModal(false);
+          }}
+          onClose={() => setIndividualQuizTypeModal(false)}
+        />
+      )}
     </>
   );
 };

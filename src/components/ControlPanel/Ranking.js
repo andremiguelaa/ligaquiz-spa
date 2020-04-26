@@ -100,7 +100,8 @@ const Ranking = () => {
         title={<Trans>Apagar ranking mensal</Trans>}
         body={
           <Trans>
-            {`Tens a certeza que queres apagar este ranking mensal (${monthToDelete}) e todos os quizzes associados?`}
+            Tens a certeza que queres apagar este ranking mensal e todos os
+            quizzes associados?
           </Trans>
         }
         action={() => deleteRanking(monthToDelete)}

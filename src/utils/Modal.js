@@ -25,6 +25,7 @@ export const Modal = ({
         <div className="message-body">{body}</div>
         <div className="message-actions">
           <button
+            type="button"
             className={`button ${type ? `is-${type}` : ''} ${
               doingAction ? `is-loading` : ''
             }`}
@@ -32,7 +33,12 @@ export const Modal = ({
           >
             <Trans>OK</Trans>
           </button>
-          <button className="button" onClick={onClose} disabled={doingAction}>
+          <button
+            type="button"
+            className="button"
+            onClick={onClose}
+            disabled={doingAction}
+          >
             <Trans>Cancelar</Trans>
           </button>
         </div>
