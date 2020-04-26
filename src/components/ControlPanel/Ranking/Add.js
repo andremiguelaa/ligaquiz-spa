@@ -1,38 +1,41 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Trans } from '@lingui/macro';
 
-const individualQuizTypeOptions = {
-  cnq: (
-    <Trans key="cnq" render={<option value="cnq" />}>
-      Campeonato Nacional de Quiz
-    </Trans>
-  ),
-  eqc: (
-    <Trans key="eqc" render={<option value="eqc" />}>
-      Campeonato Europeu de Quiz
-    </Trans>
-  ),
-  inquizicao: (
-    <Trans key="inquizicao" render={<option value="inquizicao" />}>
-      Inquizição
-    </Trans>
-  ),
-  squizzed: (
-    <Trans key="squizzed" render={<option value="squizzed" />}>
-      Squizzed
-    </Trans>
-  ),
-  wqc: (
-    <Trans key="wqc" render={<option value="wqc" />}>
-      Campeonato Mundial de Quiz
-    </Trans>
-  ),
-  hot_100: (
-    <Trans key="hot_100" render={<option value="hot_100" />}>
-      HOT 100
-    </Trans>
-  ),
-};
+import Modal from 'utils/Modal';
+
+const individualQuizTypeOptions = (type, render) =>
+  ({
+    cnq: (
+      <Trans key="cnq" render={render}>
+        Campeonato Nacional de Quiz
+      </Trans>
+    ),
+    eqc: (
+      <Trans key="eqc" render={render}>
+        Campeonato Europeu de Quiz
+      </Trans>
+    ),
+    inquizicao: (
+      <Trans key="inquizicao" render={render}>
+        Inquizição
+      </Trans>
+    ),
+    squizzed: (
+      <Trans key="squizzed" render={render}>
+        Squizzed
+      </Trans>
+    ),
+    wqc: (
+      <Trans key="wqc" render={render}>
+        Campeonato Mundial de Quiz
+      </Trans>
+    ),
+    hot_100: (
+      <Trans key="hot_100" render={render}>
+        HOT 100
+      </Trans>
+    ),
+  }[type]);
 
 let monthListOptions = [];
 let currentMonth = new Date().getMonth() + 1;
@@ -47,19 +50,42 @@ while (!(currentYear === 2016 && currentMonth === 10)) {
 }
 
 const Add = ({ monthList, individualQuizTypes, setPage }) => {
+  const validMonthListOptions = monthListOptions.filter(
+    (month) => !monthList.includes(month)
+  );
+
   const [formData, setFormData] = useState({
-    month: undefined,
+    month: validMonthListOptions[0],
     individualQuizzes: [],
   });
+  const [individualQuizTypeModal, setIndividualQuizTypeModal] = useState(false);
+  const [chosenIndividualQuizType, setChosenIndividualQuizType] = useState(
+    individualQuizTypes[0]
+  );
+  const [
+    availableIndividualQuizTypes,
+    setAvailableIndividualQuizTypes,
+  ] = useState(individualQuizTypes);
 
-  const addEvent = () => {
+  useEffect(() => {
+    const addedIndividualQuizTypes = formData.individualQuizzes.map(
+      (individualQuiz) => individualQuiz.type
+    );
+    const filteredIndividualQuizTypes = individualQuizTypes.filter(
+      (type) => !addedIndividualQuizTypes.includes(type)
+    );
+    setAvailableIndividualQuizTypes(filteredIndividualQuizTypes);
+    setChosenIndividualQuizType(filteredIndividualQuizTypes[0]);
+  }, [formData.individualQuizzes]);
+
+  const addEvent = (type) => {
     setFormData({
       ...formData,
       individualQuizzes: [
         ...formData.individualQuizzes,
         {
           key: Date.now(),
-          type: undefined,
+          type,
           players: [],
         },
       ],
@@ -109,14 +135,19 @@ const Add = ({ monthList, individualQuizTypes, setPage }) => {
               </label>
               <div className="control has-icons-left">
                 <div className="select">
-                  <select>
-                    {monthListOptions
-                      .filter((month) => !monthList.includes(month))
-                      .map((month) => (
-                        <option key={month} value={month}>
-                          {month}
-                        </option>
-                      ))}
+                  <select
+                    onChange={(event) => {
+                      setFormData({
+                        ...formData,
+                        month: event.target.value,
+                      });
+                    }}
+                  >
+                    {validMonthListOptions.map((month) => (
+                      <option key={month} value={month}>
+                        {month}
+                      </option>
+                    ))}
                   </select>
                 </div>
                 <div className="icon is-small is-left">
@@ -126,59 +157,97 @@ const Add = ({ monthList, individualQuizTypes, setPage }) => {
             </div>
           </div>
         </div>
-        <button
-          type="button"
-          className="button is-primary"
-          onClick={() => addEvent()}
-        >
-          <span className="icon">
-            <i className="fa fa-plus"></i>
-          </span>
-          <span>
-            <Trans>Adicionar prova</Trans>
-          </span>
-        </button>
         {formData.individualQuizzes.map((individualQuiz) => (
-          <fieldset key={individualQuiz.key}>
-            <select>
-              {individualQuizTypes.map(
-                (individualQuizType) =>
-                  individualQuizTypeOptions[individualQuizType]
-              )}
-            </select>
-            <button
-              type="button"
-              className="button is-primary"
-              onClick={() => addPlayerToEvent(individualQuiz)}
-            >
-              <span className="icon">
-                <i className="fa fa-plus"></i>
-              </span>
-              <span>
-                <Trans>Adicionar jogador</Trans>
-              </span>
-            </button>
-            <button type="button" className="button is-danger">
-              <span className="icon">
-                <i className="fa fa-trash"></i>
-              </span>
-            </button>
-            {individualQuiz.players.map((player) => (
-              <fieldset key={player.key}>
-                <select>
-                  <option value="cenas">cenas</option>
-                </select>
-                <input type="number" value={player.result} />
+          <div className="columns" key={individualQuiz.key}>
+            <div className="column">
+              <fieldset>
+                <label className="label">
+                  {individualQuizTypeOptions(individualQuiz.type)}
+                </label>
+                <button
+                  type="button"
+                  className="button is-primary"
+                  onClick={() => addPlayerToEvent(individualQuiz)}
+                >
+                  <span className="icon">
+                    <i className="fa fa-plus"></i>
+                  </span>
+                  <span>
+                    <Trans>Adicionar jogador</Trans>
+                  </span>
+                </button>
                 <button type="button" className="button is-danger">
                   <span className="icon">
                     <i className="fa fa-trash"></i>
                   </span>
                 </button>
+                {individualQuiz.players.map((player) => (
+                  <fieldset key={player.key}>
+                    <select>
+                      <option value="cenas">cenas</option>
+                    </select>
+                    <input type="number" value={player.result} />
+                    <button type="button" className="button is-danger">
+                      <span className="icon">
+                        <i className="fa fa-trash"></i>
+                      </span>
+                    </button>
+                  </fieldset>
+                ))}
               </fieldset>
-            ))}
-          </fieldset>
+            </div>
+          </div>
         ))}
+        {availableIndividualQuizTypes.length ? (
+          <div className="columns">
+            <div className="column">
+              <button
+                type="button"
+                className="button is-primary"
+                onClick={() => setIndividualQuizTypeModal(true)}
+              >
+                <span className="icon">
+                  <i className="fa fa-plus"></i>
+                </span>
+                <span>
+                  <Trans>Adicionar prova</Trans>
+                </span>
+              </button>
+            </div>
+          </div>
+        ) : null}
       </form>
+      <Modal
+        type="primary"
+        open={individualQuizTypeModal}
+        title={<Trans>Escolher tipo de prova</Trans>}
+        body={
+          <div className="control has-icons-left">
+            <div className="select">
+              <select
+                onChange={(event) => {
+                  setChosenIndividualQuizType(event.target.value);
+                }}
+              >
+                {availableIndividualQuizTypes.map((individualQuizType) =>
+                  individualQuizTypeOptions(
+                    individualQuizType,
+                    <option value={individualQuizType} />
+                  )
+                )}
+              </select>
+            </div>
+            <div className="icon is-small is-left">
+              <i className="fa fa-trophy"></i>
+            </div>
+          </div>
+        }
+        action={() => {
+          addEvent(chosenIndividualQuizType);
+          setIndividualQuizTypeModal(false);
+        }}
+        onClose={() => setIndividualQuizTypeModal(false)}
+      />
     </>
   );
 };
