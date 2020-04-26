@@ -35,7 +35,7 @@ export const individualQuizTypeOptions = (type, render) =>
     ),
   }[type]);
 
-export const monthListOptions = () => {
+export const monthListOptions = (monthList) => {
   let monthListOptions = [];
   let currentMonth = new Date().getMonth() + 1;
   let currentYear = new Date().getFullYear();
@@ -49,5 +49,5 @@ export const monthListOptions = () => {
       currentYear--;
     }
   }
-  return monthListOptions;
+  return monthListOptions.filter((month) => !monthList.includes(month));
 };

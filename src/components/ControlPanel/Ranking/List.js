@@ -1,5 +1,6 @@
 import React from 'react';
 import { Trans } from '@lingui/macro';
+
 import EmptyState from 'utils/EmptyState';
 
 const List = ({ monthList, setPage, setMonthToDelete }) => {

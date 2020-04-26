@@ -4,10 +4,13 @@ import { Trans } from '@lingui/macro';
 import Modal from 'utils/Modal';
 import { individualQuizTypeOptions, monthListOptions } from './Add/options';
 
-const Add = ({ monthList, individualQuizTypes, setPage }) => {
-  const validMonthListOptions = monthListOptions().filter(
-    (month) => !monthList.includes(month)
-  );
+const Add = ({
+  monthList,
+  individualQuizTypes,
+  individualQuizPlayers,
+  setPage,
+}) => {
+  const validMonthListOptions = monthListOptions(monthList);
 
   const [formData, setFormData] = useState({
     month: validMonthListOptions[0],
@@ -70,7 +73,7 @@ const Add = ({ monthList, individualQuizTypes, setPage }) => {
           <button
             type="button"
             onClick={() => setPage('list')}
-            className="button is-primary"
+            className="button"
           >
             <span className="icon">
               <i className="fa fa-chevron-left"></i>
@@ -115,41 +118,71 @@ const Add = ({ monthList, individualQuizTypes, setPage }) => {
         {formData.individualQuizzes.map((individualQuiz) => (
           <div className="columns" key={individualQuiz.key}>
             <div className="column">
-              <fieldset>
+              <div className="box">
                 <label className="label">
                   {individualQuizTypeOptions(individualQuiz.type)}
                 </label>
-                <button
-                  type="button"
-                  className="button is-primary"
-                  onClick={() => addPlayerToEvent(individualQuiz)}
-                >
-                  <span className="icon">
-                    <i className="fa fa-plus"></i>
-                  </span>
-                  <span>
-                    <Trans>Adicionar jogador</Trans>
-                  </span>
-                </button>
-                <button type="button" className="button is-danger">
-                  <span className="icon">
-                    <i className="fa fa-trash"></i>
-                  </span>
-                </button>
-                {individualQuiz.players.map((player) => (
-                  <fieldset key={player.key}>
-                    <select>
-                      <option value="cenas">cenas</option>
-                    </select>
-                    <input type="number" value={player.result} />
+                <div className="field has-addons">
+                  <div className="control">
+                    <button
+                      type="button"
+                      className="button"
+                      onClick={() => addPlayerToEvent(individualQuiz)}
+                    >
+                      <span className="icon">
+                        <i className="fa fa-plus"></i>
+                      </span>
+                      <span>
+                        <Trans>Adicionar jogador</Trans>
+                      </span>
+                    </button>
+                  </div>
+                  <div className="control">
                     <button type="button" className="button is-danger">
                       <span className="icon">
                         <i className="fa fa-trash"></i>
                       </span>
+                      <span>
+                        <Trans>Remover prova</Trans>
+                      </span>
                     </button>
-                  </fieldset>
+                  </div>
+                </div>
+                {individualQuiz.players.map((player) => (
+                  <div className="field has-addons" key={player.key}>
+                    <div className="control has-icons-left">
+                      <div className="select">
+                        <select>
+                          {individualQuizPlayers.map((player) => (
+                            <option key={player.id} value={player.id}>
+                              {player.name} {player.surname}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
+                      <div className="icon is-small is-left">
+                        <i className="fa fa-user"></i>
+                      </div>
+                    </div>
+                    <div className="control has-icons-left">
+                      <input className="input" type="number" />
+                      <span className="icon is-small is-left">
+                        <i className="fa fa-star" />
+                      </span>
+                    </div>
+                    <div className="control">
+                      <button type="button" className="button is-danger">
+                        <span className="icon">
+                          <i className="fa fa-trash"></i>
+                        </span>
+                        <span>
+                          <Trans>Remover jogador</Trans>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
                 ))}
-              </fieldset>
+              </div>
             </div>
           </div>
         ))}
@@ -158,7 +191,7 @@ const Add = ({ monthList, individualQuizTypes, setPage }) => {
             <div className="column">
               <button
                 type="button"
-                className="button is-primary"
+                className="button"
                 onClick={() => setIndividualQuizTypeModal(true)}
               >
                 <span className="icon">
@@ -171,9 +204,21 @@ const Add = ({ monthList, individualQuizTypes, setPage }) => {
             </div>
           </div>
         ) : null}
+        <div className="columns">
+          <div className="column">
+            <button type="button" className="button is-primary">
+              <span className="icon">
+                <i className="fa fa-plus"></i>
+              </span>
+              <span>
+                <Trans>Inserir ranking mensal</Trans>
+              </span>
+            </button>
+          </div>
+        </div>
       </form>
       <Modal
-        type="primary"
+        type="info"
         open={individualQuizTypeModal}
         title={<Trans>Escolher tipo de prova</Trans>}
         body={

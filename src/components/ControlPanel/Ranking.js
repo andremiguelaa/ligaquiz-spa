@@ -13,6 +13,9 @@ import Add from './Ranking/Add';
 const Ranking = () => {
   const [error, setError] = useState(false);
   const [monthList, setMonthList] = useState();
+  const [individualQuizTypes, setIndividualQuizTypes] = useState();
+  const [individualQuizPlayers, setIndividualQuizPlayers] = useState();
+
   const [monthToDelete, setMonthToDelete] = useState();
   const [deleting, setDeleting] = useState(false);
   const [page, setPage] = useState('list');
@@ -29,6 +32,13 @@ const Ranking = () => {
     ApiRequest.get('individual-quiz-types')
       .then(({ data }) => {
         setIndividualQuizTypes(data.data);
+      })
+      .catch(() => {
+        setError(true);
+      });
+      ApiRequest.get('individual-quiz-players')
+      .then(({ data }) => {
+        setIndividualQuizPlayers(data.data);
       })
       .catch(() => {
         setError(true);
@@ -59,7 +69,7 @@ const Ranking = () => {
     );
   }
   
-  if (!monthList || !individualQuizTypes) {
+  if (!monthList || !individualQuizTypes || !individualQuizPlayers) {
     return <Loading />;
   }
 
@@ -78,6 +88,7 @@ const Ranking = () => {
             <Add
               monthList={monthList}
               individualQuizTypes={individualQuizTypes}
+              individualQuizPlayers={individualQuizPlayers}
               setPage={setPage}
             />
           ),
