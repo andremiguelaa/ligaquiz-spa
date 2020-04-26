@@ -14,8 +14,7 @@ const Event = ({
   const [removeEventModal, setRemoveEventModal] = useState(false);
   const [addPlayersModal, setAddPlayersModal] = useState();
   const [playersToAdd, setPlayersToAdd] = useState([]);
-  const [playerToRemove, setPlayerToRemove] = useState();
-
+  
   const individualQuizPlayersIds = individualQuizPlayers.map(
     (player) => player.id
   );
@@ -58,7 +57,7 @@ const Event = ({
     });
   };
 
-  const removePlayer = () => {
+  const removePlayer = (playerToRemove) => {
     const individualQuizIndex = formData.individualQuizzes.findIndex(
       (event) =>
         individualQuiz.individual_quiz_type === event.individual_quiz_type
@@ -73,7 +72,6 @@ const Event = ({
       ...formData,
       individualQuizzes: newIndividualQuizzes,
     });
-    setPlayerToRemove();
   };
 
   return (
@@ -128,7 +126,7 @@ const Event = ({
                 key={player.individual_quiz_player_id}
                 player={player}
                 individualQuizPlayers={individualQuizPlayers}
-                setPlayerToRemove={setPlayerToRemove}
+                removePlayer={removePlayer}
               />
             ))}
           </div>
@@ -197,23 +195,6 @@ const Event = ({
             setAddPlayersModal(false);
           }}
           onClose={() => setAddPlayersModal(false)}
-        />
-      )}
-      {playerToRemove && (
-        <Modal
-          type="danger"
-          open={playerToRemove}
-          title={<Trans>Remover jogador</Trans>}
-          body={
-            <Trans>
-              Tens a certeza que queres apagar este jogador e o resultado
-              associado?
-            </Trans>
-          }
-          action={() => {
-            removePlayer();
-          }}
-          onClose={() => setPlayerToRemove()}
         />
       )}
     </>
