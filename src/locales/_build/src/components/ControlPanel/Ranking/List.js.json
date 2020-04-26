@@ -1,0 +1,34 @@
+{
+  "Adicionar ranking mensal": {
+    "origin": [
+      [
+        "src/components/ControlPanel/Ranking/List.js",
+        13
+      ]
+    ]
+  },
+  "Mês": {
+    "origin": [
+      [
+        "src/components/ControlPanel/Ranking/List.js",
+        23
+      ]
+    ]
+  },
+  "Acções": {
+    "origin": [
+      [
+        "src/components/ControlPanel/Ranking/List.js",
+        26
+      ]
+    ]
+  },
+  "Sem registos": {
+    "origin": [
+      [
+        "src/components/ControlPanel/Ranking/List.js",
+        61
+      ]
+    ]
+  }
+}

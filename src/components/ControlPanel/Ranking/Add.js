@@ -1,17 +1,184 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Trans } from '@lingui/macro';
 
-const Add = ({ data, setPage }) => {
+const individualQuizTypeOptions = {
+  cnq: (
+    <Trans key="cnq" render={<option value="cnq" />}>
+      Campeonato Nacional de Quiz
+    </Trans>
+  ),
+  eqc: (
+    <Trans key="eqc" render={<option value="eqc" />}>
+      Campeonato Europeu de Quiz
+    </Trans>
+  ),
+  inquizicao: (
+    <Trans key="inquizicao" render={<option value="inquizicao" />}>
+      Inquizição
+    </Trans>
+  ),
+  squizzed: (
+    <Trans key="squizzed" render={<option value="squizzed" />}>
+      Squizzed
+    </Trans>
+  ),
+  wqc: (
+    <Trans key="wqc" render={<option value="wqc" />}>
+      Campeonato Mundial de Quiz
+    </Trans>
+  ),
+  hot_100: (
+    <Trans key="hot_100" render={<option value="hot_100" />}>
+      HOT 100
+    </Trans>
+  ),
+};
+
+let monthListOptions = [];
+let currentMonth = new Date().getMonth() + 1;
+let currentYear = new Date().getFullYear();
+while (!(currentYear === 2016 && currentMonth === 10)) {
+  monthListOptions.push(`${currentYear}-${`${currentMonth}`.padStart(2, '0')}`);
+  currentMonth--;
+  if (!currentMonth) {
+    currentMonth = 12;
+    currentYear--;
+  }
+}
+
+const Add = ({ monthList, individualQuizTypes, setPage }) => {
+  const [formData, setFormData] = useState({
+    month: undefined,
+    individualQuizzes: [],
+  });
+
+  const addEvent = () => {
+    setFormData({
+      ...formData,
+      individualQuizzes: [
+        ...formData.individualQuizzes,
+        {
+          key: Date.now(),
+          type: undefined,
+          players: [],
+        },
+      ],
+    });
+  };
+
+  const addPlayerToEvent = (individualQuiz) => {
+    const individualQuizIndex = formData.individualQuizzes.findIndex(
+      (element) => individualQuiz.key === element.key
+    );
+    const newIndividualQuizzes = [...formData.individualQuizzes];
+    newIndividualQuizzes[individualQuizIndex].players.push({
+      key: Date.now(),
+      individual_quiz_player_id: undefined,
+      result: undefined,
+    });
+    setFormData({
+      ...formData,
+      individualQuizzes: newIndividualQuizzes,
+    });
+  };
+
   return (
     <>
-      <button onClick={() => setPage('list')} className="button is-primary">
-        <span className="icon">
-          <i className="fa fa-chevron-left"></i>
-        </span>
-        <span>
-          <Trans>Voltar à listagem</Trans>
-        </span>
-      </button>
+      <div className="columns">
+        <div className="column">
+          <button
+            type="button"
+            onClick={() => setPage('list')}
+            className="button is-primary"
+          >
+            <span className="icon">
+              <i className="fa fa-chevron-left"></i>
+            </span>
+            <span>
+              <Trans>Voltar à listagem</Trans>
+            </span>
+          </button>
+        </div>
+      </div>
+      <form>
+        <div className="columns">
+          <div className="column">
+            <div className="field">
+              <label className="label">
+                <Trans>Mês</Trans>
+              </label>
+              <div className="control has-icons-left">
+                <div className="select">
+                  <select>
+                    {monthListOptions
+                      .filter((month) => !monthList.includes(month))
+                      .map((month) => (
+                        <option key={month} value={month}>
+                          {month}
+                        </option>
+                      ))}
+                  </select>
+                </div>
+                <div className="icon is-small is-left">
+                  <i className="fa fa-calendar"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          type="button"
+          className="button is-primary"
+          onClick={() => addEvent()}
+        >
+          <span className="icon">
+            <i className="fa fa-plus"></i>
+          </span>
+          <span>
+            <Trans>Adicionar prova</Trans>
+          </span>
+        </button>
+        {formData.individualQuizzes.map((individualQuiz) => (
+          <fieldset key={individualQuiz.key}>
+            <select>
+              {individualQuizTypes.map(
+                (individualQuizType) =>
+                  individualQuizTypeOptions[individualQuizType]
+              )}
+            </select>
+            <button
+              type="button"
+              className="button is-primary"
+              onClick={() => addPlayerToEvent(individualQuiz)}
+            >
+              <span className="icon">
+                <i className="fa fa-plus"></i>
+              </span>
+              <span>
+                <Trans>Adicionar jogador</Trans>
+              </span>
+            </button>
+            <button type="button" className="button is-danger">
+              <span className="icon">
+                <i className="fa fa-trash"></i>
+              </span>
+            </button>
+            {individualQuiz.players.map((player) => (
+              <fieldset key={player.key}>
+                <select>
+                  <option value="cenas">cenas</option>
+                </select>
+                <input type="number" value={player.result} />
+                <button type="button" className="button is-danger">
+                  <span className="icon">
+                    <i className="fa fa-trash"></i>
+                  </span>
+                </button>
+              </fieldset>
+            ))}
+          </fieldset>
+        ))}
+      </form>
     </>
   );
 };

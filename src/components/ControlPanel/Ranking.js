@@ -11,24 +11,27 @@ import List from './Ranking/List';
 import Add from './Ranking/Add';
 
 const Ranking = () => {
-  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
-  const [data, setData] = useState();
+  const [monthList, setMonthList] = useState();
   const [monthToDelete, setMonthToDelete] = useState();
   const [deleting, setDeleting] = useState(false);
   const [page, setPage] = useState('list');
+  const [individualQuizTypes, setIndividualQuizTypes] = useState();
 
   useEffect(() => {
-    setLoading(true);
     ApiRequest.get('national-rankings')
       .then(({ data }) => {
-        setData(data.data);
+        setMonthList(data.data);
       })
       .catch(() => {
         setError(true);
+      });
+    ApiRequest.get('individual-quiz-types')
+      .then(({ data }) => {
+        setIndividualQuizTypes(data.data);
       })
-      .then(() => {
-        setLoading(false);
+      .catch(() => {
+        setError(true);
       });
   }, []);
 
@@ -36,7 +39,7 @@ const Ranking = () => {
     setDeleting(true);
     ApiRequest.delete('national-rankings', { data: { month: date } })
       .then(() => {
-        setData(data.filter((item) => item !== date));
+        setMonthList(monthList.filter((item) => item !== date));
         toast.success(<Trans>Ranking mensal apagado com sucesso.</Trans>);
       })
       .catch(() => {
@@ -48,16 +51,16 @@ const Ranking = () => {
       });
   };
 
-  if (loading) {
-    return <Loading />;
-  }
-
   if (error) {
     return (
       <Error>
         <Trans>Erro de servidor. Tenta mais tarde.</Trans>
       </Error>
     );
+  }
+  
+  if (!monthList || !individualQuizTypes) {
+    return <Loading />;
   }
 
   return (
@@ -66,12 +69,18 @@ const Ranking = () => {
         {
           list: (
             <List
-              data={data}
+              monthList={monthList}
               setPage={setPage}
               setMonthToDelete={setMonthToDelete}
             />
           ),
-          add: <Add data={data} setPage={setPage} />,
+          add: (
+            <Add
+              monthList={monthList}
+              individualQuizTypes={individualQuizTypes}
+              setPage={setPage}
+            />
+          ),
         }[page]
       }
       <Modal

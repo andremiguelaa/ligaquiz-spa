@@ -1,4 +1,5 @@
 import React from 'react';
+import { Trans } from '@lingui/macro';
 
 export const Modal = ({
   type,
@@ -29,10 +30,10 @@ export const Modal = ({
             }`}
             onClick={action}
           >
-            Save changes
+            <Trans>OK</Trans>
           </button>
           <button className="button" onClick={onClose} disabled={doingAction}>
-            Cancel
+            <Trans>Cancelar</Trans>
           </button>
         </div>
       </article>

@@ -2,7 +2,7 @@ import React from 'react';
 import { Trans } from '@lingui/macro';
 import EmptyState from 'utils/EmptyState';
 
-const List = ({ data, setPage, setMonthToDelete }) => {
+const List = ({ monthList, setPage, setMonthToDelete }) => {
   return (
     <>
       <button onClick={() => setPage('add')} className="button is-primary">
@@ -15,7 +15,7 @@ const List = ({ data, setPage, setMonthToDelete }) => {
       </button>
       <br />
       <br />
-      {data.length ? (
+      {monthList.length ? (
         <table className="table is-fullwidth is-hoverable is-striped">
           <thead>
             <tr>
@@ -28,7 +28,7 @@ const List = ({ data, setPage, setMonthToDelete }) => {
             </tr>
           </thead>
           <tbody>
-            {data.map((entry) => {
+            {monthList.map((entry) => {
               return (
                 <tr key={entry}>
                   <td className="is-vertical-middle">
@@ -37,7 +37,7 @@ const List = ({ data, setPage, setMonthToDelete }) => {
                   <td>
                     <div className="buttons has-addons is-pulled-right">
                       <button className="button">
-                        <span className="icon is-small">
+                        <span className="icon">
                           <i className="fa fa-edit"></i>
                         </span>
                       </button>

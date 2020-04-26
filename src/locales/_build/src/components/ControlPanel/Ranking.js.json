@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/components/ControlPanel/Ranking.js",
-        37
+        43
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/components/ControlPanel/Ranking.js",
-        40
+        46
       ]
     ]
   },
@@ -19,39 +19,7 @@
     "origin": [
       [
         "src/components/ControlPanel/Ranking.js",
-        55
-      ]
-    ]
-  },
-  "Adicionar ranking mensal": {
-    "origin": [
-      [
-        "src/components/ControlPanel/Ranking.js",
-        67
-      ]
-    ]
-  },
-  "Mês": {
-    "origin": [
-      [
-        "src/components/ControlPanel/Ranking.js",
-        77
-      ]
-    ]
-  },
-  "Acções": {
-    "origin": [
-      [
-        "src/components/ControlPanel/Ranking.js",
-        80
-      ]
-    ]
-  },
-  "Sem registos": {
-    "origin": [
-      [
-        "src/components/ControlPanel/Ranking.js",
-        112
+        61
       ]
     ]
   },
@@ -59,7 +27,7 @@
     "origin": [
       [
         "src/components/ControlPanel/Ranking.js",
-        118
+        89
       ]
     ]
   },
@@ -67,7 +35,7 @@
     "origin": [
       [
         "src/components/ControlPanel/Ranking.js",
-        120
+        91
       ]
     ]
   }

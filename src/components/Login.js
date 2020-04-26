@@ -8,7 +8,7 @@ import { setLoginData } from 'utils/Auth';
 import Forbidden from './Forbidden';
 
 const Login = ({ history }) => {
-  const [formData, setformData] = useState({
+  const [formData, setFormData] = useState({
     email: '',
     password: ''
   });
@@ -63,7 +63,7 @@ const Login = ({ history }) => {
                       type="email"
                       required
                       onChange={event => {
-                        setformData({
+                        setFormData({
                           ...formData,
                           email: event.target.value
                         });
@@ -85,7 +85,7 @@ const Login = ({ history }) => {
                       name="password"
                       required
                       onChange={event => {
-                        setformData({
+                        setFormData({
                           ...formData,
                           password: event.target.value
                         });
