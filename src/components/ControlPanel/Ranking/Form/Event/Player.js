@@ -18,11 +18,11 @@ const Player = ({
   );
 
   const updatePlayerResult = (score) => {
-    const individualQuizIndex = formData.individualQuizzes.findIndex(
+    const individualQuizIndex = formData.individual_quizzes.findIndex(
       (quiz) =>
         individualQuiz.individual_quiz_type === quiz.individual_quiz_type
     );
-    const newIndividualQuizzes = [...formData.individualQuizzes];
+    const newIndividualQuizzes = [...formData.individual_quizzes];
 
     const playerIndex = newIndividualQuizzes[
       individualQuizIndex
@@ -35,7 +35,7 @@ const Player = ({
     ].result = score;
     setFormData({
       ...formData,
-      individualQuizzes: newIndividualQuizzes,
+      individual_quizzes: newIndividualQuizzes,
     });
   };
   return (

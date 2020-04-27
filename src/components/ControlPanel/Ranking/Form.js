@@ -17,7 +17,8 @@ const Form = ({
 
   const [formData, setFormData] = useState({
     month: validMonthListOptions[0],
-    individualQuizzes: [],
+    saved: false,
+    individual_quizzes: [],
   });
   const [individualQuizTypeModal, setIndividualQuizTypeModal] = useState(false);
   const [chosenIndividualQuizType, setChosenIndividualQuizType] = useState(
@@ -29,7 +30,7 @@ const Form = ({
   ] = useState(individualQuizTypes);
 
   useEffect(() => {
-    const addedIndividualQuizTypes = formData.individualQuizzes.map(
+    const addedIndividualQuizTypes = formData.individual_quizzes.map(
       (individualQuiz) => individualQuiz.individual_quiz_type
     );
     const filteredIndividualQuizTypes = individualQuizTypes.filter(
@@ -37,13 +38,13 @@ const Form = ({
     );
     setAvailableIndividualQuizTypes(filteredIndividualQuizTypes);
     setChosenIndividualQuizType(filteredIndividualQuizTypes[0]);
-  }, [formData.individualQuizzes, individualQuizTypes]);
+  }, [formData.individual_quizzes, individualQuizTypes]);
 
   const addEvent = (type) => {
     setFormData({
       ...formData,
-      individualQuizzes: [
-        ...formData.individualQuizzes,
+      individual_quizzes: [
+        ...formData.individual_quizzes,
         {
           individual_quiz_type: type,
           results: [],
@@ -53,23 +54,25 @@ const Form = ({
   };
 
   const saveDisabled =
-    !formData.individualQuizzes.length ||
-    formData.individualQuizzes.some(
+    !formData.individual_quizzes.length ||
+    formData.individual_quizzes.some(
       (quiz) =>
-        quiz.results.length === 0 || quiz.results.some((result) => !result.result)
+        quiz.results.length === 0 ||
+        quiz.results.some((result) => !result.result)
     );
 
   const saveRanking = () => {
-    formData.individualQuizzes.forEach((quiz) => {
-      ApiRequest.post('individual-quizzes', {
-        ...quiz,
-        month: formData.month,
-      })
-        .then()
-        .catch((error) => {
-          console.log(error);
+    if (!formData.saved) {
+      ApiRequest.post('national-rankings', formData).then(({ data }) => {
+        setFormData({
+          ...formData,
+          saved: true,
+          individual_quizzes: data.data,
         });
-    });
+      });
+    } else {
+      ApiRequest.patch('national-rankings', formData);
+    }
   };
 
   return (
@@ -93,35 +96,44 @@ const Form = ({
       <form>
         <div className="columns">
           <div className="column">
-            <div className="field">
-              <label className="label">
-                <Trans>Mês</Trans>
-              </label>
-              <div className="control has-icons-left">
-                <div className="select">
-                  <select
-                    onChange={(event) => {
-                      setFormData({
-                        ...formData,
-                        month: event.target.value,
-                      });
-                    }}
-                  >
-                    {validMonthListOptions.map((month) => (
-                      <option key={month} value={month}>
-                        {month}
-                      </option>
-                    ))}
-                  </select>
+            {formData.saved ? (
+              <>
+                <div className="label">
+                  <Trans>Mês</Trans>
                 </div>
-                <div className="icon is-small is-left">
-                  <i className="fa fa-calendar"></i>
+                <div>{formData.month}</div>
+              </>
+            ) : (
+              <div className="field">
+                <label className="label">
+                  <Trans>Mês</Trans>
+                </label>
+                <div className="control has-icons-left">
+                  <div className="select">
+                    <select
+                      onChange={(event) => {
+                        setFormData({
+                          ...formData,
+                          month: event.target.value,
+                        });
+                      }}
+                    >
+                      {validMonthListOptions.map((month) => (
+                        <option key={month} value={month}>
+                          {month}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                  <div className="icon is-small is-left">
+                    <i className="fa fa-calendar"></i>
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
           </div>
         </div>
-        {formData.individualQuizzes.map((individualQuiz) => (
+        {formData.individual_quizzes.map((individualQuiz) => (
           <Event
             key={individualQuiz.individual_quiz_type}
             individualQuiz={individualQuiz}

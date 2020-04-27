@@ -28,23 +28,23 @@ const Event = ({
     );
 
   const removeEvent = () => {
-    let newIndividualQuizzes = [...formData.individualQuizzes];
+    let newIndividualQuizzes = [...formData.individual_quizzes];
     newIndividualQuizzes = newIndividualQuizzes.filter(
       (quiz) =>
         quiz.individual_quiz_type !== individualQuiz.individual_quiz_type
     );
     setFormData({
       ...formData,
-      individualQuizzes: newIndividualQuizzes,
+      individual_quizzes: newIndividualQuizzes,
     });
   };
 
   const addPlayers = (players) => {
-    const individualQuizIndex = formData.individualQuizzes.findIndex(
+    const individualQuizIndex = formData.individual_quizzes.findIndex(
       (event) =>
         individualQuiz.individual_quiz_type === event.individual_quiz_type
     );
-    const newIndividualQuizzes = [...formData.individualQuizzes];
+    const newIndividualQuizzes = [...formData.individual_quizzes];
     players.forEach((id) => {
       newIndividualQuizzes[individualQuizIndex].results.push({
         individual_quiz_player_id: id,
@@ -53,16 +53,16 @@ const Event = ({
     });
     setFormData({
       ...formData,
-      individualQuizzes: newIndividualQuizzes,
+      individual_quizzes: newIndividualQuizzes,
     });
   };
 
   const removePlayer = (playerToRemove) => {
-    const individualQuizIndex = formData.individualQuizzes.findIndex(
+    const individualQuizIndex = formData.individual_quizzes.findIndex(
       (event) =>
         individualQuiz.individual_quiz_type === event.individual_quiz_type
     );
-    const newIndividualQuizzes = [...formData.individualQuizzes];
+    const newIndividualQuizzes = [...formData.individual_quizzes];
     newIndividualQuizzes[individualQuizIndex].results = newIndividualQuizzes[
       individualQuizIndex
     ].results.filter(
@@ -70,7 +70,7 @@ const Event = ({
     );
     setFormData({
       ...formData,
-      individualQuizzes: newIndividualQuizzes,
+      individual_quizzes: newIndividualQuizzes,
     });
   };
 
