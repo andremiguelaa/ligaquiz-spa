@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 
 import EmptyState from 'utils/EmptyState';
 
-const List = ({ monthList, setPage, setMonthToDelete }) => {
+const List = ({ monthList, setPage, editMonth, setMonthToDelete }) => {
   return (
     <>
       <button onClick={() => setPage('add')} className="button is-primary">
@@ -33,11 +34,14 @@ const List = ({ monthList, setPage, setMonthToDelete }) => {
               return (
                 <tr key={entry}>
                   <td className="is-vertical-middle">
-                    <a href="#">{entry}</a>
+                    <Link to="/">{entry}</Link>
                   </td>
                   <td>
                     <div className="buttons has-addons is-pulled-right">
-                      <button className="button">
+                      <button
+                        className="button"
+                        onClick={() => editMonth(entry)}
+                      >
                         <span className="icon">
                           <i className="fa fa-edit"></i>
                         </span>

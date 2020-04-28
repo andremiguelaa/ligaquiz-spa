@@ -38,6 +38,7 @@ const Player = ({
       individual_quizzes: newIndividualQuizzes,
     });
   };
+
   return (
     <>
       <div className="field has-addons">
@@ -55,6 +56,7 @@ const Player = ({
           <input
             className="input"
             type="number"
+            value={player.result}
             onChange={(event) => {
               updatePlayerResult(event.target.value);
             }}

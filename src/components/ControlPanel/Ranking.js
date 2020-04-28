@@ -19,15 +19,10 @@ const Ranking = () => {
   const [monthToDelete, setMonthToDelete] = useState();
   const [deleting, setDeleting] = useState(false);
   const [page, setPage] = useState('list');
+  const [loadingMonthData, setLoadingMonthData] = useState(false);
+  const [initialEditData, setInitialEditData] = useState();
 
   useEffect(() => {
-    ApiRequest.get('national-rankings')
-      .then(({ data }) => {
-        setMonthList(data.data);
-      })
-      .catch(() => {
-        setError(true);
-      });
     ApiRequest.get('individual-quiz-types')
       .then(({ data }) => {
         setIndividualQuizTypes(data.data);
@@ -43,6 +38,40 @@ const Ranking = () => {
         setError(true);
       });
   }, []);
+
+  useEffect(() => {
+    if (page === 'list') {
+      loadMonthList();
+    }
+  }, [page]);
+
+  const loadMonthList = () => {
+    setMonthList();
+    ApiRequest.get('national-rankings')
+      .then(({ data }) => {
+        setMonthList(data.data);
+      })
+      .catch(() => {
+        setError(true);
+      });
+  };
+
+  const editMonth = (date) => {
+    setLoadingMonthData(true);
+    ApiRequest.get(`individual-quizzes?results&month[]=${date}`)
+      .then(({ data }) => {
+        setInitialEditData(data.data);
+        setPage('edit');
+      })
+      .catch(() => {
+        toast.error(
+          <Trans>Não foi possível abrir a edição do ranking mensal.</Trans>
+        );
+      })
+      .then(() => {
+        setLoadingMonthData(false);
+      });
+  };
 
   const deleteRanking = (date) => {
     setDeleting(true);
@@ -68,7 +97,12 @@ const Ranking = () => {
     );
   }
 
-  if (!monthList || !individualQuizTypes || !individualQuizPlayers) {
+  if (
+    !monthList ||
+    !individualQuizTypes ||
+    !individualQuizPlayers ||
+    loadingMonthData
+  ) {
     return <Loading />;
   }
 
@@ -80,6 +114,7 @@ const Ranking = () => {
             <List
               monthList={monthList}
               setPage={setPage}
+              editMonth={editMonth}
               setMonthToDelete={setMonthToDelete}
             />
           ),
@@ -89,6 +124,15 @@ const Ranking = () => {
               individualQuizTypes={individualQuizTypes}
               individualQuizPlayers={individualQuizPlayers}
               setPage={setPage}
+            />
+          ),
+          edit: (
+            <Form
+              monthList={monthList}
+              individualQuizTypes={individualQuizTypes}
+              individualQuizPlayers={individualQuizPlayers}
+              setPage={setPage}
+              initialEditData={initialEditData}
             />
           ),
         }[page]

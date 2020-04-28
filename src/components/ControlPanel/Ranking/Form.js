@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Trans } from '@lingui/macro';
+import { toast } from 'react-toastify';
 
 import ApiRequest from 'utils/ApiRequest';
 import Modal from 'utils/Modal';
@@ -11,13 +12,15 @@ const Form = ({
   individualQuizTypes,
   individualQuizPlayers,
   setPage,
+  initialEditData,
 }) => {
   const validMonthListOptions = monthListOptions(monthList);
   const [backModal, setBackModal] = useState(false);
+  const [saving, setSaving] = useState(false);
 
   const [formData, setFormData] = useState({
     month: validMonthListOptions[0],
-    saved: false,
+    editing: false,
     individual_quizzes: [],
   });
   const [individualQuizTypeModal, setIndividualQuizTypeModal] = useState(false);
@@ -28,6 +31,21 @@ const Form = ({
     availableIndividualQuizTypes,
     setAvailableIndividualQuizTypes,
   ] = useState(individualQuizTypes);
+
+  useEffect(() => {
+    if (initialEditData) {
+      setFormData({
+        month: initialEditData[0].month,
+        editing: true,
+        individual_quizzes: initialEditData.map(
+          ({ individual_quiz_type, results }) => ({
+            individual_quiz_type,
+            results,
+          })
+        ),
+      });
+    }
+  }, [initialEditData]);
 
   useEffect(() => {
     const addedIndividualQuizTypes = formData.individual_quizzes.map(
@@ -58,20 +76,38 @@ const Form = ({
     formData.individual_quizzes.some(
       (quiz) =>
         quiz.results.length === 0 ||
-        quiz.results.some((result) => !result.result)
+        quiz.results.some(
+          (result) =>
+            !result.result === undefined ||
+            result.result?.toString() !== Math.round(result?.result).toString()
+        )
     );
 
   const saveRanking = () => {
-    if (!formData.saved) {
-      ApiRequest.post('national-rankings', formData).then(({ data }) => {
-        setFormData({
-          ...formData,
-          saved: true,
-          individual_quizzes: data.data,
+    setSaving(true);
+    if (!formData.editing) {
+      ApiRequest.post('national-rankings', formData)
+        .then(({ data }) => {
+          setFormData({
+            ...formData,
+            editing: true,
+            individual_quizzes: data.data,
+          });
+        })
+        .catch(() => {
+          toast.error(<Trans>Não foi possível gravar o ranking mensal.</Trans>);
+        })
+        .then(() => {
+          setSaving(false);
         });
-      });
     } else {
-      ApiRequest.patch('national-rankings', formData);
+      ApiRequest.patch('national-rankings', formData)
+        .catch(() => {
+          toast.error(<Trans>Não foi possível gravar o ranking mensal.</Trans>);
+        })
+        .then(() => {
+          setSaving(false);
+        });
     }
   };
 
@@ -96,7 +132,7 @@ const Form = ({
       <form>
         <div className="columns">
           <div className="column">
-            {formData.saved ? (
+            {formData.editing ? (
               <>
                 <div className="label">
                   <Trans>Mês</Trans>
@@ -164,9 +200,9 @@ const Form = ({
           <div className="column">
             <button
               type="button"
-              className="button is-primary"
+              className={`button is-primary ${saving ? 'is-loading' : ''}`}
               onClick={saveRanking}
-              disabled={saveDisabled}
+              disabled={saveDisabled || saving}
             >
               <span className="icon">
                 <i className="fa fa-plus"></i>
