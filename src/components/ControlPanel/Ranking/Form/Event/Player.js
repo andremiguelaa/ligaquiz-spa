@@ -56,7 +56,7 @@ const Player = ({
           <input
             className="input"
             type="number"
-            value={player.result}
+            defaultValue={player.result}
             onChange={(event) => {
               updatePlayerResult(event.target.value);
             }}
