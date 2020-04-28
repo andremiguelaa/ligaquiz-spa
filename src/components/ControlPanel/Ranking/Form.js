@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Trans } from '@lingui/macro';
 import { toast } from 'react-toastify';
 
@@ -17,6 +17,7 @@ const Form = ({
   const validMonthListOptions = monthListOptions(monthList);
   const [backModal, setBackModal] = useState(false);
   const [saving, setSaving] = useState(false);
+  const [changed, setChanged] = useState(false);
 
   const [formData, setFormData] = useState({
     month: validMonthListOptions[0],
@@ -32,6 +33,16 @@ const Form = ({
     setAvailableIndividualQuizTypes,
   ] = useState(individualQuizTypes);
 
+  const isInitialMount = useRef(true);
+
+  useEffect(() => {
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+    } else {
+      setChanged(true);
+    }
+  }, [formData]);
+
   useEffect(() => {
     if (initialEditData) {
       setFormData({
@@ -44,6 +55,9 @@ const Form = ({
           })
         ),
       });
+      setTimeout(() => {
+        setChanged(false);
+      }, 0);
     }
   }, [initialEditData]);
 
@@ -93,6 +107,9 @@ const Form = ({
             editing: true,
             individual_quizzes: data.data,
           });
+          setTimeout(() => {
+            setChanged(false);
+          }, 0);
         })
         .catch(() => {
           toast.error(<Trans>Não foi possível gravar o ranking mensal.</Trans>);
@@ -102,6 +119,9 @@ const Form = ({
         });
     } else {
       ApiRequest.patch('national-rankings', formData)
+        .then(() => {
+          setChanged(false);
+        })
         .catch(() => {
           toast.error(<Trans>Não foi possível gravar o ranking mensal.</Trans>);
         })
@@ -117,7 +137,13 @@ const Form = ({
         <div className="column">
           <button
             type="button"
-            onClick={() => setBackModal(true)}
+            onClick={() => {
+              if (changed) {
+                setBackModal(true);
+              } else {
+                setPage('list');
+              }
+            }}
             className="button"
           >
             <span className="icon">
