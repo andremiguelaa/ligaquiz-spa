@@ -22,7 +22,7 @@ const pages = {
 
 const ControlPanel = ({
   match: {
-    params: { page }
+    params: { page = 'profile' }
   }
 }) => {
   const [{ user }] = useStateValue();

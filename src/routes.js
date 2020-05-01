@@ -8,6 +8,7 @@ import ResetPassword from 'components/ResetPassword';
 import Register from 'components/Register';
 import Logout from 'components/Logout';
 import ControlPanel from 'components/ControlPanel';
+import NationalRanking from 'components/NationalRanking';
 import NoMatch from 'components/NoMatch';
 
 export default [
@@ -43,13 +44,13 @@ export default [
   },
   {
     title: <Trans>Painel de controlo</Trans>,
-    path: '/control-panel',
+    path: '/control-panel/:page?',
     component: ControlPanel
   },
   {
-    title: <Trans>Painel de controlo</Trans>,
-    path: '/control-panel/:page',
-    component: ControlPanel
+    title: <Trans>Ranking Nacional</Trans>,
+    path: '/national-ranking/:month?',
+    component: NationalRanking
   },
   {
     title: <Trans>Página não encontrada</Trans>,

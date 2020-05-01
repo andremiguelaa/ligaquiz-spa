@@ -77,10 +77,10 @@ const Header = () => {
               {!user && (
                 <div className="navbar-item">
                   <div className="buttons">
-                    <Link to="/login" className="button is-light">
+                    <Link to="/login/" className="button is-light">
                       <Trans>Entrar</Trans>
                     </Link>
-                    <Link to="/register" className="button is-primary">
+                    <Link to="/register/" className="button is-primary">
                       <Trans>Registar</Trans>
                     </Link>
                   </div>
@@ -108,11 +108,15 @@ const Header = () => {
                     </button>
                   </OutsideClickHandler>
                   <div className="navbar-dropdown is-right">
-                    <Link to="/control-panel/profile" className="navbar-item">
+                    <Link to="/control-panel/" className="navbar-item">
                       <i className="fa fa-btn fa-cogs" />
                       &nbsp;<Trans>Painel de controlo</Trans>
                     </Link>
-                    <Link to="/logout" className="navbar-item">
+                    <Link to="/national-ranking/" className="navbar-item">
+                      <i className="fa fa-btn fa-trophy" />
+                      &nbsp;<Trans>Ranking Nacional</Trans>
+                    </Link>
+                    <Link to="/logout/" className="navbar-item">
                       <i className="fa fa-btn fa-sign-out" />
                       &nbsp;<Trans>Sair</Trans>
                     </Link>

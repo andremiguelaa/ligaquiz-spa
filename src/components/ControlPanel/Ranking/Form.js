@@ -112,7 +112,7 @@ const Form = ({
           }, 0);
         })
         .catch(() => {
-          toast.error(<Trans>Não foi possível gravar o ranking mensal.</Trans>);
+          toast.error(<Trans>Não foi possível gravar as provas mensais.</Trans>);
         })
         .then(() => {
           setSaving(false);
@@ -123,7 +123,7 @@ const Form = ({
           setChanged(false);
         })
         .catch(() => {
-          toast.error(<Trans>Não foi possível gravar o ranking mensal.</Trans>);
+          toast.error(<Trans>Não foi possível gravar as provas mensais.</Trans>);
         })
         .then(() => {
           setSaving(false);
@@ -234,7 +234,7 @@ const Form = ({
                 <i className="fa fa-plus"></i>
               </span>
               <span>
-                <Trans>Guardar ranking mensal</Trans>
+                <Trans>Guardar provas mensais</Trans>
               </span>
             </button>
           </div>

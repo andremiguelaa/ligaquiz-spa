@@ -12,7 +12,7 @@ const List = ({ monthList, setPage, editMonth, setMonthToDelete }) => {
           <i className="fa fa-plus"></i>
         </span>
         <span>
-          <Trans>Adicionar ranking mensal</Trans>
+          <Trans>Adicionar provas mensais</Trans>
         </span>
       </button>
       <br />

@@ -65,7 +65,7 @@ const Ranking = () => {
       })
       .catch(() => {
         toast.error(
-          <Trans>Não foi possível abrir a edição do ranking mensal.</Trans>
+          <Trans>Não foi possível abrir a edição das provas mensais.</Trans>
         );
       })
       .then(() => {
@@ -78,10 +78,10 @@ const Ranking = () => {
     ApiRequest.delete('national-rankings', { data: { month: date } })
       .then(() => {
         setMonthList(monthList.filter((item) => item !== date));
-        toast.success(<Trans>Ranking mensal apagado com sucesso.</Trans>);
+        toast.success(<Trans>Provas mensais apagadas com sucesso.</Trans>);
       })
       .catch(() => {
-        toast.error(<Trans>Não foi possível apagar o ranking mensal.</Trans>);
+        toast.error(<Trans>Não foi possível apagar as provas mensais.</Trans>);
       })
       .then(() => {
         setMonthToDelete();
@@ -140,11 +140,11 @@ const Ranking = () => {
       <Modal
         type="danger"
         open={monthToDelete}
-        title={<Trans>Apagar ranking mensal</Trans>}
+        title={<Trans>Apagar provas mensais</Trans>}
         body={
           <Trans>
-            Tens a certeza que queres apagar este ranking mensal e todos os
-            quizzes associados?
+            Tens a certeza que queres apagar as provas deste mês e os resultados
+            associados?
           </Trans>
         }
         action={() => deleteRanking(monthToDelete)}
