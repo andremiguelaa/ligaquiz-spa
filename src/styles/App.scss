@@ -55,3 +55,22 @@ $body-size: 14px;
 .is-vertical-middle {
   vertical-align: middle !important;
 }
+
+dl.legend {
+  dt{
+    display: inline-block;
+    width: 5rem;
+    &::after {
+      content: ':';
+    }
+  }
+  dd {
+    display: inline-block;
+    margin-left: 0;
+  }
+}
+
+.links-list {
+  list-style: none!important;
+  margin-left: 0!important;
+}
