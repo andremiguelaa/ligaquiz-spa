@@ -4,7 +4,7 @@ import classes from './Loading.module.scss';
 
 export const Loading = ({ type }) => (
   <div className={classes[type]}>
-    <i className="fa fa-cog fa-spin" />
+    <i className="fa fa-spinner fa-spin" />
   </div>
 );
 

@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 
 import Loading from 'utils/Loading';
 import Error from 'utils/Error';
+import NoMatch from './NoMatch';
 import ApiRequest from 'utils/ApiRequest';
 
 const quizzesOrder = ['wqc', 'eqc', 'cnq', 'hot_100', 'squizzed', 'inquizicao'];
@@ -16,21 +18,47 @@ const quizTypeAbbr = {
   inquizicao: 'INQ',
 };
 
-const NationalRanking = () => {
+const NationalRanking = ({
+  match: {
+    params: { month },
+  },
+}) => {
   const [error, setError] = useState(false);
-  const [loading, setLoading] = useState(true);
+  const [players, setPlayers] = useState();
+  const [rankingList, setRankingList] = useState();
   const [quizzes, setQuizzes] = useState();
   const [ranking, setRanking] = useState();
 
   useEffect(() => {
+    setRanking();
+    ApiRequest.get('individual-quiz-players')
+      .then(({ data }) => {
+        setPlayers(
+          data.data.reduce(
+            (acc, player) => ({
+              ...acc,
+              [player.id]: player,
+            }),
+            {}
+          )
+        );
+      })
+      .catch(() => {
+        setError(true);
+      });
+
     ApiRequest.get('national-rankings')
       .then(({ data }) => {
+        setRankingList(data.data);
         if (data.data.length) {
-          ApiRequest.get(`national-rankings?month=${data.data[0]}`)
+          let monthToLoad = data.data[0];
+          if (month && data.data.includes(month)) {
+            monthToLoad = month;
+          }
+          ApiRequest.get(`national-rankings?month=${monthToLoad}`)
             .then(({ data }) => {
               setQuizzes(data.data.quizzes);
               setRanking(data.data.ranking);
-              setLoading(false);
             })
             .catch(() => {
               setError(true);
@@ -40,7 +68,7 @@ const NationalRanking = () => {
       .catch(() => {
         setError(true);
       });
-  }, []);
+  }, [month]);
 
   if (error) {
     return (
@@ -50,14 +78,18 @@ const NationalRanking = () => {
     );
   }
 
-  if (loading) {
+  if (!players || !ranking) {
     return <Loading />;
+  }
+
+  if (month && !rankingList.includes(month)) {
+    return <NoMatch />;
   }
 
   return (
     <article className="message">
       <div className="message-header">
-        <h1>Ranking de Março de 2020</h1>
+        <h1>Ranking de {month || rankingList[0]}</h1>
       </div>
       <div className="message-body">
         <div className="table-container">
@@ -83,7 +115,10 @@ const NationalRanking = () => {
               {ranking.map((player) => (
                 <tr key={player.individual_quiz_player_id}>
                   <td>{player.rank}</td>
-                  <td>name</td>
+                  <td>
+                    {players[player.individual_quiz_player_id].name}{' '}
+                    {players[player.individual_quiz_player_id].surname}
+                  </td>
                   <td>
                     <strong>{Math.round(player.score)}</strong>
                   </td>
@@ -125,7 +160,7 @@ const NationalRanking = () => {
         </dl>
         <p>
           Para mais pormenores de como o ranking é calculado deve ser consultado
-          este artigo:
+          este artigo:{' '}
           <a
             href="https://quizportugal.pt/blog/ranking-nacional-de-quiz"
             target="_blank"
@@ -134,15 +169,19 @@ const NationalRanking = () => {
             Ranking Nacional de Quiz
           </a>
         </p>
-        <hr />
-        <h2 className="has-text-weight-bold">Arquivo</h2>
-        <ul>
-          <li>
-            <a href="https://ligaquiz.pt/ranking-nacional/2020/3">
-              Março de 2020
-            </a>
-          </li>
-        </ul>
+        {rankingList.length && (
+          <>
+            <hr />
+            <h2 className="has-text-weight-bold">Arquivo</h2>
+            <ul>
+              {rankingList.map((month) => (
+                <li key={month}>
+                  <Link to={`/national-ranking/${month}`}>{month}</Link>
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
       </div>
     </article>
   );
