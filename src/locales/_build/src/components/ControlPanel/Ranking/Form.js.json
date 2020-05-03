@@ -1,0 +1,70 @@
+{
+  "Não foi possível gravar as provas mensais.": {
+    "origin": [
+      [
+        "src/components/ControlPanel/Ranking/Form.js",
+        115
+      ],
+      [
+        "src/components/ControlPanel/Ranking/Form.js",
+        126
+      ]
+    ]
+  },
+  "Voltar à listagem": {
+    "origin": [
+      [
+        "src/components/ControlPanel/Ranking/Form.js",
+        153
+      ],
+      [
+        "src/components/ControlPanel/Ranking/Form.js",
+        280
+      ]
+    ]
+  },
+  "Mês": {
+    "origin": [
+      [
+        "src/components/ControlPanel/Ranking/Form.js",
+        164
+      ],
+      [
+        "src/components/ControlPanel/Ranking/Form.js",
+        171
+      ]
+    ]
+  },
+  "Adicionar prova": {
+    "origin": [
+      [
+        "src/components/ControlPanel/Ranking/Form.js",
+        219
+      ]
+    ]
+  },
+  "Guardar provas mensais": {
+    "origin": [
+      [
+        "src/components/ControlPanel/Ranking/Form.js",
+        237
+      ]
+    ]
+  },
+  "Escolher tipo de prova": {
+    "origin": [
+      [
+        "src/components/ControlPanel/Ranking/Form.js",
+        247
+      ]
+    ]
+  },
+  "Todos os dados deste formulário serão descartados.<0/>Tens a certeza que queres voltar à listagem?": {
+    "origin": [
+      [
+        "src/components/ControlPanel/Ranking/Form.js",
+        282
+      ]
+    ]
+  }
+}

@@ -1,17 +1,25 @@
 {
-  "Ranking mensal apagado com sucesso.": {
+  "Não foi possível abrir a edição das provas mensais.": {
     "origin": [
       [
         "src/components/ControlPanel/Ranking.js",
-        43
+        68
       ]
     ]
   },
-  "Não foi possível apagar o ranking mensal.": {
+  "Provas mensais apagadas com sucesso.": {
     "origin": [
       [
         "src/components/ControlPanel/Ranking.js",
-        46
+        81
+      ]
+    ]
+  },
+  "Não foi possível apagar as provas mensais.": {
+    "origin": [
+      [
+        "src/components/ControlPanel/Ranking.js",
+        84
       ]
     ]
   },
@@ -19,23 +27,23 @@
     "origin": [
       [
         "src/components/ControlPanel/Ranking.js",
-        61
+        95
       ]
     ]
   },
-  "Apagar ranking mensal": {
+  "Apagar provas mensais": {
     "origin": [
       [
         "src/components/ControlPanel/Ranking.js",
-        89
+        143
       ]
     ]
   },
-  "Tens a certeza que queres apagar este ranking mensal ({monthToDelete}) e todos os quizzes associados?": {
+  "Tens a certeza que queres apagar as provas deste mês e os resultados associados?": {
     "origin": [
       [
         "src/components/ControlPanel/Ranking.js",
-        91
+        145
       ]
     ]
   }

@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/routes.js",
-        15
+        16
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/routes.js",
-        20
+        21
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/routes.js",
-        25
+        26
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/routes.js",
-        30
+        31
       ]
     ]
   },
@@ -35,7 +35,7 @@
     "origin": [
       [
         "src/routes.js",
-        35
+        36
       ]
     ]
   },
@@ -43,7 +43,7 @@
     "origin": [
       [
         "src/routes.js",
-        40
+        41
       ]
     ]
   },
@@ -51,11 +51,15 @@
     "origin": [
       [
         "src/routes.js",
-        45
-      ],
+        46
+      ]
+    ]
+  },
+  "Ranking Nacional": {
+    "origin": [
       [
         "src/routes.js",
-        50
+        51
       ]
     ]
   },
@@ -63,7 +67,7 @@
     "origin": [
       [
         "src/routes.js",
-        55
+        56
       ]
     ]
   }

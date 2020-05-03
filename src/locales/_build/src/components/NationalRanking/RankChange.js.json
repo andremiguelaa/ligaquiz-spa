@@ -1,0 +1,18 @@
+{
+  "Subiu {change} posições": {
+    "origin": [
+      [
+        "src/components/NationalRanking/RankChange.js",
+        13
+      ]
+    ]
+  },
+  "Desceu {0} posições": {
+    "origin": [
+      [
+        "src/components/NationalRanking/RankChange.js",
+        23
+      ]
+    ]
+  }
+}

@@ -23,7 +23,7 @@
       ]
     ]
   },
-  "Sair": {
+  "Ranking Nacional": {
     "origin": [
       [
         "src/partials/Header.js",
@@ -31,11 +31,19 @@
       ]
     ]
   },
-  "Versão 4.0": {
+  "Sair": {
     "origin": [
       [
         "src/partials/Header.js",
         121
+      ]
+    ]
+  },
+  "Versão 4.0": {
+    "origin": [
+      [
+        "src/partials/Header.js",
+        125
       ]
     ]
   }

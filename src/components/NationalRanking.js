@@ -7,6 +7,8 @@ import Error from 'utils/Error';
 import NoMatch from './NoMatch';
 import ApiRequest from 'utils/ApiRequest';
 
+import RankChange from './NationalRanking/RankChange';
+
 const quizzesOrder = ['wqc', 'eqc', 'cnq', 'hot_100', 'squizzed', 'inquizicao'];
 
 const quizTypeAbbr = {
@@ -49,16 +51,57 @@ const NationalRanking = ({
 
     ApiRequest.get('national-rankings')
       .then(({ data }) => {
-        setRankingList(data.data);
-        if (data.data.length) {
-          let monthToLoad = data.data[0];
-          if (month && data.data.includes(month)) {
+        const list = data.data;
+        setRankingList(list);
+        if (list.length) {
+          let monthToLoad = list[0];
+          if (month && list.includes(month)) {
             monthToLoad = month;
           }
+          if (month && !list.includes(month)) {
+            setRanking({});
+            return;
+          }
+
+          const rankingIndex = list.findIndex(
+            (element) => element === monthToLoad
+          );
           ApiRequest.get(`national-rankings?month=${monthToLoad}`)
             .then(({ data }) => {
               setQuizzes(data.data.quizzes);
-              setRanking(data.data.ranking);
+              if (list[rankingIndex + 1]) {
+                ApiRequest.get(
+                  `national-rankings?month=${list[rankingIndex + 1]}`
+                )
+                  .then(
+                    ({
+                      data: {
+                        data: { ranking: previousRanking },
+                      },
+                    }) => {
+                      const rankingWithChanges = data.data.ranking.map(
+                        (player) => {
+                          const previousRankingPlayerInfo = previousRanking.find(
+                            (element) =>
+                              element.individual_quiz_player_id ===
+                              player.individual_quiz_player_id
+                          );
+                          if (previousRankingPlayerInfo) {
+                            player.change =
+                              previousRankingPlayerInfo.rank - player.rank;
+                          }
+                          return player;
+                        }
+                      );
+                      setRanking(rankingWithChanges);
+                    }
+                  )
+                  .catch(() => {
+                    setError(true);
+                  });
+              } else {
+                setRanking(data.data.ranking);
+              }
             })
             .catch(() => {
               setError(true);
@@ -98,6 +141,7 @@ const NationalRanking = ({
               <thead>
                 <tr>
                   <th>#</th>
+                  <th>±</th>
                   <th>Nome</th>
                   <th>Pontos</th>
                   {quizzesOrder.map(
@@ -116,6 +160,9 @@ const NationalRanking = ({
                 {ranking.map((player) => (
                   <tr key={player.individual_quiz_player_id}>
                     <td>{player.rank}</td>
+                    <td>
+                      <RankChange change={player.change} />
+                    </td>
                     <td>
                       {players[player.individual_quiz_player_id].name}{' '}
                       {players[player.individual_quiz_player_id].surname}

@@ -1,9 +1,9 @@
 {
-  "Adicionar ranking mensal": {
+  "Adicionar provas mensais": {
     "origin": [
       [
         "src/components/ControlPanel/Ranking/List.js",
-        13
+        15
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/components/ControlPanel/Ranking/List.js",
-        23
+        25
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/components/ControlPanel/Ranking/List.js",
-        26
+        28
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/components/ControlPanel/Ranking/List.js",
-        61
+        66
       ]
     ]
   }
