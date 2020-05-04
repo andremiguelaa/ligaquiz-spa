@@ -7,18 +7,10 @@ import Error from 'utils/Error';
 import NoMatch from './NoMatch';
 import ApiRequest from 'utils/ApiRequest';
 
-import RankChange from './NationalRanking/RankChange';
+import Player from './NationalRanking/Player';
+import Legend from './NationalRanking/Legend';
 
-const quizzesOrder = ['wqc', 'eqc', 'cnq', 'hot_100', 'squizzed', 'inquizicao'];
-
-const quizTypeAbbr = {
-  wqc: 'WQC',
-  eqc: 'EQC',
-  cnq: 'CNQ',
-  hot_100: 'HOT',
-  squizzed: 'SQ',
-  inquizicao: 'INQ',
-};
+import { quizzesOrder, quizTypeAbbr } from './NationalRanking/consts.js';
 
 const NationalRanking = ({
   match: {
@@ -132,7 +124,9 @@ const NationalRanking = ({
   return (
     <article className="message">
       <div className="message-header">
-        <h1>Ranking de {month || rankingList[0]}</h1>
+        <h1>
+          <Trans>Ranking de {month || rankingList[0]}</Trans>
+        </h1>
       </div>
       <div className="message-body">
         <div className="content">
@@ -142,8 +136,12 @@ const NationalRanking = ({
                 <tr>
                   <th>#</th>
                   <th>±</th>
-                  <th>Nome</th>
-                  <th>Pontos</th>
+                  <th>
+                    <Trans>Nome</Trans>
+                  </th>
+                  <th>
+                    <Trans>Pontos</Trans>
+                  </th>
                   {quizzesOrder.map(
                     (quizType) =>
                       quizzes[quizType] &&
@@ -157,87 +155,25 @@ const NationalRanking = ({
                 </tr>
               </thead>
               <tbody>
-                {ranking.map((player) => (
-                  <tr key={player.individual_quiz_player_id}>
-                    <td>{player.rank}</td>
-                    <td>
-                      <RankChange change={player.change} />
-                    </td>
-                    <td>
-                      {players[player.individual_quiz_player_id].name}{' '}
-                      {players[player.individual_quiz_player_id].surname}
-                    </td>
-                    <td>
-                      <strong>{Math.round(player.score)}</strong>
-                    </td>
-                    {quizzesOrder.map(
-                      (quizType) =>
-                        quizzes[quizType] &&
-                        quizzes[quizType].map((date) => (
-                          <td
-                            key={`${player.individual_quiz_player_id}-${quizType}-${date}`}
-                          >
-                            {player.quizzes?.[date]?.[quizType] ? (
-                              <>
-                                {player.quizzes?.[date]?.[quizType].result}
-                                <sup>
-                                  {Math.round(
-                                    player.quizzes?.[date]?.[quizType].score
-                                  )}
-                                </sup>
-                              </>
-                            ) : (
-                              '-'
-                            )}
-                          </td>
-                        ))
-                    )}
-                  </tr>
-                ))}
+                {ranking.map((player) => {
+                  player.data = players[player.individual_quiz_player_id];
+                  return (
+                    <Player
+                      key={player.individual_quiz_player_id}
+                      player={player}
+                      quizzes={quizzes}
+                    />
+                  );
+                })}
               </tbody>
             </table>
           </div>
-          <h2 className="has-text-weight-bold is-size-5">Legenda</h2>
-          <dl className="legend">
-            <div>
-              <dt className="has-text-weight-bold">WQC</dt>
-              <dd>Resultado no Campeonato Mundial</dd>
-            </div>
-            <div>
-              <dt className="has-text-weight-bold">EQC</dt>
-              <dd>Resultado no Campeonato Europeu</dd>
-            </div>
-            <div>
-              <dt className="has-text-weight-bold">CNQ</dt>
-              <dd>Resultado no Campeonato Nacional</dd>
-            </div>
-            <div>
-              <dt className="has-text-weight-bold">INQxx</dt>
-              <dd>Resultado da Inquizição do mês xx</dd>
-            </div>
-            <div>
-              <dt className="has-text-weight-bold">HOTxx</dt>
-              <dd>Resultado do Hot100 do mês xx</dd>
-            </div>
-            <div>
-              <dt className="has-text-weight-bold">SQxx</dt>
-              <dd>Resultado do Squizzed do mês xx</dd>
-            </div>
-          </dl>
-          <p>
-            Para mais pormenores de como o ranking é calculado deve ser
-            consultado este artigo:{' '}
-            <a
-              href="https://quizportugal.pt/blog/ranking-nacional-de-quiz"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Ranking Nacional de Quiz
-            </a>
-          </p>
+          <Legend />
           {rankingList.length && (
             <>
-              <h2 className="has-text-weight-bold is-size-5">Arquivo</h2>
+              <h2 className="has-text-weight-bold is-size-5">
+                <Trans>Arquivo</Trans>
+              </h2>
               <ol className="links-list">
                 {rankingList.map((month) => (
                   <li key={month}>
