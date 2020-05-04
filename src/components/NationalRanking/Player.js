@@ -9,14 +9,18 @@ import classes from './NationalRanking.module.scss';
 
 const Player = ({ player, quizzes }) => (
   <tr>
-    <td>{player.rank}</td>
-    <td>
+    <td className={`${classes.rankCell} has-background-white`}>
+      {player.rank}
+    </td>
+    <td className={`${classes.changeCell} has-background-white`}>
       <RankChange change={player.change} />
     </td>
-    <td>
-      <div className={classes.user}>
+    <td className={`${classes.userCell} has-background-white`}>
+      <div className={classes.userCellContent}>
         <Avatar player={player.data} />
-        {player.data.name} {player.data.surname}
+        <div className={classes.userName}>
+          {player.data.name} {player.data.surname}
+        </div>
       </div>
     </td>
     <td>

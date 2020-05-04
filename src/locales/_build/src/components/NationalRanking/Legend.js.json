@@ -1,0 +1,74 @@
+{
+  "Legenda": {
+    "origin": [
+      [
+        "src/components/NationalRanking/Legend.js",
+        7
+      ]
+    ]
+  },
+  "Resultado no Campeonato Mundial": {
+    "origin": [
+      [
+        "src/components/NationalRanking/Legend.js",
+        13
+      ]
+    ]
+  },
+  "Resultado no Campeonato Europeu": {
+    "origin": [
+      [
+        "src/components/NationalRanking/Legend.js",
+        19
+      ]
+    ]
+  },
+  "Resultado no Campeonato Nacional": {
+    "origin": [
+      [
+        "src/components/NationalRanking/Legend.js",
+        25
+      ]
+    ]
+  },
+  "Resultado da Inquizição do mês xx": {
+    "origin": [
+      [
+        "src/components/NationalRanking/Legend.js",
+        31
+      ]
+    ]
+  },
+  "Resultado do Hot100 do mês xx": {
+    "origin": [
+      [
+        "src/components/NationalRanking/Legend.js",
+        37
+      ]
+    ]
+  },
+  "Resultado do Squizzed do mês xx": {
+    "origin": [
+      [
+        "src/components/NationalRanking/Legend.js",
+        43
+      ]
+    ]
+  },
+  "Para mais pormenores de como o ranking é calculado deve ser consultado este artigo:": {
+    "origin": [
+      [
+        "src/components/NationalRanking/Legend.js",
+        48
+      ]
+    ]
+  },
+  "Ranking Nacional de Quiz": {
+    "origin": [
+      [
+        "src/components/NationalRanking/Legend.js",
+        57
+      ]
+    ]
+  }
+}

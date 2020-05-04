@@ -2,7 +2,7 @@
   "Subiu {change} posições": {
     "origin": [
       [
-        "src/components/NationalRanking/RankChange.js",
+        "src/components/NationalRanking/Player/RankChange.js",
         13
       ]
     ]
@@ -10,7 +10,7 @@
   "Desceu {0} posições": {
     "origin": [
       [
-        "src/components/NationalRanking/RankChange.js",
+        "src/components/NationalRanking/Player/RankChange.js",
         23
       ]
     ]

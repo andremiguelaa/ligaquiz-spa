@@ -47,6 +47,10 @@ msgstr "Delete month events"
 msgid "Apelido"
 msgstr "Surname"
 
+#: src/components/NationalRanking.js:197
+msgid "Arquivo"
+msgstr "Archive"
+
 #: src/components/ControlPanel/Ranking/Form/options.js:12
 msgid "Campeonato Europeu de Quiz"
 msgstr "European Quizzing Championship"
@@ -73,7 +77,7 @@ msgstr "Password confirmation"
 msgid "Credenciais erradas."
 msgstr "Wrong credentials."
 
-#: src/components/NationalRanking/RankChange.js:23
+#: src/components/NationalRanking/Player/RankChange.js:23
 msgid "Desceu {0} posições"
 msgstr "Move down {0} positions"
 
@@ -98,7 +102,7 @@ msgstr "We sent you an e-mail, follow its instructions to set a new password"
 #: src/components/ControlPanel/Profile/Avatar.js:103
 #: src/components/ControlPanel/Ranking.js:95
 #: src/components/Login.js:105
-#: src/components/NationalRanking.js:119
+#: src/components/NationalRanking.js:118
 #: src/components/RecoverPassword.js:88
 #: src/components/Register.js:185
 #: src/components/ResetPassword.js:125
@@ -151,6 +155,10 @@ msgstr "Inquizição"
 msgid "Já existe uma conta com este e-mail."
 msgstr "There is another account using this e-mail."
 
+#: src/components/NationalRanking/Legend.js:7
+msgid "Legenda"
+msgstr "Legend"
+
 #: src/App.js:38
 #: src/components/Home.js:8
 #: src/routes.js:16
@@ -168,6 +176,7 @@ msgid "Mês"
 msgstr "Month"
 
 #: src/components/ControlPanel/Profile.js:66
+#: src/components/NationalRanking.js:160
 #: src/components/Register.js:60
 msgid "Nome"
 msgstr "Name"
@@ -230,6 +239,10 @@ msgstr "Password"
 msgid "Palavra-passe alterada com sucesso.<0/>Clica em \"Entrar\" e usa as novas credenciais."
 msgstr "Password changed successfully.<0/>Click on \"Login\" and use the new credentials."
 
+#: src/components/NationalRanking/Legend.js:48
+msgid "Para mais pormenores de como o ranking é calculado deve ser consultado este artigo:"
+msgstr "More details about ranking calculation can be found in this article (only in portuguese):"
+
 #: src/components/ControlPanel.js:14
 msgid "Perfil"
 msgstr "Profile"
@@ -237,6 +250,10 @@ msgstr "Profile"
 #: src/components/ControlPanel/Profile.js:42
 msgid "Perfil actualizado com sucesso."
 msgstr "Profile successfully updated."
+
+#: src/components/NationalRanking.js:163
+msgid "Pontos"
+msgstr "Points"
 
 #: src/components/ControlPanel/Ranking.js:81
 msgid "Provas mensais apagadas com sucesso."
@@ -255,6 +272,14 @@ msgstr "Ranking"
 #: src/routes.js:51
 msgid "Ranking Nacional"
 msgstr "National Ranking"
+
+#: src/components/NationalRanking/Legend.js:57
+msgid "Ranking Nacional de Quiz"
+msgstr "Quiz National Ranking"
+
+#: src/components/NationalRanking.js:137
+msgid "Ranking de {0} de {1}"
+msgstr "{0} {1} ranking"
 
 #: src/components/Login.js:122
 #: src/components/RecoverPassword.js:51
@@ -285,7 +310,31 @@ msgstr "Delete player"
 #: src/components/ControlPanel/Ranking/Form/Event.js:119
 #: src/components/ControlPanel/Ranking/Form/Event.js:142
 msgid "Remover prova"
-msgstr "Delte event"
+msgstr "Delete event"
+
+#: src/components/NationalRanking/Legend.js:31
+msgid "Resultado da Inquizição do mês xx"
+msgstr "Inquizição result from month xx"
+
+#: src/components/NationalRanking/Legend.js:37
+msgid "Resultado do Hot100 do mês xx"
+msgstr "Hot100 result from month xx"
+
+#: src/components/NationalRanking/Legend.js:43
+msgid "Resultado do Squizzed do mês xx"
+msgstr "Squizzed result from month xx"
+
+#: src/components/NationalRanking/Legend.js:19
+msgid "Resultado no Campeonato Europeu"
+msgstr "European Quizzing Championship result"
+
+#: src/components/NationalRanking/Legend.js:13
+msgid "Resultado no Campeonato Mundial"
+msgstr "World Quizzing Championship result"
+
+#: src/components/NationalRanking/Legend.js:25
+msgid "Resultado no Campeonato Nacional"
+msgstr "National Championship result"
 
 #: src/partials/Header.js:121
 #: src/routes.js:41
@@ -304,7 +353,7 @@ msgstr "No records"
 msgid "Squizzed"
 msgstr "Squizzed"
 
-#: src/components/NationalRanking/RankChange.js:13
+#: src/components/NationalRanking/Player/RankChange.js:13
 msgid "Subiu {change} posições"
 msgstr "Move up {change} positions"
 

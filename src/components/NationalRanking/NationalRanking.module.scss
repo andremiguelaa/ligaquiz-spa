@@ -1,18 +1,54 @@
-.user {
-  padding-left: calc(0.75em + 35px);
-  white-space: nowrap;
-  text-align: left;
-  padding-right: 25px;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.tableWrapper {
+  position: relative;
 }
 
-.avatar {
+.tableContainer {
+  padding-left: 340px;
+  :global(table) {
+    border-collapse: separate;
+  }
+  :global(th),
+  :global(td) {
+    height: 40px;
+  }
+}
+
+.rankCell {
   position: absolute;
-  margin-top: -4px;
-  margin-left: -35px;
+  left: 0;
+  width: 40px;
+}
+
+.changeCell {
+  position: absolute;
+  left: 40px;
+  width: 40px;
+}
+
+.userCell {
+  position: absolute;
+  left: 80px;
+  width: 260px;
+}
+
+.userCellContent {
+  padding-left: 32px;
+  position: relative;
+}
+
+.userAvatar {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
   width: 28px;
   height: 28px;
   text-align: center;
   font-size: 28px;
+}
+
+.userName {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

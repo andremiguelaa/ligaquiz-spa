@@ -3,7 +3,39 @@
     "origin": [
       [
         "src/components/NationalRanking.js",
-        119
+        118
+      ]
+    ]
+  },
+  "Ranking de {0} de {1}": {
+    "origin": [
+      [
+        "src/components/NationalRanking.js",
+        137
+      ]
+    ]
+  },
+  "Nome": {
+    "origin": [
+      [
+        "src/components/NationalRanking.js",
+        160
+      ]
+    ]
+  },
+  "Pontos": {
+    "origin": [
+      [
+        "src/components/NationalRanking.js",
+        163
+      ]
+    ]
+  },
+  "Arquivo": {
+    "origin": [
+      [
+        "src/components/NationalRanking.js",
+        197
       ]
     ]
   }

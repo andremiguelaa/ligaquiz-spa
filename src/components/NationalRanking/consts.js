@@ -8,10 +8,28 @@ export const quizzesOrder = [
 ];
 
 export const quizTypeAbbr = {
-  wqc: 'WQC',
-  eqc: 'EQC',
-  cnq: 'CNQ',
-  hot_100: 'HOT',
-  squizzed: 'SQ',
-  inquizicao: 'INQ',
+  wqc: {
+    abbr: 'WQC',
+    includeMonth: false,
+  },
+  eqc: {
+    abbr: 'EQC',
+    includeMonth: false,
+  },
+  cnq: {
+    abbr: 'CNQ',
+    includeMonth: false,
+  },
+  hot_100: {
+    abbr: 'HOT',
+    includeMonth: true,
+  },
+  squizzed: {
+    abbr: 'SQ',
+    includeMonth: true,
+  },
+  inquizicao: {
+    abbr: 'INQ',
+    includeMonth: true,
+  },
 };

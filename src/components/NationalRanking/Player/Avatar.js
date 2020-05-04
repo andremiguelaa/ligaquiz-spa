@@ -5,12 +5,12 @@ const Avatar = ({ player }) => (
   <>
     {player.info && player.info.avatar ? (
       <img
-        className={classes.avatar}
+        className={classes.userAvatar}
         alt={`${player.name} ${player.surname}`}
         src={player.info.avatar}
       />
     ) : (
-      <i className={`${classes.avatar} fa fa-user`} />
+      <i className={`${classes.userAvatar} fa fa-user`} />
     )}
   </>
 );

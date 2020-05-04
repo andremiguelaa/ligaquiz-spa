@@ -7,6 +7,10 @@ $body-size: 14px;
 @import 'bulma';
 @import 'styles/Toasts.scss';
 
+.column {
+  max-width: 100%;
+}
+
 .navbar-link {
   border: none;
   background-color: transparent;

@@ -6,17 +6,24 @@ import Loading from 'utils/Loading';
 import Error from 'utils/Error';
 import NoMatch from './NoMatch';
 import ApiRequest from 'utils/ApiRequest';
+import getLocaleMonth from 'utils/getLocaleMonth';
+import { useStateValue } from 'state/State';
 
 import Player from './NationalRanking/Player';
 import Legend from './NationalRanking/Legend';
-
 import { quizzesOrder, quizTypeAbbr } from './NationalRanking/consts.js';
+import classes from './NationalRanking/NationalRanking.module.scss';
 
 const NationalRanking = ({
   match: {
     params: { month },
   },
 }) => {
+  const [
+    {
+      settings: { language },
+    },
+  ] = useStateValue();
   const [error, setError] = useState(false);
   const [players, setPlayers] = useState();
   const [rankingList, setRankingList] = useState();
@@ -121,52 +128,67 @@ const NationalRanking = ({
     return <NoMatch />;
   }
 
+  const shownMonth = month || rankingList[0];
+
   return (
     <article className="message">
       <div className="message-header">
         <h1>
-          <Trans>Ranking de {month || rankingList[0]}</Trans>
+          <Trans>
+            Ranking de{' '}
+            {getLocaleMonth(language, parseInt(shownMonth.substring(5, 7)))} de{' '}
+            {shownMonth.substring(0, 4)}
+          </Trans>
         </h1>
       </div>
       <div className="message-body">
         <div className="content">
-          <div className="table-container">
-            <table className="table is-fullwidth">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>±</th>
-                  <th>
-                    <Trans>Nome</Trans>
-                  </th>
-                  <th>
-                    <Trans>Pontos</Trans>
-                  </th>
-                  {quizzesOrder.map(
-                    (quizType) =>
-                      quizzes[quizType] &&
-                      quizzes[quizType].map((date) => (
-                        <th key={`${quizType}-${date}`}>
-                          {quizTypeAbbr[quizType]}
-                          {parseInt(date.substring(5, 7))}
-                        </th>
-                      ))
-                  )}
-                </tr>
-              </thead>
-              <tbody>
-                {ranking.map((player) => {
-                  player.data = players[player.individual_quiz_player_id];
-                  return (
-                    <Player
-                      key={player.individual_quiz_player_id}
-                      player={player}
-                      quizzes={quizzes}
-                    />
-                  );
-                })}
-              </tbody>
-            </table>
+          <div className={`${classes.tableWrapper}`}>
+            <div className={`table-container ${classes.tableContainer}`}>
+              <table className="table">
+                <thead>
+                  <tr>
+                    <th className={`${classes.rankCell} has-background-white`}>
+                      #
+                    </th>
+                    <th
+                      className={`${classes.changeCell} has-background-white`}
+                    >
+                      ±
+                    </th>
+                    <th className={`${classes.userCell} has-background-white`}>
+                      <Trans>Nome</Trans>
+                    </th>
+                    <th>
+                      <Trans>Pontos</Trans>
+                    </th>
+                    {quizzesOrder.map(
+                      (quizType) =>
+                        quizzes[quizType] &&
+                        quizzes[quizType].map((date) => (
+                          <th key={`${quizType}-${date}`}>
+                            {quizTypeAbbr[quizType].abbr}
+                            {quizTypeAbbr[quizType].includeMonth &&
+                              parseInt(date.substring(5, 7))}
+                          </th>
+                        ))
+                    )}
+                  </tr>
+                </thead>
+                <tbody>
+                  {ranking.map((player) => {
+                    player.data = players[player.individual_quiz_player_id];
+                    return (
+                      <Player
+                        key={player.individual_quiz_player_id}
+                        player={player}
+                        quizzes={quizzes}
+                      />
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
           </div>
           <Legend />
           {rankingList.length && (
@@ -177,7 +199,13 @@ const NationalRanking = ({
               <ol className="links-list">
                 {rankingList.map((month) => (
                   <li key={month}>
-                    <Link to={`/national-ranking/${month}`}>{month}</Link>
+                    <Link to={`/national-ranking/${month}`}>
+                      {getLocaleMonth(
+                        language,
+                        parseInt(month.substring(5, 7))
+                      )}{' '}
+                      de {month.substring(0, 4)}
+                    </Link>
                   </li>
                 ))}
               </ol>
