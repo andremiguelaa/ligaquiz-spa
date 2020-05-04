@@ -9,7 +9,7 @@
   }
   :global(th),
   :global(td) {
-    height: 40px;
+    height: 37px;
   }
 }
 
@@ -41,8 +41,15 @@
   left: 0;
   top: 50%;
   transform: translateY(-50%);
+}
+
+img.userAvatar {
   width: 28px;
   height: 28px;
+  font-size: 0;
+}
+
+i.userAvatar{
   text-align: center;
   font-size: 28px;
 }
