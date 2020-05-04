@@ -161,6 +161,8 @@ const Event = ({
           body={
             <>
               <Trans>Selecciona os jogadores que jogaram esta prova:</Trans>
+              <br />
+              <br />
               {getNonSelectedPlayers().map((player) => {
                 const playerInfo = individualQuizPlayers.find(
                   (individualQuizPlayer) => individualQuizPlayer.id === player

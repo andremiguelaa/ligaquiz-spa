@@ -1,6 +1,8 @@
 import React from 'react';
 import { Trans } from '@lingui/macro';
 
+import classes from './Modal.module.scss';
+
 export const Modal = ({
   type,
   title,
@@ -22,7 +24,7 @@ export const Modal = ({
             onClick={onClose}
           ></button>
         </div>{' '}
-        <div className="message-body">{body}</div>
+        <div className={`message-body ${classes.modalBody}`}>{body}</div>
         <div className="message-actions">
           <button
             type="button"
