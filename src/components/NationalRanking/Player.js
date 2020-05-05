@@ -12,7 +12,9 @@ const Player = ({ player, quizzes }) => (
     <td className={`${classes.rankCell} has-background-white`}>
       {player.rank}
     </td>
-    <td className={`${classes.changeCell} has-background-white`}>
+    <td
+      className={`${classes.changeCell} has-background-white has-text-centered`}
+    >
       <RankChange change={player.change} />
     </td>
     <td className={`${classes.userCell} has-background-white`}>
@@ -25,6 +27,9 @@ const Player = ({ player, quizzes }) => (
     </td>
     <td>
       <strong>{Math.round(player.score)}</strong>
+    </td>
+    <td>
+      <strong>{Math.round(player.sum)}</strong>
     </td>
     {quizzesOrder.map(
       (quizType) =>

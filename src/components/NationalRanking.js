@@ -152,7 +152,7 @@ const NationalRanking = ({
                       #
                     </th>
                     <th
-                      className={`${classes.changeCell} has-background-white`}
+                      className={`${classes.changeCell} has-background-white has-text-centered`}
                     >
                       ±
                     </th>
@@ -161,6 +161,9 @@ const NationalRanking = ({
                     </th>
                     <th>
                       <Trans>Pontos</Trans>
+                    </th>
+                    <th>
+                      <Trans>Soma</Trans>
                     </th>
                     {quizzesOrder.map(
                       (quizType) =>
