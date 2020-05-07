@@ -12,6 +12,7 @@ import { useStateValue } from 'state/State';
 import Player from './NationalRanking/Player';
 import Legend from './NationalRanking/Legend';
 import { quizzesOrder, quizTypeAbbr } from './NationalRanking/consts.js';
+
 import classes from './NationalRanking/NationalRanking.module.scss';
 
 const NationalRanking = ({

@@ -61,41 +61,53 @@ i.userAvatar {
 }
 
 .top1 {
-  background-color: #d07bfa;
+  background-color: #00ff00;
 }
 
 .top2 {
-  background-color: #fd2524;
+  background-color: #33ff00;
 }
 
 .top3 {
-  background-color: #fe9684;
+  background-color: #66ff00;
 }
 
 .top4 {
-  background-color: #fdd08f;
+  background-color: #99ff00;
 }
 
 .top5 {
-  background-color: #fefa9e;
+  background-color: #ccff00;
 }
 
 .top6 {
-  background-color: #b0e18f;
+  background-color: #ffff00;
 }
 
 .top7 {
-  background-color: #99eee8;
+  background-color: #ffbf00;
 }
 
 .top8 {
-  background-color: #8acbfc;
+  background-color: #ff8000;
 }
 
 .top9 {
-  background-color: #4192bf;
+  background-color: #ff4000;
 }
 
 .top10 {
-  background-color: #b7b7b7;
+  background-color: #ff0000;
+}
+
+.scale {
+  list-style: none !important;
+  margin-left: 0 !important;
+  .square {
+    width: 4rem;
+    height: 25px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 1rem;
+  }
 }
