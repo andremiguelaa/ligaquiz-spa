@@ -34,7 +34,7 @@ const List = ({ monthList, setPage, editMonth, setMonthToDelete }) => {
               return (
                 <tr key={entry}>
                   <td className="is-vertical-middle">
-                    <Link to="/">{entry}</Link>
+                    <Link to={`/national-ranking/${entry}`}>{entry}</Link>
                   </td>
                   <td>
                     <div className="buttons has-addons is-pulled-right">
