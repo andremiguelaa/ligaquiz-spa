@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/components/NationalRanking.js",
-        118
+        119
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/components/NationalRanking.js",
-        137
+        138
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/components/NationalRanking.js",
-        160
+        161
       ]
     ]
   },
@@ -27,7 +27,15 @@
     "origin": [
       [
         "src/components/NationalRanking.js",
-        163
+        164
+      ]
+    ]
+  },
+  "Soma": {
+    "origin": [
+      [
+        "src/components/NationalRanking.js",
+        167
       ]
     ]
   },
@@ -35,7 +43,7 @@
     "origin": [
       [
         "src/components/NationalRanking.js",
-        197
+        201
       ]
     ]
   }

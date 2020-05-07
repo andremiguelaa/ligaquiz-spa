@@ -47,7 +47,7 @@ msgstr "Apagar provas mensais"
 msgid "Apelido"
 msgstr "Apelido"
 
-#: src/components/NationalRanking.js:197
+#: src/components/NationalRanking.js:201
 msgid "Arquivo"
 msgstr "Arquivo"
 
@@ -63,7 +63,7 @@ msgstr "Campeonato Mundial de Quiz"
 msgid "Campeonato Nacional de Quiz"
 msgstr "Campeonato Nacional de Quiz"
 
-#: src/utils/Modal.js:42
+#: src/utils/Modal.js:44
 msgid "Cancelar"
 msgstr "Cancelar"
 
@@ -102,12 +102,16 @@ msgstr "Enviámos-te um e-mail, segue as instruções para definir uma nova pala
 #: src/components/ControlPanel/Profile/Avatar.js:103
 #: src/components/ControlPanel/Ranking.js:95
 #: src/components/Login.js:105
-#: src/components/NationalRanking.js:118
+#: src/components/NationalRanking.js:119
 #: src/components/RecoverPassword.js:88
 #: src/components/Register.js:185
 #: src/components/ResetPassword.js:125
 msgid "Erro de servidor. Tenta mais tarde."
 msgstr "Erro de servidor. Tenta mais tarde."
+
+#: src/components/NationalRanking/Legend.js:51
+msgid "Escala"
+msgstr "Escala"
 
 #: src/components/ControlPanel/Profile/Avatar.js:83
 msgid "Escolhe uma imagem"
@@ -155,7 +159,7 @@ msgstr "Inquizição"
 msgid "Já existe uma conta com este e-mail."
 msgstr "Já existe uma conta com este e-mail."
 
-#: src/components/NationalRanking/Legend.js:7
+#: src/components/NationalRanking/Legend.js:10
 msgid "Legenda"
 msgstr "Legenda"
 
@@ -176,7 +180,7 @@ msgid "Mês"
 msgstr "Mês"
 
 #: src/components/ControlPanel/Profile.js:66
-#: src/components/NationalRanking.js:160
+#: src/components/NationalRanking.js:161
 #: src/components/Register.js:60
 msgid "Nome"
 msgstr "Nome"
@@ -218,7 +222,7 @@ msgstr "O pedido de redefinição de palavra-passe expirou"
 msgid "O pedido de redefinição de palavra-passe é inválido"
 msgstr "O pedido de redefinição de palavra-passe é inválido"
 
-#: src/utils/Modal.js:34
+#: src/utils/Modal.js:36
 msgid "OK"
 msgstr "OK"
 
@@ -239,7 +243,7 @@ msgstr "Palavra-passe"
 msgid "Palavra-passe alterada com sucesso.<0/>Clica em \"Entrar\" e usa as novas credenciais."
 msgstr "Palavra-passe alterada com sucesso.<0/>Clica em \"Entrar\" e usa as novas credenciais."
 
-#: src/components/NationalRanking/Legend.js:48
+#: src/components/NationalRanking/Legend.js:67
 msgid "Para mais pormenores de como o ranking é calculado deve ser consultado este artigo:"
 msgstr "Para mais pormenores de como o ranking é calculado deve ser consultado este artigo:"
 
@@ -251,7 +255,7 @@ msgstr "Perfil"
 msgid "Perfil actualizado com sucesso."
 msgstr "Perfil actualizado com sucesso."
 
-#: src/components/NationalRanking.js:163
+#: src/components/NationalRanking.js:164
 msgid "Pontos"
 msgstr "Pontos"
 
@@ -273,11 +277,11 @@ msgstr "Ranking"
 msgid "Ranking Nacional"
 msgstr "Ranking Nacional"
 
-#: src/components/NationalRanking/Legend.js:57
+#: src/components/NationalRanking/Legend.js:76
 msgid "Ranking Nacional de Quiz"
 msgstr "Ranking Nacional de Quiz"
 
-#: src/components/NationalRanking.js:137
+#: src/components/NationalRanking.js:138
 msgid "Ranking de {0} de {1}"
 msgstr "Ranking de {0} de {1}"
 
@@ -312,27 +316,27 @@ msgstr "Remover jogador"
 msgid "Remover prova"
 msgstr "Remover prova"
 
-#: src/components/NationalRanking/Legend.js:31
+#: src/components/NationalRanking/Legend.js:34
 msgid "Resultado da Inquizição do mês xx"
 msgstr "Resultado da Inquizição do mês xx"
 
-#: src/components/NationalRanking/Legend.js:37
+#: src/components/NationalRanking/Legend.js:40
 msgid "Resultado do Hot100 do mês xx"
 msgstr "Resultado do Hot100 do mês xx"
 
-#: src/components/NationalRanking/Legend.js:43
+#: src/components/NationalRanking/Legend.js:46
 msgid "Resultado do Squizzed do mês xx"
 msgstr "Resultado do Squizzed do mês xx"
 
-#: src/components/NationalRanking/Legend.js:19
+#: src/components/NationalRanking/Legend.js:22
 msgid "Resultado no Campeonato Europeu"
 msgstr "Resultado no Campeonato Europeu"
 
-#: src/components/NationalRanking/Legend.js:13
+#: src/components/NationalRanking/Legend.js:16
 msgid "Resultado no Campeonato Mundial"
 msgstr "Resultado no Campeonato Mundial"
 
-#: src/components/NationalRanking/Legend.js:25
+#: src/components/NationalRanking/Legend.js:28
 msgid "Resultado no Campeonato Nacional"
 msgstr "Resultado no Campeonato Nacional"
 
@@ -348,6 +352,10 @@ msgstr "Selecciona os jogadores que jogaram esta prova:"
 #: src/components/ControlPanel/Ranking/List.js:66
 msgid "Sem registos"
 msgstr "Sem registos"
+
+#: src/components/NationalRanking.js:167
+msgid "Soma"
+msgstr "Soma"
 
 #: src/components/ControlPanel/Ranking/Form/options.js:22
 msgid "Squizzed"
