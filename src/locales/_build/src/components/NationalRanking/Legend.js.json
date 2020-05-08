@@ -63,11 +63,43 @@
       ]
     ]
   },
+  "<0>{0}</0> resultado a contar para o ranking": {
+    "origin": [
+      [
+        "src/components/NationalRanking/Legend.js",
+        61
+      ]
+    ]
+  },
+  "{0, selectordinal, two {2º} few {3º} other {#º}}": {
+    "origin": [
+      [
+        "src/components/NationalRanking/Legend.js",
+        65
+      ]
+    ]
+  },
+  "melhor": {
+    "origin": [
+      [
+        "src/components/NationalRanking/Legend.js",
+        71
+      ]
+    ]
+  },
+  "Melhor": {
+    "origin": [
+      [
+        "src/components/NationalRanking/Legend.js",
+        74
+      ]
+    ]
+  },
   "Para mais pormenores de como o ranking é calculado deve ser consultado este artigo:": {
     "origin": [
       [
         "src/components/NationalRanking/Legend.js",
-        67
+        83
       ]
     ]
   },
@@ -75,7 +107,7 @@
     "origin": [
       [
         "src/components/NationalRanking/Legend.js",
-        76
+        92
       ]
     ]
   }

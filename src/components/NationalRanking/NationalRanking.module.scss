@@ -1,3 +1,5 @@
+@import 'bulma/sass/utilities/mixins.sass';
+
 .tableWrapper {
   position: relative;
 }
@@ -100,14 +102,40 @@ i.userAvatar {
   background-color: #ff0000;
 }
 
+.legend {
+  dt{
+    display: inline-block;
+    width: 5rem;
+    &::after {
+      content: ':';
+    }
+  }
+  dd {
+    display: inline-block;
+    margin-left: 0;
+    @include mobile {
+      display: block;
+    }
+  }
+}
+
 .scale {
   list-style: none !important;
   margin-left: 0 !important;
+  li {
+    position: relative;
+    min-height: 2rem;
+    padding-left: 3rem;
+  }
   .square {
-    width: 4rem;
-    height: 25px;
+    width: 2rem;
+    height: 2rem;
     display: inline-block;
     vertical-align: middle;
     margin-right: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
   }
 }

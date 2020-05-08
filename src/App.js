@@ -16,10 +16,14 @@ import Header from 'partials/Header';
 export const catalogs = { pt: catalogPt, en: catalogEn };
 
 const App = () => {
-  const [{ settings }] = useStateValue();
+  const [
+    {
+      settings: { language },
+    },
+  ] = useStateValue();
   return (
     <Auth>
-      <I18nProvider language={settings.language} catalogs={catalogs}>
+      <I18nProvider language={language} catalogs={catalogs}>
         <BrowserRouter>
           <Header />
           <main className="container">
@@ -29,21 +33,21 @@ const App = () => {
                   <I18n>
                     {({ i18n }) => (
                       <Switch>
-                        {routes.map(route => {
+                        {routes.map((route) => {
                           const title =
                             route.path === '/'
-                              ? catalogs[settings.language].messages[
+                              ? catalogs[language].messages[
                                   route.title.props.id
                                 ]
                               : `${i18n._(t`Liga Quiz`)} | ${
-                                  catalogs[settings.language].messages[
+                                  catalogs[language].messages[
                                     route.title.props.id
                                   ]
                                 }`;
                           const newProps = {
                             ...route,
                             title,
-                            exact: !!route.path
+                            exact: !!route.path,
                           };
                           return <RouteWithTitle key={title} {...newProps} />;
                         })}

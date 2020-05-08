@@ -17,6 +17,10 @@ msgstr ""
 msgid "<0>A Liga Quiz é um jogo de cultura geral onde a confiança na honestidade dos jogadores é crucial.</0><1><2>É expressamente proibido usar qualquer fonte externa para obter respostas às perguntas</2>. Isto inclui:</1><3><4>Pedir pistas/respostas a outras pessoas</4><5>Usar a Internet, livros ou outro material de consulta para pesquisa de pistas/respostas</5><6>Usar calculadoras, instrumentos musicais ou outros equipamentos para ajudar à resposta</6></3><7>Apenas papel e caneta/lápis são permitidos.</7><8><9>Pede-se também a todos os jogadores que joguem todos os dias</9>. As faltas adulteram a veracidade da classificação final e podem levar à descida de divisão ao incumpridor.</8>"
 msgstr "<0>A Liga Quiz é um jogo de cultura geral onde a confiança na honestidade dos jogadores é crucial.</0><1><2>É expressamente proibido usar qualquer fonte externa para obter respostas às perguntas</2>. Isto inclui:</1><3><4>Pedir pistas/respostas a outras pessoas</4><5>Usar a Internet, livros ou outro material de consulta para pesquisa de pistas/respostas</5><6>Usar calculadoras, instrumentos musicais ou outros equipamentos para ajudar à resposta</6></3><7>Apenas papel e caneta/lápis são permitidos.</7><8><9>Pede-se também a todos os jogadores que joguem todos os dias</9>. As faltas adulteram a veracidade da classificação final e podem levar à descida de divisão ao incumpridor.</8>"
 
+#: src/components/NationalRanking/Legend.js:61
+msgid "<0>{0}</0> resultado a contar para o ranking"
+msgstr "<0>{0}</0> resultado a contar para o ranking"
+
 #: src/utils/Auth.js:35
 msgid "A tua sessão expirou."
 msgstr "A tua sessão expirou."
@@ -169,6 +173,10 @@ msgstr "Legenda"
 msgid "Liga Quiz"
 msgstr "Liga Quiz"
 
+#: src/components/NationalRanking/Legend.js:74
+msgid "Melhor"
+msgstr "Melhor"
+
 #: src/components/ControlPanel/Profile/Avatar.js:90
 msgid "Máximo 200 KB"
 msgstr "Máximo 200 KB"
@@ -243,7 +251,7 @@ msgstr "Palavra-passe"
 msgid "Palavra-passe alterada com sucesso.<0/>Clica em \"Entrar\" e usa as novas credenciais."
 msgstr "Palavra-passe alterada com sucesso.<0/>Clica em \"Entrar\" e usa as novas credenciais."
 
-#: src/components/NationalRanking/Legend.js:67
+#: src/components/NationalRanking/Legend.js:83
 msgid "Para mais pormenores de como o ranking é calculado deve ser consultado este artigo:"
 msgstr "Para mais pormenores de como o ranking é calculado deve ser consultado este artigo:"
 
@@ -277,7 +285,7 @@ msgstr "Ranking"
 msgid "Ranking Nacional"
 msgstr "Ranking Nacional"
 
-#: src/components/NationalRanking/Legend.js:76
+#: src/components/NationalRanking/Legend.js:92
 msgid "Ranking Nacional de Quiz"
 msgstr "Ranking Nacional de Quiz"
 
@@ -402,3 +410,11 @@ msgstr "Voltar à listagem"
 #: src/components/ControlPanel/Profile.js:145
 msgid "deixa em branco para não alterar"
 msgstr "deixa em branco para não alterar"
+
+#: src/components/NationalRanking/Legend.js:71
+msgid "melhor"
+msgstr "melhor"
+
+#: src/components/NationalRanking/Legend.js:65
+msgid "{0, selectordinal, two {2º} few {3º} other {#º}}"
+msgstr "{0, selectordinal, two {2º} few {3ª} other {#º}}"

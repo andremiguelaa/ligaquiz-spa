@@ -1,5 +1,5 @@
 import React from 'react';
-import { Trans } from '@lingui/macro';
+import { Trans, SelectOrdinal } from '@lingui/macro';
 import classNames from 'classnames';
 
 import classes from '../NationalRanking/NationalRanking.module.scss';
@@ -9,7 +9,7 @@ const Legend = () => (
     <h2 className="has-text-weight-bold is-size-5">
       <Trans>Legenda</Trans>
     </h2>
-    <dl className="legend">
+    <dl className={classes.legend}>
       <div>
         <dt className="has-text-weight-bold">WQC</dt>
         <dd>
@@ -58,8 +58,24 @@ const Legend = () => (
             <div
               className={classNames(classes.square, classes[`top${index + 1}`])}
             ></div>
-            {index ? `${index + 1}º melhor` : 'Melhor'} resultado a contar para
-            o ranking
+            <Trans>
+              <strong>
+                {index ? (
+                  <>
+                    <SelectOrdinal
+                      value={index + 1}
+                      two="2º"
+                      few="3º"
+                      other="#º"
+                    />{' '}
+                    <Trans>melhor</Trans>
+                  </>
+                ) : (
+                  <Trans>Melhor</Trans>
+                )}
+              </strong>{' '}
+              resultado a contar para o ranking
+            </Trans>
           </li>
         ))}
     </ul>
