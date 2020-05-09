@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import classNames from 'classnames';
 
 import RankChange from './Player/RankChange';
@@ -14,37 +14,51 @@ const getAcronym = (string) =>
     .reduce((response, word) => (response += word.slice(0, 1)), '');
 
 const Player = ({ player, quizzes }) => {
-  let playerQuizzes = { ...player.quizzes };
-  let countingScores = [];
-  for (const quizType in playerQuizzes) {
-    const orderedEvents = Object.entries(playerQuizzes[quizType])
-      .sort(([aKey, aValue], [bKey, bValue]) =>
-        `${bValue.score / 100}${bKey}`.localeCompare(
-          `${aValue.score / 100}${aKey}`
-        )
-      )
-      .slice(0, 5);
-    playerQuizzes[quizType].worstRankingScore =
-      orderedEvents[orderedEvents.length - 1][1].score;
-    const quizTypeCountingScores = orderedEvents.map((event) => event[1].score);
-    countingScores = countingScores.concat(quizTypeCountingScores);
-  }
+  const [playerQuizzes, setPlayerQuizzes] = useState();
+  const [countingScores, setCountingScores] = useState();
 
-  let lastIterationScore;
-  let iterationRank = 1;
-  countingScores = countingScores
-    .sort((a, b) => b - a)
-    .slice(0, 10)
-    .reduce((acc, score, index) => {
-      if (score) {
-        if (score < lastIterationScore) {
-          iterationRank = index + 1;
-        }
-        acc[score] = iterationRank;
-        lastIterationScore = score;
-      }
-      return acc;
-    }, {});
+  useEffect(() => {
+    let newPlayerQuizzes = { ...player.quizzes };
+    let newCountingScores = [];
+    for (const quizType in newPlayerQuizzes) {
+      const orderedEvents = Object.entries(newPlayerQuizzes[quizType])
+        .sort(([aKey, aValue], [bKey, bValue]) =>
+          `${bValue.score / 100}${bKey}`.localeCompare(
+            `${aValue.score / 100}${aKey}`
+          )
+        )
+        .slice(0, 5);
+      newPlayerQuizzes[quizType].worstRankingScore =
+        orderedEvents[orderedEvents.length - 1][1].score;
+      const quizTypeCountingScores = orderedEvents.map(
+        (event) => event[1].score
+      );
+      newCountingScores = newCountingScores.concat(quizTypeCountingScores);
+    }
+
+    let lastIterationScore;
+    let iterationRank = 1;
+    setCountingScores(
+      newCountingScores
+        .sort((a, b) => b - a)
+        .slice(0, 10)
+        .reduce((acc, score, index) => {
+          if (score) {
+            if (score < lastIterationScore) {
+              iterationRank = index + 1;
+            }
+            acc[score] = iterationRank;
+            lastIterationScore = score;
+          }
+          return acc;
+        }, {})
+    );
+    setPlayerQuizzes(newPlayerQuizzes);
+  }, [player.quizzes]);
+
+  if (!playerQuizzes) {
+    return null;
+  }
 
   return (
     <tr>
@@ -75,6 +89,12 @@ const Player = ({ player, quizzes }) => {
       </td>
       <td>
         <strong>{Math.round(player.sum)}</strong>
+      </td>
+      <td>
+        <strong>{Math.round(player.average)}</strong>
+      </td>
+      <td>
+        <strong>{Math.round(player.quiz_count)}</strong>
       </td>
       {quizzesOrder.map(
         (quizType) =>

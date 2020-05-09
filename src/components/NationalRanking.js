@@ -231,6 +231,34 @@ const NationalRanking = ({
                         </span>
                       </button>
                     </th>
+                    <th className={classes.sortable}>
+                      <button onClick={() => sortRankingByPath('average')}>
+                        <Trans>Média</Trans>
+                        <span className="icon">
+                          <i
+                            className={classNames('fa', {
+                              'fa-sort': order.path !== 'average',
+                              [`fa-sort-numeric-${order.direction}`]:
+                                order.path === 'average',
+                            })}
+                          ></i>
+                        </span>
+                      </button>
+                    </th>
+                    <th className={classes.sortable}>
+                      <button onClick={() => sortRankingByPath('quiz_count')}>
+                        <Trans>Quizzes</Trans>
+                        <span className="icon">
+                          <i
+                            className={classNames('fa', {
+                              'fa-sort': order.path !== 'quiz_count',
+                              [`fa-sort-numeric-${order.direction}`]:
+                                order.path === 'quiz_count',
+                            })}
+                          ></i>
+                        </span>
+                      </button>
+                    </th>
                     {quizzesOrder.map(
                       (quizType) =>
                         quizzes[quizType] &&
@@ -267,9 +295,8 @@ const NationalRanking = ({
                     )}
                   </tr>
                 </thead>
-
                 <tbody>
-                  {ranking.map((player) => {
+                  {ranking.map((player, index) => {
                     player.data = players[player.individual_quiz_player_id];
                     return (
                       <Player
