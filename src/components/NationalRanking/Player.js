@@ -41,10 +41,6 @@ const Player = ({ player, quizzes }) => {
       return acc;
     }, {});
 
-  if (player.rank === 26) {
-    console.log(player, countingScores);
-  }
-
   return (
     <tr>
       <td className={`${classes.rankCell} has-background-white`}>
