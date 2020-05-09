@@ -58,24 +58,26 @@ const Legend = () => (
             <div
               className={classNames(classes.square, classes[`top${index + 1}`])}
             ></div>
-            <Trans>
-              <strong>
-                {index ? (
-                  <>
-                    <SelectOrdinal
-                      value={index + 1}
-                      two="2º"
-                      few="3º"
-                      other="#º"
-                    />{' '}
-                    <Trans>melhor</Trans>
-                  </>
-                ) : (
-                  <Trans>Melhor</Trans>
-                )}
-              </strong>{' '}
-              resultado a contar para o ranking
-            </Trans>
+            <span>
+              <Trans>
+                <strong>
+                  {index ? (
+                    <>
+                      <SelectOrdinal
+                        value={index + 1}
+                        two="2º"
+                        few="3º"
+                        other="#º"
+                      />{' '}
+                      <Trans>melhor</Trans>
+                    </>
+                  ) : (
+                    <Trans>Melhor</Trans>
+                  )}
+                </strong>{' '}
+                resultado a contar para o ranking
+              </Trans>
+            </span>
           </li>
         ))}
     </ul>

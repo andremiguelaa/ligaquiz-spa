@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/components/NationalRanking.js",
-        119
+        146
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/components/NationalRanking.js",
-        138
+        165
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/components/NationalRanking.js",
-        161
+        204
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/components/NationalRanking.js",
-        164
+        208
       ]
     ]
   },
@@ -35,7 +35,23 @@
     "origin": [
       [
         "src/components/NationalRanking.js",
-        167
+        222
+      ]
+    ]
+  },
+  "Média": {
+    "origin": [
+      [
+        "src/components/NationalRanking.js",
+        236
+      ]
+    ]
+  },
+  "Quizzes": {
+    "origin": [
+      [
+        "src/components/NationalRanking.js",
+        250
       ]
     ]
   },
@@ -43,7 +59,7 @@
     "origin": [
       [
         "src/components/NationalRanking.js",
-        201
+        317
       ]
     ]
   }

@@ -14,8 +14,8 @@ msgstr ""
 "Plural-Forms: \n"
 
 #: src/components/Home.js:13
-msgid "<0>A Liga Quiz é um jogo de cultura geral onde a confiança na honestidade dos jogadores é crucial.</0><1><2>É expressamente proibido usar qualquer fonte externa para obter respostas às perguntas</2>. Isto inclui:</1><3><4>Pedir pistas/respostas a outras pessoas</4><5>Usar a Internet, livros ou outro material de consulta para pesquisa de pistas/respostas</5><6>Usar calculadoras, instrumentos musicais ou outros equipamentos para ajudar à resposta</6></3><7>Apenas papel e caneta/lápis são permitidos.</7><8><9>Pede-se também a todos os jogadores que joguem todos os dias</9>. As faltas adulteram a veracidade da classificação final e podem levar à descida de divisão ao incumpridor.</8>"
-msgstr "<0>A Liga Quiz é um jogo de cultura geral onde a confiança na honestidade dos jogadores é crucial.</0><1><2>É expressamente proibido usar qualquer fonte externa para obter respostas às perguntas</2>. Isto inclui:</1><3><4>Pedir pistas/respostas a outras pessoas</4><5>Usar a Internet, livros ou outro material de consulta para pesquisa de pistas/respostas</5><6>Usar calculadoras, instrumentos musicais ou outros equipamentos para ajudar à resposta</6></3><7>Apenas papel e caneta/lápis são permitidos.</7><8><9>Pede-se também a todos os jogadores que joguem todos os dias</9>. As faltas adulteram a veracidade da classificação final e podem levar à descida de divisão ao incumpridor.</8>"
+msgid "<0>A Liga Quiz é um jogo de cultura geral onde a confiança na honestidade dos jogadores é crucial.</0><1><2>É expressamente proibido usar qualquer fonte externa para obter respostas às perguntas.</2> Isto inclui:</1><3><4>Pedir pistas/respostas a outras pessoas.</4><5>Usar a Internet, livros ou outro material de consulta para pesquisa de pistas/respostas.</5><6>Usar calculadoras, instrumentos musicais ou outros equipamentos para ajudar à resposta.</6></3><7>Apenas papel e caneta/lápis são permitidos.</7><8><9>Pede-se também a todos os jogadores que joguem todos os dias.</9> As faltas adulteram a veracidade da classificação final e podem levar à descida de divisão ao incumpridor.</8>"
+msgstr "<0>A Liga Quiz é um jogo de cultura geral onde a confiança na honestidade dos jogadores é crucial.</0><1><2>É expressamente proibido usar qualquer fonte externa para obter respostas às perguntas.</2> Isto inclui:</1><3><4>Pedir pistas/respostas a outras pessoas.</4><5>Usar a Internet, livros ou outro material de consulta para pesquisa de pistas/respostas.</5><6>Usar calculadoras, instrumentos musicais ou outros equipamentos para ajudar à resposta.</6></3><7>Apenas papel e caneta/lápis são permitidos.</7><8><9>Pede-se também a todos os jogadores que joguem todos os dias.</9> As faltas adulteram a veracidade da classificação final e podem levar à descida de divisão ao incumpridor.</8>"
 
 #: src/components/NationalRanking/Legend.js:61
 msgid "<0>{0}</0> resultado a contar para o ranking"
@@ -51,7 +51,7 @@ msgstr "Apagar provas mensais"
 msgid "Apelido"
 msgstr "Apelido"
 
-#: src/components/NationalRanking.js:201
+#: src/components/NationalRanking.js:317
 msgid "Arquivo"
 msgstr "Arquivo"
 
@@ -106,7 +106,7 @@ msgstr "Enviámos-te um e-mail, segue as instruções para definir uma nova pala
 #: src/components/ControlPanel/Profile/Avatar.js:103
 #: src/components/ControlPanel/Ranking.js:95
 #: src/components/Login.js:105
-#: src/components/NationalRanking.js:119
+#: src/components/NationalRanking.js:146
 #: src/components/RecoverPassword.js:88
 #: src/components/Register.js:185
 #: src/components/ResetPassword.js:125
@@ -167,7 +167,7 @@ msgstr "Já existe uma conta com este e-mail."
 msgid "Legenda"
 msgstr "Legenda"
 
-#: src/App.js:38
+#: src/App.js:42
 #: src/components/Home.js:8
 #: src/routes.js:16
 msgid "Liga Quiz"
@@ -181,6 +181,10 @@ msgstr "Melhor"
 msgid "Máximo 200 KB"
 msgstr "Máximo 200 KB"
 
+#: src/components/NationalRanking.js:236
+msgid "Média"
+msgstr "Média"
+
 #: src/components/ControlPanel/Ranking/Form.js:164
 #: src/components/ControlPanel/Ranking/Form.js:171
 #: src/components/ControlPanel/Ranking/List.js:25
@@ -188,7 +192,7 @@ msgid "Mês"
 msgstr "Mês"
 
 #: src/components/ControlPanel/Profile.js:66
-#: src/components/NationalRanking.js:161
+#: src/components/NationalRanking.js:204
 #: src/components/Register.js:60
 msgid "Nome"
 msgstr "Nome"
@@ -263,7 +267,7 @@ msgstr "Perfil"
 msgid "Perfil actualizado com sucesso."
 msgstr "Perfil actualizado com sucesso."
 
-#: src/components/NationalRanking.js:164
+#: src/components/NationalRanking.js:208
 msgid "Pontos"
 msgstr "Pontos"
 
@@ -275,6 +279,10 @@ msgstr "Provas mensais apagadas com sucesso."
 #: src/routes.js:56
 msgid "Página não encontrada"
 msgstr "Página não encontrada"
+
+#: src/components/NationalRanking.js:250
+msgid "Quizzes"
+msgstr "Quizzes"
 
 #: src/components/ControlPanel.js:18
 msgid "Ranking"
@@ -289,7 +297,7 @@ msgstr "Ranking Nacional"
 msgid "Ranking Nacional de Quiz"
 msgstr "Ranking Nacional de Quiz"
 
-#: src/components/NationalRanking.js:138
+#: src/components/NationalRanking.js:165
 msgid "Ranking de {0} de {1}"
 msgstr "Ranking de {0} de {1}"
 
@@ -361,7 +369,7 @@ msgstr "Selecciona os jogadores que jogaram esta prova:"
 msgid "Sem registos"
 msgstr "Sem registos"
 
-#: src/components/NationalRanking.js:167
+#: src/components/NationalRanking.js:222
 msgid "Soma"
 msgstr "Soma"
 

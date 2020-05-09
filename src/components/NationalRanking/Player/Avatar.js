@@ -2,17 +2,13 @@ import React from 'react';
 import classes from '../NationalRanking.module.scss';
 
 const Avatar = ({ player }) => (
-  <>
+  <div className={classes.avatar}>
     {player.info && player.info.avatar ? (
-      <img
-        className={classes.userAvatar}
-        alt={`${player.name} ${player.surname}`}
-        src={player.info.avatar}
-      />
+      <img alt={`${player.name} ${player.surname}`} src={player.info.avatar} />
     ) : (
-      <i className={`${classes.userAvatar} fa fa-user`} />
+      <i className="fa fa-user" />
     )}
-  </>
+  </div>
 );
 
 export default Avatar;
