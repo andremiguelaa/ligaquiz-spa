@@ -7,6 +7,10 @@ $body-size: 14px;
 @import 'bulma';
 @import 'styles/Toasts.scss';
 
+main.container {
+  overflow: hidden;
+}
+
 .section {
   @include mobile {
     padding: 3rem 0.5rem;
