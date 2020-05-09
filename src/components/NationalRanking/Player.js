@@ -31,13 +31,19 @@ const Player = ({ player, quizzes }) => {
     .sort((a, b) => b - a)
     .slice(0, 10)
     .reduce((acc, score, index) => {
-      if (score < lastIterationScore) {
-        iterationRank = index + 1;
+      if (score) {
+        if (score < lastIterationScore) {
+          iterationRank = index + 1;
+        }
+        acc[score] = iterationRank;
+        lastIterationScore = score;
       }
-      acc[score] = iterationRank;
-      lastIterationScore = score;
       return acc;
     }, {});
+
+  if (player.rank === 26) {
+    console.log(player, countingScores);
+  }
 
   return (
     <tr>
@@ -69,7 +75,7 @@ const Player = ({ player, quizzes }) => {
           quizzes[quizType].map((date) => (
             <td
               key={`${player.individual_quiz_player_id}-${quizType}-${date}`}
-              className={classNames({
+              className={classNames('has-text-centered', {
                 [classes[
                   `top${
                     countingScores[playerQuizzes?.[quizType]?.[date]?.score]

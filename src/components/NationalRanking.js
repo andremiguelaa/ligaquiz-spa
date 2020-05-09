@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
+import { get } from 'lodash';
+import classNames from 'classnames';
 
 import Loading from 'utils/Loading';
 import Error from 'utils/Error';
@@ -30,6 +32,10 @@ const NationalRanking = ({
   const [rankingList, setRankingList] = useState();
   const [quizzes, setQuizzes] = useState();
   const [ranking, setRanking] = useState();
+  const [order, setOrder] = useState({
+    path: 'score',
+    direction: 'desc',
+  });
 
   useEffect(() => {
     setRanking();
@@ -113,6 +119,26 @@ const NationalRanking = ({
       });
   }, [month]);
 
+  const sortRankingByPath = (path) => {
+    let newOrder;
+    if (order && order.path === path) {
+      newOrder = {
+        path,
+        direction: order.direction === 'asc' ? 'desc' : 'asc',
+      };
+    } else {
+      newOrder = { path, direction: 'desc' };
+    }
+    const sortedRanking = [].concat(ranking).sort((a, b) => {
+      if (newOrder.direction === 'asc') {
+        return get(a, path, 0) - get(b, path, 0);
+      }
+      return get(b, path, 0) - get(a, path, 0);
+    });
+    setRanking(sortedRanking);
+    setOrder(newOrder);
+  };
+
   if (error) {
     return (
       <Error>
@@ -144,36 +170,97 @@ const NationalRanking = ({
       </div>
       <div className="message-body">
         <div className="content">
-          <div className={`${classes.tableWrapper}`}>
-            <div className={`table-container ${classes.tableContainer}`}>
+          <div className={classes.tableWrapper}>
+            <div
+              className={classNames('table-container', classes.tableContainer)}
+            >
               <table className="table">
                 <thead>
                   <tr>
-                    <th className={`${classes.rankCell} has-background-white`}>
+                    <th
+                      className={classNames(
+                        classes.rankCell,
+                        'has-background-white'
+                      )}
+                    >
                       #
                     </th>
                     <th
-                      className={`${classes.changeCell} has-background-white has-text-centered`}
+                      className={classNames(
+                        classes.changeCell,
+                        'has-background-white',
+                        'has-text-centered'
+                      )}
                     >
                       ±
                     </th>
-                    <th className={`${classes.userCell} has-background-white`}>
+                    <th
+                      className={classNames(
+                        classes.userCell,
+                        'has-background-white'
+                      )}
+                    >
                       <Trans>Nome</Trans>
                     </th>
-                    <th>
-                      <Trans>Pontos</Trans>
+                    <th className={classes.sortable}>
+                      <button onClick={() => sortRankingByPath('score')}>
+                        <Trans>Pontos</Trans>
+                        <span className="icon">
+                          <i
+                            className={classNames('fa', {
+                              'fa-sort': order.path !== 'score',
+                              [`fa-sort-numeric-${order.direction}`]:
+                                order.path === 'score',
+                            })}
+                          ></i>
+                        </span>
+                      </button>
                     </th>
-                    <th>
-                      <Trans>Soma</Trans>
+                    <th className={classes.sortable}>
+                      <button onClick={() => sortRankingByPath('sum')}>
+                        <Trans>Soma</Trans>
+                        <span className="icon">
+                          <i
+                            className={classNames('fa', {
+                              'fa-sort': order.path !== 'sum',
+                              [`fa-sort-numeric-${order.direction}`]:
+                                order.path === 'sum',
+                            })}
+                          ></i>
+                        </span>
+                      </button>
                     </th>
                     {quizzesOrder.map(
                       (quizType) =>
                         quizzes[quizType] &&
                         quizzes[quizType].map((date) => (
-                          <th key={`${quizType}-${date}`}>
-                            {quizTypeAbbr[quizType].abbr}
-                            {quizTypeAbbr[quizType].includeMonth &&
-                              parseInt(date.substring(5, 7))}
+                          <th
+                            key={`${quizType}-${date}`}
+                            className={classes.sortable}
+                          >
+                            <button
+                              onClick={() =>
+                                sortRankingByPath(
+                                  `quizzes.${quizType}.${date}.score`
+                                )
+                              }
+                            >
+                              {quizTypeAbbr[quizType].abbr}
+                              {quizTypeAbbr[quizType].includeMonth &&
+                                parseInt(date.substring(5, 7))}
+                              <span className="icon">
+                                <i
+                                  className={classNames('fa', {
+                                    'fa-sort':
+                                      order.path !==
+                                      `quizzes.${quizType}.${date}.score`,
+                                    [`fa-sort-numeric-${order.direction}`]:
+                                      order.path ===
+                                      `quizzes.${quizType}.${date}.score`,
+                                  })}
+                                ></i>
+                              </span>
+                            </button>
                           </th>
                         ))
                     )}

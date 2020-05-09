@@ -12,6 +12,24 @@
   :global(th),
   :global(td) {
     height: 37px;
+    white-space: nowrap;
+  }
+  .sortable {
+    padding: 0;
+    :global(button) {
+      padding: 0.5em 0.75em;
+      font-size: inherit;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      height: 35px;
+      font-weight: inherit;
+      &:focus,
+      &:hover {
+        background-color: $grey-light;
+        outline: none;
+      }
+    }
   }
 }
 
@@ -103,7 +121,7 @@ i.userAvatar {
 }
 
 .legend {
-  dt{
+  dt {
     display: inline-block;
     width: 5rem;
     &::after {
