@@ -7,6 +7,10 @@ $body-size: 14px;
 @import 'bulma';
 @import 'styles/Toasts.scss';
 
+.indiana-scroll-container {
+  cursor: grab;
+}
+
 main.container {
   overflow: hidden;
 }
@@ -71,6 +75,6 @@ main.container {
 }
 
 .links-list {
-  list-style: none!important;
-  margin-left: 0!important;
+  list-style: none !important;
+  margin-left: 0 !important;
 }

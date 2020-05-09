@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 import { get } from 'lodash';
 import classNames from 'classnames';
+import ScrollContainer from 'react-indiana-drag-scroll';
 
 import Loading from 'utils/Loading';
 import Error from 'utils/Error';
@@ -171,7 +172,7 @@ const NationalRanking = ({
       <div className="message-body">
         <div className="content">
           <div className={classes.tableWrapper}>
-            <div
+            <ScrollContainer
               className={classNames('table-container', classes.tableContainer)}
             >
               <table className="table">
@@ -266,6 +267,7 @@ const NationalRanking = ({
                     )}
                   </tr>
                 </thead>
+
                 <tbody>
                   {ranking.map((player) => {
                     player.data = players[player.individual_quiz_player_id];
@@ -279,7 +281,7 @@ const NationalRanking = ({
                   })}
                 </tbody>
               </table>
-            </div>
+            </ScrollContainer>
           </div>
           <Legend />
           {rankingList.length && (
