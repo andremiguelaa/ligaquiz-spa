@@ -5,7 +5,10 @@
 }
 
 .tableContainer {
-  padding-left: 340px;
+  padding-left: 310px;
+  @include mobile {
+    padding-left: 140px;
+  }
   :global(table) {
     border-collapse: separate;
   }
@@ -37,18 +40,24 @@
   position: absolute;
   left: 0;
   width: 40px;
+  width: 25px;
+  padding: 0.5em 0.25em!important;
 }
 
 .changeCell {
   position: absolute;
-  left: 40px;
-  width: 40px;
+  left: 25px;
+  width: 25px;
+  padding: 0.5em 0!important;
 }
 
 .userCell {
   position: absolute;
-  left: 80px;
+  left: 50px;
   width: 260px;
+  @include mobile {
+    width: 90px;
+  }
 }
 
 .userCellContent {
@@ -78,6 +87,16 @@ i.userAvatar {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  @include mobile {
+    :global(span) {
+      display: none;
+    }
+  }
+  @include tablet {
+    :global(abbr) {
+      display: none;
+    }
+  }
 }
 
 .top1 {

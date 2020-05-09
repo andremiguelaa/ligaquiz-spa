@@ -7,6 +7,12 @@ $body-size: 14px;
 @import 'bulma';
 @import 'styles/Toasts.scss';
 
+.section {
+  @include mobile {
+    padding: 3rem 0.5rem;
+  }
+}
+
 .column {
   max-width: 100%;
 }

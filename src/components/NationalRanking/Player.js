@@ -8,6 +8,11 @@ import { quizzesOrder } from './consts.js';
 
 import classes from './NationalRanking.module.scss';
 
+const getAcronym = (string) =>
+  string
+    .split(/\s/)
+    .reduce((response, word) => (response += word.slice(0, 1)), '');
+
 const Player = ({ player, quizzes }) => {
   let playerQuizzes = { ...player.quizzes };
   let countingScores = [];
@@ -55,7 +60,13 @@ const Player = ({ player, quizzes }) => {
         <div className={classes.userCellContent}>
           <Avatar player={player.data} />
           <div className={classes.userName}>
-            {player.data.name} {player.data.surname}
+            <span>
+              {player.data.name} {player.data.surname}
+            </span>
+            <abbr title={`${player.data.name} ${player.data.surname}`}>
+              {getAcronym(player.data.name)}
+              {getAcronym(player.data.surname)}
+            </abbr>
           </div>
         </div>
       </td>
