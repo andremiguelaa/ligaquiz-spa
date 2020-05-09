@@ -55,7 +55,7 @@ const NationalRanking = ({
         setError(true);
       });
 
-    ApiRequest.get('national-rankings')
+    ApiRequest.get('national-rankings?complete')
       .then(({ data }) => {
         const list = data.data;
         setRankingList(list);
