@@ -8,8 +8,9 @@ import NoMatch from './NoMatch';
 import Forbidden from './Forbidden';
 import Profile from './ControlPanel/Profile';
 import Ranking from './ControlPanel/Ranking';
+import IndividualPlayers from './ControlPanel/IndividualPlayers';
 
-const pages = {
+const pages = { // TO DO: filter pages by role permissions
   profile: {
     title: <Trans>Perfil</Trans>,
     component: <Profile />
@@ -17,6 +18,10 @@ const pages = {
   ranking: {
     title: <Trans>Ranking</Trans>,
     component: <Ranking />
+  },
+  individual_players: {
+    title: <Trans>Jogadores presenciais</Trans>,
+    component: <IndividualPlayers />
   },
 };
 

@@ -41,20 +41,16 @@ const Ranking = () => {
 
   useEffect(() => {
     if (page === 'list') {
-      loadMonthList();
+      setMonthList();
+      ApiRequest.get('national-rankings')
+        .then(({ data }) => {
+          setMonthList(data.data);
+        })
+        .catch(() => {
+          setError(true);
+        });
     }
   }, [page]);
-
-  const loadMonthList = () => {
-    setMonthList();
-    ApiRequest.get('national-rankings')
-      .then(({ data }) => {
-        setMonthList(data.data);
-      })
-      .catch(() => {
-        setError(true);
-      });
-  };
 
   const editMonth = (date) => {
     setLoadingMonthData(true);

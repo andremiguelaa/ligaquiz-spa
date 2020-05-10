@@ -11,7 +11,7 @@ import ProfileAvatar from './Profile/Avatar';
 const Profile = () => {
   const [{ user }, dispatch] = useStateValue();
 
-  const [formData, setformData] = useState({
+  const [formData, setFormData] = useState({
     id: user.id,
     name: user.name,
     surname: user.surname,
@@ -73,7 +73,7 @@ const Profile = () => {
                 className="input"
                 defaultValue={user.name}
                 onChange={(event) => {
-                  setformData({
+                  setFormData({
                     ...formData,
                     name: event.target.value,
                   });
@@ -90,13 +90,13 @@ const Profile = () => {
             </label>
             <div className="control has-icons-left">
               <input
-                type="surname"
+                type="text"
                 required
                 maxLength={255}
                 className="input"
                 defaultValue={user.surname}
                 onChange={(event) => {
-                  setformData({
+                  setFormData({
                     ...formData,
                     surname: event.target.value,
                   });
@@ -120,7 +120,7 @@ const Profile = () => {
                 })}
                 defaultValue={user.email}
                 onChange={(event) => {
-                  setformData({
+                  setFormData({
                     ...formData,
                     email: event.target.value,
                   });
@@ -152,7 +152,7 @@ const Profile = () => {
                 className="input"
                 autoComplete="new-password"
                 onChange={(event) => {
-                  setformData({
+                  setFormData({
                     ...formData,
                     password: event.target.value,
                   });
@@ -178,7 +178,7 @@ const Profile = () => {
                   'is-danger'
                 }`}
                 onChange={(event) => {
-                  setformData({
+                  setFormData({
                     ...formData,
                     password2: event.target.value,
                   });

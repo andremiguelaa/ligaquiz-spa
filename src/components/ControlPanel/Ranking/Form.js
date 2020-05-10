@@ -101,29 +101,25 @@ const Form = ({
     setSaving(true);
     if (!formData.editing) {
       ApiRequest.post('national-rankings', formData)
-        .then(({ data }) => {
-          setFormData({
-            ...formData,
-            editing: true,
-            individual_quizzes: data.data,
-          });
-          setTimeout(() => {
-            setChanged(false);
-          }, 0);
+        .then(() => {
+          toast.success(<Trans>Provas mensais criadas com sucesso!</Trans>);
+          setPage('list');
         })
         .catch(() => {
-          toast.error(<Trans>Não foi possível gravar as provas mensais.</Trans>);
-        })
-        .then(() => {
-          setSaving(false);
+          toast.error(
+            <Trans>Não foi possível gravar as provas mensais.</Trans>
+          );
         });
     } else {
       ApiRequest.patch('national-rankings', formData)
         .then(() => {
           setChanged(false);
+          toast.success(<Trans>Provas mensais actualizadas com sucesso!</Trans>);
         })
         .catch(() => {
-          toast.error(<Trans>Não foi possível gravar as provas mensais.</Trans>);
+          toast.error(
+            <Trans>Não foi possível gravar as provas mensais.</Trans>
+          );
         })
         .then(() => {
           setSaving(false);
