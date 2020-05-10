@@ -83,7 +83,7 @@ const Form = ({ setPage, individualQuizPlayers, initialEditData }) => {
     if (!formData.editing) {
       ApiRequest.post('individual-quiz-players', [formData.player])
         .then(() => {
-          toast.success(<Trans>Jogador criado com sucesso!</Trans>);
+          toast.success(<Trans>Jogador criado com sucesso.</Trans>);
           setPage('list');
         })
         .catch(() => {

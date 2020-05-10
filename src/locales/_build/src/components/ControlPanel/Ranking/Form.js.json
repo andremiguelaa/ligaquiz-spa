@@ -1,13 +1,29 @@
 {
+  "Provas mensais criadas com sucesso.": {
+    "origin": [
+      [
+        "src/components/ControlPanel/Ranking/Form.js",
+        105
+      ]
+    ]
+  },
   "Não foi possível gravar as provas mensais.": {
     "origin": [
       [
         "src/components/ControlPanel/Ranking/Form.js",
-        115
+        110
       ],
       [
         "src/components/ControlPanel/Ranking/Form.js",
-        126
+        121
+      ]
+    ]
+  },
+  "Provas mensais actualizadas com sucesso.": {
+    "origin": [
+      [
+        "src/components/ControlPanel/Ranking/Form.js",
+        117
       ]
     ]
   },
@@ -15,11 +31,11 @@
     "origin": [
       [
         "src/components/ControlPanel/Ranking/Form.js",
-        153
+        149
       ],
       [
         "src/components/ControlPanel/Ranking/Form.js",
-        280
+        276
       ]
     ]
   },
@@ -27,11 +43,11 @@
     "origin": [
       [
         "src/components/ControlPanel/Ranking/Form.js",
-        164
+        160
       ],
       [
         "src/components/ControlPanel/Ranking/Form.js",
-        171
+        167
       ]
     ]
   },
@@ -39,7 +55,7 @@
     "origin": [
       [
         "src/components/ControlPanel/Ranking/Form.js",
-        219
+        215
       ]
     ]
   },
@@ -47,7 +63,7 @@
     "origin": [
       [
         "src/components/ControlPanel/Ranking/Form.js",
-        237
+        233
       ]
     ]
   },
@@ -55,7 +71,7 @@
     "origin": [
       [
         "src/components/ControlPanel/Ranking/Form.js",
-        247
+        243
       ]
     ]
   },
@@ -63,7 +79,7 @@
     "origin": [
       [
         "src/components/ControlPanel/Ranking/Form.js",
-        282
+        278
       ]
     ]
   }

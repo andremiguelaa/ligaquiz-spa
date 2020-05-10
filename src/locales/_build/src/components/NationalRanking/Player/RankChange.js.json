@@ -1,5 +1,5 @@
 {
-  "Subiu {change} posições": {
+  "Subiu": {
     "origin": [
       [
         "src/components/NationalRanking/Player/RankChange.js",
@@ -7,11 +7,35 @@
       ]
     ]
   },
-  "Desceu {0} posições": {
+  "posições": {
     "origin": [
       [
         "src/components/NationalRanking/Player/RankChange.js",
-        23
+        14
+      ],
+      [
+        "src/components/NationalRanking/Player/RankChange.js",
+        26
+      ]
+    ]
+  },
+  "posição": {
+    "origin": [
+      [
+        "src/components/NationalRanking/Player/RankChange.js",
+        14
+      ],
+      [
+        "src/components/NationalRanking/Player/RankChange.js",
+        26
+      ]
+    ]
+  },
+  "Desceu": {
+    "origin": [
+      [
+        "src/components/NationalRanking/Player/RankChange.js",
+        25
       ]
     ]
   }

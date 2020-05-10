@@ -102,7 +102,7 @@ const Form = ({
     if (!formData.editing) {
       ApiRequest.post('national-rankings', formData)
         .then(() => {
-          toast.success(<Trans>Provas mensais criadas com sucesso!</Trans>);
+          toast.success(<Trans>Provas mensais criadas com sucesso.</Trans>);
           setPage('list');
         })
         .catch(() => {
@@ -114,7 +114,7 @@ const Form = ({
       ApiRequest.patch('national-rankings', formData)
         .then(() => {
           setChanged(false);
-          toast.success(<Trans>Provas mensais actualizadas com sucesso!</Trans>);
+          toast.success(<Trans>Provas mensais actualizadas com sucesso.</Trans>);
         })
         .catch(() => {
           toast.error(

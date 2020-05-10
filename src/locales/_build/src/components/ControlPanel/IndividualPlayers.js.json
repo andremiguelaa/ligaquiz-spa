@@ -1,0 +1,26 @@
+{
+  "Erro de servidor. Tenta mais tarde.": {
+    "origin": [
+      [
+        "src/components/ControlPanel/IndividualPlayers.js",
+        48
+      ]
+    ]
+  },
+  "Apagar jogador": {
+    "origin": [
+      [
+        "src/components/ControlPanel/IndividualPlayers.js",
+        84
+      ]
+    ]
+  },
+  "Tens a certeza que queres apagar este jogador?": {
+    "origin": [
+      [
+        "src/components/ControlPanel/IndividualPlayers.js",
+        85
+      ]
+    ]
+  }
+}

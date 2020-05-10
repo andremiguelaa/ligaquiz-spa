@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/components/ControlPanel.js",
-        14
+        15
       ]
     ]
   },
@@ -11,7 +11,15 @@
     "origin": [
       [
         "src/components/ControlPanel.js",
-        18
+        19
+      ]
+    ]
+  },
+  "Jogadores presenciais": {
+    "origin": [
+      [
+        "src/components/ControlPanel.js",
+        23
       ]
     ]
   },
@@ -19,7 +27,7 @@
     "origin": [
       [
         "src/components/ControlPanel.js",
-        39
+        44
       ]
     ]
   }

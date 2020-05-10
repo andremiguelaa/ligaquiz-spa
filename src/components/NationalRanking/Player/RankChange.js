@@ -10,7 +10,9 @@ const RankChange = ({ change }) => (
       <I18n>
         {({ i18n }) => (
           <i
-            title={i18n._(t`Subiu ${change} posições`)}
+            title={`${i18n._(t`Subiu`)} ${Math.abs(change)} ${
+              Math.abs(change) > 1 ? i18n._(t`posições`) : i18n._(t`posição`)
+            }`}
             className="fa fa-arrow-up has-text-success"
           ></i>
         )}
@@ -20,7 +22,9 @@ const RankChange = ({ change }) => (
       <I18n>
         {({ i18n }) => (
           <i
-            title={i18n._(t`Desceu ${Math.abs(change)} posições`)}
+            title={`${i18n._(t`Desceu`)} ${Math.abs(change)} ${
+              Math.abs(change) > 1 ? i18n._(t`posições`) : i18n._(t`posição`)
+            }`}
             className="fa fa-arrow-down has-text-danger"
           ></i>
         )}
