@@ -91,7 +91,7 @@ msgstr "Password confirmation"
 msgid "Credenciais erradas."
 msgstr "Wrong credentials."
 
-#: src/components/NationalRanking/Player/RankChange.js:25
+#: src/components/NationalRanking/Player/RankChange.js:30
 msgid "Desceu"
 msgstr "Move down"
 
@@ -233,6 +233,10 @@ msgstr "None"
 #: src/components/Register.js:60
 msgid "Nome"
 msgstr "Name"
+
+#: src/components/NationalRanking/Player/RankChange.js:10
+msgid "Nova entrada para o ranking"
+msgstr "New appearance in the ranking"
 
 #: src/components/Forbidden.js:10
 msgid "Não autorizado"
@@ -428,7 +432,7 @@ msgstr "Sum"
 msgid "Squizzed"
 msgstr "Squizzed"
 
-#: src/components/NationalRanking/Player/RankChange.js:13
+#: src/components/NationalRanking/Player/RankChange.js:18
 msgid "Subiu"
 msgstr "Move up"
 
@@ -481,13 +485,13 @@ msgstr "leave it blank to keep"
 msgid "melhor"
 msgstr "best"
 
-#: src/components/NationalRanking/Player/RankChange.js:14
-#: src/components/NationalRanking/Player/RankChange.js:26
+#: src/components/NationalRanking/Player/RankChange.js:19
+#: src/components/NationalRanking/Player/RankChange.js:31
 msgid "posição"
 msgstr "position"
 
-#: src/components/NationalRanking/Player/RankChange.js:14
-#: src/components/NationalRanking/Player/RankChange.js:26
+#: src/components/NationalRanking/Player/RankChange.js:19
+#: src/components/NationalRanking/Player/RankChange.js:31
 msgid "posições"
 msgstr "positions"
 

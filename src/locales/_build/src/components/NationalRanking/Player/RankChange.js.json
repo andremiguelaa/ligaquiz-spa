@@ -1,9 +1,17 @@
 {
+  "Nova entrada para o ranking": {
+    "origin": [
+      [
+        "src/components/NationalRanking/Player/RankChange.js",
+        10
+      ]
+    ]
+  },
   "Subiu": {
     "origin": [
       [
         "src/components/NationalRanking/Player/RankChange.js",
-        13
+        18
       ]
     ]
   },
@@ -11,11 +19,11 @@
     "origin": [
       [
         "src/components/NationalRanking/Player/RankChange.js",
-        14
+        19
       ],
       [
         "src/components/NationalRanking/Player/RankChange.js",
-        26
+        31
       ]
     ]
   },
@@ -23,11 +31,11 @@
     "origin": [
       [
         "src/components/NationalRanking/Player/RankChange.js",
-        14
+        19
       ],
       [
         "src/components/NationalRanking/Player/RankChange.js",
-        26
+        31
       ]
     ]
   },
@@ -35,7 +43,7 @@
     "origin": [
       [
         "src/components/NationalRanking/Player/RankChange.js",
-        25
+        30
       ]
     ]
   }
