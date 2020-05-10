@@ -37,12 +37,23 @@ const List = ({
             {individualQuizPlayers.map((player) => {
               return (
                 <tr key={player.id}>
-                  <td className="is-vertical-middle">{player.name} {player.surname}</td>
+                  <td className="is-vertical-middle">
+                    {player.name} {player.surname}
+                  </td>
                   <td>
                     <div className="buttons has-addons is-pulled-right">
                       <button
                         className="button"
-                        onClick={() => editPlayer(player)}
+                        onClick={() =>
+                          editPlayer({
+                            id: player.id,
+                            name: player.name,
+                            surname: player.surname,
+                            ...(player.info && {
+                              user_id: player.info.id,
+                            }),
+                          })
+                        }
                       >
                         <span className="icon">
                           <i className="fa fa-edit"></i>

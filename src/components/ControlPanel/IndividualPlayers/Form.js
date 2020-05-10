@@ -38,7 +38,10 @@ const Form = ({ setPage, individualQuizPlayers, initialEditData }) => {
         );
         const sortedValidUsers = data.data
           .reduce((acc, user) => {
-            if (!individualQuizPlayersUserIds.includes(user.id)) {
+            if (
+              !individualQuizPlayersUserIds.includes(user.id) ||
+              initialEditData?.user_id === user.id
+            ) {
               acc.push(user);
             }
             return acc;
@@ -51,7 +54,7 @@ const Form = ({ setPage, individualQuizPlayers, initialEditData }) => {
       .catch(() => {
         setError(true);
       });
-  }, []);
+  }, [individualQuizPlayers, initialEditData]);
 
   useEffect(() => {
     if (isInitialMount.current) {
@@ -87,23 +90,18 @@ const Form = ({ setPage, individualQuizPlayers, initialEditData }) => {
           toast.error(<Trans>Não foi possível gravar o jogador.</Trans>);
           setSaving(false);
         });
-    }
-    /*
-    else {
-      ApiRequest.patch('national-rankings', formData)
+    } else {
+      ApiRequest.patch('individual-quiz-players', [formData.player])
         .then(() => {
           setChanged(false);
         })
         .catch(() => {
-          toast.error(
-            <Trans>Não foi possível gravar as provas mensais.</Trans>
-          );
+          toast.error(<Trans>Não foi possível gravar o jogador.</Trans>);
         })
         .then(() => {
           setSaving(false);
         });
-      }
-        */
+    }
   };
 
   if (!users) {
@@ -204,6 +202,7 @@ const Form = ({ setPage, individualQuizPlayers, initialEditData }) => {
               <div className="control has-icons-left">
                 <div className="select">
                   <select
+                    defaultValue={formData.player.user_id}
                     onChange={(event) => {
                       setFormData({
                         ...formData,
