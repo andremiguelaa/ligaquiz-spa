@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Trans } from '@lingui/macro';
+import { toast } from 'react-toastify';
 
 import ApiRequest from 'utils/ApiRequest';
 import Loading from 'utils/Loading';
@@ -36,6 +37,38 @@ const IndividualPlayers = () => {
   const editPlayer = (player) => {
     setInitialEditData(player);
     setPage('edit');
+  };
+
+  const deletePlayer = (player) => {
+    setDeleting(true);
+    ApiRequest.delete('individual-quiz-players', { data: { id: player } })
+      .then(() => {
+        setIndividualQuizPlayers(
+          individualQuizPlayers.filter((item) => item.id !== player)
+        );
+        toast.success(<Trans>Jogador apagado com sucesso.</Trans>);
+      })
+      .catch((error) => {
+        console.log();
+        try {
+          if (error.response.data.message === 'player_with_results') {
+            toast.error(
+              <Trans>
+                Não foi possível apagar ao jogador.
+                <br />O jogador tem resultados associados.
+              </Trans>
+            );
+          } else {
+            toast.error(<Trans>Não foi possível apagar ao jogador.</Trans>);
+          }
+        } catch (error) {
+          toast.error(<Trans>Não foi possível apagar ao jogador.</Trans>);
+        }
+      })
+      .then(() => {
+        setPlayerToDelete();
+        setDeleting(false);
+      });
   };
 
   if (!individualQuizPlayers) {
@@ -77,13 +110,12 @@ const IndividualPlayers = () => {
           ),
         }[page]
       }
-
       <Modal
         type="danger"
         open={playerToDelete}
         title={<Trans>Apagar jogador</Trans>}
         body={<Trans>Tens a certeza que queres apagar este jogador?</Trans>}
-        // action={() => deleteRanking(monthToDelete)}
+        action={() => deletePlayer(playerToDelete)}
         doingAction={deleting}
         onClose={() => setPlayerToDelete()}
       />

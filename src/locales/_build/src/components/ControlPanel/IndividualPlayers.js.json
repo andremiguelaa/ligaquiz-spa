@@ -1,9 +1,37 @@
 {
+  "Jogador apagado com sucesso.": {
+    "origin": [
+      [
+        "src/components/ControlPanel/IndividualPlayers.js",
+        49
+      ]
+    ]
+  },
+  "Não foi possível apagar ao jogador.<0/>O jogador tem resultados associados.": {
+    "origin": [
+      [
+        "src/components/ControlPanel/IndividualPlayers.js",
+        56
+      ]
+    ]
+  },
+  "Não foi possível apagar ao jogador.": {
+    "origin": [
+      [
+        "src/components/ControlPanel/IndividualPlayers.js",
+        62
+      ],
+      [
+        "src/components/ControlPanel/IndividualPlayers.js",
+        65
+      ]
+    ]
+  },
   "Erro de servidor. Tenta mais tarde.": {
     "origin": [
       [
         "src/components/ControlPanel/IndividualPlayers.js",
-        48
+        81
       ]
     ]
   },
@@ -11,7 +39,7 @@
     "origin": [
       [
         "src/components/ControlPanel/IndividualPlayers.js",
-        84
+        116
       ]
     ]
   },
@@ -19,7 +47,7 @@
     "origin": [
       [
         "src/components/ControlPanel/IndividualPlayers.js",
-        85
+        117
       ]
     ]
   }

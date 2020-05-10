@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/components/NationalRanking/Player/RankChange.js",
-        10
+        12
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/components/NationalRanking/Player/RankChange.js",
-        18
+        22
       ]
     ]
   },
@@ -19,11 +19,11 @@
     "origin": [
       [
         "src/components/NationalRanking/Player/RankChange.js",
-        19
+        23
       ],
       [
         "src/components/NationalRanking/Player/RankChange.js",
-        31
+        35
       ]
     ]
   },
@@ -31,11 +31,11 @@
     "origin": [
       [
         "src/components/NationalRanking/Player/RankChange.js",
-        19
+        23
       ],
       [
         "src/components/NationalRanking/Player/RankChange.js",
-        31
+        35
       ]
     ]
   },
@@ -43,7 +43,7 @@
     "origin": [
       [
         "src/components/NationalRanking/Player/RankChange.js",
-        30
+        34
       ]
     ]
   }

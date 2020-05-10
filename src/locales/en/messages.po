@@ -47,7 +47,7 @@ msgstr "Add event"
 msgid "Adicionar provas mensais"
 msgstr "Add month events"
 
-#: src/components/ControlPanel/IndividualPlayers.js:84
+#: src/components/ControlPanel/IndividualPlayers.js:116
 msgid "Apagar jogador"
 msgstr "Delete player"
 
@@ -91,7 +91,7 @@ msgstr "Password confirmation"
 msgid "Credenciais erradas."
 msgstr "Wrong credentials."
 
-#: src/components/NationalRanking/Player/RankChange.js:30
+#: src/components/NationalRanking/Player/RankChange.js:34
 msgid "Desceu"
 msgstr "Move down"
 
@@ -114,7 +114,7 @@ msgid "Enviámos-te um e-mail, segue as instruções para definir uma nova palav
 msgstr "We sent you an e-mail, follow its instructions to set a new password"
 
 #: src/components/ControlPanel/IndividualPlayers/Form.js:114
-#: src/components/ControlPanel/IndividualPlayers.js:48
+#: src/components/ControlPanel/IndividualPlayers.js:81
 #: src/components/ControlPanel/Profile/Avatar.js:103
 #: src/components/ControlPanel/Ranking.js:91
 #: src/components/Login.js:105
@@ -178,6 +178,10 @@ msgstr "Inquizição"
 msgid "Jogador"
 msgstr "Player"
 
+#: src/components/ControlPanel/IndividualPlayers.js:49
+msgid "Jogador apagado com sucesso."
+msgstr "Player successfully deleted."
+
 #: src/components/ControlPanel/IndividualPlayers/Form.js:86
 msgid "Jogador criado com sucesso."
 msgstr "Player created successfully."
@@ -234,7 +238,7 @@ msgstr "None"
 msgid "Nome"
 msgstr "Name"
 
-#: src/components/NationalRanking/Player/RankChange.js:10
+#: src/components/NationalRanking/Player/RankChange.js:12
 msgid "Nova entrada para o ranking"
 msgstr "New appearance in the ranking"
 
@@ -248,25 +252,34 @@ msgstr "There is no registration with this e-mail."
 
 #: src/components/ControlPanel/Ranking.js:64
 msgid "Não foi possível abrir a edição das provas mensais."
-msgstr "Can't load month events edtion apge"
+msgstr "Month events edit page could not be loaded."
 
 #: src/components/ControlPanel/Profile.js:55
 msgid "Não foi possível actualizar o perfil."
 msgstr "Profile could not be update."
 
+#: src/components/ControlPanel/IndividualPlayers.js:62
+#: src/components/ControlPanel/IndividualPlayers.js:65
+msgid "Não foi possível apagar ao jogador."
+msgstr "Player could not be deleted."
+
+#: src/components/ControlPanel/IndividualPlayers.js:56
+msgid "Não foi possível apagar ao jogador.<0/>O jogador tem resultados associados."
+msgstr "Player could not be deleted.<0/>This player has saved results."
+
 #: src/components/ControlPanel/Ranking.js:80
 msgid "Não foi possível apagar as provas mensais."
-msgstr "Can't delete month events"
+msgstr "Month events could not be deleted."
 
 #: src/components/ControlPanel/Ranking/Form.js:110
 #: src/components/ControlPanel/Ranking/Form.js:121
 msgid "Não foi possível gravar as provas mensais."
-msgstr "Can't save month events."
+msgstr "Month events could not be saved."
 
 #: src/components/ControlPanel/IndividualPlayers/Form.js:90
 #: src/components/ControlPanel/IndividualPlayers/Form.js:99
 msgid "Não foi possível gravar o jogador."
-msgstr "Can't save player."
+msgstr "Player could not be saved."
 
 #: src/components/Forbidden.js:14
 msgid "Não tens permissões para aceder a esta página."
@@ -419,7 +432,7 @@ msgstr "Logout"
 msgid "Selecciona os jogadores que jogaram esta prova:"
 msgstr "Select the players that played this event:"
 
-#: src/components/ControlPanel/IndividualPlayers/List.js:80
+#: src/components/ControlPanel/IndividualPlayers/List.js:79
 #: src/components/ControlPanel/Ranking/List.js:66
 msgid "Sem registos"
 msgstr "No records"
@@ -432,7 +445,7 @@ msgstr "Sum"
 msgid "Squizzed"
 msgstr "Squizzed"
 
-#: src/components/NationalRanking/Player/RankChange.js:18
+#: src/components/NationalRanking/Player/RankChange.js:22
 msgid "Subiu"
 msgstr "Move up"
 
@@ -453,7 +466,7 @@ msgstr "Do you really want to delete this event and its related results?"
 msgid "Tens a certeza que queres apagar este jogador e o resultado associado?"
 msgstr "Do you really want to delete this player and the related result?"
 
-#: src/components/ControlPanel/IndividualPlayers.js:85
+#: src/components/ControlPanel/IndividualPlayers.js:117
 msgid "Tens a certeza que queres apagar este jogador?"
 msgstr "Do you really want to delete this player?"
 
@@ -485,13 +498,13 @@ msgstr "leave it blank to keep"
 msgid "melhor"
 msgstr "best"
 
-#: src/components/NationalRanking/Player/RankChange.js:19
-#: src/components/NationalRanking/Player/RankChange.js:31
+#: src/components/NationalRanking/Player/RankChange.js:23
+#: src/components/NationalRanking/Player/RankChange.js:35
 msgid "posição"
 msgstr "position"
 
-#: src/components/NationalRanking/Player/RankChange.js:19
-#: src/components/NationalRanking/Player/RankChange.js:31
+#: src/components/NationalRanking/Player/RankChange.js:23
+#: src/components/NationalRanking/Player/RankChange.js:35
 msgid "posições"
 msgstr "positions"
 

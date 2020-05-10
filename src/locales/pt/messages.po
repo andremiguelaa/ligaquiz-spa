@@ -47,7 +47,7 @@ msgstr "Adicionar prova"
 msgid "Adicionar provas mensais"
 msgstr "Adicionar provas mensais"
 
-#: src/components/ControlPanel/IndividualPlayers.js:84
+#: src/components/ControlPanel/IndividualPlayers.js:116
 msgid "Apagar jogador"
 msgstr "Apagar jogador"
 
@@ -91,7 +91,7 @@ msgstr "Confirmação da palavra-passe"
 msgid "Credenciais erradas."
 msgstr "Credenciais erradas."
 
-#: src/components/NationalRanking/Player/RankChange.js:30
+#: src/components/NationalRanking/Player/RankChange.js:34
 msgid "Desceu"
 msgstr "Desceu"
 
@@ -114,7 +114,7 @@ msgid "Enviámos-te um e-mail, segue as instruções para definir uma nova palav
 msgstr "Enviámos-te um e-mail, segue as instruções para definir uma nova palavra-passe."
 
 #: src/components/ControlPanel/IndividualPlayers/Form.js:114
-#: src/components/ControlPanel/IndividualPlayers.js:48
+#: src/components/ControlPanel/IndividualPlayers.js:81
 #: src/components/ControlPanel/Profile/Avatar.js:103
 #: src/components/ControlPanel/Ranking.js:91
 #: src/components/Login.js:105
@@ -178,6 +178,10 @@ msgstr "Inquizição"
 msgid "Jogador"
 msgstr "Jogador"
 
+#: src/components/ControlPanel/IndividualPlayers.js:49
+msgid "Jogador apagado com sucesso."
+msgstr "Jogador apagado com sucesso."
+
 #: src/components/ControlPanel/IndividualPlayers/Form.js:86
 msgid "Jogador criado com sucesso."
 msgstr "Jogador criado com sucesso."
@@ -234,7 +238,7 @@ msgstr "Nenhum"
 msgid "Nome"
 msgstr "Nome"
 
-#: src/components/NationalRanking/Player/RankChange.js:10
+#: src/components/NationalRanking/Player/RankChange.js:12
 msgid "Nova entrada para o ranking"
 msgstr "Nova entrada para o ranking"
 
@@ -253,6 +257,15 @@ msgstr "Não foi possível abrir a edição das provas mensais."
 #: src/components/ControlPanel/Profile.js:55
 msgid "Não foi possível actualizar o perfil."
 msgstr "Não foi possível actualizar o perfil."
+
+#: src/components/ControlPanel/IndividualPlayers.js:62
+#: src/components/ControlPanel/IndividualPlayers.js:65
+msgid "Não foi possível apagar ao jogador."
+msgstr "Não foi possível apagar ao jogador."
+
+#: src/components/ControlPanel/IndividualPlayers.js:56
+msgid "Não foi possível apagar ao jogador.<0/>O jogador tem resultados associados."
+msgstr "Não foi possível apagar ao jogador.<0/>O jogador tem resultados associados."
 
 #: src/components/ControlPanel/Ranking.js:80
 msgid "Não foi possível apagar as provas mensais."
@@ -419,7 +432,7 @@ msgstr "Sair"
 msgid "Selecciona os jogadores que jogaram esta prova:"
 msgstr "Selecciona os jogadores que jogaram esta prova:"
 
-#: src/components/ControlPanel/IndividualPlayers/List.js:80
+#: src/components/ControlPanel/IndividualPlayers/List.js:79
 #: src/components/ControlPanel/Ranking/List.js:66
 msgid "Sem registos"
 msgstr "Sem registos"
@@ -432,7 +445,7 @@ msgstr "Soma"
 msgid "Squizzed"
 msgstr "Squizzed"
 
-#: src/components/NationalRanking/Player/RankChange.js:18
+#: src/components/NationalRanking/Player/RankChange.js:22
 msgid "Subiu"
 msgstr "Subiu"
 
@@ -453,7 +466,7 @@ msgstr "Tens a certeza que queres apagar esta prova e todos os resultados associ
 msgid "Tens a certeza que queres apagar este jogador e o resultado associado?"
 msgstr "Tens a certeza que queres apagar este jogador e o resultado associado?"
 
-#: src/components/ControlPanel/IndividualPlayers.js:85
+#: src/components/ControlPanel/IndividualPlayers.js:117
 msgid "Tens a certeza que queres apagar este jogador?"
 msgstr "Tens a certeza que queres apagar este jogador?"
 
@@ -485,13 +498,13 @@ msgstr "deixa em branco para não alterar"
 msgid "melhor"
 msgstr "melhor"
 
-#: src/components/NationalRanking/Player/RankChange.js:19
-#: src/components/NationalRanking/Player/RankChange.js:31
+#: src/components/NationalRanking/Player/RankChange.js:23
+#: src/components/NationalRanking/Player/RankChange.js:35
 msgid "posição"
 msgstr "posição"
 
-#: src/components/NationalRanking/Player/RankChange.js:19
-#: src/components/NationalRanking/Player/RankChange.js:31
+#: src/components/NationalRanking/Player/RankChange.js:23
+#: src/components/NationalRanking/Player/RankChange.js:35
 msgid "posições"
 msgstr "posições"
 

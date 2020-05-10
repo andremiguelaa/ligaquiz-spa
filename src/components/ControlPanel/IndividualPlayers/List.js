@@ -61,8 +61,7 @@ const List = ({
                       </button>
                       <button
                         className="button is-danger"
-                        disabled
-                        onClick={() => setPlayerToDelete(player)}
+                        onClick={() => setPlayerToDelete(player.id)}
                       >
                         <span className="icon">
                           <i className="fa fa-trash"></i>
