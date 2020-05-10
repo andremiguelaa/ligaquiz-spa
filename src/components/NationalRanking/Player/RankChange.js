@@ -6,10 +6,12 @@ const RankChange = ({ change }) => (
   <>
     {change === 0 && <strong>=</strong>}
     {change === undefined && (
-      <i
-        title={i18n._(t`Nova entrada para o ranking`)}
-        className="fa fa-star has-text-warning"
-      ></i>
+      <I18n>
+        <i
+          title={i18n._(t`Nova entrada para o ranking`)}
+          className="fa fa-star has-text-warning"
+        ></i>
+      </I18n>
     )}
     {change > 0 && (
       <I18n>
