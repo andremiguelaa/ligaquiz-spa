@@ -42,9 +42,12 @@ const Ranking = () => {
   useEffect(() => {
     if (page === 'list') {
       setMonthList();
-      ApiRequest.get('national-rankings')
+      ApiRequest.get('individual-quizzes')
         .then(({ data }) => {
-          setMonthList(data.data);
+          const list = [
+            ...new Set(data.data.map((event) => event.month)),
+          ].sort((a, b) => b.localeCompare(a));
+          setMonthList(list);
         })
         .catch(() => {
           setError(true);
