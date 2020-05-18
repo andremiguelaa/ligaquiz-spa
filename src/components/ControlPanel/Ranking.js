@@ -71,7 +71,7 @@ const Ranking = () => {
 
   const deleteRanking = (date) => {
     setDeleting(true);
-    ApiRequest.delete('national-rankings', { data: { month: date } })
+    ApiRequest.delete('individual-quizzes', { data: { month: date } })
       .then(() => {
         setMonthList(monthList.filter((item) => item !== date));
         toast.success(<Trans>Provas mensais apagadas com sucesso.</Trans>);

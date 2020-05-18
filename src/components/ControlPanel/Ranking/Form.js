@@ -100,7 +100,7 @@ const Form = ({
   const saveRanking = () => {
     setSaving(true);
     if (!formData.editing) {
-      ApiRequest.post('national-rankings', formData)
+      ApiRequest.post('individual-quizzes', formData)
         .then(() => {
           toast.success(<Trans>Provas mensais criadas com sucesso.</Trans>);
           setPage('list');
@@ -109,12 +109,17 @@ const Form = ({
           toast.error(
             <Trans>Não foi possível gravar as provas mensais.</Trans>
           );
+        })
+        .then(() => {
+          setSaving(false);
         });
     } else {
-      ApiRequest.patch('national-rankings', formData)
+      ApiRequest.patch('individual-quizzes', formData)
         .then(() => {
           setChanged(false);
-          toast.success(<Trans>Provas mensais actualizadas com sucesso.</Trans>);
+          toast.success(
+            <Trans>Provas mensais actualizadas com sucesso.</Trans>
+          );
         })
         .catch(() => {
           toast.error(
