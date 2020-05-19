@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
-import { get } from 'lodash';
+import { get, isEmpty } from 'lodash';
 import classNames from 'classnames';
 import ScrollContainer from 'react-indiana-drag-scroll';
 
@@ -56,7 +56,7 @@ const NationalRanking = ({
         setError(true);
       });
 
-    ApiRequest.get('national-rankings?complete')
+    ApiRequest.get('national-rankings')
       .then(({ data }) => {
         const list = data.data;
         setRankingList(list);
@@ -113,6 +113,8 @@ const NationalRanking = ({
             .catch(() => {
               setError(true);
             });
+        } else {
+          setRanking({});
         }
       })
       .catch(() => {
@@ -154,6 +156,27 @@ const NationalRanking = ({
 
   if (month && !rankingList.includes(month)) {
     return <NoMatch />;
+  }
+
+  if (isEmpty(ranking)) {
+    return (
+      <div className="columns">
+        <div className="column is-6-widescreen is-offset-3-widescreen is-8-tablet is-offset-2-tablet">
+          <article className="message">
+            <div className="message-header">
+              <h1>
+                <Trans>Ranking Nacional</Trans>
+              </h1>
+            </div>
+            <div className="message-body">
+              <div className="content">
+                <Trans>Não existe ranking nacional disponível.</Trans>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    );
   }
 
   const shownMonth = month || rankingList[0];
@@ -296,7 +319,7 @@ const NationalRanking = ({
                   </tr>
                 </thead>
                 <tbody>
-                  {ranking.map((player, index) => {
+                  {ranking.map((player) => {
                     player.data = players[player.individual_quiz_player_id];
                     return (
                       <Player
