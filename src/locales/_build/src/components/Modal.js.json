@@ -1,0 +1,18 @@
+{
+  "OK": {
+    "origin": [
+      [
+        "src/components/Modal.js",
+        36
+      ]
+    ]
+  },
+  "Cancelar": {
+    "origin": [
+      [
+        "src/components/Modal.js",
+        44
+      ]
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "Adicionar jogador": {
+    "origin": [
+      [
+        "src/views/ControlPanel/IndividualPlayers/List.js",
+        19
+      ]
+    ]
+  },
+  "Jogador": {
+    "origin": [
+      [
+        "src/views/ControlPanel/IndividualPlayers/List.js",
+        29
+      ]
+    ]
+  },
+  "Acções": {
+    "origin": [
+      [
+        "src/views/ControlPanel/IndividualPlayers/List.js",
+        32
+      ]
+    ]
+  },
+  "Sem registos": {
+    "origin": [
+      [
+        "src/views/ControlPanel/IndividualPlayers/List.js",
+        79
+      ]
+    ]
+  }
+}

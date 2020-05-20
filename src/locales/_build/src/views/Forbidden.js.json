@@ -1,0 +1,26 @@
+{
+  "Não autorizado": {
+    "origin": [
+      [
+        "src/views/Forbidden.js",
+        10
+      ]
+    ]
+  },
+  "Não tens permissões para aceder a esta página.": {
+    "origin": [
+      [
+        "src/views/Forbidden.js",
+        11
+      ]
+    ]
+  },
+  "Voltar à página inicial": {
+    "origin": [
+      [
+        "src/views/Forbidden.js",
+        16
+      ]
+    ]
+  }
+}

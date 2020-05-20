@@ -1,0 +1,50 @@
+{
+  "Nova entrada para o ranking": {
+    "origin": [
+      [
+        "src/views/NationalRanking/Player/RankChange.js",
+        12
+      ]
+    ]
+  },
+  "Subiu": {
+    "origin": [
+      [
+        "src/views/NationalRanking/Player/RankChange.js",
+        22
+      ]
+    ]
+  },
+  "posições": {
+    "origin": [
+      [
+        "src/views/NationalRanking/Player/RankChange.js",
+        23
+      ],
+      [
+        "src/views/NationalRanking/Player/RankChange.js",
+        35
+      ]
+    ]
+  },
+  "posição": {
+    "origin": [
+      [
+        "src/views/NationalRanking/Player/RankChange.js",
+        23
+      ],
+      [
+        "src/views/NationalRanking/Player/RankChange.js",
+        35
+      ]
+    ]
+  },
+  "Desceu": {
+    "origin": [
+      [
+        "src/views/NationalRanking/Player/RankChange.js",
+        34
+      ]
+    ]
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "Registo": {
+    "origin": [
+      [
+        "src/views/Register.js",
+        50
+      ]
+    ]
+  },
+  "Nome": {
+    "origin": [
+      [
+        "src/views/Register.js",
+        58
+      ]
+    ]
+  },
+  "Apelido": {
+    "origin": [
+      [
+        "src/views/Register.js",
+        80
+      ]
+    ]
+  },
+  "E-Mail": {
+    "origin": [
+      [
+        "src/views/Register.js",
+        102
+      ]
+    ]
+  },
+  "Já existe uma conta com este e-mail.": {
+    "origin": [
+      [
+        "src/views/Register.js",
+        127
+      ]
+    ]
+  },
+  "Palavra-passe": {
+    "origin": [
+      [
+        "src/views/Register.js",
+        133
+      ]
+    ]
+  },
+  "Confirmação da palavra-passe": {
+    "origin": [
+      [
+        "src/views/Register.js",
+        157
+      ]
+    ]
+  },
+  "Erro de servidor. Tenta mais tarde.": {
+    "origin": [
+      [
+        "src/views/Register.js",
+        185
+      ]
+    ]
+  },
+  "Registar": {
+    "origin": [
+      [
+        "src/views/Register.js",
+        199
+      ]
+    ]
+  },
+  "Utilizador registado com sucesso.<0/>Clica <1>aqui</1> e usa as tuas credenciais.": {
+    "origin": [
+      [
+        "src/views/Register.js",
+        205
+      ]
+    ]
+  }
+}

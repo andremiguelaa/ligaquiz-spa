@@ -3,12 +3,13 @@ import { Trans } from '@lingui/macro';
 
 import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
+import PageHeader from 'components/PageHeader';
 import Forbidden from './Forbidden';
 
 const RecoverPassword = () => {
   const [{ user, settings }] = useStateValue();
   const [formData, setformData] = useState({
-    email: ''
+    email: '',
   });
 
   const [errorMessage, setErrorMessage] = useState(null);
@@ -19,18 +20,18 @@ const RecoverPassword = () => {
     return <Forbidden />;
   }
 
-  const handleSubmit = event => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     setSubmitting(true);
     setErrorMessage(null);
     ApiRequest.post('password-reset', {
       ...formData,
-      language: settings.language
+      language: settings.language,
     })
       .then(() => {
         setSuccess(true);
       })
-      .catch(error => {
+      .catch((error) => {
         try {
           setErrorMessage(error.response.data.message);
         } catch (error) {
@@ -43,15 +44,11 @@ const RecoverPassword = () => {
   };
 
   return (
-    <div className="columns">
-      <div className="column is-6-widescreen is-offset-3-widescreen is-8-tablet is-offset-2-tablet">
-        <article className={`message ${success && `is-success`}`}>
-          <div className="message-header">
-            <h1>
-              <Trans>Recuperar palavra-passe</Trans>
-            </h1>
-          </div>
-          <div className="message-body">
+    <>
+      <PageHeader title={<Trans>Recuperar palavra-passe</Trans>} />
+      <div className="section content">
+        <div className="columns">
+          <div className="column is-4-widescreen is-6-tablet">
             {!success ? (
               <form onSubmit={handleSubmit}>
                 <div className="field">
@@ -63,10 +60,10 @@ const RecoverPassword = () => {
                       className="input"
                       type="email"
                       required
-                      onChange={event => {
+                      onChange={(event) => {
                         setformData({
                           ...formData,
-                          email: event.target.value
+                          email: event.target.value,
                         });
                       }}
                     />
@@ -83,7 +80,7 @@ const RecoverPassword = () => {
                           <Trans>
                             Não existe nenhum registo com este e-mail.
                           </Trans>
-                        )
+                        ),
                       }[errorMessage] || (
                         <Trans>Erro de servidor. Tenta mais tarde.</Trans>
                       )}
@@ -93,8 +90,9 @@ const RecoverPassword = () => {
                 <div className="field is-grouped">
                   <div className="control">
                     <button
-                      className={`button is-primary ${submitting &&
-                        'is-loading'}`}
+                      className={`button is-primary ${
+                        submitting && 'is-loading'
+                      }`}
                       disabled={submitting}
                     >
                       <Trans>Submeter</Trans>
@@ -109,9 +107,9 @@ const RecoverPassword = () => {
               </Trans>
             )}
           </div>
-        </article>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

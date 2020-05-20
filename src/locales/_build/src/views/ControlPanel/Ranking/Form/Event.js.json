@@ -1,0 +1,42 @@
+{
+  "Adicionar jogadores": {
+    "origin": [
+      [
+        "src/views/ControlPanel/Ranking/Form/Event.js",
+        105
+      ],
+      [
+        "src/views/ControlPanel/Ranking/Form/Event.js",
+        160
+      ]
+    ]
+  },
+  "Remover prova": {
+    "origin": [
+      [
+        "src/views/ControlPanel/Ranking/Form/Event.js",
+        119
+      ],
+      [
+        "src/views/ControlPanel/Ranking/Form/Event.js",
+        142
+      ]
+    ]
+  },
+  "Tens a certeza que queres apagar esta prova e todos os resultados associados?": {
+    "origin": [
+      [
+        "src/views/ControlPanel/Ranking/Form/Event.js",
+        144
+      ]
+    ]
+  },
+  "Selecciona os jogadores que jogaram esta prova:": {
+    "origin": [
+      [
+        "src/views/ControlPanel/Ranking/Form/Event.js",
+        163
+      ]
+    ]
+  }
+}

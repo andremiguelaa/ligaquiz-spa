@@ -13,11 +13,11 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/components/Home.js:13
+#: src/views/Home.js:10
 msgid "<0>A Liga Quiz é um jogo de cultura geral onde a confiança na honestidade dos jogadores é crucial.</0><1><2>É expressamente proibido usar qualquer fonte externa para obter respostas às perguntas.</2> Isto inclui:</1><3><4>Pedir pistas/respostas a outras pessoas.</4><5>Usar a Internet, livros ou outro material de consulta para pesquisa de pistas/respostas.</5><6>Usar calculadoras, instrumentos musicais ou outros equipamentos para ajudar à resposta.</6></3><7>Apenas papel e caneta/lápis são permitidos.</7><8><9>Pede-se também a todos os jogadores que joguem todos os dias.</9> As faltas adulteram a veracidade da classificação final e podem levar à descida de divisão ao incumpridor.</8>"
 msgstr "<0>Quiz League is a general knowledge game where the trust in players honesty is essential.</0><1><2>It's completly forbidden the use of any external source to obtain answers.</2> This includes:</1><3><4>Ask for hints/answers to another people.</4><5>Use Internet, books or any other resource to looking for hints/answers.</5><6>Use calculators, musical instruments or any other devices to help getting the answer.</6></3><7>Only paper and pen/pencil are permitted.</7><8><9>Additionally, we ask to all players to play everyday</9>. The forfeits distort the final ranking trustiness and can lead to the relegation of the player.</8>"
 
-#: src/components/NationalRanking/Legend.js:62
+#: src/views/NationalRanking/Legend.js:62
 msgid "<0>{0}</0> resultado a contar para o ranking"
 msgstr "<0>{0}</0> result counting to national ranking"
 
@@ -25,401 +25,403 @@ msgstr "<0>{0}</0> result counting to national ranking"
 msgid "A tua sessão expirou."
 msgstr "Your session expired."
 
-#: src/components/ControlPanel/IndividualPlayers/List.js:32
-#: src/components/ControlPanel/Ranking/List.js:28
+#: src/views/ControlPanel/IndividualPlayers/List.js:32
+#: src/views/ControlPanel/Ranking/List.js:28
 msgid "Acções"
 msgstr "Actions"
 
-#: src/components/ControlPanel/IndividualPlayers/List.js:19
+#: src/views/ControlPanel/IndividualPlayers/List.js:19
 msgid "Adicionar jogador"
 msgstr "Add player"
 
-#: src/components/ControlPanel/Ranking/Form/Event.js:105
-#: src/components/ControlPanel/Ranking/Form/Event.js:160
+#: src/views/ControlPanel/Ranking/Form/Event.js:105
+#: src/views/ControlPanel/Ranking/Form/Event.js:160
 msgid "Adicionar jogadores"
 msgstr "Add players"
 
-#: src/components/ControlPanel/Ranking/Form.js:215
+#: src/views/ControlPanel/Ranking/Form.js:220
 msgid "Adicionar prova"
 msgstr "Add event"
 
-#: src/components/ControlPanel/Ranking/List.js:15
+#: src/views/ControlPanel/Ranking/List.js:15
 msgid "Adicionar provas mensais"
 msgstr "Add month events"
 
-#: src/components/ControlPanel/IndividualPlayers.js:116
+#: src/views/ControlPanel/Ranking/IndividualPlayers.js:116
 msgid "Apagar jogador"
 msgstr "Delete player"
 
-#: src/components/ControlPanel/Ranking.js:139
+#: src/views/ControlPanel/Ranking.js:167
 msgid "Apagar provas mensais"
 msgstr "Delete month events"
 
-#: src/components/ControlPanel/IndividualPlayers/Form.js:174
-#: src/components/ControlPanel/Profile.js:89
-#: src/components/Register.js:82
+#: src/views/ControlPanel/IndividualPlayers/Form.js:174
+#: src/views/ControlPanel/Profile.js:89
+#: src/views/Register.js:80
 msgid "Apelido"
 msgstr "Surname"
 
-#: src/components/NationalRanking.js:317
+#: src/views/NationalRanking.js:340
 msgid "Arquivo"
 msgstr "Archive"
 
-#: src/components/ControlPanel/Ranking/Form/options.js:12
+#: src/views/ControlPanel/Ranking/Form/options.js:12
 msgid "Campeonato Europeu de Quiz"
 msgstr "European Quizzing Championship"
 
-#: src/components/ControlPanel/Ranking/Form/options.js:27
+#: src/views/ControlPanel/Ranking/Form/options.js:27
 msgid "Campeonato Mundial de Quiz"
 msgstr "World Quizzing Championship"
 
-#: src/components/ControlPanel/Ranking/Form/options.js:7
+#: src/views/ControlPanel/Ranking/Form/options.js:7
 msgid "Campeonato Nacional de Quiz"
 msgstr "Portuguese Quizzing Championship"
 
-#: src/utils/Modal.js:44
+#: src/components/Modal.js:44
 msgid "Cancelar"
 msgstr "Cancel"
 
-#: src/components/ControlPanel/Profile.js:168
-#: src/components/Register.js:159
-#: src/components/ResetPassword.js:86
+#: src/views/ControlPanel/Profile.js:168
+#: src/views/Register.js:157
+#: src/views/ResetPassword.js:84
 msgid "Confirmação da palavra-passe"
 msgstr "Password confirmation"
 
-#: src/components/Login.js:103
+#: src/views/Login.js:99
 msgid "Credenciais erradas."
 msgstr "Wrong credentials."
 
-#: src/components/NationalRanking/Player/RankChange.js:34
+#: src/views/NationalRanking/Player/RankChange.js:34
 msgid "Desceu"
 msgstr "Move down"
 
-#: src/components/ControlPanel/Profile.js:112
-#: src/components/Login.js:58
-#: src/components/RecoverPassword.js:59
-#: src/components/Register.js:104
+#: src/views/ControlPanel/Profile.js:112
+#: src/views/Login.js:54
+#: src/views/RecoverPassword.js:56
+#: src/views/Register.js:102
 msgid "E-Mail"
 msgstr "E-Mail"
 
-#: src/components/Login.js:50
-#: src/components/Login.js:117
 #: src/partials/Header.js:81
 #: src/routes.js:21
+#: src/views/Login.js:47
+#: src/views/Login.js:114
 msgid "Entrar"
 msgstr "Login"
 
-#: src/components/RecoverPassword.js:106
+#: src/views/RecoverPassword.js:104
 msgid "Enviámos-te um e-mail, segue as instruções para definir uma nova palavra-passe."
 msgstr "We sent you an e-mail, follow its instructions to set a new password"
 
-#: src/components/ControlPanel/IndividualPlayers/Form.js:114
-#: src/components/ControlPanel/IndividualPlayers.js:81
-#: src/components/ControlPanel/Profile/Avatar.js:103
-#: src/components/ControlPanel/Ranking.js:91
-#: src/components/Login.js:105
-#: src/components/NationalRanking.js:146
-#: src/components/RecoverPassword.js:88
-#: src/components/Register.js:185
-#: src/components/ResetPassword.js:125
+#: src/views/ControlPanel/IndividualPlayers/Form.js:114
+#: src/views/ControlPanel/Profile/Avatar.js:103
+#: src/views/ControlPanel/Ranking/IndividualPlayers.js:81
+#: src/views/ControlPanel/Ranking.js:105
+#: src/views/Login.js:101
+#: src/views/NationalRanking.js:149
+#: src/views/RecoverPassword.js:85
+#: src/views/Register.js:185
+#: src/views/ResetPassword.js:125
 msgid "Erro de servidor. Tenta mais tarde."
 msgstr "Server error. Try again later."
 
-#: src/components/NationalRanking/Legend.js:51
+#: src/views/NationalRanking/Legend.js:51
 msgid "Escala"
 msgstr "Scale"
 
-#: src/components/ControlPanel/Profile/Avatar.js:83
+#: src/views/ControlPanel/Profile/Avatar.js:83
 msgid "Escolhe uma imagem"
 msgstr "Choose an image"
 
-#: src/components/ControlPanel/Ranking/Form.js:243
+#: src/views/ControlPanel/Ranking/Form.js:248
 msgid "Escolher tipo de prova"
 msgstr "Choose type of event"
 
-#: src/components/NoMatch.js:14
+#: src/views/NoMatch.js:11
 msgid "Esta página não existe."
 msgstr "This page does not exist"
 
-#: src/components/ControlPanel/Profile/Avatar.js:101
+#: src/views/ControlPanel/Profile/Avatar.js:101
 msgid "Ficheiro inválido."
 msgstr "Invalid file."
 
-#: src/components/ControlPanel/Profile/Avatar.js:114
-#: src/components/ControlPanel/Profile.js:200
+#: src/views/ControlPanel/Profile/Avatar.js:114
+#: src/views/ControlPanel/Profile.js:200
 msgid "Gravar"
 msgstr "Save"
 
-#: src/components/ControlPanel/IndividualPlayers/Form.js:245
+#: src/views/ControlPanel/IndividualPlayers/Form.js:245
 msgid "Guardar jogador"
 msgstr "Save player"
 
-#: src/components/ControlPanel/Ranking/Form.js:233
+#: src/views/ControlPanel/Ranking/Form.js:238
 msgid "Guardar provas mensais"
 msgstr "Save month events"
 
-#: src/components/ControlPanel/Ranking/Form/options.js:32
+#: src/views/ControlPanel/Ranking/Form/options.js:32
 msgid "HOT 100"
 msgstr "HOT 100"
 
-#: src/components/ControlPanel/Profile/Avatar.js:66
+#: src/views/ControlPanel/Profile/Avatar.js:66
 msgid "Imagem de perfil"
 msgstr "Profile image"
 
-#: src/components/ControlPanel/Profile/Avatar.js:41
+#: src/views/ControlPanel/Profile/Avatar.js:41
 msgid "Imagem de perfil actualizada com sucesso."
 msgstr "Profile image updated successfully."
 
-#: src/components/ControlPanel/Ranking/Form/options.js:17
+#: src/views/ControlPanel/Ranking/Form/options.js:17
 msgid "Inquizição"
 msgstr "Inquizição"
 
-#: src/components/ControlPanel/IndividualPlayers/List.js:29
+#: src/views/ControlPanel/IndividualPlayers/List.js:29
 msgid "Jogador"
 msgstr "Player"
 
-#: src/components/ControlPanel/IndividualPlayers.js:49
+#: src/views/ControlPanel/Ranking/IndividualPlayers.js:49
 msgid "Jogador apagado com sucesso."
 msgstr "Player successfully deleted."
 
-#: src/components/ControlPanel/IndividualPlayers/Form.js:86
+#: src/views/ControlPanel/IndividualPlayers/Form.js:86
 msgid "Jogador criado com sucesso."
 msgstr "Player created successfully."
 
-#: src/components/ControlPanel/IndividualPlayers/Form.js:200
+#: src/views/ControlPanel/IndividualPlayers/Form.js:200
 msgid "Jogador da liga"
 msgstr "Quiz league player"
 
-#: src/components/ControlPanel.js:23
+#: src/views/ControlPanel/Ranking.js:19
 msgid "Jogadores presenciais"
 msgstr "Presential players"
 
-#: src/components/ControlPanel/Profile.js:138
-#: src/components/Register.js:129
+#: src/views/ControlPanel/Profile.js:138
+#: src/views/Register.js:127
 msgid "Já existe uma conta com este e-mail."
 msgstr "There is another account using this e-mail."
 
-#: src/components/NationalRanking/Legend.js:10
+#: src/views/NationalRanking/Legend.js:10
 msgid "Legenda"
 msgstr "Legend"
 
-#: src/App.js:42
-#: src/components/Home.js:8
+#: src/App.js:38
 #: src/routes.js:16
+#: src/views/Home.js:8
 msgid "Liga Quiz"
 msgstr "Quiz League"
 
-#: src/components/NationalRanking/Legend.js:75
+#: src/views/NationalRanking/Legend.js:75
 msgid "Melhor"
 msgstr "Best"
 
-#: src/components/ControlPanel/Profile/Avatar.js:90
+#: src/views/ControlPanel/Profile/Avatar.js:90
 msgid "Máximo 200 KB"
 msgstr "Max. 200 KB"
 
-#: src/components/NationalRanking.js:236
+#: src/views/NationalRanking.js:259
 msgid "Média"
 msgstr "Average"
 
-#: src/components/ControlPanel/Ranking/Form.js:160
-#: src/components/ControlPanel/Ranking/Form.js:167
-#: src/components/ControlPanel/Ranking/List.js:25
+#: src/views/ControlPanel/Ranking/Form.js:165
+#: src/views/ControlPanel/Ranking/Form.js:172
+#: src/views/ControlPanel/Ranking/List.js:25
 msgid "Mês"
 msgstr "Month"
 
-#: src/components/ControlPanel/IndividualPlayers/Form.js:218
+#: src/views/ControlPanel/IndividualPlayers/Form.js:218
 msgid "Nenhum"
 msgstr "None"
 
-#: src/components/ControlPanel/IndividualPlayers/Form.js:148
-#: src/components/ControlPanel/Profile.js:66
-#: src/components/NationalRanking.js:204
-#: src/components/Register.js:60
+#: src/views/ControlPanel/IndividualPlayers/Form.js:148
+#: src/views/ControlPanel/Profile.js:66
+#: src/views/NationalRanking.js:227
+#: src/views/Register.js:58
 msgid "Nome"
 msgstr "Name"
 
-#: src/components/NationalRanking/Player/RankChange.js:12
+#: src/views/NationalRanking/Player/RankChange.js:12
 msgid "Nova entrada para o ranking"
 msgstr "New appearance in the ranking"
 
-#: src/components/Forbidden.js:10
+#: src/views/Forbidden.js:10
 msgid "Não autorizado"
 msgstr "Non authorized"
 
-#: src/components/RecoverPassword.js:83
+#: src/views/RecoverPassword.js:80
 msgid "Não existe nenhum registo com este e-mail."
 msgstr "There is no registration with this e-mail."
 
-#: src/components/ControlPanel/Ranking.js:64
+#: src/views/NationalRanking.js:174
+msgid "Não existe ranking nacional disponível."
+msgstr "There is no national ranking available."
+
+#: src/views/ControlPanel/Ranking.js:78
 msgid "Não foi possível abrir a edição das provas mensais."
 msgstr "Month events edit page could not be loaded."
 
-#: src/components/ControlPanel/Profile.js:55
+#: src/views/ControlPanel/Profile.js:55
 msgid "Não foi possível actualizar o perfil."
 msgstr "Profile could not be update."
 
-#: src/components/ControlPanel/IndividualPlayers.js:62
-#: src/components/ControlPanel/IndividualPlayers.js:65
+#: src/views/ControlPanel/Ranking/IndividualPlayers.js:62
+#: src/views/ControlPanel/Ranking/IndividualPlayers.js:65
 msgid "Não foi possível apagar ao jogador."
 msgstr "Player could not be deleted."
 
-#: src/components/ControlPanel/IndividualPlayers.js:56
+#: src/views/ControlPanel/Ranking/IndividualPlayers.js:56
 msgid "Não foi possível apagar ao jogador.<0/>O jogador tem resultados associados."
 msgstr "Player could not be deleted.<0/>This player has saved results."
 
-#: src/components/ControlPanel/Ranking.js:80
+#: src/views/ControlPanel/Ranking.js:94
 msgid "Não foi possível apagar as provas mensais."
 msgstr "Month events could not be deleted."
 
-#: src/components/ControlPanel/Ranking/Form.js:110
-#: src/components/ControlPanel/Ranking/Form.js:121
+#: src/views/ControlPanel/Ranking/Form.js:110
+#: src/views/ControlPanel/Ranking/Form.js:126
 msgid "Não foi possível gravar as provas mensais."
 msgstr "Month events could not be saved."
 
-#: src/components/ControlPanel/IndividualPlayers/Form.js:90
-#: src/components/ControlPanel/IndividualPlayers/Form.js:99
+#: src/views/ControlPanel/IndividualPlayers/Form.js:90
+#: src/views/ControlPanel/IndividualPlayers/Form.js:99
 msgid "Não foi possível gravar o jogador."
 msgstr "Player could not be saved."
 
-#: src/components/Forbidden.js:14
+#: src/views/Forbidden.js:11
 msgid "Não tens permissões para aceder a esta página."
 msgstr "You have no permission to see this page."
 
-#: src/components/ResetPassword.js:115
+#: src/views/ResetPassword.js:115
 msgid "O pedido de redefinição de palavra-passe expirou"
 msgstr "Your password change request expired"
 
-#: src/components/ResetPassword.js:120
+#: src/views/ResetPassword.js:120
 msgid "O pedido de redefinição de palavra-passe é inválido"
 msgstr "Your password change request is not valid"
 
-#: src/utils/Modal.js:36
+#: src/components/Modal.js:36
 msgid "OK"
 msgstr "OK"
 
-#: src/components/ControlPanel.js:44
 #: src/partials/Header.js:113
 #: src/routes.js:46
+#: src/views/ControlPanel.js:41
 msgid "Painel de controlo"
 msgstr "Control panel"
 
-#: src/components/ControlPanel/Profile.js:144
-#: src/components/Login.js:79
-#: src/components/Register.js:135
-#: src/components/ResetPassword.js:62
+#: src/views/ControlPanel/Profile.js:144
+#: src/views/Login.js:75
+#: src/views/Register.js:133
+#: src/views/ResetPassword.js:60
 msgid "Palavra-passe"
 msgstr "Password"
 
-#: src/components/ResetPassword.js:145
-msgid "Palavra-passe alterada com sucesso.<0/>Clica em \"Entrar\" e usa as novas credenciais."
-msgstr "Password changed successfully.<0/>Click on \"Login\" and use the new credentials."
+#: src/views/ResetPassword.js:146
+msgid "Palavra-passe alterada com sucesso.<0/>Clica <1>aqui</1> e usa as novas credenciais."
+msgstr "Password changed successfully.<0/>Click <1>here</1> and use the new credentials."
 
-#: src/components/NationalRanking/Legend.js:85
+#: src/views/NationalRanking/Legend.js:85
 msgid "Para mais pormenores de como o ranking é calculado deve ser consultado este artigo:"
 msgstr "More details about ranking calculation can be found in this article (only in portuguese):"
 
-#: src/components/ControlPanel.js:15
+#: src/views/ControlPanel.js:15
 msgid "Perfil"
 msgstr "Profile"
 
-#: src/components/ControlPanel/Profile.js:42
+#: src/views/ControlPanel/Profile.js:42
 msgid "Perfil actualizado com sucesso."
 msgstr "Profile successfully updated."
 
-#: src/components/NationalRanking.js:208
+#: src/views/NationalRanking.js:231
 msgid "Pontos"
 msgstr "Points"
 
-#: src/components/ControlPanel/Ranking/Form.js:117
+#: src/views/ControlPanel/Ranking/Form.js:121
 msgid "Provas mensais actualizadas com sucesso."
 msgstr "Month events successfully updated."
 
-#: src/components/ControlPanel/Ranking.js:77
+#: src/views/ControlPanel/Ranking.js:91
 msgid "Provas mensais apagadas com sucesso."
 msgstr "Month events successfully deleted."
 
-#: src/components/ControlPanel/Ranking/Form.js:105
+#: src/views/ControlPanel/Ranking/Form.js:105
 msgid "Provas mensais criadas com sucesso."
 msgstr "Month events successfully created."
 
-#: src/components/NoMatch.js:10
 #: src/routes.js:56
+#: src/views/NoMatch.js:10
 msgid "Página não encontrada"
 msgstr "Page not found"
 
-#: src/components/NationalRanking.js:250
+#: src/views/NationalRanking.js:273
 msgid "Quizzes"
 msgstr "Quizzes"
 
-#: src/components/ControlPanel.js:19
+#: src/views/ControlPanel.js:19
 msgid "Ranking"
 msgstr "Ranking"
 
 #: src/partials/Header.js:117
 #: src/routes.js:51
+#: src/views/NationalRanking.js:169
+#: src/views/NationalRanking.js:188
 msgid "Ranking Nacional"
 msgstr "National Ranking"
 
-#: src/components/NationalRanking/Legend.js:94
+#: src/views/NationalRanking/Legend.js:94
 msgid "Ranking Nacional de Quiz"
 msgstr "Quiz National Ranking"
 
-#: src/components/NationalRanking.js:165
-msgid "Ranking de {0} de {1}"
-msgstr "{0} {1} ranking"
-
-#: src/components/Login.js:122
-#: src/components/RecoverPassword.js:51
 #: src/routes.js:26
+#: src/views/Login.js:119
+#: src/views/RecoverPassword.js:48
 msgid "Recuperar palavra-passe"
 msgstr "Recover password"
 
-#: src/components/ResetPassword.js:54
 #: src/routes.js:31
+#: src/views/ResetPassword.js:52
 msgid "Redefinir palavra-passe"
 msgstr "Reset password"
 
-#: src/components/Register.js:198
 #: src/partials/Header.js:84
+#: src/views/Register.js:199
 msgid "Registar"
 msgstr "Register"
 
-#: src/components/Register.js:52
 #: src/routes.js:36
+#: src/views/Register.js:50
 msgid "Registo"
 msgstr "Registration"
 
-#: src/components/ControlPanel/Ranking/Form/Event/Player.js:78
-#: src/components/ControlPanel/Ranking/Form/Event/Player.js:87
+#: src/views/ControlPanel/Ranking/Form/Event/Player.js:78
+#: src/views/ControlPanel/Ranking/Form/Event/Player.js:87
 msgid "Remover jogador"
 msgstr "Delete player"
 
-#: src/components/ControlPanel/Ranking/Form/Event.js:119
-#: src/components/ControlPanel/Ranking/Form/Event.js:142
+#: src/views/ControlPanel/Ranking/Form/Event.js:119
+#: src/views/ControlPanel/Ranking/Form/Event.js:142
 msgid "Remover prova"
 msgstr "Delete event"
 
-#: src/components/NationalRanking/Legend.js:34
+#: src/views/NationalRanking/Legend.js:34
 msgid "Resultado da Inquizição do mês xx"
 msgstr "Inquizição result from month xx"
 
-#: src/components/NationalRanking/Legend.js:40
+#: src/views/NationalRanking/Legend.js:40
 msgid "Resultado do Hot100 do mês xx"
 msgstr "Hot100 result from month xx"
 
-#: src/components/NationalRanking/Legend.js:46
+#: src/views/NationalRanking/Legend.js:46
 msgid "Resultado do Squizzed do mês xx"
 msgstr "Squizzed result from month xx"
 
-#: src/components/NationalRanking/Legend.js:22
+#: src/views/NationalRanking/Legend.js:22
 msgid "Resultado no Campeonato Europeu"
 msgstr "European Quizzing Championship result"
 
-#: src/components/NationalRanking/Legend.js:16
+#: src/views/NationalRanking/Legend.js:16
 msgid "Resultado no Campeonato Mundial"
 msgstr "World Quizzing Championship result"
 
-#: src/components/NationalRanking/Legend.js:28
+#: src/views/NationalRanking/Legend.js:28
 msgid "Resultado no Campeonato Nacional"
 msgstr "National Championship result"
 
@@ -428,86 +430,96 @@ msgstr "National Championship result"
 msgid "Sair"
 msgstr "Logout"
 
-#: src/components/ControlPanel/Ranking/Form/Event.js:163
+#: src/views/ControlPanel/Ranking/Form/Event.js:163
 msgid "Selecciona os jogadores que jogaram esta prova:"
 msgstr "Select the players that played this event:"
 
-#: src/components/ControlPanel/IndividualPlayers/List.js:79
-#: src/components/ControlPanel/Ranking/List.js:66
+#: src/views/ControlPanel/IndividualPlayers/List.js:79
+#: src/views/ControlPanel/Ranking/List.js:66
 msgid "Sem registos"
 msgstr "No records"
 
-#: src/components/NationalRanking.js:222
+#: src/views/NationalRanking.js:245
 msgid "Soma"
 msgstr "Sum"
 
-#: src/components/ControlPanel/Ranking/Form/options.js:22
+#: src/views/ControlPanel/Ranking/Form/options.js:22
 msgid "Squizzed"
 msgstr "Squizzed"
 
-#: src/components/NationalRanking/Player/RankChange.js:22
+#: src/views/NationalRanking/Player/RankChange.js:22
 msgid "Subiu"
 msgstr "Move up"
 
-#: src/components/RecoverPassword.js:100
-#: src/components/ResetPassword.js:139
+#: src/views/RecoverPassword.js:98
+#: src/views/ResetPassword.js:140
 msgid "Submeter"
 msgstr "Submit"
 
-#: src/components/ControlPanel/Ranking.js:141
+#: src/views/ControlPanel/Ranking.js:169
 msgid "Tens a certeza que queres apagar as provas deste mês e os resultados associados?"
 msgstr "Do you really want to remove this month events and their related results?"
 
-#: src/components/ControlPanel/Ranking/Form/Event.js:144
+#: src/views/ControlPanel/Ranking/Form/Event.js:144
 msgid "Tens a certeza que queres apagar esta prova e todos os resultados associados?"
 msgstr "Do you really want to delete this event and its related results?"
 
-#: src/components/ControlPanel/Ranking/Form/Event/Player.js:89
+#: src/views/ControlPanel/Ranking/Form/Event/Player.js:89
 msgid "Tens a certeza que queres apagar este jogador e o resultado associado?"
 msgstr "Do you really want to delete this player and the related result?"
 
-#: src/components/ControlPanel/IndividualPlayers.js:117
+#: src/views/ControlPanel/Ranking/IndividualPlayers.js:117
 msgid "Tens a certeza que queres apagar este jogador?"
 msgstr "Do you really want to delete this player?"
 
-#: src/components/ControlPanel/IndividualPlayers/Form.js:257
-#: src/components/ControlPanel/Ranking/Form.js:278
+#: src/views/ControlPanel/IndividualPlayers/Form.js:257
+#: src/views/ControlPanel/Ranking/Form.js:283
 msgid "Todos os dados deste formulário serão descartados.<0/>Tens a certeza que queres voltar à listagem?"
 msgstr "All form data will be discarded.<0/>Do you really want to proceed?"
 
-#: src/components/Register.js:204
-msgid "Utilizador registado com sucesso.<0/>Clica em \"Entrar\" e usa as tuas credenciais."
-msgstr "User registerd successfully.<0/>Click on \"Login\" and use your credentials."
+#: src/views/Register.js:205
+msgid "Utilizador registado com sucesso.<0/>Clica <1>aqui</1> e usa as tuas credenciais."
+msgstr "User registerd successfully.<0/>Click <1>here</1> and use your credentials."
 
 #: src/partials/Header.js:125
 msgid "Versão 4.0"
 msgstr "Version 4.0"
 
-#: src/components/ControlPanel/IndividualPlayers/Form.js:138
-#: src/components/ControlPanel/IndividualPlayers/Form.js:255
-#: src/components/ControlPanel/Ranking/Form.js:149
-#: src/components/ControlPanel/Ranking/Form.js:276
+#: src/views/ControlPanel/IndividualPlayers/Form.js:138
+#: src/views/ControlPanel/IndividualPlayers/Form.js:255
+#: src/views/ControlPanel/Ranking/Form.js:154
+#: src/views/ControlPanel/Ranking/Form.js:281
 msgid "Voltar à listagem"
 msgstr "Back to list"
 
-#: src/components/ControlPanel/Profile.js:145
+#: src/views/Forbidden.js:16
+#: src/views/NoMatch.js:16
+msgid "Voltar à página inicial"
+msgstr "Return to homepage"
+
+#: src/views/ControlPanel/Profile.js:145
 msgid "deixa em branco para não alterar"
 msgstr "leave it blank to keep"
 
-#: src/components/NationalRanking/Legend.js:72
+#: src/views/NationalRanking/Legend.js:72
 msgid "melhor"
 msgstr "best"
 
-#: src/components/NationalRanking/Player/RankChange.js:23
-#: src/components/NationalRanking/Player/RankChange.js:35
+#: src/views/NationalRanking/Player/RankChange.js:23
+#: src/views/NationalRanking/Player/RankChange.js:35
 msgid "posição"
 msgstr "position"
 
-#: src/components/NationalRanking/Player/RankChange.js:23
-#: src/components/NationalRanking/Player/RankChange.js:35
+#: src/views/NationalRanking/Player/RankChange.js:23
+#: src/views/NationalRanking/Player/RankChange.js:35
 msgid "posições"
 msgstr "positions"
 
-#: src/components/NationalRanking/Legend.js:66
+#: src/views/NationalRanking/Legend.js:66
 msgid "{0, selectordinal, two {2º} few {3º} other {#º}}"
 msgstr "{0, selectordinal, two {2nd} few {3nd} other {#rd}}"
+
+#: src/views/NationalRanking.js:190
+#: src/views/NationalRanking.js:346
+msgid "{0} de {1}"
+msgstr "{0} {1}"

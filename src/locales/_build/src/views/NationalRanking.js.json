@@ -1,0 +1,90 @@
+{
+  "Erro de servidor. Tenta mais tarde.": {
+    "origin": [
+      [
+        "src/views/NationalRanking.js",
+        149
+      ]
+    ]
+  },
+  "Ranking Nacional": {
+    "origin": [
+      [
+        "src/views/NationalRanking.js",
+        169
+      ],
+      [
+        "src/views/NationalRanking.js",
+        188
+      ]
+    ]
+  },
+  "Não existe ranking nacional disponível.": {
+    "origin": [
+      [
+        "src/views/NationalRanking.js",
+        174
+      ]
+    ]
+  },
+  "{0} de {1}": {
+    "origin": [
+      [
+        "src/views/NationalRanking.js",
+        190
+      ],
+      [
+        "src/views/NationalRanking.js",
+        346
+      ]
+    ]
+  },
+  "Nome": {
+    "origin": [
+      [
+        "src/views/NationalRanking.js",
+        227
+      ]
+    ]
+  },
+  "Pontos": {
+    "origin": [
+      [
+        "src/views/NationalRanking.js",
+        231
+      ]
+    ]
+  },
+  "Soma": {
+    "origin": [
+      [
+        "src/views/NationalRanking.js",
+        245
+      ]
+    ]
+  },
+  "Média": {
+    "origin": [
+      [
+        "src/views/NationalRanking.js",
+        259
+      ]
+    ]
+  },
+  "Quizzes": {
+    "origin": [
+      [
+        "src/views/NationalRanking.js",
+        273
+      ]
+    ]
+  },
+  "Arquivo": {
+    "origin": [
+      [
+        "src/views/NationalRanking.js",
+        340
+      ]
+    ]
+  }
+}

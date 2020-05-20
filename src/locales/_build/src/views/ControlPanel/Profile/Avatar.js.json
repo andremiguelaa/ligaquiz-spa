@@ -1,0 +1,58 @@
+{
+  "Imagem de perfil actualizada com sucesso.": {
+    "origin": [
+      [
+        "src/views/ControlPanel/Profile/Avatar.js",
+        41
+      ]
+    ]
+  },
+  "Imagem de perfil": {
+    "origin": [
+      [
+        "src/views/ControlPanel/Profile/Avatar.js",
+        66
+      ]
+    ]
+  },
+  "Escolhe uma imagem": {
+    "origin": [
+      [
+        "src/views/ControlPanel/Profile/Avatar.js",
+        83
+      ]
+    ]
+  },
+  "Máximo 200 KB": {
+    "origin": [
+      [
+        "src/views/ControlPanel/Profile/Avatar.js",
+        90
+      ]
+    ]
+  },
+  "Ficheiro inválido.": {
+    "origin": [
+      [
+        "src/views/ControlPanel/Profile/Avatar.js",
+        101
+      ]
+    ]
+  },
+  "Erro de servidor. Tenta mais tarde.": {
+    "origin": [
+      [
+        "src/views/ControlPanel/Profile/Avatar.js",
+        103
+      ]
+    ]
+  },
+  "Gravar": {
+    "origin": [
+      [
+        "src/views/ControlPanel/Profile/Avatar.js",
+        114
+      ]
+    ]
+  }
+}

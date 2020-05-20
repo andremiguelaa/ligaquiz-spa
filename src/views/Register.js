@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 import classNames from 'classnames';
 
+import PageHeader from 'components/PageHeader';
 import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
 import Forbidden from './Forbidden';
@@ -12,7 +14,7 @@ const Register = () => {
     surname: '',
     email: '',
     password: '',
-    password2: ''
+    password2: '',
   });
 
   const [error, setError] = useState(null);
@@ -25,7 +27,7 @@ const Register = () => {
     return <Forbidden />;
   }
 
-  const handleSubmit = event => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     setSubmitting(true);
     setError(null);
@@ -33,7 +35,7 @@ const Register = () => {
       .then(() => {
         setSuccess(true);
       })
-      .catch(error => {
+      .catch((error) => {
         try {
           setError(error.response.data);
         } catch (error) {
@@ -44,15 +46,11 @@ const Register = () => {
   };
 
   return (
-    <div className="columns">
-      <div className="column is-6-widescreen is-offset-3-widescreen is-8-tablet is-offset-2-tablet">
-        <article className={`message ${success && `is-success`}`}>
-          <div className="message-header">
-            <h1>
-              <Trans>Registo</Trans>
-            </h1>
-          </div>
-          <div className="message-body">
+    <>
+      <PageHeader title={<Trans>Registo</Trans>} />
+      <div className="section content">
+        <div className="columns">
+          <div className="column is-4-widescreen is-6-tablet">
             {!success ? (
               <form onSubmit={handleSubmit}>
                 <div className="field">
@@ -65,10 +63,10 @@ const Register = () => {
                       required
                       maxLength={255}
                       className="input"
-                      onChange={event => {
+                      onChange={(event) => {
                         setformData({
                           ...formData,
-                          name: event.target.value
+                          name: event.target.value,
                         });
                       }}
                     />
@@ -87,10 +85,10 @@ const Register = () => {
                       required
                       maxLength={255}
                       className="input"
-                      onChange={event => {
+                      onChange={(event) => {
                         setformData({
                           ...formData,
-                          surname: event.target.value
+                          surname: event.target.value,
                         });
                       }}
                     />
@@ -108,12 +106,12 @@ const Register = () => {
                       type="email"
                       required
                       className={classNames('input', {
-                        'is-danger': error && error.data && error.data.email
+                        'is-danger': error && error.data && error.data.email,
                       })}
-                      onChange={event => {
+                      onChange={(event) => {
                         setformData({
                           ...formData,
-                          email: event.target.value
+                          email: event.target.value,
                         });
                       }}
                     />
@@ -142,10 +140,10 @@ const Register = () => {
                       maxLength={255}
                       className="input"
                       autoComplete="new-password"
-                      onChange={event => {
+                      onChange={(event) => {
                         setformData({
                           ...formData,
-                          password: event.target.value
+                          password: event.target.value,
                         });
                       }}
                     />
@@ -164,13 +162,15 @@ const Register = () => {
                       required
                       minLength={6}
                       maxLength={255}
-                      className={`input ${formData.password2.length &&
+                      className={`input ${
+                        formData.password2.length &&
                         formData.password !== formData.password2 &&
-                        'is-danger'}`}
-                      onChange={event => {
+                        'is-danger'
+                      }`}
+                      onChange={(event) => {
                         setformData({
                           ...formData,
-                          password2: event.target.value
+                          password2: event.target.value,
                         });
                       }}
                     />
@@ -189,8 +189,9 @@ const Register = () => {
                 <div className="field">
                   <div className="control">
                     <button
-                      className={`button is-primary ${submitting &&
-                        'is-loading'}`}
+                      className={`button is-primary ${
+                        submitting && 'is-loading'
+                      }`}
                       disabled={
                         submitting || formData.password !== formData.password2
                       }
@@ -204,13 +205,13 @@ const Register = () => {
               <Trans>
                 Utilizador registado com sucesso.
                 <br />
-                Clica em "Entrar" e usa as tuas credenciais.
+                Clica <Link to="/login/">aqui</Link> e usa as tuas credenciais.
               </Trans>
             )}
           </div>
-        </article>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

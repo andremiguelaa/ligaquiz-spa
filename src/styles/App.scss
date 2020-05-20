@@ -15,6 +15,7 @@ main.container {
   overflow: hidden;
 }
 
+.hero-body,
 .section {
   @include mobile {
     padding: 3rem 0.5rem;

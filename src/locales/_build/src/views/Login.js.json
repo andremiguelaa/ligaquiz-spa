@@ -1,0 +1,54 @@
+{
+  "Entrar": {
+    "origin": [
+      [
+        "src/views/Login.js",
+        47
+      ],
+      [
+        "src/views/Login.js",
+        114
+      ]
+    ]
+  },
+  "E-Mail": {
+    "origin": [
+      [
+        "src/views/Login.js",
+        54
+      ]
+    ]
+  },
+  "Palavra-passe": {
+    "origin": [
+      [
+        "src/views/Login.js",
+        75
+      ]
+    ]
+  },
+  "Credenciais erradas.": {
+    "origin": [
+      [
+        "src/views/Login.js",
+        99
+      ]
+    ]
+  },
+  "Erro de servidor. Tenta mais tarde.": {
+    "origin": [
+      [
+        "src/views/Login.js",
+        101
+      ]
+    ]
+  },
+  "Recuperar palavra-passe": {
+    "origin": [
+      [
+        "src/views/Login.js",
+        119
+      ]
+    ]
+  }
+}

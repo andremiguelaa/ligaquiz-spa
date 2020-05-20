@@ -1,20 +1,22 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 
 import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
+import PageHeader from 'components/PageHeader';
 import Forbidden from './Forbidden';
 
 const ResetPassword = ({
   match: {
-    params: { token }
-  }
+    params: { token },
+  },
 }) => {
   const [{ user }] = useStateValue();
   const [formData, setformData] = useState({
     password: '',
     password2: '',
-    token: token
+    token: token,
   });
 
   const [errorMessage, setErrorMessage] = useState(null);
@@ -25,7 +27,7 @@ const ResetPassword = ({
     return <Forbidden />;
   }
 
-  const handleSubmit = event => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     setSubmitting(true);
     setErrorMessage(null);
@@ -33,7 +35,7 @@ const ResetPassword = ({
       .then(() => {
         setSuccess(true);
       })
-      .catch(error => {
+      .catch((error) => {
         try {
           setErrorMessage(error.response.data.message);
         } catch (error) {
@@ -46,15 +48,11 @@ const ResetPassword = ({
   };
 
   return (
-    <div className="columns">
-      <div className="column is-6-widescreen is-offset-3-widescreen is-8-tablet is-offset-2-tablet">
-        <article className={`message ${success && `is-success`}`}>
-          <div className="message-header">
-            <h1>
-              <Trans>Redefinir palavra-passe</Trans>
-            </h1>
-          </div>
-          <div className="message-body">
+    <>
+      <PageHeader title={<Trans>Redefinir palavra-passe</Trans>} />
+      <div className="section content">
+        <div className="columns">
+          <div className="column is-4-widescreen is-6-tablet">
             {!success ? (
               <form onSubmit={handleSubmit}>
                 <div className="field">
@@ -69,10 +67,10 @@ const ResetPassword = ({
                       required
                       minLength={6}
                       maxLength={255}
-                      onChange={event => {
+                      onChange={(event) => {
                         setformData({
                           ...formData,
-                          password: event.target.value
+                          password: event.target.value,
                         });
                       }}
                     />
@@ -92,13 +90,15 @@ const ResetPassword = ({
                       required
                       minLength={6}
                       maxLength={255}
-                      className={`input ${formData.password2.length &&
+                      className={`input ${
+                        formData.password2.length &&
                         formData.password !== formData.password2 &&
-                        'is-danger'}`}
-                      onChange={event => {
+                        'is-danger'
+                      }`}
+                      onChange={(event) => {
                         setformData({
                           ...formData,
-                          password2: event.target.value
+                          password2: event.target.value,
                         });
                       }}
                     />
@@ -120,7 +120,7 @@ const ResetPassword = ({
                           <Trans>
                             O pedido de redefinição de palavra-passe é inválido
                           </Trans>
-                        )
+                        ),
                       }[errorMessage] || (
                         <Trans>Erro de servidor. Tenta mais tarde.</Trans>
                       )}
@@ -130,8 +130,9 @@ const ResetPassword = ({
                 <div className="field is-grouped">
                   <div className="control">
                     <button
-                      className={`button is-primary ${submitting &&
-                        'is-loading'}`}
+                      className={`button is-primary ${
+                        submitting && 'is-loading'
+                      }`}
                       disabled={
                         submitting || formData.password !== formData.password2
                       }
@@ -145,13 +146,13 @@ const ResetPassword = ({
               <Trans>
                 Palavra-passe alterada com sucesso.
                 <br />
-                Clica em "Entrar" e usa as novas credenciais.
+                Clica <Link to="/login/">aqui</Link> e usa as novas credenciais.
               </Trans>
             )}
           </div>
-        </article>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

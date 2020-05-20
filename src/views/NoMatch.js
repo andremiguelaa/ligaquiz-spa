@@ -1,21 +1,23 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 
+import PageHeader from 'components/PageHeader';
+
 const NoMatch = () => (
-  <div className="columns">
-    <div className="column is-6-widescreen is-offset-3-widescreen is-8-tablet is-offset-2-tablet">
-      <article className="message">
-        <div className="message-header">
-          <h1>
-            <Trans>Página não encontrada</Trans>
-          </h1>
-        </div>
-        <div className="message-body">
-          <Trans>Esta página não existe.</Trans>
-        </div>
-      </article>
+  <>
+    <PageHeader
+      title={<Trans>Página não encontrada</Trans>}
+      subtitle={<Trans>Esta página não existe.</Trans>}
+    />
+    <div className="section content">
+      <p>
+        <Link to="/">
+          <Trans>Voltar à página inicial</Trans>
+        </Link>
+      </p>
     </div>
-  </div>
+  </>
 );
 
 export default NoMatch;

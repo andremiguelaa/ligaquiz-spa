@@ -5,6 +5,7 @@ import { get, isEmpty } from 'lodash';
 import classNames from 'classnames';
 import ScrollContainer from 'react-indiana-drag-scroll';
 
+import PageHeader from 'components/PageHeader';
 import Loading from 'components/Loading';
 import Error from 'components/Error';
 import NoMatch from './NoMatch';
@@ -182,181 +183,181 @@ const NationalRanking = ({
   const shownMonth = month || rankingList[0];
 
   return (
-    <article className="message">
-      <div className="message-header">
-        <h1>
+    <>
+      <PageHeader
+        title={<Trans>Ranking Nacional</Trans>}
+        subtitle={
           <Trans>
-            Ranking de{' '}
             {getLocaleMonth(language, parseInt(shownMonth.substring(5, 7)))} de{' '}
             {shownMonth.substring(0, 4)}
           </Trans>
-        </h1>
-      </div>
-      <div className="message-body">
-        <div className="content">
-          <div className={classes.tableWrapper}>
-            <ScrollContainer
-              className={classNames('table-container', classes.tableContainer)}
-            >
-              <table className="table">
-                <thead>
-                  <tr>
-                    <th
-                      className={classNames(
-                        classes.rankCell,
-                        'has-background-white'
-                      )}
-                    >
-                      #
-                    </th>
-                    <th
-                      className={classNames(
-                        classes.changeCell,
-                        'has-background-white',
-                        'has-text-centered'
-                      )}
-                    >
-                      ±
-                    </th>
-                    <th
-                      className={classNames(
-                        classes.userCell,
-                        'has-background-white'
-                      )}
-                    >
-                      <Trans>Nome</Trans>
-                    </th>
-                    <th className={classes.sortable}>
-                      <button onClick={() => sortRankingByPath('score')}>
-                        <Trans>Pontos</Trans>
-                        <span className="icon">
-                          <i
-                            className={classNames('fa', {
-                              'fa-sort': order.path !== 'score',
-                              [`fa-sort-numeric-${order.direction}`]:
-                                order.path === 'score',
-                            })}
-                          ></i>
-                        </span>
-                      </button>
-                    </th>
-                    <th className={classes.sortable}>
-                      <button onClick={() => sortRankingByPath('sum')}>
-                        <Trans>Soma</Trans>
-                        <span className="icon">
-                          <i
-                            className={classNames('fa', {
-                              'fa-sort': order.path !== 'sum',
-                              [`fa-sort-numeric-${order.direction}`]:
-                                order.path === 'sum',
-                            })}
-                          ></i>
-                        </span>
-                      </button>
-                    </th>
-                    <th className={classes.sortable}>
-                      <button onClick={() => sortRankingByPath('average')}>
-                        <Trans>Média</Trans>
-                        <span className="icon">
-                          <i
-                            className={classNames('fa', {
-                              'fa-sort': order.path !== 'average',
-                              [`fa-sort-numeric-${order.direction}`]:
-                                order.path === 'average',
-                            })}
-                          ></i>
-                        </span>
-                      </button>
-                    </th>
-                    <th className={classes.sortable}>
-                      <button onClick={() => sortRankingByPath('quiz_count')}>
-                        <Trans>Quizzes</Trans>
-                        <span className="icon">
-                          <i
-                            className={classNames('fa', {
-                              'fa-sort': order.path !== 'quiz_count',
-                              [`fa-sort-numeric-${order.direction}`]:
-                                order.path === 'quiz_count',
-                            })}
-                          ></i>
-                        </span>
-                      </button>
-                    </th>
-                    {quizzesOrder.map(
-                      (quizType) =>
-                        quizzes[quizType] &&
-                        quizzes[quizType].map((date) => (
-                          <th
-                            key={`${quizType}-${date}`}
-                            className={classes.sortable}
-                          >
-                            <button
-                              onClick={() =>
-                                sortRankingByPath(
-                                  `quizzes.${quizType}.${date}.score`
-                                )
-                              }
-                            >
-                              {quizTypeAbbr[quizType].abbr}
-                              {quizTypeAbbr[quizType].includeMonth &&
-                                parseInt(date.substring(5, 7))}
-                              <span className="icon">
-                                <i
-                                  className={classNames('fa', {
-                                    'fa-sort':
-                                      order.path !==
-                                      `quizzes.${quizType}.${date}.score`,
-                                    [`fa-sort-numeric-${order.direction}`]:
-                                      order.path ===
-                                      `quizzes.${quizType}.${date}.score`,
-                                  })}
-                                ></i>
-                              </span>
-                            </button>
-                          </th>
-                        ))
+        }
+      />
+      <div className="section content">
+        <div className={classes.tableWrapper}>
+          <ScrollContainer
+            className={classNames('table-container', classes.tableContainer)}
+          >
+            <table className="table">
+              <thead>
+                <tr>
+                  <th
+                    className={classNames(
+                      classes.rankCell,
+                      'has-background-white'
                     )}
-                  </tr>
-                </thead>
-                <tbody>
-                  {ranking.map((player) => {
-                    player.data = players[player.individual_quiz_player_id];
-                    return (
-                      <Player
-                        key={player.individual_quiz_player_id}
-                        player={player}
-                        quizzes={quizzes}
-                      />
-                    );
-                  })}
-                </tbody>
-              </table>
-            </ScrollContainer>
-          </div>
-          <Legend />
-          {rankingList.length && (
-            <>
-              <h2 className="has-text-weight-bold is-size-5">
-                <Trans>Arquivo</Trans>
-              </h2>
-              <ol className="links-list">
-                {rankingList.map((month) => (
-                  <li key={month}>
-                    <Link to={`/national-ranking/${month}`}>
+                  >
+                    #
+                  </th>
+                  <th
+                    className={classNames(
+                      classes.changeCell,
+                      'has-background-white',
+                      'has-text-centered'
+                    )}
+                  >
+                    ±
+                  </th>
+                  <th
+                    className={classNames(
+                      classes.userCell,
+                      'has-background-white'
+                    )}
+                  >
+                    <Trans>Nome</Trans>
+                  </th>
+                  <th className={classes.sortable}>
+                    <button onClick={() => sortRankingByPath('score')}>
+                      <Trans>Pontos</Trans>
+                      <span className="icon">
+                        <i
+                          className={classNames('fa', {
+                            'fa-sort': order.path !== 'score',
+                            [`fa-sort-numeric-${order.direction}`]:
+                              order.path === 'score',
+                          })}
+                        ></i>
+                      </span>
+                    </button>
+                  </th>
+                  <th className={classes.sortable}>
+                    <button onClick={() => sortRankingByPath('sum')}>
+                      <Trans>Soma</Trans>
+                      <span className="icon">
+                        <i
+                          className={classNames('fa', {
+                            'fa-sort': order.path !== 'sum',
+                            [`fa-sort-numeric-${order.direction}`]:
+                              order.path === 'sum',
+                          })}
+                        ></i>
+                      </span>
+                    </button>
+                  </th>
+                  <th className={classes.sortable}>
+                    <button onClick={() => sortRankingByPath('average')}>
+                      <Trans>Média</Trans>
+                      <span className="icon">
+                        <i
+                          className={classNames('fa', {
+                            'fa-sort': order.path !== 'average',
+                            [`fa-sort-numeric-${order.direction}`]:
+                              order.path === 'average',
+                          })}
+                        ></i>
+                      </span>
+                    </button>
+                  </th>
+                  <th className={classes.sortable}>
+                    <button onClick={() => sortRankingByPath('quiz_count')}>
+                      <Trans>Quizzes</Trans>
+                      <span className="icon">
+                        <i
+                          className={classNames('fa', {
+                            'fa-sort': order.path !== 'quiz_count',
+                            [`fa-sort-numeric-${order.direction}`]:
+                              order.path === 'quiz_count',
+                          })}
+                        ></i>
+                      </span>
+                    </button>
+                  </th>
+                  {quizzesOrder.map(
+                    (quizType) =>
+                      quizzes[quizType] &&
+                      quizzes[quizType].map((date) => (
+                        <th
+                          key={`${quizType}-${date}`}
+                          className={classes.sortable}
+                        >
+                          <button
+                            onClick={() =>
+                              sortRankingByPath(
+                                `quizzes.${quizType}.${date}.score`
+                              )
+                            }
+                          >
+                            {quizTypeAbbr[quizType].abbr}
+                            {quizTypeAbbr[quizType].includeMonth &&
+                              parseInt(date.substring(5, 7))}
+                            <span className="icon">
+                              <i
+                                className={classNames('fa', {
+                                  'fa-sort':
+                                    order.path !==
+                                    `quizzes.${quizType}.${date}.score`,
+                                  [`fa-sort-numeric-${order.direction}`]:
+                                    order.path ===
+                                    `quizzes.${quizType}.${date}.score`,
+                                })}
+                              ></i>
+                            </span>
+                          </button>
+                        </th>
+                      ))
+                  )}
+                </tr>
+              </thead>
+              <tbody>
+                {ranking.map((player) => {
+                  player.data = players[player.individual_quiz_player_id];
+                  return (
+                    <Player
+                      key={player.individual_quiz_player_id}
+                      player={player}
+                      quizzes={quizzes}
+                    />
+                  );
+                })}
+              </tbody>
+            </table>
+          </ScrollContainer>
+        </div>
+        <Legend />
+        {rankingList.length && (
+          <>
+            <h2 className="has-text-weight-bold is-size-5">
+              <Trans>Arquivo</Trans>
+            </h2>
+            <ol className="links-list">
+              {rankingList.map((month) => (
+                <li key={month}>
+                  <Link to={`/national-ranking/${month}`}>
+                    <Trans>
                       {getLocaleMonth(
                         language,
                         parseInt(month.substring(5, 7))
                       )}{' '}
                       de {month.substring(0, 4)}
-                    </Link>
-                  </li>
-                ))}
-              </ol>
-            </>
-          )}
-        </div>
+                    </Trans>
+                  </Link>
+                </li>
+              ))}
+            </ol>
+          </>
+        )}
       </div>
-    </article>
+    </>
   );
 };
 
