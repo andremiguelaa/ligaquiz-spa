@@ -3,7 +3,7 @@ import { Trans } from '@lingui/macro';
 import { toast } from 'react-toastify';
 
 import ApiRequest from 'utils/ApiRequest';
-import Modal from 'utils/Modal';
+import Modal from 'components/Modal';
 import { individualQuizTypeOptions, monthListOptions } from './Form/options';
 import Event from './Form/Event';
 

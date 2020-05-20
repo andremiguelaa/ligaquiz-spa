@@ -3,7 +3,7 @@ import Cookies from 'js-cookie';
 
 import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
-import Loading from 'utils/Loading';
+import Loading from 'components/Loading';
 import Forbidden from './Forbidden';
 
 const Logout = ({ history }) => {

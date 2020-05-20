@@ -1,14 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 
-import EmptyState from 'utils/EmptyState';
+import EmptyState from 'components/EmptyState';
 
-const List = ({
-  individualQuizPlayers,
-  setPage,
-  editPlayer,
-  setPlayerToDelete,
-}) => {
+const List = ({ monthList, setPage, editMonth, setMonthToDelete }) => {
   return (
     <>
       <button onClick={() => setPage('add')} className="button is-primary">
@@ -16,17 +12,17 @@ const List = ({
           <i className="fa fa-plus"></i>
         </span>
         <span>
-          <Trans>Adicionar jogador</Trans>
+          <Trans>Adicionar provas mensais</Trans>
         </span>
       </button>
       <br />
       <br />
-      {individualQuizPlayers.length ? (
+      {monthList.length ? (
         <table className="table is-fullwidth is-hoverable is-striped">
           <thead>
             <tr>
               <th>
-                <Trans>Jogador</Trans>
+                <Trans>Mês</Trans>
               </th>
               <th className="has-text-right">
                 <Trans>Acções</Trans>
@@ -34,26 +30,17 @@ const List = ({
             </tr>
           </thead>
           <tbody>
-            {individualQuizPlayers.map((player) => {
+            {monthList.map((entry) => {
               return (
-                <tr key={player.id}>
+                <tr key={entry}>
                   <td className="is-vertical-middle">
-                    {player.name} {player.surname}
+                    <Link to={`/national-ranking/${entry}`}>{entry}</Link>
                   </td>
                   <td>
                     <div className="buttons has-addons is-pulled-right">
                       <button
                         className="button"
-                        onClick={() =>
-                          editPlayer({
-                            id: player.id,
-                            name: player.name,
-                            surname: player.surname,
-                            ...(player.info && {
-                              user_id: player.info.id,
-                            }),
-                          })
-                        }
+                        onClick={() => editMonth(entry)}
                       >
                         <span className="icon">
                           <i className="fa fa-edit"></i>
@@ -61,7 +48,7 @@ const List = ({
                       </button>
                       <button
                         className="button is-danger"
-                        onClick={() => setPlayerToDelete(player.id)}
+                        onClick={() => setMonthToDelete(entry)}
                       >
                         <span className="icon">
                           <i className="fa fa-trash"></i>

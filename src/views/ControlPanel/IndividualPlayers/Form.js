@@ -4,9 +4,9 @@ import { toast } from 'react-toastify';
 import { omit } from 'lodash';
 
 import ApiRequest from 'utils/ApiRequest';
-import Loading from 'utils/Loading';
-import Error from 'utils/Error';
-import Modal from 'utils/Modal';
+import Loading from 'components/Loading';
+import Error from 'components/Error';
+import Modal from 'components/Modal';
 
 const Form = ({ setPage, individualQuizPlayers, initialEditData }) => {
   const [users, setUsers] = useState();

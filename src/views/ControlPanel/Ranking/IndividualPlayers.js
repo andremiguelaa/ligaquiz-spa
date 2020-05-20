@@ -3,12 +3,12 @@ import { Trans } from '@lingui/macro';
 import { toast } from 'react-toastify';
 
 import ApiRequest from 'utils/ApiRequest';
-import Loading from 'utils/Loading';
-import Error from 'utils/Error';
-import Modal from 'utils/Modal';
+import Loading from 'components/Loading';
+import Error from 'components/Error';
+import Modal from 'components/Modal';
 
-import List from './IndividualPlayers/List';
-import Form from './IndividualPlayers/Form';
+import List from '../IndividualPlayers/List';
+import Form from '../IndividualPlayers/Form';
 
 const IndividualPlayers = () => {
   const [error, setError] = useState(false);

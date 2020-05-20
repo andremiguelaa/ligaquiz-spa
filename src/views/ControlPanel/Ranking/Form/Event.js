@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Trans } from '@lingui/macro';
 
-import Modal from 'utils/Modal';
+import Modal from 'components/Modal';
 import { individualQuizTypeOptions } from './options';
 import Player from './Event/Player';
 

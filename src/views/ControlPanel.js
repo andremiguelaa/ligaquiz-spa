@@ -8,27 +8,23 @@ import NoMatch from './NoMatch';
 import Forbidden from './Forbidden';
 import Profile from './ControlPanel/Profile';
 import Ranking from './ControlPanel/Ranking';
-import IndividualPlayers from './ControlPanel/IndividualPlayers';
 
-const pages = { // TO DO: filter pages by role permissions
+const pages = {
+  // TO DO: filter pages by role permissions
   profile: {
     title: <Trans>Perfil</Trans>,
-    component: <Profile />
+    component: Profile,
   },
   ranking: {
     title: <Trans>Ranking</Trans>,
-    component: <Ranking />
-  },
-  individual_players: {
-    title: <Trans>Jogadores presenciais</Trans>,
-    component: <IndividualPlayers />
+    component: Ranking,
   },
 };
 
 const ControlPanel = ({
   match: {
-    params: { page = 'profile' }
-  }
+    params: { page = 'profile', arg1, arg2 },
+  },
 }) => {
   const [{ user }] = useStateValue();
   if (page && !Object.keys(pages).includes(page)) {
@@ -37,6 +33,7 @@ const ControlPanel = ({
   if (!user) {
     return <Forbidden />;
   }
+  const Page = pages[page].component;
   return (
     <article className="message">
       <div className="message-header">
@@ -50,7 +47,7 @@ const ControlPanel = ({
             <li
               key={key}
               className={classNames({
-                'is-active': page && page === key
+                'is-active': page && page === key,
               })}
             >
               <Link to={`/control-panel/${key}`}>{value.title}</Link>
@@ -59,7 +56,7 @@ const ControlPanel = ({
         </ul>
       </div>
       <div className="message-body">
-        <div className="content">{pages[page].component}</div>
+        <div className="content"><Page arg1={arg1} arg2={arg2} /></div>
       </div>
     </article>
   );

@@ -26,36 +26,28 @@ const App = () => {
       <I18nProvider language={language} catalogs={catalogs}>
         <BrowserRouter>
           <Header />
-          <main className="container">
-            <div className="columns">
-              <div className="column is-10-widescreen is-offset-1-widescreen">
-                <div className="section">
-                  <I18n>
-                    {({ i18n }) => (
-                      <Switch>
-                        {routes.map((route) => {
-                          const title =
-                            route.path === '/'
-                              ? catalogs[language].messages[
-                                  route.title.props.id
-                                ]
-                              : `${i18n._(t`Liga Quiz`)} | ${
-                                  catalogs[language].messages[
-                                    route.title.props.id
-                                  ]
-                                }`;
-                          const newProps = {
-                            ...route,
-                            title,
-                            exact: !!route.path,
-                          };
-                          return <RouteWithTitle key={title} {...newProps} />;
-                        })}
-                      </Switch>
-                    )}
-                  </I18n>
-                </div>
-              </div>
+          <main className="section">
+            <div className="container">
+              <I18n>
+                {({ i18n }) => (
+                  <Switch>
+                    {routes.map((route) => {
+                      const title =
+                        route.path === '/'
+                          ? catalogs[language].messages[route.title.props.id]
+                          : `${i18n._(t`Liga Quiz`)} | ${
+                              catalogs[language].messages[route.title.props.id]
+                            }`;
+                      const newProps = {
+                        ...route,
+                        title,
+                        exact: !!route.path && !route.loose,
+                      };
+                      return <RouteWithTitle key={title} {...newProps} />;
+                    })}
+                  </Switch>
+                )}
+              </I18n>
             </div>
           </main>
           <ToastContainer />

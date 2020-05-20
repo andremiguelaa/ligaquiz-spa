@@ -5,8 +5,8 @@ import { get, isEmpty } from 'lodash';
 import classNames from 'classnames';
 import ScrollContainer from 'react-indiana-drag-scroll';
 
-import Loading from 'utils/Loading';
-import Error from 'utils/Error';
+import Loading from 'components/Loading';
+import Error from 'components/Error';
 import NoMatch from './NoMatch';
 import ApiRequest from 'utils/ApiRequest';
 import getLocaleMonth from 'utils/getLocaleMonth';

@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 import { Trans } from '@lingui/macro';
 
 import { useStateValue } from 'state/State';
-import Loading from 'utils/Loading';
+import Loading from 'components/Loading';
 import ApiRequest, { setBearerToken } from 'utils/ApiRequest';
 
 export const setLoginData = (data, dispatch) => {

@@ -1,15 +1,15 @@
 import React from 'react';
 import { Trans } from '@lingui/macro';
 
-import Home from 'components/Home';
-import Login from 'components/Login';
-import RecoverPassword from 'components/RecoverPassword';
-import ResetPassword from 'components/ResetPassword';
-import Register from 'components/Register';
-import Logout from 'components/Logout';
-import ControlPanel from 'components/ControlPanel';
-import NationalRanking from 'components/NationalRanking';
-import NoMatch from 'components/NoMatch';
+import Home from 'views/Home';
+import Login from 'views/Login';
+import RecoverPassword from 'views/RecoverPassword';
+import ResetPassword from 'views/ResetPassword';
+import Register from 'views/Register';
+import Logout from 'views/Logout';
+import ControlPanel from 'views/ControlPanel';
+import NationalRanking from 'views/NationalRanking';
+import NoMatch from 'views/NoMatch';
 
 export default [
   {
@@ -44,8 +44,8 @@ export default [
   },
   {
     title: <Trans>Painel de controlo</Trans>,
-    path: '/control-panel/:page?',
-    component: ControlPanel
+    path: '/control-panel/:page?/:arg1?/:arg2?',
+    component: ControlPanel,
   },
   {
     title: <Trans>Ranking Nacional</Trans>,
