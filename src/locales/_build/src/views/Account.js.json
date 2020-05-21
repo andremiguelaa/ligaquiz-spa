@@ -2,80 +2,88 @@
   "Perfil actualizado com sucesso.": {
     "origin": [
       [
-        "src/views/ControlPanel/Profile.js",
-        42
+        "src/views/Account.js",
+        46
       ]
     ]
   },
   "Não foi possível actualizar o perfil.": {
     "origin": [
       [
-        "src/views/ControlPanel/Profile.js",
-        55
+        "src/views/Account.js",
+        59
+      ]
+    ]
+  },
+  "Conta": {
+    "origin": [
+      [
+        "src/views/Account.js",
+        66
       ]
     ]
   },
   "Nome": {
     "origin": [
       [
-        "src/views/ControlPanel/Profile.js",
-        66
+        "src/views/Account.js",
+        73
       ]
     ]
   },
   "Apelido": {
     "origin": [
       [
-        "src/views/ControlPanel/Profile.js",
-        89
+        "src/views/Account.js",
+        96
       ]
     ]
   },
   "E-Mail": {
     "origin": [
       [
-        "src/views/ControlPanel/Profile.js",
-        112
+        "src/views/Account.js",
+        119
       ]
     ]
   },
   "Já existe uma conta com este e-mail.": {
     "origin": [
       [
-        "src/views/ControlPanel/Profile.js",
-        138
+        "src/views/Account.js",
+        145
       ]
     ]
   },
   "Palavra-passe": {
     "origin": [
       [
-        "src/views/ControlPanel/Profile.js",
-        144
+        "src/views/Account.js",
+        151
       ]
     ]
   },
   "deixa em branco para não alterar": {
     "origin": [
       [
-        "src/views/ControlPanel/Profile.js",
-        145
+        "src/views/Account.js",
+        152
       ]
     ]
   },
   "Confirmação da palavra-passe": {
     "origin": [
       [
-        "src/views/ControlPanel/Profile.js",
-        168
+        "src/views/Account.js",
+        175
       ]
     ]
   },
   "Gravar": {
     "origin": [
       [
-        "src/views/ControlPanel/Profile.js",
-        200
+        "src/views/Account.js",
+        209
       ]
     ]
   }

@@ -7,59 +7,74 @@ import RecoverPassword from 'views/RecoverPassword';
 import ResetPassword from 'views/ResetPassword';
 import Register from 'views/Register';
 import Logout from 'views/Logout';
-import ControlPanel from 'views/ControlPanel';
 import Account from 'views/Account';
 import NationalRanking from 'views/NationalRanking';
+
+import NationalRankingAdminEvents from 'views/admin/nationalRanking/Events';
+import NationalRankingAdminPlayers from 'views/admin/nationalRanking/Players';
+
 import NoMatch from 'views/NoMatch';
 
 export default [
   {
     title: <Trans>Liga Quiz</Trans>,
     path: '/',
-    component: Home
+    component: Home,
   },
   {
     title: <Trans>Entrar</Trans>,
     path: '/login',
-    component: Login
+    component: Login,
   },
   {
     title: <Trans>Recuperar palavra-passe</Trans>,
     path: '/recover-password',
-    component: RecoverPassword
+    component: RecoverPassword,
   },
   {
     title: <Trans>Redefinir palavra-passe</Trans>,
     path: '/reset-password/:token',
-    component: ResetPassword
+    component: ResetPassword,
   },
   {
     title: <Trans>Registo</Trans>,
     path: '/register',
-    component: Register
+    component: Register,
   },
   {
     title: <Trans>Sair</Trans>,
     path: '/logout',
-    component: Logout
+    component: Logout,
   },
   {
     title: <Trans>Conta</Trans>,
     path: '/account',
-    component: Account
+    component: Account,
+  },
+  /*
+  {
+    title: <Trans>Ranking Nacional | Ranking</Trans>,
+    path: '/admin/national-ranking/ranking',
+    component: NationalRankingAdminEvents,
+  },
+  */
+  {
+    title: <Trans>Ranking Nacional | Provas mensais</Trans>,
+    path: '/admin/national-ranking/events',
+    component: NationalRankingAdminEvents,
   },
   {
-    title: <Trans>Painel de controlo</Trans>,
-    path: '/control-panel/:page?',
-    component: ControlPanel,
+    title: <Trans>Ranking Nacional | Jogadores</Trans>,
+    path: '/admin/national-ranking/players',
+    component: NationalRankingAdminPlayers,
   },
   {
     title: <Trans>Ranking Nacional</Trans>,
     path: '/national-ranking/:month?',
-    component: NationalRanking
+    component: NationalRanking,
   },
   {
     title: <Trans>Página não encontrada</Trans>,
-    component: NoMatch
-  }
+    component: NoMatch,
+  },
 ];

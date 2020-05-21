@@ -2,11 +2,11 @@
   "Remover jogador": {
     "origin": [
       [
-        "src/views/ControlPanel/Ranking/Form/Event/Player.js",
+        "src/views/admin/nationalRanking/Events/Form/Event/Player.js",
         78
       ],
       [
-        "src/views/ControlPanel/Ranking/Form/Event/Player.js",
+        "src/views/admin/nationalRanking/Events/Form/Event/Player.js",
         87
       ]
     ]
@@ -14,7 +14,7 @@
   "Tens a certeza que queres apagar este jogador e o resultado associado?": {
     "origin": [
       [
-        "src/views/ControlPanel/Ranking/Form/Event/Player.js",
+        "src/views/admin/nationalRanking/Events/Form/Event/Player.js",
         89
       ]
     ]

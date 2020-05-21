@@ -1,0 +1,62 @@
+{
+  "Jogador apagado com sucesso.": {
+    "origin": [
+      [
+        "src/views/admin/nationalRanking/Players.js",
+        50
+      ]
+    ]
+  },
+  "Não foi possível apagar ao jogador.<0/>O jogador tem resultados associados.": {
+    "origin": [
+      [
+        "src/views/admin/nationalRanking/Players.js",
+        57
+      ]
+    ]
+  },
+  "Não foi possível apagar ao jogador.": {
+    "origin": [
+      [
+        "src/views/admin/nationalRanking/Players.js",
+        63
+      ],
+      [
+        "src/views/admin/nationalRanking/Players.js",
+        66
+      ]
+    ]
+  },
+  "Erro de servidor. Tenta mais tarde.": {
+    "origin": [
+      [
+        "src/views/admin/nationalRanking/Players.js",
+        82
+      ]
+    ]
+  },
+  "Jogadores": {
+    "origin": [
+      [
+        "src/views/admin/nationalRanking/Players.js",
+        89
+      ]
+    ]
+  },
+  "Apagar jogador": {
+    "origin": [
+      [
+        "src/views/admin/nationalRanking/Players.js",
+        120
+      ]
+    ]
+  },
+  "Tens a certeza que queres apagar este jogador?": {
+    "origin": [
+      [
+        "src/views/admin/nationalRanking/Players.js",
+        121
+      ]
+    ]
+  }
+}

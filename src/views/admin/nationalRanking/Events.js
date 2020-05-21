@@ -6,9 +6,10 @@ import ApiRequest from 'utils/ApiRequest';
 import Loading from 'components/Loading';
 import Error from 'components/Error';
 import Modal from 'components/Modal';
+import PageHeader from 'components/PageHeader';
 
-import List from './Ranking/List';
-import Form from './Ranking/Form';
+import List from './Events/List';
+import Form from './Events/Form';
 
 const Ranking = () => {
   const [error, setError] = useState(false);
@@ -96,46 +97,49 @@ const Ranking = () => {
     );
   }
 
-  if (
-    !monthList ||
-    !individualQuizTypes ||
-    !individualQuizPlayers ||
-    loadingMonthData
-  ) {
-    return <Loading />;
-  }
-
   return (
     <>
-      {
-        {
-          list: (
-            <List
-              monthList={monthList}
-              setPage={setPage}
-              editMonth={editMonth}
-              setMonthToDelete={setMonthToDelete}
-            />
-          ),
-          add: (
-            <Form
-              monthList={monthList}
-              individualQuizTypes={individualQuizTypes}
-              individualQuizPlayers={individualQuizPlayers}
-              setPage={setPage}
-            />
-          ),
-          edit: (
-            <Form
-              monthList={monthList}
-              individualQuizTypes={individualQuizTypes}
-              individualQuizPlayers={individualQuizPlayers}
-              setPage={setPage}
-              initialEditData={initialEditData}
-            />
-          ),
-        }[page]
-      }
+      <PageHeader title={<Trans>Provas mensais</Trans>} />
+      <div className="section content">
+        {!monthList ||
+        !individualQuizTypes ||
+        !individualQuizPlayers ||
+        loadingMonthData ? (
+          <Loading />
+        ) : (
+          <>
+            {
+              {
+                list: (
+                  <List
+                    monthList={monthList}
+                    setPage={setPage}
+                    editMonth={editMonth}
+                    setMonthToDelete={setMonthToDelete}
+                  />
+                ),
+                add: (
+                  <Form
+                    monthList={monthList}
+                    individualQuizTypes={individualQuizTypes}
+                    individualQuizPlayers={individualQuizPlayers}
+                    setPage={setPage}
+                  />
+                ),
+                edit: (
+                  <Form
+                    monthList={monthList}
+                    individualQuizTypes={individualQuizTypes}
+                    individualQuizPlayers={individualQuizPlayers}
+                    setPage={setPage}
+                    initialEditData={initialEditData}
+                  />
+                ),
+              }[page]
+            }
+          </>
+        )}
+      </div>
       <Modal
         type="danger"
         open={monthToDelete}

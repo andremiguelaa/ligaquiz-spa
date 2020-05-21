@@ -2,7 +2,7 @@
   "Provas mensais criadas com sucesso.": {
     "origin": [
       [
-        "src/views/ControlPanel/Ranking/Form.js",
+        "src/views/admin/nationalRanking/Events/Form.js",
         105
       ]
     ]
@@ -10,11 +10,11 @@
   "Não foi possível gravar as provas mensais.": {
     "origin": [
       [
-        "src/views/ControlPanel/Ranking/Form.js",
+        "src/views/admin/nationalRanking/Events/Form.js",
         110
       ],
       [
-        "src/views/ControlPanel/Ranking/Form.js",
+        "src/views/admin/nationalRanking/Events/Form.js",
         126
       ]
     ]
@@ -22,7 +22,7 @@
   "Provas mensais actualizadas com sucesso.": {
     "origin": [
       [
-        "src/views/ControlPanel/Ranking/Form.js",
+        "src/views/admin/nationalRanking/Events/Form.js",
         121
       ]
     ]
@@ -30,11 +30,11 @@
   "Voltar à listagem": {
     "origin": [
       [
-        "src/views/ControlPanel/Ranking/Form.js",
+        "src/views/admin/nationalRanking/Events/Form.js",
         154
       ],
       [
-        "src/views/ControlPanel/Ranking/Form.js",
+        "src/views/admin/nationalRanking/Events/Form.js",
         281
       ]
     ]
@@ -42,11 +42,11 @@
   "Mês": {
     "origin": [
       [
-        "src/views/ControlPanel/Ranking/Form.js",
+        "src/views/admin/nationalRanking/Events/Form.js",
         165
       ],
       [
-        "src/views/ControlPanel/Ranking/Form.js",
+        "src/views/admin/nationalRanking/Events/Form.js",
         172
       ]
     ]
@@ -54,7 +54,7 @@
   "Adicionar prova": {
     "origin": [
       [
-        "src/views/ControlPanel/Ranking/Form.js",
+        "src/views/admin/nationalRanking/Events/Form.js",
         220
       ]
     ]
@@ -62,7 +62,7 @@
   "Guardar provas mensais": {
     "origin": [
       [
-        "src/views/ControlPanel/Ranking/Form.js",
+        "src/views/admin/nationalRanking/Events/Form.js",
         238
       ]
     ]
@@ -70,7 +70,7 @@
   "Escolher tipo de prova": {
     "origin": [
       [
-        "src/views/ControlPanel/Ranking/Form.js",
+        "src/views/admin/nationalRanking/Events/Form.js",
         248
       ]
     ]
@@ -78,7 +78,7 @@
   "Todos os dados deste formulário serão descartados.<0/>Tens a certeza que queres voltar à listagem?": {
     "origin": [
       [
-        "src/views/ControlPanel/Ranking/Form.js",
+        "src/views/admin/nationalRanking/Events/Form.js",
         283
       ]
     ]

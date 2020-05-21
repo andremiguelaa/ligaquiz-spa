@@ -2,7 +2,7 @@
   "Adicionar provas mensais": {
     "origin": [
       [
-        "src/views/ControlPanel/Ranking/List.js",
+        "src/views/admin/nationalRanking/Events/List.js",
         15
       ]
     ]
@@ -10,7 +10,7 @@
   "Mês": {
     "origin": [
       [
-        "src/views/ControlPanel/Ranking/List.js",
+        "src/views/admin/nationalRanking/Events/List.js",
         25
       ]
     ]
@@ -18,7 +18,7 @@
   "Acções": {
     "origin": [
       [
-        "src/views/ControlPanel/Ranking/List.js",
+        "src/views/admin/nationalRanking/Events/List.js",
         28
       ]
     ]
@@ -26,7 +26,7 @@
   "Sem registos": {
     "origin": [
       [
-        "src/views/ControlPanel/Ranking/List.js",
+        "src/views/admin/nationalRanking/Events/List.js",
         66
       ]
     ]

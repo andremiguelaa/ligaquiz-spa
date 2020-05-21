@@ -2,7 +2,7 @@
   "Jogador criado com sucesso.": {
     "origin": [
       [
-        "src/views/ControlPanel/IndividualPlayers/Form.js",
+        "src/views/admin/nationalRanking/Players/Form.js",
         86
       ]
     ]
@@ -10,11 +10,11 @@
   "Não foi possível gravar o jogador.": {
     "origin": [
       [
-        "src/views/ControlPanel/IndividualPlayers/Form.js",
+        "src/views/admin/nationalRanking/Players/Form.js",
         90
       ],
       [
-        "src/views/ControlPanel/IndividualPlayers/Form.js",
+        "src/views/admin/nationalRanking/Players/Form.js",
         99
       ]
     ]
@@ -22,7 +22,7 @@
   "Erro de servidor. Tenta mais tarde.": {
     "origin": [
       [
-        "src/views/ControlPanel/IndividualPlayers/Form.js",
+        "src/views/admin/nationalRanking/Players/Form.js",
         114
       ]
     ]
@@ -30,11 +30,11 @@
   "Voltar à listagem": {
     "origin": [
       [
-        "src/views/ControlPanel/IndividualPlayers/Form.js",
+        "src/views/admin/nationalRanking/Players/Form.js",
         138
       ],
       [
-        "src/views/ControlPanel/IndividualPlayers/Form.js",
+        "src/views/admin/nationalRanking/Players/Form.js",
         255
       ]
     ]
@@ -42,7 +42,7 @@
   "Nome": {
     "origin": [
       [
-        "src/views/ControlPanel/IndividualPlayers/Form.js",
+        "src/views/admin/nationalRanking/Players/Form.js",
         148
       ]
     ]
@@ -50,7 +50,7 @@
   "Apelido": {
     "origin": [
       [
-        "src/views/ControlPanel/IndividualPlayers/Form.js",
+        "src/views/admin/nationalRanking/Players/Form.js",
         174
       ]
     ]
@@ -58,7 +58,7 @@
   "Jogador da liga": {
     "origin": [
       [
-        "src/views/ControlPanel/IndividualPlayers/Form.js",
+        "src/views/admin/nationalRanking/Players/Form.js",
         200
       ]
     ]
@@ -66,7 +66,7 @@
   "Nenhum": {
     "origin": [
       [
-        "src/views/ControlPanel/IndividualPlayers/Form.js",
+        "src/views/admin/nationalRanking/Players/Form.js",
         218
       ]
     ]
@@ -74,7 +74,7 @@
   "Guardar jogador": {
     "origin": [
       [
-        "src/views/ControlPanel/IndividualPlayers/Form.js",
+        "src/views/admin/nationalRanking/Players/Form.js",
         245
       ]
     ]
@@ -82,7 +82,7 @@
   "Todos os dados deste formulário serão descartados.<0/>Tens a certeza que queres voltar à listagem?": {
     "origin": [
       [
-        "src/views/ControlPanel/IndividualPlayers/Form.js",
+        "src/views/admin/nationalRanking/Players/Form.js",
         257
       ]
     ]

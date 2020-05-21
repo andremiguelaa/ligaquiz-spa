@@ -1,0 +1,58 @@
+{
+  "Não foi possível abrir a edição das provas mensais.": {
+    "origin": [
+      [
+        "src/views/admin/nationalRanking/Events.js",
+        68
+      ]
+    ]
+  },
+  "Provas mensais apagadas com sucesso.": {
+    "origin": [
+      [
+        "src/views/admin/nationalRanking/Events.js",
+        81
+      ]
+    ]
+  },
+  "Não foi possível apagar as provas mensais.": {
+    "origin": [
+      [
+        "src/views/admin/nationalRanking/Events.js",
+        84
+      ]
+    ]
+  },
+  "Erro de servidor. Tenta mais tarde.": {
+    "origin": [
+      [
+        "src/views/admin/nationalRanking/Events.js",
+        95
+      ]
+    ]
+  },
+  "Provas mensais": {
+    "origin": [
+      [
+        "src/views/admin/nationalRanking/Events.js",
+        111
+      ]
+    ]
+  },
+  "Apagar provas mensais": {
+    "origin": [
+      [
+        "src/views/admin/nationalRanking/Events.js",
+        146
+      ]
+    ]
+  },
+  "Tens a certeza que queres apagar as provas deste mês e os resultados associados?": {
+    "origin": [
+      [
+        "src/views/admin/nationalRanking/Events.js",
+        148
+      ]
+    ]
+  }
+}

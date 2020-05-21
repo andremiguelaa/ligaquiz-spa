@@ -63,7 +63,7 @@ const Header = () => {
             <Link to="/national-ranking/" className="navbar-item">
               <Trans>Ranking Nacional</Trans>
             </Link>
-            <div className="navbar-item has-dropdown is-hoverable">
+            <div className="navbar-item has-dropdown is-hoverable is-hidden">
               <a className="navbar-link">More</a>
               <div className="navbar-dropdown">
                 <a className="navbar-item">About</a>
@@ -122,10 +122,22 @@ const Header = () => {
                   </button>
                 </OutsideClickHandler>
                 <div className="navbar-dropdown is-right">
-                  <Link to="/control-panel/" className="navbar-item">
-                    <i className="fa fa-btn fa-cogs" />
-                    &nbsp;<Trans>Painel de controlo</Trans>
+                  <div className="navbar-item">
+                    <Trans>Gestão de Ranking Nacional</Trans>
+                  </div>
+                  <Link to="/admin/national-ranking/ranking" className="navbar-item is-hidden">
+                    <i className="fa fa-btn fa-trophy" />
+                    &nbsp;<Trans>Ranking</Trans>
                   </Link>
+                  <Link to="/admin/national-ranking/events" className="navbar-item">
+                    <i className="fa fa-btn fa-calendar" />
+                    &nbsp;<Trans>Provas mensais</Trans>
+                  </Link>
+                  <Link to="/admin/national-ranking/players" className="navbar-item">
+                    <i className="fa fa-btn fa-users" />
+                    &nbsp;<Trans>Jogadores</Trans>
+                  </Link>
+                  <hr className="navbar-divider" />
                   <Link to="/account/" className="navbar-item">
                     <i className="fa fa-btn fa-user" />
                     &nbsp;<Trans>Conta</Trans>

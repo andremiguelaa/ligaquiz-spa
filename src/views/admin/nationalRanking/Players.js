@@ -6,9 +6,10 @@ import ApiRequest from 'utils/ApiRequest';
 import Loading from 'components/Loading';
 import Error from 'components/Error';
 import Modal from 'components/Modal';
+import PageHeader from 'components/PageHeader';
 
-import List from '../IndividualPlayers/List';
-import Form from '../IndividualPlayers/Form';
+import List from './Players/List';
+import Form from './Players/Form';
 
 const IndividualPlayers = () => {
   const [error, setError] = useState(false);
@@ -71,10 +72,6 @@ const IndividualPlayers = () => {
       });
   };
 
-  if (!individualQuizPlayers) {
-    return <Loading />;
-  }
-
   if (error) {
     return (
       <Error>
@@ -85,31 +82,40 @@ const IndividualPlayers = () => {
 
   return (
     <>
-      {
-        {
-          list: (
-            <List
-              individualQuizPlayers={individualQuizPlayers}
-              setPage={setPage}
-              editPlayer={editPlayer}
-              setPlayerToDelete={setPlayerToDelete}
-            />
-          ),
-          add: (
-            <Form
-              setPage={setPage}
-              individualQuizPlayers={individualQuizPlayers}
-            />
-          ),
-          edit: (
-            <Form
-              setPage={setPage}
-              individualQuizPlayers={individualQuizPlayers}
-              initialEditData={initialEditData}
-            />
-          ),
-        }[page]
-      }
+      <PageHeader title={<Trans>Jogadores</Trans>} />
+      <div className="section content">
+        {!individualQuizPlayers ? (
+          <Loading />
+        ) : (
+          <>
+            {
+              {
+                list: (
+                  <List
+                    individualQuizPlayers={individualQuizPlayers}
+                    setPage={setPage}
+                    editPlayer={editPlayer}
+                    setPlayerToDelete={setPlayerToDelete}
+                  />
+                ),
+                add: (
+                  <Form
+                    setPage={setPage}
+                    individualQuizPlayers={individualQuizPlayers}
+                  />
+                ),
+                edit: (
+                  <Form
+                    setPage={setPage}
+                    individualQuizPlayers={individualQuizPlayers}
+                    initialEditData={initialEditData}
+                  />
+                ),
+              }[page]
+            }
+          </>
+        )}
+      </div>
       <Modal
         type="danger"
         open={playerToDelete}

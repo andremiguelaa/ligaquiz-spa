@@ -2,7 +2,7 @@
   "Campeonato Nacional de Quiz": {
     "origin": [
       [
-        "src/views/ControlPanel/Ranking/Form/options.js",
+        "src/views/admin/nationalRanking/Events/Form/options.js",
         7
       ]
     ]
@@ -10,7 +10,7 @@
   "Campeonato Europeu de Quiz": {
     "origin": [
       [
-        "src/views/ControlPanel/Ranking/Form/options.js",
+        "src/views/admin/nationalRanking/Events/Form/options.js",
         12
       ]
     ]
@@ -18,7 +18,7 @@
   "Inquizição": {
     "origin": [
       [
-        "src/views/ControlPanel/Ranking/Form/options.js",
+        "src/views/admin/nationalRanking/Events/Form/options.js",
         17
       ]
     ]
@@ -26,7 +26,7 @@
   "Squizzed": {
     "origin": [
       [
-        "src/views/ControlPanel/Ranking/Form/options.js",
+        "src/views/admin/nationalRanking/Events/Form/options.js",
         22
       ]
     ]
@@ -34,7 +34,7 @@
   "Campeonato Mundial de Quiz": {
     "origin": [
       [
-        "src/views/ControlPanel/Ranking/Form/options.js",
+        "src/views/admin/nationalRanking/Events/Form/options.js",
         27
       ]
     ]
@@ -42,7 +42,7 @@
   "HOT 100": {
     "origin": [
       [
-        "src/views/ControlPanel/Ranking/Form/options.js",
+        "src/views/admin/nationalRanking/Events/Form/options.js",
         32
       ]
     ]

@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/NationalRanking.js",
-        149
+        147
       ]
     ]
   },
@@ -11,15 +11,11 @@
     "origin": [
       [
         "src/views/NationalRanking.js",
-        166
+        164
       ],
       [
         "src/views/NationalRanking.js",
-        196
-      ],
-      [
-        "src/views/NationalRanking.js",
-        209
+        189
       ]
     ]
   },
@@ -27,7 +23,7 @@
     "origin": [
       [
         "src/views/NationalRanking.js",
-        167
+        165
       ]
     ]
   },
@@ -35,7 +31,7 @@
     "origin": [
       [
         "src/views/NationalRanking.js",
-        172
+        170
       ]
     ]
   },
@@ -43,11 +39,11 @@
     "origin": [
       [
         "src/views/NationalRanking.js",
-        183
+        181
       ],
       [
         "src/views/NationalRanking.js",
-        360
+        340
       ]
     ]
   },
@@ -55,7 +51,7 @@
     "origin": [
       [
         "src/views/NationalRanking.js",
-        241
+        221
       ]
     ]
   },
@@ -63,7 +59,7 @@
     "origin": [
       [
         "src/views/NationalRanking.js",
-        245
+        225
       ]
     ]
   },
@@ -71,7 +67,7 @@
     "origin": [
       [
         "src/views/NationalRanking.js",
-        259
+        239
       ]
     ]
   },
@@ -79,7 +75,7 @@
     "origin": [
       [
         "src/views/NationalRanking.js",
-        273
+        253
       ]
     ]
   },
@@ -87,7 +83,7 @@
     "origin": [
       [
         "src/views/NationalRanking.js",
-        287
+        267
       ]
     ]
   },
@@ -95,7 +91,7 @@
     "origin": [
       [
         "src/views/NationalRanking.js",
-        354
+        334
       ]
     ]
   }

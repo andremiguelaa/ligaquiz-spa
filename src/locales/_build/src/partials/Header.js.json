@@ -1,9 +1,17 @@
 {
+  "Ranking Nacional": {
+    "origin": [
+      [
+        "src/partials/Header.js",
+        64
+      ]
+    ]
+  },
   "Entrar": {
     "origin": [
       [
         "src/partials/Header.js",
-        81
+        95
       ]
     ]
   },
@@ -11,23 +19,47 @@
     "origin": [
       [
         "src/partials/Header.js",
-        84
+        98
       ]
     ]
   },
-  "Painel de controlo": {
+  "Gestão de Ranking Nacional": {
     "origin": [
       [
         "src/partials/Header.js",
-        113
+        126
       ]
     ]
   },
-  "Ranking Nacional": {
+  "Ranking": {
     "origin": [
       [
         "src/partials/Header.js",
-        117
+        130
+      ]
+    ]
+  },
+  "Provas mensais": {
+    "origin": [
+      [
+        "src/partials/Header.js",
+        134
+      ]
+    ]
+  },
+  "Jogadores": {
+    "origin": [
+      [
+        "src/partials/Header.js",
+        138
+      ]
+    ]
+  },
+  "Conta": {
+    "origin": [
+      [
+        "src/partials/Header.js",
+        143
       ]
     ]
   },
@@ -35,7 +67,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        121
+        147
       ]
     ]
   },
@@ -43,7 +75,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        125
+        151
       ]
     ]
   }
