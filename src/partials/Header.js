@@ -125,9 +125,9 @@ const Header = () => {
                   <div className="navbar-item">
                     <Trans>Gestão de Ranking Nacional</Trans>
                   </div>
-                  <Link to="/admin/national-ranking/ranking" className="navbar-item is-hidden">
+                  <Link to="/admin/national-ranking/ranking" className="navbar-item">
                     <i className="fa fa-btn fa-trophy" />
-                    &nbsp;<Trans>Ranking</Trans>
+                    &nbsp;<Trans>Rankings mensais</Trans>
                   </Link>
                   <Link to="/admin/national-ranking/events" className="navbar-item">
                     <i className="fa fa-btn fa-calendar" />

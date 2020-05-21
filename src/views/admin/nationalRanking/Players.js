@@ -11,7 +11,7 @@ import PageHeader from 'components/PageHeader';
 import List from './Players/List';
 import Form from './Players/Form';
 
-const IndividualPlayers = () => {
+const Players = () => {
   const [error, setError] = useState(false);
   const [individualQuizPlayers, setIndividualQuizPlayers] = useState();
 
@@ -50,7 +50,6 @@ const IndividualPlayers = () => {
         toast.success(<Trans>Jogador apagado com sucesso.</Trans>);
       })
       .catch((error) => {
-        console.log();
         try {
           if (error.response.data.message === 'player_with_results') {
             toast.error(
@@ -129,4 +128,4 @@ const IndividualPlayers = () => {
   );
 };
 
-export default IndividualPlayers;
+export default Players;

@@ -10,6 +10,7 @@ import Logout from 'views/Logout';
 import Account from 'views/Account';
 import NationalRanking from 'views/NationalRanking';
 
+import NationalRankingAdminRankings from 'views/admin/nationalRanking/Rankings';
 import NationalRankingAdminEvents from 'views/admin/nationalRanking/Events';
 import NationalRankingAdminPlayers from 'views/admin/nationalRanking/Players';
 
@@ -51,13 +52,11 @@ export default [
     path: '/account',
     component: Account,
   },
-  /*
   {
     title: <Trans>Ranking Nacional | Ranking</Trans>,
     path: '/admin/national-ranking/ranking',
-    component: NationalRankingAdminEvents,
+    component: NationalRankingAdminRankings,
   },
-  */
   {
     title: <Trans>Ranking Nacional | Provas mensais</Trans>,
     path: '/admin/national-ranking/events',

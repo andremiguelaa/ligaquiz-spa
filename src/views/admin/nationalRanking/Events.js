@@ -11,7 +11,7 @@ import PageHeader from 'components/PageHeader';
 import List from './Events/List';
 import Form from './Events/Form';
 
-const Ranking = () => {
+const Events = () => {
   const [error, setError] = useState(false);
   const [monthList, setMonthList] = useState();
   const [individualQuizTypes, setIndividualQuizTypes] = useState();
@@ -158,4 +158,4 @@ const Ranking = () => {
   );
 };
 
-export default Ranking;
+export default Events;
