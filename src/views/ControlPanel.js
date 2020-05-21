@@ -6,24 +6,24 @@ import classNames from 'classnames';
 import { useStateValue } from 'state/State';
 import NoMatch from './NoMatch';
 import Forbidden from './Forbidden';
-import Profile from './ControlPanel/Profile';
 import Ranking from './ControlPanel/Ranking';
+import IndividualPlayers from './ControlPanel/Ranking/IndividualPlayers';
 
 const pages = {
   // TO DO: filter pages by role permissions
-  profile: {
-    title: <Trans>Perfil</Trans>,
-    component: Profile,
-  },
   ranking: {
     title: <Trans>Ranking</Trans>,
     component: Ranking,
+  },
+  individual_players: {
+    title: <Trans>Jogadores presenciais</Trans>,
+    component: IndividualPlayers,
   },
 };
 
 const ControlPanel = ({
   match: {
-    params: { page = 'profile', arg1, arg2 },
+    params: { page = 'ranking', arg1, arg2 },
   },
 }) => {
   const [{ user }] = useStateValue();

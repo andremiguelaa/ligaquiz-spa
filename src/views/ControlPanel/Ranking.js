@@ -1,27 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 import { toast } from 'react-toastify';
-import classNames from 'classnames';
 
 import ApiRequest from 'utils/ApiRequest';
 import Loading from 'components/Loading';
 import Error from 'components/Error';
 import Modal from 'components/Modal';
 
-import IndividualPlayers from './Ranking/IndividualPlayers';
-
 import List from './Ranking/List';
 import Form from './Ranking/Form';
 
-const pages = {
-  individual_players: {
-    title: <Trans>Jogadores presenciais</Trans>,
-    component: IndividualPlayers,
-  },
-};
-
-const Ranking = ({ arg1, arg2 }) => {
+const Ranking = () => {
   const [error, setError] = useState(false);
   const [monthList, setMonthList] = useState();
   const [individualQuizTypes, setIndividualQuizTypes] = useState();
@@ -118,20 +107,6 @@ const Ranking = ({ arg1, arg2 }) => {
 
   return (
     <>
-      <div className="tabs is-fullwidth">
-        <ul>
-          {Object.entries(pages).map(([key, value]) => (
-            <li
-              key={key}
-              className={classNames({
-                'is-active': page && page === key,
-              })}
-            >
-              <Link to={`/control-panel/${key}`}>{value.title}</Link>
-            </li>
-          ))}
-        </ul>
-      </div>
       {
         {
           list: (

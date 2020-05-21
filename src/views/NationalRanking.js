@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useParams, useLocation } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 import { get, isEmpty } from 'lodash';
 import classNames from 'classnames';
 import ScrollContainer from 'react-indiana-drag-scroll';
 
-import Breadcrumbs from 'components/Breadcrumbs';
 import PageHeader from 'components/PageHeader';
 import Loading from 'components/Loading';
 import Error from 'components/Error';
@@ -22,7 +21,6 @@ import classes from './NationalRanking/NationalRanking.module.scss';
 
 const NationalRanking = () => {
   const { month } = useParams();
-  const { pathname } = useLocation();
 
   const [
     {
@@ -186,26 +184,8 @@ const NationalRanking = () => {
     </Trans>
   );
 
-  const basePath = `/${pathname.split('/')[1]}`;
-
   return (
     <>
-      <Breadcrumbs
-        pages={[
-          {
-            title: <Trans>Ranking Nacional</Trans>,
-            url: basePath,
-          },
-          ...(month
-            ? [
-                {
-                  title: subtitle,
-                  url: `${basePath}/${month}`,
-                },
-              ]
-            : []),
-        ]}
-      />
       <PageHeader title={<Trans>Ranking Nacional</Trans>} subtitle={subtitle} />
       <div className="section content">
         <div className={classes.tableWrapper}>

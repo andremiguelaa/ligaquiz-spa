@@ -8,6 +8,7 @@ import ResetPassword from 'views/ResetPassword';
 import Register from 'views/Register';
 import Logout from 'views/Logout';
 import ControlPanel from 'views/ControlPanel';
+import Account from 'views/Account';
 import NationalRanking from 'views/NationalRanking';
 import NoMatch from 'views/NoMatch';
 
@@ -43,8 +44,13 @@ export default [
     component: Logout
   },
   {
+    title: <Trans>Conta</Trans>,
+    path: '/account',
+    component: Account
+  },
+  {
     title: <Trans>Painel de controlo</Trans>,
-    path: '/control-panel/:page?/:arg1?/:arg2?',
+    path: '/control-panel/:page?',
     component: ControlPanel,
   },
   {
