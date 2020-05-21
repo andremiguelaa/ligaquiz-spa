@@ -61,7 +61,7 @@ msgstr "Delete month events"
 msgid "Apelido"
 msgstr "Surname"
 
-#: src/views/NationalRanking.js:340
+#: src/views/NationalRanking.js:354
 msgid "Arquivo"
 msgstr "Archive"
 
@@ -217,7 +217,7 @@ msgstr "Best"
 msgid "Máximo 200 KB"
 msgstr "Max. 200 KB"
 
-#: src/views/NationalRanking.js:259
+#: src/views/NationalRanking.js:273
 msgid "Média"
 msgstr "Average"
 
@@ -233,7 +233,7 @@ msgstr "None"
 
 #: src/views/ControlPanel/IndividualPlayers/Form.js:148
 #: src/views/ControlPanel/Profile.js:66
-#: src/views/NationalRanking.js:227
+#: src/views/NationalRanking.js:241
 #: src/views/Register.js:58
 msgid "Nome"
 msgstr "Name"
@@ -250,7 +250,7 @@ msgstr "Non authorized"
 msgid "Não existe nenhum registo com este e-mail."
 msgstr "There is no registration with this e-mail."
 
-#: src/views/NationalRanking.js:174
+#: src/views/NationalRanking.js:167
 msgid "Não existe ranking nacional disponível."
 msgstr "There is no national ranking available."
 
@@ -330,7 +330,7 @@ msgstr "Profile"
 msgid "Perfil actualizado com sucesso."
 msgstr "Profile successfully updated."
 
-#: src/views/NationalRanking.js:231
+#: src/views/NationalRanking.js:245
 msgid "Pontos"
 msgstr "Points"
 
@@ -346,12 +346,16 @@ msgstr "Month events successfully deleted."
 msgid "Provas mensais criadas com sucesso."
 msgstr "Month events successfully created."
 
+#: src/components/Breadcrumbs.js:15
+msgid "Página inicial"
+msgstr "Homepage"
+
 #: src/routes.js:56
 #: src/views/NoMatch.js:10
 msgid "Página não encontrada"
 msgstr "Page not found"
 
-#: src/views/NationalRanking.js:273
+#: src/views/NationalRanking.js:287
 msgid "Quizzes"
 msgstr "Quizzes"
 
@@ -361,8 +365,9 @@ msgstr "Ranking"
 
 #: src/partials/Header.js:117
 #: src/routes.js:51
-#: src/views/NationalRanking.js:169
-#: src/views/NationalRanking.js:188
+#: src/views/NationalRanking.js:166
+#: src/views/NationalRanking.js:196
+#: src/views/NationalRanking.js:209
 msgid "Ranking Nacional"
 msgstr "National Ranking"
 
@@ -439,7 +444,7 @@ msgstr "Select the players that played this event:"
 msgid "Sem registos"
 msgstr "No records"
 
-#: src/views/NationalRanking.js:245
+#: src/views/NationalRanking.js:259
 msgid "Soma"
 msgstr "Sum"
 
@@ -493,6 +498,7 @@ msgid "Voltar à listagem"
 msgstr "Back to list"
 
 #: src/views/Forbidden.js:16
+#: src/views/NationalRanking.js:172
 #: src/views/NoMatch.js:16
 msgid "Voltar à página inicial"
 msgstr "Return to homepage"
@@ -519,7 +525,7 @@ msgstr "positions"
 msgid "{0, selectordinal, two {2º} few {3º} other {#º}}"
 msgstr "{0, selectordinal, two {2nd} few {3nd} other {#rd}}"
 
-#: src/views/NationalRanking.js:190
-#: src/views/NationalRanking.js:346
+#: src/views/NationalRanking.js:183
+#: src/views/NationalRanking.js:360
 msgid "{0} de {1}"
 msgstr "{0} {1}"

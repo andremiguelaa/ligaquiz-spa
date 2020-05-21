@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams, useLocation } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 import { get, isEmpty } from 'lodash';
 import classNames from 'classnames';
 import ScrollContainer from 'react-indiana-drag-scroll';
 
+import Breadcrumbs from 'components/Breadcrumbs';
 import PageHeader from 'components/PageHeader';
 import Loading from 'components/Loading';
 import Error from 'components/Error';
@@ -19,11 +20,10 @@ import { quizzesOrder, quizTypeAbbr } from './NationalRanking/consts.js';
 
 import classes from './NationalRanking/NationalRanking.module.scss';
 
-const NationalRanking = ({
-  match: {
-    params: { month },
-  },
-}) => {
+const NationalRanking = () => {
+  const { month } = useParams();
+  const { pathname } = useLocation();
+
   const [
     {
       settings: { language },
@@ -161,38 +161,52 @@ const NationalRanking = ({
 
   if (isEmpty(ranking)) {
     return (
-      <div className="columns">
-        <div className="column is-6-widescreen is-offset-3-widescreen is-8-tablet is-offset-2-tablet">
-          <article className="message">
-            <div className="message-header">
-              <h1>
-                <Trans>Ranking Nacional</Trans>
-              </h1>
-            </div>
-            <div className="message-body">
-              <div className="content">
-                <Trans>Não existe ranking nacional disponível.</Trans>
-              </div>
-            </div>
-          </article>
+      <>
+        <PageHeader
+          title={<Trans>Ranking Nacional</Trans>}
+          subtitle={<Trans>Não existe ranking nacional disponível.</Trans>}
+        />
+        <div className="section content">
+          <p>
+            <Link to="/">
+              <Trans>Voltar à página inicial</Trans>
+            </Link>
+          </p>
         </div>
-      </div>
+      </>
     );
   }
 
   const shownMonth = month || rankingList[0];
 
+  const subtitle = (
+    <Trans>
+      {getLocaleMonth(language, parseInt(shownMonth.substring(5, 7)))} de{' '}
+      {shownMonth.substring(0, 4)}
+    </Trans>
+  );
+
+  const basePath = `/${pathname.split('/')[1]}`;
+
   return (
     <>
-      <PageHeader
-        title={<Trans>Ranking Nacional</Trans>}
-        subtitle={
-          <Trans>
-            {getLocaleMonth(language, parseInt(shownMonth.substring(5, 7)))} de{' '}
-            {shownMonth.substring(0, 4)}
-          </Trans>
-        }
+      <Breadcrumbs
+        pages={[
+          {
+            title: <Trans>Ranking Nacional</Trans>,
+            url: basePath,
+          },
+          ...(month
+            ? [
+                {
+                  title: subtitle,
+                  url: `${basePath}/${month}`,
+                },
+              ]
+            : []),
+        ]}
       />
+      <PageHeader title={<Trans>Ranking Nacional</Trans>} subtitle={subtitle} />
       <div className="section content">
         <div className={classes.tableWrapper}>
           <ScrollContainer
