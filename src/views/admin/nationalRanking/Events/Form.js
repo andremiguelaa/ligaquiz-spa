@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 
 import ApiRequest from 'utils/ApiRequest';
 import Modal from 'components/Modal';
-import { individualQuizTypeOptions, monthListOptions } from './Form/options';
+import { individualQuizTypeOptions, monthListOptions } from '../utils/options';
 import Event from './Form/Event';
 
 const Form = ({

@@ -21,7 +21,6 @@ import classes from './NationalRanking/NationalRanking.module.scss';
 
 const NationalRanking = () => {
   const { month } = useParams();
-
   const [
     {
       settings: { language },

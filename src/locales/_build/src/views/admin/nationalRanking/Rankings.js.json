@@ -1,0 +1,114 @@
+{
+  "Ranking mensal apagado com sucesso.": {
+    "origin": [
+      [
+        "src/views/admin/nationalRanking/Rankings.js",
+        62
+      ]
+    ]
+  },
+  "Não foi possível apagar o ranking mensal.": {
+    "origin": [
+      [
+        "src/views/admin/nationalRanking/Rankings.js",
+        65
+      ]
+    ]
+  },
+  "Erro de servidor. Tenta mais tarde.": {
+    "origin": [
+      [
+        "src/views/admin/nationalRanking/Rankings.js",
+        76
+      ]
+    ]
+  },
+  "Rankings mensais": {
+    "origin": [
+      [
+        "src/views/admin/nationalRanking/Rankings.js",
+        83
+      ]
+    ]
+  },
+  "Publicar ranking mensal": {
+    "origin": [
+      [
+        "src/views/admin/nationalRanking/Rankings.js",
+        101
+      ],
+      [
+        "src/views/admin/nationalRanking/Rankings.js",
+        175
+      ]
+    ]
+  },
+  "Mês": {
+    "origin": [
+      [
+        "src/views/admin/nationalRanking/Rankings.js",
+        113
+      ],
+      [
+        "src/views/admin/nationalRanking/Rankings.js",
+        180
+      ]
+    ]
+  },
+  "Acções": {
+    "origin": [
+      [
+        "src/views/admin/nationalRanking/Rankings.js",
+        116
+      ]
+    ]
+  },
+  "{0} de {1}": {
+    "origin": [
+      [
+        "src/views/admin/nationalRanking/Rankings.js",
+        126
+      ]
+    ]
+  },
+  "Sem registos": {
+    "origin": [
+      [
+        "src/views/admin/nationalRanking/Rankings.js",
+        154
+      ]
+    ]
+  },
+  "Apagar ranking mensal": {
+    "origin": [
+      [
+        "src/views/admin/nationalRanking/Rankings.js",
+        163
+      ]
+    ]
+  },
+  "Tens a certeza que queres apagar este ranking mensal?": {
+    "origin": [
+      [
+        "src/views/admin/nationalRanking/Rankings.js",
+        165
+      ]
+    ]
+  },
+  "Ranking mensal publicado com sucesso.": {
+    "origin": [
+      [
+        "src/views/admin/nationalRanking/Rankings.js",
+        212
+      ]
+    ]
+  },
+  "Não foi possível publicar o ranking mensal.": {
+    "origin": [
+      [
+        "src/views/admin/nationalRanking/Rankings.js",
+        217
+      ]
+    ]
+  }
+}

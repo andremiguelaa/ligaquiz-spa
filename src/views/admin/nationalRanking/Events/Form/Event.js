@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Trans } from '@lingui/macro';
 
 import Modal from 'components/Modal';
-import { individualQuizTypeOptions } from './options';
+import { individualQuizTypeOptions } from '../../utils/options';
 import Player from './Event/Player';
 
 const Event = ({

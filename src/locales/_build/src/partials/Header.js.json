@@ -31,7 +31,7 @@
       ]
     ]
   },
-  "Ranking": {
+  "Rankings mensais": {
     "origin": [
       [
         "src/partials/Header.js",

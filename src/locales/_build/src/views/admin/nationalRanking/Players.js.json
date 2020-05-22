@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Players.js",
-        57
+        56
       ]
     ]
   },
@@ -19,11 +19,11 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Players.js",
-        63
+        62
       ],
       [
         "src/views/admin/nationalRanking/Players.js",
-        66
+        65
       ]
     ]
   },
@@ -31,7 +31,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Players.js",
-        82
+        77
       ]
     ]
   },
@@ -39,7 +39,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Players.js",
-        89
+        84
       ]
     ]
   },
@@ -47,7 +47,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Players.js",
-        120
+        121
       ]
     ]
   },
@@ -55,7 +55,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Players.js",
-        121
+        122
       ]
     ]
   }

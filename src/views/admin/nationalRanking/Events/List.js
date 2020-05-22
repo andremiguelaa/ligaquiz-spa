@@ -1,10 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 
+import getLocaleMonth from 'utils/getLocaleMonth';
+import { useStateValue } from 'state/State';
 import EmptyState from 'components/EmptyState';
 
 const List = ({ monthList, setPage, editMonth, setMonthToDelete }) => {
+  const [
+    {
+      settings: { language },
+    },
+  ] = useStateValue();
   return (
     <>
       <button onClick={() => setPage('add')} className="button is-primary">
@@ -34,7 +40,13 @@ const List = ({ monthList, setPage, editMonth, setMonthToDelete }) => {
               return (
                 <tr key={entry}>
                   <td className="is-vertical-middle">
-                    <Link to={`/national-ranking/${entry}`}>{entry}</Link>
+                    <Trans>
+                      {getLocaleMonth(
+                        language,
+                        parseInt(entry.substring(5, 7))
+                      )}{' '}
+                      de {entry.substring(0, 4)}
+                    </Trans>
                   </td>
                   <td>
                     <div className="buttons has-addons is-pulled-right">

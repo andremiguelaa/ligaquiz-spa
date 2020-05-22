@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Events/List.js",
-        15
+        21
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Events/List.js",
-        25
+        31
       ]
     ]
   },
@@ -19,7 +19,15 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Events/List.js",
-        28
+        34
+      ]
+    ]
+  },
+  "{0} de {1}": {
+    "origin": [
+      [
+        "src/views/admin/nationalRanking/Events/List.js",
+        43
       ]
     ]
   },
@@ -27,7 +35,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Events/List.js",
-        66
+        78
       ]
     ]
   }
