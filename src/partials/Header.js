@@ -17,7 +17,11 @@ const Header = () => {
   const [roles, setRoles] = useState({});
 
   useEffect(() => {
-    setRoles(JSON.parse(user.roles));
+    if (user) {
+      setRoles(JSON.parse(user.roles));
+    } else {
+      setRoles({});
+    }
   }, [user]);
 
   const changeLanguage = (lang) => {
