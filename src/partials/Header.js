@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import OutsideClickHandler from 'react-outside-click-handler';
 import { Trans } from '@lingui/macro';
@@ -14,6 +14,11 @@ const Header = () => {
   const [{ settings, user }, dispatch] = useStateValue();
   const [menuDropdownOpen, setMenuDropdownOpen] = useState(false);
   const [menuBurgerOpen, setMenuBurgerOpen] = useState(false);
+  const [roles, setRoles] = useState({});
+
+  useEffect(() => {
+    setRoles(JSON.parse(user.roles));
+  }, [user]);
 
   const changeLanguage = (lang) => {
     Cookies.set('language', lang, { expires: 365 });
@@ -122,22 +127,35 @@ const Header = () => {
                   </button>
                 </OutsideClickHandler>
                 <div className="navbar-dropdown is-right">
-                  <div className="navbar-item">
-                    <Trans>Gestão de Ranking Nacional</Trans>
-                  </div>
-                  <Link to="/admin/national-ranking/ranking" className="navbar-item">
-                    <i className="fa fa-btn fa-trophy" />
-                    &nbsp;<Trans>Rankings mensais</Trans>
-                  </Link>
-                  <Link to="/admin/national-ranking/events" className="navbar-item">
-                    <i className="fa fa-btn fa-calendar" />
-                    &nbsp;<Trans>Provas mensais</Trans>
-                  </Link>
-                  <Link to="/admin/national-ranking/players" className="navbar-item">
-                    <i className="fa fa-btn fa-users" />
-                    &nbsp;<Trans>Jogadores</Trans>
-                  </Link>
-                  <hr className="navbar-divider" />
+                  {(roles.admin || roles.national_ranking_manager) && (
+                    <>
+                      <div className="navbar-item">
+                        <Trans>Gestão de Ranking Nacional</Trans>
+                      </div>
+                      <Link
+                        to="/admin/national-ranking/ranking"
+                        className="navbar-item"
+                      >
+                        <i className="fa fa-btn fa-trophy" />
+                        &nbsp;<Trans>Rankings mensais</Trans>
+                      </Link>
+                      <Link
+                        to="/admin/national-ranking/events"
+                        className="navbar-item"
+                      >
+                        <i className="fa fa-btn fa-calendar" />
+                        &nbsp;<Trans>Provas mensais</Trans>
+                      </Link>
+                      <Link
+                        to="/admin/national-ranking/players"
+                        className="navbar-item"
+                      >
+                        <i className="fa fa-btn fa-users" />
+                        &nbsp;<Trans>Jogadores</Trans>
+                      </Link>
+                      <hr className="navbar-divider" />
+                    </>
+                  )}
                   <Link to="/account/" className="navbar-item">
                     <i className="fa fa-btn fa-user" />
                     &nbsp;<Trans>Conta</Trans>
