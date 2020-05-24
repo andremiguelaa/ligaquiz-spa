@@ -9,6 +9,7 @@ export const Modal = ({
   open,
   body,
   action,
+  actionDisabled,
   doingAction,
   onClose,
 }) => (
@@ -22,6 +23,7 @@ export const Modal = ({
             type="button"
             className={`delete ${doingAction ? `is-invisible` : ''}`}
             onClick={onClose}
+            disabled={doingAction}
           ></button>
         </div>{' '}
         <div className={`message-body ${classes.modalBody}`}>{body}</div>
@@ -32,6 +34,7 @@ export const Modal = ({
               doingAction ? `is-loading` : ''
             }`}
             onClick={action}
+            disabled={actionDisabled}
           >
             <Trans>OK</Trans>
           </button>
@@ -52,6 +55,7 @@ export const Modal = ({
 Error.defaultProps = {
   open: false,
   action: () => {},
+  actionDisabled: false,
   doingAction: false,
   onClose: () => {},
 };

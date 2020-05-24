@@ -6,9 +6,14 @@ $body-size: 14px;
 
 @import 'bulma';
 @import 'styles/Toasts.scss';
+@import 'styles/DateRangePicker.scss';
 
 .indiana-scroll-container {
   cursor: grab;
+}
+
+.is-nowrap {
+  white-space: nowrap !important;
 }
 
 main.container {

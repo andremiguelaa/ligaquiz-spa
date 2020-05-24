@@ -131,6 +131,18 @@ const Header = () => {
                   </button>
                 </OutsideClickHandler>
                 <div className="navbar-dropdown is-right">
+                  {roles.admin && (
+                    <>
+                      <Link
+                        to="/admin/notifications"
+                        className="navbar-item"
+                      >
+                        <i className="fa fa-btn fa-bell" />
+                        &nbsp;<Trans>Gerir notificações</Trans>
+                      </Link>
+                      <hr className="navbar-divider" />
+                    </>
+                  )}
                   {(roles.admin || roles.national_ranking_manager) && (
                     <>
                       <div className="navbar-item">

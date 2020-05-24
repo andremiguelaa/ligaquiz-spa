@@ -14,6 +14,8 @@ import NationalRankingAdminRankings from 'views/admin/nationalRanking/Rankings';
 import NationalRankingAdminEvents from 'views/admin/nationalRanking/Events';
 import NationalRankingAdminPlayers from 'views/admin/nationalRanking/Players';
 
+import NotificationsAdmin from 'views/admin/notifications/Notifications'
+
 import NoMatch from 'views/NoMatch';
 
 export default [
@@ -53,6 +55,11 @@ export default [
     component: Account,
   },
   {
+    title: <Trans>Ranking Nacional</Trans>,
+    path: '/national-ranking/:month?',
+    component: NationalRanking,
+  },
+  {
     title: <Trans>Ranking Nacional | Ranking</Trans>,
     path: '/admin/national-ranking/ranking',
     component: NationalRankingAdminRankings,
@@ -68,9 +75,9 @@ export default [
     component: NationalRankingAdminPlayers,
   },
   {
-    title: <Trans>Ranking Nacional</Trans>,
-    path: '/national-ranking/:month?',
-    component: NationalRanking,
+    title: <Trans>Notificações</Trans>,
+    path: '/admin/notifications',
+    component: NotificationsAdmin,
   },
   {
     title: <Trans>Página não encontrada</Trans>,

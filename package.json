@@ -4,6 +4,8 @@
   "private": true,
   "homepage": "https://spa.ligaquiz.pt",
   "dependencies": {
+    "@wojtekmaj/react-daterange-picker": "^3.0.0",
+    "marked": "^1.1.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-indiana-drag-scroll": "^1.6.1",
