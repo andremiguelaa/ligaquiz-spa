@@ -12,6 +12,7 @@ import { useStateValue } from 'state/State';
 import Auth from 'utils/Auth';
 import RouteWithTitle from 'utils/RouteWithTitle';
 import Header from 'partials/Header';
+import Notifications from 'partials/Notifications';
 
 export const catalogs = { pt: catalogPt, en: catalogEn };
 
@@ -26,6 +27,7 @@ const App = () => {
       <I18nProvider language={language} catalogs={catalogs}>
         <BrowserRouter>
           <Header />
+          <Notifications />
           <main className="section">
             <div className="container">
               <I18n>
