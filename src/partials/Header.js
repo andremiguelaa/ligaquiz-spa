@@ -70,8 +70,15 @@ const Header = () => {
         >
           <div className="navbar-start">
             <Link to="/national-ranking/" className="navbar-item">
-              <Trans>Ranking Nacional</Trans>
+              <i className="fa fa-btn fa-trophy" />
+              &nbsp;<Trans>Ranking Nacional</Trans>
             </Link>
+            {user && (
+              <Link to="/statistics" className="navbar-item">
+                <i className="fa fa-btn fa-line-chart" />
+                &nbsp;<Trans>As minhas estatísicas</Trans>
+              </Link>
+            )}
             <div className="navbar-item has-dropdown is-hoverable is-hidden">
               <a className="navbar-link">More</a>
               <div className="navbar-dropdown">

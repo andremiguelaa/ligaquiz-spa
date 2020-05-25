@@ -8,6 +8,7 @@ import ResetPassword from 'views/ResetPassword';
 import Register from 'views/Register';
 import Logout from 'views/Logout';
 import Account from 'views/Account';
+import Statistics from 'views/Statistics';
 import NationalRanking from 'views/NationalRanking';
 
 import NationalRankingAdminRankings from 'views/admin/nationalRanking/Rankings';
@@ -53,6 +54,11 @@ export default [
     title: <Trans>Conta</Trans>,
     path: '/account',
     component: Account,
+  },
+  {
+    title: <Trans>Estatísticas</Trans>,
+    path: '/statistics/:id?',
+    component: Statistics,
   },
   {
     title: <Trans>Ranking Nacional</Trans>,

@@ -9,7 +9,6 @@ const Header = () => {
   const [{ user }] = useStateValue();
   const [notifications, setNotifications] = useState();
   const [loading, setLoading] = useState(false);
-  const [timeInterval, setTimeInterval] = useState();
 
   const getNotifications = () => {
     ApiRequest.get('notifications?current')
@@ -22,18 +21,17 @@ const Header = () => {
   };
 
   useEffect(() => {
-    clearInterval(timeInterval);
+    let interval;
     if (user) {
       setLoading(true);
       getNotifications();
-      setTimeInterval(
-        setInterval(() => {
-          getNotifications();
-        }, 60000)
-      );
+      interval = setInterval(() => {
+        getNotifications();
+      }, 60000);
     } else {
       setNotifications();
     }
+    return () => clearInterval(interval);
   }, [user]);
 
   if (loading) {
