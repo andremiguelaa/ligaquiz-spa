@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/routes.js",
-        21
+        25
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/routes.js",
-        26
+        30
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/routes.js",
-        31
+        35
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/routes.js",
-        36
+        40
       ]
     ]
   },
@@ -35,7 +35,7 @@
     "origin": [
       [
         "src/routes.js",
-        41
+        45
       ]
     ]
   },
@@ -43,7 +43,7 @@
     "origin": [
       [
         "src/routes.js",
-        46
+        50
       ]
     ]
   },
@@ -51,31 +51,15 @@
     "origin": [
       [
         "src/routes.js",
-        51
-      ]
-    ]
-  },
-  "Ranking Nacional | Ranking": {
-    "origin": [
-      [
-        "src/routes.js",
         56
       ]
     ]
   },
-  "Ranking Nacional | Provas mensais": {
+  "Estatísticas": {
     "origin": [
       [
         "src/routes.js",
-        61
-      ]
-    ]
-  },
-  "Ranking Nacional | Jogadores": {
-    "origin": [
-      [
-        "src/routes.js",
-        66
+        62
       ]
     ]
   },
@@ -83,7 +67,47 @@
     "origin": [
       [
         "src/routes.js",
-        71
+        67
+      ]
+    ]
+  },
+  "Ranking Nacional | Ranking": {
+    "origin": [
+      [
+        "src/routes.js",
+        73
+      ]
+    ]
+  },
+  "Ranking Nacional | Provas mensais": {
+    "origin": [
+      [
+        "src/routes.js",
+        78
+      ]
+    ]
+  },
+  "Ranking Nacional | Jogadores": {
+    "origin": [
+      [
+        "src/routes.js",
+        83
+      ]
+    ]
+  },
+  "Notificações": {
+    "origin": [
+      [
+        "src/routes.js",
+        88
+      ]
+    ]
+  },
+  "Utilizadores": {
+    "origin": [
+      [
+        "src/routes.js",
+        93
       ]
     ]
   },
@@ -91,7 +115,7 @@
     "origin": [
       [
         "src/routes.js",
-        76
+        98
       ]
     ]
   }

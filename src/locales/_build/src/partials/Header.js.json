@@ -3,7 +3,15 @@
     "origin": [
       [
         "src/partials/Header.js",
-        64
+        65
+      ]
+    ]
+  },
+  "As minhas estatísicas": {
+    "origin": [
+      [
+        "src/partials/Header.js",
+        70
       ]
     ]
   },
@@ -11,7 +19,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        95
+        102
       ]
     ]
   },
@@ -19,43 +27,27 @@
     "origin": [
       [
         "src/partials/Header.js",
-        98
+        105
       ]
     ]
   },
-  "Gestão de Ranking Nacional": {
+  "Administração": {
     "origin": [
       [
         "src/partials/Header.js",
-        126
+        135
       ]
     ]
   },
-  "Rankings mensais": {
+  "Utilizadores": {
     "origin": [
       [
         "src/partials/Header.js",
-        130
+        139
       ]
     ]
   },
-  "Provas mensais": {
-    "origin": [
-      [
-        "src/partials/Header.js",
-        134
-      ]
-    ]
-  },
-  "Jogadores": {
-    "origin": [
-      [
-        "src/partials/Header.js",
-        138
-      ]
-    ]
-  },
-  "Conta": {
+  "Notificações": {
     "origin": [
       [
         "src/partials/Header.js",
@@ -63,11 +55,51 @@
       ]
     ]
   },
+  "Gestão de Ranking Nacional": {
+    "origin": [
+      [
+        "src/partials/Header.js",
+        152
+      ]
+    ]
+  },
+  "Rankings mensais": {
+    "origin": [
+      [
+        "src/partials/Header.js",
+        159
+      ]
+    ]
+  },
+  "Provas mensais": {
+    "origin": [
+      [
+        "src/partials/Header.js",
+        166
+      ]
+    ]
+  },
+  "Jogadores": {
+    "origin": [
+      [
+        "src/partials/Header.js",
+        173
+      ]
+    ]
+  },
+  "Conta": {
+    "origin": [
+      [
+        "src/partials/Header.js",
+        180
+      ]
+    ]
+  },
   "Sair": {
     "origin": [
       [
         "src/partials/Header.js",
-        147
+        184
       ]
     ]
   },
@@ -75,7 +107,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        151
+        188
       ]
     ]
   }

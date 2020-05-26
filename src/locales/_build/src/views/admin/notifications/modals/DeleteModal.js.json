@@ -1,0 +1,34 @@
+{
+  "Notificação apagada com sucesso.": {
+    "origin": [
+      [
+        "src/views/admin/notifications/modals/DeleteModal.js",
+        21
+      ]
+    ]
+  },
+  "Não foi possível apagar notificação.": {
+    "origin": [
+      [
+        "src/views/admin/notifications/modals/DeleteModal.js",
+        24
+      ]
+    ]
+  },
+  "Apagar notificação": {
+    "origin": [
+      [
+        "src/views/admin/notifications/modals/DeleteModal.js",
+        36
+      ]
+    ]
+  },
+  "Tens a certeza que queres apagar esta notificação?": {
+    "origin": [
+      [
+        "src/views/admin/notifications/modals/DeleteModal.js",
+        37
+      ]
+    ]
+  }
+}

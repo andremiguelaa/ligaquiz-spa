@@ -1,0 +1,42 @@
+{
+  "Erro de servidor. Tenta mais tarde.": {
+    "origin": [
+      [
+        "src/views/admin/users/Users.js",
+        30
+      ]
+    ]
+  },
+  "Utilizadores": {
+    "origin": [
+      [
+        "src/views/admin/users/Users.js",
+        37
+      ]
+    ]
+  },
+  "Nome": {
+    "origin": [
+      [
+        "src/views/admin/users/Users.js",
+        48
+      ]
+    ]
+  },
+  "Acções": {
+    "origin": [
+      [
+        "src/views/admin/users/Users.js",
+        51
+      ]
+    ]
+  },
+  "Sem registos": {
+    "origin": [
+      [
+        "src/views/admin/users/Users.js",
+        97
+      ]
+    ]
+  }
+}

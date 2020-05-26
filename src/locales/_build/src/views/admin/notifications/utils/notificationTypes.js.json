@@ -1,0 +1,18 @@
+{
+  "Informação": {
+    "origin": [
+      [
+        "src/views/admin/notifications/utils/notificationTypes.js",
+        9
+      ]
+    ]
+  },
+  "Aviso": {
+    "origin": [
+      [
+        "src/views/admin/notifications/utils/notificationTypes.js",
+        14
+      ]
+    ]
+  }
+}

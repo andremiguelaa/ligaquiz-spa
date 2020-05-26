@@ -1,0 +1,74 @@
+{
+  "Editar notificação": {
+    "origin": [
+      [
+        "src/views/admin/notifications/modals/FormModal.js",
+        57
+      ]
+    ]
+  },
+  "Criar notificação": {
+    "origin": [
+      [
+        "src/views/admin/notifications/modals/FormModal.js",
+        59
+      ]
+    ]
+  },
+  "Datas": {
+    "origin": [
+      [
+        "src/views/admin/notifications/modals/FormModal.js",
+        66
+      ]
+    ]
+  },
+  "Tipo de notificação": {
+    "origin": [
+      [
+        "src/views/admin/notifications/modals/FormModal.js",
+        84
+      ]
+    ]
+  },
+  "Conteúdo": {
+    "origin": [
+      [
+        "src/views/admin/notifications/modals/FormModal.js",
+        109
+      ]
+    ]
+  },
+  "Notificação editada com sucesso.": {
+    "origin": [
+      [
+        "src/views/admin/notifications/modals/FormModal.js",
+        148
+      ]
+    ]
+  },
+  "Não foi possível editar a notificação.": {
+    "origin": [
+      [
+        "src/views/admin/notifications/modals/FormModal.js",
+        153
+      ]
+    ]
+  },
+  "Notificação criada com sucesso.": {
+    "origin": [
+      [
+        "src/views/admin/notifications/modals/FormModal.js",
+        168
+      ]
+    ]
+  },
+  "Não foi possível criar a notificação.": {
+    "origin": [
+      [
+        "src/views/admin/notifications/modals/FormModal.js",
+        172
+      ]
+    ]
+  }
+}

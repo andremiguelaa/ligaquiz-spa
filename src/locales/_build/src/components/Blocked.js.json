@@ -1,0 +1,10 @@
+{
+  "Esta conta encontra-se bloqueada.": {
+    "origin": [
+      [
+        "src/components/Blocked.js",
+        12
+      ]
+    ]
+  }
+}
