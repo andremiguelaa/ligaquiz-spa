@@ -13,12 +13,14 @@ import Auth from 'utils/Auth';
 import RouteWithTitle from 'utils/RouteWithTitle';
 import Header from 'partials/Header';
 import Notifications from 'partials/Notifications';
+import Blocked from 'components/Blocked';
 
 export const catalogs = { pt: catalogPt, en: catalogEn };
 
 const App = () => {
   const [
     {
+      user,
       settings: { language },
     },
   ] = useStateValue();
@@ -45,6 +47,9 @@ const App = () => {
                         title,
                         exact: !!route.path && !route.loose,
                       };
+                      if (user && user.roles.blocked && !route.free) {
+                        newProps.component = Blocked;
+                      }
                       return <RouteWithTitle key={title} {...newProps} />;
                     })}
                   </Switch>

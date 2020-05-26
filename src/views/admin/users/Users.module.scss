@@ -1,0 +1,41 @@
+@import 'bulma/sass/utilities/mixins.sass';
+
+.userCellContent {
+  padding-left: 32px;
+  position: relative;
+  .avatar {
+    position: absolute;
+    left: 0;
+    top: calc(50% + 1px);
+    transform: translateY(-50%);
+    height: 28px;
+    width: 28px;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    img {
+      font-size: 0;
+      min-height: 28px;
+      min-width: 28px;
+      object-fit: cover;
+    }
+  }
+
+  .userName {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @include mobile {
+      :global(span) {
+        display: none;
+      }
+    }
+    @include tablet {
+      :global(abbr) {
+        display: none;
+      }
+    }
+  }
+}

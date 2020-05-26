@@ -22,7 +22,7 @@ const Header = () => {
 
   useEffect(() => {
     let interval;
-    if (user) {
+    if (user && !user.roles.blocked) {
       setLoading(true);
       getNotifications();
       interval = setInterval(() => {

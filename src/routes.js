@@ -15,7 +15,8 @@ import NationalRankingAdminRankings from 'views/admin/nationalRanking/Rankings';
 import NationalRankingAdminEvents from 'views/admin/nationalRanking/Events';
 import NationalRankingAdminPlayers from 'views/admin/nationalRanking/Players';
 
-import NotificationsAdmin from 'views/admin/notifications/Notifications'
+import NotificationsAdmin from 'views/admin/notifications/Notifications';
+import UsersAdmin from 'views/admin/users/Users';
 
 import NoMatch from 'views/NoMatch';
 
@@ -48,11 +49,13 @@ export default [
   {
     title: <Trans>Sair</Trans>,
     path: '/logout',
+    free: true,
     component: Logout,
   },
   {
     title: <Trans>Conta</Trans>,
     path: '/account',
+    free: true,
     component: Account,
   },
   {
@@ -63,6 +66,7 @@ export default [
   {
     title: <Trans>Ranking Nacional</Trans>,
     path: '/national-ranking/:month?',
+    free: true,
     component: NationalRanking,
   },
   {
@@ -84,6 +88,11 @@ export default [
     title: <Trans>Notificações</Trans>,
     path: '/admin/notifications',
     component: NotificationsAdmin,
+  },
+  {
+    title: <Trans>Utilizadores</Trans>,
+    path: '/admin/users',
+    component: UsersAdmin,
   },
   {
     title: <Trans>Página não encontrada</Trans>,

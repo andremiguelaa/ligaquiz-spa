@@ -14,15 +14,6 @@ const Header = () => {
   const [{ settings, user }, dispatch] = useStateValue();
   const [menuDropdownOpen, setMenuDropdownOpen] = useState(false);
   const [menuBurgerOpen, setMenuBurgerOpen] = useState(false);
-  const [roles, setRoles] = useState({});
-
-  useEffect(() => {
-    if (user) {
-      setRoles(JSON.parse(user.roles));
-    } else {
-      setRoles({});
-    }
-  }, [user]);
 
   const changeLanguage = (lang) => {
     Cookies.set('language', lang, { expires: 365 });
@@ -138,16 +129,24 @@ const Header = () => {
                   </button>
                 </OutsideClickHandler>
                 <div className="navbar-dropdown is-right">
-                  {roles.admin && (
+                  {user.roles.admin && (
                     <>
+                    <div className="navbar-item">
+                        <Trans>Administração</Trans>
+                      </div>
+                      <Link to="/admin/users" className="navbar-item">
+                        <i className="fa fa-btn fa-users" />
+                        &nbsp;<Trans>Utilizadores</Trans>
+                      </Link>
                       <Link to="/admin/notifications" className="navbar-item">
                         <i className="fa fa-btn fa-bell" />
-                        &nbsp;<Trans>Gerir notificações</Trans>
+                        &nbsp;<Trans>Notificações</Trans>
                       </Link>
                       <hr className="navbar-divider" />
                     </>
                   )}
-                  {(roles.admin || roles.national_ranking_manager) && (
+                  {(user.roles.admin ||
+                    user.roles.national_ranking_manager) && (
                     <>
                       <div className="navbar-item">
                         <Trans>Gestão de Ranking Nacional</Trans>
