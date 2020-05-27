@@ -3,6 +3,9 @@
 .userCellContent {
   padding-left: 32px;
   position: relative;
+  &.blocked {
+    text-decoration: line-through;
+  }
   .avatar {
     position: absolute;
     left: 0;
