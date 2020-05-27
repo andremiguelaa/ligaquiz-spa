@@ -77,7 +77,7 @@ const Player = ({ player, quizzes }) => {
             <span>
               {player.data.name} {player.data.surname}
             </span>
-            <abbr title={`${player.data.name} ${player.data.surname}`}>
+            <abbr data-tooltip={`${player.data.name} ${player.data.surname}`}>
               {getAcronym(player.data.name)}
               {getAcronym(player.data.surname)}
             </abbr>

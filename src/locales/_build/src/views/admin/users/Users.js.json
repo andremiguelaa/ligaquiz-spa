@@ -1,9 +1,25 @@
 {
+  "Utilizador actualizado com sucesso.": {
+    "origin": [
+      [
+        "src/views/admin/users/Users.js",
+        70
+      ]
+    ]
+  },
+  "Não foi possível actualizar o utilizador.": {
+    "origin": [
+      [
+        "src/views/admin/users/Users.js",
+        74
+      ]
+    ]
+  },
   "Erro de servidor. Tenta mais tarde.": {
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        30
+        84
       ]
     ]
   },
@@ -11,7 +27,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        37
+        91
       ]
     ]
   },
@@ -19,7 +35,15 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        48
+        102
+      ]
+    ]
+  },
+  "Permissões": {
+    "origin": [
+      [
+        "src/views/admin/users/Users.js",
+        105
       ]
     ]
   },
@@ -27,7 +51,55 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        51
+        108
+      ]
+    ]
+  },
+  "Administrador": {
+    "origin": [
+      [
+        "src/views/admin/users/Users.js",
+        141
+      ],
+      [
+        "src/views/admin/users/Users.js",
+        253
+      ]
+    ]
+  },
+  "Jogador regular": {
+    "origin": [
+      [
+        "src/views/admin/users/Users.js",
+        156
+      ],
+      [
+        "src/views/admin/users/Users.js",
+        279
+      ]
+    ]
+  },
+  "Gestor de Ranking Nacional": {
+    "origin": [
+      [
+        "src/views/admin/users/Users.js",
+        172
+      ],
+      [
+        "src/views/admin/users/Users.js",
+        339
+      ]
+    ]
+  },
+  "Bloqueado": {
+    "origin": [
+      [
+        "src/views/admin/users/Users.js",
+        185
+      ],
+      [
+        "src/views/admin/users/Users.js",
+        362
       ]
     ]
   },
@@ -35,7 +107,23 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        97
+        218
+      ]
+    ]
+  },
+  "Editar permissões de {0} {1}": {
+    "origin": [
+      [
+        "src/views/admin/users/Users.js",
+        228
+      ]
+    ]
+  },
+  "Validade da subscrição": {
+    "origin": [
+      [
+        "src/views/admin/users/Users.js",
+        285
       ]
     ]
   }

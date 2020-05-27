@@ -1,4 +1,5 @@
 .field {
+  .react-date-picker__wrapper,
   .react-daterange-picker__wrapper {
     position: relative;
     height: 2.25em;
@@ -13,16 +14,19 @@
     }
   }
   .has-icons-left {
+    .react-date-picker__wrapper,
     .react-daterange-picker__wrapper {
       padding-left: 2.25em;
     }
   }
+  .react-date-picker__inputGroup,
   .react-daterange-picker__inputGroup {
     padding: 0;
   }
   .react-daterange-picker__range-divider {
     margin: 0 0.5rem;
   }
+  .react-date-picker__calendar,
   .react-daterange-picker__calendar {
     z-index: 5;
   }

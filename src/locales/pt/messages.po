@@ -29,7 +29,7 @@ msgstr "A tua sessão expirou."
 #: src/views/admin/nationalRanking/Players/List.js:32
 #: src/views/admin/nationalRanking/Rankings.js:116
 #: src/views/admin/notifications/Notifications.js:79
-#: src/views/admin/users/Users.js:51
+#: src/views/admin/users/Users.js:108
 msgid "Acções"
 msgstr "Acções"
 
@@ -49,6 +49,11 @@ msgstr "Adicionar prova"
 #: src/views/admin/nationalRanking/Events/List.js:21
 msgid "Adicionar provas mensais"
 msgstr "Adicionar provas mensais"
+
+#: src/views/admin/users/Users.js:141
+#: src/views/admin/users/Users.js:253
+msgid "Administrador"
+msgstr "Administrador"
 
 #: src/partials/Header.js:135
 msgid "Administração"
@@ -89,6 +94,11 @@ msgstr "As minhas estatísicas"
 msgid "Aviso"
 msgstr "Aviso"
 
+#: src/views/admin/users/Users.js:185
+#: src/views/admin/users/Users.js:362
+msgid "Bloqueado"
+msgstr "Bloqueado"
+
 #: src/views/admin/nationalRanking/utils/options.js:12
 msgid "Campeonato Europeu de Quiz"
 msgstr "Campeonato Europeu de Quiz"
@@ -117,7 +127,7 @@ msgstr "Confirmação da palavra-passe"
 msgid "Conta"
 msgstr "Conta"
 
-#: src/views/admin/notifications/modals/FormModal.js:109
+#: src/views/admin/notifications/modals/FormModal.js:106
 msgid "Conteúdo"
 msgstr "Conteúdo"
 
@@ -126,7 +136,7 @@ msgid "Credenciais erradas."
 msgstr "Credenciais erradas."
 
 #: src/views/admin/notifications/Notifications.js:57
-#: src/views/admin/notifications/modals/FormModal.js:59
+#: src/views/admin/notifications/modals/FormModal.js:55
 msgid "Criar notificação"
 msgstr "Criar notificação"
 
@@ -138,11 +148,11 @@ msgstr "Data de fim"
 msgid "Data de início"
 msgstr "Data de início"
 
-#: src/views/admin/notifications/modals/FormModal.js:66
+#: src/views/admin/notifications/modals/FormModal.js:62
 msgid "Datas"
 msgstr "Datas"
 
-#: src/views/NationalRanking/Player/RankChange.js:34
+#: src/views/NationalRanking/Player/RankChange.js:39
 msgid "Desceu"
 msgstr "Desceu"
 
@@ -153,9 +163,13 @@ msgstr "Desceu"
 msgid "E-Mail"
 msgstr "E-Mail"
 
-#: src/views/admin/notifications/modals/FormModal.js:57
+#: src/views/admin/notifications/modals/FormModal.js:53
 msgid "Editar notificação"
 msgstr "Editar notificação"
+
+#: src/views/admin/users/Users.js:228
+msgid "Editar permissões de {0} {1}"
+msgstr "Editar permissões de {0} {1}"
 
 #: src/views/Statistics.js:13
 msgid "Em desenvolvimento..."
@@ -183,7 +197,7 @@ msgstr "Enviámos-te um e-mail, segue as instruções para definir uma nova pala
 #: src/views/admin/nationalRanking/Players.js:77
 #: src/views/admin/nationalRanking/Rankings.js:76
 #: src/views/admin/notifications/Notifications.js:34
-#: src/views/admin/users/Users.js:30
+#: src/views/admin/users/Users.js:84
 msgid "Erro de servidor. Tenta mais tarde."
 msgstr "Erro de servidor. Tenta mais tarde."
 
@@ -214,6 +228,11 @@ msgstr "Estatísticas"
 #: src/views/Account/Avatar.js:101
 msgid "Ficheiro inválido."
 msgstr "Ficheiro inválido."
+
+#: src/views/admin/users/Users.js:172
+#: src/views/admin/users/Users.js:339
+msgid "Gestor de Ranking Nacional"
+msgstr "Gestor de Ranking Nacional"
 
 #: src/partials/Header.js:152
 msgid "Gestão de Ranking Nacional"
@@ -268,6 +287,11 @@ msgstr "Jogador criado com sucesso."
 msgid "Jogador da liga"
 msgstr "Jogador da liga"
 
+#: src/views/admin/users/Users.js:156
+#: src/views/admin/users/Users.js:279
+msgid "Jogador regular"
+msgstr "Jogador regular"
+
 #: src/partials/Header.js:173
 #: src/views/admin/nationalRanking/Players.js:84
 msgid "Jogadores"
@@ -316,7 +340,7 @@ msgstr "Nenhum"
 #: src/views/NationalRanking.js:220
 #: src/views/Register.js:58
 #: src/views/admin/nationalRanking/Players/Form.js:148
-#: src/views/admin/users/Users.js:48
+#: src/views/admin/users/Users.js:102
 msgid "Nome"
 msgstr "Nome"
 
@@ -328,11 +352,11 @@ msgstr "Notificação"
 msgid "Notificação apagada com sucesso."
 msgstr "Notificação apagada com sucesso."
 
-#: src/views/admin/notifications/modals/FormModal.js:168
+#: src/views/admin/notifications/modals/FormModal.js:165
 msgid "Notificação criada com sucesso."
 msgstr "Notificação criada com sucesso."
 
-#: src/views/admin/notifications/modals/FormModal.js:148
+#: src/views/admin/notifications/modals/FormModal.js:145
 msgid "Notificação editada com sucesso."
 msgstr "Notificação editada com sucesso."
 
@@ -342,7 +366,7 @@ msgstr "Notificação editada com sucesso."
 msgid "Notificações"
 msgstr "Notificações"
 
-#: src/views/NationalRanking/Player/RankChange.js:12
+#: src/views/NationalRanking/Player/RankChange.js:13
 msgid "Nova entrada para o ranking"
 msgstr "Nova entrada para o ranking"
 
@@ -366,6 +390,10 @@ msgstr "Não foi possível abrir a edição das provas mensais."
 msgid "Não foi possível actualizar o perfil."
 msgstr "Não foi possível actualizar o perfil."
 
+#: src/views/admin/users/Users.js:74
+msgid "Não foi possível actualizar o utilizador."
+msgstr "Não foi possível actualizar o utilizador."
+
 #: src/views/admin/nationalRanking/Players.js:62
 #: src/views/admin/nationalRanking/Players.js:65
 msgid "Não foi possível apagar ao jogador."
@@ -387,11 +415,11 @@ msgstr "Não foi possível apagar notificação."
 msgid "Não foi possível apagar o ranking mensal."
 msgstr "Não foi possível apagar o ranking mensal."
 
-#: src/views/admin/notifications/modals/FormModal.js:172
+#: src/views/admin/notifications/modals/FormModal.js:169
 msgid "Não foi possível criar a notificação."
 msgstr "Não foi possível criar a notificação."
 
-#: src/views/admin/notifications/modals/FormModal.js:153
+#: src/views/admin/notifications/modals/FormModal.js:150
 msgid "Não foi possível editar a notificação."
 msgstr "Não foi possível editar a notificação."
 
@@ -443,6 +471,10 @@ msgstr "Para mais pormenores de como o ranking é calculado deve ser consultado 
 #: src/views/Account.js:46
 msgid "Perfil actualizado com sucesso."
 msgstr "Perfil actualizado com sucesso."
+
+#: src/views/admin/users/Users.js:105
+msgid "Permissões"
+msgstr "Permissões"
 
 #: src/views/NationalRanking.js:224
 msgid "Pontos"
@@ -583,7 +615,7 @@ msgstr "Selecciona os jogadores que jogaram esta prova:"
 #: src/views/admin/nationalRanking/Players/List.js:79
 #: src/views/admin/nationalRanking/Rankings.js:154
 #: src/views/admin/notifications/Notifications.js:132
-#: src/views/admin/users/Users.js:97
+#: src/views/admin/users/Users.js:218
 msgid "Sem registos"
 msgstr "Sem registos"
 
@@ -595,7 +627,7 @@ msgstr "Soma"
 msgid "Squizzed"
 msgstr "Squizzed"
 
-#: src/views/NationalRanking/Player/RankChange.js:22
+#: src/views/NationalRanking/Player/RankChange.js:25
 msgid "Subiu"
 msgstr "Subiu"
 
@@ -632,7 +664,7 @@ msgstr "Tens a certeza que queres apagar este ranking mensal?"
 msgid "Tipo"
 msgstr "Tipo"
 
-#: src/views/admin/notifications/modals/FormModal.js:84
+#: src/views/admin/notifications/modals/FormModal.js:81
 msgid "Tipo de notificação"
 msgstr "Tipo de notificação"
 
@@ -641,15 +673,23 @@ msgstr "Tipo de notificação"
 msgid "Todos os dados deste formulário serão descartados.<0/>Tens a certeza que queres voltar à listagem?"
 msgstr "Todos os dados deste formulário serão descartados.<0/>Tens a certeza que queres voltar à listagem?"
 
+#: src/views/admin/users/Users.js:70
+msgid "Utilizador actualizado com sucesso."
+msgstr "Utilizador actualizado com sucesso."
+
 #: src/views/Register.js:205
 msgid "Utilizador registado com sucesso.<0/>Clica <1>aqui</1> e usa as tuas credenciais."
 msgstr "Utilizador registado com sucesso.<0/>Clica <1>aqui</1> e usa as tuas credenciais."
 
 #: src/partials/Header.js:139
 #: src/routes.js:93
-#: src/views/admin/users/Users.js:37
+#: src/views/admin/users/Users.js:91
 msgid "Utilizadores"
 msgstr "Utilizadores"
+
+#: src/views/admin/users/Users.js:285
+msgid "Validade da subscrição"
+msgstr "Validade da subscrição"
 
 #: src/partials/Header.js:188
 msgid "Versão 4.0"
@@ -676,13 +716,13 @@ msgstr "deixa em branco para não alterar"
 msgid "melhor"
 msgstr "melhor"
 
-#: src/views/NationalRanking/Player/RankChange.js:23
-#: src/views/NationalRanking/Player/RankChange.js:35
+#: src/views/NationalRanking/Player/RankChange.js:26
+#: src/views/NationalRanking/Player/RankChange.js:40
 msgid "posição"
 msgstr "posição"
 
-#: src/views/NationalRanking/Player/RankChange.js:23
-#: src/views/NationalRanking/Player/RankChange.js:35
+#: src/views/NationalRanking/Player/RankChange.js:26
+#: src/views/NationalRanking/Player/RankChange.js:40
 msgid "posições"
 msgstr "posições"
 

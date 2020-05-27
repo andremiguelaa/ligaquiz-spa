@@ -68,6 +68,7 @@ const FormModal = ({
                 calendarIcon={null}
                 clearIcon={null}
                 minDate={new Date()}
+                format="yyyy-MM-dd"
                 locale={language}
               />
               <span className="icon is-small is-left">

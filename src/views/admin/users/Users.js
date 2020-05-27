@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
-import classNames from 'classnames';
+import { I18n } from '@lingui/react';
+import { t } from '@lingui/macro';
 import { toast } from 'react-toastify';
+import DatePicker from 'react-date-picker';
 
 import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
@@ -18,7 +20,12 @@ import classes from './Users.module.scss';
 const Users = () => {
   const [error, setError] = useState(false);
   const [users, setUsers] = useState();
-  const [{ user: authUser }] = useStateValue();
+  const [
+    {
+      user: authUser,
+      settings: { language },
+    },
+  ] = useStateValue();
   const [patching, setPatching] = useState(false);
   const [userToEdit, setUserToEdit] = useState();
 
@@ -127,26 +134,60 @@ const Users = () => {
                         </td>
                         <td className="is-vertical-middle">
                           {user.roles?.admin && (
-                            <span className="icon">
-                              <i className="fa fa-superpowers"></i>
-                            </span>
+                            <I18n>
+                              {({ i18n }) => (
+                                <span
+                                  className="icon"
+                                  data-tooltip={i18n._(t`Administrador`)}
+                                >
+                                  <i className="fa fa-superpowers"></i>
+                                </span>
+                              )}
+                            </I18n>
                           )}
                           {user.roles?.regular_player &&
                             user.roles?.regular_player >=
                               formatDate(new Date()) && (
-                              <span className="icon">
-                                <i className="fa fa-user"></i>
-                              </span>
+                              <I18n>
+                                {({ i18n }) => (
+                                  <span
+                                    className="icon"
+                                    data-tooltip={`${i18n._(
+                                      t`Jogador regular`
+                                    )}: ${formatDate(
+                                      new Date(user.roles?.regular_player)
+                                    )}`}
+                                  >
+                                    <i className="fa fa-user"></i>
+                                  </span>
+                                )}
+                              </I18n>
                             )}
                           {user.roles?.ranking_manager && (
-                            <span className="icon">
-                              <i className="fa fa-trophy"></i>
-                            </span>
+                            <I18n>
+                              {({ i18n }) => (
+                                <span
+                                  className="icon"
+                                  data-tooltip={i18n._(
+                                    t`Gestor de Ranking Nacional`
+                                  )}
+                                >
+                                  <i className="fa fa-trophy"></i>
+                                </span>
+                              )}
+                            </I18n>
                           )}
                           {user.roles?.blocked && (
-                            <span className="icon">
-                              <i className="fa fa-ban"></i>
-                            </span>
+                            <I18n>
+                              {({ i18n }) => (
+                                <span
+                                  className="icon"
+                                  data-tooltip={i18n._(t`Bloqueado`)}
+                                >
+                                  <i className="fa fa-ban"></i>
+                                </span>
+                              )}
+                            </I18n>
                           )}
                         </td>
                         <td>
@@ -190,10 +231,12 @@ const Users = () => {
           }
           body={
             <>
-              <div className="field">
-                <label className="checkbox">
+              <fieldset className="fieldset">
+                <div className="field">
                   <input
+                    id="admin"
                     type="checkbox"
+                    className="switch"
                     value="true"
                     onClick={(event) => {
                       setUserToEdit({
@@ -206,15 +249,18 @@ const Users = () => {
                     }}
                     defaultChecked={Boolean(userToEdit.newRoles?.admin)}
                   />
-                  &nbsp;
-                  <Trans>Administrador</Trans>
-                </label>
-              </div>
-              <div className="field">
-                <label className="checkbox">
+                  <label for="admin">
+                    <Trans>Administrador</Trans>
+                  </label>
+                </div>
+              </fieldset>
+              <fieldset className="fieldset">
+                <div className="field">
                   <input
+                    id="regular-player"
                     type="checkbox"
-                    defaultChecked={Boolean(userToEdit.roles?.regular_player)}
+                    className="switch"
+                    value="true"
                     onClick={(event) => {
                       setUserToEdit({
                         ...userToEdit,
@@ -227,40 +273,54 @@ const Users = () => {
                         },
                       });
                     }}
+                    defaultChecked={Boolean(userToEdit.roles?.regular_player)}
                   />
-                  &nbsp;
-                  <Trans>Jogador regular</Trans>
-                </label>
-              </div>
-              <div
-                className={classNames('field', {
-                  'is-hidden': !Boolean(userToEdit.newRoles?.regular_player),
-                })}
-              >
-                <div className="control">
-                  <label className="label">
-                    <Trans>Validade da subscrição</Trans>
+                  <label for="regular-player">
+                    <Trans>Jogador regular</Trans>
                   </label>
-                  <input
-                    className="input"
-                    type="text"
-                    defaultValue={userToEdit.newRoles?.regular_player}
-                    onChange={(event) => {
-                      setUserToEdit({
-                        ...userToEdit,
-                        newRoles: {
-                          ...userToEdit.newRoles,
-                          regular_player: event.target.value,
-                        },
-                      });
-                    }}
-                  />
                 </div>
-              </div>
-              <div className="field">
-                <label className="checkbox">
+                <div className="field">
+                  <div className="control">
+                    <label className="label">
+                      <Trans>Validade da subscrição</Trans>
+                    </label>
+                    <div className="control has-icons-left">
+                      <DatePicker
+                        disabled={!Boolean(userToEdit.newRoles?.regular_player)}
+                        value={
+                          userToEdit.newRoles?.regular_player
+                            ? new Date(userToEdit.newRoles?.regular_player)
+                            : userToEdit.roles?.regular_player
+                            ? new Date(userToEdit.roles?.regular_player)
+                            : new Date()
+                        }
+                        onChange={(value) => {
+                          setUserToEdit({
+                            ...userToEdit,
+                            newRoles: {
+                              ...userToEdit.newRoles,
+                              regular_player: formatDate(value),
+                            },
+                          });
+                        }}
+                        calendarIcon={null}
+                        clearIcon={null}
+                        format="yyyy-MM-dd"
+                        locale={language}
+                      />
+                      <span className="icon is-small is-left">
+                        <i className="fa fa-calendar" />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset className="fieldset">
+                <div className="field">
                   <input
+                    id="national-ranking-manager"
                     type="checkbox"
+                    className="switch"
                     value="true"
                     onClick={(event) => {
                       setUserToEdit({
@@ -275,14 +335,17 @@ const Users = () => {
                       userToEdit.newRoles?.ranking_manager
                     )}
                   />
-                  &nbsp;
-                  <Trans>Gestor de Ranking Nacional</Trans>
-                </label>
-              </div>
-              <div className="field">
-                <label className="checkbox">
+                  <label for="national-ranking-manager">
+                    <Trans>Gestor de Ranking Nacional</Trans>
+                  </label>
+                </div>
+              </fieldset>
+              <fieldset className="fieldset">
+                <div className="field">
                   <input
+                    id="blocked"
                     type="checkbox"
+                    className="switch"
                     value="true"
                     onClick={(event) => {
                       setUserToEdit({
@@ -295,14 +358,14 @@ const Users = () => {
                     }}
                     defaultChecked={Boolean(userToEdit.newRoles?.blocked)}
                   />
-                  &nbsp;
-                  <Trans>Bloqueado</Trans>
-                </label>
-              </div>
+                  <label for="blocked">
+                    <Trans>Bloqueado</Trans>
+                  </label>
+                </div>
+              </fieldset>
             </>
           }
           action={() => {
-            console.log(userToEdit);
             patchUser(userToEdit);
           }}
           doingAction={patching}

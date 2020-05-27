@@ -4,9 +4,12 @@
   "private": true,
   "homepage": "https://spa.ligaquiz.pt",
   "dependencies": {
+    "@creativebulma/bulma-tooltip": "^1.2.0",
     "@wojtekmaj/react-daterange-picker": "^3.0.0",
+    "bulma-switch": "^2.0.0",
     "marked": "^1.1.0",
     "react": "^16.9.0",
+    "react-date-picker": "^8.0.1",
     "react-dom": "^16.9.0",
     "react-indiana-drag-scroll": "^1.6.1",
     "react-scripts": "3.0.1"

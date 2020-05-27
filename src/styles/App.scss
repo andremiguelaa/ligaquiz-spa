@@ -5,8 +5,10 @@
 $body-size: 14px;
 
 @import 'bulma';
+@import 'bulma-switch';
+@import '@creativebulma/bulma-tooltip';
 @import 'styles/Toasts.scss';
-@import 'styles/DateRangePicker.scss';
+@import 'styles/DatePickers.scss';
 
 .indiana-scroll-container {
   cursor: grab;
@@ -84,4 +86,13 @@ button.navbar-link {
 .links-list {
   list-style: none !important;
   margin-left: 0 !important;
+}
+
+.fieldset {
+  border: 1px solid $grey-lighter;
+  padding: 1rem;
+}
+
+.fieldset:not(:last-child) {
+  margin-bottom: 0.75rem;
 }
