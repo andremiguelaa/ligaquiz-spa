@@ -234,7 +234,7 @@ const Users = () => {
               </div>
               <div
                 className={classNames('field', {
-                  ['is-hidden']: !Boolean(userToEdit.newRoles?.regular_player),
+                  'is-hidden': !Boolean(userToEdit.newRoles?.regular_player),
                 })}
               >
                 <div className="control">
