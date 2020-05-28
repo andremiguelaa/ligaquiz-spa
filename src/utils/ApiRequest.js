@@ -7,7 +7,7 @@ axios.defaults.baseURL =
     ? 'http://api.ligaquiz.test/'
     : 'https://api.ligaquiz.pt/';
 
-export const setBearerToken = token => {
+export const setBearerToken = (token) => {
   if (token) {
     axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
   }

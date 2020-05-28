@@ -5,6 +5,7 @@ import { Trans } from '@lingui/macro';
 
 import { useStateValue } from 'state/State';
 import Loading from 'components/Loading';
+import Error from 'components/Error';
 import ApiRequest, { setBearerToken } from 'utils/ApiRequest';
 
 export const setLoginData = (data, dispatch) => {
@@ -17,33 +18,44 @@ export const setLoginData = (data, dispatch) => {
   }
   dispatch({
     type: 'user.login',
-    payload: data.user
+    payload: data.user,
   });
 };
 
-export default props => {
+export default (props) => {
   const [, dispatch] = useStateValue();
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState();
   useEffect(() => {
     const token = Cookies.get('BEARER-TOKEN');
     if (token) {
       ApiRequest.patch('session')
         .then(({ data: { data } }) => {
           setLoginData(data, dispatch);
-        })
-        .catch(() => {
-          toast.error(<Trans>A tua sessão expirou.</Trans>, {
-            hideProgressBar: true,
-            closeButton: false
-          });
-          Cookies.remove('BEARER-TOKEN');
-        })
-        .finally(() => {
           setLoading(false);
+        })
+        .catch(({ response }) => {
+          if (response?.status === 401) {
+            toast.error(<Trans>A tua sessão expirou.</Trans>, {
+              hideProgressBar: true,
+              closeButton: false,
+            });
+            Cookies.remove('BEARER-TOKEN');
+            setLoading(false);
+          } else {
+            setError(true);
+          }
         });
     } else {
       setLoading(false);
     }
   }, [dispatch, setLoading]);
+  if (error) {
+    return (
+      <Error>
+        <Trans>Erro de servidor. Tenta mais tarde.</Trans>
+      </Error>
+    );
+  }
   return <>{!loading ? props.children : <Loading type="full" />}</>;
 };
