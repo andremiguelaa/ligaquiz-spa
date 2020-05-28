@@ -1,17 +1,15 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import classNames from 'classnames';
+
+import getAcronym from 'utils/getAcronym';
+import ConditionalWrapper from 'components/ConditionalWrapper';
 
 import RankChange from './Player/RankChange';
 import Avatar from './Player/Avatar';
-
 import { quizzesOrder } from './consts.js';
 
 import classes from './NationalRanking.module.scss';
-
-const getAcronym = (string) =>
-  string
-    .split(/\s/)
-    .reduce((response, word) => (response += word.slice(0, 1)), '');
 
 const Player = ({ player, quizzes }) => {
   const [playerQuizzes, setPlayerQuizzes] = useState();
@@ -72,16 +70,24 @@ const Player = ({ player, quizzes }) => {
       </td>
       <td className={`${classes.userCell} has-background-white`}>
         <div className={classes.userCellContent}>
-          <Avatar player={player.data} />
-          <div className={classes.userName}>
-            <span>
+          <ConditionalWrapper
+            condition={player.data.info}
+            wrapper={(children) => (
+              <Link to={`/statistics/${player.data.info.id}`}>{children}</Link>
+            )}
+          >
+            <Avatar player={player.data} />
+            <span className="is-hidden-mobile">
               {player.data.name} {player.data.surname}
             </span>
-            <abbr data-tooltip={`${player.data.name} ${player.data.surname}`}>
+            <abbr
+              data-tooltip={`${player.data.name} ${player.data.surname}`}
+              className="is-hidden-tablet"
+            >
               {getAcronym(player.data.name)}
               {getAcronym(player.data.surname)}
             </abbr>
-          </div>
+          </ConditionalWrapper>
         </div>
       </td>
       <td>

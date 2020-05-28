@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 import { I18n } from '@lingui/react';
 import { t } from '@lingui/macro';
+import classNames from 'classnames';
 
 import { useStateValue } from 'state/State';
+import getAcronym from 'utils/getAcronym';
 import ApiRequest from 'utils/ApiRequest';
 import formatDate from 'utils/formatDate';
 import Loading from 'components/Loading';
@@ -54,10 +56,15 @@ const Users = () => {
                     <th>
                       <Trans>Nome</Trans>
                     </th>
-                    <th>
+                    <th className={classes.permissionsCell}>
                       <Trans>Permissões</Trans>
                     </th>
-                    <th className="has-text-right">
+                    <th
+                      className={classNames(
+                        'has-text-right',
+                        classes.actionsCell
+                      )}
+                    >
                       <Trans>Acções</Trans>
                     </th>
                   </tr>
@@ -79,13 +86,25 @@ const Users = () => {
                                   <i className="fa fa-user" />
                                 )}
                               </div>
-                              <div className={classes.userName}>
+                              <span className="is-hidden-mobile">
                                 {user.name} {user.surname}
-                              </div>
+                              </span>
+                              <abbr
+                                data-tooltip={`${user.name} ${user.surname}`}
+                                className="is-hidden-tablet has-tooltip-right"
+                              >
+                                {getAcronym(user.name)}
+                                {getAcronym(user.surname)}
+                              </abbr>
                             </Link>
                           </div>
                         </td>
-                        <td className="is-vertical-middle">
+                        <td
+                          className={classNames(
+                            'is-vertical-middle',
+                            classes.permissionsCell
+                          )}
+                        >
                           {user.roles?.admin && (
                             <I18n>
                               {({ i18n }) => (
@@ -143,7 +162,7 @@ const Users = () => {
                             </I18n>
                           )}
                         </td>
-                        <td>
+                        <td className={classes.actionsCell}>
                           <div className="is-pulled-right">
                             <button
                               className="button"

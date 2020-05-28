@@ -2,7 +2,7 @@ import React from 'react';
 
 import classes from './Loading.module.scss';
 
-export const Loading = ({ type }) => (
+const Loading = ({ type }) => (
   <div className={classes[type]}>
     <i className="fa fa-spinner fa-spin" />
   </div>

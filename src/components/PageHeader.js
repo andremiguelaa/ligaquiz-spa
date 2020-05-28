@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const PageHeader = ({ title, subtitle }) => (
+const PageHeader = ({ title, subtitle }) => (
   <header className="hero">
     <div className="hero-body">
       <h1 className="title">{title}</h1>

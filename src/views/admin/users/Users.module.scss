@@ -25,20 +25,16 @@
       object-fit: cover;
     }
   }
+}
 
-  .userName {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    @include mobile {
-      :global(span) {
-        display: none;
-      }
-    }
-    @include tablet {
-      :global(abbr) {
-        display: none;
-      }
-    }
-  }
+.permissionsCell {
+  width: 110px;
+}
+
+.actionsCell {
+  width: 80px;
+}
+
+.editPermissionModalBody {
+  min-height: 420px;
 }

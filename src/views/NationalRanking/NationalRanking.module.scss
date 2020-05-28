@@ -76,22 +76,6 @@
             object-fit: cover;
           }
         }
-
-        .userName {
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          @include mobile {
-            :global(span) {
-              display: none;
-            }
-          }
-          @include tablet {
-            :global(abbr) {
-              display: none;
-            }
-          }
-        }
       }
     }
   }

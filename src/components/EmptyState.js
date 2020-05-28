@@ -2,7 +2,7 @@ import React from 'react';
 
 import classes from './EmptyState.module.scss';
 
-export const EmptyState = ({ children }) => (
+const EmptyState = ({ children }) => (
   <>
     <div className={classes.icon}>
       <i className="fa fa-meh-o" />

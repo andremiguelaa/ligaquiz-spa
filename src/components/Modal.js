@@ -3,7 +3,7 @@ import { Trans } from '@lingui/macro';
 
 import classes from './Modal.module.scss';
 
-export const Modal = ({
+const Modal = ({
   type,
   title,
   open,

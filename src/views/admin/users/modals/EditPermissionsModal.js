@@ -8,6 +8,8 @@ import ApiRequest from 'utils/ApiRequest';
 import Modal from 'components/Modal';
 import formatDate from 'utils/formatDate';
 
+import classes from '../Users.module.scss';
+
 const EditPermissionsModal = ({
   userToEdit,
   setUserToEdit,
@@ -69,7 +71,7 @@ const EditPermissionsModal = ({
         </Trans>
       }
       body={
-        <>
+        <div className={classes.editPermissionModalBody}>
           <fieldset className="fieldset">
             <div className="field">
               <input
@@ -88,7 +90,7 @@ const EditPermissionsModal = ({
                 }}
                 defaultChecked={Boolean(userToEdit.newRoles?.admin)}
               />
-              <label for="admin">
+              <label htmlFor="admin">
                 <Trans>Administrador</Trans>
               </label>
             </div>
@@ -114,7 +116,7 @@ const EditPermissionsModal = ({
                 }}
                 defaultChecked={Boolean(userToEdit.roles?.regular_player)}
               />
-              <label for="regular-player">
+              <label htmlFor="regular-player">
                 <Trans>Jogador regular</Trans>
               </label>
             </div>
@@ -172,7 +174,7 @@ const EditPermissionsModal = ({
                 }}
                 defaultChecked={Boolean(userToEdit.newRoles?.ranking_manager)}
               />
-              <label for="national-ranking-manager">
+              <label htmlFor="national-ranking-manager">
                 <Trans>Gestor de Ranking Nacional</Trans>
               </label>
             </div>
@@ -195,12 +197,12 @@ const EditPermissionsModal = ({
                 }}
                 defaultChecked={Boolean(userToEdit.newRoles?.blocked)}
               />
-              <label for="blocked">
+              <label htmlFor="blocked">
                 <Trans>Bloqueado</Trans>
               </label>
             </div>
           </fieldset>
-        </>
+        </div>
       }
       action={() => {
         patchUser(userToEdit);

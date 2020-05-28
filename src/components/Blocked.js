@@ -3,7 +3,7 @@ import { Trans } from '@lingui/macro';
 
 import classes from './Blocked.module.scss';
 
-export const Blocked = () => (
+const Blocked = () => (
   <>
     <div className={classes.icon}>
       <i className="fa fa-ban" />
