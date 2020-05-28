@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 
+import { useStateValue } from 'state/State';
 import getAcronym from 'utils/getAcronym';
 import ConditionalWrapper from 'components/ConditionalWrapper';
 
@@ -12,6 +13,7 @@ import { quizzesOrder } from './consts.js';
 import classes from './NationalRanking.module.scss';
 
 const Player = ({ player, quizzes }) => {
+  const [{ user }] = useStateValue();
   const [playerQuizzes, setPlayerQuizzes] = useState();
   const [countingScores, setCountingScores] = useState();
 
@@ -71,9 +73,17 @@ const Player = ({ player, quizzes }) => {
       <td className={`${classes.userCell} has-background-white`}>
         <div className={classes.userCellContent}>
           <ConditionalWrapper
-            condition={player.data.info}
+            condition={player.data.info && user}
             wrapper={(children) => (
-              <Link to={`/statistics/${player.data.info.id}`}>{children}</Link>
+              <Link
+                to={`/statistics${
+                  player.data.info.id !== user.id
+                    ? `/${player.data.info.id}`
+                    : ''
+                }`}
+              >
+                {children}
+              </Link>
             )}
           >
             <Avatar player={player.data} />
