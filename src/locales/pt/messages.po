@@ -21,19 +21,19 @@ msgstr "<0>A Liga Quiz é um jogo de cultura geral onde a confiança na honestid
 msgid "<0>{0}</0> resultado a contar para o ranking"
 msgstr "<0>{0}</0> resultado a contar para o ranking"
 
-#: src/utils/Auth.js:35
+#: src/utils/Auth.js:39
 msgid "A tua sessão expirou."
 msgstr "A tua sessão expirou."
 
 #: src/views/admin/nationalRanking/Events/List.js:34
-#: src/views/admin/nationalRanking/Players/List.js:32
+#: src/views/admin/nationalRanking/Players/List.js:34
 #: src/views/admin/nationalRanking/Rankings.js:116
 #: src/views/admin/notifications/Notifications.js:79
-#: src/views/admin/users/Users.js:108
+#: src/views/admin/users/Users.js:156
 msgid "Acções"
 msgstr "Acções"
 
-#: src/views/admin/nationalRanking/Players/List.js:19
+#: src/views/admin/nationalRanking/Players/List.js:21
 msgid "Adicionar jogador"
 msgstr "Adicionar jogador"
 
@@ -50,8 +50,8 @@ msgstr "Adicionar prova"
 msgid "Adicionar provas mensais"
 msgstr "Adicionar provas mensais"
 
-#: src/views/admin/users/Users.js:141
-#: src/views/admin/users/Users.js:253
+#: src/views/admin/users/Users.js:206
+#: src/views/admin/users/modals/EditPermissionsModal.js:94
 msgid "Administrador"
 msgstr "Administrador"
 
@@ -81,12 +81,12 @@ msgstr "Apagar ranking mensal"
 msgid "Apelido"
 msgstr "Apelido"
 
-#: src/views/NationalRanking.js:333
+#: src/views/NationalRanking.js:330
 msgid "Arquivo"
 msgstr "Arquivo"
 
 #: src/partials/Header.js:70
-#: src/views/Statistics.js:10
+#: src/views/Statistics.js:51
 msgid "As minhas estatísicas"
 msgstr "As minhas estatísicas"
 
@@ -94,8 +94,8 @@ msgstr "As minhas estatísicas"
 msgid "Aviso"
 msgstr "Aviso"
 
-#: src/views/admin/users/Users.js:185
-#: src/views/admin/users/Users.js:362
+#: src/views/admin/users/Users.js:249
+#: src/views/admin/users/modals/EditPermissionsModal.js:201
 msgid "Bloqueado"
 msgstr "Bloqueado"
 
@@ -167,11 +167,11 @@ msgstr "E-Mail"
 msgid "Editar notificação"
 msgstr "Editar notificação"
 
-#: src/views/admin/users/Users.js:228
+#: src/views/admin/users/modals/EditPermissionsModal.js:69
 msgid "Editar permissões de {0} {1}"
 msgstr "Editar permissões de {0} {1}"
 
-#: src/views/Statistics.js:13
+#: src/views/Statistics.js:72
 msgid "Em desenvolvimento..."
 msgstr "Em desenvolvimento..."
 
@@ -186,18 +186,20 @@ msgstr "Entrar"
 msgid "Enviámos-te um e-mail, segue as instruções para definir uma nova palavra-passe."
 msgstr "Enviámos-te um e-mail, segue as instruções para definir uma nova palavra-passe."
 
+#: src/utils/Auth.js:56
 #: src/views/Account/Avatar.js:103
 #: src/views/Login.js:101
 #: src/views/NationalRanking.js:146
 #: src/views/RecoverPassword.js:85
 #: src/views/Register.js:185
 #: src/views/ResetPassword.js:125
+#: src/views/Statistics.js:33
 #: src/views/admin/nationalRanking/Events.js:95
 #: src/views/admin/nationalRanking/Players/Form.js:114
 #: src/views/admin/nationalRanking/Players.js:77
 #: src/views/admin/nationalRanking/Rankings.js:76
 #: src/views/admin/notifications/Notifications.js:34
-#: src/views/admin/users/Users.js:84
+#: src/views/admin/users/Users.js:89
 msgid "Erro de servidor. Tenta mais tarde."
 msgstr "Erro de servidor. Tenta mais tarde."
 
@@ -221,6 +223,10 @@ msgstr "Esta conta encontra-se bloqueada."
 msgid "Esta página não existe."
 msgstr "Esta página não existe."
 
+#: src/views/Statistics.js:47
+msgid "Estatísicas de {0} {1}"
+msgstr "Estatísicas de {0} {1}"
+
 #: src/routes.js:62
 msgid "Estatísticas"
 msgstr "Estatísticas"
@@ -229,8 +235,8 @@ msgstr "Estatísticas"
 msgid "Ficheiro inválido."
 msgstr "Ficheiro inválido."
 
-#: src/views/admin/users/Users.js:172
-#: src/views/admin/users/Users.js:339
+#: src/views/admin/users/Users.js:236
+#: src/views/admin/users/modals/EditPermissionsModal.js:178
 msgid "Gestor de Ranking Nacional"
 msgstr "Gestor de Ranking Nacional"
 
@@ -271,7 +277,7 @@ msgstr "Informação"
 msgid "Inquizição"
 msgstr "Inquizição"
 
-#: src/views/admin/nationalRanking/Players/List.js:29
+#: src/views/admin/nationalRanking/Players/List.js:31
 msgid "Jogador"
 msgstr "Jogador"
 
@@ -287,8 +293,8 @@ msgstr "Jogador criado com sucesso."
 msgid "Jogador da liga"
 msgstr "Jogador da liga"
 
-#: src/views/admin/users/Users.js:156
-#: src/views/admin/users/Users.js:279
+#: src/views/admin/users/Users.js:222
+#: src/views/admin/users/modals/EditPermissionsModal.js:120
 msgid "Jogador regular"
 msgstr "Jogador regular"
 
@@ -340,7 +346,7 @@ msgstr "Nenhum"
 #: src/views/NationalRanking.js:220
 #: src/views/Register.js:58
 #: src/views/admin/nationalRanking/Players/Form.js:148
-#: src/views/admin/users/Users.js:102
+#: src/views/admin/users/Users.js:108
 msgid "Nome"
 msgstr "Nome"
 
@@ -390,7 +396,7 @@ msgstr "Não foi possível abrir a edição das provas mensais."
 msgid "Não foi possível actualizar o perfil."
 msgstr "Não foi possível actualizar o perfil."
 
-#: src/views/admin/users/Users.js:74
+#: src/views/admin/users/modals/EditPermissionsModal.js:58
 msgid "Não foi possível actualizar o utilizador."
 msgstr "Não foi possível actualizar o utilizador."
 
@@ -472,7 +478,7 @@ msgstr "Para mais pormenores de como o ranking é calculado deve ser consultado 
 msgid "Perfil actualizado com sucesso."
 msgstr "Perfil actualizado com sucesso."
 
-#: src/views/admin/users/Users.js:105
+#: src/views/admin/users/Users.js:126
 msgid "Permissões"
 msgstr "Permissões"
 
@@ -612,10 +618,10 @@ msgid "Selecciona os jogadores que jogaram esta prova:"
 msgstr "Selecciona os jogadores que jogaram esta prova:"
 
 #: src/views/admin/nationalRanking/Events/List.js:78
-#: src/views/admin/nationalRanking/Players/List.js:79
+#: src/views/admin/nationalRanking/Players/List.js:95
 #: src/views/admin/nationalRanking/Rankings.js:154
 #: src/views/admin/notifications/Notifications.js:132
-#: src/views/admin/users/Users.js:218
+#: src/views/admin/users/Users.js:290
 msgid "Sem registos"
 msgstr "Sem registos"
 
@@ -635,6 +641,10 @@ msgstr "Subiu"
 #: src/views/ResetPassword.js:140
 msgid "Submeter"
 msgstr "Submeter"
+
+#: src/views/admin/users/Users.js:137
+msgid "Subscrição"
+msgstr "Subscrição"
 
 #: src/views/admin/nationalRanking/Events.js:148
 msgid "Tens a certeza que queres apagar as provas deste mês e os resultados associados?"
@@ -673,7 +683,7 @@ msgstr "Tipo de notificação"
 msgid "Todos os dados deste formulário serão descartados.<0/>Tens a certeza que queres voltar à listagem?"
 msgstr "Todos os dados deste formulário serão descartados.<0/>Tens a certeza que queres voltar à listagem?"
 
-#: src/views/admin/users/Users.js:70
+#: src/views/admin/users/modals/EditPermissionsModal.js:54
 msgid "Utilizador actualizado com sucesso."
 msgstr "Utilizador actualizado com sucesso."
 
@@ -683,11 +693,11 @@ msgstr "Utilizador registado com sucesso.<0/>Clica <1>aqui</1> e usa as tuas cre
 
 #: src/partials/Header.js:139
 #: src/routes.js:93
-#: src/views/admin/users/Users.js:91
+#: src/views/admin/users/Users.js:96
 msgid "Utilizadores"
 msgstr "Utilizadores"
 
-#: src/views/admin/users/Users.js:285
+#: src/views/admin/users/modals/EditPermissionsModal.js:126
 msgid "Validade da subscrição"
 msgstr "Validade da subscrição"
 
@@ -731,7 +741,7 @@ msgid "{0, selectordinal, two {2º} few {3º} other {#º}}"
 msgstr "{0, selectordinal, two {2º} few {3ª} other {#º}}"
 
 #: src/views/NationalRanking.js:180
-#: src/views/NationalRanking.js:339
+#: src/views/NationalRanking.js:336
 #: src/views/admin/nationalRanking/Events/List.js:43
 #: src/views/admin/nationalRanking/Rankings.js:126
 msgid "{0} de {1}"

@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Players/List.js",
-        19
+        21
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Players/List.js",
-        29
+        31
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Players/List.js",
-        32
+        34
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Players/List.js",
-        79
+        95
       ]
     ]
   }

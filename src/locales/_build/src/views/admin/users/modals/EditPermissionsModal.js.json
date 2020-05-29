@@ -1,0 +1,66 @@
+{
+  "Utilizador actualizado com sucesso.": {
+    "origin": [
+      [
+        "src/views/admin/users/modals/EditPermissionsModal.js",
+        54
+      ]
+    ]
+  },
+  "Não foi possível actualizar o utilizador.": {
+    "origin": [
+      [
+        "src/views/admin/users/modals/EditPermissionsModal.js",
+        58
+      ]
+    ]
+  },
+  "Editar permissões de {0} {1}": {
+    "origin": [
+      [
+        "src/views/admin/users/modals/EditPermissionsModal.js",
+        69
+      ]
+    ]
+  },
+  "Administrador": {
+    "origin": [
+      [
+        "src/views/admin/users/modals/EditPermissionsModal.js",
+        94
+      ]
+    ]
+  },
+  "Jogador regular": {
+    "origin": [
+      [
+        "src/views/admin/users/modals/EditPermissionsModal.js",
+        120
+      ]
+    ]
+  },
+  "Validade da subscrição": {
+    "origin": [
+      [
+        "src/views/admin/users/modals/EditPermissionsModal.js",
+        126
+      ]
+    ]
+  },
+  "Gestor de Ranking Nacional": {
+    "origin": [
+      [
+        "src/views/admin/users/modals/EditPermissionsModal.js",
+        178
+      ]
+    ]
+  },
+  "Bloqueado": {
+    "origin": [
+      [
+        "src/views/admin/users/modals/EditPermissionsModal.js",
+        201
+      ]
+    ]
+  }
+}

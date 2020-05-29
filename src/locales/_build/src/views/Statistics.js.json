@@ -1,9 +1,25 @@
 {
+  "Erro de servidor. Tenta mais tarde.": {
+    "origin": [
+      [
+        "src/views/Statistics.js",
+        33
+      ]
+    ]
+  },
+  "Estatísicas de {0} {1}": {
+    "origin": [
+      [
+        "src/views/Statistics.js",
+        47
+      ]
+    ]
+  },
   "As minhas estatísicas": {
     "origin": [
       [
         "src/views/Statistics.js",
-        10
+        51
       ]
     ]
   },
@@ -11,7 +27,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        13
+        72
       ]
     ]
   }

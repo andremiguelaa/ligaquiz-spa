@@ -3,7 +3,15 @@
     "origin": [
       [
         "src/utils/Auth.js",
-        35
+        39
+      ]
+    ]
+  },
+  "Erro de servidor. Tenta mais tarde.": {
+    "origin": [
+      [
+        "src/utils/Auth.js",
+        56
       ]
     ]
   }

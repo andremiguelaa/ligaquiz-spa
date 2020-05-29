@@ -1,25 +1,9 @@
 {
-  "Utilizador actualizado com sucesso.": {
-    "origin": [
-      [
-        "src/views/admin/users/Users.js",
-        70
-      ]
-    ]
-  },
-  "Não foi possível actualizar o utilizador.": {
-    "origin": [
-      [
-        "src/views/admin/users/Users.js",
-        74
-      ]
-    ]
-  },
   "Erro de servidor. Tenta mais tarde.": {
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        84
+        89
       ]
     ]
   },
@@ -27,7 +11,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        91
+        96
       ]
     ]
   },
@@ -35,7 +19,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        102
+        108
       ]
     ]
   },
@@ -43,7 +27,15 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        105
+        126
+      ]
+    ]
+  },
+  "Subscrição": {
+    "origin": [
+      [
+        "src/views/admin/users/Users.js",
+        137
       ]
     ]
   },
@@ -51,7 +43,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        108
+        156
       ]
     ]
   },
@@ -59,11 +51,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        141
-      ],
-      [
-        "src/views/admin/users/Users.js",
-        253
+        206
       ]
     ]
   },
@@ -71,11 +59,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        156
-      ],
-      [
-        "src/views/admin/users/Users.js",
-        279
+        222
       ]
     ]
   },
@@ -83,11 +67,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        172
-      ],
-      [
-        "src/views/admin/users/Users.js",
-        339
+        236
       ]
     ]
   },
@@ -95,11 +75,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        185
-      ],
-      [
-        "src/views/admin/users/Users.js",
-        362
+        249
       ]
     ]
   },
@@ -107,23 +83,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        218
-      ]
-    ]
-  },
-  "Editar permissões de {0} {1}": {
-    "origin": [
-      [
-        "src/views/admin/users/Users.js",
-        228
-      ]
-    ]
-  },
-  "Validade da subscrição": {
-    "origin": [
-      [
-        "src/views/admin/users/Users.js",
-        285
+        290
       ]
     ]
   }
