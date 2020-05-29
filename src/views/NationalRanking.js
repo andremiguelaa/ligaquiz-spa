@@ -219,7 +219,7 @@ const NationalRanking = () => {
                   >
                     <Trans>Nome</Trans>
                   </th>
-                  <th className={classes.sortable}>
+                  <th className="sortable">
                     <button onClick={() => sortRankingByPath('score')}>
                       <Trans>Pontos</Trans>
                       <span className="icon">
@@ -233,7 +233,7 @@ const NationalRanking = () => {
                       </span>
                     </button>
                   </th>
-                  <th className={classes.sortable}>
+                  <th className="sortable">
                     <button onClick={() => sortRankingByPath('sum')}>
                       <Trans>Soma</Trans>
                       <span className="icon">
@@ -247,7 +247,7 @@ const NationalRanking = () => {
                       </span>
                     </button>
                   </th>
-                  <th className={classes.sortable}>
+                  <th className="sortable">
                     <button onClick={() => sortRankingByPath('average')}>
                       <Trans>Média</Trans>
                       <span className="icon">
@@ -261,7 +261,7 @@ const NationalRanking = () => {
                       </span>
                     </button>
                   </th>
-                  <th className={classes.sortable}>
+                  <th className="sortable">
                     <button onClick={() => sortRankingByPath('quiz_count')}>
                       <Trans>Quizzes</Trans>
                       <span className="icon">
@@ -279,10 +279,7 @@ const NationalRanking = () => {
                     (quizType) =>
                       quizzes[quizType] &&
                       quizzes[quizType].map((date) => (
-                        <th
-                          key={`${quizType}-${date}`}
-                          className={classes.sortable}
-                        >
+                        <th key={`${quizType}-${date}`} className="sortable">
                           <button
                             onClick={() =>
                               sortRankingByPath(

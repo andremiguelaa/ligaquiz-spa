@@ -4,6 +4,7 @@ import { Trans } from '@lingui/macro';
 import { I18n } from '@lingui/react';
 import { t } from '@lingui/macro';
 import classNames from 'classnames';
+import { get } from 'lodash';
 
 import { useStateValue } from 'state/State';
 import getAcronym from 'utils/getAcronym';
@@ -22,6 +23,10 @@ const Users = () => {
   const [users, setUsers] = useState();
   const [{ user: authUser }] = useStateValue();
   const [userToEdit, setUserToEdit] = useState();
+  const [order, setOrder] = useState({
+    column: 'id',
+    direction: 'asc',
+  });
 
   useEffect(() => {
     ApiRequest.get('users')
@@ -32,6 +37,51 @@ const Users = () => {
         setError(true);
       });
   }, []);
+
+  const sortUsersBy = (column) => {
+    let newOrder;
+    if (order && order.column === column) {
+      if (
+        (order.column !== 'fullName' && order.direction === 'asc') ||
+        (order.column === 'fullName' && order.direction === 'desc')
+      ) {
+        newOrder = {
+          column: 'id',
+          direction: 'asc',
+        };
+      } else {
+        newOrder = {
+          column,
+          direction: order.direction === 'asc' ? 'desc' : 'asc',
+        };
+      }
+    } else {
+      newOrder = { column, direction: column === 'fullName' ? 'asc' : 'desc' };
+    }
+    const sortedUsers = [].concat(users).sort((a, b) => {
+      let aValue;
+      let bValue;
+      if (newOrder.column === 'fullName') {
+        aValue = `${a.name} ${a.surname}`;
+        bValue = `${b.name} ${b.surname}`;
+      } else {
+        aValue = get(a, newOrder.column, '');
+        bValue = get(b, newOrder.column, '');
+      }
+      if (newOrder.direction === 'asc') {
+        if (typeof aValue === 'string') {
+          return aValue.localeCompare(bValue);
+        }
+        return aValue - bValue;
+      }
+      if (typeof aValue === 'string') {
+        return bValue.localeCompare(aValue);
+      }
+      return bValue - aValue;
+    });
+    setUsers(sortedUsers);
+    setOrder(newOrder);
+  };
 
   if (error) {
     return (
@@ -53,11 +103,49 @@ const Users = () => {
               <table className="table is-fullwidth is-hoverable is-striped">
                 <thead>
                   <tr>
-                    <th>
-                      <Trans>Nome</Trans>
+                    <th className="sortable">
+                      <button onClick={() => sortUsersBy('fullName')}>
+                        <Trans>Nome</Trans>
+                        <span className="icon">
+                          <i
+                            className={classNames('fa', {
+                              'fa-sort': order.column !== 'fullName',
+                              [`fa-sort-alpha-${order.direction}`]:
+                                order.column === 'fullName',
+                            })}
+                          ></i>
+                        </span>
+                      </button>
                     </th>
-                    <th className={classes.permissionsCell}>
+                    <th
+                      className={classNames(
+                        classes.permissionsCell,
+                        'is-hidden-mobile'
+                      )}
+                    >
                       <Trans>Permissões</Trans>
+                    </th>
+                    <th
+                      className={classNames(
+                        'sortable',
+                        classes.subscriptionCell
+                      )}
+                    >
+                      <button
+                        onClick={() => sortUsersBy('roles.regular_player')}
+                      >
+                        <Trans>Subscrição</Trans>
+                        <span className="icon">
+                          <i
+                            className={classNames('fa', {
+                              'fa-sort':
+                                order.column !== 'roles.regular_player',
+                              [`fa-sort-amount-${order.direction}`]:
+                                order.column === 'roles.regular_player',
+                            })}
+                          ></i>
+                        </span>
+                      </button>
                     </th>
                     <th
                       className={classNames(
@@ -102,6 +190,7 @@ const Users = () => {
                         <td
                           className={classNames(
                             'is-vertical-middle',
+                            'is-hidden-mobile',
                             classes.permissionsCell
                           )}
                         >
@@ -118,16 +207,15 @@ const Users = () => {
                             </I18n>
                           )}
                           {user.roles?.regular_player &&
-                            user.roles?.regular_player >=
-                              formatDate(new Date()) && (
+                            user.roles?.regular_player.localeCompare(
+                              formatDate(new Date())
+                            ) > 0 && (
                               <I18n>
                                 {({ i18n }) => (
                                   <span
                                     className="icon"
                                     data-tooltip={`${i18n._(
                                       t`Jogador regular`
-                                    )}: ${formatDate(
-                                      new Date(user.roles?.regular_player)
                                     )}`}
                                   >
                                     <i className="fa fa-user"></i>
@@ -161,6 +249,14 @@ const Users = () => {
                               )}
                             </I18n>
                           )}
+                        </td>
+                        <td
+                          className={classNames(
+                            classes.subscriptionCell,
+                            'is-vertical-middle'
+                          )}
+                        >
+                          {get(user, 'roles.regular_player', '-')}
                         </td>
                         <td className={classes.actionsCell}>
                           <div className="is-pulled-right">

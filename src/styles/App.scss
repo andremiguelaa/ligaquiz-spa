@@ -58,19 +58,6 @@ button.navbar-link {
   border-top-right-radius: 0;
 }
 
-.content figure.avatar {
-  margin-left: 0;
-  width: 100px;
-  height: 100px;
-  overflow: hidden;
-  margin-top: 0;
-  img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-  }
-}
-
 .message-actions {
   padding: 1.25em 1.5em;
   border-top: 1px solid $grey-lighter;
@@ -95,4 +82,43 @@ button.navbar-link {
 
 .fieldset:not(:last-child) {
   margin-bottom: 0.75rem;
+}
+
+.content {
+  figure.avatar {
+    margin-left: 0;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    margin-top: 0;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  table {
+    th {
+      &.sortable {
+        padding: 0;
+        button {
+          padding: 0.5em 0.75em;
+          font-size: inherit;
+          border: none;
+          background-color: transparent;
+          cursor: pointer;
+          height: 35px;
+          font-weight: inherit;
+          width: 100%;
+          text-align: left;
+          white-space: nowrap;
+          &:focus,
+          &:hover {
+            background-color: $grey-light;
+            outline: none;
+          }
+        }
+      }
+    }
+  }
 }
