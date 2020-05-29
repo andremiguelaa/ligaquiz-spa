@@ -169,10 +169,10 @@ const Users = () => {
                               }`}
                             >
                               <div className={classes.avatar}>
-                                {user.avatar_url ? (
+                                {user.avatar ? (
                                   <img
                                     alt={`${user.name} ${user.surname}`}
-                                    src={user.avatar_url}
+                                    src={user.avatar}
                                   />
                                 ) : (
                                   <i className="fa fa-user" />

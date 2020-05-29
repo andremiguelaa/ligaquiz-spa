@@ -18,17 +18,13 @@ const Statistics = () => {
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    if (userId) {
-      ApiRequest.get(`users?id=${userId}`)
-        .then(({ data: { data } }) => {
-          setUser(data[0]);
-        })
-        .catch(() => {
-          setError(true);
-        });
-    } else {
-      setUser(authUser);
-    }
+    ApiRequest.get(`users?id=${userId || authUser.id}`)
+      .then(({ data: { data } }) => {
+        setUser(data[0]);
+      })
+      .catch(() => {
+        setError(true);
+      });
   }, [userId]);
 
   if (error) {
@@ -61,7 +57,7 @@ const Statistics = () => {
           <div className={classes.avatarWrapper}>
             <img
               className={classes.avatar}
-              src={user.avatar_url}
+              src={user.avatar}
               alt={`${user.name} ${user.surname}`}
             />
           </div>

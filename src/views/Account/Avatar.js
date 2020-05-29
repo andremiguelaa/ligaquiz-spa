@@ -11,7 +11,7 @@ const Avatar = () => {
     id: user.id,
     avatar: null
   });
-  const [avatar, setAvatar] = useState(user.avatar_url);
+  const [avatar, setAvatar] = useState(user.avatar);
   const [error, setError] = useState(null);
   const [submitting, setSubmitting] = useState(false);
 
