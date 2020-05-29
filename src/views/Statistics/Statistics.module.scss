@@ -1,0 +1,23 @@
+.info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  .avatarWrapper {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    .avatar {
+      font-size: 0;
+      min-height: 100px;
+      min-width: 100px;
+      object-fit: cover;
+    }
+  }
+  .emailWrapper {
+    padding-top: 1rem;
+  }
+}

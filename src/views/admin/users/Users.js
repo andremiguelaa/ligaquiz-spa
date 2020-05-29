@@ -163,7 +163,11 @@ const Users = () => {
                       <tr key={user.id}>
                         <td className="is-vertical-middle">
                           <div className={classes.userCellContent}>
-                            <Link to={`/statistics/${user.id}`}>
+                            <Link
+                              to={`/statistics${
+                                user.id !== authUser.id ? `/${user.id}` : ''
+                              }`}
+                            >
                               <div className={classes.avatar}>
                                 {user.avatar_url ? (
                                   <img
