@@ -73,11 +73,11 @@ const Player = ({ player, quizzes }) => {
       <td className={`${classes.userCell} has-background-white`}>
         <div className={classes.userCellContent}>
           <ConditionalWrapper
-            condition={player.data.info && user}
+            condition={player.data.info}
             wrapper={(children) => (
               <Link
                 to={`/statistics${
-                  player.data.info.id !== user.id
+                  player.data.info.id !== user?.id
                     ? `/${player.data.info.id}`
                     : ''
                 }`}

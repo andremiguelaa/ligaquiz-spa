@@ -7,7 +7,8 @@ import ApiRequest from 'utils/ApiRequest';
 import Loading from 'components/Loading';
 import Error from 'components/Error';
 import PageHeader from 'components/PageHeader';
-import WorkInProgress from 'components/WorkInProgress';
+import { individualQuizTypeOptions } from 'views/admin/nationalRanking/utils/options';
+import { quizTypeAbbr } from 'views/NationalRanking/consts';
 
 import classes from './Statistics/Statistics.module.scss';
 
@@ -16,8 +17,10 @@ const Statistics = () => {
   const [{ user: authUser }] = useStateValue();
   const [user, setUser] = useState();
   const [error, setError] = useState(false);
+  const [individualQuizzes, setIndividualQuizzes] = useState();
 
   useEffect(() => {
+    setIndividualQuizzes();
     ApiRequest.get(`users?id=${userId || authUser.id}`)
       .then(({ data: { data } }) => {
         setUser(data[0]);
@@ -26,6 +29,16 @@ const Statistics = () => {
         setError(true);
       });
   }, [userId]);
+
+  useEffect(() => {
+    if (user && user.individual_quiz_player_id) {
+      ApiRequest.get(
+        `individual-quizzes?results&individual_quiz_player_id[]=${user.individual_quiz_player_id}`
+      ).then(({ data: { data } }) => {
+        setIndividualQuizzes(data);
+      });
+    }
+  }, [user]);
 
   if (error) {
     return (
@@ -52,7 +65,7 @@ const Statistics = () => {
           )
         }
       />
-      <div className="section content">
+      <section className="section content">
         <div className={classes.info}>
           <div className={classes.avatarWrapper}>
             <img
@@ -67,10 +80,65 @@ const Statistics = () => {
             </div>
           )}
         </div>
-      </div>
-      <WorkInProgress>
-        <Trans>Em desenvolvimento...</Trans>
-      </WorkInProgress>
+      </section>
+      {individualQuizzes && individualQuizzes.length && (
+        <section className="section content">
+          <h1 className="has-text-weight-bold is-size-4">
+            <Trans>Provas individuais</Trans>
+          </h1>
+          <table className="table">
+            <thead>
+              <tr>
+                <th>
+                  <Trans>Prova</Trans>
+                </th>
+                <th>
+                  <Trans>Mês</Trans>
+                </th>
+                <th>
+                  <Trans>Resultado</Trans>
+                </th>
+                <th>
+                  <span className="is-hidden-mobile">
+                    <Trans>Pontos</Trans>
+                  </span>
+                  <span className="is-hidden-tablet">
+                    <Trans>Pts</Trans>
+                  </span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {individualQuizzes.map((individualQuiz) => {
+                const playerResult = individualQuiz.results.filter(
+                  (result) =>
+                    result.individual_quiz_player_id ===
+                    user.individual_quiz_player_id
+                )[0];
+                return (
+                  <tr
+                    key={`${individualQuiz.individual_quiz_type}-${individualQuiz.month}`}
+                  >
+                    <td>
+                      <span className="is-hidden-mobile">
+                        {individualQuizTypeOptions(
+                          individualQuiz.individual_quiz_type
+                        )}
+                      </span>
+                      <abbr className="is-hidden-tablet">
+                        {quizTypeAbbr[individualQuiz.individual_quiz_type].abbr}
+                      </abbr>
+                    </td>
+                    <td>{individualQuiz.month}</td>
+                    <td>{playerResult.result}</td>
+                    <td>{Math.round(playerResult.score)}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </section>
+      )}
     </>
   );
 };
