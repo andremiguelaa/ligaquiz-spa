@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
+import classames from 'classnames';
 
 import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
@@ -28,7 +29,7 @@ const Statistics = () => {
       .catch(() => {
         setError(true);
       });
-  }, [userId]);
+  }, [userId, authUser]);
 
   useEffect(() => {
     if (user && user.individual_quiz_player_id) {
@@ -67,13 +68,17 @@ const Statistics = () => {
       />
       <section className="section content">
         <div className={classes.info}>
-          <div className={classes.avatarWrapper}>
-            <img
-              className={classes.avatar}
-              src={user.avatar}
-              alt={`${user.name} ${user.surname}`}
-            />
-          </div>
+          {user.avatar ? (
+            <div className={classes.avatarWrapper}>
+              <img
+                className={classes.avatar}
+                src={user.avatar}
+                alt={`${user.name} ${user.surname}`}
+              />
+            </div>
+          ) : (
+            <i className={classames('fa', 'fa-user', classes.icon)} />
+          )}
           {user.email && (
             <div className={classes.emailWrapper}>
               <a href={`mailto:${user.email}`}>{user.email}</a>

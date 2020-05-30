@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import classNames from 'classnames';
+import classames from 'classnames';
 
 import { useStateValue } from 'state/State';
 import getAcronym from 'utils/getAcronym';
@@ -118,7 +118,7 @@ const Player = ({ player, quizzes }) => {
           quizzes[quizType].map((date) => (
             <td
               key={`${player.individual_quiz_player_id}-${quizType}-${date}`}
-              className={classNames('has-text-centered', {
+              className={classames('has-text-centered', {
                 [classes[
                   `top${
                     countingScores[playerQuizzes?.[quizType]?.[date]?.score]

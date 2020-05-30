@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import OutsideClickHandler from 'react-outside-click-handler';
 import { Trans } from '@lingui/macro';
-import classNames from 'classnames';
+import classames from 'classnames';
 import Cookies from 'js-cookie';
 import { catalogs } from 'App';
 
@@ -41,7 +41,7 @@ const Header = () => {
               }}
             >
               <button
-                className={classNames('navbar-burger', classes.burger)}
+                className={classames('navbar-burger', classes.burger)}
                 onClick={() => {
                   setMenuBurgerOpen(!menuBurgerOpen);
                 }}
@@ -55,7 +55,7 @@ const Header = () => {
         </div>
 
         <div
-          className={classNames('navbar-menu', {
+          className={classames('navbar-menu', {
             'is-active': menuBurgerOpen,
           })}
         >
@@ -70,6 +70,7 @@ const Header = () => {
                 &nbsp;<Trans>As minhas estatísicas</Trans>
               </Link>
             )}
+            {/* 
             <div className="navbar-item has-dropdown is-hoverable is-hidden">
               <a className="navbar-link">More</a>
               <div className="navbar-dropdown">
@@ -78,6 +79,7 @@ const Header = () => {
                 <a className="navbar-item">Report an issue</a>
               </div>
             </div>
+            */}
           </div>
 
           <div className="navbar-end">
@@ -109,7 +111,7 @@ const Header = () => {
             )}
             {user && (
               <div
-                className={classNames('navbar-item', 'has-dropdown', {
+                className={classames('navbar-item', 'has-dropdown', {
                   'is-active': menuDropdownOpen,
                 })}
               >
@@ -131,7 +133,7 @@ const Header = () => {
                 <div className="navbar-dropdown is-right">
                   {user.roles.admin && (
                     <>
-                    <div className="navbar-item">
+                      <div className="navbar-item">
                         <Trans>Administração</Trans>
                       </div>
                       <Link to="/admin/users" className="navbar-item">

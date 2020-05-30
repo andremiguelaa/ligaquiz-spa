@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Trans } from '@lingui/macro';
 import { omit } from 'lodash';
-import classNames from 'classnames';
+import classames from 'classnames';
 import { toast } from 'react-toastify';
 
 import { useStateValue } from 'state/State';
@@ -122,7 +122,7 @@ const Account = () => {
                   <input
                     type="email"
                     required
-                    className={classNames('input', {
+                    className={classames('input', {
                       'is-danger': error && error.data && error.data.email,
                     })}
                     defaultValue={user.email}

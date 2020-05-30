@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 import { I18n } from '@lingui/react';
 import { t } from '@lingui/macro';
-import classNames from 'classnames';
+import classames from 'classnames';
 import { get } from 'lodash';
 
 import { useStateValue } from 'state/State';
@@ -108,7 +108,7 @@ const Users = () => {
                         <Trans>Nome</Trans>
                         <span className="icon">
                           <i
-                            className={classNames('fa', {
+                            className={classames('fa', {
                               'fa-sort': order.column !== 'fullName',
                               [`fa-sort-alpha-${order.direction}`]:
                                 order.column === 'fullName',
@@ -118,7 +118,7 @@ const Users = () => {
                       </button>
                     </th>
                     <th
-                      className={classNames(
+                      className={classames(
                         classes.permissionsCell,
                         'is-hidden-mobile'
                       )}
@@ -126,7 +126,7 @@ const Users = () => {
                       <Trans>Permissões</Trans>
                     </th>
                     <th
-                      className={classNames(
+                      className={classames(
                         'sortable',
                         classes.subscriptionCell
                       )}
@@ -137,7 +137,7 @@ const Users = () => {
                         <Trans>Subscrição</Trans>
                         <span className="icon">
                           <i
-                            className={classNames('fa', {
+                            className={classames('fa', {
                               'fa-sort':
                                 order.column !== 'roles.regular_player',
                               [`fa-sort-amount-${order.direction}`]:
@@ -148,7 +148,7 @@ const Users = () => {
                       </button>
                     </th>
                     <th
-                      className={classNames(
+                      className={classames(
                         'has-text-right',
                         classes.actionsCell
                       )}
@@ -192,7 +192,7 @@ const Users = () => {
                           </div>
                         </td>
                         <td
-                          className={classNames(
+                          className={classames(
                             'is-vertical-middle',
                             'is-hidden-mobile',
                             classes.permissionsCell
@@ -255,7 +255,7 @@ const Users = () => {
                           )}
                         </td>
                         <td
-                          className={classNames(
+                          className={classames(
                             classes.subscriptionCell,
                             'is-vertical-middle'
                           )}

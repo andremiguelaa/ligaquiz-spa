@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 import { get, isEmpty } from 'lodash';
-import classNames from 'classnames';
+import classames from 'classnames';
 import ScrollContainer from 'react-indiana-drag-scroll';
 
 import PageHeader from 'components/PageHeader';
@@ -189,13 +189,13 @@ const NationalRanking = () => {
       <div className="section content">
         <div className={classes.tableWrapper}>
           <ScrollContainer
-            className={classNames('table-container', classes.tableContainer)}
+            className={classames('table-container', classes.tableContainer)}
           >
             <table className="table">
               <thead>
                 <tr>
                   <th
-                    className={classNames(
+                    className={classames(
                       classes.rankCell,
                       'has-background-white'
                     )}
@@ -203,7 +203,7 @@ const NationalRanking = () => {
                     #
                   </th>
                   <th
-                    className={classNames(
+                    className={classames(
                       classes.changeCell,
                       'has-background-white',
                       'has-text-centered'
@@ -212,7 +212,7 @@ const NationalRanking = () => {
                     ±
                   </th>
                   <th
-                    className={classNames(
+                    className={classames(
                       classes.userCell,
                       'has-background-white'
                     )}
@@ -224,7 +224,7 @@ const NationalRanking = () => {
                       <Trans>Pontos</Trans>
                       <span className="icon">
                         <i
-                          className={classNames('fa', {
+                          className={classames('fa', {
                             'fa-sort': order.path !== 'score',
                             [`fa-sort-numeric-${order.direction}`]:
                               order.path === 'score',
@@ -238,7 +238,7 @@ const NationalRanking = () => {
                       <Trans>Soma</Trans>
                       <span className="icon">
                         <i
-                          className={classNames('fa', {
+                          className={classames('fa', {
                             'fa-sort': order.path !== 'sum',
                             [`fa-sort-numeric-${order.direction}`]:
                               order.path === 'sum',
@@ -252,7 +252,7 @@ const NationalRanking = () => {
                       <Trans>Média</Trans>
                       <span className="icon">
                         <i
-                          className={classNames('fa', {
+                          className={classames('fa', {
                             'fa-sort': order.path !== 'average',
                             [`fa-sort-numeric-${order.direction}`]:
                               order.path === 'average',
@@ -266,7 +266,7 @@ const NationalRanking = () => {
                       <Trans>Quizzes</Trans>
                       <span className="icon">
                         <i
-                          className={classNames('fa', {
+                          className={classames('fa', {
                             'fa-sort': order.path !== 'quiz_count',
                             [`fa-sort-numeric-${order.direction}`]:
                               order.path === 'quiz_count',
@@ -292,7 +292,7 @@ const NationalRanking = () => {
                               parseInt(date.substring(5, 7))}
                             <span className="icon">
                               <i
-                                className={classNames('fa', {
+                                className={classames('fa', {
                                   'fa-sort':
                                     order.path !==
                                     `quizzes.${quizType}.${date}.score`,

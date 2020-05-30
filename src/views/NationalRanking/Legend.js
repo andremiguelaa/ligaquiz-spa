@@ -1,6 +1,6 @@
 import React from 'react';
 import { Trans, SelectOrdinal } from '@lingui/macro';
-import classNames from 'classnames';
+import classames from 'classnames';
 
 import classes from '../NationalRanking/NationalRanking.module.scss';
 
@@ -56,7 +56,7 @@ const Legend = () => (
         .map((_, index) => (
           <li key={index}>
             <div
-              className={classNames(classes.square, classes[`top${index + 1}`])}
+              className={classames(classes.square, classes[`top${index + 1}`])}
             ></div>
             <span>
               <Trans>
