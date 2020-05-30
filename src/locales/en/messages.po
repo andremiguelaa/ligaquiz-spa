@@ -86,7 +86,7 @@ msgid "Arquivo"
 msgstr "Archive"
 
 #: src/partials/Header.js:70
-#: src/views/Statistics.js:51
+#: src/views/Statistics.js:64
 msgid "As minhas estatísicas"
 msgstr "My statistics"
 
@@ -171,10 +171,6 @@ msgstr "Edit notification"
 msgid "Editar permissões de {0} {1}"
 msgstr "Edit permissions from {0} {1}"
 
-#: src/views/Statistics.js:72
-msgid "Em desenvolvimento..."
-msgstr "Work in progress..."
-
 #: src/partials/Header.js:102
 #: src/routes.js:30
 #: src/views/Login.js:47
@@ -193,7 +189,7 @@ msgstr "We sent you an e-mail, follow its instructions to set a new password"
 #: src/views/RecoverPassword.js:85
 #: src/views/Register.js:185
 #: src/views/ResetPassword.js:125
-#: src/views/Statistics.js:33
+#: src/views/Statistics.js:46
 #: src/views/admin/nationalRanking/Events.js:95
 #: src/views/admin/nationalRanking/Players/Form.js:114
 #: src/views/admin/nationalRanking/Players.js:77
@@ -223,7 +219,7 @@ msgstr "This account is blocked."
 msgid "Esta página não existe."
 msgstr "This page does not exist"
 
-#: src/views/Statistics.js:47
+#: src/views/Statistics.js:60
 msgid "Estatísicas de {0} {1}"
 msgstr "Statistics from {0} {1}"
 
@@ -330,6 +326,7 @@ msgstr "Max. 200 KB"
 msgid "Média"
 msgstr "Average"
 
+#: src/views/Statistics.js:96
 #: src/views/admin/nationalRanking/Events/Form.js:165
 #: src/views/admin/nationalRanking/Events/Form.js:172
 #: src/views/admin/nationalRanking/Events/List.js:31
@@ -483,8 +480,17 @@ msgid "Permissões"
 msgstr "Permissions"
 
 #: src/views/NationalRanking.js:224
+#: src/views/Statistics.js:103
 msgid "Pontos"
 msgstr "Points"
+
+#: src/views/Statistics.js:93
+msgid "Prova"
+msgstr "Event"
+
+#: src/views/Statistics.js:87
+msgid "Provas individuais"
+msgstr "Individual quizzes"
 
 #: src/partials/Header.js:166
 #: src/views/admin/nationalRanking/Events.js:102
@@ -502,6 +508,10 @@ msgstr "Month events successfully deleted."
 #: src/views/admin/nationalRanking/Events/Form.js:105
 msgid "Provas mensais criadas com sucesso."
 msgstr "Month events successfully created."
+
+#: src/views/Statistics.js:106
+msgid "Pts"
+msgstr "Pts"
 
 #: src/views/admin/nationalRanking/Rankings.js:101
 #: src/views/admin/nationalRanking/Rankings.js:175
@@ -584,6 +594,10 @@ msgstr "Delete player"
 msgid "Remover prova"
 msgstr "Delete event"
 
+#: src/views/Statistics.js:99
+msgid "Resultado"
+msgstr "Result"
+
 #: src/views/NationalRanking/Legend.js:34
 msgid "Resultado da Inquizição do mês xx"
 msgstr "Inquizição result from month xx"
@@ -644,7 +658,7 @@ msgstr "Submit"
 
 #: src/views/admin/users/Users.js:137
 msgid "Subscrição"
-msgstr ""
+msgstr "Subscription"
 
 #: src/views/admin/nationalRanking/Events.js:148
 msgid "Tens a certeza que queres apagar as provas deste mês e os resultados associados?"

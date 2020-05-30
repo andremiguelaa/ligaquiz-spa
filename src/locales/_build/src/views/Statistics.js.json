@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        33
+        46
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        47
+        60
       ]
     ]
   },
@@ -19,15 +19,55 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        51
+        64
       ]
     ]
   },
-  "Em desenvolvimento...": {
+  "Provas individuais": {
     "origin": [
       [
         "src/views/Statistics.js",
-        72
+        87
+      ]
+    ]
+  },
+  "Prova": {
+    "origin": [
+      [
+        "src/views/Statistics.js",
+        93
+      ]
+    ]
+  },
+  "Mês": {
+    "origin": [
+      [
+        "src/views/Statistics.js",
+        96
+      ]
+    ]
+  },
+  "Resultado": {
+    "origin": [
+      [
+        "src/views/Statistics.js",
+        99
+      ]
+    ]
+  },
+  "Pontos": {
+    "origin": [
+      [
+        "src/views/Statistics.js",
+        103
+      ]
+    ]
+  },
+  "Pts": {
+    "origin": [
+      [
+        "src/views/Statistics.js",
+        106
       ]
     ]
   }

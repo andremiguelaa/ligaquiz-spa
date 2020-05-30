@@ -86,7 +86,7 @@ msgid "Arquivo"
 msgstr "Arquivo"
 
 #: src/partials/Header.js:70
-#: src/views/Statistics.js:51
+#: src/views/Statistics.js:64
 msgid "As minhas estatísicas"
 msgstr "As minhas estatísicas"
 
@@ -171,10 +171,6 @@ msgstr "Editar notificação"
 msgid "Editar permissões de {0} {1}"
 msgstr "Editar permissões de {0} {1}"
 
-#: src/views/Statistics.js:72
-msgid "Em desenvolvimento..."
-msgstr "Em desenvolvimento..."
-
 #: src/partials/Header.js:102
 #: src/routes.js:30
 #: src/views/Login.js:47
@@ -193,7 +189,7 @@ msgstr "Enviámos-te um e-mail, segue as instruções para definir uma nova pala
 #: src/views/RecoverPassword.js:85
 #: src/views/Register.js:185
 #: src/views/ResetPassword.js:125
-#: src/views/Statistics.js:33
+#: src/views/Statistics.js:46
 #: src/views/admin/nationalRanking/Events.js:95
 #: src/views/admin/nationalRanking/Players/Form.js:114
 #: src/views/admin/nationalRanking/Players.js:77
@@ -223,7 +219,7 @@ msgstr "Esta conta encontra-se bloqueada."
 msgid "Esta página não existe."
 msgstr "Esta página não existe."
 
-#: src/views/Statistics.js:47
+#: src/views/Statistics.js:60
 msgid "Estatísicas de {0} {1}"
 msgstr "Estatísicas de {0} {1}"
 
@@ -330,6 +326,7 @@ msgstr "Máximo 200 KB"
 msgid "Média"
 msgstr "Média"
 
+#: src/views/Statistics.js:96
 #: src/views/admin/nationalRanking/Events/Form.js:165
 #: src/views/admin/nationalRanking/Events/Form.js:172
 #: src/views/admin/nationalRanking/Events/List.js:31
@@ -483,8 +480,17 @@ msgid "Permissões"
 msgstr "Permissões"
 
 #: src/views/NationalRanking.js:224
+#: src/views/Statistics.js:103
 msgid "Pontos"
 msgstr "Pontos"
+
+#: src/views/Statistics.js:93
+msgid "Prova"
+msgstr "Prova"
+
+#: src/views/Statistics.js:87
+msgid "Provas individuais"
+msgstr "Provas individuais"
 
 #: src/partials/Header.js:166
 #: src/views/admin/nationalRanking/Events.js:102
@@ -502,6 +508,10 @@ msgstr "Provas mensais apagadas com sucesso."
 #: src/views/admin/nationalRanking/Events/Form.js:105
 msgid "Provas mensais criadas com sucesso."
 msgstr "Provas mensais criadas com sucesso."
+
+#: src/views/Statistics.js:106
+msgid "Pts"
+msgstr "Pts"
 
 #: src/views/admin/nationalRanking/Rankings.js:101
 #: src/views/admin/nationalRanking/Rankings.js:175
@@ -583,6 +593,10 @@ msgstr "Remover jogador"
 #: src/views/admin/nationalRanking/Events/Form/Event.js:142
 msgid "Remover prova"
 msgstr "Remover prova"
+
+#: src/views/Statistics.js:99
+msgid "Resultado"
+msgstr "Resultado"
 
 #: src/views/NationalRanking/Legend.js:34
 msgid "Resultado da Inquizição do mês xx"
