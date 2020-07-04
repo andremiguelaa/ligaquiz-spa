@@ -35,25 +35,19 @@ const EditPermissionsModal = ({
       id: user.id,
       roles: newRoles,
     })
-      .then(
-        ({
-          data: {
-            data: { user },
-          },
-        }) => {
-          setUsers(
-            users.map((item) => {
-              if (item.id !== user.id) {
-                return item;
-              } else {
-                return user;
-              }
-            })
-          );
-          setUserToEdit();
-          toast.success(<Trans>Utilizador actualizado com sucesso.</Trans>);
-        }
-      )
+      .then(({ data: { user } }) => {
+        setUsers(
+          users.map((item) => {
+            if (item.id !== user.id) {
+              return item;
+            } else {
+              return user;
+            }
+          })
+        );
+        setUserToEdit();
+        toast.success(<Trans>Utilizador actualizado com sucesso.</Trans>);
+      })
       .catch(() => {
         toast.error(<Trans>Não foi possível actualizar o utilizador.</Trans>);
       })

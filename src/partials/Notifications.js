@@ -12,7 +12,7 @@ const Header = () => {
 
   const getNotifications = () => {
     ApiRequest.get('notifications?current')
-      .then(({ data: { data } }) => {
+      .then(({ data }) => {
         setNotifications(data);
       })
       .finally(() => {

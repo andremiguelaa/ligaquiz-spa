@@ -30,7 +30,7 @@ export default (props) => {
     const token = Cookies.get('BEARER-TOKEN');
     if (token) {
       ApiRequest.patch('session')
-        .then(({ data: { data } }) => {
+        .then(({ data }) => {
           setLoginData(data, dispatch);
           setLoading(false);
         })

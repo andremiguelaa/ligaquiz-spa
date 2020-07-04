@@ -20,8 +20,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "add-locale": "lingui add-locale",
-    "extract": "lingui extract",
-    "compile": "lingui compile"
+    "extract-locale": "lingui extract",
+    "compile-locale": "lingui compile"
   },
   "eslintConfig": {
     "extends": "react-app"

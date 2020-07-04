@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/admin/users/modals/EditPermissionsModal.js",
-        54
+        49
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/views/admin/users/modals/EditPermissionsModal.js",
-        58
+        52
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/views/admin/users/modals/EditPermissionsModal.js",
-        69
+        63
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/views/admin/users/modals/EditPermissionsModal.js",
-        94
+        88
       ]
     ]
   },
@@ -35,7 +35,7 @@
     "origin": [
       [
         "src/views/admin/users/modals/EditPermissionsModal.js",
-        120
+        114
       ]
     ]
   },
@@ -43,7 +43,7 @@
     "origin": [
       [
         "src/views/admin/users/modals/EditPermissionsModal.js",
-        126
+        120
       ]
     ]
   },
@@ -51,7 +51,7 @@
     "origin": [
       [
         "src/views/admin/users/modals/EditPermissionsModal.js",
-        178
+        172
       ]
     ]
   },
@@ -59,7 +59,7 @@
     "origin": [
       [
         "src/views/admin/users/modals/EditPermissionsModal.js",
-        201
+        195
       ]
     ]
   }

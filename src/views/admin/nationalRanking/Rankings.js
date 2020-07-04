@@ -35,7 +35,7 @@ const Rankings = () => {
   useEffect(() => {
     ApiRequest.get('national-rankings')
       .then(({ data }) => {
-        setMonths(data.data);
+        setMonths(data);
       })
       .catch(() => {
         setError(true);

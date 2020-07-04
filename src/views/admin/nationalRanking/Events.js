@@ -26,14 +26,14 @@ const Events = () => {
   useEffect(() => {
     ApiRequest.get('individual-quiz-types')
       .then(({ data }) => {
-        setIndividualQuizTypes(data.data);
+        setIndividualQuizTypes(data);
       })
       .catch(() => {
         setError(true);
       });
     ApiRequest.get('individual-quiz-players')
       .then(({ data }) => {
-        setIndividualQuizPlayers(data.data);
+        setIndividualQuizPlayers(data);
       })
       .catch(() => {
         setError(true);
@@ -46,7 +46,7 @@ const Events = () => {
       ApiRequest.get('individual-quizzes')
         .then(({ data }) => {
           const list = [
-            ...new Set(data.data.map((event) => event.month)),
+            ...new Set(data.map((event) => event.month)),
           ].sort((a, b) => b.localeCompare(a));
           setMonthList(list);
         })
@@ -60,7 +60,7 @@ const Events = () => {
     setLoadingMonthData(true);
     ApiRequest.get(`individual-quizzes?results&month[]=${date}`)
       .then(({ data }) => {
-        setInitialEditData(data.data);
+        setInitialEditData(data);
         setPage('edit');
       })
       .catch(() => {

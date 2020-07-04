@@ -27,7 +27,7 @@ const Players = () => {
       setIndividualQuizPlayers();
       ApiRequest.get('individual-quiz-players')
         .then(({ data }) => {
-          setIndividualQuizPlayers(data.data);
+          setIndividualQuizPlayers(data);
         })
         .catch(() => {
           setError(true);

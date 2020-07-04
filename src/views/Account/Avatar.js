@@ -9,13 +9,13 @@ const Avatar = () => {
   const [{ user }, dispatch] = useStateValue();
   const [formData, setformData] = useState({
     id: user.id,
-    avatar: null
+    avatar: null,
   });
   const [avatar, setAvatar] = useState(user.avatar);
   const [error, setError] = useState(null);
   const [submitting, setSubmitting] = useState(false);
 
-  const avatarChange = event => {
+  const avatarChange = (event) => {
     if (event.target.files.length > 0) {
       const file = event.target.files[0];
       const reader = new FileReader();
@@ -24,32 +24,32 @@ const Avatar = () => {
         setAvatar(reader.result);
         setformData({
           ...formData,
-          avatar: reader.result
+          avatar: reader.result,
         });
       };
     }
   };
 
-  const handleSubmit = event => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     setSubmitting(true);
     setError(null);
     ApiRequest.patch('users', formData)
-      .then(({ data: { data: { user } } }) => {
+      .then(({ data: { user } }) => {
         setSubmitting(false);
         toast.success(
           <Trans>Imagem de perfil actualizada com sucesso.</Trans>,
           {
             hideProgressBar: true,
-            closeButton: false
+            closeButton: false,
           }
         );
         dispatch({
           type: 'user.patch',
-          payload: user
+          payload: user,
         });
       })
-      .catch(error => {
+      .catch((error) => {
         try {
           setError(error.response.data);
         } catch (error) {
@@ -71,7 +71,7 @@ const Avatar = () => {
               className="file-input"
               type="file"
               accept="image/x-png,image/gif,image/jpeg"
-              onChange={event => {
+              onChange={(event) => {
                 avatarChange(event);
               }}
             />

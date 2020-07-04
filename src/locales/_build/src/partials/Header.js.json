@@ -7,7 +7,7 @@
       ]
     ]
   },
-  "As minhas estatísicas": {
+  "As minhas estatísticas": {
     "origin": [
       [
         "src/partials/Header.js",
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        102
+        104
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        105
+        107
       ]
     ]
   },
@@ -35,7 +35,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        135
+        137
       ]
     ]
   },
@@ -43,7 +43,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        139
+        141
       ]
     ]
   },
@@ -51,7 +51,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        143
+        145
       ]
     ]
   },
@@ -59,7 +59,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        152
+        154
       ]
     ]
   },
@@ -67,7 +67,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        159
+        161
       ]
     ]
   },
@@ -75,7 +75,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        166
+        168
       ]
     ]
   },
@@ -83,7 +83,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        173
+        175
       ]
     ]
   },
@@ -91,7 +91,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        180
+        182
       ]
     ]
   },
@@ -99,7 +99,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        184
+        186
       ]
     ]
   },
@@ -107,7 +107,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        188
+        190
       ]
     ]
   }

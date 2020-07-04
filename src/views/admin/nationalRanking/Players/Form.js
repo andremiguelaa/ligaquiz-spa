@@ -36,7 +36,7 @@ const Form = ({ setPage, individualQuizPlayers, initialEditData }) => {
           },
           []
         );
-        const sortedValidUsers = data.data
+        const sortedValidUsers = data
           .reduce((acc, user) => {
             if (
               !individualQuizPlayersUserIds.includes(user.id) ||
@@ -238,11 +238,8 @@ const Form = ({ setPage, individualQuizPlayers, initialEditData }) => {
               onClick={savePlayer}
               disabled={saveDisabled || saving}
             >
-              <span className="icon">
-                <i className="fa fa-plus"></i>
-              </span>
               <span>
-                <Trans>Guardar jogador</Trans>
+                <Trans>Gravar</Trans>
               </span>
             </button>
           </div>

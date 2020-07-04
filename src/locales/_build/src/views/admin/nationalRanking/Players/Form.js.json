@@ -35,7 +35,7 @@
       ],
       [
         "src/views/admin/nationalRanking/Players/Form.js",
-        255
+        252
       ]
     ]
   },
@@ -71,11 +71,11 @@
       ]
     ]
   },
-  "Guardar jogador": {
+  "Gravar": {
     "origin": [
       [
         "src/views/admin/nationalRanking/Players/Form.js",
-        245
+        242
       ]
     ]
   },
@@ -83,7 +83,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Players/Form.js",
-        257
+        254
       ]
     ]
   }

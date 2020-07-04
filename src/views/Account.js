@@ -36,20 +36,14 @@ const Account = () => {
       newFormData = omit(formData, ['password', 'password2']);
     }
     ApiRequest.patch('users', newFormData)
-      .then(
-        ({
-          data: {
-            data: { user },
-          },
-        }) => {
-          setSubmitting(false);
-          toast.success(<Trans>Perfil actualizado com sucesso.</Trans>);
-          dispatch({
-            type: 'user.patch',
-            payload: user,
-          });
-        }
-      )
+      .then(({ data: { user } }) => {
+        setSubmitting(false);
+        toast.success(<Trans>Perfil actualizado com sucesso.</Trans>);
+        dispatch({
+          type: 'user.patch',
+          payload: user,
+        });
+      })
       .catch((error) => {
         try {
           setError(error.response.data);

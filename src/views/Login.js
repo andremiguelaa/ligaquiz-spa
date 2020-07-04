@@ -28,7 +28,7 @@ const Login = ({ history }) => {
     setSubmitting(true);
     setErrorMessage(null);
     ApiRequest.post('session', formData)
-      .then(({ data: { data } }) => {
+      .then(({ data }) => {
         setLoginData(data, dispatch);
         history.push('/');
       })

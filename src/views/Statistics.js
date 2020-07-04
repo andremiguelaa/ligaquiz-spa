@@ -23,7 +23,7 @@ const Statistics = () => {
   useEffect(() => {
     setIndividualQuizzes();
     ApiRequest.get(`users?id=${userId || authUser.id}`)
-      .then(({ data: { data } }) => {
+      .then(({ data }) => {
         setUser(data[0]);
       })
       .catch(() => {
@@ -35,7 +35,7 @@ const Statistics = () => {
     if (user && user.individual_quiz_player_id) {
       ApiRequest.get(
         `individual-quizzes?results&individual_quiz_player_id[]=${user.individual_quiz_player_id}`
-      ).then(({ data: { data } }) => {
+      ).then(({ data }) => {
         setIndividualQuizzes(data);
       });
     }
@@ -59,10 +59,10 @@ const Statistics = () => {
         title={
           userId ? (
             <Trans>
-              Estatísicas de {user.name} {user.surname}
+              Estatísticas de {user.name} {user.surname}
             </Trans>
           ) : (
-            <Trans>As minhas estatísicas</Trans>
+            <Trans>As minhas estatísticas</Trans>
           )
         }
       />

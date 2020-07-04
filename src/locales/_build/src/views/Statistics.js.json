@@ -3,23 +3,23 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        46
+        47
       ]
     ]
   },
-  "Estatísicas de {0} {1}": {
+  "Estatísticas de {0} {1}": {
     "origin": [
       [
         "src/views/Statistics.js",
-        60
+        61
       ]
     ]
   },
-  "As minhas estatísicas": {
+  "As minhas estatísticas": {
     "origin": [
       [
         "src/views/Statistics.js",
-        64
+        65
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        87
+        92
       ]
     ]
   },
@@ -35,7 +35,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        93
+        98
       ]
     ]
   },
@@ -43,7 +43,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        96
+        101
       ]
     ]
   },
@@ -51,7 +51,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        99
+        104
       ]
     ]
   },
@@ -59,7 +59,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        103
+        108
       ]
     ]
   },
@@ -67,7 +67,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        106
+        111
       ]
     ]
   }

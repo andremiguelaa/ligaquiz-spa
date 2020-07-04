@@ -139,7 +139,7 @@ const FormModal = ({
                   ...notifications.filter(
                     (item) => item.id !== notification.id
                   ),
-                  data.data,
+                  data,
                 ].sort(notificationSort)
               );
               toast.success(<Trans>Notificação editada com sucesso.</Trans>);
@@ -160,7 +160,7 @@ const FormModal = ({
           })
             .then(({ data }) => {
               setNotifications(
-                [...notifications, data.data].sort(notificationSort)
+                [...notifications, data].sort(notificationSort)
               );
               toast.success(<Trans>Notificação criada com sucesso.</Trans>);
               closeModal();

@@ -67,7 +67,7 @@ const Header = () => {
             {user && (
               <Link to="/statistics" className="navbar-item">
                 <i className="fa fa-btn fa-line-chart" />
-                &nbsp;<Trans>As minhas estatísicas</Trans>
+                &nbsp;<Trans>As minhas estatísticas</Trans>
               </Link>
             )}
             {/* 

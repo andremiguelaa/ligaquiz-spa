@@ -31,7 +31,7 @@ const Users = () => {
   useEffect(() => {
     ApiRequest.get('users')
       .then(({ data }) => {
-        setUsers(data.data);
+        setUsers(data);
       })
       .catch(() => {
         setError(true);

@@ -41,7 +41,7 @@ const NationalRanking = () => {
     ApiRequest.get('individual-quiz-players')
       .then(({ data }) => {
         setPlayers(
-          data.data.reduce(
+          data.reduce(
             (acc, player) => ({
               ...acc,
               [player.id]: player,
@@ -56,7 +56,7 @@ const NationalRanking = () => {
 
     ApiRequest.get('national-rankings')
       .then(({ data }) => {
-        const list = data.data;
+        const list = data;
         setRankingList(list);
         if (list.length) {
           let monthToLoad = list[0];
@@ -73,39 +73,31 @@ const NationalRanking = () => {
           );
           ApiRequest.get(`national-rankings?month=${monthToLoad}`)
             .then(({ data }) => {
-              setQuizzes(data.data.quizzes);
+              setQuizzes(data.quizzes);
               if (list[rankingIndex + 1]) {
                 ApiRequest.get(
                   `national-rankings?month=${list[rankingIndex + 1]}`
                 )
-                  .then(
-                    ({
-                      data: {
-                        data: { ranking: previousRanking },
-                      },
-                    }) => {
-                      const rankingWithChanges = data.data.ranking.map(
-                        (player) => {
-                          const previousRankingPlayerInfo = previousRanking.find(
-                            (element) =>
-                              element.individual_quiz_player_id ===
-                              player.individual_quiz_player_id
-                          );
-                          if (previousRankingPlayerInfo) {
-                            player.change =
-                              previousRankingPlayerInfo.rank - player.rank;
-                          }
-                          return player;
-                        }
+                  .then(({ data: { ranking: previousRanking } }) => {
+                    const rankingWithChanges = data.ranking.map((player) => {
+                      const previousRankingPlayerInfo = previousRanking.find(
+                        (element) =>
+                          element.individual_quiz_player_id ===
+                          player.individual_quiz_player_id
                       );
-                      setRanking(rankingWithChanges);
-                    }
-                  )
+                      if (previousRankingPlayerInfo) {
+                        player.change =
+                          previousRankingPlayerInfo.rank - player.rank;
+                      }
+                      return player;
+                    });
+                    setRanking(rankingWithChanges);
+                  })
                   .catch(() => {
                     setError(true);
                   });
               } else {
-                setRanking(data.data.ranking);
+                setRanking(data.ranking);
               }
             })
             .catch(() => {
