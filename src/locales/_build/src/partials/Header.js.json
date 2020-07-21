@@ -1,13 +1,5 @@
 {
-  "Ranking Nacional": {
-    "origin": [
-      [
-        "src/partials/Header.js",
-        65
-      ]
-    ]
-  },
-  "As minhas estatísticas": {
+  "Classificação": {
     "origin": [
       [
         "src/partials/Header.js",
@@ -15,11 +7,27 @@
       ]
     ]
   },
+  "As minhas estatísticas": {
+    "origin": [
+      [
+        "src/partials/Header.js",
+        76
+      ]
+    ]
+  },
+  "Ranking Nacional": {
+    "origin": [
+      [
+        "src/partials/Header.js",
+        81
+      ]
+    ]
+  },
   "Entrar": {
     "origin": [
       [
         "src/partials/Header.js",
-        104
+        114
       ]
     ]
   },
@@ -27,7 +35,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        107
+        117
       ]
     ]
   },
@@ -35,7 +43,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        137
+        147
       ]
     ]
   },
@@ -43,7 +51,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        141
+        151
       ]
     ]
   },
@@ -51,7 +59,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        145
+        155
       ]
     ]
   },
@@ -59,7 +67,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        154
+        164
       ]
     ]
   },
@@ -67,7 +75,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        161
+        171
       ]
     ]
   },
@@ -75,7 +83,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        168
+        178
       ]
     ]
   },
@@ -83,7 +91,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        175
+        185
       ]
     ]
   },
@@ -91,7 +99,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        182
+        192
       ]
     ]
   },
@@ -99,7 +107,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        186
+        196
       ]
     ]
   },
@@ -107,7 +115,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        190
+        200
       ]
     ]
   }

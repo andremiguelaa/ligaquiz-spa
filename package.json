@@ -8,6 +8,7 @@
     "@wojtekmaj/react-daterange-picker": "^3.0.0",
     "bulma-switch": "^2.0.0",
     "marked": "^1.1.0",
+    "moment": "^2.27.0",
     "react": "^16.9.0",
     "react-date-picker": "^8.0.1",
     "react-dom": "^16.9.0",
@@ -19,9 +20,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "add-locale": "lingui add-locale",
-    "extract-locale": "lingui extract",
-    "compile-locale": "lingui compile"
+    "locale:add": "lingui add-locale",
+    "locale:extract": "lingui extract",
+    "locale:compile": "lingui compile"
   },
   "eslintConfig": {
     "extends": "react-app"

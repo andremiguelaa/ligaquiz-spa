@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/routes.js",
-        25
+        27
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/routes.js",
-        30
+        32
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/routes.js",
-        35
+        37
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/routes.js",
-        40
+        42
       ]
     ]
   },
@@ -35,7 +35,7 @@
     "origin": [
       [
         "src/routes.js",
-        45
+        47
       ]
     ]
   },
@@ -43,7 +43,7 @@
     "origin": [
       [
         "src/routes.js",
-        50
+        52
       ]
     ]
   },
@@ -51,7 +51,7 @@
     "origin": [
       [
         "src/routes.js",
-        56
+        58
       ]
     ]
   },
@@ -59,7 +59,7 @@
     "origin": [
       [
         "src/routes.js",
-        62
+        64
       ]
     ]
   },
@@ -67,7 +67,15 @@
     "origin": [
       [
         "src/routes.js",
-        67
+        69
+      ]
+    ]
+  },
+  "Classificação": {
+    "origin": [
+      [
+        "src/routes.js",
+        75
       ]
     ]
   },
@@ -75,7 +83,7 @@
     "origin": [
       [
         "src/routes.js",
-        73
+        80
       ]
     ]
   },
@@ -83,7 +91,7 @@
     "origin": [
       [
         "src/routes.js",
-        78
+        85
       ]
     ]
   },
@@ -91,7 +99,7 @@
     "origin": [
       [
         "src/routes.js",
-        83
+        90
       ]
     ]
   },
@@ -99,7 +107,7 @@
     "origin": [
       [
         "src/routes.js",
-        88
+        95
       ]
     ]
   },
@@ -107,7 +115,7 @@
     "origin": [
       [
         "src/routes.js",
-        93
+        100
       ]
     ]
   },
@@ -115,7 +123,7 @@
     "origin": [
       [
         "src/routes.js",
-        98
+        105
       ]
     ]
   }

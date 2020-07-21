@@ -3,12 +3,25 @@
 @import 'font-awesome/scss/font-awesome.scss';
 
 $body-size: 14px;
+$green: #27ae60;
+$red: #e74c3c;
 
 @import 'bulma';
 @import 'bulma-switch';
 @import '@creativebulma/bulma-tooltip';
 @import 'styles/Toasts.scss';
 @import 'styles/DatePickers.scss';
+
+.has-background-success,
+.has-background-danger {
+  color: $white;
+  a {
+    color: $white;
+    &:hover {
+      color: $grey-lighter;
+    }
+  }
+}
 
 .indiana-scroll-container {
   cursor: grab;

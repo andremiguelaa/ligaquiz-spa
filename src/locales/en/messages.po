@@ -55,7 +55,7 @@ msgstr "Add month events"
 msgid "Administrador"
 msgstr "Administrator"
 
-#: src/partials/Header.js:137
+#: src/partials/Header.js:147
 msgid "Administração"
 msgstr "Administration"
 
@@ -85,7 +85,7 @@ msgstr "Surname"
 msgid "Arquivo"
 msgstr "Archive"
 
-#: src/partials/Header.js:70
+#: src/partials/Header.js:76
 #: src/views/Statistics.js:65
 msgid "As minhas estatísticas"
 msgstr "My statistics"
@@ -115,14 +115,24 @@ msgstr "Portuguese Quizzing Championship"
 msgid "Cancelar"
 msgstr "Cancel"
 
+#: src/partials/Header.js:70
+#: src/routes.js:75
+#: src/views/Ranking.js:110
+msgid "Classificação"
+msgstr "Ranking"
+
+#: src/views/Ranking.js:108
+msgid "Classificação ({seasonNumber}ª temporada)"
+msgstr "Ranking (Season {seasonNumber})"
+
 #: src/views/Account.js:169
 #: src/views/Register.js:157
 #: src/views/ResetPassword.js:84
 msgid "Confirmação da palavra-passe"
 msgstr "Password confirmation"
 
-#: src/partials/Header.js:182
-#: src/routes.js:56
+#: src/partials/Header.js:192
+#: src/routes.js:58
 #: src/views/Account.js:60
 msgid "Conta"
 msgstr "Account"
@@ -140,6 +150,10 @@ msgstr "Wrong credentials."
 msgid "Criar notificação"
 msgstr "Create notification"
 
+#: src/views/Ranking.js:248
+msgid "D"
+msgstr "L"
+
 #: src/views/admin/notifications/Notifications.js:73
 msgid "Data de fim"
 msgstr "End date"
@@ -152,9 +166,25 @@ msgstr "Begin date"
 msgid "Datas"
 msgstr "Dates"
 
+#: src/views/Ranking.js:188
+msgid "DdP"
+msgstr "PD"
+
+#: src/views/Ranking.js:246
+msgid "Derrotas"
+msgstr "Losses"
+
 #: src/views/NationalRanking/Player/RankChange.js:39
 msgid "Desceu"
 msgstr "Move down"
+
+#: src/views/Ranking.js:186
+msgid "Diferença de pontos"
+msgstr "Point difference"
+
+#: src/views/Ranking.js:236
+msgid "E"
+msgstr "D"
 
 #: src/views/Account.js:113
 #: src/views/Login.js:54
@@ -171,8 +201,12 @@ msgstr "Edit notification"
 msgid "Editar permissões de {0} {1}"
 msgstr "Edit permissions from {0} {1}"
 
-#: src/partials/Header.js:104
-#: src/routes.js:30
+#: src/views/Ranking.js:234
+msgid "Empates"
+msgstr "Draws"
+
+#: src/partials/Header.js:114
+#: src/routes.js:32
 #: src/views/Login.js:47
 #: src/views/Login.js:114
 msgid "Entrar"
@@ -186,6 +220,7 @@ msgstr "We sent you an e-mail, follow its instructions to set a new password"
 #: src/views/Account/Avatar.js:103
 #: src/views/Login.js:101
 #: src/views/NationalRanking.js:138
+#: src/views/Ranking.js:97
 #: src/views/RecoverPassword.js:85
 #: src/views/Register.js:185
 #: src/views/ResetPassword.js:125
@@ -219,13 +254,21 @@ msgstr "This account is blocked."
 msgid "Esta página não existe."
 msgstr "This page does not exist"
 
-#: src/routes.js:62
+#: src/routes.js:64
 msgid "Estatísticas"
 msgstr "Statistics"
 
 #: src/views/Statistics.js:61
 msgid "Estatísticas de {0} {1}"
 msgstr "Statistics from {0} {1}"
+
+#: src/views/Ranking.js:212
+msgid "F"
+msgstr "F"
+
+#: src/views/Ranking.js:210
+msgid "Faltas"
+msgstr "Forfeits"
 
 #: src/views/Account/Avatar.js:101
 msgid "Ficheiro inválido."
@@ -236,7 +279,7 @@ msgstr "Invalid file."
 msgid "Gestor de Ranking Nacional"
 msgstr "National Ranking Manager"
 
-#: src/partials/Header.js:154
+#: src/partials/Header.js:164
 msgid "Gestão de Ranking Nacional"
 msgstr "National Ranking Management"
 
@@ -270,6 +313,10 @@ msgstr "Information"
 msgid "Inquizição"
 msgstr "Inquizição"
 
+#: src/views/Ranking.js:200
+msgid "J"
+msgstr "G"
+
 #: src/views/admin/nationalRanking/Players/List.js:31
 msgid "Jogador"
 msgstr "Player"
@@ -291,10 +338,14 @@ msgstr "Quiz league player"
 msgid "Jogador regular"
 msgstr "Regular player"
 
-#: src/partials/Header.js:175
+#: src/partials/Header.js:185
 #: src/views/admin/nationalRanking/Players.js:84
 msgid "Jogadores"
 msgstr "Players"
+
+#: src/views/Ranking.js:198
+msgid "Jogos"
+msgstr "Games"
 
 #: src/views/Account.js:139
 #: src/views/Register.js:127
@@ -306,7 +357,7 @@ msgid "Legenda"
 msgstr "Legend"
 
 #: src/App.js:42
-#: src/routes.js:25
+#: src/routes.js:27
 #: src/views/Home.js:8
 msgid "Liga Quiz"
 msgstr "Quiz League"
@@ -338,6 +389,7 @@ msgstr "None"
 
 #: src/views/Account.js:67
 #: src/views/NationalRanking.js:212
+#: src/views/Ranking.js:144
 #: src/views/Register.js:58
 #: src/views/admin/nationalRanking/Players/Form.js:148
 #: src/views/admin/users/Users.js:108
@@ -360,8 +412,8 @@ msgstr "Notification successfully created."
 msgid "Notificação editada com sucesso."
 msgstr "Notification successfully edited."
 
-#: src/partials/Header.js:145
-#: src/routes.js:88
+#: src/partials/Header.js:155
+#: src/routes.js:95
 #: src/views/admin/notifications/Notifications.js:41
 msgid "Notificações"
 msgstr "Notifications"
@@ -453,6 +505,14 @@ msgstr "Your password change request is not valid"
 msgid "OK"
 msgstr "OK"
 
+#: src/views/Ranking.js:176
+msgid "PC"
+msgstr "PA"
+
+#: src/views/Ranking.js:164
+msgid "PaF"
+msgstr "PF"
+
 #: src/views/Account.js:145
 #: src/views/Login.js:75
 #: src/views/Register.js:133
@@ -481,6 +541,18 @@ msgstr "Permissions"
 msgid "Pontos"
 msgstr "Points"
 
+#: src/views/Ranking.js:162
+msgid "Pontos a favor"
+msgstr "Points for"
+
+#: src/views/Ranking.js:174
+msgid "Pontos contra"
+msgstr "Points against"
+
+#: src/views/Ranking.js:150
+msgid "Pontos na liga"
+msgstr "League points"
+
 #: src/views/Statistics.js:98
 msgid "Prova"
 msgstr "Event"
@@ -489,7 +561,7 @@ msgstr "Event"
 msgid "Provas individuais"
 msgstr "Individual quizzes"
 
-#: src/partials/Header.js:168
+#: src/partials/Header.js:178
 #: src/views/admin/nationalRanking/Events.js:102
 msgid "Provas mensais"
 msgstr "Month events"
@@ -506,6 +578,7 @@ msgstr "Month events successfully deleted."
 msgid "Provas mensais criadas com sucesso."
 msgstr "Month events successfully created."
 
+#: src/views/Ranking.js:152
 #: src/views/Statistics.js:111
 msgid "Pts"
 msgstr "Pts"
@@ -515,7 +588,7 @@ msgstr "Pts"
 msgid "Publicar ranking mensal"
 msgstr "Publish month ranking"
 
-#: src/routes.js:98
+#: src/routes.js:105
 #: src/views/NoMatch.js:10
 msgid "Página não encontrada"
 msgstr "Page not found"
@@ -524,8 +597,12 @@ msgstr "Page not found"
 msgid "Quizzes"
 msgstr "Quizzes"
 
-#: src/partials/Header.js:65
-#: src/routes.js:67
+#: src/views/Ranking.js:260
+msgid "RC"
+msgstr "CA"
+
+#: src/partials/Header.js:81
+#: src/routes.js:69
 #: src/views/NationalRanking.js:155
 #: src/views/NationalRanking.js:180
 msgid "Ranking Nacional"
@@ -535,15 +612,15 @@ msgstr "National Ranking"
 msgid "Ranking Nacional de Quiz"
 msgstr "Quiz National Ranking"
 
-#: src/routes.js:83
+#: src/routes.js:90
 msgid "Ranking Nacional | Jogadores"
 msgstr "National Ranking | Players"
 
-#: src/routes.js:78
+#: src/routes.js:85
 msgid "Ranking Nacional | Provas mensais"
 msgstr "National Ranking | Month events"
 
-#: src/routes.js:73
+#: src/routes.js:80
 msgid "Ranking Nacional | Ranking"
 msgstr "National Ranking | Ranking"
 
@@ -555,28 +632,28 @@ msgstr "Month ranking successfully deleted."
 msgid "Ranking mensal publicado com sucesso."
 msgstr "Month ranking successfully published."
 
-#: src/partials/Header.js:161
+#: src/partials/Header.js:171
 #: src/views/admin/nationalRanking/Rankings.js:83
 msgid "Rankings mensais"
 msgstr "Month rankings"
 
-#: src/routes.js:35
+#: src/routes.js:37
 #: src/views/Login.js:119
 #: src/views/RecoverPassword.js:48
 msgid "Recuperar palavra-passe"
 msgstr "Recover password"
 
-#: src/routes.js:40
+#: src/routes.js:42
 #: src/views/ResetPassword.js:52
 msgid "Redefinir palavra-passe"
 msgstr "Reset password"
 
-#: src/partials/Header.js:107
+#: src/partials/Header.js:117
 #: src/views/Register.js:199
 msgid "Registar"
 msgstr "Register"
 
-#: src/routes.js:45
+#: src/routes.js:47
 #: src/views/Register.js:50
 msgid "Registo"
 msgstr "Registration"
@@ -590,6 +667,10 @@ msgstr "Delete player"
 #: src/views/admin/nationalRanking/Events/Form/Event.js:142
 msgid "Remover prova"
 msgstr "Delete event"
+
+#: src/views/Ranking.js:258
+msgid "Respostas correctas"
+msgstr "Correct answers"
 
 #: src/views/Statistics.js:104
 msgid "Resultado"
@@ -619,8 +700,8 @@ msgstr "World Quizzing Championship result"
 msgid "Resultado no Campeonato Nacional"
 msgstr "National Championship result"
 
-#: src/partials/Header.js:186
-#: src/routes.js:50
+#: src/partials/Header.js:196
+#: src/routes.js:52
 msgid "Sair"
 msgstr "Logout"
 
@@ -628,6 +709,7 @@ msgstr "Logout"
 msgid "Selecciona os jogadores que jogaram esta prova:"
 msgstr "Select the players that played this event:"
 
+#: src/views/Ranking.js:336
 #: src/views/admin/nationalRanking/Events/List.js:78
 #: src/views/admin/nationalRanking/Players/List.js:95
 #: src/views/admin/nationalRanking/Rankings.js:154
@@ -702,19 +784,27 @@ msgstr "User successfully updated."
 msgid "Utilizador registado com sucesso.<0/>Clica <1>aqui</1> e usa as tuas credenciais."
 msgstr "User registerd successfully.<0/>Click <1>here</1> and use your credentials."
 
-#: src/partials/Header.js:141
-#: src/routes.js:93
+#: src/partials/Header.js:151
+#: src/routes.js:100
 #: src/views/admin/users/Users.js:96
 msgid "Utilizadores"
 msgstr "Users"
+
+#: src/views/Ranking.js:224
+msgid "V"
+msgstr "W"
 
 #: src/views/admin/users/modals/EditPermissionsModal.js:120
 msgid "Validade da subscrição"
 msgstr "Subscription deadline"
 
-#: src/partials/Header.js:190
+#: src/partials/Header.js:200
 msgid "Versão 4.0"
 msgstr "Version 4.0"
+
+#: src/views/Ranking.js:222
+msgid "Vitórias"
+msgstr "Wins"
 
 #: src/views/admin/nationalRanking/Events/Form.js:154
 #: src/views/admin/nationalRanking/Events/Form.js:281
@@ -757,3 +847,7 @@ msgstr "{0, selectordinal, two {2nd} few {3nd} other {#rd}}"
 #: src/views/admin/nationalRanking/Rankings.js:126
 msgid "{0} de {1}"
 msgstr "{0} {1}"
+
+#: src/views/Ranking.js:126
+msgid "{0}ª divisão"
+msgstr "Tier {0}"

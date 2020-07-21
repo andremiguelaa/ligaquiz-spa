@@ -4,6 +4,8 @@ import OutsideClickHandler from 'react-outside-click-handler';
 import { Trans } from '@lingui/macro';
 import classames from 'classnames';
 import Cookies from 'js-cookie';
+import moment from 'moment';
+
 import { catalogs } from 'App';
 
 import { useStateValue } from 'state/State';
@@ -60,16 +62,24 @@ const Header = () => {
           })}
         >
           <div className="navbar-start">
-            <Link to="/national-ranking/" className="navbar-item">
-              <i className="fa fa-btn fa-trophy" />
-              &nbsp;<Trans>Ranking Nacional</Trans>
-            </Link>
+            {user &&
+              (user.roles.admin ||
+                user.roles.regular_player >= moment().format('YYYY-MM-DD')) && (
+                <Link to="/ranking" className="navbar-item">
+                  <i className="fa fa-btn fa-diamond" />
+                  &nbsp;<Trans>Classificação</Trans>
+                </Link>
+              )}
             {user && (
               <Link to="/statistics" className="navbar-item">
                 <i className="fa fa-btn fa-line-chart" />
                 &nbsp;<Trans>As minhas estatísticas</Trans>
               </Link>
             )}
+            <Link to="/national-ranking/" className="navbar-item">
+              <i className="fa fa-btn fa-trophy" />
+              &nbsp;<Trans>Ranking Nacional</Trans>
+            </Link>
             {/* 
             <div className="navbar-item has-dropdown is-hoverable is-hidden">
               <a className="navbar-link">More</a>
