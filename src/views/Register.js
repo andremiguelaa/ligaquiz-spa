@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
-import classames from 'classnames';
+import classnames from 'classnames';
 
 import PageHeader from 'components/PageHeader';
 import { useStateValue } from 'state/State';
@@ -105,7 +105,7 @@ const Register = () => {
                     <input
                       type="email"
                       required
-                      className={classames('input', {
+                      className={classnames('input', {
                         'is-danger': error && error.data && error.data.email,
                       })}
                       onChange={(event) => {
