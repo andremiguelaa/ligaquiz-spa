@@ -11,6 +11,7 @@ import Loading from 'components/Loading';
 
 import TableHeader from './Ranking/TableHeader';
 import Player from './Ranking/Player';
+import Rounds from './Ranking/Rounds';
 
 import classes from './Ranking/Ranking.module.scss';
 
@@ -136,22 +137,25 @@ const Ranking = () => {
         ) : (
           <>
             {seasonData ? (
-              <div className="table-container">
-                <table className="table is-fullwidth">
-                  <TableHeader />
-                  <tbody>
-                    {seasonData.ranking.map((player, index) => (
-                      <Player
-                        key={player.id}
-                        player={player}
-                        index={index}
-                        tierNumber={tierNumber}
-                        users={users}
-                      />
-                    ))}
-                  </tbody>
-                </table>
-              </div>
+              <>
+                <div className="table-container">
+                  <table className="table is-fullwidth">
+                    <TableHeader />
+                    <tbody>
+                      {seasonData.ranking.map((player, index) => (
+                        <Player
+                          key={player.id}
+                          player={player}
+                          index={index}
+                          tierNumber={tierNumber}
+                          users={users}
+                        />
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+                <Rounds rounds={seasonData.rounds} users={users} />
+              </>
             ) : (
               <EmptyState>
                 <Trans>Sem registos</Trans>
