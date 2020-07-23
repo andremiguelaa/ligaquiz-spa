@@ -1,3 +1,5 @@
+@import 'bulma/sass/utilities/mixins.sass';
+
 .ranking {
   .userCellContent {
     padding-left: calc(0.75rem + 32px);
@@ -19,6 +21,117 @@
         min-height: 28px;
         min-width: 28px;
         object-fit: cover;
+      }
+    }
+  }
+  .roundsWrapper {
+    .header {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+      h1 {
+        margin: 0;
+      }
+    }
+
+    .rounds {
+      display: flex;
+      flex-wrap: wrap;
+      .round {
+        width: 50%;
+        padding-bottom: 2rem;
+        @include mobile {
+          width: 100%;
+        }
+        &:nth-child(2n + 1) {
+          padding-right: 2rem;
+          @include mobile {
+            padding-right: 0;
+          }
+        }
+        &:nth-child(2n) {
+          padding-left: 2rem;
+          @include mobile {
+            padding-left: 0;
+          }
+        }
+        .title {
+          padding-bottom: 0.5rem;
+          border-bottom: 1px solid $grey-lighter;
+        }
+        .games {
+          display: table;
+          table-layout: fixed;
+          width: 100%;
+          .game {
+            display: table-row;
+            height: 2.5rem;
+            &.solo {
+              display: inline-flex;
+              width: 50%;
+              align-items: center;
+              vertical-align: top;
+              &:nth-child(2n + 1) {
+                padding-right: 1rem;
+              }
+              &:nth-child(2n) {
+                padding-left: 1rem;
+              }
+            }
+            & > * {
+              display: table-cell;
+              vertical-align: middle;
+              padding: 0.25rem 0;
+              &.avatarCell {
+                width: 28px;
+              }
+              &.nameCell {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                @include mobile {
+                  overflow: visible;
+                }
+                &.home {
+                  text-align: right;
+                  padding-right: 1rem;
+                }
+                &.away,
+                &.solo {
+                  padding-left: 1rem;
+                }
+                &.solo {
+                  width: calc(100% - 28px - 45px);
+                }
+              }
+              &.resultCell {
+                text-align: center;
+                width: 105px;
+                &.solo {
+                  text-align: right;
+                  width: 45px;
+                }
+              }
+            }
+            .avatar {
+              height: 28px;
+              width: 28px;
+              font-size: 28px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              overflow: hidden;
+              img {
+                font-size: 0;
+                min-height: 28px;
+                min-width: 28px;
+                object-fit: cover;
+              }
+            }
+          }
+        }
       }
     }
   }
