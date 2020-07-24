@@ -195,10 +195,16 @@ const Header = () => {
                     (user.roles.admin ||
                       user.roles.regular_player >=
                         moment().format('YYYY-MM-DD')) && (
-                      <Link to="/seasons" className="navbar-item">
-                        <i className="fa fa-btn fa-diamond" />
-                        &nbsp;<Trans>Arquivo de temporadas</Trans>
-                      </Link>
+                      <>
+                        <Link to="/seasons" className="navbar-item">
+                          <i className="fa fa-btn fa-diamond" />
+                          &nbsp;<Trans>Arquivo de temporadas</Trans>
+                        </Link>
+                        <Link to="/quizzes" className="navbar-item">
+                          <i className="fa fa-btn fa-diamond" />
+                          &nbsp;<Trans>Arquivo de quizzes</Trans>
+                        </Link>
+                      </>
                     )}
                   <Link to="/logout/" className="navbar-item">
                     <i className="fa fa-btn fa-sign-out" />
