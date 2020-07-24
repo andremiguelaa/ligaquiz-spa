@@ -1,0 +1,34 @@
+{
+  "Anterior": {
+    "origin": [
+      [
+        "src/views/Ranking/Rounds.js",
+        19
+      ]
+    ]
+  },
+  "Calendário": {
+    "origin": [
+      [
+        "src/views/Ranking/Rounds.js",
+        22
+      ]
+    ]
+  },
+  "Próxima": {
+    "origin": [
+      [
+        "src/views/Ranking/Rounds.js",
+        29
+      ]
+    ]
+  },
+  "Jornada {0} ({1})": {
+    "origin": [
+      [
+        "src/views/Ranking/Rounds.js",
+        41
+      ]
+    ]
+  }
+}

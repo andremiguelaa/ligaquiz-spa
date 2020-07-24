@@ -22,7 +22,6 @@ const Ranking = () => {
   const [seasonNumber, setSeasonNumber] = useState();
   const [tierNumber, setTierNumber] = useState();
   const [seasonData, setSeasonData] = useState();
-  const [seasonsList, setSeasonsList] = useState();
   const [users, setUsers] = useState();
 
   const setSeasonDetails = (seasonNumber, seasonData) => {
@@ -71,13 +70,9 @@ const Ranking = () => {
         .catch(() => {
           setError(true);
         });
-      ApiRequest.get(`seasons`).then(({ data }) => {
-        setSeasonsList(data);
-      });
     } else {
       ApiRequest.get(`seasons`)
         .then(({ data }) => {
-          setSeasonsList(data);
           if (data.length) {
             const lastSeason = data[data.length - 1].season;
             ApiRequest.get(`leagues?season=${lastSeason}&tier=1`)
@@ -160,21 +155,6 @@ const Ranking = () => {
                   </table>
                 </div>
                 <Rounds rounds={seasonData.rounds} users={users} />
-                {seasonsList && (
-                  <article>
-                    <h1 className="is-size-4">Arquivo de temporadas</h1>
-                    {seasonsList.reverse().map((season) => (
-                      <div key={season.season}>
-                        <Link
-                          to={`/ranking/${season.season}`}
-                          onClick={() => setSeasonNumber(season.season)}
-                        >
-                          Temporada {season.season}
-                        </Link>
-                      </div>
-                    ))}
-                  </article>
-                )}
               </>
             ) : (
               <EmptyState>

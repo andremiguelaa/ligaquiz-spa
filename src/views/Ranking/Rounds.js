@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import classnames from 'classnames';
+import { Trans } from '@lingui/macro';
 
 import Game from './Game';
 
@@ -15,15 +16,17 @@ const Rounds = ({ rounds, users }) => {
           onClick={() => setCurrentRound((prev) => prev - 1)}
           disabled={currentRound <= 1}
         >
-          Anterior
+          <Trans>Anterior</Trans>
         </button>
-        <h1 className="is-size-4">Calendário</h1>
+        <h1 className="is-size-4">
+          <Trans>Calendário</Trans>
+        </h1>
         <button
           className="button is-primary"
           onClick={() => setCurrentRound((prev) => prev + 1)}
           disabled={currentRound >= 19}
         >
-          Próxima
+          <Trans>Próxima</Trans>
         </button>
       </header>
       <div className={classes.rounds}>
@@ -35,7 +38,9 @@ const Rounds = ({ rounds, users }) => {
             return (
               <article key={round.round} className={classes.round}>
                 <h1 className={classnames('is-size-5', classes.title)}>
-                  Jornada {round.round} ({round.date})
+                  <Trans>
+                    Jornada {round.round} ({round.date})
+                  </Trans>
                 </h1>
                 <div className={classes.games}>
                   {round.games.map((game) => (

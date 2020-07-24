@@ -103,11 +103,19 @@
       ]
     ]
   },
+  "Arquivo de temporadas": {
+    "origin": [
+      [
+        "src/partials/Header.js",
+        200
+      ]
+    ]
+  },
   "Sair": {
     "origin": [
       [
         "src/partials/Header.js",
-        196
+        205
       ]
     ]
   },
@@ -115,7 +123,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        200
+        209
       ]
     ]
   }

@@ -16,6 +16,7 @@ import NationalRankingAdminEvents from 'views/admin/nationalRanking/Events';
 import NationalRankingAdminPlayers from 'views/admin/nationalRanking/Players';
 
 import Ranking from 'views/Ranking';
+import Seasons from 'views/Seasons';
 
 import NotificationsAdmin from 'views/admin/notifications/Notifications';
 import UsersAdmin from 'views/admin/users/Users';
@@ -75,6 +76,11 @@ export default [
     title: <Trans>Classificação</Trans>,
     path: '/ranking/:season?/:tier?',
     component: Ranking,
+  },
+  {
+    title: <Trans>Arquivo de temporadas</Trans>,
+    path: '/seasons',
+    component: Seasons,
   },
   {
     title: <Trans>Ranking Nacional | Ranking</Trans>,

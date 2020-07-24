@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/Ranking.js",
-        97
+        98
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/views/Ranking.js",
-        108
+        109
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/views/Ranking.js",
-        110
+        111
       ]
     ]
   },
@@ -27,175 +27,7 @@
     "origin": [
       [
         "src/views/Ranking.js",
-        126
-      ]
-    ]
-  },
-  "Nome": {
-    "origin": [
-      [
-        "src/views/Ranking.js",
-        144
-      ]
-    ]
-  },
-  "Pontos na liga": {
-    "origin": [
-      [
-        "src/views/Ranking.js",
-        150
-      ]
-    ]
-  },
-  "Pts": {
-    "origin": [
-      [
-        "src/views/Ranking.js",
-        152
-      ]
-    ]
-  },
-  "Pontos a favor": {
-    "origin": [
-      [
-        "src/views/Ranking.js",
-        162
-      ]
-    ]
-  },
-  "PaF": {
-    "origin": [
-      [
-        "src/views/Ranking.js",
-        164
-      ]
-    ]
-  },
-  "Pontos contra": {
-    "origin": [
-      [
-        "src/views/Ranking.js",
-        174
-      ]
-    ]
-  },
-  "PC": {
-    "origin": [
-      [
-        "src/views/Ranking.js",
-        176
-      ]
-    ]
-  },
-  "Diferença de pontos": {
-    "origin": [
-      [
-        "src/views/Ranking.js",
-        186
-      ]
-    ]
-  },
-  "DdP": {
-    "origin": [
-      [
-        "src/views/Ranking.js",
-        188
-      ]
-    ]
-  },
-  "Jogos": {
-    "origin": [
-      [
-        "src/views/Ranking.js",
-        198
-      ]
-    ]
-  },
-  "J": {
-    "origin": [
-      [
-        "src/views/Ranking.js",
-        200
-      ]
-    ]
-  },
-  "Faltas": {
-    "origin": [
-      [
-        "src/views/Ranking.js",
-        210
-      ]
-    ]
-  },
-  "F": {
-    "origin": [
-      [
-        "src/views/Ranking.js",
-        212
-      ]
-    ]
-  },
-  "Vitórias": {
-    "origin": [
-      [
-        "src/views/Ranking.js",
-        222
-      ]
-    ]
-  },
-  "V": {
-    "origin": [
-      [
-        "src/views/Ranking.js",
-        224
-      ]
-    ]
-  },
-  "Empates": {
-    "origin": [
-      [
-        "src/views/Ranking.js",
-        234
-      ]
-    ]
-  },
-  "E": {
-    "origin": [
-      [
-        "src/views/Ranking.js",
-        236
-      ]
-    ]
-  },
-  "Derrotas": {
-    "origin": [
-      [
-        "src/views/Ranking.js",
-        246
-      ]
-    ]
-  },
-  "D": {
-    "origin": [
-      [
-        "src/views/Ranking.js",
-        248
-      ]
-    ]
-  },
-  "Respostas correctas": {
-    "origin": [
-      [
-        "src/views/Ranking.js",
-        258
-      ]
-    ]
-  },
-  "RC": {
-    "origin": [
-      [
-        "src/views/Ranking.js",
-        260
+        127
       ]
     ]
   },
@@ -203,7 +35,7 @@
     "origin": [
       [
         "src/views/Ranking.js",
-        336
+        161
       ]
     ]
   }

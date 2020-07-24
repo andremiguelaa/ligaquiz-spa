@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/routes.js",
-        27
+        28
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/routes.js",
-        32
+        33
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/routes.js",
-        37
+        38
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/routes.js",
-        42
+        43
       ]
     ]
   },
@@ -35,7 +35,7 @@
     "origin": [
       [
         "src/routes.js",
-        47
+        48
       ]
     ]
   },
@@ -43,7 +43,7 @@
     "origin": [
       [
         "src/routes.js",
-        52
+        53
       ]
     ]
   },
@@ -51,7 +51,7 @@
     "origin": [
       [
         "src/routes.js",
-        58
+        59
       ]
     ]
   },
@@ -59,7 +59,7 @@
     "origin": [
       [
         "src/routes.js",
-        64
+        65
       ]
     ]
   },
@@ -67,7 +67,7 @@
     "origin": [
       [
         "src/routes.js",
-        69
+        70
       ]
     ]
   },
@@ -75,7 +75,15 @@
     "origin": [
       [
         "src/routes.js",
-        75
+        76
+      ]
+    ]
+  },
+  "Arquivo de temporadas": {
+    "origin": [
+      [
+        "src/routes.js",
+        81
       ]
     ]
   },
@@ -83,7 +91,7 @@
     "origin": [
       [
         "src/routes.js",
-        80
+        86
       ]
     ]
   },
@@ -91,7 +99,7 @@
     "origin": [
       [
         "src/routes.js",
-        85
+        91
       ]
     ]
   },
@@ -99,7 +107,7 @@
     "origin": [
       [
         "src/routes.js",
-        90
+        96
       ]
     ]
   },
@@ -107,7 +115,7 @@
     "origin": [
       [
         "src/routes.js",
-        95
+        101
       ]
     ]
   },
@@ -115,7 +123,7 @@
     "origin": [
       [
         "src/routes.js",
-        100
+        106
       ]
     ]
   },
@@ -123,7 +131,7 @@
     "origin": [
       [
         "src/routes.js",
-        105
+        111
       ]
     ]
   }

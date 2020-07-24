@@ -38,7 +38,7 @@ const Header = () => {
     return <Loading />;
   }
 
-  if (notifications) {
+  if (notifications && notifications.length > 0) {
     return (
       <section className="section">
         {notifications.map((notification) => (

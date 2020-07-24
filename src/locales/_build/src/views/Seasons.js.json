@@ -1,0 +1,34 @@
+{
+  "Erro de servidor. Tenta mais tarde.": {
+    "origin": [
+      [
+        "src/views/Seasons.js",
+        30
+      ]
+    ]
+  },
+  "Arquivo de temporadas": {
+    "origin": [
+      [
+        "src/views/Seasons.js",
+        37
+      ]
+    ]
+  },
+  "Temporada {0}": {
+    "origin": [
+      [
+        "src/views/Seasons.js",
+        48
+      ]
+    ]
+  },
+  "Sem registos": {
+    "origin": [
+      [
+        "src/views/Seasons.js",
+        55
+      ]
+    ]
+  }
+}

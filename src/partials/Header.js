@@ -191,6 +191,15 @@ const Header = () => {
                     <i className="fa fa-btn fa-user" />
                     &nbsp;<Trans>Conta</Trans>
                   </Link>
+                  {user &&
+                    (user.roles.admin ||
+                      user.roles.regular_player >=
+                        moment().format('YYYY-MM-DD')) && (
+                      <Link to="/seasons" className="navbar-item">
+                        <i className="fa fa-btn fa-diamond" />
+                        &nbsp;<Trans>Arquivo de temporadas</Trans>
+                      </Link>
+                    )}
                   <Link to="/logout/" className="navbar-item">
                     <i className="fa fa-btn fa-sign-out" />
                     &nbsp;<Trans>Sair</Trans>

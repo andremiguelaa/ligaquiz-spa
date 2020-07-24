@@ -1,0 +1,170 @@
+{
+  "Nome": {
+    "origin": [
+      [
+        "src/views/Ranking/TableHeader.js",
+        11
+      ]
+    ]
+  },
+  "Pontos na liga": {
+    "origin": [
+      [
+        "src/views/Ranking/TableHeader.js",
+        18
+      ]
+    ]
+  },
+  "Pts": {
+    "origin": [
+      [
+        "src/views/Ranking/TableHeader.js",
+        20
+      ]
+    ]
+  },
+  "Pontos a favor": {
+    "origin": [
+      [
+        "src/views/Ranking/TableHeader.js",
+        30
+      ]
+    ]
+  },
+  "PaF": {
+    "origin": [
+      [
+        "src/views/Ranking/TableHeader.js",
+        32
+      ]
+    ]
+  },
+  "Pontos contra": {
+    "origin": [
+      [
+        "src/views/Ranking/TableHeader.js",
+        42
+      ]
+    ]
+  },
+  "PC": {
+    "origin": [
+      [
+        "src/views/Ranking/TableHeader.js",
+        44
+      ]
+    ]
+  },
+  "Diferença de pontos": {
+    "origin": [
+      [
+        "src/views/Ranking/TableHeader.js",
+        54
+      ]
+    ]
+  },
+  "DdP": {
+    "origin": [
+      [
+        "src/views/Ranking/TableHeader.js",
+        56
+      ]
+    ]
+  },
+  "Jogos": {
+    "origin": [
+      [
+        "src/views/Ranking/TableHeader.js",
+        66
+      ]
+    ]
+  },
+  "J": {
+    "origin": [
+      [
+        "src/views/Ranking/TableHeader.js",
+        68
+      ]
+    ]
+  },
+  "Faltas": {
+    "origin": [
+      [
+        "src/views/Ranking/TableHeader.js",
+        78
+      ]
+    ]
+  },
+  "F": {
+    "origin": [
+      [
+        "src/views/Ranking/TableHeader.js",
+        80
+      ]
+    ]
+  },
+  "Vitórias": {
+    "origin": [
+      [
+        "src/views/Ranking/TableHeader.js",
+        90
+      ]
+    ]
+  },
+  "V": {
+    "origin": [
+      [
+        "src/views/Ranking/TableHeader.js",
+        92
+      ]
+    ]
+  },
+  "Empates": {
+    "origin": [
+      [
+        "src/views/Ranking/TableHeader.js",
+        102
+      ]
+    ]
+  },
+  "E": {
+    "origin": [
+      [
+        "src/views/Ranking/TableHeader.js",
+        104
+      ]
+    ]
+  },
+  "Derrotas": {
+    "origin": [
+      [
+        "src/views/Ranking/TableHeader.js",
+        114
+      ]
+    ]
+  },
+  "D": {
+    "origin": [
+      [
+        "src/views/Ranking/TableHeader.js",
+        116
+      ]
+    ]
+  },
+  "Respostas correctas": {
+    "origin": [
+      [
+        "src/views/Ranking/TableHeader.js",
+        126
+      ]
+    ]
+  },
+  "RC": {
+    "origin": [
+      [
+        "src/views/Ranking/TableHeader.js",
+        128
+      ]
+    ]
+  }
+}
