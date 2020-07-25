@@ -12,13 +12,14 @@ import Loading from 'components/Loading';
 import Paginator from 'components/Paginator';
 import NoMatch from './NoMatch';
 
-const Quizzes = () => {
+const SpecialQuizzes = () => {
   const { page } = useParams();
   let history = useHistory();
 
   const [error, setError] = useState();
   const [loading, setLoading] = useState(true);
   const [quizzes, setQuizzes] = useState();
+  const [users, setUsers] = useState();
 
   const [
     {
@@ -27,13 +28,26 @@ const Quizzes = () => {
   ] = useStateValue();
 
   useEffect(() => {
-    ApiRequest.get(`quizzes`)
+    ApiRequest.get(`special-quizzes`)
       .then(({ data }) => {
         setQuizzes(data.reverse());
         setLoading(false);
       })
       .catch(({ response }) => {
         setError(response?.status);
+      });
+
+    ApiRequest.get(`users`)
+      .then(({ data }) => {
+        setUsers(
+          data.reduce((acc, user) => {
+            acc[user.id] = user;
+            return acc;
+          }, {})
+        );
+      })
+      .catch(() => {
+        setError(true);
       });
   }, []);
 
@@ -50,11 +64,11 @@ const Quizzes = () => {
 
   return (
     <>
-      {loading ? (
+      {loading || !users ? (
         <Loading />
       ) : (
         <>
-          <PageHeader title={<Trans>Arquivo de quizzes</Trans>} />
+          <PageHeader title={<Trans>Arquivo de quizzes especiais</Trans>} />
           <section className="section">
             <>
               {quizzes && quizzes.length > 0 ? (
@@ -63,12 +77,19 @@ const Quizzes = () => {
                   initialPage={page ? page : 1}
                   itemClassName="panel-block"
                   render={(item) => (
-                    <Link to={`/quiz/${item.date}`}>
-                      {covertToLongDate(item.date, language)}
+                    <Link to={`/special-quiz/${item.date}`}>
+                      {covertToLongDate(item.date, language)} - {item.subject}
+                      {users[item.user_id] && (
+                        <>
+                          {' '}
+                          ({users[item.user_id].name}{' '}
+                          {users[item.user_id].surname})
+                        </>
+                      )}
                     </Link>
                   )}
                   onChange={(newPage) => {
-                    history.push(`/quizzes/${newPage}`);
+                    history.push(`/special-quizzes/${newPage}`);
                   }}
                   onError={(code) => {
                     setError(code);
@@ -87,4 +108,4 @@ const Quizzes = () => {
   );
 };
 
-export default Quizzes;
+export default SpecialQuizzes;

@@ -18,6 +18,7 @@ import NationalRankingAdminPlayers from 'views/admin/nationalRanking/Players';
 import Ranking from 'views/Ranking';
 import Seasons from 'views/Seasons';
 import Quizzes from 'views/Quizzes';
+import SpecialQuizzes from 'views/SpecialQuizzes';
 
 import NotificationsAdmin from 'views/admin/notifications/Notifications';
 import UsersAdmin from 'views/admin/users/Users';
@@ -80,13 +81,18 @@ export default [
   },
   {
     title: <Trans>Arquivo de temporadas</Trans>,
-    path: '/seasons',
+    path: '/seasons/:page?',
     component: Seasons,
   },
   {
     title: <Trans>Arquivo de quizzes</Trans>,
-    path: '/quizzes',
+    path: '/quizzes/:page?',
     component: Quizzes,
+  },
+  {
+    title: <Trans>Arquivo de quizzes especiais</Trans>,
+    path: '/special-quizzes/:page?',
+    component: SpecialQuizzes,
   },
   {
     title: <Trans>Ranking Nacional | Ranking</Trans>,

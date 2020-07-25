@@ -197,12 +197,25 @@ const Header = () => {
                         moment().format('YYYY-MM-DD')) && (
                       <>
                         <Link to="/seasons" className="navbar-item">
-                          <i className="fa fa-btn fa-diamond" />
+                          <i className="fa fa-btn fa-archive" />
                           &nbsp;<Trans>Arquivo de temporadas</Trans>
                         </Link>
                         <Link to="/quizzes" className="navbar-item">
-                          <i className="fa fa-btn fa-diamond" />
+                          <i className="fa fa-btn fa-archive" />
                           &nbsp;<Trans>Arquivo de quizzes</Trans>
+                        </Link>
+                      </>
+                    )}
+                  {user &&
+                    (user.roles.admin ||
+                      user.roles.regular_player >=
+                        moment().format('YYYY-MM-DD') ||
+                      user.roles.special_quiz_player >=
+                        moment().format('YYYY-MM-DD')) && (
+                      <>
+                        <Link to="/special-quizzes" className="navbar-item">
+                          <i className="fa fa-btn fa-archive" />
+                          &nbsp;<Trans>Arquivo de quizzes especiais</Trans>
                         </Link>
                       </>
                     )}

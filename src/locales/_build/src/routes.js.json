@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/routes.js",
-        28
+        30
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/routes.js",
-        33
+        35
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/routes.js",
-        38
+        40
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/routes.js",
-        43
+        45
       ]
     ]
   },
@@ -35,7 +35,7 @@
     "origin": [
       [
         "src/routes.js",
-        48
+        50
       ]
     ]
   },
@@ -43,7 +43,7 @@
     "origin": [
       [
         "src/routes.js",
-        53
+        55
       ]
     ]
   },
@@ -51,7 +51,7 @@
     "origin": [
       [
         "src/routes.js",
-        59
+        61
       ]
     ]
   },
@@ -59,7 +59,7 @@
     "origin": [
       [
         "src/routes.js",
-        65
+        67
       ]
     ]
   },
@@ -67,7 +67,7 @@
     "origin": [
       [
         "src/routes.js",
-        70
+        72
       ]
     ]
   },
@@ -75,7 +75,7 @@
     "origin": [
       [
         "src/routes.js",
-        76
+        78
       ]
     ]
   },
@@ -83,7 +83,23 @@
     "origin": [
       [
         "src/routes.js",
-        81
+        83
+      ]
+    ]
+  },
+  "Arquivo de quizzes": {
+    "origin": [
+      [
+        "src/routes.js",
+        88
+      ]
+    ]
+  },
+  "Arquivo de quizzes especiais": {
+    "origin": [
+      [
+        "src/routes.js",
+        93
       ]
     ]
   },
@@ -91,7 +107,7 @@
     "origin": [
       [
         "src/routes.js",
-        86
+        98
       ]
     ]
   },
@@ -99,7 +115,7 @@
     "origin": [
       [
         "src/routes.js",
-        91
+        103
       ]
     ]
   },
@@ -107,7 +123,7 @@
     "origin": [
       [
         "src/routes.js",
-        96
+        108
       ]
     ]
   },
@@ -115,7 +131,7 @@
     "origin": [
       [
         "src/routes.js",
-        101
+        113
       ]
     ]
   },
@@ -123,7 +139,7 @@
     "origin": [
       [
         "src/routes.js",
-        106
+        118
       ]
     ]
   },
@@ -131,7 +147,7 @@
     "origin": [
       [
         "src/routes.js",
-        111
+        123
       ]
     ]
   }

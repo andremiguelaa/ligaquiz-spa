@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/Ranking/Rounds.js",
-        19
+        32
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/views/Ranking/Rounds.js",
-        22
+        35
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/views/Ranking/Rounds.js",
-        29
+        42
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/views/Ranking/Rounds.js",
-        41
+        54
       ]
     ]
   }

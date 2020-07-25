@@ -1,0 +1,18 @@
+{
+  "Anterior": {
+    "origin": [
+      [
+        "src/components/Paginator.js",
+        54
+      ]
+    ]
+  },
+  "Próxima": {
+    "origin": [
+      [
+        "src/components/Paginator.js",
+        63
+      ]
+    ]
+  }
+}

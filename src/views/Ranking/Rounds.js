@@ -6,13 +6,26 @@ import Game from './Game';
 
 import classes from './Ranking.module.scss';
 
+const getCurrentRound = (rounds) => {
+  let currentRound = 1;
+  rounds.forEach((round) => {
+    if (round.games[0].done) {
+      currentRound = round.round;
+    }
+  });
+  if (currentRound === 20) {
+    currentRound = 19;
+  }
+  return currentRound;
+};
+
 const Rounds = ({ rounds, users }) => {
-  const [currentRound, setCurrentRound] = useState(1);
+  const [currentRound, setCurrentRound] = useState(getCurrentRound(rounds));
   return (
     <section className={classes.roundsWrapper}>
       <header className={classes.header}>
         <button
-          className="button is-primary"
+          className="button"
           onClick={() => setCurrentRound((prev) => prev - 1)}
           disabled={currentRound <= 1}
         >
@@ -22,7 +35,7 @@ const Rounds = ({ rounds, users }) => {
           <Trans>Calendário</Trans>
         </h1>
         <button
-          className="button is-primary"
+          className="button"
           onClick={() => setCurrentRound((prev) => prev + 1)}
           disabled={currentRound >= 19}
         >

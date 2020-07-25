@@ -1,0 +1,26 @@
+{
+  "Erro de servidor. Tenta mais tarde.": {
+    "origin": [
+      [
+        "src/views/SpecialQuizzes.js",
+        60
+      ]
+    ]
+  },
+  "Arquivo de quizzes especiais": {
+    "origin": [
+      [
+        "src/views/SpecialQuizzes.js",
+        71
+      ]
+    ]
+  },
+  "Sem registos": {
+    "origin": [
+      [
+        "src/views/SpecialQuizzes.js",
+        100
+      ]
+    ]
+  }
+}

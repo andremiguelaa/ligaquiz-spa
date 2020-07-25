@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/Seasons.js",
-        30
+        37
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/views/Seasons.js",
-        37
+        48
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/views/Seasons.js",
-        48
+        59
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/views/Seasons.js",
-        55
+        72
       ]
     ]
   }

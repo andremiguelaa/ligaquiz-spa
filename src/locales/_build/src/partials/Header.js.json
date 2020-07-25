@@ -107,11 +107,11 @@
     "origin": [
       [
         "src/partials/Header.js",
-        200
+        201
       ]
     ]
   },
-  "Sair": {
+  "Arquivo de quizzes": {
     "origin": [
       [
         "src/partials/Header.js",
@@ -119,11 +119,27 @@
       ]
     ]
   },
+  "Arquivo de quizzes especiais": {
+    "origin": [
+      [
+        "src/partials/Header.js",
+        218
+      ]
+    ]
+  },
+  "Sair": {
+    "origin": [
+      [
+        "src/partials/Header.js",
+        224
+      ]
+    ]
+  },
   "Versão 4.0": {
     "origin": [
       [
         "src/partials/Header.js",
-        209
+        228
       ]
     ]
   }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams, useHistory } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 
 import ApiRequest from 'utils/ApiRequest';
@@ -7,8 +7,12 @@ import PageHeader from 'components/PageHeader';
 import Error from 'components/Error';
 import EmptyState from 'components/EmptyState';
 import Loading from 'components/Loading';
+import Paginator from 'components/Paginator';
+import NoMatch from './NoMatch';
 
 const Seasons = () => {
+  const { page } = useParams();
+  let history = useHistory();
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(true);
   const [seasonsList, setSeasonsList] = useState();
@@ -16,7 +20,7 @@ const Seasons = () => {
   useEffect(() => {
     ApiRequest.get(`seasons`)
       .then(({ data }) => {
-        setSeasonsList(data);
+        setSeasonsList(data.reverse());
         setLoading(false);
       })
       .catch(() => {
@@ -25,6 +29,9 @@ const Seasons = () => {
   }, []);
 
   if (error) {
+    if (error === 404) {
+      return <NoMatch />;
+    }
     return (
       <Error>
         <Trans>Erro de servidor. Tenta mais tarde.</Trans>
@@ -34,30 +41,41 @@ const Seasons = () => {
 
   return (
     <>
-      <PageHeader title={<Trans>Arquivo de temporadas</Trans>} />
-      <section className="section content">
-        {loading ? (
-          <Loading />
-        ) : (
-          <>
-            {seasonsList && seasonsList.length > 0 ? (
-              <>
-                {seasonsList.reverse().map((season) => (
-                  <div key={season.season}>
-                    <Link to={`/ranking/${season.season}`}>
-                      <Trans>Temporada {season.season}</Trans>
-                    </Link>
-                  </div>
-                ))}
-              </>
-            ) : (
-              <EmptyState>
-                <Trans>Sem registos</Trans>
-              </EmptyState>
-            )}
-          </>
-        )}
-      </section>
+      {loading ? (
+        <Loading />
+      ) : (
+        <>
+          <PageHeader title={<Trans>Arquivo de temporadas</Trans>} />
+          <section className="section">
+            <>
+              {seasonsList && seasonsList.length > 0 ? (
+                <>
+                  <Paginator
+                    array={seasonsList}
+                    initialPage={page ? page : 1}
+                    itemClassName="panel-block"
+                    render={(item) => (
+                      <Link to={`/ranking/${item.season}`}>
+                        <Trans>Temporada {item.season}</Trans>
+                      </Link>
+                    )}
+                    onChange={(newPage) => {
+                      history.push(`/seasons/${newPage}`);
+                    }}
+                    onError={(code) => {
+                      setError(code);
+                    }}
+                  />
+                </>
+              ) : (
+                <EmptyState>
+                  <Trans>Sem registos</Trans>
+                </EmptyState>
+              )}
+            </>
+          </section>
+        </>
+      )}
     </>
   );
 };
