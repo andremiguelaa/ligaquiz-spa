@@ -7,7 +7,7 @@
     "@creativebulma/bulma-tooltip": "^1.2.0",
     "@wojtekmaj/react-daterange-picker": "^3.0.0",
     "bulma-switch": "^2.0.0",
-    "marked": "^1.1.0",
+    "marked": "^1.1.1",
     "moment": "^2.27.0",
     "react": "^16.9.0",
     "react-date-picker": "^8.0.1",

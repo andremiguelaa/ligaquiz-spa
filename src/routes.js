@@ -19,6 +19,7 @@ import Ranking from 'views/Ranking';
 import Seasons from 'views/Seasons';
 import Quizzes from 'views/Quizzes';
 import SpecialQuizzes from 'views/SpecialQuizzes';
+import Game from 'views/Game';
 
 import NotificationsAdmin from 'views/admin/notifications/Notifications';
 import UsersAdmin from 'views/admin/users/Users';
@@ -93,6 +94,11 @@ export default [
     title: <Trans>Arquivo de quizzes especiais</Trans>,
     path: '/special-quizzes/:page?',
     component: SpecialQuizzes,
+  },
+  {
+    title: <Trans>Jogo</Trans>,
+    path: '/game/:date/:user1/:user2',
+    component: Game,
   },
   {
     title: <Trans>Ranking Nacional | Ranking</Trans>,
