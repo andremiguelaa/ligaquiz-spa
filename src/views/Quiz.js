@@ -27,12 +27,20 @@ const Quiz = () => {
   const [error, setError] = useState();
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState();
+  const [userAnswers, setUserAnswers] = useState();
 
   useEffect(() => {
     ApiRequest.get(`quizzes?${date ? `date=${date}` : 'today'}`)
       .then(({ data }) => {
         setData(data);
-        setLoading(false);
+        ApiRequest.get(`answers?quiz=${data.quiz.id}&submitted=1&mine=true`)
+          .then(({ data }) => {
+            setUserAnswers(data);
+            setLoading(false);
+          })
+          .catch(({ response }) => {
+            setError(response?.status);
+          });
       })
       .catch(({ response }) => {
         setError(response?.status);
@@ -71,10 +79,21 @@ const Quiz = () => {
             )}
             {question.answer && (
               <div>
-                <strong>Resposta correcta:</strong> {question.answer}
+                <strong>
+                  <Trans>Resposta correcta</Trans>:
+                </strong>{' '}
+                {question.answer}
               </div>
             )}
-            {question.percentage && (
+            {userAnswers?.[question.id]?.[0] && (
+              <div>
+                <strong>
+                  <Trans>Resposta dada</Trans>:
+                </strong>{' '}
+                {userAnswers[question.id][0].text}
+              </div>
+            )}
+            {question.hasOwnProperty('percentage') && (
               <div>
                 <strong>
                   <Trans>Percentagem de acerto</Trans>:

@@ -16,7 +16,11 @@ const PaginatedTable = ({
 }) => {
   const numberOfPages = Math.ceil(array.length / itemsPerPage);
 
-  const [page, setPage] = useState(parseInt(initialPage));
+  const [page, setPage] = useState();
+
+  useEffect(() => {
+    setPage(parseInt(initialPage));
+  }, [initialPage]);
 
   const changePage = (page) => {
     setPage(page);
