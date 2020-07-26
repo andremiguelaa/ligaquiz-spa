@@ -57,7 +57,6 @@ const Seasons = () => {
                     columns={[
                       {
                         id: 'season',
-                        label: <Trans>Temporada</Trans>,
                         render: (item) => (
                           <Link to={`/ranking/${item.season}`}>
                             <Trans>Temporada {item.season}</Trans>

@@ -758,7 +758,7 @@ msgstr "Selecciona os jogadores que jogaram esta prova:"
 
 #: src/views/Quizzes.js:84
 #: src/views/Ranking.js:161
-#: src/views/Seasons.js:78
+#: src/views/Seasons.js:77
 #: src/views/SpecialQuizzes.js:129
 #: src/views/admin/nationalRanking/Events/List.js:78
 #: src/views/admin/nationalRanking/Players/List.js:95
@@ -793,11 +793,7 @@ msgstr "Subscrição"
 msgid "Tema"
 msgstr "Tema"
 
-#: src/views/Seasons.js:60
-msgid "Temporada"
-msgstr "Temporada"
-
-#: src/views/Seasons.js:63
+#: src/views/Seasons.js:62
 msgid "Temporada {0}"
 msgstr "Temporada {0}"
 
