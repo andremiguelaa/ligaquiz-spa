@@ -59,7 +59,7 @@ msgstr "Administrador"
 msgid "Administração"
 msgstr "Administração"
 
-#: src/components/Paginator.js:54
+#: src/components/PaginatedTable.js:83
 #: src/views/Ranking/Rounds.js:32
 msgid "Anterior"
 msgstr "Anterior"
@@ -98,7 +98,7 @@ msgstr "Arquivo de quizzes"
 
 #: src/partials/Header.js:218
 #: src/routes.js:93
-#: src/views/SpecialQuizzes.js:71
+#: src/views/SpecialQuizzes.js:73
 msgid "Arquivo de quizzes especiais"
 msgstr "Arquivo de quizzes especiais"
 
@@ -112,6 +112,10 @@ msgstr "Arquivo de temporadas"
 #: src/views/Statistics.js:65
 msgid "As minhas estatísticas"
 msgstr "As minhas estatísticas"
+
+#: src/views/SpecialQuizzes.js:96
+msgid "Autor"
+msgstr "Autor"
 
 #: src/views/admin/notifications/utils/notificationTypes.js:14
 msgid "Aviso"
@@ -180,6 +184,10 @@ msgstr "Criar notificação"
 #: src/views/Ranking/TableHeader.js:116
 msgid "D"
 msgstr "D"
+
+#: src/views/SpecialQuizzes.js:113
+msgid "Data"
+msgstr "Data"
 
 #: src/views/admin/notifications/Notifications.js:73
 msgid "Data de fim"
@@ -253,7 +261,7 @@ msgstr "Enviámos-te um e-mail, segue as instruções para definir uma nova pala
 #: src/views/Register.js:185
 #: src/views/ResetPassword.js:125
 #: src/views/Seasons.js:37
-#: src/views/SpecialQuizzes.js:60
+#: src/views/SpecialQuizzes.js:62
 #: src/views/Statistics.js:47
 #: src/views/admin/nationalRanking/Events.js:95
 #: src/views/admin/nationalRanking/Players/Form.js:114
@@ -421,10 +429,6 @@ msgstr "Mês"
 msgid "Nenhum"
 msgstr "Nenhum"
 
-#: src/components/Paginator.js:63
-#~ msgid "Next"
-#~ msgstr "Next"
-
 #: src/views/Account.js:67
 #: src/views/NationalRanking.js:212
 #: src/views/Ranking/TableHeader.js:11
@@ -591,10 +595,6 @@ msgstr "Pontos contra"
 msgid "Pontos na liga"
 msgstr "Pontos na liga"
 
-#: src/components/Paginator.js:54
-#~ msgid "Previous"
-#~ msgstr "Previous"
-
 #: src/views/Statistics.js:98
 msgid "Prova"
 msgstr "Prova"
@@ -620,7 +620,7 @@ msgstr "Provas mensais apagadas com sucesso."
 msgid "Provas mensais criadas com sucesso."
 msgstr "Provas mensais criadas com sucesso."
 
-#: src/components/Paginator.js:63
+#: src/components/PaginatedTable.js:92
 #: src/views/Ranking/Rounds.js:42
 msgid "Próxima"
 msgstr "Próxima"
@@ -756,10 +756,10 @@ msgstr "Sair"
 msgid "Selecciona os jogadores que jogaram esta prova:"
 msgstr "Selecciona os jogadores que jogaram esta prova:"
 
-#: src/views/Quizzes.js:79
+#: src/views/Quizzes.js:84
 #: src/views/Ranking.js:161
-#: src/views/Seasons.js:72
-#: src/views/SpecialQuizzes.js:100
+#: src/views/Seasons.js:78
+#: src/views/SpecialQuizzes.js:129
 #: src/views/admin/nationalRanking/Events/List.js:78
 #: src/views/admin/nationalRanking/Players/List.js:95
 #: src/views/admin/nationalRanking/Rankings.js:154
@@ -789,7 +789,15 @@ msgstr "Submeter"
 msgid "Subscrição"
 msgstr "Subscrição"
 
-#: src/views/Seasons.js:59
+#: src/views/SpecialQuizzes.js:83
+msgid "Tema"
+msgstr "Tema"
+
+#: src/views/Seasons.js:60
+msgid "Temporada"
+msgstr "Temporada"
+
+#: src/views/Seasons.js:63
 msgid "Temporada {0}"
 msgstr "Temporada {0}"
 

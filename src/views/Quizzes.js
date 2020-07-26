@@ -9,7 +9,7 @@ import PageHeader from 'components/PageHeader';
 import Error from 'components/Error';
 import EmptyState from 'components/EmptyState';
 import Loading from 'components/Loading';
-import Paginator from 'components/Paginator';
+import PaginatedTable from 'components/PaginatedTable';
 import NoMatch from './NoMatch';
 
 const Quizzes = () => {
@@ -58,15 +58,20 @@ const Quizzes = () => {
           <section className="section">
             <>
               {quizzes && quizzes.length > 0 ? (
-                <Paginator
+                <PaginatedTable
                   array={quizzes}
                   initialPage={page ? page : 1}
-                  itemClassName="panel-block"
-                  render={(item) => (
-                    <Link to={`/quiz/${item.date}`}>
-                      {covertToLongDate(item.date, language)}
-                    </Link>
-                  )}
+                  hideHeader
+                  columns={[
+                    {
+                      id: 'date',
+                      render: (item) => (
+                        <Link to={`/quiz/${item.date}`}>
+                          {covertToLongDate(item.date, language)}
+                        </Link>
+                      ),
+                    },
+                  ]}
                   onChange={(newPage) => {
                     history.push(`/quizzes/${newPage}`);
                   }}

@@ -2,15 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { Trans } from '@lingui/macro';
 import classnames from 'classnames';
 
-import classes from './Paginator.module.scss';
+import classes from './PaginatedTable.module.scss';
 
-const Paginator = ({
+const PaginatedTable = ({
   array,
   key = 'id',
-  itemClassName = '',
-  itemsPerPage = 20,
+  hideHeader = false,
+  columns,
+  itemsPerPage = 10,
   initialPage = 1,
-  render,
   onChange = () => {},
   onError = () => {},
 }) => {
@@ -31,13 +31,42 @@ const Paginator = ({
 
   return (
     <>
-      {array
-        .slice((page - 1) * itemsPerPage, page * itemsPerPage)
-        .map((item) => (
-          <div key={item[key]} className={itemClassName}>
-            {render(item)}
-          </div>
-        ))}
+      <div className="table-container">
+        <table
+          className={classnames(
+            'table',
+            'is-fullwidth',
+            'is-hoverable',
+            'is-striped'
+          )}
+        >
+          {!hideHeader && (
+            <thead>
+              <tr>
+                {columns.map((column) => (
+                  <th key={column.id} className={column.className}>
+                    {column.label}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+          )}
+
+          <tbody>
+            {array
+              .slice((page - 1) * itemsPerPage, page * itemsPerPage)
+              .map((item) => (
+                <tr key={item[key]}>
+                  {columns.map((column) => (
+                    <td key={column.id} className={column.className}>
+                      {column.render(item)}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+          </tbody>
+        </table>
+      </div>
       {numberOfPages > 1 && (
         <nav
           className={classnames('pagination', 'is-centered', classes.nav)}
@@ -114,4 +143,4 @@ const Paginator = ({
   );
 };
 
-export default Paginator;
+export default PaginatedTable;

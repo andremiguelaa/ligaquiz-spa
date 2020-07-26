@@ -9,8 +9,10 @@ import PageHeader from 'components/PageHeader';
 import Error from 'components/Error';
 import EmptyState from 'components/EmptyState';
 import Loading from 'components/Loading';
-import Paginator from 'components/Paginator';
+import PaginatedTable from 'components/PaginatedTable';
 import NoMatch from './NoMatch';
+
+import classes from './SpecialQuizzes/SpecialQuizzes.module.scss';
 
 const SpecialQuizzes = () => {
   const { page } = useParams();
@@ -72,22 +74,49 @@ const SpecialQuizzes = () => {
           <section className="section">
             <>
               {quizzes && quizzes.length > 0 ? (
-                <Paginator
+                <PaginatedTable
                   array={quizzes}
                   initialPage={page ? page : 1}
-                  itemClassName="panel-block"
-                  render={(item) => (
-                    <Link to={`/special-quiz/${item.date}`}>
-                      {covertToLongDate(item.date, language)} - {item.subject}
-                      {users[item.user_id] && (
+                  columns={[
+                    {
+                      id: 'subject',
+                      label: <Trans>Tema</Trans>,
+                      render: (item) => (
+                        <Link
+                          to={`/special-quiz/${item.date}`}
+                          className={classes.subjectContent}
+                        >
+                          {item.subject}
+                        </Link>
+                      ),
+                      className: classes.subject,
+                    },
+                    {
+                      id: 'author',
+                      label: <Trans>Autor</Trans>,
+                      render: (item) => (
                         <>
-                          {' '}
-                          ({users[item.user_id].name}{' '}
-                          {users[item.user_id].surname})
+                          {users[item.user_id] ? (
+                            <>
+                              {users[item.user_id].name}{' '}
+                              {users[item.user_id].surname}
+                            </>
+                          ) : (
+                            '-'
+                          )}
                         </>
-                      )}
-                    </Link>
-                  )}
+                      ),
+                      className: classes.author,
+                    },
+                    {
+                      id: 'date',
+                      label: <Trans>Data</Trans>,
+                      render: (item) => (
+                        <>{covertToLongDate(item.date, language)}</>
+                      ),
+                      className: classes.date,
+                    },
+                  ]}
                   onChange={(newPage) => {
                     history.push(`/special-quizzes/${newPage}`);
                   }}

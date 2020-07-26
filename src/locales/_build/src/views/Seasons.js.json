@@ -15,11 +15,19 @@
       ]
     ]
   },
+  "Temporada": {
+    "origin": [
+      [
+        "src/views/Seasons.js",
+        60
+      ]
+    ]
+  },
   "Temporada {0}": {
     "origin": [
       [
         "src/views/Seasons.js",
-        59
+        63
       ]
     ]
   },
@@ -27,7 +35,7 @@
     "origin": [
       [
         "src/views/Seasons.js",
-        72
+        78
       ]
     ]
   }

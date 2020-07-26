@@ -7,7 +7,7 @@ import PageHeader from 'components/PageHeader';
 import Error from 'components/Error';
 import EmptyState from 'components/EmptyState';
 import Loading from 'components/Loading';
-import Paginator from 'components/Paginator';
+import PaginatedTable from 'components/PaginatedTable';
 import NoMatch from './NoMatch';
 
 const Seasons = () => {
@@ -50,15 +50,21 @@ const Seasons = () => {
             <>
               {seasonsList && seasonsList.length > 0 ? (
                 <>
-                  <Paginator
+                  <PaginatedTable
                     array={seasonsList}
                     initialPage={page ? page : 1}
-                    itemClassName="panel-block"
-                    render={(item) => (
-                      <Link to={`/ranking/${item.season}`}>
-                        <Trans>Temporada {item.season}</Trans>
-                      </Link>
-                    )}
+                    hideHeader
+                    columns={[
+                      {
+                        id: 'season',
+                        label: <Trans>Temporada</Trans>,
+                        render: (item) => (
+                          <Link to={`/ranking/${item.season}`}>
+                            <Trans>Temporada {item.season}</Trans>
+                          </Link>
+                        ),
+                      },
+                    ]}
                     onChange={(newPage) => {
                       history.push(`/seasons/${newPage}`);
                     }}

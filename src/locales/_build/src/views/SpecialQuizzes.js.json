@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/SpecialQuizzes.js",
-        60
+        62
       ]
     ]
   },
@@ -11,7 +11,31 @@
     "origin": [
       [
         "src/views/SpecialQuizzes.js",
-        71
+        73
+      ]
+    ]
+  },
+  "Tema": {
+    "origin": [
+      [
+        "src/views/SpecialQuizzes.js",
+        83
+      ]
+    ]
+  },
+  "Autor": {
+    "origin": [
+      [
+        "src/views/SpecialQuizzes.js",
+        96
+      ]
+    ]
+  },
+  "Data": {
+    "origin": [
+      [
+        "src/views/SpecialQuizzes.js",
+        113
       ]
     ]
   },
@@ -19,7 +43,7 @@
     "origin": [
       [
         "src/views/SpecialQuizzes.js",
-        100
+        129
       ]
     ]
   }

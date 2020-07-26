@@ -2,16 +2,16 @@
   "Anterior": {
     "origin": [
       [
-        "src/components/Paginator.js",
-        54
+        "src/components/PaginatedTable.js",
+        83
       ]
     ]
   },
   "Próxima": {
     "origin": [
       [
-        "src/components/Paginator.js",
-        63
+        "src/components/PaginatedTable.js",
+        92
       ]
     ]
   }
