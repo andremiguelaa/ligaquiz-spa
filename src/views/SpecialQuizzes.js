@@ -30,7 +30,7 @@ const SpecialQuizzes = () => {
   ] = useStateValue();
 
   useEffect(() => {
-    ApiRequest.get(`special-quizzes`)
+    ApiRequest.get(`special-quizzes?past`)
       .then(({ data }) => {
         setQuizzes(data.reverse());
         setLoading(false);

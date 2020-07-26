@@ -27,7 +27,7 @@ const Quizzes = () => {
   ] = useStateValue();
 
   useEffect(() => {
-    ApiRequest.get(`quizzes`)
+    ApiRequest.get(`quizzes?past`)
       .then(({ data }) => {
         setQuizzes(data.reverse());
         setLoading(false);
