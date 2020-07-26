@@ -64,18 +64,24 @@ const Quiz = () => {
       <div className="section">
         {data.quiz.questions.map((question, index) => (
           <div key={question.id} className={classes.question}>
-            <div className={classes.questionText}>
-              <Markdown content={question.content} />
-            </div>
-            <div>
-              <strong>Resposta correcta:</strong> {question.answer}
-            </div>
-            <div>
-              <strong>
-                <Trans>Percentagem de acerto</Trans>:
-              </strong>{' '}
-              -
-            </div>
+            {question.content && (
+              <div className={classes.questionText}>
+                <Markdown content={question.content} />
+              </div>
+            )}
+            {question.answer && (
+              <div>
+                <strong>Resposta correcta:</strong> {question.answer}
+              </div>
+            )}
+            {question.percentage && (
+              <div>
+                <strong>
+                  <Trans>Percentagem de acerto</Trans>:
+                </strong>{' '}
+                {Math.round(question.percentage)}%
+              </div>
+            )}
             {question.media_id && (
               <div className={classes.media}>
                 {renderMedia(
