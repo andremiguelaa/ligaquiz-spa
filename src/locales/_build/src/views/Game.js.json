@@ -1,0 +1,62 @@
+{
+  "Imagem da pergunta {index}": {
+    "origin": [
+      [
+        "src/views/Game.js",
+        25
+      ]
+    ]
+  },
+  "Erro de servidor. Tenta mais tarde.": {
+    "origin": [
+      [
+        "src/views/Game.js",
+        86
+      ]
+    ]
+  },
+  "Percentagem de acerto": {
+    "origin": [
+      [
+        "src/views/Game.js",
+        153
+      ]
+    ]
+  },
+  "Correcta": {
+    "origin": [
+      [
+        "src/views/Game.js",
+        185
+      ],
+      [
+        "src/views/Game.js",
+        223
+      ]
+    ]
+  },
+  "Errada": {
+    "origin": [
+      [
+        "src/views/Game.js",
+        187
+      ],
+      [
+        "src/views/Game.js",
+        225
+      ]
+    ]
+  },
+  "Falta": {
+    "origin": [
+      [
+        "src/views/Game.js",
+        193
+      ],
+      [
+        "src/views/Game.js",
+        231
+      ]
+    ]
+  }
+}

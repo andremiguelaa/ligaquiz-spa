@@ -91,19 +91,19 @@ msgid "Arquivo"
 msgstr "Archive"
 
 #: src/partials/Header.js:205
-#: src/routes.js:88
+#: src/routes.js:89
 #: src/views/Quizzes.js:57
 msgid "Arquivo de quizzes"
 msgstr "Quizzes archive"
 
 #: src/partials/Header.js:218
-#: src/routes.js:93
+#: src/routes.js:94
 #: src/views/SpecialQuizzes.js:73
 msgid "Arquivo de quizzes especiais"
 msgstr "Special quizzes archive"
 
 #: src/partials/Header.js:201
-#: src/routes.js:83
+#: src/routes.js:84
 #: src/views/Seasons.js:48
 msgid "Arquivo de temporadas"
 msgstr "Seasons archive"
@@ -147,7 +147,7 @@ msgid "Cancelar"
 msgstr "Cancel"
 
 #: src/partials/Header.js:70
-#: src/routes.js:78
+#: src/routes.js:79
 #: src/views/Ranking.js:111
 msgid "Classificação"
 msgstr "Ranking"
@@ -163,7 +163,7 @@ msgid "Confirmação da palavra-passe"
 msgstr "Password confirmation"
 
 #: src/partials/Header.js:192
-#: src/routes.js:61
+#: src/routes.js:62
 #: src/views/Account.js:60
 msgid "Conta"
 msgstr "Account"
@@ -171,6 +171,11 @@ msgstr "Account"
 #: src/views/admin/notifications/modals/FormModal.js:106
 msgid "Conteúdo"
 msgstr "Content"
+
+#: src/views/Game.js:185
+#: src/views/Game.js:223
+msgid "Correcta"
+msgstr "Correct"
 
 #: src/views/Login.js:99
 msgid "Credenciais erradas."
@@ -241,7 +246,7 @@ msgid "Empates"
 msgstr "Draws"
 
 #: src/partials/Header.js:114
-#: src/routes.js:35
+#: src/routes.js:36
 #: src/views/Login.js:47
 #: src/views/Login.js:114
 msgid "Entrar"
@@ -251,8 +256,14 @@ msgstr "Login"
 msgid "Enviámos-te um e-mail, segue as instruções para definir uma nova palavra-passe."
 msgstr "We sent you an e-mail, follow its instructions to set a new password"
 
+#: src/views/Game.js:187
+#: src/views/Game.js:225
+msgid "Errada"
+msgstr "Wrong"
+
 #: src/utils/Auth.js:56
 #: src/views/Account/Avatar.js:103
+#: src/views/Game.js:86
 #: src/views/Login.js:101
 #: src/views/NationalRanking.js:138
 #: src/views/Quizzes.js:46
@@ -292,7 +303,7 @@ msgstr "This account is blocked."
 msgid "Esta página não existe."
 msgstr "This page does not exist"
 
-#: src/routes.js:67
+#: src/routes.js:68
 msgid "Estatísticas"
 msgstr "Statistics"
 
@@ -303,6 +314,11 @@ msgstr "Statistics from {0} {1}"
 #: src/views/Ranking/TableHeader.js:80
 msgid "F"
 msgstr "F"
+
+#: src/views/Game.js:193
+#: src/views/Game.js:231
+msgid "Falta"
+msgstr "Forfeit"
 
 #: src/views/Ranking/TableHeader.js:78
 msgid "Faltas"
@@ -334,6 +350,10 @@ msgstr "Save month events"
 #: src/views/admin/nationalRanking/utils/options.js:32
 msgid "HOT 100"
 msgstr "HOT 100"
+
+#: src/views/Game.js:25
+msgid "Imagem da pergunta {index}"
+msgstr "Question {index} image"
 
 #: src/views/Account/Avatar.js:66
 msgid "Imagem de perfil"
@@ -381,6 +401,10 @@ msgstr "Regular player"
 msgid "Jogadores"
 msgstr "Players"
 
+#: src/routes.js:99
+msgid "Jogo"
+msgstr "Game"
+
 #: src/views/Ranking/TableHeader.js:66
 msgid "Jogos"
 msgstr "Games"
@@ -399,7 +423,7 @@ msgid "Legenda"
 msgstr "Legend"
 
 #: src/App.js:42
-#: src/routes.js:30
+#: src/routes.js:31
 #: src/views/Home.js:8
 msgid "Liga Quiz"
 msgstr "Quiz League"
@@ -455,7 +479,7 @@ msgid "Notificação editada com sucesso."
 msgstr "Notification successfully edited."
 
 #: src/partials/Header.js:155
-#: src/routes.js:113
+#: src/routes.js:119
 #: src/views/admin/notifications/Notifications.js:41
 msgid "Notificações"
 msgstr "Notifications"
@@ -570,6 +594,10 @@ msgstr "Password changed successfully.<0/>Click <1>here</1> and use the new cred
 msgid "Para mais pormenores de como o ranking é calculado deve ser consultado este artigo:"
 msgstr "More details about ranking calculation can be found in this article (only in portuguese):"
 
+#: src/views/Game.js:153
+msgid "Percentagem de acerto"
+msgstr "Percentage of correct answers"
+
 #: src/views/Account.js:41
 msgid "Perfil actualizado com sucesso."
 msgstr "Profile successfully updated."
@@ -635,7 +663,7 @@ msgstr "Pts"
 msgid "Publicar ranking mensal"
 msgstr "Publish month ranking"
 
-#: src/routes.js:123
+#: src/routes.js:129
 #: src/views/NoMatch.js:10
 msgid "Página não encontrada"
 msgstr "Page not found"
@@ -649,7 +677,7 @@ msgid "RC"
 msgstr "CA"
 
 #: src/partials/Header.js:81
-#: src/routes.js:72
+#: src/routes.js:73
 #: src/views/NationalRanking.js:155
 #: src/views/NationalRanking.js:180
 msgid "Ranking Nacional"
@@ -659,15 +687,15 @@ msgstr "National Ranking"
 msgid "Ranking Nacional de Quiz"
 msgstr "Quiz National Ranking"
 
-#: src/routes.js:108
+#: src/routes.js:114
 msgid "Ranking Nacional | Jogadores"
 msgstr "National Ranking | Players"
 
-#: src/routes.js:103
+#: src/routes.js:109
 msgid "Ranking Nacional | Provas mensais"
 msgstr "National Ranking | Month events"
 
-#: src/routes.js:98
+#: src/routes.js:104
 msgid "Ranking Nacional | Ranking"
 msgstr "National Ranking | Ranking"
 
@@ -684,13 +712,13 @@ msgstr "Month ranking successfully published."
 msgid "Rankings mensais"
 msgstr "Month rankings"
 
-#: src/routes.js:40
+#: src/routes.js:41
 #: src/views/Login.js:119
 #: src/views/RecoverPassword.js:48
 msgid "Recuperar palavra-passe"
 msgstr "Recover password"
 
-#: src/routes.js:45
+#: src/routes.js:46
 #: src/views/ResetPassword.js:52
 msgid "Redefinir palavra-passe"
 msgstr "Reset password"
@@ -700,7 +728,7 @@ msgstr "Reset password"
 msgid "Registar"
 msgstr "Register"
 
-#: src/routes.js:50
+#: src/routes.js:51
 #: src/views/Register.js:50
 msgid "Registo"
 msgstr "Registration"
@@ -748,7 +776,7 @@ msgid "Resultado no Campeonato Nacional"
 msgstr "National Championship result"
 
 #: src/partials/Header.js:224
-#: src/routes.js:55
+#: src/routes.js:56
 msgid "Sair"
 msgstr "Logout"
 
@@ -843,7 +871,7 @@ msgid "Utilizador registado com sucesso.<0/>Clica <1>aqui</1> e usa as tuas cred
 msgstr "User registerd successfully.<0/>Click <1>here</1> and use your credentials."
 
 #: src/partials/Header.js:151
-#: src/routes.js:118
+#: src/routes.js:124
 #: src/views/admin/users/Users.js:96
 msgid "Utilizadores"
 msgstr "Users"

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 import { I18n } from '@lingui/react';
 import { t } from '@lingui/macro';
@@ -11,7 +11,6 @@ import ApiRequest from 'utils/ApiRequest';
 import PageHeader from 'components/PageHeader';
 import Error from 'components/Error';
 import Loading from 'components/Loading';
-import EmptyState from 'components/EmptyState';
 import Markdown from 'components/Markdown';
 import NoMatch from './NoMatch';
 
@@ -89,6 +88,10 @@ const Game = () => {
     );
   }
 
+  if (game && !game.quiz) {
+    return <NoMatch />;
+  }
+
   return (
     <>
       {loading || !users ? (
@@ -119,11 +122,6 @@ const Game = () => {
             subtitle={game.quiz && covertToLongDate(game.quiz.date, language)}
           />
           <section className="section">
-            {!game.quiz && (
-              <EmptyState>
-                <Trans>Quiz não disponível</Trans>
-              </EmptyState>
-            )}
             {game.quiz &&
               game.quiz.questions.map((question, index) => (
                 <div key={question.id} className={classes.question}>
@@ -195,7 +193,11 @@ const Game = () => {
                             <Trans>Falta</Trans>
                           )}
                         </td>
-                        <td className="has-text-centered">-</td>
+                        <td className="has-text-centered">
+                          {question.percentage
+                            ? `${Math.round(question.percentage)}%`
+                            : '-'}
+                        </td>
                         {!game.solo && (
                           <td
                             className={classnames(
