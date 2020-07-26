@@ -152,7 +152,7 @@ const Game = () => {
                           {users[user1].name} {users[user1].surname}
                         </th>
                         <th className="has-text-centered">
-                          <Trans>Percentagem</Trans>
+                          <Trans>Percentagem de acerto</Trans>
                         </th>
                         {!game.solo && (
                           <th className="has-text-centered">
