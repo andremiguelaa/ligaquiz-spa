@@ -97,7 +97,7 @@ export default [
   },
   {
     title: <Trans>Jogo</Trans>,
-    path: '/game/:date/:user1/:user2',
+    path: '/game/:date/:user1/:user2?',
     component: Game,
   },
   {

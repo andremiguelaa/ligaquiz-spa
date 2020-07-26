@@ -42,15 +42,21 @@ const Game = ({ round, game, users }) => (
           {game.done ? (
             <>
               {game.corrected ? (
-                <Link to={`/game/${round.date}/${game.user_id_1}`}>
-                  {game.user_id_1_game_points
-                    ? game.user_id_1_game_points
-                    : '-'}{' '}
-                  {Boolean(
-                    game.user_id_1_correct_answers &&
-                      game.user_id_1_game_points !== 'F'
-                  ) && `(${game.user_id_1_correct_answers})`}
-                </Link>
+                <>
+                  {game.hasOwnProperty('user_id_1_game_points') ? (
+                    <Link to={`/game/${round.date}/${game.user_id_1}`}>
+                      {game.user_id_1_game_points
+                        ? game.user_id_1_game_points
+                        : '-'}{' '}
+                      {Boolean(
+                        game.user_id_1_correct_answers &&
+                          game.user_id_1_game_points !== 'F'
+                      ) && `(${game.user_id_1_correct_answers})`}
+                    </Link>
+                  ) : (
+                    '-'
+                  )}
+                </>
               ) : (
                 <div>P</div>
               )}
