@@ -20,6 +20,7 @@ import Seasons from 'views/Seasons';
 import Quizzes from 'views/Quizzes';
 import SpecialQuizzes from 'views/SpecialQuizzes';
 import Game from 'views/Game';
+import Quiz from 'views/Quiz';
 
 import NotificationsAdmin from 'views/admin/notifications/Notifications';
 import UsersAdmin from 'views/admin/users/Users';
@@ -99,6 +100,11 @@ export default [
     title: <Trans>Jogo</Trans>,
     path: '/game/:date/:user1/:user2?',
     component: Game,
+  },
+  {
+    title: <Trans>Quiz</Trans>,
+    path: '/quiz/:date',
+    component: Quiz,
   },
   {
     title: <Trans>Ranking Nacional | Ranking</Trans>,

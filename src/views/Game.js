@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
-import { I18n } from '@lingui/react';
-import { t } from '@lingui/macro';
 import classnames from 'classnames';
 
 import { useStateValue } from 'state/State';
 import { covertToLongDate } from 'utils/formatDate';
+import renderMedia from 'utils/renderMedia';
 import ApiRequest from 'utils/ApiRequest';
 import PageHeader from 'components/PageHeader';
 import Error from 'components/Error';
@@ -15,25 +14,6 @@ import Markdown from 'components/Markdown';
 import NoMatch from './NoMatch';
 
 import classes from './Game/Game.module.scss';
-
-const renderMedia = (type, url, index) => {
-  switch (type) {
-    case 'image':
-      return (
-        <I18n>
-          {({ i18n }) => (
-            <img alt={i18n._(t`Imagem da pergunta ${index}`)} src={url} />
-          )}
-        </I18n>
-      );
-    case 'audio':
-      return <audio controls preload="none" src={url} />;
-    case 'video':
-      return <video controls preload="none" src={url} />;
-    default:
-      return '';
-  }
-};
 
 const Game = () => {
   const [
