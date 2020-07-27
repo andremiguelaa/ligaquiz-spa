@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/routes.js",
-        31
+        32
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/routes.js",
-        36
+        37
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/routes.js",
-        41
+        42
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/routes.js",
-        46
+        47
       ]
     ]
   },
@@ -35,7 +35,7 @@
     "origin": [
       [
         "src/routes.js",
-        51
+        52
       ]
     ]
   },
@@ -43,7 +43,7 @@
     "origin": [
       [
         "src/routes.js",
-        56
+        57
       ]
     ]
   },
@@ -51,7 +51,7 @@
     "origin": [
       [
         "src/routes.js",
-        62
+        63
       ]
     ]
   },
@@ -59,7 +59,7 @@
     "origin": [
       [
         "src/routes.js",
-        68
+        69
       ]
     ]
   },
@@ -67,7 +67,7 @@
     "origin": [
       [
         "src/routes.js",
-        73
+        74
       ]
     ]
   },
@@ -75,7 +75,7 @@
     "origin": [
       [
         "src/routes.js",
-        79
+        80
       ]
     ]
   },
@@ -83,7 +83,7 @@
     "origin": [
       [
         "src/routes.js",
-        84
+        85
       ]
     ]
   },
@@ -91,7 +91,7 @@
     "origin": [
       [
         "src/routes.js",
-        89
+        90
       ]
     ]
   },
@@ -99,7 +99,7 @@
     "origin": [
       [
         "src/routes.js",
-        94
+        95
       ]
     ]
   },
@@ -107,7 +107,15 @@
     "origin": [
       [
         "src/routes.js",
-        99
+        100
+      ]
+    ]
+  },
+  "Quiz": {
+    "origin": [
+      [
+        "src/routes.js",
+        105
       ]
     ]
   },
@@ -115,7 +123,7 @@
     "origin": [
       [
         "src/routes.js",
-        104
+        110
       ]
     ]
   },
@@ -123,7 +131,7 @@
     "origin": [
       [
         "src/routes.js",
-        109
+        115
       ]
     ]
   },
@@ -131,7 +139,7 @@
     "origin": [
       [
         "src/routes.js",
-        114
+        120
       ]
     ]
   },
@@ -139,7 +147,7 @@
     "origin": [
       [
         "src/routes.js",
-        119
+        125
       ]
     ]
   },
@@ -147,7 +155,7 @@
     "origin": [
       [
         "src/routes.js",
-        124
+        130
       ]
     ]
   },
@@ -155,7 +163,7 @@
     "origin": [
       [
         "src/routes.js",
-        129
+        135
       ]
     ]
   }

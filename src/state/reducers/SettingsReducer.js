@@ -1,6 +1,5 @@
 import Cookies from 'js-cookie';
-
-import { catalogs } from 'App';
+import { catalogs } from 'utils/catalogs';
 
 const userLanguage = navigator.language.substring(0, 2);
 const defaultLanguage = Object.keys(catalogs).includes(userLanguage)

@@ -11,12 +11,18 @@ import Error from 'components/Error';
 import PageHeader from 'components/PageHeader';
 import { individualQuizTypeOptions } from 'views/admin/nationalRanking/utils/options';
 import { quizTypeAbbr } from 'views/NationalRanking/consts';
+import { genreTranslation } from './Statistics/utils';
 
 import classes from './Statistics/Statistics.module.scss';
 
 const Statistics = () => {
   const { id: userId } = useParams();
-  const [{ user: authUser }] = useStateValue();
+  const [
+    {
+      user: authUser,
+      settings: { language },
+    },
+  ] = useStateValue();
   const [user, setUser] = useState();
   const [error, setError] = useState(false);
   const [individualQuizzes, setIndividualQuizzes] = useState();
@@ -136,7 +142,7 @@ const Statistics = () => {
       </section>
       <Radar
         data={{
-          labels: genres.map((genre) => genre.slug),
+          labels: genres.map((genre) => genreTranslation(genre.slug, language)),
           datasets: [
             {
               data: chartSeries,

@@ -4,18 +4,15 @@ import { I18nProvider, I18n } from '@lingui/react';
 import { t } from '@lingui/macro';
 import { ToastContainer } from 'react-toastify';
 
-import catalogPt from 'locales/pt/messages.js';
-import catalogEn from 'locales/en/messages.js';
 import 'styles/App.scss';
 import routes from 'routes';
 import { useStateValue } from 'state/State';
+import { catalogs } from 'utils/catalogs';
 import Auth from 'utils/Auth';
 import RouteWithTitle from 'utils/RouteWithTitle';
 import Header from 'partials/Header';
 import Notifications from 'partials/Notifications';
 import Blocked from 'components/Blocked';
-
-export const catalogs = { pt: catalogPt, en: catalogEn };
 
 const App = () => {
   const [

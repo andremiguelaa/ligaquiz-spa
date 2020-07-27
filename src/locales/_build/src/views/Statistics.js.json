@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        47
+        96
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        61
+        110
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        65
+        114
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        92
+        170
       ]
     ]
   },
@@ -35,7 +35,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        98
+        176
       ]
     ]
   },
@@ -43,7 +43,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        101
+        179
       ]
     ]
   },
@@ -51,7 +51,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        104
+        182
       ]
     ]
   },
@@ -59,7 +59,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        108
+        186
       ]
     ]
   },
@@ -67,7 +67,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        111
+        189
       ]
     ]
   }

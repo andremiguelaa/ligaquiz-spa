@@ -6,8 +6,7 @@ import classames from 'classnames';
 import Cookies from 'js-cookie';
 import moment from 'moment';
 
-import { catalogs } from 'App';
-
+import { catalogs } from 'utils/catalogs';
 import { useStateValue } from 'state/State';
 import logo from 'img/logo.png';
 import classes from './Header.module.scss';

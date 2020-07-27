@@ -1,17 +1,9 @@
 {
-  "Imagem da pergunta {index}": {
-    "origin": [
-      [
-        "src/views/Game.js",
-        25
-      ]
-    ]
-  },
   "Erro de servidor. Tenta mais tarde.": {
     "origin": [
       [
         "src/views/Game.js",
-        86
+        66
       ]
     ]
   },
@@ -19,7 +11,7 @@
     "origin": [
       [
         "src/views/Game.js",
-        153
+        133
       ]
     ]
   },
@@ -27,11 +19,11 @@
     "origin": [
       [
         "src/views/Game.js",
-        185
+        165
       ],
       [
         "src/views/Game.js",
-        223
+        203
       ]
     ]
   },
@@ -39,11 +31,11 @@
     "origin": [
       [
         "src/views/Game.js",
-        187
+        167
       ],
       [
         "src/views/Game.js",
-        225
+        205
       ]
     ]
   },
@@ -51,11 +43,11 @@
     "origin": [
       [
         "src/views/Game.js",
-        193
+        173
       ],
       [
         "src/views/Game.js",
-        231
+        211
       ]
     ]
   }
