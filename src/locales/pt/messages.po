@@ -117,7 +117,7 @@ msgid "Artesanato"
 msgstr "Artesanato"
 
 #: src/partials/Header.js:75
-#: src/views/Statistics.js:121
+#: src/views/Statistics.js:123
 msgid "As minhas estatísticas"
 msgstr "As minhas estatísticas"
 
@@ -146,7 +146,7 @@ msgstr "Biologia"
 msgid "Bloqueado"
 msgstr "Bloqueado"
 
-#: src/views/Statistics.js:186
+#: src/views/Statistics.js:202
 msgid "C"
 msgstr "C"
 
@@ -338,7 +338,7 @@ msgstr "Errada"
 #: src/views/ResetPassword.js:125
 #: src/views/Seasons.js:37
 #: src/views/SpecialQuizzes.js:62
-#: src/views/Statistics.js:103
+#: src/views/Statistics.js:105
 #: src/views/admin/nationalRanking/Events.js:95
 #: src/views/admin/nationalRanking/Players/Form.js:114
 #: src/views/admin/nationalRanking/Players.js:77
@@ -376,7 +376,7 @@ msgstr "Esta página não existe."
 msgid "Estatísticas"
 msgstr "Estatísticas"
 
-#: src/views/Statistics.js:117
+#: src/views/Statistics.js:119
 msgid "Estatísticas de {0} {1}"
 msgstr "Estatísticas de {0} {1}"
 
@@ -526,6 +526,7 @@ msgstr "Legenda"
 #: src/App.js:39
 #: src/routes.js:32
 #: src/views/Home.js:8
+#: src/views/Statistics.js:149
 msgid "Liga Quiz"
 msgstr "Liga Quiz"
 
@@ -561,7 +562,7 @@ msgstr "Máximo 200 KB"
 msgid "Média"
 msgstr "Média"
 
-#: src/views/Statistics.js:236
+#: src/views/Statistics.js:271
 #: src/views/admin/nationalRanking/Events/Form.js:165
 #: src/views/admin/nationalRanking/Events/Form.js:172
 #: src/views/admin/nationalRanking/Events/List.js:31
@@ -721,6 +722,7 @@ msgstr "Para mais pormenores de como o ranking é calculado deve ser consultado 
 
 #: src/views/Game.js:133
 #: src/views/Quiz.js:99
+#: src/views/Statistics.js:224
 msgid "Percentagem de acerto"
 msgstr "Percentagem de acerto"
 
@@ -737,7 +739,7 @@ msgid "Política Actual"
 msgstr "Política Actual"
 
 #: src/views/NationalRanking.js:216
-#: src/views/Statistics.js:243
+#: src/views/Statistics.js:278
 msgid "Pontos"
 msgstr "Pontos"
 
@@ -757,11 +759,11 @@ msgstr "Pontos na liga"
 msgid "Produtos e Marcas"
 msgstr "Produtos e Marcas"
 
-#: src/views/Statistics.js:233
+#: src/views/Statistics.js:268
 msgid "Prova"
 msgstr "Prova"
 
-#: src/views/Statistics.js:227
+#: src/views/Statistics.js:262
 msgid "Provas individuais"
 msgstr "Provas individuais"
 
@@ -788,7 +790,7 @@ msgid "Próxima"
 msgstr "Próxima"
 
 #: src/views/Ranking/TableHeader.js:20
-#: src/views/Statistics.js:246
+#: src/views/Statistics.js:281
 msgid "Pts"
 msgstr "Pts"
 
@@ -818,9 +820,9 @@ msgstr "Quizzes"
 msgid "Química"
 msgstr "Química"
 
-#: src/views/Statistics.js:189
-msgid "R"
-msgstr "R"
+#: src/views/Statistics.js:214
+#~ msgid "R"
+#~ msgstr "R"
 
 #: src/views/Ranking/TableHeader.js:128
 msgid "RC"
@@ -906,10 +908,11 @@ msgid "Resposta dada"
 msgstr "Resposta dada"
 
 #: src/views/Ranking/TableHeader.js:126
+#: src/views/Statistics.js:200
 msgid "Respostas correctas"
 msgstr "Respostas correctas"
 
-#: src/views/Statistics.js:239
+#: src/views/Statistics.js:274
 msgid "Resultado"
 msgstr "Resultado"
 
@@ -987,6 +990,10 @@ msgstr "Submeter"
 msgid "Subscrição"
 msgstr "Subscrição"
 
+#: src/views/Statistics.js:214
+msgid "T"
+msgstr "T"
+
 #: src/views/Statistics/getGenreTranslation.js:23
 msgid "Teatro"
 msgstr "Teatro"
@@ -1000,7 +1007,7 @@ msgid "Televisão"
 msgstr "Televisão"
 
 #: src/views/SpecialQuizzes.js:83
-#: src/views/Statistics.js:183
+#: src/views/Statistics.js:193
 msgid "Tema"
 msgstr "Tema"
 
@@ -1044,6 +1051,10 @@ msgstr "Tipo de notificação"
 #: src/views/admin/nationalRanking/Players/Form.js:254
 msgid "Todos os dados deste formulário serão descartados.<0/>Tens a certeza que queres voltar à listagem?"
 msgstr "Todos os dados deste formulário serão descartados.<0/>Tens a certeza que queres voltar à listagem?"
+
+#: src/views/Statistics.js:212
+msgid "Total de respostas"
+msgstr "Total de respostas"
 
 #: src/views/Statistics/getGenreTranslation.js:42
 msgid "Tradições"

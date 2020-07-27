@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        103
+        105
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        117
+        119
       ]
     ]
   },
@@ -19,7 +19,15 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        121
+        123
+      ]
+    ]
+  },
+  "Liga Quiz": {
+    "origin": [
+      [
+        "src/views/Statistics.js",
+        149
       ]
     ]
   },
@@ -27,7 +35,15 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        183
+        193
+      ]
+    ]
+  },
+  "Respostas correctas": {
+    "origin": [
+      [
+        "src/views/Statistics.js",
+        200
       ]
     ]
   },
@@ -35,15 +51,31 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        186
+        202
       ]
     ]
   },
-  "R": {
+  "Total de respostas": {
     "origin": [
       [
         "src/views/Statistics.js",
-        189
+        212
+      ]
+    ]
+  },
+  "T": {
+    "origin": [
+      [
+        "src/views/Statistics.js",
+        214
+      ]
+    ]
+  },
+  "Percentagem de acerto": {
+    "origin": [
+      [
+        "src/views/Statistics.js",
+        224
       ]
     ]
   },
@@ -51,7 +83,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        227
+        262
       ]
     ]
   },
@@ -59,7 +91,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        233
+        268
       ]
     ]
   },
@@ -67,7 +99,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        236
+        271
       ]
     ]
   },
@@ -75,7 +107,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        239
+        274
       ]
     ]
   },
@@ -83,7 +115,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        243
+        278
       ]
     ]
   },
@@ -91,7 +123,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        246
+        281
       ]
     ]
   }

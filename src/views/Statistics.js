@@ -1,6 +1,8 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
+import { I18n } from '@lingui/react';
+import { t } from '@lingui/macro';
 import classames from 'classnames';
 import { Radar } from 'react-chartjs-2';
 
@@ -105,7 +107,7 @@ const Statistics = () => {
     );
   }
 
-  if (!user || !genres) {
+  if (!user || !genres || !statistics) {
     return <Loading />;
   }
 
@@ -142,91 +144,124 @@ const Statistics = () => {
           )}
         </div>
       </section>
-      <Radar
-        data={{
-          labels: genres.map((genre) =>
-            getGenreTranslation(genre.slug, language)
-          ),
-          datasets: [
-            {
-              data: chartSeries,
-              backgroundColor: 'hsla(204, 86%, 53%, 0.3)',
-              borderColor: '#2094E7',
-              pointRadius: 0,
-              tension: 0.2,
-            },
-          ],
-        }}
-        options={{
-          scale: {
-            ticks: {
-              beginAtZero: true,
-              max: 100,
-              display: false,
-            },
-            pointLabels: {
-              fontSize: 12,
-            },
-          },
-          legend: {
-            display: false,
-          },
-        }}
-      />
-      {statistics && (
-        <>
-          <section className="section content">
-            <table className="table">
-              <thead>
+      <section className="section content">
+        <h1 className="has-text-weight-bold is-size-4">
+          <Trans>Liga Quiz</Trans>
+        </h1>
+        <div className={classes.chart}>
+          <Radar
+            data={{
+              labels: genres.map((genre) =>
+                getGenreTranslation(genre.slug, language)
+              ),
+              datasets: [
+                {
+                  data: chartSeries,
+                  backgroundColor: 'hsla(204, 86%, 53%, 0.3)',
+                  borderColor: '#2094E7',
+                  pointRadius: 0,
+                  tension: 0.2,
+                },
+              ],
+            }}
+            options={{
+              scale: {
+                ticks: {
+                  beginAtZero: true,
+                  max: 100,
+                  display: false,
+                },
+                pointLabels: {
+                  fontSize: 12,
+                },
+              },
+              legend: {
+                display: false,
+              },
+            }}
+          />
+        </div>
+        <table
+          className={classames(
+            'table is-fullwidth is-hoverable is-striped',
+            classes.genresTable
+          )}
+        >
+          <thead>
+            <tr>
+              <th>
+                <Trans>Tema</Trans>
+              </th>
+              <th>
+                <I18n>
+                  {({ i18n }) => (
+                    <span
+                      className="icon has-tooltip-bottom"
+                      data-tooltip={i18n._(t`Respostas correctas`)}
+                    >
+                      <Trans>C</Trans>
+                    </span>
+                  )}
+                </I18n>
+              </th>
+              <th>
+                <I18n>
+                  {({ i18n }) => (
+                    <span
+                      className="icon has-tooltip-bottom"
+                      data-tooltip={i18n._(t`Total de respostas`)}
+                    >
+                      <Trans>T</Trans>
+                    </span>
+                  )}
+                </I18n>
+              </th>
+              <th>
+                <I18n>
+                  {({ i18n }) => (
+                    <span
+                      className="icon has-tooltip-bottom has-tooltip-left"
+                      data-tooltip={i18n._(t`Percentagem de acerto`)}
+                    >
+                      %
+                    </span>
+                  )}
+                </I18n>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {statistics.map((genre) => (
+              <Fragment key={genre.id}>
                 <tr>
-                  <th>
-                    <Trans>Tema</Trans>
-                  </th>
-                  <th>
-                    <Trans>C</Trans>
-                  </th>
-                  <th>
-                    <Trans>R</Trans>
-                  </th>
-                  <th>%</th>
+                  <th>{getGenreTranslation(genre.slug, language)}</th>
+                  <td>{genre.correct}</td>
+                  <td>{genre.total}</td>
+                  <td>{Math.round(genre.percentage)}%</td>
                 </tr>
-              </thead>
-              <tbody>
-                {statistics.map((genre) => (
-                  <Fragment key={genre.id}>
-                    <tr>
-                      <th>{getGenreTranslation(genre.slug, language)}</th>
-                      <td>{genre.correct}</td>
-                      <td>{genre.total}</td>
-                      <td>{Math.round(genre.percentage)}</td>
-                    </tr>
-                    {genre.subgenres.length > 1 && (
-                      <>
-                        {genre.subgenres.map((subgenre) => (
-                          <tr key={subgenre.id}>
-                            <th>
-                              {getGenreTranslation(subgenre.slug, language)}
-                            </th>
-                            <td>{subgenre.correct}</td>
-                            <td>{subgenre.total}</td>
-                            <td>{Math.round(subgenre.percentage)}</td>
-                          </tr>
-                        ))}
-                      </>
-                    )}
-                  </Fragment>
-                ))}
-              </tbody>
-            </table>
-          </section>
-        </>
-      )}
+                {genre.subgenres.length > 1 && (
+                  <>
+                    {genre.subgenres.map((subgenre) => (
+                      <tr key={subgenre.id} className={classes.subgenre}>
+                        <th>{getGenreTranslation(subgenre.slug, language)}</th>
+                        <td>{subgenre.correct}</td>
+                        <td>{subgenre.total}</td>
+                        <td>{Math.round(subgenre.percentage)}%</td>
+                      </tr>
+                    ))}
+                  </>
+                )}
+              </Fragment>
+            ))}
+          </tbody>
+        </table>
+      </section>
       {individualQuizzes && individualQuizzes.length && (
         <section className="section content">
           <h1 className="has-text-weight-bold is-size-4">
             <Trans>Provas individuais</Trans>
           </h1>
-          <table className="table">
+          <table className="table is-fullwidth is-hoverable is-striped">
             <thead>
               <tr>
                 <th>
@@ -259,7 +294,7 @@ const Statistics = () => {
                   <tr
                     key={`${individualQuiz.individual_quiz_type}-${individualQuiz.month}`}
                   >
-                    <td>
+                    <th>
                       <span className="is-hidden-mobile">
                         {individualQuizTypeOptions(
                           individualQuiz.individual_quiz_type
@@ -268,7 +303,7 @@ const Statistics = () => {
                       <abbr className="is-hidden-tablet">
                         {quizTypeAbbr[individualQuiz.individual_quiz_type].abbr}
                       </abbr>
-                    </td>
+                    </th>
                     <td>{individualQuiz.month}</td>
                     <td>{playerResult.result}</td>
                     <td>{Math.round(playerResult.score)}</td>
