@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 import classames from 'classnames';
+import { Radar } from 'react-chartjs-2';
 
 import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
@@ -19,10 +20,23 @@ const Statistics = () => {
   const [user, setUser] = useState();
   const [error, setError] = useState(false);
   const [individualQuizzes, setIndividualQuizzes] = useState();
+  const [genres, setGenres] = useState();
+  const [statistics, setStatistics] = useState();
+  const [chartSeries, setChartSeries] = useState();
+
+  useEffect(() => {
+    ApiRequest.get(`genres`)
+      .then(({ data }) => {
+        setGenres(data);
+      })
+      .catch(() => {
+        setError(true);
+      });
+  }, []);
 
   useEffect(() => {
     setIndividualQuizzes();
-    ApiRequest.get(`users?id=${userId || authUser.id}`)
+    ApiRequest.get(`users?id[]=${userId || authUser.id}&statistics=true`)
       .then(({ data }) => {
         setUser(data[0]);
       })
@@ -41,6 +55,40 @@ const Statistics = () => {
     }
   }, [user]);
 
+  useEffect(() => {
+    if (user && genres) {
+      const computedStatistics = genres.map((genre) => {
+        let genreStatistics = {
+          id: genre.id,
+          total: 0,
+          correct: 0,
+          percentage: 0,
+          subgenres: [],
+        };
+        genre.subgenres.forEach((subgenre) => {
+          genreStatistics.total += user.statistics[subgenre.id].total;
+          genreStatistics.correct += user.statistics[subgenre.id].correct;
+          genreStatistics.subgenres.push({
+            id: subgenre.id,
+            total: user.statistics[subgenre.id].total,
+            correct: user.statistics[subgenre.id].correct,
+            percentage:
+              (user.statistics[subgenre.id].correct /
+                user.statistics[subgenre.id].total) *
+              100,
+          });
+        });
+        genreStatistics.percentage =
+          (genreStatistics.correct / genreStatistics.total) * 100;
+        return genreStatistics;
+      });
+      setStatistics(computedStatistics);
+      setChartSeries(
+        computedStatistics.map((genre) => Math.round(genre.percentage))
+      );
+    }
+  }, [user, genres]);
+
   if (error) {
     return (
       <Error>
@@ -49,7 +97,7 @@ const Statistics = () => {
     );
   }
 
-  if (!user) {
+  if (!user || !genres) {
     return <Loading />;
   }
 
@@ -86,6 +134,35 @@ const Statistics = () => {
           )}
         </div>
       </section>
+      <Radar
+        data={{
+          labels: genres.map((genre) => genre.slug),
+          datasets: [
+            {
+              data: chartSeries,
+              backgroundColor: 'hsla(204, 86%, 53%, 0.3)',
+              borderColor: '#3273dc',
+              pointRadius: 0,
+              tension: 0.2,
+            },
+          ],
+        }}
+        options={{
+          scale: {
+            ticks: {
+              beginAtZero: true,
+              max: 100,
+              display: false,
+            },
+            pointLabels: {
+              fontSize: 12,
+            },
+          },
+          legend: {
+            display: false,
+          },
+        }}
+      />
       {individualQuizzes && individualQuizzes.length && (
         <section className="section content">
           <h1 className="has-text-weight-bold is-size-4">
