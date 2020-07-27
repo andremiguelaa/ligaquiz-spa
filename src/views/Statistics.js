@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 import classames from 'classnames';
@@ -11,7 +11,7 @@ import Error from 'components/Error';
 import PageHeader from 'components/PageHeader';
 import { individualQuizTypeOptions } from 'views/admin/nationalRanking/utils/options';
 import { quizTypeAbbr } from 'views/NationalRanking/consts';
-import { genreTranslation } from './Statistics/utils';
+import { getGenreTranslation } from './Statistics/getGenreTranslation';
 
 import classes from './Statistics/Statistics.module.scss';
 
@@ -66,6 +66,7 @@ const Statistics = () => {
       const computedStatistics = genres.map((genre) => {
         let genreStatistics = {
           id: genre.id,
+          slug: genre.slug,
           total: 0,
           correct: 0,
           percentage: 0,
@@ -76,6 +77,7 @@ const Statistics = () => {
           genreStatistics.correct += user.statistics[subgenre.id].correct;
           genreStatistics.subgenres.push({
             id: subgenre.id,
+            slug: subgenre.slug,
             total: user.statistics[subgenre.id].total,
             correct: user.statistics[subgenre.id].correct,
             percentage:
@@ -142,12 +144,14 @@ const Statistics = () => {
       </section>
       <Radar
         data={{
-          labels: genres.map((genre) => genreTranslation(genre.slug, language)),
+          labels: genres.map((genre) =>
+            getGenreTranslation(genre.slug, language)
+          ),
           datasets: [
             {
               data: chartSeries,
               backgroundColor: 'hsla(204, 86%, 53%, 0.3)',
-              borderColor: '#3273dc',
+              borderColor: '#2094E7',
               pointRadius: 0,
               tension: 0.2,
             },
@@ -169,6 +173,54 @@ const Statistics = () => {
           },
         }}
       />
+      {statistics && (
+        <>
+          <section className="section content">
+            <table className="table">
+              <thead>
+                <tr>
+                  <th>
+                    <Trans>Tema</Trans>
+                  </th>
+                  <th>
+                    <Trans>C</Trans>
+                  </th>
+                  <th>
+                    <Trans>R</Trans>
+                  </th>
+                  <th>%</th>
+                </tr>
+              </thead>
+              <tbody>
+                {statistics.map((genre) => (
+                  <Fragment key={genre.id}>
+                    <tr>
+                      <th>{getGenreTranslation(genre.slug, language)}</th>
+                      <td>{genre.correct}</td>
+                      <td>{genre.total}</td>
+                      <td>{Math.round(genre.percentage)}</td>
+                    </tr>
+                    {genre.subgenres.length > 1 && (
+                      <>
+                        {genre.subgenres.map((subgenre) => (
+                          <tr key={subgenre.id}>
+                            <th>
+                              {getGenreTranslation(subgenre.slug, language)}
+                            </th>
+                            <td>{subgenre.correct}</td>
+                            <td>{subgenre.total}</td>
+                            <td>{Math.round(subgenre.percentage)}</td>
+                          </tr>
+                        ))}
+                      </>
+                    )}
+                  </Fragment>
+                ))}
+              </tbody>
+            </table>
+          </section>
+        </>
+      )}
       {individualQuizzes && individualQuizzes.length && (
         <section className="section content">
           <h1 className="has-text-weight-bold is-size-4">

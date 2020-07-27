@@ -4,7 +4,7 @@ import { catalogs } from 'utils/catalogs';
 const i18n = setupI18n();
 i18n.load(catalogs);
 
-export const genreTranslation = (slug, language) =>
+export const getGenreTranslation = (slug, language) =>
   ({
     culture: i18n.use(language)._('Cultura'),
     entertainment: i18n.use(language)._('Entretenimento'),
