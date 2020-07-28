@@ -27,6 +27,37 @@
 
 .chart {
   margin-bottom: 3rem;
+  .chartLegend {
+    list-style: none;
+    text-align: center;
+    margin: 2rem 0 0;
+    li {
+      display: block;
+      text-align: center;
+      &:before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        width: 20px;
+        height: 20px;
+        box-sizing: border-box;
+        border: 2px solid;
+        margin-right: 5px;
+      }
+      &.user1 {
+        &:before {
+          background-color: hsla(204, 86%, 53%, 0.3);
+          border-color: hsl(204, 86%, 53%);
+        }
+      }
+      &.user2 {
+        &:before {
+          background-color: hsla(171, 100%, 41%, 0.3);
+          border-color: hsl(171, 100%, 41%);
+        }
+      }
+    }
+  }
 }
 
 .genresTable {

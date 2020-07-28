@@ -9,12 +9,8 @@ import Register from 'views/Register';
 import Logout from 'views/Logout';
 import Account from 'views/Account';
 import Statistics from 'views/Statistics';
+import StatisticsComparison from 'views/StatisticsComparison';
 import NationalRanking from 'views/NationalRanking';
-
-import NationalRankingAdminRankings from 'views/admin/nationalRanking/Rankings';
-import NationalRankingAdminEvents from 'views/admin/nationalRanking/Events';
-import NationalRankingAdminPlayers from 'views/admin/nationalRanking/Players';
-
 import Ranking from 'views/Ranking';
 import Seasons from 'views/Seasons';
 import Quizzes from 'views/Quizzes';
@@ -22,6 +18,9 @@ import SpecialQuizzes from 'views/SpecialQuizzes';
 import Game from 'views/Game';
 import Quiz from 'views/Quiz';
 
+import NationalRankingAdminRankings from 'views/admin/nationalRanking/Rankings';
+import NationalRankingAdminEvents from 'views/admin/nationalRanking/Events';
+import NationalRankingAdminPlayers from 'views/admin/nationalRanking/Players';
 import NotificationsAdmin from 'views/admin/notifications/Notifications';
 import UsersAdmin from 'views/admin/users/Users';
 
@@ -69,6 +68,11 @@ export default [
     title: <Trans>Estatísticas</Trans>,
     path: '/statistics/:id?',
     component: Statistics,
+  },
+  {
+    title: <Trans>Comparação de Estatísticas</Trans>,
+    path: '/statistics-comparison/:id1/:id2',
+    component: StatisticsComparison,
   },
   {
     title: <Trans>Ranking Nacional</Trans>,

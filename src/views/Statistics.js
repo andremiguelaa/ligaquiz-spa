@@ -78,21 +78,22 @@ const Statistics = () => {
           subgenres: [],
         };
         genre.subgenres.forEach((subgenre) => {
-          genreStatistics.total += user.statistics[subgenre.id].total;
-          genreStatistics.correct += user.statistics[subgenre.id].correct;
+          genreStatistics.total += user.statistics[subgenre.id]?.total || 0;
+          genreStatistics.correct += user.statistics[subgenre.id]?.correct || 0;
           genreStatistics.subgenres.push({
             id: subgenre.id,
             slug: subgenre.slug,
-            total: user.statistics[subgenre.id].total,
-            correct: user.statistics[subgenre.id].correct,
+            total: user.statistics[subgenre.id]?.total || 0,
+            correct: user.statistics[subgenre.id]?.correct || 0,
             percentage:
-              (user.statistics[subgenre.id].correct /
-                user.statistics[subgenre.id].total) *
+              ((user.statistics[subgenre.id]?.correct || 0) /
+                (user.statistics[subgenre.id]?.total || 1)) *
               100,
           });
         });
         genreStatistics.percentage =
-          (genreStatistics.correct / genreStatistics.total) * 100;
+          ((genreStatistics?.correct || 0) / (genreStatistics?.total || 1)) *
+          100;
         return genreStatistics;
       });
       setStatistics(computedStatistics);
@@ -161,7 +162,7 @@ const Statistics = () => {
                 {
                   data: chartSeries,
                   backgroundColor: 'hsla(204, 86%, 53%, 0.3)',
-                  borderColor: '#2094E7',
+                  borderColor: 'hsl(204, 86%, 53%)',
                   pointRadius: 0,
                   tension: 0.2,
                 },
