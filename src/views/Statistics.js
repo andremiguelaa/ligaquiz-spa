@@ -43,7 +43,10 @@ const Statistics = () => {
   }, []);
 
   useEffect(() => {
+    setUser();
     setIndividualQuizzes();
+    setStatistics();
+    setChartSeries();
     ApiRequest.get(`users?id[]=${userId || authUser.id}&statistics=true`)
       .then(({ data }) => {
         setUser(data[0]);
