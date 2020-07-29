@@ -1,14 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { Fragment, useState, useEffect } from 'react';
+import { Link, useParams } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 import { Radar } from 'react-chartjs-2';
 
 import { useStateValue } from 'state/State';
+import { covertToLongDate } from 'utils/formatDate';
 import ApiRequest from 'utils/ApiRequest';
 import Loading from 'components/Loading';
 import Error from 'components/Error';
 import PageHeader from 'components/PageHeader';
 import { getGenreTranslation } from './Statistics/getGenreTranslation';
+import NoMatch from './NoMatch';
 
 import classes from './Statistics/Statistics.module.scss';
 
@@ -23,6 +25,8 @@ const Statistics = () => {
   const [error, setError] = useState(false);
   const [genres, setGenres] = useState();
   const [chartSeries, setChartSeries] = useState();
+  const [games, setGames] = useState();
+  const [gameStatistics, setGameStatistics] = useState();
 
   useEffect(() => {
     ApiRequest.get(`genres`)
@@ -37,9 +41,80 @@ const Statistics = () => {
   useEffect(() => {
     setUsers();
     setChartSeries();
+    setGames();
+    if (userId1 === userId2) {
+      return;
+    }
     ApiRequest.get(`users?id[]=${userId1}&id[]=${userId2}&statistics=true`)
       .then(({ data }) => {
         setUsers(data);
+        ApiRequest.get(`games?user=${userId1}&opponent=${userId2}`)
+          .then(({ data }) => {
+            const statistics = {
+              total: 0,
+              wins: 0,
+              draws: 0,
+              losses: 0,
+            };
+            setGames(
+              data.results.reverse().map((game) => {
+                const mappedGame = {
+                  id: game.id,
+                  corrected: game.corrected,
+                  done: game.done,
+                  date: game.round.date,
+                  originalUser1: game.user_id_1,
+                  originalUser2: game.user_id_2,
+                  user1_points:
+                    game.user_id_1 === parseInt(userId1)
+                      ? game.user_id_1_game_points
+                      : game.user_id_2_game_points,
+                  user1_answers:
+                    game.user_id_1 === parseInt(userId1)
+                      ? game.user_id_1_correct_answers
+                      : game.user_id_2_correct_answers,
+                  user2_points:
+                    game.user_id_2 === parseInt(userId2)
+                      ? game.user_id_2_game_points
+                      : game.user_id_1_game_points,
+                  user2_answers:
+                    game.user_id_2 === parseInt(userId2)
+                      ? game.user_id_2_correct_answers
+                      : game.user_id_1_correct_answers,
+                };
+                if (game.done && game.corrected) {
+                  statistics.total++;
+                  if (
+                    !(
+                      mappedGame.user1_points === 'F' &&
+                      mappedGame.user2_points === 'F'
+                    )
+                  ) {
+                    if (mappedGame.user1_points === 'F') {
+                      statistics.losses++;
+                    } else if (mappedGame.user2_points === 'F') {
+                      statistics.wins++;
+                    } else if (
+                      mappedGame.user1_points > mappedGame.user2_points
+                    ) {
+                      statistics.wins++;
+                    } else if (
+                      mappedGame.user1_points < mappedGame.user2_points
+                    ) {
+                      statistics.losses++;
+                    } else {
+                      statistics.draws++;
+                    }
+                  }
+                }
+                return mappedGame;
+              })
+            );
+            setGameStatistics(statistics);
+          })
+          .catch(() => {
+            setError(true);
+          });
       })
       .catch(() => {
         setError(true);
@@ -89,6 +164,10 @@ const Statistics = () => {
     }
   }, [users, genres]);
 
+  if (userId1 === userId2) {
+    return <NoMatch />;
+  }
+
   if (error) {
     return (
       <Error>
@@ -101,12 +180,10 @@ const Statistics = () => {
     return <Loading />;
   }
 
-  console.log(chartSeries);
-
   return (
     <>
       <PageHeader
-        title={<Trans>Comparação estatística</Trans>}
+        title={<Trans>Comparação de Estatísticas</Trans>}
         subtitle={
           <Trans>
             {users[0].name} {users[0].surname} e {users[1].name}{' '}
@@ -167,6 +244,104 @@ const Statistics = () => {
           </ul>
         </div>
       </section>
+      {games && gameStatistics ? (
+        <>
+          {games.length > 0 && (
+            <section className="section content">
+              <table className="table is-fullwidth is-hoverable is-striped">
+                <thead>
+                  <tr>
+                    <th>
+                      <Trans>Jogos</Trans>
+                    </th>
+                    <th>
+                      {users[0].name} {users[0].surname}
+                    </th>
+                    <th>
+                      <Trans>Empates</Trans>
+                    </th>
+                    <th>
+                      {users[1].name} {users[1].surname}
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>{gameStatistics.total}</td>
+                    <td>
+                      {gameStatistics.wins} (
+                      {Math.round(
+                        (gameStatistics.wins / gameStatistics.total) * 100
+                      )}
+                      %)
+                    </td>
+                    <td>
+                      {gameStatistics.draws} (
+                      {Math.round(
+                        (gameStatistics.draws / gameStatistics.total) * 100
+                      )}
+                      %)
+                    </td>
+                    <td>
+                      {gameStatistics.losses} (
+                      {Math.round(
+                        (gameStatistics.losses / gameStatistics.total) * 100
+                      )}
+                      %)
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table className="table is-fullwidth is-hoverable is-striped">
+                <thead>
+                  <tr>
+                    <th>
+                      <Trans>Data</Trans>
+                    </th>
+                    <th>
+                      <Trans>Resultado</Trans>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {games.map((game) => (
+                    <Fragment key={game.id}>
+                      {game.done && game.corrected && (
+                        <tr>
+                          <td>
+                            <Link to={`/quiz/${game.date}`}>
+                              {covertToLongDate(game.date, language)}
+                            </Link>
+                          </td>
+                          <td>
+                            <Link
+                              to={`/game/${game.date}/${game.originalUser1}/${game.originalUser2}`}
+                            >
+                              {users[0].name} {users[0].surname}{' '}
+                              {game.user1_points}
+                              {game.user1_points !== 'F' && (
+                                <> ({game.user1_answers})</>
+                              )}{' '}
+                              -{' '}
+                              {game.user2_points !== 'F' && (
+                                <>({game.user2_answers})</>
+                              )}{' '}
+                              {game.user2_points} {users[1].name}{' '}
+                              {users[1].surname}
+                            </Link>
+                          </td>
+                        </tr>
+                      )}
+                    </Fragment>
+                  ))}
+                </tbody>
+              </table>
+            </section>
+          )}
+        </>
+      ) : (
+        <Loading />
+      )}
     </>
   );
 };

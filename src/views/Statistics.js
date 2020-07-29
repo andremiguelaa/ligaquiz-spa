@@ -1,9 +1,9 @@
 import React, { Fragment, useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 import { I18n } from '@lingui/react';
 import { t } from '@lingui/macro';
-import classames from 'classnames';
+import classnames from 'classnames';
 import { Radar } from 'react-chartjs-2';
 
 import { useStateValue } from 'state/State';
@@ -139,7 +139,7 @@ const Statistics = () => {
               />
             </div>
           ) : (
-            <i className={classames('fa', 'fa-user', classes.icon)} />
+            <i className={classnames('fa', 'fa-user', classes.icon)} />
           )}
           {user.email && (
             <div className={classes.emailWrapper}>
@@ -185,8 +185,15 @@ const Statistics = () => {
             }}
           />
         </div>
+        {userId && userId !== authUser.id && (
+          <div className={classnames('has-text-centered', classes.compare)}>
+            <Link to={`/statistics-comparison/${userId}/${authUser.id}`}>
+              <Trans>Comparar comigo</Trans>
+            </Link>
+          </div>
+        )}
         <table
-          className={classames(
+          className={classnames(
             'table is-fullwidth is-hoverable is-striped',
             classes.genresTable
           )}

@@ -1,0 +1,66 @@
+{
+  "Erro de servidor. Tenta mais tarde.": {
+    "origin": [
+      [
+        "src/views/StatisticsComparison.js",
+        174
+      ]
+    ]
+  },
+  "Comparação de Estatísticas": {
+    "origin": [
+      [
+        "src/views/StatisticsComparison.js",
+        186
+      ]
+    ]
+  },
+  "{0} {1} e {2} {3}": {
+    "origin": [
+      [
+        "src/views/StatisticsComparison.js",
+        188
+      ]
+    ]
+  },
+  "Liga Quiz": {
+    "origin": [
+      [
+        "src/views/StatisticsComparison.js",
+        196
+      ]
+    ]
+  },
+  "Jogos": {
+    "origin": [
+      [
+        "src/views/StatisticsComparison.js",
+        255
+      ]
+    ]
+  },
+  "Empates": {
+    "origin": [
+      [
+        "src/views/StatisticsComparison.js",
+        261
+      ]
+    ]
+  },
+  "Data": {
+    "origin": [
+      [
+        "src/views/StatisticsComparison.js",
+        299
+      ]
+    ]
+  },
+  "Resultado": {
+    "origin": [
+      [
+        "src/views/StatisticsComparison.js",
+        302
+      ]
+    ]
+  }
+}

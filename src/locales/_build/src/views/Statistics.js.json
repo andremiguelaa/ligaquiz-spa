@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        105
+        109
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        119
+        123
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        123
+        127
       ]
     ]
   },
@@ -27,7 +27,15 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        149
+        153
+      ]
+    ]
+  },
+  "Comparar comigo": {
+    "origin": [
+      [
+        "src/views/Statistics.js",
+        191
       ]
     ]
   },
@@ -35,7 +43,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        193
+        204
       ]
     ]
   },
@@ -43,7 +51,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        200
+        211
       ]
     ]
   },
@@ -51,7 +59,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        202
+        213
       ]
     ]
   },
@@ -59,7 +67,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        212
+        223
       ]
     ]
   },
@@ -67,7 +75,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        214
+        225
       ]
     ]
   },
@@ -75,7 +83,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        224
+        235
       ]
     ]
   },
@@ -83,7 +91,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        262
+        273
       ]
     ]
   },
@@ -91,7 +99,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        268
+        279
       ]
     ]
   },
@@ -99,7 +107,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        271
+        282
       ]
     ]
   },
@@ -107,7 +115,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        274
+        285
       ]
     ]
   },
@@ -115,7 +123,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        278
+        289
       ]
     ]
   },
@@ -123,7 +131,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        281
+        292
       ]
     ]
   }
