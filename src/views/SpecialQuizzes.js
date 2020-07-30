@@ -54,7 +54,7 @@ const SpecialQuizzes = () => {
   }, []);
 
   if (error) {
-    if (error === 404) {
+    if (error === 404 || error === 400) {
       return <NoMatch />;
     }
     return (
@@ -64,75 +64,73 @@ const SpecialQuizzes = () => {
     );
   }
 
+  if (loading || !users) {
+    return <Loading />;
+  }
+
   return (
     <>
-      {loading || !users ? (
-        <Loading />
-      ) : (
+      <PageHeader title={<Trans>Arquivo de quizzes especiais</Trans>} />
+      <section className="section">
         <>
-          <PageHeader title={<Trans>Arquivo de quizzes especiais</Trans>} />
-          <section className="section">
-            <>
-              {quizzes && quizzes.length > 0 ? (
-                <PaginatedTable
-                  array={quizzes}
-                  initialPage={page ? page : 1}
-                  columns={[
-                    {
-                      id: 'subject',
-                      label: <Trans>Tema</Trans>,
-                      render: (item) => (
-                        <Link
-                          to={`/special-quiz/${item.date}`}
-                          className={classes.subjectContent}
-                        >
-                          {item.subject}
-                        </Link>
-                      ),
-                      className: classes.subject,
-                    },
-                    {
-                      id: 'author',
-                      label: <Trans>Autor</Trans>,
-                      render: (item) => (
+          {quizzes && quizzes.length > 0 ? (
+            <PaginatedTable
+              array={quizzes}
+              initialPage={page ? page : 1}
+              columns={[
+                {
+                  id: 'subject',
+                  label: <Trans>Tema</Trans>,
+                  render: (item) => (
+                    <Link
+                      to={`/special-quiz/${item.date}`}
+                      className={classes.subjectContent}
+                    >
+                      {item.subject}
+                    </Link>
+                  ),
+                  className: classes.subject,
+                },
+                {
+                  id: 'author',
+                  label: <Trans>Autor</Trans>,
+                  render: (item) => (
+                    <>
+                      {users[item.user_id] ? (
                         <>
-                          {users[item.user_id] ? (
-                            <>
-                              {users[item.user_id].name}{' '}
-                              {users[item.user_id].surname}
-                            </>
-                          ) : (
-                            '-'
-                          )}
+                          {users[item.user_id].name}{' '}
+                          {users[item.user_id].surname}
                         </>
-                      ),
-                      className: classes.author,
-                    },
-                    {
-                      id: 'date',
-                      label: <Trans>Data</Trans>,
-                      render: (item) => (
-                        <>{covertToLongDate(item.date, language)}</>
-                      ),
-                      className: classes.date,
-                    },
-                  ]}
-                  onChange={(newPage) => {
-                    history.push(`/special-quizzes/${newPage}`);
-                  }}
-                  onError={(code) => {
-                    setError(code);
-                  }}
-                />
-              ) : (
-                <EmptyState>
-                  <Trans>Sem registos</Trans>
-                </EmptyState>
-              )}
-            </>
-          </section>
+                      ) : (
+                        '-'
+                      )}
+                    </>
+                  ),
+                  className: classes.author,
+                },
+                {
+                  id: 'date',
+                  label: <Trans>Data</Trans>,
+                  render: (item) => (
+                    <>{covertToLongDate(item.date, language)}</>
+                  ),
+                  className: classes.date,
+                },
+              ]}
+              onChange={(newPage) => {
+                history.push(`/special-quizzes/${newPage}`);
+              }}
+              onError={(code) => {
+                setError(code);
+              }}
+            />
+          ) : (
+            <EmptyState>
+              <Trans>Sem registos</Trans>
+            </EmptyState>
+          )}
         </>
-      )}
+      </section>
     </>
   );
 };

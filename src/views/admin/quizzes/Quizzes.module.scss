@@ -1,0 +1,23 @@
+@import 'bulma/sass/utilities/mixins.sass';
+
+.question {
+  & + .question {
+    border-top: 1px solid $grey-lighter;
+    padding-top: 3rem;
+    margin-top: 3rem;
+  }
+
+  .questionText {
+    margin-bottom: 1rem;
+  }
+}
+
+.answersTable {
+  margin-top: 2rem;
+  .statusCell {
+    width: 100px;
+  }
+  .actionsCell {
+    width: 85px;
+  }
+}

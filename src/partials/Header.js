@@ -157,6 +157,36 @@ const Header = () => {
                     </>
                   )}
                   {(user.roles.admin ||
+                    user.roles.quiz_editor ||
+                    user.roles.special_quiz_editor ||
+                    user.roles.answer_reviewer) && (
+                    <>
+                      <div className="navbar-item">
+                        <Trans>Gestão de Quizzes</Trans>
+                      </div>
+                      {(user.roles.admin ||
+                        user.roles.quiz_editor ||
+                        user.roles.answer_reviewer) && (
+                        <Link to="/admin/quizzes" className="navbar-item">
+                          <i className="fa fa-btn fa-question-circle-o" />
+                          &nbsp;<Trans>Quizzes</Trans>
+                        </Link>
+                      )}
+                      {(user.roles.admin ||
+                        user.roles.special_quiz_editor ||
+                        user.roles.answer_reviewer) && (
+                        <Link
+                          to="/admin/special-quizzes"
+                          className="navbar-item"
+                        >
+                          <i className="fa fa-btn fa-question-circle-o" />
+                          &nbsp;<Trans>Quizzes especiais</Trans>
+                        </Link>
+                      )}
+                      <hr className="navbar-divider" />
+                    </>
+                  )}
+                  {(user.roles.admin ||
                     user.roles.national_ranking_manager) && (
                     <>
                       <div className="navbar-item">

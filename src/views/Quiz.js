@@ -47,12 +47,8 @@ const Quiz = () => {
       });
   }, [date]);
 
-  if (loading) {
-    return <Loading />;
-  }
-
   if (error) {
-    if (error === 404) {
+    if (error === 404 || error === 400) {
       return <NoMatch />;
     }
     return (
@@ -60,6 +56,10 @@ const Quiz = () => {
         <Trans>Erro de servidor. Tenta mais tarde.</Trans>
       </Error>
     );
+  }
+
+  if (loading) {
+    return <Loading />;
   }
 
   return (

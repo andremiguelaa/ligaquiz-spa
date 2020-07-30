@@ -23,6 +23,8 @@ import NationalRankingAdminEvents from 'views/admin/nationalRanking/Events';
 import NationalRankingAdminPlayers from 'views/admin/nationalRanking/Players';
 import NotificationsAdmin from 'views/admin/notifications/Notifications';
 import UsersAdmin from 'views/admin/users/Users';
+import QuizzesAdmin from 'views/admin/quizzes/Quizzes';
+import QuizCorrect from 'views/admin/quizzes/QuizCorrect';
 
 import NoMatch from 'views/NoMatch';
 
@@ -134,6 +136,26 @@ export default [
     title: <Trans>Utilizadores</Trans>,
     path: '/admin/users',
     component: UsersAdmin,
+  },
+  {
+    title: <Trans>Quizzes</Trans>,
+    path: '/admin/quizzes/:page?',
+    component: QuizzesAdmin,
+  },
+  {
+    title: <Trans>Quiz | Criar</Trans>,
+    path: '/admin/quiz/create',
+    // component: QuizCreate,
+  },
+  {
+    title: <Trans>Quiz | Corrigir</Trans>,
+    path: '/admin/quiz/:date/correct',
+    component: QuizCorrect,
+  },
+  {
+    title: <Trans>Quiz | Editar</Trans>,
+    path: '/admin/quiz/:id/edit',
+    // component: QuizEdit,
   },
   {
     title: <Trans>Página não encontrada</Trans>,
