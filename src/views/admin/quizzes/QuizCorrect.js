@@ -83,25 +83,30 @@ const Quizzes = () => {
                 {question.answer}
               </div>
             )}
-            <table
-              className={classnames('table is-fullwidth', classes.answersTable)}
-            >
-              <thead>
-                <tr>
-                  <th>
-                    <Trans>Resposta dada</Trans>
-                  </th>
-                  <th colSpan="2">
-                    <Trans>Correcção</Trans>
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {answers[question.id].map((answer) => (
-                  <Answer key={answer.id} answer={answer} />
-                ))}
-              </tbody>
-            </table>
+            {answers[question.id] && (
+              <table
+                className={classnames(
+                  'table is-fullwidth',
+                  classes.answersTable
+                )}
+              >
+                <thead>
+                  <tr>
+                    <th>
+                      <Trans>Resposta dada</Trans>
+                    </th>
+                    <th colSpan="2">
+                      <Trans>Correcção</Trans>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {answers[question.id].map((answer) => (
+                    <Answer key={answer.id} answer={answer} />
+                  ))}
+                </tbody>
+              </table>
+            )}
           </div>
         ))}
       </div>

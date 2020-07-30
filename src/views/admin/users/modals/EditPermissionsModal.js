@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import DatePicker from 'react-date-picker';
+import DatePicker from 'react-datepicker';
 import { toast } from 'react-toastify';
 import { Trans } from '@lingui/macro';
 
-import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
 import Modal from 'components/Modal';
 import formatDate from 'utils/formatDate';
@@ -16,11 +15,6 @@ const EditPermissionsModal = ({
   users,
   setUsers,
 }) => {
-  const [
-    {
-      settings: { language },
-    },
-  ] = useStateValue();
   const [patching, setPatching] = useState(false);
 
   const patchUser = (user) => {
@@ -45,14 +39,13 @@ const EditPermissionsModal = ({
             }
           })
         );
+        setPatching(false);
         setUserToEdit();
         toast.success(<Trans>Utilizador actualizado com sucesso.</Trans>);
       })
       .catch(() => {
-        toast.error(<Trans>Não foi possível actualizar o utilizador.</Trans>);
-      })
-      .finally(() => {
         setPatching(false);
+        toast.error(<Trans>Não foi possível actualizar o utilizador.</Trans>);
       });
   };
 
@@ -122,7 +115,7 @@ const EditPermissionsModal = ({
                 <div className="control has-icons-left">
                   <DatePicker
                     disabled={!Boolean(userToEdit.newRoles?.regular_player)}
-                    value={
+                    selected={
                       userToEdit.newRoles?.regular_player
                         ? new Date(userToEdit.newRoles?.regular_player)
                         : userToEdit.roles?.regular_player
@@ -138,10 +131,7 @@ const EditPermissionsModal = ({
                         },
                       });
                     }}
-                    calendarIcon={null}
-                    clearIcon={null}
-                    format="yyyy-MM-dd"
-                    locale={language}
+                    dateFormat="yyyy-MM-dd"
                   />
                   <span className="icon is-small is-left">
                     <i className="fa fa-calendar" />

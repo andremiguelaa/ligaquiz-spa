@@ -1,45 +1,41 @@
 .field {
-  .react-date-picker__wrapper,
-  .react-daterange-picker__wrapper {
-    position: relative;
+  .react-datepicker-wrapper {
     height: 2.25em;
     border-radius: 4px;
     background-color: $white;
     border: 1px solid $grey-lighter;
     box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
-    padding-left: calc(0.625em - 1px);
-    padding-right: calc(0.625em - 1px);
+    display: inline-flex;
+    overflow: hidden;
     &:hover {
       border-color: $grey-light;
     }
+    .react-datepicker__input-container {
+      display: flex;
+    }
+    input {
+      background-color: transparent;
+      border: none;
+      padding-left: calc(0.625em - 1px);
+      padding-right: calc(0.625em - 1px);
+    }
   }
   .has-icons-left {
-    .react-date-picker__wrapper,
-    .react-daterange-picker__wrapper {
-      padding-left: 2.25em;
+    .react-datepicker-wrapper {
+      input {
+        padding-left: 2.25em;
+      }
     }
   }
-  .react-date-picker__inputGroup,
-  .react-daterange-picker__inputGroup {
-    padding: 0;
-  }
-  .react-daterange-picker__range-divider {
-    margin: 0 0.5rem;
-  }
-  .react-date-picker__calendar,
-  .react-daterange-picker__calendar {
-    z-index: 5;
-  }
-  .react-calendar__navigation {
-    margin-bottom: 0;
-  }
-  .react-calendar__navigation__label__labelText--from {
-    display: block;
-    &::first-letter {
-      text-transform: uppercase;
-    }
-  }
-  .react-calendar__month-view__weekdays {
-    display: none !important;
+}
+
+.react-datepicker {
+  border-radius: 4px;
+  font-family: inherit;
+}
+.react-datepicker__current-month,
+.react-datepicker__day-name {
+  &::first-letter {
+    text-transform: uppercase;
   }
 }

@@ -24,6 +24,7 @@ import NationalRankingAdminPlayers from 'views/admin/nationalRanking/Players';
 import NotificationsAdmin from 'views/admin/notifications/Notifications';
 import UsersAdmin from 'views/admin/users/Users';
 import QuizzesAdmin from 'views/admin/quizzes/Quizzes';
+import QuizCreate from 'views/admin/quizzes/QuizCreate';
 import QuizCorrect from 'views/admin/quizzes/QuizCorrect';
 
 import NoMatch from 'views/NoMatch';
@@ -145,7 +146,7 @@ export default [
   {
     title: <Trans>Quiz | Criar</Trans>,
     path: '/admin/quiz/create',
-    // component: QuizCreate,
+    component: QuizCreate,
   },
   {
     title: <Trans>Quiz | Corrigir</Trans>,
