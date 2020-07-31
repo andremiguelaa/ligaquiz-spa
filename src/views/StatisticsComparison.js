@@ -5,11 +5,11 @@ import { Radar } from 'react-chartjs-2';
 
 import { useStateValue } from 'state/State';
 import { covertToLongDate } from 'utils/formatDate';
+import { getGenreTranslation } from 'utils/getGenreTranslation';
 import ApiRequest from 'utils/ApiRequest';
 import Loading from 'components/Loading';
 import Error from 'components/Error';
 import PageHeader from 'components/PageHeader';
-import { getGenreTranslation } from './Statistics/getGenreTranslation';
 import NoMatch from './NoMatch';
 
 import classes from './Statistics/Statistics.module.scss';

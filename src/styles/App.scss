@@ -97,6 +97,56 @@ button.navbar-link {
   margin-bottom: 0.75rem;
 }
 
+.legend {
+  padding: 0 0.5rem;
+  font-weight: bold;
+}
+
+.radio {
+  margin-right: 0.5em;
+  & + .radio {
+    margin-left: 0;
+  }
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.file {
+  &.is-loading {
+    > .file-label {
+      color: transparent;
+      background-color: white;
+      border-color: #dbdbdb;
+      box-shadow: none;
+      opacity: 0.5;
+      pointer-events: none;
+      &::after {
+        position: absolute;
+        left: calc(50% - (1em / 2));
+        top: calc(50% - (1em / 2));
+        position: absolute !important;
+        border-color: transparent transparent $grey $grey !important;
+        animation: spinAround 500ms infinite linear;
+        border: 2px solid #dbdbdb;
+        border-radius: 290486px;
+        border-right-color: transparent;
+        border-top-color: transparent;
+        content: '';
+        display: block;
+        height: 1em;
+        position: relative;
+        width: 1em;
+      }
+    }
+    .file-cta {
+      & > * {
+        opacity: 0;
+      }
+    }
+  }
+}
+
 .content {
   figure.avatar {
     margin-left: 0;

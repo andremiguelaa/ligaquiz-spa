@@ -21,3 +21,12 @@
     width: 85px;
   }
 }
+
+.media {
+  width: 300px;
+  max-width: 100%;
+  margin: 1rem auto 0;
+  & > * {
+    width: 100%;
+  }
+}

@@ -8,12 +8,12 @@ import { Radar } from 'react-chartjs-2';
 
 import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
+import { getGenreTranslation } from 'utils/getGenreTranslation';
 import Loading from 'components/Loading';
 import Error from 'components/Error';
 import PageHeader from 'components/PageHeader';
 import { individualQuizTypeOptions } from 'views/admin/nationalRanking/utils/options';
 import { quizTypeAbbr } from 'views/NationalRanking/consts';
-import { getGenreTranslation } from './Statistics/getGenreTranslation';
 
 import classes from './Statistics/Statistics.module.scss';
 
