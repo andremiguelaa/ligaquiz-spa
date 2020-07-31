@@ -26,7 +26,7 @@ const Quizzes = () => {
   useEffect(() => {
     ApiRequest.get('quizzes')
       .then(({ data }) => {
-        setQuizzes(data.reverse());
+        setQuizzes(data);
       })
       .catch(() => {
         setError(true);

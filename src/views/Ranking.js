@@ -74,7 +74,7 @@ const Ranking = () => {
       ApiRequest.get(`seasons`)
         .then(({ data }) => {
           if (data.length) {
-            const lastSeason = data[data.length - 1].season;
+            const lastSeason = data[0].season;
             ApiRequest.get(`leagues?season=${lastSeason}&tier=1`)
               .then(({ data }) => {
                 setSeasonNumber(parseInt(lastSeason));

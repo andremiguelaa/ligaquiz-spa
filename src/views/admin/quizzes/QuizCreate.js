@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 import DatePicker from 'react-datepicker';
 import { toast } from 'react-toastify';
@@ -11,11 +12,13 @@ import PageHeader from 'components/PageHeader';
 import Question from './Question';
 
 const Quizzes = () => {
+  const history = useHistory();
   const [error, setError] = useState(false);
   const [quizDates, setQuizDates] = useState();
   const [quizDate, setQuizDate] = useState();
   const [genres, setGenres] = useState();
   const [submitting, setSubmitting] = useState(false);
+  const [uploading, setUploading] = useState(false);
   const [formData, setFormData] = useState({
     date: undefined,
     questions: [{}, {}, {}, {}, {}, {}, {}, {}],
@@ -49,19 +52,13 @@ const Quizzes = () => {
     event.preventDefault();
     setSubmitting(true);
     setError(null);
-    console.log(formData);
-    return;
     ApiRequest.post('quizzes', formData)
       .then(() => {
         setSubmitting(false);
         toast.success(<Trans>Quiz criado com sucesso.</Trans>);
+        history.push(`/admin/quizzes`);
       })
-      .catch((error) => {
-        try {
-          setError(error.response.data);
-        } catch (error) {
-          setError({ message: 'server_error' });
-        }
+      .catch(() => {
         toast.error(<Trans>Não foi possível criar o quiz.</Trans>);
         setSubmitting(false);
       });
@@ -134,13 +131,15 @@ const Quizzes = () => {
               index={index}
               key={genre.id}
               setFormData={setFormData}
+              uploading={uploading}
+              setUploading={setUploading}
             />
           ))}
           <div className="field">
             <div className="control">
               <button
                 className={`button is-primary ${submitting && 'is-loading'}`}
-                disabled={!formData.date}
+                disabled={!formData.date || uploading}
               >
                 <Trans>Gravar</Trans>
               </button>

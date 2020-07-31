@@ -20,7 +20,7 @@ const Seasons = () => {
   useEffect(() => {
     ApiRequest.get(`seasons`)
       .then(({ data }) => {
-        setSeasonsList(data.reverse());
+        setSeasonsList(data);
         setLoading(false);
       })
       .catch(() => {

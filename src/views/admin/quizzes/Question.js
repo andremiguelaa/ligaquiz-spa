@@ -10,7 +10,7 @@ import Markdown from 'components/Markdown';
 
 import classes from './Quizzes.module.scss';
 
-const Question = ({ genre, index, setFormData }) => {
+const Question = ({ genre, index, setFormData, uploading, setUploading }) => {
   const [
     {
       settings: { language },
@@ -22,7 +22,6 @@ const Question = ({ genre, index, setFormData }) => {
   const [genreId, setGenreId] = useState();
   const [mediaId, setMediaId] = useState();
   const [media, setMedia] = useState();
-  const [uploading, setUploading] = useState(false);
 
   useEffect(() => {
     setFormData((prev) => {
@@ -34,7 +33,7 @@ const Question = ({ genre, index, setFormData }) => {
       };
       return prev;
     });
-  }, [content, answer, genreId, mediaId]);
+  }, [index, setFormData, content, answer, genreId, mediaId]);
 
   return (
     <fieldset className="fieldset" key={genre.id}>

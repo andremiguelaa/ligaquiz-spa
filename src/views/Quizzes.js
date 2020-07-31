@@ -29,7 +29,7 @@ const Quizzes = () => {
   useEffect(() => {
     ApiRequest.get(`quizzes?past`)
       .then(({ data }) => {
-        setQuizzes(data.reverse());
+        setQuizzes(data);
         setLoading(false);
       })
       .catch(({ response }) => {

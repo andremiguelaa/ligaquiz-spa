@@ -32,7 +32,7 @@ const SpecialQuizzes = () => {
   useEffect(() => {
     ApiRequest.get(`special-quizzes?past`)
       .then(({ data }) => {
-        setQuizzes(data.reverse());
+        setQuizzes(data);
         setLoading(false);
       })
       .catch(({ response }) => {
