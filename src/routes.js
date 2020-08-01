@@ -24,7 +24,7 @@ import NationalRankingAdminPlayers from 'views/admin/nationalRanking/Players';
 import NotificationsAdmin from 'views/admin/notifications/Notifications';
 import UsersAdmin from 'views/admin/users/Users';
 import QuizzesAdmin from 'views/admin/quizzes/Quizzes';
-import QuizCreate from 'views/admin/quizzes/QuizCreate';
+import QuizForm from 'views/admin/quizzes/QuizForm';
 import QuizCorrect from 'views/admin/quizzes/QuizCorrect';
 
 import NoMatch from 'views/NoMatch';
@@ -146,7 +146,7 @@ export default [
   {
     title: <Trans>Quiz | Criar</Trans>,
     path: '/admin/quiz/create',
-    component: QuizCreate,
+    component: QuizForm,
   },
   {
     title: <Trans>Quiz | Corrigir</Trans>,
@@ -155,8 +155,8 @@ export default [
   },
   {
     title: <Trans>Quiz | Editar</Trans>,
-    path: '/admin/quiz/:id/edit',
-    // component: QuizEdit,
+    path: '/admin/quiz/:date/edit',
+    component: QuizForm,
   },
   {
     title: <Trans>Página não encontrada</Trans>,

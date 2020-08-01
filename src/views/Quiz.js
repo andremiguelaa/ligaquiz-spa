@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 
 import { useStateValue } from 'state/State';
-import { covertToLongDate } from 'utils/formatDate';
+import { convertToLongDate } from 'utils/formatDate';
 import renderMedia from 'utils/renderMedia';
 import ApiRequest from 'utils/ApiRequest';
 import Error from 'components/Error';
@@ -66,7 +66,7 @@ const Quiz = () => {
     <>
       <PageHeader
         title={
-          <Trans>Quiz de {covertToLongDate(data.quiz.date, language)}</Trans>
+          <Trans>Quiz de {convertToLongDate(data.quiz.date, language)}</Trans>
         }
       />
       <div className="section">

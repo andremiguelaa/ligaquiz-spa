@@ -3,7 +3,7 @@ import { Link, useParams, useHistory } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 
 import { useStateValue } from 'state/State';
-import { covertToLongDate } from 'utils/formatDate';
+import { convertToLongDate } from 'utils/formatDate';
 import ApiRequest from 'utils/ApiRequest';
 import PageHeader from 'components/PageHeader';
 import Error from 'components/Error';
@@ -67,7 +67,7 @@ const Quizzes = () => {
                       id: 'date',
                       render: (item) => (
                         <Link to={`/quiz/${item.date}`}>
-                          {covertToLongDate(item.date, language)}
+                          {convertToLongDate(item.date, language)}
                         </Link>
                       ),
                     },

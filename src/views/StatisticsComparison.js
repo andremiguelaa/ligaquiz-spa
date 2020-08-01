@@ -4,7 +4,7 @@ import { Trans } from '@lingui/macro';
 import { Radar } from 'react-chartjs-2';
 
 import { useStateValue } from 'state/State';
-import { covertToLongDate } from 'utils/formatDate';
+import { convertToLongDate } from 'utils/formatDate';
 import { getGenreTranslation } from 'utils/getGenreTranslation';
 import ApiRequest from 'utils/ApiRequest';
 import Loading from 'components/Loading';
@@ -310,7 +310,7 @@ const Statistics = () => {
                         <tr>
                           <td>
                             <Link to={`/quiz/${game.date}`}>
-                              {covertToLongDate(game.date, language)}
+                              {convertToLongDate(game.date, language)}
                             </Link>
                           </td>
                           <td>

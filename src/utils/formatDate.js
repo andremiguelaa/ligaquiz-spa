@@ -3,7 +3,7 @@ export const formatDate = (date) =>
     '0' + date.getDate()
   ).slice(-2)}`;
 
-export const covertToLongDate = (date, language) => {
+export const convertToLongDate = (date, language) => {
   let longDate = new Date(date).toLocaleDateString(language, {
     year: 'numeric',
     month: 'long',

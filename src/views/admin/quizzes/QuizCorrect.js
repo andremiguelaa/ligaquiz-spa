@@ -4,7 +4,7 @@ import { Trans } from '@lingui/macro';
 import classnames from 'classnames';
 
 import { useStateValue } from 'state/State';
-import { covertToLongDate } from 'utils/formatDate';
+import { convertToLongDate } from 'utils/formatDate';
 import ApiRequest from 'utils/ApiRequest';
 import Loading from 'components/Loading';
 import Error from 'components/Error';
@@ -63,7 +63,7 @@ const Quizzes = () => {
       <PageHeader
         title={
           <Trans>
-            Corrigir quiz de {covertToLongDate(quiz.date, language)}
+            Corrigir quiz de {convertToLongDate(quiz.date, language)}
           </Trans>
         }
       />

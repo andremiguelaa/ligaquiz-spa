@@ -10,27 +10,45 @@ import Markdown from 'components/Markdown';
 
 import classes from './Quizzes.module.scss';
 
-const Question = ({ genre, index, setFormData, uploading, setUploading }) => {
+const Question = ({
+  genre,
+  index,
+  quiz: quizData,
+  setFormData,
+  uploading,
+  setUploading,
+  disabled,
+}) => {
   const [
     {
       settings: { language },
     },
   ] = useStateValue();
 
-  const [content, setContent] = useState('');
-  const [answer, setAnswer] = useState('');
-  const [genreId, setGenreId] = useState();
-  const [mediaId, setMediaId] = useState();
-  const [media, setMedia] = useState();
+  const [content, setContent] = useState(
+    quizData?.quiz.questions[index].content || ''
+  );
+  const [answer, setAnswer] = useState(
+    quizData?.quiz.questions[index].answer || ''
+  );
+  const [genreId, setGenreId] = useState(
+    quizData?.quiz.questions[index].genre_id || undefined
+  );
+  const [mediaId, setMediaId] = useState(
+    quizData?.quiz.questions[index].media_id || undefined
+  );
+  const [media, setMedia] = useState(
+    quizData?.quiz.questions[index].media_id
+      ? quizData.media[mediaId]
+      : undefined
+  );
 
   useEffect(() => {
     setFormData((prev) => {
-      prev.questions[index] = {
-        content,
-        answer,
-        genre_id: genreId || null,
-        media_id: mediaId || null,
-      };
+      prev.questions[index].content = content;
+      prev.questions[index].answer = answer;
+      prev.questions[index].genre_id = genreId;
+      prev.questions[index].media_id = mediaId || null;
       return prev;
     });
   }, [index, setFormData, content, answer, genreId, mediaId]);
@@ -46,6 +64,7 @@ const Question = ({ genre, index, setFormData, uploading, setUploading }) => {
           {genre.subgenres.map((subgenre) => (
             <label className="radio" key={subgenre.id}>
               <input
+                disabled={disabled}
                 name={genre.slug}
                 type="radio"
                 checked={genreId === subgenre.id}
@@ -66,6 +85,8 @@ const Question = ({ genre, index, setFormData, uploading, setUploading }) => {
           <Trans>Enunciado</Trans>
         </label>
         <textarea
+          disabled={disabled}
+          defaultValue={content}
           className="textarea"
           onChange={(event) => {
             setContent(event.target.value);
@@ -80,6 +101,8 @@ const Question = ({ genre, index, setFormData, uploading, setUploading }) => {
           <Trans>Resposta</Trans>
         </label>
         <input
+          disabled={disabled}
+          defaultValue={answer}
           className="input"
           onChange={(event) => {
             setAnswer(event.target.value);
@@ -90,9 +113,14 @@ const Question = ({ genre, index, setFormData, uploading, setUploading }) => {
         <label className="label">
           <Trans>Multimédia</Trans>
         </label>
-        <div className={classnames('file', { 'is-loading': uploading })}>
+        <div
+          className={classnames('file', {
+            'is-loading': uploading,
+          })}
+        >
           <label className="file-label">
             <input
+              disabled={disabled || uploading}
               className="file-input"
               type="file"
               accept=".mp3,.jpg,.jpeg,.png,.gif,.mp4"
@@ -124,9 +152,22 @@ const Question = ({ genre, index, setFormData, uploading, setUploading }) => {
         </div>
       </div>
       {media && (
-        <div className={classes.media}>
-          {renderMedia(media.type, media.url, index + 1)}
-        </div>
+        <>
+          <button
+            className="button is-danger"
+            onClick={() => {
+              setMediaId();
+              setMedia();
+            }}
+          >
+            <span className="icon">
+              <i className="fa fa-trash"></i>
+            </span>
+          </button>
+          <div className={classes.media}>
+            {renderMedia(media.type, media.url, index + 1)}
+          </div>
+        </>
       )}
     </fieldset>
   );

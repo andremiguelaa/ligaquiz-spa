@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { Link, useParams, useHistory } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 import moment from 'moment';
+import { toast } from 'react-toastify';
 
 import { useStateValue } from 'state/State';
-import { covertToLongDate } from 'utils/formatDate';
+import { convertToLongDate } from 'utils/formatDate';
 import ApiRequest from 'utils/ApiRequest';
 import Loading from 'components/Loading';
 import Error from 'components/Error';
@@ -24,6 +25,10 @@ const Quizzes = () => {
   const [quizzes, setQuizzes] = useState();
 
   useEffect(() => {
+    getQuizzes();
+  }, []);
+
+  const getQuizzes = () => {
     ApiRequest.get('quizzes')
       .then(({ data }) => {
         setQuizzes(data);
@@ -31,7 +36,20 @@ const Quizzes = () => {
       .catch(() => {
         setError(true);
       });
-  }, []);
+  };
+
+  const deleteQuiz = (id) => {
+    setQuizzes();
+    ApiRequest.delete('quizzes', { data: { id } })
+      .then(() => {
+        toast.success(<Trans>Quiz apagado com sucesso.</Trans>);
+        getQuizzes();
+      })
+      .catch(() => {
+        toast.error(<Trans>Não foi possível apagar o quiz.</Trans>);
+        getQuizzes();
+      });
+  };
 
   if (error) {
     return (
@@ -70,7 +88,7 @@ const Quizzes = () => {
                     className: 'is-vertical-middle',
                     render: (item) => (
                       <Link to={`/quiz/${item.date}`}>
-                        {covertToLongDate(item.date, language)}
+                        {convertToLongDate(item.date, language)}
                       </Link>
                     ),
                   },
@@ -79,14 +97,16 @@ const Quizzes = () => {
                     render: (item) => (
                       <>
                         <div className="buttons has-addons is-pulled-right">
-                          <Link
-                            className="button"
-                            to={`/admin/quiz/${item.date}/correct`}
-                          >
-                            <span className="icon">
-                              <i className="fa fa-check"></i>
-                            </span>
-                          </Link>
+                          {item.date <= moment().format('YYYY-MM-DD') && (
+                            <Link
+                              className="button"
+                              to={`/admin/quiz/${item.date}/correct`}
+                            >
+                              <span className="icon">
+                                <i className="fa fa-check"></i>
+                              </span>
+                            </Link>
+                          )}
                           {item.date > moment().format('YYYY-MM-DD') && (
                             <>
                               <Link
@@ -97,7 +117,12 @@ const Quizzes = () => {
                                   <i className="fa fa-edit"></i>
                                 </span>
                               </Link>
-                              <button className="button is-danger">
+                              <button
+                                className="button is-danger"
+                                onClick={() => {
+                                  deleteQuiz(item.id);
+                                }}
+                              >
                                 <span className="icon">
                                   <i className="fa fa-trash"></i>
                                 </span>

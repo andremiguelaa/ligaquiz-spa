@@ -4,7 +4,7 @@ import { Trans } from '@lingui/macro';
 import classnames from 'classnames';
 
 import { useStateValue } from 'state/State';
-import { covertToLongDate } from 'utils/formatDate';
+import { convertToLongDate } from 'utils/formatDate';
 import renderMedia from 'utils/renderMedia';
 import ApiRequest from 'utils/ApiRequest';
 import PageHeader from 'components/PageHeader';
@@ -99,7 +99,7 @@ const Game = () => {
                 )}
               </>
             }
-            subtitle={game.quiz && covertToLongDate(game.quiz.date, language)}
+            subtitle={game.quiz && convertToLongDate(game.quiz.date, language)}
           />
           <section className="section">
             {game.quiz &&
