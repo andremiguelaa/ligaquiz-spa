@@ -146,6 +146,14 @@ const Statistics = () => {
               <a href={`mailto:${user.email}`}>{user.email}</a>
             </div>
           )}
+          {user.national_rank && (
+            <div>
+              <Trans>
+                Número {user.national_rank} no{' '}
+                <Link to="/national-ranking">Ranking Nacional</Link>
+              </Trans>
+            </div>
+          )}
         </div>
       </section>
       <section className="section content">

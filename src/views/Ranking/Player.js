@@ -39,6 +39,11 @@ const Player = ({ player, index, tierNumber, users }) => (
           {getAcronym(users[player.id].surname)}
         </abbr>
       </Link>
+      {users[player.id].national_rank && (
+        <Link to="/national-ranking" className={classes.nationalRank}>
+          {users[player.id].national_rank}
+        </Link>
+      )}
     </td>
     <td className="has-text-centered">{player.league_points}</td>
     <td className="has-text-centered">{player.game_points}</td>

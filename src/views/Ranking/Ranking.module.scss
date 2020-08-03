@@ -3,6 +3,7 @@
 .ranking {
   .userCellContent {
     padding-left: calc(0.75rem + 32px);
+    padding-right: calc(0.75rem + 24px);
     position: relative;
     .avatar {
       position: absolute;
@@ -22,6 +23,18 @@
         min-width: 28px;
         object-fit: cover;
       }
+    }
+    .nationalRank {
+      position: absolute;
+      background-image: url('../../img/star.svg');
+      color: $grey-dark;
+      background-repeat: no-repeat;
+      width: 24px;
+      line-height: 28px;
+      text-align: center;
+      font-size: 8px;
+      top: 4px;
+      text-decoration: none;
     }
   }
   .roundsWrapper {
