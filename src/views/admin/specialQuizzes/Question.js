@@ -2,16 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { Trans } from '@lingui/macro';
 import classnames from 'classnames';
 
-import { useStateValue } from 'state/State';
-import { getGenreTranslation } from 'utils/getGenreTranslation';
 import ApiRequest from 'utils/ApiRequest';
 import renderMedia from 'utils/renderMedia';
 import Markdown from 'components/Markdown';
 
-import classes from './Quizzes.module.scss';
+import classes from '../quizzes/Quizzes.module.scss';
 
 const Question = ({
-  genre,
   index,
   quiz: quizData,
   setFormData,
@@ -19,20 +16,11 @@ const Question = ({
   setUploading,
   disabled,
 }) => {
-  const [
-    {
-      settings: { language },
-    },
-  ] = useStateValue();
-
   const [content, setContent] = useState(
     quizData?.quiz.questions[index]?.content || ''
   );
   const [answer, setAnswer] = useState(
     quizData?.quiz.questions[index]?.answer || ''
-  );
-  const [genreId, setGenreId] = useState(
-    quizData?.quiz.questions[index]?.genre_id || undefined
   );
   const [mediaId, setMediaId] = useState(
     quizData?.quiz.questions[index]?.media_id || undefined
@@ -50,39 +38,13 @@ const Question = ({
       }
       prev.questions[index].content = content;
       prev.questions[index].answer = answer;
-      prev.questions[index].genre_id = genreId;
       prev.questions[index].media_id = mediaId || null;
       return { ...prev };
     });
-  }, [index, setFormData, content, answer, genreId, mediaId]);
+  }, [index, setFormData, content, answer, mediaId]);
 
   return (
-    <fieldset className="fieldset" key={genre.id}>
-      <legend className="legend">
-        <Trans>Pergunta {index + 1}</Trans> (
-        {getGenreTranslation(genre.slug, language)})
-      </legend>
-      <div className="field">
-        <div className="control">
-          {genre.subgenres.map((subgenre) => (
-            <label className="radio" key={subgenre.id}>
-              <input
-                disabled={disabled}
-                name={genre.slug}
-                type="radio"
-                checked={genreId === subgenre.id}
-                onChange={(event) => {
-                  if (event.target.checked) {
-                    setGenreId(subgenre.id);
-                  }
-                }}
-              />{' '}
-              {getGenreTranslation(subgenre.slug, language)} (? de{' '}
-              {subgenre.target})
-            </label>
-          ))}
-        </div>
-      </div>
+    <fieldset className="fieldset" key={index}>
       <div className="field">
         <label className="label">
           <Trans>Enunciado</Trans>

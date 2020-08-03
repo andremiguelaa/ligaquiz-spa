@@ -27,7 +27,7 @@ import QuizzesAdmin from 'views/admin/quizzes/Quizzes';
 import QuizForm from 'views/admin/quizzes/QuizForm';
 import QuizCorrect from 'views/admin/quizzes/QuizCorrect';
 import SpecialQuizzesAdmin from 'views/admin/specialQuizzes/SpecialQuizzes';
-// import SpecialQuizForm from 'views/admin/specialQuizzes/SpecialQuizForm';
+import SpecialQuizForm from 'views/admin/specialQuizzes/SpecialQuizForm';
 import SpecialQuizCorrect from 'views/admin/specialQuizzes/SpecialQuizCorrect';
 
 import NoMatch from 'views/NoMatch';
@@ -169,7 +169,7 @@ export default [
   {
     title: <Trans>Special Quiz | Criar</Trans>,
     path: '/admin/special-quiz/create',
-    // component: SpecialQuizForm,
+    component: SpecialQuizForm,
   },
   {
     title: <Trans>Special Quiz | Corrigir</Trans>,
@@ -179,7 +179,7 @@ export default [
   {
     title: <Trans>Special Quiz | Editar</Trans>,
     path: '/admin/special-quiz/:date/edit',
-    // component: SpecialQuizForm,
+    component: SpecialQuizForm,
   },
   {
     title: <Trans>Página não encontrada</Trans>,

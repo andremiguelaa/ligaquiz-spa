@@ -94,18 +94,14 @@ const SpecialQuizzes = () => {
                         to={`/special-quiz/${item.date}`}
                         className={classes.subjectContent}
                       >
-                        {item.subject}
+                        {item.subject} ({convertToLongDate(item.date, language)}
+                        )
                       </Link>
                     ),
                     className: classnames(
                       'is-vertical-middle',
                       classes.subject
                     ),
-                  },
-                  {
-                    id: 'date',
-                    render: (item) => convertToLongDate(item.date, language),
-                    className: classnames('is-vertical-middle', classes.date),
                   },
                   {
                     id: 'actions',
