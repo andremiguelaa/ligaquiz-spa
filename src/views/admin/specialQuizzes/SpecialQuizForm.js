@@ -134,8 +134,6 @@ const SpecialQuizForm = () => {
     return <Loading />;
   }
 
-  console.log(author);
-
   return (
     <>
       <PageHeader
