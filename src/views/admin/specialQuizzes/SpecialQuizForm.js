@@ -79,24 +79,16 @@ const SpecialQuizForm = () => {
       });
   }, [date, editMode]);
 
-  useEffect(() => {
-    setFormData((prev) => {
-      if (!editMode) {
-        prev.date = quizDate ? formatDate(quizDate) : '';
-      }
-      prev.subject = subject || '';
-      prev.description = description || '';
-      prev.user_id = author || null;
-      return { ...prev };
-    });
-  }, [quizDate, subject, description, author, editMode]);
-
   const handleSubmit = (event) => {
     event.preventDefault();
     setSubmitting(true);
     setError(null);
+    const newFormData = { ...formData };
+    newFormData.subject = subject || '';
+    newFormData.description = description || '';
+    newFormData.user_id = author || null;
     if (editMode) {
-      ApiRequest.patch('special-quizzes', formData)
+      ApiRequest.patch('special-quizzes', newFormData)
         .then(() => {
           setSubmitting(false);
           toast.success(<Trans>Quiz especial gravado com sucesso.</Trans>);
@@ -106,11 +98,12 @@ const SpecialQuizForm = () => {
           setSubmitting(false);
         });
     } else {
-      ApiRequest.post('special-quizzes', formData)
+      newFormData.date = formatDate(quizDate);
+      ApiRequest.post('special-quizzes', newFormData)
         .then(() => {
           setSubmitting(false);
           toast.success(<Trans>Quiz especial criado com sucesso.</Trans>);
-          history.push(`/admin/special-quiz/${formData.date}/edit/`);
+          history.push(`/admin/special-quiz/${quizDate}/edit/`);
         })
         .catch(() => {
           toast.error(<Trans>Não foi possível criar o quiz especial.</Trans>);
@@ -246,9 +239,7 @@ const SpecialQuizForm = () => {
             <div className="control">
               <button
                 className={`button is-primary ${submitting && 'is-loading'}`}
-                disabled={
-                  (!editMode && !formData.date) || uploading || submitting
-                }
+                disabled={(!editMode && !quizDate) || uploading || submitting}
               >
                 <Trans>Gravar</Trans>
               </button>
