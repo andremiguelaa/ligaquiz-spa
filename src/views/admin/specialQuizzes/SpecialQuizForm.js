@@ -60,11 +60,11 @@ const SpecialQuizForm = () => {
     } else {
       ApiRequest.get(`special-quizzes?date=${date}`)
         .then(({ data }) => {
-          setFormData(data.quiz);
           setSubject(data.quiz.subject || '');
           setDescription(data.quiz.description || '');
           setAuthor(data.quiz.user_id);
           setQuiz(data);
+          setFormData(data.quiz);
         })
         .catch(({ response }) => {
           setError(response?.status);
@@ -133,6 +133,8 @@ const SpecialQuizForm = () => {
   if ((!editMode && !quizDates) || (editMode && !quiz) || !users) {
     return <Loading />;
   }
+
+  console.log(author);
 
   return (
     <>
