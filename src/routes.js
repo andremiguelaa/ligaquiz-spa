@@ -28,7 +28,7 @@ import QuizForm from 'views/admin/quizzes/QuizForm';
 import QuizCorrect from 'views/admin/quizzes/QuizCorrect';
 import SpecialQuizzesAdmin from 'views/admin/specialQuizzes/SpecialQuizzes';
 // import SpecialQuizForm from 'views/admin/specialQuizzes/SpecialQuizForm';
-// import SpecialQuizCorrect from 'views/admin/specialQuizzes/SpecialQuizCorrect';
+import SpecialQuizCorrect from 'views/admin/specialQuizzes/SpecialQuizCorrect';
 
 import NoMatch from 'views/NoMatch';
 
@@ -174,7 +174,7 @@ export default [
   {
     title: <Trans>Special Quiz | Corrigir</Trans>,
     path: '/admin/special-quiz/:date/correct',
-    // component: SpecialQuizCorrect,
+    component: SpecialQuizCorrect,
   },
   {
     title: <Trans>Special Quiz | Editar</Trans>,

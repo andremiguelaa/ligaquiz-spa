@@ -104,7 +104,6 @@ const SpecialQuizzes = () => {
                   },
                   {
                     id: 'date',
-                    className: 'is-vertical-middle',
                     render: (item) => convertToLongDate(item.date, language),
                     className: classnames('is-vertical-middle', classes.date),
                   },

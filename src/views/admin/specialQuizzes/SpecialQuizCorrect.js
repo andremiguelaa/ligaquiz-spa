@@ -11,11 +11,11 @@ import Error from 'components/Error';
 import PageHeader from 'components/PageHeader';
 import Markdown from 'components/Markdown';
 import NoMatch from 'views/NoMatch';
-import Answer from './Answer';
+import Answer from '../quizzes/Answer';
 
-import classes from './Quizzes.module.scss';
+import classes from '../quizzes/Quizzes.module.scss';
 
-const QuizCorrect = () => {
+const SpecialQuizCorrect = () => {
   const { date } = useParams();
   const [
     {
@@ -27,10 +27,10 @@ const QuizCorrect = () => {
   const [answers, setAnswers] = useState();
 
   useEffect(() => {
-    ApiRequest.get(`quizzes?date=${date}&submitted=1`)
+    ApiRequest.get(`special-quizzes?date=${date}&submitted=1`)
       .then(({ data }) => {
         setQuiz(data.quiz);
-        ApiRequest.get(`answers?quiz=${data.quiz.id}&submitted=1`)
+        ApiRequest.get(`answers?special_quiz=${data.quiz.id}&submitted=1`)
           .then(({ data }) => {
             setAnswers(data);
           })
@@ -63,7 +63,7 @@ const QuizCorrect = () => {
       <PageHeader
         title={
           <Trans>
-            Corrigir quiz de {convertToLongDate(quiz.date, language)}
+            Corrigir quiz especial de {convertToLongDate(quiz.date, language)}
           </Trans>
         }
       />
@@ -114,4 +114,4 @@ const QuizCorrect = () => {
   );
 };
 
-export default QuizCorrect;
+export default SpecialQuizCorrect;
