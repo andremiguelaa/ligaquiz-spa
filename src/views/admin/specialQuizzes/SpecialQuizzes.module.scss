@@ -1,0 +1,24 @@
+@import 'bulma/sass/utilities/mixins.sass';
+
+.subject {
+  white-space: nowrap;
+}
+
+.author {
+  width: 205px;
+  max-width: 205px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @include mobile {
+    width: auto;
+  }
+}
+
+.date {
+  width: 190px;
+  white-space: nowrap;
+  @include mobile {
+    width: auto;
+  }
+}

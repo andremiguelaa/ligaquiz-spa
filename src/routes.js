@@ -26,6 +26,9 @@ import UsersAdmin from 'views/admin/users/Users';
 import QuizzesAdmin from 'views/admin/quizzes/Quizzes';
 import QuizForm from 'views/admin/quizzes/QuizForm';
 import QuizCorrect from 'views/admin/quizzes/QuizCorrect';
+import SpecialQuizzesAdmin from 'views/admin/specialQuizzes/SpecialQuizzes';
+// import SpecialQuizForm from 'views/admin/specialQuizzes/SpecialQuizForm';
+// import SpecialQuizCorrect from 'views/admin/specialQuizzes/SpecialQuizCorrect';
 
 import NoMatch from 'views/NoMatch';
 
@@ -157,6 +160,26 @@ export default [
     title: <Trans>Quiz | Editar</Trans>,
     path: '/admin/quiz/:date/edit',
     component: QuizForm,
+  },
+  {
+    title: <Trans>Special Quizzes</Trans>,
+    path: '/admin/special-quizzes/:page?',
+    component: SpecialQuizzesAdmin,
+  },
+  {
+    title: <Trans>Special Quiz | Criar</Trans>,
+    path: '/admin/special-quiz/create',
+    // component: SpecialQuizForm,
+  },
+  {
+    title: <Trans>Special Quiz | Corrigir</Trans>,
+    path: '/admin/special-quiz/:date/correct',
+    // component: SpecialQuizCorrect,
+  },
+  {
+    title: <Trans>Special Quiz | Editar</Trans>,
+    path: '/admin/special-quiz/:date/edit',
+    // component: SpecialQuizForm,
   },
   {
     title: <Trans>Página não encontrada</Trans>,
