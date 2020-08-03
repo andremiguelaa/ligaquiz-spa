@@ -28,11 +28,33 @@ const QuizForm = () => {
   const [genres, setGenres] = useState();
   const [submitting, setSubmitting] = useState(false);
   const [uploading, setUploading] = useState(false);
+  const [genreStats, setGenreStats] = useState();
   const [formData, setFormData] = useState({
     date,
     questions: [{}, {}, {}, {}, {}, {}, {}, {}],
   });
   const editMode = Boolean(date);
+
+  useEffect(() => {
+    ApiRequest.get(`seasons`)
+      .then(({ data: seasons }) => {
+        if (seasons.length) {
+          const lastSeason = seasons[0].season;
+          ApiRequest.get(`seasons?season=${lastSeason}`)
+            .then(({ data }) => {
+              setGenreStats(data.genre_stats);
+            })
+            .catch(() => {
+              setError(true);
+            });
+        } else {
+          setGenreStats({});
+        }
+      })
+      .catch(() => {
+        setError(true);
+      });
+  }, []);
 
   useEffect(() => {
     if (!editMode) {
@@ -110,7 +132,12 @@ const QuizForm = () => {
     );
   }
 
-  if ((!editMode && !quizDates) || (editMode && !quiz) || !genres) {
+  if (
+    (!editMode && !quizDates) ||
+    (editMode && !quiz) ||
+    !genres ||
+    !genreStats
+  ) {
     return <Loading />;
   }
 
@@ -172,6 +199,7 @@ const QuizForm = () => {
           {genres.map((genre, index) => (
             <Question
               genre={genre}
+              genreStats={genreStats}
               index={index}
               key={genre.id}
               quiz={quiz}

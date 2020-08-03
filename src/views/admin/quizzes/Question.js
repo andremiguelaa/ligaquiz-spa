@@ -12,6 +12,7 @@ import classes from './Quizzes.module.scss';
 
 const Question = ({
   genre,
+  genreStats,
   index,
   quiz: quizData,
   setFormData,
@@ -77,7 +78,8 @@ const Question = ({
                   }
                 }}
               />{' '}
-              {getGenreTranslation(subgenre.slug, language)} (? de{' '}
+              {getGenreTranslation(subgenre.slug, language)} (
+              {genreStats[subgenre.id] ? genreStats[subgenre.id] : '0'} de{' '}
               {subgenre.target})
             </label>
           ))}
