@@ -84,11 +84,13 @@ const QuizForm = () => {
           setSubmitting(false);
         });
     } else {
-      ApiRequest.post('quizzes', formData)
+      const newFormData = { ...formData };
+      newFormData.date = formatDate(quizDate);
+      ApiRequest.post('quizzes', newFormData)
         .then(() => {
           setSubmitting(false);
           toast.success(<Trans>Quiz criado com sucesso.</Trans>);
-          history.push(`/admin/quiz/${formData.date}/edit/`);
+          history.push(`/admin/quiz/${newFormData.date}/edit/`);
         })
         .catch(() => {
           toast.error(<Trans>Não foi possível criar o quiz.</Trans>);
@@ -157,10 +159,6 @@ const QuizForm = () => {
                     selected={quizDate}
                     onChange={(date) => {
                       setQuizDate(date);
-                      setFormData((prev) => ({
-                        ...prev,
-                        date: formatDate(date),
-                      }));
                     }}
                     dateFormat="yyyy-MM-dd"
                   />
@@ -187,9 +185,7 @@ const QuizForm = () => {
             <div className="control">
               <button
                 className={`button is-primary ${submitting && 'is-loading'}`}
-                disabled={
-                  (!editMode && !formData.date) || uploading || submitting
-                }
+                disabled={(!editMode && !quizDate) || uploading || submitting}
               >
                 <Trans>Gravar</Trans>
               </button>
