@@ -110,7 +110,7 @@ const SpecialQuizForm = () => {
         .then(() => {
           setSubmitting(false);
           toast.success(<Trans>Quiz especial criado com sucesso.</Trans>);
-          history.push(`/admin/quiz/${formData.date}/edit/`);
+          history.push(`/admin/special-quiz/${formData.date}/edit/`);
         })
         .catch(() => {
           toast.error(<Trans>Não foi possível criar o quiz especial.</Trans>);
