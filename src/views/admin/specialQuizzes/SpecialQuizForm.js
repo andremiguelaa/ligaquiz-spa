@@ -89,7 +89,7 @@ const SpecialQuizForm = () => {
       prev.user_id = author || null;
       return { ...prev };
     });
-  }, [quizDate, subject, description, author]);
+  }, [quizDate, subject, description, author, editMode]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
