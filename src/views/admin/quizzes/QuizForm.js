@@ -21,7 +21,7 @@ const QuizForm = () => {
     },
   ] = useStateValue();
   const history = useHistory();
-  const [error, setError] = useState(false);
+  const [error, setError] = useState();
   const [quizDates, setQuizDates] = useState();
   const [quizDate, setQuizDate] = useState();
   const [quiz, setQuiz] = useState();
@@ -44,15 +44,15 @@ const QuizForm = () => {
             .then(({ data }) => {
               setGenreStats(data.genre_stats);
             })
-            .catch(() => {
-              setError(true);
+            .catch(({ response }) => {
+              setError(response?.status);
             });
         } else {
           setGenreStats({});
         }
       })
-      .catch(() => {
-        setError(true);
+      .catch(({ response }) => {
+        setError(response?.status);
       });
   }, []);
 
@@ -69,8 +69,8 @@ const QuizForm = () => {
             }, [])
           );
         })
-        .catch(() => {
-          setError(true);
+        .catch(({ response }) => {
+          setError(response?.status);
         });
     } else {
       ApiRequest.get(`quizzes?date=${date}`)
@@ -86,15 +86,15 @@ const QuizForm = () => {
       .then(({ data }) => {
         setGenres(data);
       })
-      .catch(() => {
-        setError(true);
+      .catch(({ response }) => {
+        setError(response?.status);
       });
   }, [date, editMode]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
     setSubmitting(true);
-    setError(null);
+    setError();
     if (editMode) {
       ApiRequest.patch('quizzes', formData)
         .then(() => {
