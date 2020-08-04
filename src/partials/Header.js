@@ -79,16 +79,6 @@ const Header = () => {
               <i className="fa fa-btn fa-trophy" />
               &nbsp;<Trans>Ranking Nacional</Trans>
             </Link>
-            {/* 
-            <div className="navbar-item has-dropdown is-hoverable is-hidden">
-              <a className="navbar-link">More</a>
-              <div className="navbar-dropdown">
-                <a className="navbar-item">About</a>
-                <hr className="navbar-divider" />
-                <a className="navbar-item">Report an issue</a>
-              </div>
-            </div>
-            */}
           </div>
 
           <div className="navbar-end">
@@ -152,6 +142,10 @@ const Header = () => {
                       <Link to="/admin/notifications" className="navbar-item">
                         <i className="fa fa-btn fa-bell" />
                         &nbsp;<Trans>Notificações</Trans>
+                      </Link>
+                      <Link to="/admin/seasons" className="navbar-item">
+                        <i className="fa fa-btn fa-calendar" />
+                        &nbsp;<Trans>Temporadas</Trans>
                       </Link>
                       <hr className="navbar-divider" />
                     </>
