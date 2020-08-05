@@ -94,7 +94,7 @@ const Seasons = () => {
                             <>
                               <Link
                                 className="button"
-                                to={`/admin/seasons/${item.season}/edit`}
+                                to={`/admin/season/${item.season}/edit`}
                               >
                                 <span className="icon">
                                   <i className="fa fa-edit"></i>
