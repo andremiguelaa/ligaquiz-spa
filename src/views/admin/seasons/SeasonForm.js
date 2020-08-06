@@ -117,7 +117,6 @@ const SeasonForm = () => {
       ...formData,
       dates: normalizedDates,
     };
-    console.log(newFormData);
     if (editMode) {
       ApiRequest.patch('seasons', newFormData)
         .then(() => {

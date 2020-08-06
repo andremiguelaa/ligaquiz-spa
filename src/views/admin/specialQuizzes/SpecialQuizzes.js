@@ -8,6 +8,7 @@ import classnames from 'classnames';
 import { useStateValue } from 'state/State';
 import { convertToLongDate } from 'utils/formatDate';
 import ApiRequest from 'utils/ApiRequest';
+import Modal from 'components/Modal';
 import Loading from 'components/Loading';
 import Error from 'components/Error';
 import PageHeader from 'components/PageHeader';
@@ -26,12 +27,15 @@ const SpecialQuizzes = () => {
   ] = useStateValue();
   const [error, setError] = useState(false);
   const [quizzes, setQuizzes] = useState();
+  const [quizToDelete, setQuizToDelete] = useState();
+  const [deleting, setDeleting] = useState(false);
 
   useEffect(() => {
     getQuizzes();
   }, []);
 
   const getQuizzes = () => {
+    setQuizzes();
     ApiRequest.get('special-quizzes')
       .then(({ data }) => {
         setQuizzes(data);
@@ -42,15 +46,18 @@ const SpecialQuizzes = () => {
   };
 
   const deleteQuiz = (id) => {
-    setQuizzes();
+    setDeleting(true);
     ApiRequest.delete('special-quizzes', { data: { id } })
       .then(() => {
         toast.success(<Trans>Quiz especial apagado com sucesso.</Trans>);
         getQuizzes();
+        setQuizToDelete();
       })
       .catch(() => {
         toast.error(<Trans>Não foi possível apagar o quiz especial.</Trans>);
-        getQuizzes();
+      })
+      .finally(() => {
+        setDeleting(false);
       });
   };
 
@@ -65,7 +72,7 @@ const SpecialQuizzes = () => {
   return (
     <>
       <PageHeader title={<Trans>Quizzes Especiais</Trans>} />
-      <div className="section">
+      <section className="section">
         {!quizzes ? (
           <Loading />
         ) : (
@@ -131,7 +138,7 @@ const SpecialQuizzes = () => {
                               <button
                                 className="button is-danger"
                                 onClick={() => {
-                                  deleteQuiz(item.id);
+                                  setQuizToDelete(item.id);
                                 }}
                               >
                                 <span className="icon">
@@ -159,7 +166,20 @@ const SpecialQuizzes = () => {
             )}
           </>
         )}
-      </div>
+      </section>
+      {quizToDelete && (
+        <Modal
+          type="danger"
+          open
+          title={<Trans>Apagar quiz especial</Trans>}
+          body={
+            <Trans>Tens a certeza que queres apagar este quiz especial?</Trans>
+          }
+          action={() => deleteQuiz(quizToDelete)}
+          doingAction={deleting}
+          onClose={() => setQuizToDelete()}
+        />
+      )}
     </>
   );
 };

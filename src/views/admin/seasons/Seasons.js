@@ -25,6 +25,7 @@ const Seasons = () => {
   }, []);
 
   const getSeasons = () => {
+    setSeasons();
     ApiRequest.get('seasons')
       .then(({ data }) => {
         setSeasons(data);
@@ -35,19 +36,18 @@ const Seasons = () => {
   };
 
   const deleteSeason = (id) => {
-    setSeasons();
     setDeleting(true);
     ApiRequest.delete('seasons', { data: { id } })
       .then(() => {
         toast.success(<Trans>Temporada apagada com sucesso.</Trans>);
+        getSeasons();
+        setSeasonToDelete();
       })
       .catch(() => {
         toast.error(<Trans>Não foi possível apagar a temporada.</Trans>);
       })
       .finally(() => {
         setDeleting(false);
-        setSeasonToDelete();
-        getSeasons();
       });
   };
 
