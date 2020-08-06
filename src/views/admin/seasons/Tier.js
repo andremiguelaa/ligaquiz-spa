@@ -14,6 +14,7 @@ const Tier = ({
 }) => {
   const [addPlayersModal, setAddPlayersModal] = useState(false);
   const [playersToAdd, setPlayersToAdd] = useState([]);
+  const [deleteModal, setDeleteModal] = useState(false);
 
   const userToShow = [
     ...new Set(playersToAdd.map((id) => users[id]).concat(remainingUsers)),
@@ -62,10 +63,7 @@ const Tier = ({
             type="button"
             className="button is-danger"
             onClick={() => {
-              setFormData((prev) => ({
-                ...prev,
-                leagues: [...prev.leagues.slice(0, prev.leagues.length - 1)],
-              }));
+              setDeleteModal(true);
             }}
           >
             <span className="icon">
@@ -130,6 +128,21 @@ const Tier = ({
             });
           }}
           onClose={() => setAddPlayersModal(false)}
+        />
+      )}
+      {deleteModal && (
+        <Modal
+          type="danger"
+          open
+          title={<Trans>Apagar divisão</Trans>}
+          body={<Trans>Tens a certeza que queres apagar esta divisão?</Trans>}
+          action={() => {
+            setFormData((prev) => ({
+              ...prev,
+              leagues: [...prev.leagues.slice(0, prev.leagues.length - 1)],
+            }));
+          }}
+          onClose={() => setDeleteModal(false)}
         />
       )}
     </>
