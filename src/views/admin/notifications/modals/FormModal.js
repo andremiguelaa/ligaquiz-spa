@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { Trans } from '@lingui/macro';
 import { toast } from 'react-toastify';
-import DateRangePicker from '@wojtekmaj/react-daterange-picker';
+import DatePicker from 'react-datepicker';
 import marked from 'marked';
 
-import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
 import Modal from 'components/Modal';
 import {
@@ -25,11 +24,6 @@ const FormModal = ({
   setNotifications,
   closeModal,
 }) => {
-  const [
-    {
-      settings: { language },
-    },
-  ] = useStateValue();
   const [submitting, setSubmitting] = useState(false);
   const [dates, setDates] = useState(
     notification
@@ -59,17 +53,45 @@ const FormModal = ({
         <>
           <div className="field">
             <label className="label">
-              <Trans>Datas</Trans>
+              <Trans>Início</Trans>
             </label>
             <div className="control has-icons-left">
-              <DateRangePicker
-                value={dates}
-                onChange={setDates}
-                calendarIcon={null}
-                clearIcon={null}
+              <DatePicker
+                selected={dates[0]}
+                onChange={(date) => {
+                  setDates((prev) => {
+                    if (date > prev[1]) {
+                      return [date, date];
+                    }
+                    return [date, prev[1]];
+                  });
+                }}
+                selectsStart
+                startDate={dates[0]}
+                endDate={dates[1]}
+                dateFormat="yyyy-MM-dd"
                 minDate={new Date()}
-                format="yyyy-MM-dd"
-                locale={language}
+              />
+              <span className="icon is-small is-left">
+                <i className="fa fa-calendar" />
+              </span>
+            </div>
+          </div>
+          <div className="field">
+            <label className="label">
+              <Trans>Fim</Trans>
+            </label>
+            <div className="control has-icons-left">
+              <DatePicker
+                selected={dates[1]}
+                onChange={(date) => {
+                  setDates((prev) => [prev[0], date]);
+                }}
+                selectsEnd
+                startDate={dates[0]}
+                endDate={dates[1]}
+                minDate={dates[0]}
+                dateFormat="yyyy-MM-dd"
               />
               <span className="icon is-small is-left">
                 <i className="fa fa-calendar" />
@@ -159,9 +181,7 @@ const FormModal = ({
             end_date: `${formatDate(dates[1])} 23:59:59`,
           })
             .then(({ data }) => {
-              setNotifications(
-                [...notifications, data].sort(notificationSort)
-              );
+              setNotifications([...notifications, data].sort(notificationSort));
               toast.success(<Trans>Notificação criada com sucesso.</Trans>);
               closeModal();
             })

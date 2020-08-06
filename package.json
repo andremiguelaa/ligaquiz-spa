@@ -5,7 +5,6 @@
   "homepage": "https://spa.ligaquiz.pt",
   "dependencies": {
     "@creativebulma/bulma-tooltip": "^1.2.0",
-    "@wojtekmaj/react-daterange-picker": "^3.0.0",
     "bulma-switch": "^2.0.0",
     "chart.js": "^2.9.3",
     "date-fns": "^2.15.0",
