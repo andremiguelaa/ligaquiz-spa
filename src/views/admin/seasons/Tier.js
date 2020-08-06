@@ -9,11 +9,18 @@ const Tier = ({
   formData,
   setFormData,
   users,
-  validUsers,
+  remainingUsers,
   disabled,
 }) => {
   const [addPlayersModal, setAddPlayersModal] = useState(false);
   const [playersToAdd, setPlayersToAdd] = useState([]);
+
+  const userToShow = [
+    ...new Set(playersToAdd.map((id) => users[id]).concat(remainingUsers)),
+  ].sort((a, b) =>
+    `${a.name} ${a.surname}`.localeCompare(`${b.name} ${b.surname}`)
+  );
+
   return (
     <>
       <fieldset className="fieldset">
@@ -82,7 +89,7 @@ const Tier = ({
               </Trans>
               <br />
               <br />
-              {validUsers.map((user) => (
+              {userToShow.map((user) => (
                 <div key={user.id}>
                   <label className="checkbox">
                     <input

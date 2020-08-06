@@ -52,11 +52,7 @@ const SeasonForm = () => {
             }
           );
           setUsers(usersObject.users);
-          setValidUsers(
-            usersObject.validUsers.sort((a, b) =>
-              `${a.name} ${a.surname}`.localeCompare(`${b.name} ${b.surname}`)
-            )
-          );
+          setValidUsers(usersObject.validUsers);
         })
         .catch(() => {
           setError(true);
@@ -157,7 +153,7 @@ const SeasonForm = () => {
     );
   }
 
-  if (!minDate || !users) {
+  if (!minDate || !users || !validUsers) {
     return <Loading />;
   }
 
@@ -170,6 +166,18 @@ const SeasonForm = () => {
     }, 0)
   );
 
+  const selectedUsers = formData.leagues.reduce(
+    (acc, item) => acc.concat(item.user_ids),
+    []
+  );
+
+  const remainingUsers = validUsers.reduce((acc, item) => {
+    if (!selectedUsers.includes(item.id)) {
+      acc.push(item);
+    }
+    return acc;
+  }, []);
+
   return (
     <>
       <PageHeader
@@ -177,7 +185,7 @@ const SeasonForm = () => {
           !editMode ? (
             <Trans>Criar temporada</Trans>
           ) : (
-            <Trans>Editar temporada x</Trans>
+            <Trans>Editar temporada {season}</Trans>
           )
         }
       />
@@ -239,38 +247,40 @@ const SeasonForm = () => {
                   formData={formData}
                   setFormData={setFormData}
                   users={users}
-                  validUsers={validUsers}
+                  remainingUsers={remainingUsers}
                   disabled={submitting}
                 />
               ))}
             </fieldset>
           )}
-          <div className="field">
-            <button
-              disabled={submitting}
-              type="button"
-              className="button"
-              onClick={() => {
-                setFormData((prev) => ({
-                  ...prev,
-                  leagues: [
-                    ...prev.leagues,
-                    {
-                      tier: prev.leagues.length + 1,
-                      user_ids: [],
-                    },
-                  ],
-                }));
-              }}
-            >
-              <span className="icon">
-                <i className="fa fa-plus"></i>
-              </span>
-              <span>
-                <Trans>Adicionar divisão</Trans>
-              </span>
-            </button>
-          </div>
+          {remainingUsers.length > 0 && (
+            <div className="field">
+              <button
+                disabled={submitting}
+                type="button"
+                className="button"
+                onClick={() => {
+                  setFormData((prev) => ({
+                    ...prev,
+                    leagues: [
+                      ...prev.leagues,
+                      {
+                        tier: prev.leagues.length + 1,
+                        user_ids: [],
+                      },
+                    ],
+                  }));
+                }}
+              >
+                <span className="icon">
+                  <i className="fa fa-plus"></i>
+                </span>
+                <span>
+                  <Trans>Adicionar divisão</Trans>
+                </span>
+              </button>
+            </div>
+          )}
           <div className="field">
             <div className="control">
               <button
