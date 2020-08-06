@@ -5,6 +5,7 @@ import moment from 'moment';
 import { toast } from 'react-toastify';
 
 import ApiRequest from 'utils/ApiRequest';
+import Modal from 'components/Modal';
 import Loading from 'components/Loading';
 import Error from 'components/Error';
 import PageHeader from 'components/PageHeader';
@@ -16,6 +17,8 @@ const Seasons = () => {
   let history = useHistory();
   const [error, setError] = useState(false);
   const [seasons, setSeasons] = useState();
+  const [seasonToDelete, setSeasonToDelete] = useState();
+  const [deleting, setDeleting] = useState(false);
 
   useEffect(() => {
     getSeasons();
@@ -33,13 +36,17 @@ const Seasons = () => {
 
   const deleteSeason = (id) => {
     setSeasons();
+    setDeleting(true);
     ApiRequest.delete('seasons', { data: { id } })
       .then(() => {
         toast.success(<Trans>Temporada apagada com sucesso.</Trans>);
-        getSeasons();
       })
       .catch(() => {
         toast.error(<Trans>Não foi possível apagar a temporada.</Trans>);
+      })
+      .finally(() => {
+        setDeleting(false);
+        setSeasonToDelete();
         getSeasons();
       });
   };
@@ -90,7 +97,8 @@ const Seasons = () => {
                     render: (item) => (
                       <>
                         <div className="buttons has-addons is-pulled-right">
-                          {item.rounds[0].date > moment().format('YYYY-MM-DD') && (
+                          {item.rounds[0].date >
+                            moment().format('YYYY-MM-DD') && (
                             <>
                               <Link
                                 className="button"
@@ -103,7 +111,7 @@ const Seasons = () => {
                               <button
                                 className="button is-danger"
                                 onClick={() => {
-                                  deleteSeason(item.id);
+                                  setSeasonToDelete(item.id);
                                 }}
                               >
                                 <span className="icon">
@@ -132,6 +140,17 @@ const Seasons = () => {
           </>
         )}
       </div>
+      {seasonToDelete && (
+        <Modal
+          type="danger"
+          open
+          title={<Trans>Apagar temporada</Trans>}
+          body={<Trans>Tens a certeza que queres apagar esta temporada?</Trans>}
+          action={() => deleteSeason(seasonToDelete)}
+          doingAction={deleting}
+          onClose={() => setSeasonToDelete()}
+        />
+      )}
     </>
   );
 };
