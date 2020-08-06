@@ -25,6 +25,7 @@ const SeasonForm = () => {
   const [error, setError] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [minDate, setMinDate] = useState();
+  const [maxDate, setMaxDate] = useState();
   const [formData, setFormData] = useState({
     dates: [...Array(20)],
     leagues: [],
@@ -34,35 +35,66 @@ const SeasonForm = () => {
   const editMode = Boolean(season);
 
   useEffect(() => {
-    ApiRequest.get(`users`)
-      .then(({ data }) => {
-        const usersObject = data.reduce(
-          (acc, user) => {
-            acc.users[user.id] = user;
-            if (new Date(user.roles.regular_player) > new Date()) {
-              acc.validUsers.push(user);
+    if (!users) {
+      ApiRequest.get(`users`)
+        .then(({ data }) => {
+          const usersObject = data.reduce(
+            (acc, user) => {
+              acc.users[user.id] = user;
+              if (new Date(user.roles.regular_player) > new Date()) {
+                acc.validUsers.push(user);
+              }
+              return acc;
+            },
+            {
+              users: [],
+              validUsers: [],
             }
-            return acc;
-          },
-          {
-            users: [],
-            validUsers: [],
-          }
-        );
-        setUsers(usersObject.users);
-        setValidUsers(
-          usersObject.validUsers.sort((a, b) =>
-            `${a.name} ${a.surname}`.localeCompare(`${b.name} ${b.surname}`)
-          )
-        );
-      })
-      .catch(() => {
-        setError(true);
-      });
-    ApiRequest.get(`seasons?rounds=true`)
+          );
+          setUsers(usersObject.users);
+          setValidUsers(
+            usersObject.validUsers.sort((a, b) =>
+              `${a.name} ${a.surname}`.localeCompare(`${b.name} ${b.surname}`)
+            )
+          );
+        })
+        .catch(() => {
+          setError(true);
+        });
+    }
+    setMinDate();
+    ApiRequest.get(`seasons`)
       .then(({ data }) => {
         let realMinDate = getDayDifference(new Date(), 1);
-        if (data.length) {
+        if (editMode) {
+          const currentSeasonIndex = data.findIndex(
+            (item) => item.season === parseInt(season)
+          );
+          if (currentSeasonIndex > 0) {
+            setMaxDate(new Date(data[currentSeasonIndex - 1].rounds[0].date));
+          }
+          if (data[currentSeasonIndex + 1]) {
+            const lastDate = getDayDifference(
+              new Date(
+                data[currentSeasonIndex + 1].rounds[
+                  data[0].rounds.length - 1
+                ].date
+              ),
+              1
+            );
+            if (lastDate > realMinDate) {
+              realMinDate = lastDate;
+            }
+          }
+          const newFormData = {
+            id: data[currentSeasonIndex].id,
+            dates: data[currentSeasonIndex].rounds.map(
+              (round) => new Date(round.date)
+            ),
+            leagues: data[currentSeasonIndex].leagues,
+          };
+          setFormData(newFormData);
+        } else if (data.length) {
           const lastDate = getDayDifference(
             new Date(data[0].rounds[data[0].rounds.length - 1].date),
             1
@@ -76,7 +108,7 @@ const SeasonForm = () => {
       .catch(({ response }) => {
         setError(response?.status);
       });
-  }, []);
+  }, [users, season, editMode]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -166,12 +198,12 @@ const SeasonForm = () => {
                       minDate={
                         index > 0
                           ? getDayDifference(formData.dates[index - 1], 1)
-                          : getDayDifference(new Date(), 1)
+                          : minDate
                       }
                       maxDate={
                         index < formData.dates.length - 1
                           ? getDayDifference(formData.dates[index + 1], -1)
-                          : undefined
+                          : maxDate
                       }
                       selected={formData.dates[index]}
                       onChange={(date) => {

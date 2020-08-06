@@ -20,7 +20,14 @@ const Seasons = () => {
   useEffect(() => {
     ApiRequest.get(`seasons`)
       .then(({ data }) => {
-        setSeasonsList(data);
+        setSeasonsList(
+          data.reduce((acc, season) => {
+            if (new Date(season.rounds[0].date) < new Date()) {
+              acc.push(season);
+            }
+            return acc;
+          }, [])
+        );
         setLoading(false);
       })
       .catch(() => {

@@ -22,7 +22,7 @@ const Seasons = () => {
   }, []);
 
   const getSeasons = () => {
-    ApiRequest.get('seasons?rounds=true')
+    ApiRequest.get('seasons')
       .then(({ data }) => {
         setSeasons(data);
       })
