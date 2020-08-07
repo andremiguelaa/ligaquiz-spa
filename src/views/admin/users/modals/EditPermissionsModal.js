@@ -7,8 +7,6 @@ import ApiRequest from 'utils/ApiRequest';
 import Modal from 'components/Modal';
 import formatDate from 'utils/formatDate';
 
-import classes from '../Users.module.scss';
-
 const EditPermissionsModal = ({
   userToEdit,
   setUserToEdit,
