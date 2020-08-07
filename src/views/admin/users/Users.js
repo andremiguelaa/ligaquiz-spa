@@ -241,6 +241,44 @@ const Users = () => {
                               )}
                             </I18n>
                           )}
+                          {user.roles?.quiz_editor && (
+                            <I18n>
+                              {({ i18n }) => (
+                                <span
+                                  className="icon"
+                                  data-tooltip={i18n._(t`Editor de Quizzes`)}
+                                >
+                                  <i className="fa fa-question-circle"></i>
+                                </span>
+                              )}
+                            </I18n>
+                          )}
+                          {user.roles?.special_quiz_editor && (
+                            <I18n>
+                              {({ i18n }) => (
+                                <span
+                                  className="icon"
+                                  data-tooltip={i18n._(
+                                    t`Editor de Quizzes Especiais`
+                                  )}
+                                >
+                                  <i className="fa fa-question-circle-o"></i>
+                                </span>
+                              )}
+                            </I18n>
+                          )}
+                          {user.roles?.answer_reviewer && (
+                            <I18n>
+                              {({ i18n }) => (
+                                <span
+                                  className="icon"
+                                  data-tooltip={i18n._(t`Corrector`)}
+                                >
+                                  <i className="fa fa-check-square-o"></i>
+                                </span>
+                              )}
+                            </I18n>
+                          )}
                           {user.roles?.blocked && (
                             <I18n>
                               {({ i18n }) => (

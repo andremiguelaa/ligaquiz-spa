@@ -58,7 +58,7 @@ const EditPermissionsModal = ({
         </Trans>
       }
       body={
-        <div className={classes.editPermissionModalBody}>
+        <>
           <fieldset className="fieldset">
             <div className="field">
               <input
@@ -166,6 +166,77 @@ const EditPermissionsModal = ({
           <fieldset className="fieldset">
             <div className="field">
               <input
+                id="quiz-editor"
+                type="checkbox"
+                className="switch"
+                value="true"
+                onClick={(event) => {
+                  setUserToEdit({
+                    ...userToEdit,
+                    newRoles: {
+                      ...userToEdit.newRoles,
+                      quiz_editor: event.target.checked,
+                    },
+                  });
+                }}
+                defaultChecked={Boolean(userToEdit.newRoles?.quiz_editor)}
+              />
+              <label htmlFor="quiz-editor">
+                <Trans>Editor de Quizzes</Trans>
+              </label>
+            </div>
+          </fieldset>
+          <fieldset className="fieldset">
+            <div className="field">
+              <input
+                id="special-quiz-editor"
+                type="checkbox"
+                className="switch"
+                value="true"
+                onClick={(event) => {
+                  setUserToEdit({
+                    ...userToEdit,
+                    newRoles: {
+                      ...userToEdit.newRoles,
+                      special_quiz_editor: event.target.checked,
+                    },
+                  });
+                }}
+                defaultChecked={Boolean(
+                  userToEdit.newRoles?.special_quiz_editor
+                )}
+              />
+              <label htmlFor="special-quiz-editor">
+                <Trans>Editor de Quizzes Especiais</Trans>
+              </label>
+            </div>
+          </fieldset>
+          <fieldset className="fieldset">
+            <div className="field">
+              <input
+                id="answer-reviewer"
+                type="checkbox"
+                className="switch"
+                value="true"
+                onClick={(event) => {
+                  setUserToEdit({
+                    ...userToEdit,
+                    newRoles: {
+                      ...userToEdit.newRoles,
+                      answer_reviewer: event.target.checked,
+                    },
+                  });
+                }}
+                defaultChecked={Boolean(userToEdit.newRoles?.answer_reviewer)}
+              />
+              <label htmlFor="answer-reviewer">
+                <Trans>Corrector</Trans>
+              </label>
+            </div>
+          </fieldset>
+          <fieldset className="fieldset">
+            <div className="field">
+              <input
                 id="blocked"
                 type="checkbox"
                 className="switch"
@@ -186,7 +257,7 @@ const EditPermissionsModal = ({
               </label>
             </div>
           </fieldset>
-        </div>
+        </>
       }
       action={() => {
         patchUser(userToEdit);
