@@ -1,0 +1,29 @@
+.question {
+  .media {
+    width: 300px;
+    max-width: 100%;
+    margin: 1rem auto 0;
+    & > * {
+      width: 100%;
+    }
+  }
+
+  dl {
+    margin-top: 2rem;
+    dt {
+      font-weight: bold;
+      display: inline-block;
+      &::after {
+        content: ':';
+      }
+    }
+    dd {
+      display: inline-block;
+      margin-left: 0.2rem;
+    }
+  }
+
+  .table {
+    margin: 2rem 0;
+  }
+}

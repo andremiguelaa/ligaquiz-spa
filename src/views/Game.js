@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 import classnames from 'classnames';
 
@@ -174,9 +174,11 @@ const Game = () => {
                           )}
                         </td>
                         <td className="has-text-centered">
-                          {question.percentage
-                            ? `${Math.round(question.percentage)}%`
-                            : '-'}
+                          <Link to={`/question/${question.id}`}>
+                            {question.percentage
+                              ? `${Math.round(question.percentage)}%`
+                              : '-'}
+                          </Link>
                         </td>
                         {!game.solo && (
                           <td

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 
 import { useStateValue } from 'state/State';
@@ -98,7 +98,9 @@ const Quiz = () => {
                 <strong>
                   <Trans>Percentagem de acerto</Trans>:
                 </strong>{' '}
-                {Math.round(question.percentage)}%
+                <Link to={`/question/${question.id}`}>
+                  {Math.round(question.percentage)}%
+                </Link>
               </div>
             )}
             {question.media_id && (

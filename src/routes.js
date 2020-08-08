@@ -16,6 +16,7 @@ import Seasons from 'views/Seasons';
 import Quizzes from 'views/Quizzes';
 import SpecialQuizzes from 'views/SpecialQuizzes';
 import Game from 'views/Game';
+import Question from 'views/Question';
 import Quiz from 'views/Quiz';
 
 import NationalRankingAdminRankings from 'views/admin/nationalRanking/Rankings';
@@ -113,6 +114,11 @@ export default [
     title: <Trans>Jogo</Trans>,
     path: '/game/:date/:user1/:user2?',
     component: Game,
+  },
+  {
+    title: <Trans>Pergunta</Trans>,
+    path: '/question/:id',
+    component: Question,
   },
   {
     title: <Trans>Quiz</Trans>,
