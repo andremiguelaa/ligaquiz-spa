@@ -209,13 +209,9 @@ msgstr "Social Sciences"
 
 #: src/partials/Header.js:69
 #: src/routes.js:94
-#: src/views/Ranking.js:156
+#: src/views/Ranking.js:151
 msgid "Classificação"
 msgstr "Ranking"
-
-#: src/views/Ranking.js:154
-msgid "Classificação ({seasonNumber}ª temporada)"
-msgstr "Ranking (Season {seasonNumber})"
 
 #: src/utils/getGenreTranslation.js:43
 msgid "Comida e Bebida"
@@ -1284,7 +1280,7 @@ msgid "Selecciona os jogadores que jogaram esta prova:"
 msgstr "Select players for this event:"
 
 #: src/views/Quizzes.js:84
-#: src/views/Ranking.js:200
+#: src/views/Ranking.js:193
 #: src/views/Seasons.js:84
 #: src/views/SpecialQuizzes.js:129
 #: src/views/admin/nationalRanking/Events/List.js:78
@@ -1367,6 +1363,10 @@ msgstr "Season successfully saved."
 #: src/views/admin/seasons/Seasons.js:98
 msgid "Temporada {0}"
 msgstr "Season {0}"
+
+#: src/views/Ranking.js:152
+msgid "Temporada {seasonNumber}"
+msgstr "Season {seasonNumber}"
 
 #: src/routes.js:199
 msgid "Temporada | Criar"
@@ -1531,7 +1531,7 @@ msgstr "{0} {1}"
 msgid "{0} {1} e {2} {3}"
 msgstr "{0} {1} and {2} {3}"
 
-#: src/views/Ranking.js:171
+#: src/views/Ranking.js:164
 #: src/views/admin/seasons/Tier.js:29
 msgid "{0}ª divisão"
 msgstr "Tier {0}"

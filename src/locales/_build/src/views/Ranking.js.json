@@ -7,19 +7,19 @@
       ]
     ]
   },
-  "Classificação ({seasonNumber}ª temporada)": {
-    "origin": [
-      [
-        "src/views/Ranking.js",
-        154
-      ]
-    ]
-  },
   "Classificação": {
     "origin": [
       [
         "src/views/Ranking.js",
-        156
+        151
+      ]
+    ]
+  },
+  "Temporada {seasonNumber}": {
+    "origin": [
+      [
+        "src/views/Ranking.js",
+        152
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/views/Ranking.js",
-        171
+        164
       ]
     ]
   },
@@ -35,7 +35,7 @@
     "origin": [
       [
         "src/views/Ranking.js",
-        200
+        193
       ]
     ]
   }

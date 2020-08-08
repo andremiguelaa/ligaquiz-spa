@@ -148,15 +148,8 @@ const Ranking = () => {
   return (
     <>
       <PageHeader
-        title={
-          <>
-            {seasonNumber ? (
-              <Trans>Classificação ({seasonNumber}ª temporada)</Trans>
-            ) : (
-              <Trans>Classificação</Trans>
-            )}
-          </>
-        }
+        title={<Trans>Classificação</Trans>}
+        subtitle={<Trans>Temporada {seasonNumber}</Trans>}
       />
       <div className="tabs is-fullwidth">
         <ul>
