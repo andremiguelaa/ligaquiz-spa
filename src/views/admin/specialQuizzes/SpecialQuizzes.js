@@ -14,15 +14,17 @@ import Error from 'components/Error';
 import PageHeader from 'components/PageHeader';
 import EmptyState from 'components/EmptyState';
 import PaginatedTable from 'components/PaginatedTable';
+import NoMatch from 'views/NoMatch';
 
 import classes from './SpecialQuizzes.module.scss';
 
 const SpecialQuizzes = () => {
   const { page } = useParams();
-  let history = useHistory();
+  const history = useHistory();
   const [
     {
       settings: { language },
+      user,
     },
   ] = useStateValue();
   const [error, setError] = useState(false);
@@ -61,7 +63,20 @@ const SpecialQuizzes = () => {
       });
   };
 
+  if (
+    !(
+      user.roles.admin ||
+      user.roles.special_quiz_editor ||
+      user.roles.answer_reviewer
+    )
+  ) {
+    return <NoMatch />;
+  }
+
   if (error) {
+    if (error === 404) {
+      return <NoMatch />;
+    }
     return (
       <Error>
         <Trans>Erro de servidor. Tenta mais tarde.</Trans>
@@ -77,16 +92,23 @@ const SpecialQuizzes = () => {
           <Loading />
         ) : (
           <>
-            <Link className="button is-primary" to="/admin/special-quiz/create">
-              <span className="icon">
-                <i className="fa fa-plus"></i>
-              </span>
-              <span>
-                <Trans>Criar quiz especial</Trans>
-              </span>
-            </Link>
-            <br />
-            <br />
+            {(user.roles.admin || user.roles.special_quiz_editor) && (
+              <>
+                <Link
+                  className="button is-primary"
+                  to="/admin/special-quiz/create"
+                >
+                  <span className="icon">
+                    <i className="fa fa-plus"></i>
+                  </span>
+                  <span>
+                    <Trans>Criar quiz especial</Trans>
+                  </span>
+                </Link>
+                <br />
+                <br />
+              </>
+            )}
             {quizzes.length ? (
               <PaginatedTable
                 array={quizzes}
@@ -115,38 +137,42 @@ const SpecialQuizzes = () => {
                     render: (item) => (
                       <>
                         <div className="buttons has-addons is-pulled-right">
-                          {item.date <= moment().format('YYYY-MM-DD') && (
-                            <Link
-                              className="button"
-                              to={`/admin/special-quiz/${item.date}/correct`}
-                            >
-                              <span className="icon">
-                                <i className="fa fa-check"></i>
-                              </span>
-                            </Link>
-                          )}
-                          {item.date > moment().format('YYYY-MM-DD') && (
-                            <>
+                          {item.date <= moment().format('YYYY-MM-DD') &&
+                            (user.roles.admin ||
+                              user.roles.answer_reviewer) && (
                               <Link
                                 className="button"
-                                to={`/admin/special-quiz/${item.date}/edit`}
+                                to={`/admin/special-quiz/${item.date}/correct`}
                               >
                                 <span className="icon">
-                                  <i className="fa fa-edit"></i>
+                                  <i className="fa fa-check"></i>
                                 </span>
                               </Link>
-                              <button
-                                className="button is-danger"
-                                onClick={() => {
-                                  setQuizToDelete(item.id);
-                                }}
-                              >
-                                <span className="icon">
-                                  <i className="fa fa-trash"></i>
-                                </span>
-                              </button>
-                            </>
-                          )}
+                            )}
+                          {item.date > moment().format('YYYY-MM-DD') &&
+                            (user.roles.admin ||
+                              user.roles.special_quiz_editor) && (
+                              <>
+                                <Link
+                                  className="button"
+                                  to={`/admin/special-quiz/${item.date}/edit`}
+                                >
+                                  <span className="icon">
+                                    <i className="fa fa-edit"></i>
+                                  </span>
+                                </Link>
+                                <button
+                                  className="button is-danger"
+                                  onClick={() => {
+                                    setQuizToDelete(item.id);
+                                  }}
+                                >
+                                  <span className="icon">
+                                    <i className="fa fa-trash"></i>
+                                  </span>
+                                </button>
+                              </>
+                            )}
                         </div>
                       </>
                     ),

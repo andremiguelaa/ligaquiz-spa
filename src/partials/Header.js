@@ -177,6 +177,12 @@ const Header = () => {
                           &nbsp;<Trans>Quizzes especiais</Trans>
                         </Link>
                       )}
+                      {(user.roles.admin || user.roles.quiz_editor) && (
+                        <Link to="/admin/search" className="navbar-item">
+                          <i className="fa fa-btn fa-search" />
+                          &nbsp;<Trans>Pesquisa de perguntas</Trans>
+                        </Link>
+                      )}
                       <hr className="navbar-divider" />
                     </>
                   )}

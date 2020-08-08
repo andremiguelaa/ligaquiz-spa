@@ -4,6 +4,7 @@ import { Trans } from '@lingui/macro';
 import moment from 'moment';
 import { toast } from 'react-toastify';
 
+import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
 import Modal from 'components/Modal';
 import Loading from 'components/Loading';
@@ -11,10 +12,12 @@ import Error from 'components/Error';
 import PageHeader from 'components/PageHeader';
 import EmptyState from 'components/EmptyState';
 import PaginatedTable from 'components/PaginatedTable';
+import NoMatch from 'views/NoMatch';
 
 const Seasons = () => {
   const { page } = useParams();
-  let history = useHistory();
+  const history = useHistory();
+  const [{ user }] = useStateValue();
   const [error, setError] = useState(false);
   const [seasons, setSeasons] = useState();
   const [seasonToDelete, setSeasonToDelete] = useState();
@@ -50,6 +53,10 @@ const Seasons = () => {
         setDeleting(false);
       });
   };
+
+  if (!user.roles.admin) {
+    return <NoMatch />;
+  }
 
   if (error) {
     return (

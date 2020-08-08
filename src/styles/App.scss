@@ -88,6 +88,12 @@ button.navbar-link {
   margin-left: 0 !important;
 }
 
+.pagination-previous,
+.pagination-next,
+.pagination-link {
+  cursor: pointer;
+}
+
 .fieldset {
   border: 1px solid $grey-lighter;
   padding: 1rem;

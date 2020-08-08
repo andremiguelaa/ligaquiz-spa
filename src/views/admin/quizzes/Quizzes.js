@@ -13,13 +13,15 @@ import Error from 'components/Error';
 import PageHeader from 'components/PageHeader';
 import EmptyState from 'components/EmptyState';
 import PaginatedTable from 'components/PaginatedTable';
+import NoMatch from 'views/NoMatch';
 
 const Quizzes = () => {
   const { page } = useParams();
-  let history = useHistory();
+  const history = useHistory();
   const [
     {
       settings: { language },
+      user,
     },
   ] = useStateValue();
   const [error, setError] = useState(false);
@@ -58,7 +60,20 @@ const Quizzes = () => {
       });
   };
 
+  if (
+    !(
+      user.roles.admin ||
+      user.roles.quiz_editor ||
+      user.roles.answer_reviewer
+    )
+  ) {
+    return <NoMatch />;
+  }
+
   if (error) {
+    if (error === 404) {
+      return <NoMatch />;
+    }
     return (
       <Error>
         <Trans>Erro de servidor. Tenta mais tarde.</Trans>
@@ -74,16 +89,20 @@ const Quizzes = () => {
           <Loading />
         ) : (
           <>
-            <Link className="button is-primary" to="/admin/quiz/create">
-              <span className="icon">
-                <i className="fa fa-plus"></i>
-              </span>
-              <span>
-                <Trans>Criar quiz</Trans>
-              </span>
-            </Link>
-            <br />
-            <br />
+            {(user.roles.admin || user.roles.quiz_editor) && (
+              <>
+                <Link className="button is-primary" to="/admin/quiz/create">
+                  <span className="icon">
+                    <i className="fa fa-plus"></i>
+                  </span>
+                  <span>
+                    <Trans>Criar quiz</Trans>
+                  </span>
+                </Link>
+                <br />
+                <br />
+              </>
+            )}
             {quizzes.length ? (
               <PaginatedTable
                 array={quizzes}
@@ -104,38 +123,40 @@ const Quizzes = () => {
                     render: (item) => (
                       <>
                         <div className="buttons has-addons is-pulled-right">
-                          {item.date <= moment().format('YYYY-MM-DD') && (
-                            <Link
-                              className="button"
-                              to={`/admin/quiz/${item.date}/correct`}
-                            >
-                              <span className="icon">
-                                <i className="fa fa-check"></i>
-                              </span>
-                            </Link>
-                          )}
-                          {item.date > moment().format('YYYY-MM-DD') && (
-                            <>
+                          {item.date <= moment().format('YYYY-MM-DD') &&
+                            (user.roles.admin || user.roles.answer_reviewer) && (
                               <Link
                                 className="button"
-                                to={`/admin/quiz/${item.date}/edit`}
+                                to={`/admin/quiz/${item.date}/correct`}
                               >
                                 <span className="icon">
-                                  <i className="fa fa-edit"></i>
+                                  <i className="fa fa-check"></i>
                                 </span>
                               </Link>
-                              <button
-                                className="button is-danger"
-                                onClick={() => {
-                                  setQuizToDelete(item.id);
-                                }}
-                              >
-                                <span className="icon">
-                                  <i className="fa fa-trash"></i>
-                                </span>
-                              </button>
-                            </>
-                          )}
+                            )}
+                          {item.date > moment().format('YYYY-MM-DD') &&
+                            (user.roles.admin || user.roles.quiz_editor) && (
+                              <>
+                                <Link
+                                  className="button"
+                                  to={`/admin/quiz/${item.date}/edit`}
+                                >
+                                  <span className="icon">
+                                    <i className="fa fa-edit"></i>
+                                  </span>
+                                </Link>
+                                <button
+                                  className="button is-danger"
+                                  onClick={() => {
+                                    setQuizToDelete(item.id);
+                                  }}
+                                >
+                                  <span className="icon">
+                                    <i className="fa fa-trash"></i>
+                                  </span>
+                                </button>
+                              </>
+                            )}
                         </div>
                       </>
                     ),

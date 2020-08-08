@@ -1,17 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { Trans } from '@lingui/macro';
 
+import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
 import Loading from 'components/Loading';
 import Error from 'components/Error';
 import PageHeader from 'components/PageHeader';
 import EmptyState from 'components/EmptyState';
+import NoMatch from 'views/NoMatch';
+
 import FormModal from './modals/FormModal';
 import DeleteModal from './modals/DeleteModal';
 import { notificationTypesTranslations } from './utils/notificationTypes';
 import notificationSort from './utils/notificationSort';
 
 const Notifications = () => {
+  const [{ user }] = useStateValue();
   const [error, setError] = useState(false);
   const [notifications, setNotifications] = useState();
   const [notificationToEdit, setNotificationToEdit] = useState();
@@ -27,6 +31,10 @@ const Notifications = () => {
         setError(true);
       });
   }, []);
+
+  if (!user.roles.admin) {
+    return <NoMatch />;
+  }
 
   if (error) {
     return (

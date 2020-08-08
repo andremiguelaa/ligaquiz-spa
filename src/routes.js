@@ -31,6 +31,7 @@ import SpecialQuizForm from 'views/admin/specialQuizzes/SpecialQuizForm';
 import SpecialQuizCorrect from 'views/admin/specialQuizzes/SpecialQuizCorrect';
 import SeasonsAdmin from 'views/admin/seasons/Seasons';
 import SeasonForm from 'views/admin/seasons/SeasonForm';
+import Search from 'views/admin/search/Search';
 
 import NoMatch from 'views/NoMatch';
 
@@ -197,6 +198,11 @@ export default [
     title: <Trans>Temporada | Editar</Trans>,
     path: '/admin/season/:season/edit',
     component: SeasonForm,
+  },
+  {
+    title: <Trans>Pesquisa de perguntas</Trans>,
+    path: '/admin/search/:string?/:page?',
+    component: Search,
   },
   {
     title: <Trans>Página não encontrada</Trans>,
