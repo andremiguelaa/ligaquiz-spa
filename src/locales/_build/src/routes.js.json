@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/routes.js",
-        31
+        41
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/routes.js",
-        36
+        46
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/routes.js",
-        41
+        51
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/routes.js",
-        46
+        56
       ]
     ]
   },
@@ -35,7 +35,7 @@
     "origin": [
       [
         "src/routes.js",
-        51
+        61
       ]
     ]
   },
@@ -43,7 +43,7 @@
     "origin": [
       [
         "src/routes.js",
-        56
+        66
       ]
     ]
   },
@@ -51,7 +51,7 @@
     "origin": [
       [
         "src/routes.js",
-        62
+        72
       ]
     ]
   },
@@ -59,7 +59,7 @@
     "origin": [
       [
         "src/routes.js",
-        68
+        78
       ]
     ]
   },
@@ -67,7 +67,7 @@
     "origin": [
       [
         "src/routes.js",
-        73
+        83
       ]
     ]
   },
@@ -75,7 +75,7 @@
     "origin": [
       [
         "src/routes.js",
-        78
+        88
       ]
     ]
   },
@@ -83,7 +83,7 @@
     "origin": [
       [
         "src/routes.js",
-        84
+        94
       ]
     ]
   },
@@ -91,7 +91,7 @@
     "origin": [
       [
         "src/routes.js",
-        89
+        99
       ]
     ]
   },
@@ -99,7 +99,7 @@
     "origin": [
       [
         "src/routes.js",
-        94
+        104
       ]
     ]
   },
@@ -107,7 +107,7 @@
     "origin": [
       [
         "src/routes.js",
-        99
+        109
       ]
     ]
   },
@@ -115,27 +115,11 @@
     "origin": [
       [
         "src/routes.js",
-        104
-      ]
-    ]
-  },
-  "Quiz": {
-    "origin": [
-      [
-        "src/routes.js",
-        109
-      ]
-    ]
-  },
-  "Ranking Nacional | Ranking": {
-    "origin": [
-      [
-        "src/routes.js",
         114
       ]
     ]
   },
-  "Ranking Nacional | Provas mensais": {
+  "Pergunta": {
     "origin": [
       [
         "src/routes.js",
@@ -143,7 +127,7 @@
       ]
     ]
   },
-  "Ranking Nacional | Jogadores": {
+  "Quiz": {
     "origin": [
       [
         "src/routes.js",
@@ -151,7 +135,7 @@
       ]
     ]
   },
-  "Notificações": {
+  "Ranking Nacional | Ranking": {
     "origin": [
       [
         "src/routes.js",
@@ -159,7 +143,7 @@
       ]
     ]
   },
-  "Utilizadores": {
+  "Ranking Nacional | Provas mensais": {
     "origin": [
       [
         "src/routes.js",
@@ -167,11 +151,131 @@
       ]
     ]
   },
-  "Página não encontrada": {
+  "Ranking Nacional | Jogadores": {
     "origin": [
       [
         "src/routes.js",
         139
+      ]
+    ]
+  },
+  "Notificações": {
+    "origin": [
+      [
+        "src/routes.js",
+        144
+      ]
+    ]
+  },
+  "Utilizadores": {
+    "origin": [
+      [
+        "src/routes.js",
+        149
+      ]
+    ]
+  },
+  "Quizzes": {
+    "origin": [
+      [
+        "src/routes.js",
+        154
+      ]
+    ]
+  },
+  "Quiz | Criar": {
+    "origin": [
+      [
+        "src/routes.js",
+        159
+      ]
+    ]
+  },
+  "Quiz | Corrigir": {
+    "origin": [
+      [
+        "src/routes.js",
+        164
+      ]
+    ]
+  },
+  "Quiz | Editar": {
+    "origin": [
+      [
+        "src/routes.js",
+        169
+      ]
+    ]
+  },
+  "Quizzes especiais": {
+    "origin": [
+      [
+        "src/routes.js",
+        174
+      ]
+    ]
+  },
+  "Quiz especial | Criar": {
+    "origin": [
+      [
+        "src/routes.js",
+        179
+      ]
+    ]
+  },
+  "Quiz especial | Corrigir": {
+    "origin": [
+      [
+        "src/routes.js",
+        184
+      ]
+    ]
+  },
+  "Quiz especial | Editar": {
+    "origin": [
+      [
+        "src/routes.js",
+        189
+      ]
+    ]
+  },
+  "Temporadas": {
+    "origin": [
+      [
+        "src/routes.js",
+        194
+      ]
+    ]
+  },
+  "Temporada | Criar": {
+    "origin": [
+      [
+        "src/routes.js",
+        199
+      ]
+    ]
+  },
+  "Temporada | Editar": {
+    "origin": [
+      [
+        "src/routes.js",
+        204
+      ]
+    ]
+  },
+  "Pesquisa de perguntas": {
+    "origin": [
+      [
+        "src/routes.js",
+        209
+      ]
+    ]
+  },
+  "Página não encontrada": {
+    "origin": [
+      [
+        "src/routes.js",
+        214
       ]
     ]
   }

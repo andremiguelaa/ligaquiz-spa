@@ -1,0 +1,106 @@
+{
+  "Quiz especial gravado com sucesso.": {
+    "origin": [
+      [
+        "src/views/admin/specialQuizzes/SpecialQuizForm.js",
+        94
+      ]
+    ]
+  },
+  "Não foi possível gravar o quiz especial.": {
+    "origin": [
+      [
+        "src/views/admin/specialQuizzes/SpecialQuizForm.js",
+        97
+      ]
+    ]
+  },
+  "Quiz especial criado com sucesso.": {
+    "origin": [
+      [
+        "src/views/admin/specialQuizzes/SpecialQuizForm.js",
+        105
+      ]
+    ]
+  },
+  "Não foi possível criar o quiz especial.": {
+    "origin": [
+      [
+        "src/views/admin/specialQuizzes/SpecialQuizForm.js",
+        109
+      ]
+    ]
+  },
+  "Erro de servidor. Tenta mais tarde.": {
+    "origin": [
+      [
+        "src/views/admin/specialQuizzes/SpecialQuizForm.js",
+        121
+      ]
+    ]
+  },
+  "Criar quiz especial": {
+    "origin": [
+      [
+        "src/views/admin/specialQuizzes/SpecialQuizForm.js",
+        135
+      ]
+    ]
+  },
+  "Editar quiz especial de {0}": {
+    "origin": [
+      [
+        "src/views/admin/specialQuizzes/SpecialQuizForm.js",
+        137
+      ]
+    ]
+  },
+  "Data do quiz": {
+    "origin": [
+      [
+        "src/views/admin/specialQuizzes/SpecialQuizForm.js",
+        149
+      ]
+    ]
+  },
+  "Tema": {
+    "origin": [
+      [
+        "src/views/admin/specialQuizzes/SpecialQuizForm.js",
+        174
+      ]
+    ]
+  },
+  "Descrição": {
+    "origin": [
+      [
+        "src/views/admin/specialQuizzes/SpecialQuizForm.js",
+        187
+      ]
+    ]
+  },
+  "Autor": {
+    "origin": [
+      [
+        "src/views/admin/specialQuizzes/SpecialQuizForm.js",
+        203
+      ]
+    ]
+  },
+  "Nenhum": {
+    "origin": [
+      [
+        "src/views/admin/specialQuizzes/SpecialQuizForm.js",
+        214
+      ]
+    ]
+  },
+  "Gravar": {
+    "origin": [
+      [
+        "src/views/admin/specialQuizzes/SpecialQuizForm.js",
+        244
+      ]
+    ]
+  }
+}

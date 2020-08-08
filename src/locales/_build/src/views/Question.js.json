@@ -1,0 +1,122 @@
+{
+  "Erro de servidor. Tenta mais tarde.": {
+    "origin": [
+      [
+        "src/views/Question.js",
+        90
+      ]
+    ]
+  },
+  "Resposta correcta": {
+    "origin": [
+      [
+        "src/views/Question.js",
+        115
+      ]
+    ]
+  },
+  "Percentagem de respostas correctas": {
+    "origin": [
+      [
+        "src/views/Question.js",
+        123
+      ]
+    ]
+  },
+  "Percentagem de jogadores que usaram joker": {
+    "origin": [
+      [
+        "src/views/Question.js",
+        133
+      ]
+    ]
+  },
+  "Percentagem de jogadores que atribuíram 0 pontos": {
+    "origin": [
+      [
+        "src/views/Question.js",
+        144
+      ]
+    ]
+  },
+  "Percentagem de jogadores que atribuíram 1 ponto": {
+    "origin": [
+      [
+        "src/views/Question.js",
+        155
+      ]
+    ]
+  },
+  "Percentagem de jogadores que atribuíram 2 pontos": {
+    "origin": [
+      [
+        "src/views/Question.js",
+        165
+      ]
+    ]
+  },
+  "Percentagem de jogadores que atribuíram 3 pontos": {
+    "origin": [
+      [
+        "src/views/Question.js",
+        175
+      ]
+    ]
+  },
+  "Nome": {
+    "origin": [
+      [
+        "src/views/Question.js",
+        204
+      ]
+    ]
+  },
+  "Pontos atribuídos": {
+    "origin": [
+      [
+        "src/views/Question.js",
+        208
+      ]
+    ]
+  },
+  "Joker": {
+    "origin": [
+      [
+        "src/views/Question.js",
+        213
+      ]
+    ]
+  },
+  "Correcção": {
+    "origin": [
+      [
+        "src/views/Question.js",
+        217
+      ]
+    ]
+  },
+  "Sim": {
+    "origin": [
+      [
+        "src/views/Question.js",
+        232
+      ]
+    ]
+  },
+  "Correcta": {
+    "origin": [
+      [
+        "src/views/Question.js",
+        235
+      ]
+    ]
+  },
+  "Errada": {
+    "origin": [
+      [
+        "src/views/Question.js",
+        237
+      ]
+    ]
+  }
+}

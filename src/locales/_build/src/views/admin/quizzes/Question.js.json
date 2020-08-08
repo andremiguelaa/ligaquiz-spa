@@ -1,0 +1,42 @@
+{
+  "Pergunta {0}": {
+    "origin": [
+      [
+        "src/views/admin/quizzes/Question.js",
+        63
+      ]
+    ]
+  },
+  "Enunciado": {
+    "origin": [
+      [
+        "src/views/admin/quizzes/Question.js",
+        90
+      ]
+    ]
+  },
+  "Resposta": {
+    "origin": [
+      [
+        "src/views/admin/quizzes/Question.js",
+        106
+      ]
+    ]
+  },
+  "Multimédia": {
+    "origin": [
+      [
+        "src/views/admin/quizzes/Question.js",
+        119
+      ]
+    ]
+  },
+  "Escolhe o ficheiro": {
+    "origin": [
+      [
+        "src/views/admin/quizzes/Question.js",
+        153
+      ]
+    ]
+  }
+}

@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        113
+        103
       ]
     ]
   },
@@ -35,7 +35,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        116
+        106
       ]
     ]
   },
@@ -43,7 +43,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        146
+        136
       ]
     ]
   },
@@ -51,7 +51,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        150
+        140
       ]
     ]
   },
@@ -59,27 +59,35 @@
     "origin": [
       [
         "src/partials/Header.js",
-        154
+        144
       ]
     ]
   },
-  "Gestão de Ranking Nacional": {
+  "Temporadas": {
     "origin": [
       [
         "src/partials/Header.js",
-        163
+        148
       ]
     ]
   },
-  "Rankings mensais": {
+  "Gestão de Quizzes": {
     "origin": [
       [
         "src/partials/Header.js",
-        170
+        159
       ]
     ]
   },
-  "Provas mensais": {
+  "Quizzes": {
+    "origin": [
+      [
+        "src/partials/Header.js",
+        166
+      ]
+    ]
+  },
+  "Quizzes especiais": {
     "origin": [
       [
         "src/partials/Header.js",
@@ -87,23 +95,23 @@
       ]
     ]
   },
-  "Jogadores": {
+  "Pesquisa de perguntas": {
     "origin": [
       [
         "src/partials/Header.js",
-        184
+        183
       ]
     ]
   },
-  "Conta": {
+  "Gestão de Ranking Nacional": {
     "origin": [
       [
         "src/partials/Header.js",
-        191
+        193
       ]
     ]
   },
-  "Arquivo de temporadas": {
+  "Rankings mensais": {
     "origin": [
       [
         "src/partials/Header.js",
@@ -111,11 +119,43 @@
       ]
     ]
   },
+  "Provas mensais": {
+    "origin": [
+      [
+        "src/partials/Header.js",
+        207
+      ]
+    ]
+  },
+  "Jogadores": {
+    "origin": [
+      [
+        "src/partials/Header.js",
+        214
+      ]
+    ]
+  },
+  "Conta": {
+    "origin": [
+      [
+        "src/partials/Header.js",
+        221
+      ]
+    ]
+  },
+  "Arquivo de temporadas": {
+    "origin": [
+      [
+        "src/partials/Header.js",
+        230
+      ]
+    ]
+  },
   "Arquivo de quizzes": {
     "origin": [
       [
         "src/partials/Header.js",
-        204
+        234
       ]
     ]
   },
@@ -123,7 +163,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        217
+        247
       ]
     ]
   },
@@ -131,7 +171,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        223
+        253
       ]
     ]
   },
@@ -139,7 +179,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        227
+        257
       ]
     ]
   }

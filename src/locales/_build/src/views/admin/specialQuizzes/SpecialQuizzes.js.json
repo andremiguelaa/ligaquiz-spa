@@ -1,0 +1,74 @@
+{
+  "Quiz especial apagado com sucesso.": {
+    "origin": [
+      [
+        "src/views/admin/specialQuizzes/SpecialQuizzes.js",
+        54
+      ]
+    ]
+  },
+  "Não foi possível apagar o quiz especial.": {
+    "origin": [
+      [
+        "src/views/admin/specialQuizzes/SpecialQuizzes.js",
+        59
+      ]
+    ]
+  },
+  "Erro de servidor. Tenta mais tarde.": {
+    "origin": [
+      [
+        "src/views/admin/specialQuizzes/SpecialQuizzes.js",
+        82
+      ]
+    ]
+  },
+  "Quizzes Especiais": {
+    "origin": [
+      [
+        "src/views/admin/specialQuizzes/SpecialQuizzes.js",
+        89
+      ]
+    ]
+  },
+  "Criar quiz especial": {
+    "origin": [
+      [
+        "src/views/admin/specialQuizzes/SpecialQuizzes.js",
+        105
+      ]
+    ]
+  },
+  "Tema": {
+    "origin": [
+      [
+        "src/views/admin/specialQuizzes/SpecialQuizzes.js",
+        120
+      ]
+    ]
+  },
+  "Sem registos": {
+    "origin": [
+      [
+        "src/views/admin/specialQuizzes/SpecialQuizzes.js",
+        190
+      ]
+    ]
+  },
+  "Apagar quiz especial": {
+    "origin": [
+      [
+        "src/views/admin/specialQuizzes/SpecialQuizzes.js",
+        200
+      ]
+    ]
+  },
+  "Tens a certeza que queres apagar este quiz especial?": {
+    "origin": [
+      [
+        "src/views/admin/specialQuizzes/SpecialQuizzes.js",
+        202
+      ]
+    ]
+  }
+}

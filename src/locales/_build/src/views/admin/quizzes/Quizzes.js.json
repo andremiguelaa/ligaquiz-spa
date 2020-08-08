@@ -1,0 +1,66 @@
+{
+  "Quiz apagado com sucesso.": {
+    "origin": [
+      [
+        "src/views/admin/quizzes/Quizzes.js",
+        51
+      ]
+    ]
+  },
+  "Não foi possível apagar o quiz.": {
+    "origin": [
+      [
+        "src/views/admin/quizzes/Quizzes.js",
+        56
+      ]
+    ]
+  },
+  "Erro de servidor. Tenta mais tarde.": {
+    "origin": [
+      [
+        "src/views/admin/quizzes/Quizzes.js",
+        79
+      ]
+    ]
+  },
+  "Quizzes": {
+    "origin": [
+      [
+        "src/views/admin/quizzes/Quizzes.js",
+        86
+      ]
+    ]
+  },
+  "Criar quiz": {
+    "origin": [
+      [
+        "src/views/admin/quizzes/Quizzes.js",
+        99
+      ]
+    ]
+  },
+  "Sem registos": {
+    "origin": [
+      [
+        "src/views/admin/quizzes/Quizzes.js",
+        174
+      ]
+    ]
+  },
+  "Apagar quiz": {
+    "origin": [
+      [
+        "src/views/admin/quizzes/Quizzes.js",
+        184
+      ]
+    ]
+  },
+  "Tens a certeza que queres apagar este quiz?": {
+    "origin": [
+      [
+        "src/views/admin/quizzes/Quizzes.js",
+        185
+      ]
+    ]
+  }
+}

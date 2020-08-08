@@ -1,0 +1,18 @@
+{
+  "Correcta": {
+    "origin": [
+      [
+        "src/views/admin/quizzes/Answer.js",
+        30
+      ]
+    ]
+  },
+  "Errada": {
+    "origin": [
+      [
+        "src/views/admin/quizzes/Answer.js",
+        31
+      ]
+    ]
+  }
+}

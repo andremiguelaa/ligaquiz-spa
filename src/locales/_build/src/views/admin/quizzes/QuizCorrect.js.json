@@ -1,0 +1,42 @@
+{
+  "Erro de servidor. Tenta mais tarde.": {
+    "origin": [
+      [
+        "src/views/admin/quizzes/QuizCorrect.js",
+        52
+      ]
+    ]
+  },
+  "Corrigir quiz de {0}": {
+    "origin": [
+      [
+        "src/views/admin/quizzes/QuizCorrect.js",
+        65
+      ]
+    ]
+  },
+  "Resposta correcta": {
+    "origin": [
+      [
+        "src/views/admin/quizzes/QuizCorrect.js",
+        81
+      ]
+    ]
+  },
+  "Resposta dada": {
+    "origin": [
+      [
+        "src/views/admin/quizzes/QuizCorrect.js",
+        96
+      ]
+    ]
+  },
+  "Correcção": {
+    "origin": [
+      [
+        "src/views/admin/quizzes/QuizCorrect.js",
+        99
+      ]
+    ]
+  }
+}

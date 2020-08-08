@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/admin/users/modals/EditPermissionsModal.js",
-        49
+        42
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/views/admin/users/modals/EditPermissionsModal.js",
-        52
+        46
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/views/admin/users/modals/EditPermissionsModal.js",
-        63
+        54
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/views/admin/users/modals/EditPermissionsModal.js",
-        88
+        79
       ]
     ]
   },
@@ -35,7 +35,7 @@
     "origin": [
       [
         "src/views/admin/users/modals/EditPermissionsModal.js",
-        114
+        105
       ]
     ]
   },
@@ -43,7 +43,7 @@
     "origin": [
       [
         "src/views/admin/users/modals/EditPermissionsModal.js",
-        120
+        111
       ]
     ]
   },
@@ -51,7 +51,31 @@
     "origin": [
       [
         "src/views/admin/users/modals/EditPermissionsModal.js",
-        172
+        160
+      ]
+    ]
+  },
+  "Editor de Quizzes": {
+    "origin": [
+      [
+        "src/views/admin/users/modals/EditPermissionsModal.js",
+        183
+      ]
+    ]
+  },
+  "Editor de Quizzes Especiais": {
+    "origin": [
+      [
+        "src/views/admin/users/modals/EditPermissionsModal.js",
+        208
+      ]
+    ]
+  },
+  "Corrector": {
+    "origin": [
+      [
+        "src/views/admin/users/modals/EditPermissionsModal.js",
+        231
       ]
     ]
   },
@@ -59,7 +83,7 @@
     "origin": [
       [
         "src/views/admin/users/modals/EditPermissionsModal.js",
-        195
+        254
       ]
     ]
   }

@@ -23,11 +23,19 @@
       ]
     ]
   },
+  "Número {0} no <0>Ranking Nacional</0>": {
+    "origin": [
+      [
+        "src/views/Statistics.js",
+        151
+      ]
+    ]
+  },
   "Liga Quiz": {
     "origin": [
       [
         "src/views/Statistics.js",
-        153
+        161
       ]
     ]
   },
@@ -35,7 +43,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        191
+        199
       ]
     ]
   },
@@ -43,7 +51,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        204
+        212
       ]
     ]
   },
@@ -51,7 +59,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        211
+        219
       ]
     ]
   },
@@ -59,7 +67,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        213
+        221
       ]
     ]
   },
@@ -67,7 +75,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        223
+        231
       ]
     ]
   },
@@ -75,7 +83,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        225
+        233
       ]
     ]
   },
@@ -83,7 +91,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        235
+        243
       ]
     ]
   },
@@ -91,7 +99,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        273
+        281
       ]
     ]
   },
@@ -99,7 +107,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        279
+        287
       ]
     ]
   },
@@ -107,7 +115,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        282
+        290
       ]
     ]
   },
@@ -115,7 +123,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        285
+        293
       ]
     ]
   },
@@ -123,7 +131,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        289
+        297
       ]
     ]
   },
@@ -131,7 +139,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        292
+        300
       ]
     ]
   }

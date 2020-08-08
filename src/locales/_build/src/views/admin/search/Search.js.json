@@ -1,0 +1,50 @@
+{
+  "Erro de servidor. Tenta mais tarde.": {
+    "origin": [
+      [
+        "src/views/admin/search/Search.js",
+        49
+      ]
+    ]
+  },
+  "Pesquisa de perguntas": {
+    "origin": [
+      [
+        "src/views/admin/search/Search.js",
+        60
+      ]
+    ]
+  },
+  "Pesquisar": {
+    "origin": [
+      [
+        "src/views/admin/search/Search.js",
+        78
+      ]
+    ]
+  },
+  "Enunciado": {
+    "origin": [
+      [
+        "src/views/admin/search/Search.js",
+        89
+      ]
+    ]
+  },
+  "Resposta": {
+    "origin": [
+      [
+        "src/views/admin/search/Search.js",
+        94
+      ]
+    ]
+  },
+  "Sem registos": {
+    "origin": [
+      [
+        "src/views/admin/search/Search.js",
+        108
+      ]
+    ]
+  }
+}

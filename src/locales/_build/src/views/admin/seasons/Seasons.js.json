@@ -1,0 +1,74 @@
+{
+  "Temporada apagada com sucesso.": {
+    "origin": [
+      [
+        "src/views/admin/seasons/Seasons.js",
+        45
+      ]
+    ]
+  },
+  "Não foi possível apagar a temporada.": {
+    "origin": [
+      [
+        "src/views/admin/seasons/Seasons.js",
+        50
+      ]
+    ]
+  },
+  "Erro de servidor. Tenta mais tarde.": {
+    "origin": [
+      [
+        "src/views/admin/seasons/Seasons.js",
+        64
+      ]
+    ]
+  },
+  "Temporadas": {
+    "origin": [
+      [
+        "src/views/admin/seasons/Seasons.js",
+        71
+      ]
+    ]
+  },
+  "Criar temporada": {
+    "origin": [
+      [
+        "src/views/admin/seasons/Seasons.js",
+        82
+      ]
+    ]
+  },
+  "Temporada {0}": {
+    "origin": [
+      [
+        "src/views/admin/seasons/Seasons.js",
+        98
+      ]
+    ]
+  },
+  "Sem registos": {
+    "origin": [
+      [
+        "src/views/admin/seasons/Seasons.js",
+        144
+      ]
+    ]
+  },
+  "Apagar temporada": {
+    "origin": [
+      [
+        "src/views/admin/seasons/Seasons.js",
+        154
+      ]
+    ]
+  },
+  "Tens a certeza que queres apagar esta temporada?": {
+    "origin": [
+      [
+        "src/views/admin/seasons/Seasons.js",
+        155
+      ]
+    ]
+  }
+}

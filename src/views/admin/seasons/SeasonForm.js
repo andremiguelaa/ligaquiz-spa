@@ -131,7 +131,7 @@ const SeasonForm = () => {
       ApiRequest.post('seasons', newFormData)
         .then(({ data }) => {
           setSubmitting(false);
-          toast.success(<Trans>Temporada criado com sucesso.</Trans>);
+          toast.success(<Trans>Temporada criada com sucesso.</Trans>);
           history.push(`/admin/season/${data.season}/edit/`);
         })
         .catch(() => {

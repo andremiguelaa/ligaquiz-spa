@@ -2,7 +2,7 @@
   "Cultura": {
     "origin": [
       [
-        "src/views/Statistics/getGenreTranslation.js",
+        "src/utils/getGenreTranslation.js",
         10
       ]
     ]
@@ -10,7 +10,7 @@
   "Entretenimento": {
     "origin": [
       [
-        "src/views/Statistics/getGenreTranslation.js",
+        "src/utils/getGenreTranslation.js",
         11
       ]
     ]
@@ -18,7 +18,7 @@
   "História": {
     "origin": [
       [
-        "src/views/Statistics/getGenreTranslation.js",
+        "src/utils/getGenreTranslation.js",
         12
       ]
     ]
@@ -26,7 +26,7 @@
   "Ciência": {
     "origin": [
       [
-        "src/views/Statistics/getGenreTranslation.js",
+        "src/utils/getGenreTranslation.js",
         13
       ]
     ]
@@ -34,7 +34,7 @@
   "Desporto": {
     "origin": [
       [
-        "src/views/Statistics/getGenreTranslation.js",
+        "src/utils/getGenreTranslation.js",
         14
       ]
     ]
@@ -42,7 +42,7 @@
   "Geografia": {
     "origin": [
       [
-        "src/views/Statistics/getGenreTranslation.js",
+        "src/utils/getGenreTranslation.js",
         15
       ]
     ]
@@ -50,7 +50,7 @@
   "Estilo de Vida": {
     "origin": [
       [
-        "src/views/Statistics/getGenreTranslation.js",
+        "src/utils/getGenreTranslation.js",
         16
       ]
     ]
@@ -58,7 +58,7 @@
   "Sociedade": {
     "origin": [
       [
-        "src/views/Statistics/getGenreTranslation.js",
+        "src/utils/getGenreTranslation.js",
         17
       ]
     ]
@@ -66,7 +66,7 @@
   "Arquitectura": {
     "origin": [
       [
-        "src/views/Statistics/getGenreTranslation.js",
+        "src/utils/getGenreTranslation.js",
         18
       ]
     ]
@@ -74,7 +74,7 @@
   "Belas Artes": {
     "origin": [
       [
-        "src/views/Statistics/getGenreTranslation.js",
+        "src/utils/getGenreTranslation.js",
         19
       ]
     ]
@@ -82,7 +82,7 @@
   "Literatura": {
     "origin": [
       [
-        "src/views/Statistics/getGenreTranslation.js",
+        "src/utils/getGenreTranslation.js",
         20
       ]
     ]
@@ -90,7 +90,7 @@
   "Dança": {
     "origin": [
       [
-        "src/views/Statistics/getGenreTranslation.js",
+        "src/utils/getGenreTranslation.js",
         21
       ]
     ]
@@ -98,7 +98,7 @@
   "Óperas e Musicais": {
     "origin": [
       [
-        "src/views/Statistics/getGenreTranslation.js",
+        "src/utils/getGenreTranslation.js",
         22
       ]
     ]
@@ -106,7 +106,7 @@
   "Teatro": {
     "origin": [
       [
-        "src/views/Statistics/getGenreTranslation.js",
+        "src/utils/getGenreTranslation.js",
         23
       ]
     ]
@@ -114,7 +114,7 @@
   "Banda Desenhada": {
     "origin": [
       [
-        "src/views/Statistics/getGenreTranslation.js",
+        "src/utils/getGenreTranslation.js",
         24
       ]
     ]
@@ -122,7 +122,7 @@
   "Música": {
     "origin": [
       [
-        "src/views/Statistics/getGenreTranslation.js",
+        "src/utils/getGenreTranslation.js",
         25
       ]
     ]
@@ -130,7 +130,7 @@
   "Televisão": {
     "origin": [
       [
-        "src/views/Statistics/getGenreTranslation.js",
+        "src/utils/getGenreTranslation.js",
         26
       ]
     ]
@@ -138,7 +138,7 @@
   "Cinema": {
     "origin": [
       [
-        "src/views/Statistics/getGenreTranslation.js",
+        "src/utils/getGenreTranslation.js",
         27
       ]
     ]
@@ -146,7 +146,7 @@
   "Fauna e Flora": {
     "origin": [
       [
-        "src/views/Statistics/getGenreTranslation.js",
+        "src/utils/getGenreTranslation.js",
         28
       ]
     ]
@@ -154,7 +154,7 @@
   "Matemática": {
     "origin": [
       [
-        "src/views/Statistics/getGenreTranslation.js",
+        "src/utils/getGenreTranslation.js",
         29
       ]
     ]
@@ -162,7 +162,7 @@
   "Física": {
     "origin": [
       [
-        "src/views/Statistics/getGenreTranslation.js",
+        "src/utils/getGenreTranslation.js",
         30
       ]
     ]
@@ -170,7 +170,7 @@
   "Química": {
     "origin": [
       [
-        "src/views/Statistics/getGenreTranslation.js",
+        "src/utils/getGenreTranslation.js",
         31
       ]
     ]
@@ -178,7 +178,7 @@
   "Biologia": {
     "origin": [
       [
-        "src/views/Statistics/getGenreTranslation.js",
+        "src/utils/getGenreTranslation.js",
         32
       ]
     ]
@@ -186,7 +186,7 @@
   "Geologia": {
     "origin": [
       [
-        "src/views/Statistics/getGenreTranslation.js",
+        "src/utils/getGenreTranslation.js",
         33
       ]
     ]
@@ -194,7 +194,7 @@
   "Espaço": {
     "origin": [
       [
-        "src/views/Statistics/getGenreTranslation.js",
+        "src/utils/getGenreTranslation.js",
         34
       ]
     ]
@@ -202,7 +202,7 @@
   "Saúde e Corpo Humano": {
     "origin": [
       [
-        "src/views/Statistics/getGenreTranslation.js",
+        "src/utils/getGenreTranslation.js",
         35
       ]
     ]
@@ -210,7 +210,7 @@
   "Jogos e Passatempos": {
     "origin": [
       [
-        "src/views/Statistics/getGenreTranslation.js",
+        "src/utils/getGenreTranslation.js",
         36
       ]
     ]
@@ -218,7 +218,7 @@
   "Design": {
     "origin": [
       [
-        "src/views/Statistics/getGenreTranslation.js",
+        "src/utils/getGenreTranslation.js",
         37
       ]
     ]
@@ -226,7 +226,7 @@
   "Moda": {
     "origin": [
       [
-        "src/views/Statistics/getGenreTranslation.js",
+        "src/utils/getGenreTranslation.js",
         38
       ]
     ]
@@ -234,7 +234,7 @@
   "Artesanato": {
     "origin": [
       [
-        "src/views/Statistics/getGenreTranslation.js",
+        "src/utils/getGenreTranslation.js",
         39
       ]
     ]
@@ -242,7 +242,7 @@
   "Religião e Crenças": {
     "origin": [
       [
-        "src/views/Statistics/getGenreTranslation.js",
+        "src/utils/getGenreTranslation.js",
         40
       ]
     ]
@@ -250,7 +250,7 @@
   "Mitologia": {
     "origin": [
       [
-        "src/views/Statistics/getGenreTranslation.js",
+        "src/utils/getGenreTranslation.js",
         41
       ]
     ]
@@ -258,7 +258,7 @@
   "Tradições": {
     "origin": [
       [
-        "src/views/Statistics/getGenreTranslation.js",
+        "src/utils/getGenreTranslation.js",
         42
       ]
     ]
@@ -266,7 +266,7 @@
   "Comida e Bebida": {
     "origin": [
       [
-        "src/views/Statistics/getGenreTranslation.js",
+        "src/utils/getGenreTranslation.js",
         43
       ]
     ]
@@ -274,7 +274,7 @@
   "Turismo": {
     "origin": [
       [
-        "src/views/Statistics/getGenreTranslation.js",
+        "src/utils/getGenreTranslation.js",
         44
       ]
     ]
@@ -282,7 +282,7 @@
   "Museus": {
     "origin": [
       [
-        "src/views/Statistics/getGenreTranslation.js",
+        "src/utils/getGenreTranslation.js",
         45
       ]
     ]
@@ -290,7 +290,7 @@
   "Transportes": {
     "origin": [
       [
-        "src/views/Statistics/getGenreTranslation.js",
+        "src/utils/getGenreTranslation.js",
         46
       ]
     ]
@@ -298,7 +298,7 @@
   "Filosofia": {
     "origin": [
       [
-        "src/views/Statistics/getGenreTranslation.js",
+        "src/utils/getGenreTranslation.js",
         47
       ]
     ]
@@ -306,7 +306,7 @@
   "Ciências Sociais": {
     "origin": [
       [
-        "src/views/Statistics/getGenreTranslation.js",
+        "src/utils/getGenreTranslation.js",
         48
       ]
     ]
@@ -314,7 +314,7 @@
   "Tecnologia e Invenções": {
     "origin": [
       [
-        "src/views/Statistics/getGenreTranslation.js",
+        "src/utils/getGenreTranslation.js",
         49
       ]
     ]
@@ -322,7 +322,7 @@
   "Produtos e Marcas": {
     "origin": [
       [
-        "src/views/Statistics/getGenreTranslation.js",
+        "src/utils/getGenreTranslation.js",
         50
       ]
     ]
@@ -330,7 +330,7 @@
   "Comunicação Social e Redes Sociais": {
     "origin": [
       [
-        "src/views/Statistics/getGenreTranslation.js",
+        "src/utils/getGenreTranslation.js",
         51
       ]
     ]
@@ -338,7 +338,7 @@
   "Política Actual": {
     "origin": [
       [
-        "src/views/Statistics/getGenreTranslation.js",
+        "src/utils/getGenreTranslation.js",
         52
       ]
     ]
@@ -346,7 +346,7 @@
   "Trivialidades": {
     "origin": [
       [
-        "src/views/Statistics/getGenreTranslation.js",
+        "src/utils/getGenreTranslation.js",
         53
       ]
     ]

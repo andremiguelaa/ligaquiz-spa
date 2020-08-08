@@ -71,7 +71,7 @@
       ]
     ]
   },
-  "Bloqueado": {
+  "Editor de Quizzes": {
     "origin": [
       [
         "src/views/admin/users/Users.js",
@@ -79,11 +79,35 @@
       ]
     ]
   },
+  "Editor de Quizzes Especiais": {
+    "origin": [
+      [
+        "src/views/admin/users/Users.js",
+        262
+      ]
+    ]
+  },
+  "Corrector": {
+    "origin": [
+      [
+        "src/views/admin/users/Users.js",
+        275
+      ]
+    ]
+  },
+  "Bloqueado": {
+    "origin": [
+      [
+        "src/views/admin/users/Users.js",
+        287
+      ]
+    ]
+  },
   "Sem registos": {
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        290
+        328
       ]
     ]
   }

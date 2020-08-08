@@ -171,22 +171,22 @@ export default [
     component: QuizForm,
   },
   {
-    title: <Trans>Special Quizzes</Trans>,
+    title: <Trans>Quizzes especiais</Trans>,
     path: '/admin/special-quizzes/:page?',
     component: SpecialQuizzesAdmin,
   },
   {
-    title: <Trans>Special Quiz | Criar</Trans>,
+    title: <Trans>Quiz especial | Criar</Trans>,
     path: '/admin/special-quiz/create',
     component: SpecialQuizForm,
   },
   {
-    title: <Trans>Special Quiz | Corrigir</Trans>,
+    title: <Trans>Quiz especial | Corrigir</Trans>,
     path: '/admin/special-quiz/:date/correct',
     component: SpecialQuizCorrect,
   },
   {
-    title: <Trans>Special Quiz | Editar</Trans>,
+    title: <Trans>Quiz especial | Editar</Trans>,
     path: '/admin/special-quiz/:date/edit',
     component: SpecialQuizForm,
   },

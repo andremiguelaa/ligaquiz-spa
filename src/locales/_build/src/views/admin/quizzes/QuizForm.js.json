@@ -1,0 +1,82 @@
+{
+  "Quiz gravado com sucesso.": {
+    "origin": [
+      [
+        "src/views/admin/quizzes/QuizForm.js",
+        102
+      ]
+    ]
+  },
+  "Não foi possível gravar o quiz.": {
+    "origin": [
+      [
+        "src/views/admin/quizzes/QuizForm.js",
+        105
+      ]
+    ]
+  },
+  "Quiz criado com sucesso.": {
+    "origin": [
+      [
+        "src/views/admin/quizzes/QuizForm.js",
+        114
+      ]
+    ]
+  },
+  "Não foi possível criar o quiz.": {
+    "origin": [
+      [
+        "src/views/admin/quizzes/QuizForm.js",
+        118
+      ]
+    ]
+  },
+  "Erro de servidor. Tenta mais tarde.": {
+    "origin": [
+      [
+        "src/views/admin/quizzes/QuizForm.js",
+        130
+      ]
+    ]
+  },
+  "Criar quiz": {
+    "origin": [
+      [
+        "src/views/admin/quizzes/QuizForm.js",
+        149
+      ]
+    ]
+  },
+  "Editar quiz de {0}": {
+    "origin": [
+      [
+        "src/views/admin/quizzes/QuizForm.js",
+        151
+      ]
+    ]
+  },
+  "<0>Não devem ser feitos quizzes com a seguinte combinação de temas:</0><1><2>Literatura / Banda Desenhada</2><3>Literatura / Filosofia</3> <4>Óperas e Musicais / Música</4><5>Belas Artes / Museus</5></1>": {
+    "origin": [
+      [
+        "src/views/admin/quizzes/QuizForm.js",
+        158
+      ]
+    ]
+  },
+  "Data do quiz": {
+    "origin": [
+      [
+        "src/views/admin/quizzes/QuizForm.js",
+        176
+      ]
+    ]
+  },
+  "Gravar": {
+    "origin": [
+      [
+        "src/views/admin/quizzes/QuizForm.js",
+        218
+      ]
+    ]
+  }
+}

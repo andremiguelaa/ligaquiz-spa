@@ -1,0 +1,54 @@
+{
+  "{0}ª divisão": {
+    "origin": [
+      [
+        "src/views/admin/seasons/Tier.js",
+        29
+      ]
+    ]
+  },
+  "Editar jogadores": {
+    "origin": [
+      [
+        "src/views/admin/seasons/Tier.js",
+        54
+      ],
+      [
+        "src/views/admin/seasons/Tier.js",
+        82
+      ]
+    ]
+  },
+  "Remover última divisão": {
+    "origin": [
+      [
+        "src/views/admin/seasons/Tier.js",
+        73
+      ]
+    ]
+  },
+  "Selecciona os jogadores que farão parte desta divisão:": {
+    "origin": [
+      [
+        "src/views/admin/seasons/Tier.js",
+        85
+      ]
+    ]
+  },
+  "Apagar divisão": {
+    "origin": [
+      [
+        "src/views/admin/seasons/Tier.js",
+        137
+      ]
+    ]
+  },
+  "Tens a certeza que queres apagar esta divisão?": {
+    "origin": [
+      [
+        "src/views/admin/seasons/Tier.js",
+        138
+      ]
+    ]
+  }
+}

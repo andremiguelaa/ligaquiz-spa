@@ -1,0 +1,34 @@
+{
+  "Enunciado": {
+    "origin": [
+      [
+        "src/views/admin/specialQuizzes/Question.js",
+        50
+      ]
+    ]
+  },
+  "Resposta": {
+    "origin": [
+      [
+        "src/views/admin/specialQuizzes/Question.js",
+        66
+      ]
+    ]
+  },
+  "Multimédia": {
+    "origin": [
+      [
+        "src/views/admin/specialQuizzes/Question.js",
+        79
+      ]
+    ]
+  },
+  "Escolhe o ficheiro": {
+    "origin": [
+      [
+        "src/views/admin/specialQuizzes/Question.js",
+        113
+      ]
+    ]
+  }
+}
