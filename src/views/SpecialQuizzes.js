@@ -54,7 +54,7 @@ const SpecialQuizzes = () => {
   }, []);
 
   if (error) {
-    if (error === 404 || error === 400) {
+    if (error === 404 || error === 403 || error === 401) {
       return <NoMatch />;
     }
     return (
