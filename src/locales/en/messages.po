@@ -19,7 +19,7 @@ msgstr "<0>Quiz League is a general knowledge game where the trust in players ho
 
 #: src/views/admin/quizzes/QuizForm.js:158
 msgid "<0>Não devem ser feitos quizzes com a seguinte combinação de temas:</0><1><2>Literatura / Banda Desenhada</2><3>Literatura / Filosofia</3> <4>Óperas e Musicais / Música</4><5>Belas Artes / Museus</5></1>"
-msgstr ""
+msgstr "<0>We must avoid to do quizzes with the following genre combinations:</0><1><2>Literature / Comics</2><3>Literature / Philosophy</3> <4>Operas and Musicals / Music</4><5>Fine Arts / Museums</5></1>"
 
 #: src/views/NationalRanking/Legend.js:62
 msgid "<0>{0}</0> resultado a contar para o ranking"
