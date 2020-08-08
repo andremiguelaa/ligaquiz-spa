@@ -37,7 +37,7 @@ const Question = () => {
   }, []);
 
   useEffect(() => {
-    ApiRequest.get(`questions?id=${id}`)
+    ApiRequest.get(`questions?id[]=${id}`)
       .then(({ data }) => {
         setQuestion(data);
         setAnswers(data.answers.sort((a, b) => b.correct - a.correct));
