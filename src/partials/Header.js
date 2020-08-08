@@ -61,6 +61,12 @@ const Header = () => {
           })}
         >
           <div className="navbar-start">
+            {user && (
+              <Link to="/rules" className="navbar-item">
+                <i className="fa fa-btn fa-exclamation-triangle" />
+                &nbsp;<Trans>Regras</Trans>
+              </Link>
+            )}
             {user &&
               (user.roles.admin ||
                 user.roles.regular_player >= moment().format('YYYY-MM-DD')) && (

@@ -18,6 +18,7 @@ import SpecialQuizzes from 'views/SpecialQuizzes';
 import Game from 'views/Game';
 import Question from 'views/Question';
 import Quiz from 'views/Quiz';
+import Rules from 'views/Rules';
 
 import NationalRankingAdminRankings from 'views/admin/nationalRanking/Rankings';
 import NationalRankingAdminEvents from 'views/admin/nationalRanking/Events';
@@ -73,6 +74,11 @@ export default [
     path: '/account',
     free: true,
     component: Account,
+  },
+  {
+    title: <Trans>Regras</Trans>,
+    path: '/rules',
+    component: Rules,
   },
   {
     title: <Trans>Estatísticas</Trans>,
