@@ -134,7 +134,7 @@ export default [
   },
   {
     title: <Trans>Quiz</Trans>,
-    path: '/quiz/:date',
+    path: '/quiz/:date?',
     component: Quiz,
   },
   {

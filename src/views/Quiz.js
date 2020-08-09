@@ -1,19 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 
 import { useStateValue } from 'state/State';
 import { convertToLongDate } from 'utils/formatDate';
-import renderMedia from 'utils/renderMedia';
 import ApiRequest from 'utils/ApiRequest';
 import Error from 'components/Error';
 import Loading from 'components/Loading';
-import Markdown from 'components/Markdown';
 import NoMatch from './NoMatch';
+import QuizDone from './Quiz/QuizDone';
+import QuizForm from './Quiz/QuizForm';
 
 import PageHeader from 'components/PageHeader';
-
-import classes from './Quiz/Quiz.module.scss';
 
 const Quiz = () => {
   const [
@@ -30,10 +28,11 @@ const Quiz = () => {
   const [userAnswers, setUserAnswers] = useState();
 
   useEffect(() => {
+    setLoading(true);
     ApiRequest.get(`quizzes?${date ? `date=${date}` : 'today'}`)
       .then(({ data }) => {
         setData(data);
-        ApiRequest.get(`answers?quiz=${data.quiz.id}&submitted=1&mine=true`)
+        ApiRequest.get(`answers?quiz=${data.quiz.id}&mine=true`)
           .then(({ data }) => {
             setUserAnswers(data);
             setLoading(false);
@@ -66,54 +65,18 @@ const Quiz = () => {
     <>
       <PageHeader
         title={
-          <Trans>Quiz de {convertToLongDate(data.quiz.date, language)}</Trans>
+          <Trans>
+            Quiz de{' '}
+            {date ? convertToLongDate(data.quiz.date, language) : 'hoje'}
+          </Trans>
         }
       />
       <div className="section">
-        {data.quiz.questions.map((question, index) => (
-          <div key={question.id} className={classes.question}>
-            {question.content && (
-              <div className={classes.questionText}>
-                <Markdown content={question.content} />
-              </div>
-            )}
-            {question.answer && (
-              <div>
-                <strong>
-                  <Trans>Resposta correcta</Trans>:
-                </strong>{' '}
-                {question.answer}
-              </div>
-            )}
-            {userAnswers?.[question.id]?.[0] && (
-              <div>
-                <strong>
-                  <Trans>Resposta dada</Trans>:
-                </strong>{' '}
-                {userAnswers[question.id][0].text}
-              </div>
-            )}
-            {question.hasOwnProperty('percentage') && (
-              <div>
-                <strong>
-                  <Trans>Percentagem de acerto</Trans>:
-                </strong>{' '}
-                <Link to={`/question/${question.id}`}>
-                  {Math.round(question.percentage)}%
-                </Link>
-              </div>
-            )}
-            {question.media_id && (
-              <div className={classes.media}>
-                {renderMedia(
-                  data.media[question.media_id].type,
-                  data.media[question.media_id].url,
-                  index
-                )}
-              </div>
-            )}
-          </div>
-        ))}
+        {(date && !data.quiz.today) || data.quiz.submitted ? (
+          <QuizDone data={data} userAnswers={userAnswers} />
+        ) : (
+          <QuizForm data={data} userAnswers={userAnswers} />
+        )}
       </div>
     </>
   );
