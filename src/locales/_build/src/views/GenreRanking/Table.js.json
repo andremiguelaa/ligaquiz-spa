@@ -1,0 +1,50 @@
+{
+  "Nome": {
+    "origin": [
+      [
+        "src/views/GenreRanking/Table.js",
+        13
+      ]
+    ]
+  },
+  "Respostas correctas": {
+    "origin": [
+      [
+        "src/views/GenreRanking/Table.js",
+        20
+      ]
+    ]
+  },
+  "RC": {
+    "origin": [
+      [
+        "src/views/GenreRanking/Table.js",
+        22
+      ]
+    ]
+  },
+  "Perguntas respondidas": {
+    "origin": [
+      [
+        "src/views/GenreRanking/Table.js",
+        32
+      ]
+    ]
+  },
+  "PR": {
+    "origin": [
+      [
+        "src/views/GenreRanking/Table.js",
+        34
+      ]
+    ]
+  },
+  "Percentagem de acerto": {
+    "origin": [
+      [
+        "src/views/GenreRanking/Table.js",
+        44
+      ]
+    ]
+  }
+}

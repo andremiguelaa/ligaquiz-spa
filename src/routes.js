@@ -19,6 +19,7 @@ import Game from 'views/Game';
 import Question from 'views/Question';
 import Quiz from 'views/Quiz';
 import Rules from 'views/Rules';
+import GenreRanking from 'views/GenreRanking';
 
 import NationalRankingAdminRankings from 'views/admin/nationalRanking/Rankings';
 import NationalRankingAdminEvents from 'views/admin/nationalRanking/Events';
@@ -79,6 +80,11 @@ export default [
     title: <Trans>Regras</Trans>,
     path: '/rules',
     component: Rules,
+  },
+  {
+    title: <Trans>Rankings temáticos</Trans>,
+    path: '/genre-rankings/:season?',
+    component: GenreRanking,
   },
   {
     title: <Trans>Estatísticas</Trans>,
