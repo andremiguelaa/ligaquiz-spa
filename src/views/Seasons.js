@@ -10,6 +10,8 @@ import Loading from 'components/Loading';
 import PaginatedTable from 'components/PaginatedTable';
 import NoMatch from './NoMatch';
 
+import classes from './Seasons/Seasons.module.scss';
+
 const Seasons = () => {
   const { page } = useParams();
   let history = useHistory();
@@ -65,9 +67,27 @@ const Seasons = () => {
                       {
                         id: 'season',
                         render: (item) => (
-                          <Link to={`/ranking/${item.season}`}>
-                            <Trans>Temporada {item.season}</Trans>
-                          </Link>
+                          <Trans>Temporada {item.season}</Trans>
+                        ),
+                      },
+                      {
+                        id: 'actions',
+                        className: 'has-text-right',
+                        render: (item) => (
+                          <>
+                            <Link
+                              to={`/genre-rankings/${item.season}`}
+                              className={classes.action}
+                            >
+                              <Trans>Rankings temáticos</Trans>
+                            </Link>
+                            <Link
+                              to={`/ranking/${item.season}`}
+                              className={classes.action}
+                            >
+                              <Trans>Classificação</Trans>
+                            </Link>
+                          </>
                         ),
                       },
                     ]}
