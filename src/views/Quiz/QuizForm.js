@@ -28,6 +28,21 @@ const QuizForm = ({ data, userAnswers }) => {
 
   const handleSubmit = () => {};
 
+  const pointsGiven = formData.answers.reduce(
+    (acc, item) => {
+      if (item.points >= 0) {
+        acc[item.points]++;
+      }
+      return acc;
+    },
+    {
+      0: 0,
+      1: 0,
+      2: 0,
+      3: 0,
+    }
+  );
+
   return (
     <form onSubmit={handleSubmit}>
       {data.quiz.questions.map((question, index) => (
@@ -77,17 +92,27 @@ const QuizForm = ({ data, userAnswers }) => {
               <div className="field has-addons">
                 <div className="control">
                   <button
+                    disabled={
+                      submitting ||
+                      (pointsGiven[0] === 1 &&
+                        formData.answers[index].points !== 0)
+                    }
                     type="button"
                     className={classnames('button', {
                       'is-success': formData.answers[index].points === 0,
                     })}
                     onClick={() => {
+                      saveDraft(
+                        question.id,
+                        formData.answers[index].text,
+                        formData.answers[index].points === 0 ? undefined : 0
+                      );
                       setFormData((prev) => {
                         const newFormData = { ...prev };
-                        newFormData.answers[index].points = 0;
+                        newFormData.answers[index].points =
+                          formData.answers[index].points === 0 ? undefined : 0;
                         return newFormData;
                       });
-                      saveDraft(question.id, formData.answers[index].text, 0);
                     }}
                   >
                     0
@@ -95,17 +120,27 @@ const QuizForm = ({ data, userAnswers }) => {
                 </div>
                 <div className="control">
                   <button
+                    disabled={
+                      submitting ||
+                      (pointsGiven[1] === 3 &&
+                        formData.answers[index].points !== 1)
+                    }
                     type="button"
                     className={classnames('button', {
                       'is-warning': formData.answers[index].points === 1,
                     })}
                     onClick={() => {
+                      saveDraft(
+                        question.id,
+                        formData.answers[index].text,
+                        formData.answers[index].points === 1 ? undefined : 1
+                      );
                       setFormData((prev) => {
                         const newFormData = { ...prev };
-                        newFormData.answers[index].points = 1;
+                        newFormData.answers[index].points =
+                          formData.answers[index].points === 1 ? undefined : 1;
                         return newFormData;
                       });
-                      saveDraft(question.id, formData.answers[index].text, 1);
                     }}
                   >
                     1
@@ -113,17 +148,27 @@ const QuizForm = ({ data, userAnswers }) => {
                 </div>
                 <div className="control">
                   <button
+                    disabled={
+                      submitting ||
+                      (pointsGiven[2] === 3 &&
+                        formData.answers[index].points !== 2)
+                    }
                     type="button"
                     className={classnames('button', {
                       'is-warning': formData.answers[index].points === 2,
                     })}
                     onClick={() => {
+                      saveDraft(
+                        question.id,
+                        formData.answers[index].text,
+                        formData.answers[index].points === 2 ? undefined : 2
+                      );
                       setFormData((prev) => {
                         const newFormData = { ...prev };
-                        newFormData.answers[index].points = 2;
+                        newFormData.answers[index].points =
+                          formData.answers[index].points === 2 ? undefined : 2;
                         return newFormData;
                       });
-                      saveDraft(question.id, formData.answers[index].text, 2);
                     }}
                   >
                     2
@@ -131,17 +176,27 @@ const QuizForm = ({ data, userAnswers }) => {
                 </div>
                 <div className="control">
                   <button
+                    disabled={
+                      submitting ||
+                      (pointsGiven[3] === 1 &&
+                        formData.answers[index].points !== 3)
+                    }
                     type="button"
                     className={classnames('button', {
                       'is-danger': formData.answers[index].points === 3,
                     })}
                     onClick={() => {
+                      saveDraft(
+                        question.id,
+                        formData.answers[index].text,
+                        formData.answers[index].points === 3 ? undefined : 3
+                      );
                       setFormData((prev) => {
                         const newFormData = { ...prev };
-                        newFormData.answers[index].points = 3;
+                        newFormData.answers[index].points =
+                          formData.answers[index].points === 3 ? undefined : 3;
                         return newFormData;
                       });
-                      saveDraft(question.id, formData.answers[index].text, 3);
                     }}
                   >
                     3
