@@ -179,10 +179,6 @@ const QuizForm = () => {
                   <DatePicker
                     minDate={new Date()}
                     excludeDates={quizDates}
-                    filterDate={(date) => {
-                      const day = date.getDay();
-                      return day !== 0 && day !== 6;
-                    }}
                     selected={quizDate}
                     onChange={(date) => {
                       setQuizDate(date);
