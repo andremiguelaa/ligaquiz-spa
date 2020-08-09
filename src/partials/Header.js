@@ -231,6 +231,10 @@ const Header = () => {
                       user.roles.regular_player >=
                         moment().format('YYYY-MM-DD')) && (
                       <>
+                        <Link to="/genre-rankings" className="navbar-item">
+                          <i className="fa fa-btn fa-shield" />
+                          &nbsp;<Trans>Rankings temáticos</Trans>
+                        </Link>
                         <Link to="/seasons" className="navbar-item">
                           <i className="fa fa-btn fa-archive" />
                           &nbsp;<Trans>Arquivo de temporadas</Trans>

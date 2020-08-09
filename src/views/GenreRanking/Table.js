@@ -57,16 +57,17 @@ const Table = ({ data, users, genre }) => (
             {users[player.user].name} {users[player.user].surname}
           </td>
           <td className={classes.correct}>
-            {genre ? player.genres[genre].correct : player.correct}
+            {(genre ? player.genres[genre]?.correct : player.correct) || 0}
           </td>
           <td className={classes.total}>
-            {genre ? player.genres[genre].total : player.total}
+            {(genre ? player.genres[genre]?.total : player.total) || 0}
           </td>
           <td className={classes.percentage}>
             {Math.round(
               (genre
-                ? player.genres[genre].correct / player.genres[genre].total
-                : player.correct / player.total) * 100
+                ? (player.genres[genre]?.correct || 0) /
+                  (player.genres[genre]?.total || 1)
+                : player.correct / (player.total || 1)) * 100
             )}
             %
           </td>

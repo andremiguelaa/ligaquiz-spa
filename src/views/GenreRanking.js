@@ -176,7 +176,8 @@ const GenreRanking = () => {
                 <Table
                   data={Object.values(statistics).sort(
                     (a, b) =>
-                      b.genres[genre.id].correct - a.genres[genre.id].correct
+                      (b.genres[genre.id]?.correct || 0) -
+                      (a.genres[genre.id]?.correct || 0)
                   )}
                   genre={genre.id}
                   users={users}
