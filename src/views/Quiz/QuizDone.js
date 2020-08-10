@@ -32,6 +32,14 @@ const QuizDone = ({ data, userAnswers }) => (
             {userAnswers[question.id][0].text}
           </div>
         )}
+        {!data.quiz.solo && userAnswers?.[question.id]?.[0] && (
+          <div>
+            <strong>
+              <Trans>Pontos atribuídos ao adverário</Trans>:
+            </strong>{' '}
+            {userAnswers[question.id][0].points}
+          </div>
+        )}
         {question.hasOwnProperty('percentage') && (
           <div>
             <strong>

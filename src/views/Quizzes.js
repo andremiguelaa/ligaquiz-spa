@@ -14,7 +14,7 @@ import NoMatch from './NoMatch';
 
 const Quizzes = () => {
   const { page } = useParams();
-  let history = useHistory();
+  const history = useHistory();
 
   const [error, setError] = useState();
   const [loading, setLoading] = useState(true);

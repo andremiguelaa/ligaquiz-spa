@@ -20,3 +20,19 @@
     }
   }
 }
+
+.statistics {
+  .opponentTitle {
+    margin-bottom: 0;
+  }
+  .opponentName {
+    margin-bottom: 1rem;
+  }
+  .genresTable {
+    .subgenre {
+      th {
+        padding-left: 1.5rem;
+      }
+    }
+  }
+}

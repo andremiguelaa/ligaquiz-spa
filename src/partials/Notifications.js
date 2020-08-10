@@ -14,7 +14,7 @@ const Header = () => {
   const [notifications, setNotifications] = useState({
     notifications: [],
     quiz: false,
-    special_quiz: false,
+    submitted_quiz: false,
   });
   const [loading, setLoading] = useState({
     notifications: false,
@@ -43,10 +43,10 @@ const Header = () => {
         user.roles.regular_player >= moment().format('YYYY-MM-DD')
       ) {
         ApiRequest.get('quizzes?today')
-          .then(() => {
+          .then(({ data }) => {
             setNotifications((prev) => ({
               ...prev,
-              quiz: true,
+              quiz: !data.quiz.submitted,
             }));
           })
           .catch(({ response }) => {
