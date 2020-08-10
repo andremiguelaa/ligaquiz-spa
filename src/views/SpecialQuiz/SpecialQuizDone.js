@@ -25,12 +25,26 @@ const QuizDone = ({ data, userAnswers }) => (
           </div>
         )}
         {userAnswers?.[question.id]?.[0] && (
-          <div>
-            <strong>
-              <Trans>Resposta dada</Trans>:
-            </strong>{' '}
-            {userAnswers[question.id][0].text}
-          </div>
+          <>
+            <div>
+              <strong>
+                <Trans>Resposta dada</Trans>:
+              </strong>{' '}
+              {userAnswers[question.id][0].text
+                ? userAnswers[question.id][0].text
+                : '-'}
+            </div>
+            <div>
+              <strong>
+                <Trans>Joker usado</Trans>:
+              </strong>{' '}
+              {userAnswers[question.id][0].points ? (
+                <Trans>Sim</Trans>
+              ) : (
+                <Trans>Não</Trans>
+              )}
+            </div>
+          </>
         )}
         {question.hasOwnProperty('percentage') && (
           <div>

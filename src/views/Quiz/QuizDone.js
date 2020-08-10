@@ -29,7 +29,9 @@ const QuizDone = ({ data, userAnswers }) => (
             <strong>
               <Trans>Resposta dada</Trans>:
             </strong>{' '}
-            {userAnswers[question.id][0].text}
+            {userAnswers[question.id][0].text
+              ? userAnswers[question.id][0].text
+              : '-'}
           </div>
         )}
         {!data.quiz.solo && userAnswers?.[question.id]?.[0] && (
