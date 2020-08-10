@@ -23,6 +23,7 @@ const QuizForm = ({ data, userAnswers }) => {
       settings: { language },
       user,
     },
+    dispatch,
   ] = useStateValue();
   const history = useHistory();
   const [submitting, setSubmitting] = useState(false);
@@ -122,6 +123,12 @@ const QuizForm = ({ data, userAnswers }) => {
     setSubmitting(true);
     ApiRequest.post(`quizzes/submit`, formData)
       .then(() => {
+        dispatch({
+          type: 'notifications.set',
+          payload: {
+            quiz: false,
+          },
+        });
         toast.success(<Trans>Quiz submetido com sucesso.</Trans>);
         history.push(`/quiz/${data.quiz.date}`);
       })

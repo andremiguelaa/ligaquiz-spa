@@ -25,7 +25,7 @@ const Notifications = () => {
   useEffect(() => {
     ApiRequest.get('notifications')
       .then(({ data }) => {
-        setNotifications(data.sort(notificationSort));
+        setNotifications(data.manual.sort(notificationSort));
       })
       .catch(() => {
         setError(true);
