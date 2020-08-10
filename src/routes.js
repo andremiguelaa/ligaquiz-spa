@@ -18,6 +18,7 @@ import SpecialQuizzes from 'views/SpecialQuizzes';
 import Game from 'views/Game';
 import Question from 'views/Question';
 import Quiz from 'views/Quiz';
+import SpecialQuiz from 'views/SpecialQuiz';
 import Rules from 'views/Rules';
 import GenreRanking from 'views/GenreRanking';
 
@@ -136,6 +137,11 @@ export default [
     title: <Trans>Quiz</Trans>,
     path: '/quiz/:date?',
     component: Quiz,
+  },
+  {
+    title: <Trans>Quiz Especial</Trans>,
+    path: '/special-quiz/:date?',
+    component: SpecialQuiz,
   },
   {
     title: <Trans>Ranking Nacional | Ranking</Trans>,

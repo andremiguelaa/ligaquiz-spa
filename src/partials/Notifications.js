@@ -60,7 +60,7 @@ const Notifications = () => {
       });
     }
     return () => clearInterval(interval);
-  }, [user]);
+  }, [user, dispatch]);
 
   useEffect(() => {
     if (notifications.special_quiz) {
@@ -90,25 +90,19 @@ const Notifications = () => {
           </div>
         ))}
         {notifications.quiz && location.pathname !== '/quiz' && (
-          <Link to="/quiz">
-            <div className={`notification is-info`}>
-              <u>
-                <Trans>Quiz de hoje disponível aqui</Trans>
-              </u>
-            </div>
-          </Link>
+          <div className={`notification is-info`}>
+            <Link to="/quiz">
+              <Trans>Quiz de hoje disponível aqui</Trans>
+            </Link>
+          </div>
         )}
         {notifications.special_quiz && location.pathname !== '/special-quiz' && (
-          <Link to="/special-quiz">
-            <div className={`notification is-info`}>
-              <u>
-                <Trans>
-                  Quiz especial disponível aqui
-                  {specialQuizSubject && `: ${specialQuizSubject}`}
-                </Trans>
-              </u>
-            </div>
-          </Link>
+          <div className={`notification is-info`}>
+            <Link to="/special-quiz">
+              <Trans>Quiz especial disponível aqui</Trans>
+              {specialQuizSubject && `: ${specialQuizSubject}`}
+            </Link>
+          </div>
         )}
       </section>
     );
