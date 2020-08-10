@@ -7,7 +7,7 @@ import Markdown from 'components/Markdown';
 
 import classes from './SpecialQuiz.module.scss';
 
-const QuizDone = ({ data, userAnswers }) => (
+const SpecialQuizDone = ({ data, userAnswers }) => (
   <>
     {data.quiz.questions.map((question, index) => (
       <div key={question.id} className={classes.question}>
@@ -70,4 +70,4 @@ const QuizDone = ({ data, userAnswers }) => (
   </>
 );
 
-export default QuizDone;
+export default SpecialQuizDone;
