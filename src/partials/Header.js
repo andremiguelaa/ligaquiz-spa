@@ -4,7 +4,6 @@ import OutsideClickHandler from 'react-outside-click-handler';
 import { Trans } from '@lingui/macro';
 import classames from 'classnames';
 import Cookies from 'js-cookie';
-import moment from 'moment';
 
 import { catalogs } from 'utils/catalogs';
 import { useStateValue } from 'state/State';
@@ -68,8 +67,7 @@ const Header = () => {
               </Link>
             )}
             {user &&
-              (user.roles.admin ||
-                user.roles.regular_player >= moment().format('YYYY-MM-DD')) && (
+              (user.valid_roles.admin || user.valid_roles.regular_player) && (
                 <Link to="/ranking" className="navbar-item">
                   <i className="fa fa-btn fa-diamond" />
                   &nbsp;<Trans>Classificação</Trans>
@@ -136,7 +134,7 @@ const Header = () => {
                   </button>
                 </OutsideClickHandler>
                 <div className="navbar-dropdown is-right">
-                  {user.roles.admin && (
+                  {user.valid_roles.admin && (
                     <>
                       <div className="navbar-item">
                         <Trans>Administração</Trans>
@@ -156,17 +154,17 @@ const Header = () => {
                       <hr className="navbar-divider" />
                     </>
                   )}
-                  {(user.roles.admin ||
-                    user.roles.quiz_editor ||
-                    user.roles.special_quiz_editor ||
-                    user.roles.answer_reviewer) && (
+                  {(user.valid_roles.admin ||
+                    user.valid_roles.quiz_editor ||
+                    user.valid_roles.special_quiz_editor ||
+                    user.valid_roles.answer_reviewer) && (
                     <>
                       <div className="navbar-item">
                         <Trans>Gestão de Quizzes</Trans>
                       </div>
-                      {(user.roles.admin ||
-                        user.roles.quiz_editor ||
-                        user.roles.answer_reviewer) && (
+                      {(user.valid_roles.admin ||
+                        user.valid_roles.quiz_editor ||
+                        user.valid_roles.answer_reviewer) && (
                         <Link to="/admin/quizzes" className="navbar-item">
                           <i className="fa fa-btn fa-question-circle-o" />
                           &nbsp;<Trans>Quizzes</Trans>
@@ -227,9 +225,8 @@ const Header = () => {
                     &nbsp;<Trans>Conta</Trans>
                   </Link>
                   {user &&
-                    (user.roles.admin ||
-                      user.roles.regular_player >=
-                        moment().format('YYYY-MM-DD')) && (
+                    (user.valid_roles.admin ||
+                      user.valid_roles.regular_player) && (
                       <>
                         <Link to="/genre-rankings" className="navbar-item">
                           <i className="fa fa-btn fa-shield" />
@@ -246,11 +243,9 @@ const Header = () => {
                       </>
                     )}
                   {user &&
-                    (user.roles.admin ||
-                      user.roles.regular_player >=
-                        moment().format('YYYY-MM-DD') ||
-                      user.roles.special_quiz_player >=
-                        moment().format('YYYY-MM-DD')) && (
+                    (user.valid_roles.admin ||
+                      user.valid_roles.regular_player ||
+                      user.valid_roles.special_quiz_player) && (
                       <>
                         <Link to="/special-quizzes" className="navbar-item">
                           <i className="fa fa-btn fa-archive" />
