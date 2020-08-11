@@ -1,0 +1,82 @@
+{
+  "Quiz especial submetido com sucesso.": {
+    "origin": [
+      [
+        "src/views/SpecialQuiz/SpecialQuizForm.js",
+        50
+      ]
+    ]
+  },
+  "Não foi possível submeter o quiz especial.": {
+    "origin": [
+      [
+        "src/views/SpecialQuiz/SpecialQuizForm.js",
+        54
+      ]
+    ]
+  },
+  "Descrição": {
+    "origin": [
+      [
+        "src/views/SpecialQuiz/SpecialQuizForm.js",
+        71
+      ]
+    ]
+  },
+  "Resposta": {
+    "origin": [
+      [
+        "src/views/SpecialQuiz/SpecialQuizForm.js",
+        95
+      ]
+    ]
+  },
+  "Joker": {
+    "origin": [
+      [
+        "src/views/SpecialQuiz/SpecialQuizForm.js",
+        144
+      ]
+    ]
+  },
+  "Gravar": {
+    "origin": [
+      [
+        "src/views/SpecialQuiz/SpecialQuizForm.js",
+        152
+      ]
+    ]
+  },
+  "Regras": {
+    "origin": [
+      [
+        "src/views/SpecialQuiz/SpecialQuizForm.js",
+        162
+      ]
+    ]
+  },
+  "<0>Cada pergunta certa num quiz especial vale 20 pontos.</0><1>Em cada quiz especial podes usar até 5 jokers.</1><2>Ao usares um joker numa pergunta, caso acertes, ganhas pontos adicionais consoante a percentagem de pessoas que erraram essa pergunta.</2><3><4>Exemplo:</4> Se acertares uma pergunta onde usaste um joker e 60% dos jogadores falharem ganhas 80 pontos (20+60).</3><5>Caso uses um joker e falhes a pergunta, perdes 20 pontos!</5>": {
+    "origin": [
+      [
+        "src/views/SpecialQuiz/SpecialQuizForm.js",
+        165
+      ]
+    ]
+  },
+  "Submeter quiz": {
+    "origin": [
+      [
+        "src/views/SpecialQuiz/SpecialQuizForm.js",
+        190
+      ]
+    ]
+  },
+  "Tens a certeza que queres submeter o quiz?": {
+    "origin": [
+      [
+        "src/views/SpecialQuiz/SpecialQuizForm.js",
+        191
+      ]
+    ]
+  }
+}

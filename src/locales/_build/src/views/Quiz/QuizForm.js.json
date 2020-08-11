@@ -1,0 +1,122 @@
+{
+  "Quiz submetido com sucesso.": {
+    "origin": [
+      [
+        "src/views/Quiz/QuizForm.js",
+        132
+      ]
+    ]
+  },
+  "Não foi possível submeter o quiz.": {
+    "origin": [
+      [
+        "src/views/Quiz/QuizForm.js",
+        136
+      ]
+    ]
+  },
+  "Resposta": {
+    "origin": [
+      [
+        "src/views/Quiz/QuizForm.js",
+        182
+      ]
+    ]
+  },
+  "Pontos a atribuir ao adversário": {
+    "origin": [
+      [
+        "src/views/Quiz/QuizForm.js",
+        207
+      ]
+    ]
+  },
+  "Gravar": {
+    "origin": [
+      [
+        "src/views/Quiz/QuizForm.js",
+        342
+      ]
+    ]
+  },
+  "Não foi possível obter as estatísticas do adversário": {
+    "origin": [
+      [
+        "src/views/Quiz/QuizForm.js",
+        352
+      ]
+    ]
+  },
+  "Estatísticas do adversário": {
+    "origin": [
+      [
+        "src/views/Quiz/QuizForm.js",
+        370
+      ]
+    ]
+  },
+  "Tema": {
+    "origin": [
+      [
+        "src/views/Quiz/QuizForm.js",
+        385
+      ]
+    ]
+  },
+  "Total de respostas": {
+    "origin": [
+      [
+        "src/views/Quiz/QuizForm.js",
+        393
+      ]
+    ]
+  },
+  "T": {
+    "origin": [
+      [
+        "src/views/Quiz/QuizForm.js",
+        396
+      ]
+    ]
+  },
+  "Percentagem de acerto": {
+    "origin": [
+      [
+        "src/views/Quiz/QuizForm.js",
+        407
+      ]
+    ]
+  },
+  "Submissão inválida": {
+    "origin": [
+      [
+        "src/views/Quiz/QuizForm.js",
+        464
+      ]
+    ]
+  },
+  "Tens pontos por atribuir.<0/>Atribui-os antes de fazer a submissão.": {
+    "origin": [
+      [
+        "src/views/Quiz/QuizForm.js",
+        466
+      ]
+    ]
+  },
+  "Submeter quiz": {
+    "origin": [
+      [
+        "src/views/Quiz/QuizForm.js",
+        478
+      ]
+    ]
+  },
+  "Tens a certeza que queres submeter o quiz?": {
+    "origin": [
+      [
+        "src/views/Quiz/QuizForm.js",
+        479
+      ]
+    ]
+  }
+}

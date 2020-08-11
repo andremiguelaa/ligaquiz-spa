@@ -1,0 +1,34 @@
+{
+  "Resposta correcta": {
+    "origin": [
+      [
+        "src/views/Quiz/QuizDone.js",
+        22
+      ]
+    ]
+  },
+  "Resposta dada": {
+    "origin": [
+      [
+        "src/views/Quiz/QuizDone.js",
+        30
+      ]
+    ]
+  },
+  "Pontos atribuídos ao adverário": {
+    "origin": [
+      [
+        "src/views/Quiz/QuizDone.js",
+        40
+      ]
+    ]
+  },
+  "Percentagem de acerto": {
+    "origin": [
+      [
+        "src/views/Quiz/QuizDone.js",
+        48
+      ]
+    ]
+  }
+}

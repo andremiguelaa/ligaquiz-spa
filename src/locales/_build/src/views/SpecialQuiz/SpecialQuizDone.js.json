@@ -1,0 +1,50 @@
+{
+  "Resposta correcta": {
+    "origin": [
+      [
+        "src/views/SpecialQuiz/SpecialQuizDone.js",
+        22
+      ]
+    ]
+  },
+  "Resposta dada": {
+    "origin": [
+      [
+        "src/views/SpecialQuiz/SpecialQuizDone.js",
+        31
+      ]
+    ]
+  },
+  "Joker usado": {
+    "origin": [
+      [
+        "src/views/SpecialQuiz/SpecialQuizDone.js",
+        39
+      ]
+    ]
+  },
+  "Sim": {
+    "origin": [
+      [
+        "src/views/SpecialQuiz/SpecialQuizDone.js",
+        42
+      ]
+    ]
+  },
+  "Não": {
+    "origin": [
+      [
+        "src/views/SpecialQuiz/SpecialQuizDone.js",
+        44
+      ]
+    ]
+  },
+  "Percentagem de acerto": {
+    "origin": [
+      [
+        "src/views/SpecialQuiz/SpecialQuizDone.js",
+        52
+      ]
+    ]
+  }
+}

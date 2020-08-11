@@ -151,7 +151,7 @@
       ]
     ]
   },
-  "Arquivo de temporadas": {
+  "Rankings temáticos": {
     "origin": [
       [
         "src/partials/Header.js",
@@ -159,7 +159,7 @@
       ]
     ]
   },
-  "Arquivo de quizzes": {
+  "Arquivo de temporadas": {
     "origin": [
       [
         "src/partials/Header.js",
@@ -167,11 +167,19 @@
       ]
     ]
   },
+  "Arquivo de quizzes": {
+    "origin": [
+      [
+        "src/partials/Header.js",
+        244
+      ]
+    ]
+  },
   "Arquivo de quizzes especiais": {
     "origin": [
       [
         "src/partials/Header.js",
-        253
+        257
       ]
     ]
   },
@@ -179,7 +187,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        259
+        263
       ]
     ]
   },
@@ -187,7 +195,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        263
+        267
       ]
     ]
   }

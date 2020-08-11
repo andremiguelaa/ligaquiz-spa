@@ -1,0 +1,18 @@
+{
+  "Quiz de hoje disponível aqui": {
+    "origin": [
+      [
+        "src/partials/Notifications.js",
+        95
+      ]
+    ]
+  },
+  "Quiz especial disponível aqui": {
+    "origin": [
+      [
+        "src/partials/Notifications.js",
+        102
+      ]
+    ]
+  }
+}

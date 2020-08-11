@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/Seasons.js",
-        44
+        46
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/views/Seasons.js",
-        55
+        57
       ]
     ]
   },
@@ -19,7 +19,23 @@
     "origin": [
       [
         "src/views/Seasons.js",
-        69
+        70
+      ]
+    ]
+  },
+  "Rankings temáticos": {
+    "origin": [
+      [
+        "src/views/Seasons.js",
+        82
+      ]
+    ]
+  },
+  "Classificação": {
+    "origin": [
+      [
+        "src/views/Seasons.js",
+        88
       ]
     ]
   },
@@ -27,7 +43,7 @@
     "origin": [
       [
         "src/views/Seasons.js",
-        84
+        104
       ]
     ]
   }

@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/Quiz.js",
-        56
+        55
       ]
     ]
   },
@@ -11,31 +11,7 @@
     "origin": [
       [
         "src/views/Quiz.js",
-        69
-      ]
-    ]
-  },
-  "Resposta correcta": {
-    "origin": [
-      [
-        "src/views/Quiz.js",
-        83
-      ]
-    ]
-  },
-  "Resposta dada": {
-    "origin": [
-      [
-        "src/views/Quiz.js",
-        91
-      ]
-    ]
-  },
-  "Percentagem de acerto": {
-    "origin": [
-      [
-        "src/views/Quiz.js",
-        99
+        68
       ]
     ]
   }
