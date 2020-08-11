@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams, useHistory } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
-import moment from 'moment';
 import { toast } from 'react-toastify';
 
 import { useStateValue } from 'state/State';
@@ -61,11 +60,7 @@ const Quizzes = () => {
   };
 
   if (
-    !(
-      user.roles.admin ||
-      user.roles.quiz_editor ||
-      user.roles.answer_reviewer
-    )
+    !(user.roles.admin || user.roles.quiz_editor || user.roles.answer_reviewer)
   ) {
     return <NoMatch />;
   }
@@ -123,8 +118,9 @@ const Quizzes = () => {
                     render: (item) => (
                       <>
                         <div className="buttons has-addons is-pulled-right">
-                          {item.date <= moment().format('YYYY-MM-DD') &&
-                            (user.roles.admin || user.roles.answer_reviewer) && (
+                          {(item.past || item.today) &&
+                            (user.roles.admin ||
+                              user.roles.answer_reviewer) && (
                               <Link
                                 className="button"
                                 to={`/admin/quiz/${item.date}/correct`}
@@ -134,7 +130,8 @@ const Quizzes = () => {
                                 </span>
                               </Link>
                             )}
-                          {item.date > moment().format('YYYY-MM-DD') &&
+                          {!item.past &&
+                            !item.today &&
                             (user.roles.admin || user.roles.quiz_editor) && (
                               <>
                                 <Link

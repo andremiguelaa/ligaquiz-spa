@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams, useHistory } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
-import moment from 'moment';
 import { toast } from 'react-toastify';
 import classnames from 'classnames';
 
@@ -137,7 +136,7 @@ const SpecialQuizzes = () => {
                     render: (item) => (
                       <>
                         <div className="buttons has-addons is-pulled-right">
-                          {item.date <= moment().format('YYYY-MM-DD') &&
+                          {(item.past || item.today) &&
                             (user.roles.admin ||
                               user.roles.answer_reviewer) && (
                               <Link
@@ -149,7 +148,8 @@ const SpecialQuizzes = () => {
                                 </span>
                               </Link>
                             )}
-                          {item.date > moment().format('YYYY-MM-DD') &&
+                          {!item.past &&
+                            !item.today &&
                             (user.roles.admin ||
                               user.roles.special_quiz_editor) && (
                               <>
