@@ -12,6 +12,7 @@ const Modal = ({
   actionDisabled,
   doingAction,
   onClose,
+  confirmButtonText,
 }) => (
   <article className={`modal ${open && 'is-active'}`}>
     <div className="modal-background"></div>
@@ -36,7 +37,7 @@ const Modal = ({
             onClick={action}
             disabled={actionDisabled}
           >
-            <Trans>OK</Trans>
+            {confirmButtonText ? confirmButtonText : <Trans>OK</Trans>}
           </button>
           <button
             type="button"

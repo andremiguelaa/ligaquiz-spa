@@ -14,6 +14,7 @@ import Auth from 'utils/Auth';
 import RouteWithTitle from 'utils/RouteWithTitle';
 import Header from 'partials/Header';
 import Notifications from 'partials/Notifications';
+import Message from 'partials/Message';
 import Blocked from 'components/Blocked';
 
 import pt from 'date-fns/locale/pt';
@@ -60,6 +61,7 @@ const App = () => {
               </I18n>
             </div>
           </main>
+          <Message />
           <ToastContainer />
         </BrowserRouter>
       </I18nProvider>
