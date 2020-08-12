@@ -87,7 +87,11 @@ const SpecialQuiz = () => {
       />
       <div className="section">
         {(date && !data.quiz.today) || data.quiz.submitted ? (
-          <SpecialQuizDone data={data} userAnswers={userAnswers} />
+          <SpecialQuizDone
+            data={data}
+            userAnswers={userAnswers}
+            setError={setError}
+          />
         ) : (
           <SpecialQuizForm data={data} userAnswers={userAnswers} />
         )}
