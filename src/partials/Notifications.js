@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 
@@ -11,6 +11,7 @@ const Notifications = () => {
   const location = useLocation();
   const [{ user, notifications }, dispatch] = useStateValue();
   const [specialQuizSubject, setSpecialQuizSubject] = useState();
+  const prevUserValue = useRef();
 
   useEffect(() => {
     const getNotifications = () => {
@@ -39,12 +40,14 @@ const Notifications = () => {
 
     let interval;
     if (user && !user.roles.blocked) {
-      dispatch({
-        type: 'notifications.set',
-        payload: {
-          loading: true,
-        },
-      });
+      if (!prevUserValue.current) {
+        dispatch({
+          type: 'notifications.set',
+          payload: {
+            loading: true,
+          },
+        });
+      }
       getNotifications();
       interval = setInterval(() => {
         getNotifications();
@@ -59,6 +62,7 @@ const Notifications = () => {
         },
       });
     }
+    prevUserValue.current = user;
     return () => clearInterval(interval);
   }, [user, dispatch]);
 
