@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 import classnames from 'classnames';
+import slugify from 'slugify';
 
 import { useStateValue } from 'state/State';
 import { convertToLongDate } from 'utils/formatDate';
@@ -32,7 +33,20 @@ const SpecialQuizCorrect = () => {
         setQuiz(data.quiz);
         ApiRequest.get(`answers?special_quiz=${data.quiz.id}&submitted=1`)
           .then(({ data }) => {
-            setAnswers(data);
+            const mappedAnswers = Object.entries(data).reduce(
+              (acc, [key, value]) => {
+                acc[key] = value.reduce((acc, item) => {
+                  acc[item.id] = {
+                    ...item,
+                    loading: false,
+                  };
+                  return acc;
+                }, {});
+                return acc;
+              },
+              {}
+            );
+            setAnswers(mappedAnswers);
           })
           .catch(({ response }) => {
             setError(response?.status);
@@ -42,6 +56,44 @@ const SpecialQuizCorrect = () => {
         setError(response?.status);
       });
   }, [date]);
+
+  const bulkCorrectAnswer = (answerIds, questionId, correct) => {
+    setAnswers((prev) => {
+      const newValue = { ...prev };
+      answerIds.forEach((id) => {
+        newValue[questionId][id].loading = true;
+      });
+      return newValue;
+    });
+    ApiRequest.patch(`answers`, { id: answerIds, correct }).then(({ data }) => {
+      setAnswers((prev) => {
+        const newValue = { ...prev };
+        data.forEach((answer) => {
+          newValue[answer.question_id][answer.id] = {
+            ...answer,
+            loading: false,
+          };
+        });
+        return newValue;
+      });
+    });
+  };
+
+  const correctAnswers = (id, questionId, correct) => {
+    const slugifiedMainAnswer = slugify(
+      answers[questionId][id].text.replace(/\s/g, '').toLowerCase()
+    );
+    const answerIds = [];
+    Object.values(answers[questionId]).forEach((answer) => {
+      const slugifiedAnswer = slugify(
+        answer.text.replace(/\s/g, '').toLowerCase()
+      );
+      if (slugifiedMainAnswer === slugifiedAnswer) {
+        answerIds.push(answer.id);
+      }
+    });
+    bulkCorrectAnswer(answerIds, questionId, correct);
+  };
 
   if (error) {
     if (error === 404 || error === 400) {
@@ -101,8 +153,12 @@ const SpecialQuizCorrect = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {answers[question.id].map((answer) => (
-                    <Answer key={answer.id} answer={answer} />
+                  {Object.values(answers[question.id]).map((answer) => (
+                    <Answer
+                      key={answer.id}
+                      answer={answer}
+                      correctAnswers={correctAnswers}
+                    />
                   ))}
                 </tbody>
               </table>
