@@ -136,6 +136,33 @@ const SpecialQuizzes = () => {
                     render: (item) => (
                       <>
                         <div className="buttons has-addons is-pulled-right">
+                          {!item.past &&
+                            (user.roles.admin ||
+                              user.roles.special_quiz_editor) && (
+                              <Link
+                                className="button"
+                                to={`/admin/special-quiz/${item.date}/edit`}
+                              >
+                                <span className="icon">
+                                  <i className="fa fa-edit"></i>
+                                </span>
+                              </Link>
+                            )}
+                          {!item.past &&
+                            !item.today &&
+                            (user.roles.admin ||
+                              user.roles.special_quiz_editor) && (
+                              <button
+                                className="button is-danger"
+                                onClick={() => {
+                                  setQuizToDelete(item.id);
+                                }}
+                              >
+                                <span className="icon">
+                                  <i className="fa fa-trash"></i>
+                                </span>
+                              </button>
+                            )}
                           {(item.past || item.today) &&
                             (user.roles.admin ||
                               user.roles.answer_reviewer) && (
@@ -147,31 +174,6 @@ const SpecialQuizzes = () => {
                                   <i className="fa fa-check"></i>
                                 </span>
                               </Link>
-                            )}
-                          {!item.past &&
-                            !item.today &&
-                            (user.roles.admin ||
-                              user.roles.special_quiz_editor) && (
-                              <>
-                                <Link
-                                  className="button"
-                                  to={`/admin/special-quiz/${item.date}/edit`}
-                                >
-                                  <span className="icon">
-                                    <i className="fa fa-edit"></i>
-                                  </span>
-                                </Link>
-                                <button
-                                  className="button is-danger"
-                                  onClick={() => {
-                                    setQuizToDelete(item.id);
-                                  }}
-                                >
-                                  <span className="icon">
-                                    <i className="fa fa-trash"></i>
-                                  </span>
-                                </button>
-                              </>
                             )}
                         </div>
                       </>
