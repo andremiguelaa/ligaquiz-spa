@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 
 import { useStateValue } from 'state/State';
@@ -19,6 +19,7 @@ const SpecialQuiz = () => {
       settings: { language },
     },
   ] = useStateValue();
+  const history = useHistory();
 
   const { date } = useParams();
 
@@ -32,6 +33,10 @@ const SpecialQuiz = () => {
     setLoading(true);
     ApiRequest.get(`special-quizzes?${date ? `date=${date}` : 'today'}`)
       .then(({ data }) => {
+        if (date && data.quiz.today && !data.quiz.submitted) {
+          history.push('/special-quiz');
+          return;
+        }
         setData(data);
         ApiRequest.get(`answers?special_quiz=${data.quiz.id}&mine=true`)
           .then(({ data }) => {
