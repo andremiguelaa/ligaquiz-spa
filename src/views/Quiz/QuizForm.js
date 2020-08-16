@@ -5,6 +5,7 @@ import { t } from '@lingui/macro';
 import { useHistory } from 'react-router-dom';
 import classnames from 'classnames';
 import { toast } from 'react-toastify';
+import { debounce } from 'lodash';
 
 import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
@@ -16,6 +17,14 @@ import Loading from 'components/Loading';
 import Error from 'components/Error';
 
 import classes from './Quiz.module.scss';
+
+const saveDraft = debounce((id, text, points) => {
+  ApiRequest.post(`answers`, {
+    question_id: id,
+    text,
+    points: points === -1 ? undefined : points,
+  });
+}, 1000);
 
 const QuizForm = ({ data, userAnswers }) => {
   const [
@@ -42,6 +51,9 @@ const QuizForm = ({ data, userAnswers }) => {
   const [statsError, setStatsError] = useState(false);
 
   useEffect(() => {
+    ApiRequest.post(`logs`, {
+      action: `Quiz form opened`,
+    });
     if (!data.quiz.solo && data.quiz.game) {
       const opponent =
         data.quiz.game.user_id_1 === user.id
@@ -96,14 +108,6 @@ const QuizForm = ({ data, userAnswers }) => {
         });
     }
   }, [data.quiz, user]);
-
-  const saveDraft = (id, text, points) => {
-    ApiRequest.post(`answers`, {
-      question_id: id,
-      text,
-      points: points === -1 ? undefined : points,
-    });
-  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -191,13 +195,18 @@ const QuizForm = ({ data, userAnswers }) => {
                         newFormData.answers[index].text = event.target.value;
                         return newFormData;
                       });
-                    }}
-                    onBlur={(event) => {
                       saveDraft(
                         question.id,
                         event.target.value,
                         formData.answers[index].points
                       );
+                    }}
+                    onPaste={(event) => {
+                      ApiRequest.post(`logs`, {
+                        action: `Paste on question ${
+                          question.id
+                        }: ${event.clipboardData.getData('Text')}`,
+                      });
                     }}
                   />
                 </div>

@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Trans } from '@lingui/macro';
 import { useHistory } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import { debounce } from 'lodash';
 
 import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
@@ -10,6 +11,14 @@ import Markdown from 'components/Markdown';
 import Modal from 'components/Modal';
 
 import classes from './SpecialQuiz.module.scss';
+
+const saveDraft = debounce((id, text, points) => {
+  ApiRequest.post(`answers`, {
+    question_id: id,
+    text,
+    points: points === -1 ? undefined : points,
+  });
+}, 1000);
 
 const SpecialQuizForm = ({ data, userAnswers }) => {
   const [, dispatch] = useStateValue();
@@ -24,13 +33,11 @@ const SpecialQuizForm = ({ data, userAnswers }) => {
   });
   const [submitModal, setSubmitModal] = useState(false);
 
-  const saveDraft = (id, text, points) => {
-    ApiRequest.post(`answers`, {
-      question_id: id,
-      text,
-      points: points === -1 ? undefined : points,
+  useEffect(() => {
+    ApiRequest.post(`logs`, {
+      action: `Special quiz form opened`,
     });
-  };
+  }, []);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -104,13 +111,18 @@ const SpecialQuizForm = ({ data, userAnswers }) => {
                         newFormData.answers[index].text = event.target.value;
                         return newFormData;
                       });
-                    }}
-                    onBlur={(event) => {
                       saveDraft(
                         question.id,
                         event.target.value,
                         formData.answers[index].points
                       );
+                    }}
+                    onPaste={(event) => {
+                      ApiRequest.post(`logs`, {
+                        action: `Paste on question ${
+                          question.id
+                        }: ${event.clipboardData.getData('Text')}`,
+                      });
                     }}
                   />
                 </div>

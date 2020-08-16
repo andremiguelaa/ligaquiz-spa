@@ -4,7 +4,7 @@ import { I18nProvider, I18n } from '@lingui/react';
 import { t } from '@lingui/macro';
 import { ToastContainer } from 'react-toastify';
 import { registerLocale, setDefaultLocale } from 'react-datepicker';
-import "react-datepicker/dist/react-datepicker.css";
+import 'react-datepicker/dist/react-datepicker.css';
 
 import 'styles/App.scss';
 import routes from 'routes';
@@ -16,6 +16,7 @@ import Header from 'partials/Header';
 import Notifications from 'partials/Notifications';
 import Message from 'partials/Message';
 import Blocked from 'components/Blocked';
+import Logger from 'components/Logger';
 
 import pt from 'date-fns/locale/pt';
 registerLocale('pt', pt);
@@ -28,6 +29,7 @@ const App = () => {
     },
   ] = useStateValue();
   setDefaultLocale(language);
+
   return (
     <Auth>
       <I18nProvider language={language} catalogs={catalogs}>
@@ -63,6 +65,7 @@ const App = () => {
           </main>
           <Message />
           <ToastContainer />
+          <Logger />
         </BrowserRouter>
       </I18nProvider>
     </Auth>
