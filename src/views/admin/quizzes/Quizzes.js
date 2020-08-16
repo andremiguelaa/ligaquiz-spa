@@ -60,7 +60,11 @@ const Quizzes = () => {
   };
 
   if (
-    !(user.roles.admin || user.roles.quiz_editor || user.roles.answer_reviewer)
+    !(
+      user.valid_roles.admin ||
+      user.valid_roles.quiz_editor ||
+      user.valid_roles.answer_reviewer
+    )
   ) {
     return <NoMatch />;
   }
@@ -84,7 +88,7 @@ const Quizzes = () => {
           <Loading />
         ) : (
           <>
-            {(user.roles.admin || user.roles.quiz_editor) && (
+            {(user.valid_roles.admin || user.valid_roles.quiz_editor) && (
               <>
                 <Link className="button is-primary" to="/admin/quiz/create">
                   <span className="icon">
@@ -130,7 +134,8 @@ const Quizzes = () => {
                       <>
                         <div className="buttons has-addons is-pulled-right">
                           {!item.past &&
-                            (user.roles.admin || user.roles.quiz_editor) && (
+                            (user.valid_roles.admin ||
+                              user.valid_roles.quiz_editor) && (
                               <Link
                                 className="button"
                                 to={`/admin/quiz/${item.date}/edit`}
@@ -142,7 +147,8 @@ const Quizzes = () => {
                             )}
                           {!item.past &&
                             !item.today &&
-                            (user.roles.admin || user.roles.quiz_editor) && (
+                            (user.valid_roles.admin ||
+                              user.valid_roles.quiz_editor) && (
                               <button
                                 className="button is-danger"
                                 onClick={() => {
@@ -155,8 +161,8 @@ const Quizzes = () => {
                               </button>
                             )}
                           {(item.past || item.today) &&
-                            (user.roles.admin ||
-                              user.roles.answer_reviewer) && (
+                            (user.valid_roles.admin ||
+                              user.valid_roles.answer_reviewer) && (
                               <Link
                                 className="button"
                                 to={`/admin/quiz/${item.date}/correct`}

@@ -64,9 +64,9 @@ const SpecialQuizzes = () => {
 
   if (
     !(
-      user.roles.admin ||
-      user.roles.special_quiz_editor ||
-      user.roles.answer_reviewer
+      user.valid_roles.admin ||
+      user.valid_roles.special_quiz_editor ||
+      user.valid_roles.answer_reviewer
     )
   ) {
     return <NoMatch />;
@@ -91,7 +91,8 @@ const SpecialQuizzes = () => {
           <Loading />
         ) : (
           <>
-            {(user.roles.admin || user.roles.special_quiz_editor) && (
+            {(user.valid_roles.admin ||
+              user.valid_roles.special_quiz_editor) && (
               <>
                 <Link
                   className="button is-primary"
@@ -148,8 +149,8 @@ const SpecialQuizzes = () => {
                       <>
                         <div className="buttons has-addons is-pulled-right">
                           {!item.past &&
-                            (user.roles.admin ||
-                              user.roles.special_quiz_editor) && (
+                            (user.valid_roles.admin ||
+                              user.valid_roles.special_quiz_editor) && (
                               <Link
                                 className="button"
                                 to={`/admin/special-quiz/${item.date}/edit`}
@@ -161,8 +162,8 @@ const SpecialQuizzes = () => {
                             )}
                           {!item.past &&
                             !item.today &&
-                            (user.roles.admin ||
-                              user.roles.special_quiz_editor) && (
+                            (user.valid_roles.admin ||
+                              user.valid_roles.special_quiz_editor) && (
                               <button
                                 className="button is-danger"
                                 onClick={() => {
@@ -175,8 +176,8 @@ const SpecialQuizzes = () => {
                               </button>
                             )}
                           {(item.past || item.today) &&
-                            (user.roles.admin ||
-                              user.roles.answer_reviewer) && (
+                            (user.valid_roles.admin ||
+                              user.valid_roles.answer_reviewer) && (
                               <Link
                                 className="button"
                                 to={`/admin/special-quiz/${item.date}/correct`}

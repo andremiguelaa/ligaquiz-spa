@@ -53,7 +53,7 @@ const App = () => {
                         title,
                         exact: !!route.path && !route.loose,
                       };
-                      if (user && user.roles.blocked && !route.free) {
+                      if (user && user.valid_roles.blocked && !route.free) {
                         newProps.component = Blocked;
                       }
                       return <RouteWithTitle key={title} {...newProps} />;

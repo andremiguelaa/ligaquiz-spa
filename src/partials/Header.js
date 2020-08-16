@@ -170,9 +170,9 @@ const Header = () => {
                           &nbsp;<Trans>Quizzes</Trans>
                         </Link>
                       )}
-                      {(user.roles.admin ||
-                        user.roles.special_quiz_editor ||
-                        user.roles.answer_reviewer) && (
+                      {(user.valid_roles.admin ||
+                        user.valid_roles.special_quiz_editor ||
+                        user.valid_roles.answer_reviewer) && (
                         <Link
                           to="/admin/special-quizzes"
                           className="navbar-item"
@@ -181,7 +181,8 @@ const Header = () => {
                           &nbsp;<Trans>Quizzes especiais</Trans>
                         </Link>
                       )}
-                      {(user.roles.admin || user.roles.quiz_editor) && (
+                      {(user.valid_roles.admin ||
+                        user.valid_roles.quiz_editor) && (
                         <Link to="/admin/search" className="navbar-item">
                           <i className="fa fa-btn fa-search" />
                           &nbsp;<Trans>Pesquisa de perguntas</Trans>
@@ -190,8 +191,8 @@ const Header = () => {
                       <hr className="navbar-divider" />
                     </>
                   )}
-                  {(user.roles.admin ||
-                    user.roles.national_ranking_manager) && (
+                  {(user.valid_roles.admin ||
+                    user.valid_roles.national_ranking_manager) && (
                     <>
                       <div className="navbar-item">
                         <Trans>Gestão de Ranking Nacional</Trans>

@@ -5,15 +5,19 @@ import { I18n } from '@lingui/react';
 import { t } from '@lingui/macro';
 import classnames from 'classnames';
 import { Radar } from 'react-chartjs-2';
+import { subDays } from 'date-fns';
 
 import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
 import { getGenreTranslation } from 'utils/getGenreTranslation';
 import Loading from 'components/Loading';
 import Error from 'components/Error';
+import NoMatch from 'views/NoMatch';
+import EmptyState from 'components/EmptyState';
 import PageHeader from 'components/PageHeader';
 import { individualQuizTypeOptions } from 'views/admin/nationalRanking/utils/options';
 import { quizTypeAbbr } from 'views/NationalRanking/consts';
+import formatDate from 'utils/formatDate';
 
 import classes from './Statistics/Statistics.module.scss';
 
@@ -31,14 +35,15 @@ const Statistics = () => {
   const [genres, setGenres] = useState();
   const [statistics, setStatistics] = useState();
   const [chartSeries, setChartSeries] = useState();
+  const [logs, setLogs] = useState();
 
   useEffect(() => {
     ApiRequest.get(`genres`)
       .then(({ data }) => {
         setGenres(data);
       })
-      .catch(() => {
-        setError(true);
+      .catch(({ response }) => {
+        setError(response?.status);
       });
   }, []);
 
@@ -51,8 +56,8 @@ const Statistics = () => {
       .then(({ data }) => {
         setUser(data[0]);
       })
-      .catch(() => {
-        setError(true);
+      .catch(({ response }) => {
+        setError(response?.status);
       });
   }, [userId, authUser]);
 
@@ -103,7 +108,26 @@ const Statistics = () => {
     }
   }, [user, genres]);
 
+  useEffect(() => {
+    if (authUser.valid_roles.admin) {
+      ApiRequest.get(
+        `logs?user_id[]=${userId}&start_date=${formatDate(
+          subDays(new Date(), 7)
+        )}`
+      )
+        .then(({ data }) => {
+          setLogs(data);
+        })
+        .catch(({ response }) => {
+          setError(response?.status);
+        });
+    }
+  }, [authUser, userId]);
+
   if (error) {
+    if (error === 404 || error === 400 || error === 401 || error === 403) {
+      return <NoMatch />;
+    }
     return (
       <Error>
         <Trans>Erro de servidor. Tenta mais tarde.</Trans>
@@ -332,6 +356,49 @@ const Statistics = () => {
             </tbody>
           </table>
         </section>
+      )}
+      {authUser.valid_roles.admin && (
+        <>
+          {logs ? (
+            <section className="section content">
+              <h1 className="has-text-weight-bold is-size-4">
+                <Trans>Registo de acções (últimos 7 dias)</Trans>
+              </h1>
+              {logs.length > 0 ? (
+                <div className="table-container">
+                  <table className="table">
+                    <thead>
+                      <tr>
+                        <th>
+                          <Trans>Acção</Trans>
+                        </th>
+                        <th>
+                          <Trans>Hora</Trans>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {logs.map((log) => (
+                        <tr key={`${log.action}-${log.created_at}`}>
+                          <td>{log.action}</td>
+                          <td>
+                            {log.created_at.substring(0, 19).replace('T', ' ')}
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              ) : (
+                <EmptyState>
+                  <Trans>Sem registos</Trans>
+                </EmptyState>
+              )}
+            </section>
+          ) : (
+            <Loading />
+          )}
+        </>
       )}
     </>
   );

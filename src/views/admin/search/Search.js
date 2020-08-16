@@ -36,7 +36,7 @@ const Search = () => {
     }
   }, [string]);
 
-  if (!(user.roles.admin || user.roles.quiz_editor)) {
+  if (!(user.valid_roles.admin || user.valid_roles.quiz_editor)) {
     return <NoMatch />;
   }
 

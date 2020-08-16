@@ -53,7 +53,7 @@ const Seasons = () => {
       });
   };
 
-  if (!user.roles.admin) {
+  if (!user.valid_roles.admin) {
     return <NoMatch />;
   }
 

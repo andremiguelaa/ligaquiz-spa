@@ -39,7 +39,7 @@ const Notifications = () => {
     };
 
     let interval;
-    if (user && !user.roles.blocked) {
+    if (user && !user.valid_roles.blocked) {
       if (!prevUserValue.current) {
         dispatch({
           type: 'notifications.set',
