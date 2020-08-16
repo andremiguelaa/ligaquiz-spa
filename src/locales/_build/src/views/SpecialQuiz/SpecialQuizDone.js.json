@@ -1,9 +1,33 @@
 {
+  "Classificação": {
+    "origin": [
+      [
+        "src/views/SpecialQuiz/SpecialQuizDone.js",
+        40
+      ]
+    ]
+  },
+  "Jogador": {
+    "origin": [
+      [
+        "src/views/SpecialQuiz/SpecialQuizDone.js",
+        48
+      ]
+    ]
+  },
+  "Total": {
+    "origin": [
+      [
+        "src/views/SpecialQuiz/SpecialQuizDone.js",
+        56
+      ]
+    ]
+  },
   "Resposta correcta": {
     "origin": [
       [
         "src/views/SpecialQuiz/SpecialQuizDone.js",
-        22
+        137
       ]
     ]
   },
@@ -11,7 +35,7 @@
     "origin": [
       [
         "src/views/SpecialQuiz/SpecialQuizDone.js",
-        31
+        146
       ]
     ]
   },
@@ -19,7 +43,7 @@
     "origin": [
       [
         "src/views/SpecialQuiz/SpecialQuizDone.js",
-        39
+        154
       ]
     ]
   },
@@ -27,7 +51,7 @@
     "origin": [
       [
         "src/views/SpecialQuiz/SpecialQuizDone.js",
-        42
+        157
       ]
     ]
   },
@@ -35,7 +59,7 @@
     "origin": [
       [
         "src/views/SpecialQuiz/SpecialQuizDone.js",
-        44
+        159
       ]
     ]
   },
@@ -43,7 +67,7 @@
     "origin": [
       [
         "src/views/SpecialQuiz/SpecialQuizDone.js",
-        52
+        167
       ]
     ]
   }

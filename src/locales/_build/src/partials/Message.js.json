@@ -1,0 +1,42 @@
+{
+  "Mensagem enviada com sucesso.": {
+    "origin": [
+      [
+        "src/partials/Message.js",
+        28
+      ]
+    ]
+  },
+  "Não foi possível enviar a mensagem.": {
+    "origin": [
+      [
+        "src/partials/Message.js",
+        33
+      ]
+    ]
+  },
+  "Enviar sugestão/reclamação": {
+    "origin": [
+      [
+        "src/partials/Message.js",
+        63
+      ]
+    ]
+  },
+  "Mensagem": {
+    "origin": [
+      [
+        "src/partials/Message.js",
+        67
+      ]
+    ]
+  },
+  "Enviar": {
+    "origin": [
+      [
+        "src/partials/Message.js",
+        83
+      ]
+    ]
+  }
+}

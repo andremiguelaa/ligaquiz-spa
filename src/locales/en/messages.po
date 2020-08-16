@@ -71,11 +71,11 @@ msgstr "Add month events"
 msgid "Administrador"
 msgstr "Administrator"
 
-#: src/partials/Header.js:142
+#: src/partials/Header.js:140
 msgid "Administração"
 msgstr "Administration"
 
-#: src/components/PaginatedTable.js:87
+#: src/components/PaginatedTable.js:88
 #: src/views/Ranking/Rounds.js:32
 msgid "Anterior"
 msgstr "Previous"
@@ -96,11 +96,11 @@ msgstr "Delete notification"
 msgid "Apagar provas mensais"
 msgstr "Delete month events"
 
-#: src/views/admin/quizzes/Quizzes.js:184
+#: src/views/admin/quizzes/Quizzes.js:193
 msgid "Apagar quiz"
 msgstr "Delete quiz"
 
-#: src/views/admin/specialQuizzes/SpecialQuizzes.js:200
+#: src/views/admin/specialQuizzes/SpecialQuizzes.js:213
 msgid "Apagar quiz especial"
 msgstr "Delete special quiz"
 
@@ -108,11 +108,11 @@ msgstr "Delete special quiz"
 msgid "Apagar ranking mensal"
 msgstr "Delete month ranking"
 
-#: src/views/admin/seasons/Seasons.js:154
+#: src/views/admin/seasons/Seasons.js:152
 msgid "Apagar temporada"
 msgstr "Delete season"
 
-#: src/views/Account.js:90
+#: src/views/Account.js:91
 #: src/views/Register.js:80
 #: src/views/admin/nationalRanking/Players/Form.js:174
 msgid "Apelido"
@@ -126,19 +126,19 @@ msgstr "Architecture"
 msgid "Arquivo"
 msgstr "Archive"
 
-#: src/partials/Header.js:244
+#: src/partials/Header.js:241
 #: src/routes.js:117
 #: src/views/Quizzes.js:57
 msgid "Arquivo de quizzes"
 msgstr "Quizzes archive"
 
-#: src/partials/Header.js:257
+#: src/partials/Header.js:252
 #: src/routes.js:122
 #: src/views/SpecialQuizzes.js:73
 msgid "Arquivo de quizzes especiais"
 msgstr "Special quizzes archive"
 
-#: src/partials/Header.js:240
+#: src/partials/Header.js:237
 #: src/routes.js:112
 #: src/views/Seasons.js:57
 msgid "Arquivo de temporadas"
@@ -148,7 +148,7 @@ msgstr "Seasons archive"
 msgid "Artesanato"
 msgstr "Handicraft"
 
-#: src/partials/Header.js:81
+#: src/partials/Header.js:79
 #: src/views/Statistics.js:127
 msgid "As minhas estatísticas"
 msgstr "My statistics"
@@ -199,7 +199,7 @@ msgstr "World Quizzing Championship"
 msgid "Campeonato Nacional de Quiz"
 msgstr "Portuguese Quizzing Championship"
 
-#: src/components/Modal.js:47
+#: src/components/Modal.js:48
 msgid "Cancelar"
 msgstr "Cancel"
 
@@ -215,10 +215,11 @@ msgstr "Science"
 msgid "Ciências Sociais"
 msgstr "Social Sciences"
 
-#: src/partials/Header.js:75
+#: src/partials/Header.js:73
 #: src/routes.js:107
 #: src/views/Ranking.js:151
 #: src/views/Seasons.js:88
+#: src/views/SpecialQuiz/SpecialQuizDone.js:40
 msgid "Classificação"
 msgstr "Ranking"
 
@@ -239,15 +240,15 @@ msgstr "Statistics Comparison"
 msgid "Comunicação Social e Redes Sociais"
 msgstr "Press and Social Networks"
 
-#: src/views/Account.js:169
+#: src/views/Account.js:170
 #: src/views/Register.js:157
 #: src/views/ResetPassword.js:84
 msgid "Confirmação da palavra-passe"
 msgstr "Password confirmation"
 
-#: src/partials/Header.js:227
+#: src/partials/Header.js:225
 #: src/routes.js:75
-#: src/views/Account.js:60
+#: src/views/Account.js:61
 msgid "Conta"
 msgstr "Account"
 
@@ -258,7 +259,7 @@ msgstr "Content"
 #: src/views/Game.js:165
 #: src/views/Game.js:205
 #: src/views/Question.js:235
-#: src/views/admin/quizzes/Answer.js:30
+#: src/views/admin/quizzes/Answer.js:17
 msgid "Correcta"
 msgstr "Correct"
 
@@ -268,16 +269,16 @@ msgid "Corrector"
 msgstr "Answer reviewer"
 
 #: src/views/Question.js:217
-#: src/views/admin/quizzes/QuizCorrect.js:99
-#: src/views/admin/specialQuizzes/SpecialQuizCorrect.js:99
+#: src/views/admin/quizzes/QuizCorrect.js:151
+#: src/views/admin/specialQuizzes/SpecialQuizCorrect.js:151
 msgid "Correcção"
 msgstr "Correction"
 
-#: src/views/admin/quizzes/QuizCorrect.js:65
+#: src/views/admin/quizzes/QuizCorrect.js:117
 msgid "Corrigir quiz de {0}"
 msgstr "Correct {0}'s quiz"
 
-#: src/views/admin/specialQuizzes/SpecialQuizCorrect.js:65
+#: src/views/admin/specialQuizzes/SpecialQuizCorrect.js:117
 msgid "Corrigir quiz especial de {0}"
 msgstr "Correct {0}'s special quiz"
 
@@ -291,17 +292,17 @@ msgid "Criar notificação"
 msgstr "Create notification"
 
 #: src/views/admin/quizzes/QuizForm.js:149
-#: src/views/admin/quizzes/Quizzes.js:99
+#: src/views/admin/quizzes/Quizzes.js:94
 msgid "Criar quiz"
 msgstr "Create quiz"
 
 #: src/views/admin/specialQuizzes/SpecialQuizForm.js:135
-#: src/views/admin/specialQuizzes/SpecialQuizzes.js:105
+#: src/views/admin/specialQuizzes/SpecialQuizzes.js:104
 msgid "Criar quiz especial"
 msgstr "Create special quiz"
 
 #: src/views/admin/seasons/SeasonForm.js:185
-#: src/views/admin/seasons/Seasons.js:82
+#: src/views/admin/seasons/Seasons.js:81
 msgid "Criar temporada"
 msgstr "Create season"
 
@@ -376,7 +377,7 @@ msgstr "Tiers"
 msgid "E"
 msgstr "D"
 
-#: src/views/Account.js:113
+#: src/views/Account.js:114
 #: src/views/Login.js:54
 #: src/views/RecoverPassword.js:56
 #: src/views/Register.js:102
@@ -423,7 +424,7 @@ msgstr "Special Quiz Editor"
 msgid "Empates"
 msgstr "Draws"
 
-#: src/partials/Header.js:109
+#: src/partials/Header.js:107
 #: src/routes.js:49
 #: src/views/Login.js:47
 #: src/views/Login.js:114
@@ -440,6 +441,14 @@ msgstr "Entertainment"
 msgid "Enunciado"
 msgstr "Formulation"
 
+#: src/partials/Message.js:83
+msgid "Enviar"
+msgstr "Send"
+
+#: src/partials/Message.js:63
+msgid "Enviar sugestão/reclamação"
+msgstr "Send suggestion/complain"
+
 #: src/views/RecoverPassword.js:104
 msgid "Enviámos-te um e-mail, segue as instruções para definir uma nova palavra-passe."
 msgstr "We sent you an e-mail, follow its instructions to set a new password"
@@ -447,7 +456,7 @@ msgstr "We sent you an e-mail, follow its instructions to set a new password"
 #: src/views/Game.js:167
 #: src/views/Game.js:207
 #: src/views/Question.js:237
-#: src/views/admin/quizzes/Answer.js:31
+#: src/views/admin/quizzes/Answer.js:18
 msgid "Errada"
 msgstr "Wrong"
 
@@ -458,14 +467,14 @@ msgstr "Wrong"
 #: src/views/Login.js:101
 #: src/views/NationalRanking.js:138
 #: src/views/Question.js:90
-#: src/views/Quiz.js:55
+#: src/views/Quiz.js:60
 #: src/views/Quizzes.js:46
 #: src/views/Ranking.js:139
 #: src/views/RecoverPassword.js:85
 #: src/views/Register.js:185
 #: src/views/ResetPassword.js:125
 #: src/views/Seasons.js:46
-#: src/views/SpecialQuiz.js:65
+#: src/views/SpecialQuiz.js:70
 #: src/views/SpecialQuizzes.js:62
 #: src/views/Statistics.js:109
 #: src/views/StatisticsComparison.js:174
@@ -474,15 +483,15 @@ msgstr "Wrong"
 #: src/views/admin/nationalRanking/Players.js:77
 #: src/views/admin/nationalRanking/Rankings.js:76
 #: src/views/admin/notifications/Notifications.js:42
-#: src/views/admin/quizzes/QuizCorrect.js:52
+#: src/views/admin/quizzes/QuizCorrect.js:104
 #: src/views/admin/quizzes/QuizForm.js:130
-#: src/views/admin/quizzes/Quizzes.js:79
+#: src/views/admin/quizzes/Quizzes.js:74
 #: src/views/admin/search/Search.js:49
 #: src/views/admin/seasons/SeasonForm.js:150
-#: src/views/admin/seasons/Seasons.js:64
-#: src/views/admin/specialQuizzes/SpecialQuizCorrect.js:52
+#: src/views/admin/seasons/Seasons.js:63
+#: src/views/admin/specialQuizzes/SpecialQuizCorrect.js:104
 #: src/views/admin/specialQuizzes/SpecialQuizForm.js:121
-#: src/views/admin/specialQuizzes/SpecialQuizzes.js:82
+#: src/views/admin/specialQuizzes/SpecialQuizzes.js:81
 #: src/views/admin/users/Users.js:89
 msgid "Erro de servidor. Tenta mais tarde."
 msgstr "Server error. Try again later."
@@ -578,16 +587,16 @@ msgstr "Geology"
 msgid "Gestor de Ranking Nacional"
 msgstr "National Ranking Manager"
 
-#: src/partials/Header.js:165
+#: src/partials/Header.js:163
 msgid "Gestão de Quizzes"
 msgstr "Quiz Management"
 
-#: src/partials/Header.js:199
+#: src/partials/Header.js:197
 msgid "Gestão de Ranking Nacional"
 msgstr "National Ranking Management"
 
 #: src/views/Account/Avatar.js:114
-#: src/views/Account.js:203
+#: src/views/Account.js:288
 #: src/views/Quiz/QuizForm.js:342
 #: src/views/SpecialQuiz/SpecialQuizForm.js:152
 #: src/views/admin/nationalRanking/Players/Form.js:242
@@ -621,6 +630,11 @@ msgstr "Profile image"
 msgid "Imagem de perfil actualizada com sucesso."
 msgstr "Profile image updated successfully."
 
+#: src/views/admin/quizzes/Quizzes.js:121
+#: src/views/admin/specialQuizzes/SpecialQuizzes.js:135
+msgid "Incompleto"
+msgstr "Incomplete"
+
 #: src/views/admin/notifications/utils/notificationTypes.js:9
 msgid "Informação"
 msgstr "Information"
@@ -637,6 +651,7 @@ msgstr "Begin"
 msgid "J"
 msgstr "G"
 
+#: src/views/SpecialQuiz/SpecialQuizDone.js:48
 #: src/views/admin/nationalRanking/Players/List.js:31
 msgid "Jogador"
 msgstr "Player"
@@ -658,7 +673,7 @@ msgstr "Quiz league player"
 msgid "Jogador regular"
 msgstr "Regular player"
 
-#: src/partials/Header.js:220
+#: src/partials/Header.js:218
 #: src/views/admin/nationalRanking/Players.js:84
 msgid "Jogadores"
 msgstr "Players"
@@ -681,7 +696,7 @@ msgstr "Games and Hobbies"
 msgid "Joker"
 msgstr "Joker"
 
-#: src/views/SpecialQuiz/SpecialQuizDone.js:39
+#: src/views/SpecialQuiz/SpecialQuizDone.js:154
 msgid "Joker usado"
 msgstr "Used Joker"
 
@@ -693,7 +708,7 @@ msgstr "Round {0}"
 msgid "Jornada {0} ({1})"
 msgstr "Round {0} ({1})"
 
-#: src/views/Account.js:139
+#: src/views/Account.js:140
 #: src/views/Register.js:127
 msgid "Já existe uma conta com este e-mail."
 msgstr "There is another account using this e-mail."
@@ -702,7 +717,7 @@ msgstr "There is another account using this e-mail."
 msgid "Legenda"
 msgstr "Legend"
 
-#: src/App.js:45
+#: src/App.js:46
 #: src/routes.js:44
 #: src/views/Home.js:8
 #: src/views/Statistics.js:161
@@ -721,6 +736,14 @@ msgstr "Math"
 #: src/views/NationalRanking/Legend.js:75
 msgid "Melhor"
 msgstr "Best"
+
+#: src/partials/Message.js:67
+msgid "Mensagem"
+msgstr "Message"
+
+#: src/partials/Message.js:28
+msgid "Mensagem enviada com sucesso."
+msgstr "Message successfully sent."
 
 #: src/utils/getGenreTranslation.js:41
 msgid "Mitologia"
@@ -765,7 +788,7 @@ msgstr "Music"
 msgid "Nenhum"
 msgstr "None"
 
-#: src/views/Account.js:67
+#: src/views/Account.js:68
 #: src/views/GenreRanking/Table.js:13
 #: src/views/NationalRanking.js:212
 #: src/views/Question.js:204
@@ -788,11 +811,27 @@ msgstr "Notification successfully deleted."
 msgid "Notificação criada com sucesso."
 msgstr "Notification successfully created."
 
+#: src/views/Account.js:254
+msgid "Notificação de quiz especial (00h00)"
+msgstr "Special quiz notification (12.00a.m.)"
+
+#: src/views/Account.js:275
+msgid "Notificação de quiz especial (22h00)"
+msgstr "Special quiz notification (22.00p.m.)"
+
+#: src/views/Account.js:212
+msgid "Notificação de quiz regular (00h00)"
+msgstr "Regular quiz notification (12.00a.m.)"
+
+#: src/views/Account.js:233
+msgid "Notificação de quiz regular (22h00)"
+msgstr "Regular quiz notification (22.00p.m.)"
+
 #: src/views/admin/notifications/modals/FormModal.js:167
 msgid "Notificação editada com sucesso."
 msgstr "Notification successfully edited."
 
-#: src/partials/Header.js:150
+#: src/partials/Header.js:148
 #: src/routes.js:162
 #: src/views/admin/notifications/Notifications.js:49
 msgid "Notificações"
@@ -802,7 +841,7 @@ msgstr "Notifications"
 msgid "Nova entrada para o ranking"
 msgstr "New appearance in the ranking"
 
-#: src/views/SpecialQuiz/SpecialQuizDone.js:44
+#: src/views/SpecialQuiz/SpecialQuizDone.js:159
 msgid "Não"
 msgstr "No"
 
@@ -822,7 +861,7 @@ msgstr "There is no national ranking available."
 msgid "Não foi possível abrir a edição das provas mensais."
 msgstr "Month events edit page could not be loaded."
 
-#: src/views/Account.js:53
+#: src/views/Account.js:54
 msgid "Não foi possível actualizar o perfil."
 msgstr "Profile could not be update."
 
@@ -830,7 +869,7 @@ msgstr "Profile could not be update."
 msgid "Não foi possível actualizar o utilizador."
 msgstr "User could not be updated."
 
-#: src/views/admin/seasons/Seasons.js:50
+#: src/views/admin/seasons/Seasons.js:49
 msgid "Não foi possível apagar a temporada."
 msgstr "Season could not be deleted."
 
@@ -851,11 +890,11 @@ msgstr "Month events could not be deleted."
 msgid "Não foi possível apagar notificação."
 msgstr "Notification could not be deleted."
 
-#: src/views/admin/specialQuizzes/SpecialQuizzes.js:59
+#: src/views/admin/specialQuizzes/SpecialQuizzes.js:58
 msgid "Não foi possível apagar o quiz especial."
 msgstr "Special Quiz could not be deleted."
 
-#: src/views/admin/quizzes/Quizzes.js:56
+#: src/views/admin/quizzes/Quizzes.js:55
 msgid "Não foi possível apagar o quiz."
 msgstr "Quiz could not be deleted."
 
@@ -882,6 +921,10 @@ msgstr "Quiz could not be created."
 #: src/views/admin/notifications/modals/FormModal.js:172
 msgid "Não foi possível editar a notificação."
 msgstr "Notification could not be edited."
+
+#: src/partials/Message.js:33
+msgid "Não foi possível enviar a mensagem."
+msgstr "Message could not be sent."
 
 #: src/views/admin/seasons/SeasonForm.js:127
 msgid "Não foi possível gravar a temporada."
@@ -937,7 +980,7 @@ msgstr "Your password change request expired"
 msgid "O pedido de redefinição de palavra-passe é inválido"
 msgstr "Your password change request is not valid"
 
-#: src/components/Modal.js:39
+#: src/components/Modal.js:40
 msgid "OK"
 msgstr "OK"
 
@@ -953,7 +996,7 @@ msgstr "AQ"
 msgid "PaF"
 msgstr "PF"
 
-#: src/views/Account.js:145
+#: src/views/Account.js:146
 #: src/views/Login.js:75
 #: src/views/Register.js:133
 #: src/views/ResetPassword.js:60
@@ -972,7 +1015,7 @@ msgstr "More details about ranking calculation can be found in this article (onl
 #: src/views/GenreRanking/Table.js:44
 #: src/views/Quiz/QuizDone.js:48
 #: src/views/Quiz/QuizForm.js:407
-#: src/views/SpecialQuiz/SpecialQuizDone.js:52
+#: src/views/SpecialQuiz/SpecialQuizDone.js:167
 #: src/views/Statistics.js:243
 msgid "Percentagem de acerto"
 msgstr "Percentage of correct answers"
@@ -1001,7 +1044,7 @@ msgstr "Percentage of players that used a joker"
 msgid "Percentagem de respostas correctas"
 msgstr "Percentage of correct answers"
 
-#: src/views/Account.js:41
+#: src/views/Account.js:42
 msgid "Perfil actualizado com sucesso."
 msgstr "Profile successfully updated."
 
@@ -1021,7 +1064,7 @@ msgstr "Answered questions"
 msgid "Permissões"
 msgstr "Permissions"
 
-#: src/partials/Header.js:189
+#: src/partials/Header.js:187
 #: src/routes.js:227
 #: src/views/admin/search/Search.js:60
 msgid "Pesquisa de perguntas"
@@ -1076,7 +1119,7 @@ msgstr "Event"
 msgid "Provas individuais"
 msgstr "Individual quizzes"
 
-#: src/partials/Header.js:213
+#: src/partials/Header.js:211
 #: src/views/admin/nationalRanking/Events.js:102
 msgid "Provas mensais"
 msgstr "Month events"
@@ -1093,7 +1136,7 @@ msgstr "Month events successfully deleted."
 msgid "Provas mensais criadas com sucesso."
 msgstr "Month events successfully created."
 
-#: src/components/PaginatedTable.js:96
+#: src/components/PaginatedTable.js:97
 #: src/views/Ranking/Rounds.js:42
 msgid "Próxima"
 msgstr "Next"
@@ -1121,7 +1164,7 @@ msgstr "Quiz"
 msgid "Quiz Especial"
 msgstr "Special Quiz"
 
-#: src/views/admin/quizzes/Quizzes.js:51
+#: src/views/admin/quizzes/Quizzes.js:50
 msgid "Quiz apagado com sucesso."
 msgstr "Quiz successfully deleted."
 
@@ -1129,15 +1172,15 @@ msgstr "Quiz successfully deleted."
 msgid "Quiz criado com sucesso."
 msgstr "Quiz successfully created."
 
-#: src/partials/Notifications.js:95
+#: src/partials/Notifications.js:99
 msgid "Quiz de hoje disponível aqui"
 msgstr "Today's quiz available here"
 
-#: src/views/Quiz.js:68
+#: src/views/Quiz.js:73
 msgid "Quiz de {0}"
 msgstr "{0}'s quiz"
 
-#: src/views/admin/specialQuizzes/SpecialQuizzes.js:54
+#: src/views/admin/specialQuizzes/SpecialQuizzes.js:53
 msgid "Quiz especial apagado com sucesso."
 msgstr "Special quiz successfully deleted."
 
@@ -1145,7 +1188,7 @@ msgstr "Special quiz successfully deleted."
 msgid "Quiz especial criado com sucesso."
 msgstr "Special quiz successfully created."
 
-#: src/partials/Notifications.js:102
+#: src/partials/Notifications.js:106
 msgid "Quiz especial disponível aqui"
 msgstr "Special quiz available here"
 
@@ -1189,18 +1232,18 @@ msgstr "Quiz | Create"
 msgid "Quiz | Editar"
 msgstr "Quiz | Edit"
 
-#: src/partials/Header.js:172
+#: src/partials/Header.js:170
 #: src/routes.js:172
 #: src/views/NationalRanking.js:258
-#: src/views/admin/quizzes/Quizzes.js:86
+#: src/views/admin/quizzes/Quizzes.js:81
 msgid "Quizzes"
 msgstr "Quizzes"
 
-#: src/views/admin/specialQuizzes/SpecialQuizzes.js:89
+#: src/views/admin/specialQuizzes/SpecialQuizzes.js:88
 msgid "Quizzes Especiais"
 msgstr "Special Quizzes"
 
-#: src/partials/Header.js:183
+#: src/partials/Header.js:181
 #: src/routes.js:192
 msgid "Quizzes especiais"
 msgstr "Special quizzes"
@@ -1214,7 +1257,7 @@ msgstr "Chemistry"
 msgid "RC"
 msgstr "CA"
 
-#: src/partials/Header.js:86
+#: src/partials/Header.js:84
 #: src/routes.js:101
 #: src/views/NationalRanking.js:155
 #: src/views/NationalRanking.js:180
@@ -1249,12 +1292,12 @@ msgstr "Month ranking successfully deleted."
 msgid "Ranking mensal publicado com sucesso."
 msgstr "Month ranking successfully published."
 
-#: src/partials/Header.js:206
+#: src/partials/Header.js:204
 #: src/views/admin/nationalRanking/Rankings.js:83
 msgid "Rankings mensais"
 msgstr "Month rankings"
 
-#: src/partials/Header.js:236
+#: src/partials/Header.js:233
 #: src/routes.js:86
 #: src/views/GenreRanking.js:160
 #: src/views/Seasons.js:82
@@ -1272,7 +1315,7 @@ msgstr "Recover password"
 msgid "Redefinir palavra-passe"
 msgstr "Reset password"
 
-#: src/partials/Header.js:112
+#: src/partials/Header.js:110
 #: src/views/Register.js:199
 msgid "Registar"
 msgstr "Register"
@@ -1282,7 +1325,7 @@ msgstr "Register"
 msgid "Registo"
 msgstr "Registration"
 
-#: src/partials/Header.js:67
+#: src/partials/Header.js:66
 #: src/routes.js:81
 #: src/views/Rules.js:15
 #: src/views/SpecialQuiz/SpecialQuizForm.js:162
@@ -1317,16 +1360,16 @@ msgstr "Answer"
 
 #: src/views/Question.js:115
 #: src/views/Quiz/QuizDone.js:22
-#: src/views/SpecialQuiz/SpecialQuizDone.js:22
-#: src/views/admin/quizzes/QuizCorrect.js:81
-#: src/views/admin/specialQuizzes/SpecialQuizCorrect.js:81
+#: src/views/SpecialQuiz/SpecialQuizDone.js:137
+#: src/views/admin/quizzes/QuizCorrect.js:133
+#: src/views/admin/specialQuizzes/SpecialQuizCorrect.js:133
 msgid "Resposta correcta"
 msgstr "Correct answer"
 
 #: src/views/Quiz/QuizDone.js:30
-#: src/views/SpecialQuiz/SpecialQuizDone.js:31
-#: src/views/admin/quizzes/QuizCorrect.js:96
-#: src/views/admin/specialQuizzes/SpecialQuizCorrect.js:96
+#: src/views/SpecialQuiz/SpecialQuizDone.js:146
+#: src/views/admin/quizzes/QuizCorrect.js:148
+#: src/views/admin/specialQuizzes/SpecialQuizCorrect.js:148
 msgid "Resposta dada"
 msgstr "Given answer"
 
@@ -1365,7 +1408,7 @@ msgstr "World Quizzing Championship result"
 msgid "Resultado no Campeonato Nacional"
 msgstr "National Championship result"
 
-#: src/partials/Header.js:263
+#: src/partials/Header.js:258
 #: src/routes.js:69
 msgid "Sair"
 msgstr "Logout"
@@ -1391,16 +1434,16 @@ msgstr "Select players for this event:"
 #: src/views/admin/nationalRanking/Players/List.js:95
 #: src/views/admin/nationalRanking/Rankings.js:154
 #: src/views/admin/notifications/Notifications.js:140
-#: src/views/admin/quizzes/Quizzes.js:174
+#: src/views/admin/quizzes/Quizzes.js:183
 #: src/views/admin/search/Search.js:108
-#: src/views/admin/seasons/Seasons.js:144
-#: src/views/admin/specialQuizzes/SpecialQuizzes.js:190
+#: src/views/admin/seasons/Seasons.js:142
+#: src/views/admin/specialQuizzes/SpecialQuizzes.js:203
 #: src/views/admin/users/Users.js:328
 msgid "Sem registos"
 msgstr "No records"
 
 #: src/views/Question.js:232
-#: src/views/SpecialQuiz/SpecialQuizDone.js:42
+#: src/views/SpecialQuiz/SpecialQuizDone.js:157
 msgid "Sim"
 msgstr "Yes"
 
@@ -1459,11 +1502,11 @@ msgstr "TV"
 #: src/views/SpecialQuizzes.js:83
 #: src/views/Statistics.js:212
 #: src/views/admin/specialQuizzes/SpecialQuizForm.js:170
-#: src/views/admin/specialQuizzes/SpecialQuizzes.js:120
+#: src/views/admin/specialQuizzes/SpecialQuizzes.js:124
 msgid "Tema"
 msgstr "Subject"
 
-#: src/views/admin/seasons/Seasons.js:45
+#: src/views/admin/seasons/Seasons.js:44
 msgid "Temporada apagada com sucesso."
 msgstr "Season successfully deleted."
 
@@ -1476,7 +1519,7 @@ msgid "Temporada gravada com sucesso."
 msgstr "Season successfully saved."
 
 #: src/views/Seasons.js:70
-#: src/views/admin/seasons/Seasons.js:98
+#: src/views/admin/seasons/Seasons.js:97
 msgid "Temporada {0}"
 msgstr "Season {0}"
 
@@ -1492,9 +1535,9 @@ msgstr "Season | Create"
 msgid "Temporada | Editar"
 msgstr "Season | Edit"
 
-#: src/partials/Header.js:154
+#: src/partials/Header.js:152
 #: src/routes.js:212
-#: src/views/admin/seasons/Seasons.js:71
+#: src/views/admin/seasons/Seasons.js:70
 msgid "Temporadas"
 msgstr "Seasons"
 
@@ -1514,7 +1557,7 @@ msgstr "Do you really want to delete this notification?"
 msgid "Tens a certeza que queres apagar esta prova e todos os resultados associados?"
 msgstr "Do you really want to delete this event and its related results?"
 
-#: src/views/admin/seasons/Seasons.js:155
+#: src/views/admin/seasons/Seasons.js:153
 msgid "Tens a certeza que queres apagar esta temporada?"
 msgstr "Do you really want to delete this season?"
 
@@ -1526,11 +1569,11 @@ msgstr "Do you really want to delete this player and the related result?"
 msgid "Tens a certeza que queres apagar este jogador?"
 msgstr "Do you really want to delete this player?"
 
-#: src/views/admin/specialQuizzes/SpecialQuizzes.js:202
+#: src/views/admin/specialQuizzes/SpecialQuizzes.js:215
 msgid "Tens a certeza que queres apagar este quiz especial?"
 msgstr "Do you really want to delete this special quiz?"
 
-#: src/views/admin/quizzes/Quizzes.js:185
+#: src/views/admin/quizzes/Quizzes.js:194
 msgid "Tens a certeza que queres apagar este quiz?"
 msgstr "Do you really want to delete this quiz?"
 
@@ -1559,6 +1602,10 @@ msgstr "Notification type"
 #: src/views/admin/nationalRanking/Players/Form.js:254
 msgid "Todos os dados deste formulário serão descartados.<0/>Tens a certeza que queres voltar à listagem?"
 msgstr "All form data will be discarded.<0/>Do you really want to proceed?"
+
+#: src/views/SpecialQuiz/SpecialQuizDone.js:56
+msgid "Total"
+msgstr "Total"
 
 #: src/views/Quiz/QuizForm.js:393
 #: src/views/Statistics.js:231
@@ -1589,7 +1636,7 @@ msgstr "User successfully updated."
 msgid "Utilizador registado com sucesso.<0/>Clica <1>aqui</1> e usa as tuas credenciais."
 msgstr "User registerd successfully.<0/>Click <1>here</1> and use your credentials."
 
-#: src/partials/Header.js:146
+#: src/partials/Header.js:144
 #: src/routes.js:167
 #: src/views/admin/users/Users.js:96
 msgid "Utilizadores"
@@ -1603,7 +1650,7 @@ msgstr "W"
 msgid "Validade da subscrição"
 msgstr "Subscription deadline"
 
-#: src/partials/Header.js:267
+#: src/partials/Header.js:262
 msgid "Versão 4.0"
 msgstr "Version 4.0"
 
@@ -1624,7 +1671,7 @@ msgstr "Back to list"
 msgid "Voltar à página inicial"
 msgstr "Return to homepage"
 
-#: src/views/Account.js:146
+#: src/views/Account.js:147
 msgid "deixa em branco para não alterar"
 msgstr "leave it blank to keep"
 
