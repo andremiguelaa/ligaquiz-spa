@@ -61,7 +61,10 @@ const PaginatedTable = ({
             {array
               .slice((page - 1) * itemsPerPage, page * itemsPerPage)
               .map((item) => (
-                <tr key={item[key]} className={rowClassName(item)}>
+                <tr
+                  key={item[key]}
+                  className={rowClassName && rowClassName(item)}
+                >
                   {columns.map((column) => (
                     <td key={column.id} className={column.className}>
                       {column.render(item)}
