@@ -103,6 +103,11 @@ const Quizzes = () => {
                 array={quizzes}
                 initialPage={page ? page : 1}
                 hideHeader
+                rowClassName={(item) => {
+                  if (!item.past && !item.completed) {
+                    return 'has-background-danger';
+                  }
+                }}
                 columns={[
                   {
                     id: 'date',
@@ -110,6 +115,12 @@ const Quizzes = () => {
                     render: (item) => (
                       <Link to={`/quiz/${item.date}`}>
                         {convertToLongDate(item.date, language)}
+                        {!item.past && !item.completed && (
+                          <>
+                            {' '}
+                            - <Trans>Incompleto</Trans>
+                          </>
+                        )}
                       </Link>
                     ),
                   },

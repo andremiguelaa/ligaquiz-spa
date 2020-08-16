@@ -59,7 +59,7 @@ const SpecialQuiz = () => {
       .catch(({ response }) => {
         setError(response?.status);
       });
-  }, [date]);
+  }, [date, history]);
 
   if (error) {
     if (error === 404 || error === 400) {

@@ -113,6 +113,11 @@ const SpecialQuizzes = () => {
                 array={quizzes}
                 initialPage={page ? page : 1}
                 hideHeader
+                rowClassName={(item) => {
+                  if (!item.past && !item.completed) {
+                    return 'has-background-danger';
+                  }
+                }}
                 columns={[
                   {
                     id: 'subject',
@@ -124,6 +129,12 @@ const SpecialQuizzes = () => {
                       >
                         {item.subject} ({convertToLongDate(item.date, language)}
                         )
+                        {!item.past && !item.completed && (
+                          <>
+                            {' '}
+                            - <Trans>Incompleto</Trans>
+                          </>
+                        )}
                       </Link>
                     ),
                     className: classnames(

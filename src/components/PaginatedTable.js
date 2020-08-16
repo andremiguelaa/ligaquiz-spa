@@ -7,6 +7,7 @@ import classes from './PaginatedTable.module.scss';
 const PaginatedTable = ({
   array,
   key = 'id',
+  rowClassName,
   hideHeader = false,
   columns,
   itemsPerPage = 10,
@@ -60,7 +61,7 @@ const PaginatedTable = ({
             {array
               .slice((page - 1) * itemsPerPage, page * itemsPerPage)
               .map((item) => (
-                <tr key={item[key]}>
+                <tr key={item[key]} className={rowClassName(item)}>
                   {columns.map((column) => (
                     <td key={column.id} className={column.className}>
                       {column.render(item)}

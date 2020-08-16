@@ -15,10 +15,18 @@ $red: #e74c3c;
 .has-background-success,
 .has-background-danger {
   color: $white;
-  a {
+  a:not(.button) {
     color: $white;
     &:hover {
       color: $grey-lighter;
+    }
+  }
+  .button {
+    &.is-danger {
+      border-color: $grey-lighter;
+      &:hover {
+        border-color: $grey-light;
+      }
     }
   }
 }
