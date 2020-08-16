@@ -16,7 +16,7 @@ const saveDraft = debounce((id, text, points) => {
   ApiRequest.post(`answers`, {
     question_id: id,
     text,
-    points: points === -1 ? undefined : points,
+    points: points || 0,
   });
 }, 1000);
 
@@ -28,7 +28,7 @@ const SpecialQuizForm = ({ data, userAnswers }) => {
     answers: data.quiz.questions.map((question) => ({
       question_id: question.id,
       text: userAnswers[question.id]?.[0].text,
-      points: data.quiz.solo ? undefined : userAnswers[question.id]?.[0].points,
+      points: userAnswers[question.id]?.[0].points || 0,
     })),
   });
   const [submitModal, setSubmitModal] = useState(false);
