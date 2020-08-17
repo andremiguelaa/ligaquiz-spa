@@ -226,7 +226,7 @@ const Statistics = () => {
         )}
         <table
           className={classnames(
-            'table is-fullwidth is-hoverable is-striped',
+            'table is-fullwidth is-hoverable',
             classes.genresTable
           )}
         >
@@ -304,7 +304,7 @@ const Statistics = () => {
           <h1 className="has-text-weight-bold is-size-4">
             <Trans>Provas individuais</Trans>
           </h1>
-          <table className="table is-fullwidth is-hoverable is-striped">
+          <table className="table is-fullwidth is-hoverable">
             <thead>
               <tr>
                 <th>

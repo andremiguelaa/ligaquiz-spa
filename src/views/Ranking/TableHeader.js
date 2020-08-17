@@ -3,10 +3,12 @@ import { Trans } from '@lingui/macro';
 import { I18n } from '@lingui/react';
 import { t } from '@lingui/macro';
 
+import classes from './Ranking.module.scss';
+
 const TableHeader = () => (
   <thead>
     <tr>
-      <th>#</th>
+      <th className={classes.rankCell}>#</th>
       <th>
         <Trans>Nome</Trans>
       </th>

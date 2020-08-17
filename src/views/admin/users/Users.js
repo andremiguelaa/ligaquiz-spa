@@ -100,7 +100,7 @@ const Users = () => {
         ) : (
           <>
             {users.length ? (
-              <table className="table is-fullwidth is-hoverable is-striped">
+              <table className="table is-fullwidth is-hoverable">
                 <thead>
                   <tr>
                     <th className="sortable">

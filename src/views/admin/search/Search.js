@@ -13,6 +13,8 @@ import Markdown from 'components/Markdown';
 import PaginatedTable from 'components/PaginatedTable';
 import NoMatch from 'views/NoMatch';
 
+import classes from './Search.module.scss';
+
 const Search = () => {
   const { string, page } = useParams();
   const [{ user }] = useStateValue();
@@ -87,12 +89,18 @@ const Search = () => {
               {
                 id: 'content',
                 label: <Trans>Enunciado</Trans>,
-                render: (item) => <Markdown content={item.content} />,
+                render: (item) => (
+                  <div className="content">
+                    <Markdown content={item.content} />
+                  </div>
+                ),
+                className: classes.question,
               },
               {
                 id: 'answer',
                 label: <Trans>Resposta</Trans>,
                 render: (item) => <Markdown content={item.answer} />,
+                className: classes.answer,
               },
             ]}
             onChange={(newPage) => {

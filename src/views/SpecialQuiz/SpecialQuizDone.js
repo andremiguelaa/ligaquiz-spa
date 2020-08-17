@@ -40,7 +40,7 @@ const SpecialQuizDone = ({ data, userAnswers, setError }) => {
                 <Trans>Classificação</Trans>
               </h2>
               <div className="table-container">
-                <table className="table is-fullwidth is-hoverable is-striped">
+                <table className="table is-fullwidth is-hoverable">
                   <thead>
                     <tr>
                       <th>#</th>

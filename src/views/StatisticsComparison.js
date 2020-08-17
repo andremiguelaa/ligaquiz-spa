@@ -248,7 +248,7 @@ const Statistics = () => {
         <>
           {games.length > 0 && (
             <section className="section content">
-              <table className="table is-fullwidth is-hoverable is-striped">
+              <table className="table is-fullwidth is-hoverable">
                 <thead>
                   <tr>
                     <th>
@@ -292,7 +292,7 @@ const Statistics = () => {
                   </tr>
                 </tbody>
               </table>
-              <table className="table is-fullwidth is-hoverable is-striped">
+              <table className="table is-fullwidth is-hoverable">
                 <thead>
                   <tr>
                     <th>

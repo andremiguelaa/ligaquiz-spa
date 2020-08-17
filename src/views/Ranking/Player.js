@@ -15,7 +15,7 @@ const Player = ({ player, index, tierNumber, users }) => (
       'has-background-danger': index >= 8 || player.forfeits > 3,
     })}
   >
-    <td>{player.rank}</td>
+    <td className={classes.rankCell}>{player.rank}</td>
     <td className={classes.userCellContent}>
       <Link to={`/statistics/${player.id}`}>
         <div className={classes.avatar}>

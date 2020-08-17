@@ -37,14 +37,7 @@ const PaginatedTable = ({
   return (
     <>
       <div className="table-container">
-        <table
-          className={classnames(
-            'table',
-            'is-fullwidth',
-            'is-hoverable',
-            'is-striped'
-          )}
-        >
+        <table className={classnames('table', 'is-fullwidth', 'is-hoverable')}>
           {!hideHeader && (
             <thead>
               <tr>

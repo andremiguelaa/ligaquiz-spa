@@ -1,9 +1,13 @@
-@import "bulma/sass/utilities/initial-variables.sass";
-@import "bulma/sass/utilities/derived-variables.scss";
-@import "bulma/sass/utilities/mixins.sass";
+@import 'bulma/sass/utilities/initial-variables.sass';
+@import 'bulma/sass/utilities/derived-variables.scss';
+@import 'bulma/sass/utilities/mixins.sass';
 
 .ranking {
   padding-top: 0;
+  .rankCell {
+    width: 25px;
+    padding: 0.5em;
+  }
   .userCellContent {
     padding-left: calc(0.75rem + 32px);
     padding-right: calc(0.75rem + 24px);

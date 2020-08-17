@@ -39,24 +39,22 @@
         color: $white-bis;
       }
     }
+    blockquote {
+      background-color: $black-ter;
+    }
   }
   .table {
     background-color: $black-bis;
     color: $white-bis;
-    &.is-striped {
-      tbody {
-        tr:not(.is-selected):nth-child(even) {
-          background-color: $black-ter;
-        }
+    thead {
+      th {
+        color: $white-bis;
       }
-      &.is-hoverable {
-        tbody {
-          tr:not(.is-selected):hover {
-            background-color: $grey-darker;
-            &:nth-child(even) {
-              background-color: $grey-darker;
-            }
-          }
+    }
+    &.is-hoverable {
+      tbody {
+        tr:not(.is-selected):hover {
+          background-color: $grey-darker;
         }
       }
     }
@@ -160,6 +158,21 @@
       border-color: $grey-lighter;
     }
   }
+  .file-label {
+    .file-cta {
+      background-color: $black-ter;
+      color: $white-bis;
+      border-color: $grey-light;
+    }
+    &:hover {
+      border-color: $grey-lighter;
+      .file-cta {
+        background-color: $black-ter;
+        color: $white-bis;
+        border-color: $grey-lighter;
+      }
+    }
+  }
   input:-webkit-autofill,
   input:-webkit-autofill:hover,
   input:-webkit-autofill:focus,
@@ -173,6 +186,9 @@
     -webkit-box-shadow: 0 0 0px 1000px $black-bis inset;
     transition: background-color 5000s ease-in-out 0s;
   }
+  .pagination-previous,
+  .pagination-next,
+  .pagination-link,
   .button {
     background-color: $black-ter;
     border-color: $grey-light;
@@ -241,66 +257,16 @@
       }
     }
   }
-  /*
-  .checkbox,
-  .radio {
-    &:hover {
-      color: $white-ter;
-    }
-  }
   .message {
     background-color: $grey-darker;
     color: $white-bis;
+    &.is-info,
+    &.is-danger,
     &.is-warning {
       background-color: $grey-darker;
-      .message-body {
-        color: $white-bis;
-      }
     }
-
-    a:not(.button):not(.tag) {
-      color: $turquoise;
-      &[disabled] {
-        color: $grey-dark;
-        &.is-current {
-          color: $grey-light;
-        }
-      }
-    }
-  }
-  .message-header {
-    background-color: $black-ter;
-    color: $white-bis;
   }
   .message-body {
     color: $white-bis;
-    border: 1px solid $grey-darker;
   }
-
-  .content {
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      color: $white-bis;
-    }
-    table {
-      thead {
-        th {
-          color: $white-bis;
-        }
-      }
-      th {
-        color: $white-bis;
-      }
-      tr {
-        &:hover {
-          background-color: $black-ter;
-        }
-      }
-    }
-  }
-  */
 }

@@ -6,7 +6,7 @@ import { t } from '@lingui/macro';
 import classes from './Table.module.scss';
 
 const Table = ({ data, users, genre }) => (
-  <table className="table is-fullwidth is-hoverable is-stripped">
+  <table className="table is-fullwidth is-hoverable">
     <thead>
       <tr>
         <th>

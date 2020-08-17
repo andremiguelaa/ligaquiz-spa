@@ -24,7 +24,7 @@ const List = ({ monthList, setPage, editMonth, setMonthToDelete }) => {
       <br />
       <br />
       {monthList.length ? (
-        <table className="table is-fullwidth is-hoverable is-striped">
+        <table className="table is-fullwidth is-hoverable">
           <thead>
             <tr>
               <th>
