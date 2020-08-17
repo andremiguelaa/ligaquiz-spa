@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        109
+        133
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        123
+        147
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        127
+        151
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        151
+        175
       ]
     ]
   },
@@ -35,7 +35,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        161
+        185
       ]
     ]
   },
@@ -43,7 +43,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        199
+        223
       ]
     ]
   },
@@ -51,7 +51,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        212
+        236
       ]
     ]
   },
@@ -59,7 +59,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        219
+        243
       ]
     ]
   },
@@ -67,7 +67,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        221
+        245
       ]
     ]
   },
@@ -75,7 +75,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        231
+        255
       ]
     ]
   },
@@ -83,7 +83,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        233
+        257
       ]
     ]
   },
@@ -91,7 +91,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        243
+        267
       ]
     ]
   },
@@ -99,7 +99,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        281
+        305
       ]
     ]
   },
@@ -107,7 +107,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        287
+        311
       ]
     ]
   },
@@ -115,7 +115,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        290
+        314
       ]
     ]
   },
@@ -123,7 +123,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        293
+        317
       ]
     ]
   },
@@ -131,7 +131,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        297
+        321
       ]
     ]
   },
@@ -139,7 +139,39 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        300
+        324
+      ]
+    ]
+  },
+  "Registo de acções (últimos 7 dias)": {
+    "origin": [
+      [
+        "src/views/Statistics.js",
+        365
+      ]
+    ]
+  },
+  "Acção": {
+    "origin": [
+      [
+        "src/views/Statistics.js",
+        373
+      ]
+    ]
+  },
+  "Hora": {
+    "origin": [
+      [
+        "src/views/Statistics.js",
+        376
+      ]
+    ]
+  },
+  "Sem registos": {
+    "origin": [
+      [
+        "src/views/Statistics.js",
+        394
       ]
     ]
   }

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
+import { I18n } from '@lingui/react';
+import { t } from '@lingui/macro';
 
 import { useStateValue } from 'state/State';
 import { convertToLongDate } from 'utils/formatDate';
@@ -72,7 +74,11 @@ const Quiz = () => {
         title={
           <Trans>
             Quiz de{' '}
-            {date ? convertToLongDate(data.quiz.date, language) : 'hoje'}
+            {date ? (
+              convertToLongDate(data.quiz.date, language)
+            ) : (
+              <I18n>{({ i18n }) => i18n._(t`hoje`)}</I18n>
+            )}
           </Trans>
         }
       />

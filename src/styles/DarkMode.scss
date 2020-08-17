@@ -1,0 +1,306 @@
+@media (prefers-color-scheme: dark) {
+  html {
+    background-color: $black-bis;
+  }
+  body {
+    color: $white-bis;
+  }
+  .title,
+  .subtitle,
+  .label,
+  strong {
+    color: $white-bis;
+  }
+  .content {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: $white-bis;
+    }
+    table {
+      thead {
+        th {
+          color: $white-bis;
+          &.sortable {
+            button {
+              color: $white-bis;
+              &:hover,
+              &:focus {
+                background-color: $grey-darker;
+              }
+            }
+          }
+        }
+      }
+      th {
+        color: $white-bis;
+      }
+    }
+  }
+  .table {
+    background-color: $black-bis;
+    color: $white-bis;
+    &.is-striped {
+      tbody {
+        tr:not(.is-selected):nth-child(even) {
+          background-color: $black-ter;
+        }
+      }
+      &.is-hoverable {
+        tbody {
+          tr:not(.is-selected):hover {
+            background-color: $grey-darker;
+            &:nth-child(even) {
+              background-color: $grey-darker;
+            }
+          }
+        }
+      }
+    }
+  }
+  a {
+    color: $cyan;
+    &:hover {
+      color: lighten($cyan, 20%);
+    }
+  }
+  .navbar {
+    background-color: $grey-dark;
+    &.has-shadow {
+      box-shadow: 0 2px 0 0 $grey-darker;
+    }
+    .navbar-brand,
+    .navbar-start,
+    .navbar-end {
+      & > .navbar-item {
+        color: $white-bis;
+      }
+      & > .navbar-item.has-dropdown,
+      .navbar-link {
+        color: $white-bis;
+        &:hover,
+        &:focus {
+          outline: none;
+          background-color: $grey-darker;
+        }
+      }
+      a.navbar-item {
+        &:hover,
+        &:focus {
+          background-color: $grey-darker;
+          color: $white-bis;
+        }
+      }
+    }
+    .navbar-item {
+      &.has-dropdown {
+        &.is-active,
+        &:hover {
+          .navbar-link {
+            outline: none;
+            @media (min-width: $desktop) {
+              background-color: $grey-darker;
+              color: $white-bis;
+              &::after {
+                border-color: $white-bis;
+              }
+            }
+          }
+        }
+      }
+    }
+    .navbar-end {
+      .navbar-link {
+        &::after {
+          border-color: $white-bis;
+        }
+      }
+    }
+  }
+  .navbar-dropdown {
+    background-color: $black-bis;
+    box-shadow: 0 1px 3px $black-ter;
+    @media (min-width: $desktop) {
+      border-top-color: $grey-darker;
+    }
+  }
+  .navbar-burger {
+    span {
+      background-color: $white-bis;
+    }
+  }
+  .navbar-menu {
+    @media (max-width: #{$desktop - 1px}) {
+      background-color: $black-ter;
+      padding-bottom: 0;
+    }
+  }
+  .navbar-item,
+  .navbar-link {
+    color: $white-bis;
+  }
+  .has-background-warning {
+    color: $black-bis;
+    a {
+      color: darken($cyan, 20%);
+      &:hover {
+        color: $cyan;
+      }
+    }
+  }
+  .input,
+  .textarea {
+    background-color: $black-ter;
+    border-color: $grey-light;
+    color: $white-bis;
+    &:hover {
+      border-color: $grey-lighter;
+    }
+  }
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    -webkit-text-fill-color: $white-bis;
+    -webkit-box-shadow: 0 0 0px 1000px $black-bis inset;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+  .button {
+    background-color: $black-ter;
+    border-color: $grey-light;
+    color: $white-bis;
+    &:hover {
+      border-color: $grey-lighter;
+    }
+    &:hover,
+    &:focus {
+      color: $white-bis;
+    }
+    &[disabled],
+    &.is-static {
+      background-color: $grey-darker;
+      color: $white-bis;
+    }
+    &.is-link {
+      color: $white-ter;
+    }
+    &.is-primary {
+      background-color: darken($primary, 20%);
+      &:focus,
+      &:hover {
+        background-color: darken($primary, 10%);
+      }
+    }
+  }
+  .select {
+    &:hover {
+      &::after {
+        border-color: $white-bis;
+      }
+    }
+    &:not(.is-multiple)::after {
+      border-color: $turquoise;
+    }
+    select {
+      background-color: $black-ter;
+      border-color: $grey-light;
+      color: $white-bis;
+    }
+  }
+  .switch[type='checkbox'] {
+    &:checked + label::before {
+      background-color: darken($primary, 20%);
+    }
+  }
+  .card {
+    background-color: $black-bis;
+    box-shadow: 0 0 3px $grey-dark;
+    color: $white-bis;
+  }
+  div.tabs {
+    a {
+      color: $white;
+      border-bottom-color: $white;
+      &:hover {
+        color: $cyan;
+        border-bottom-color: $cyan;
+      }
+    }
+    .is-active {
+      a:not(.button):not(.tag) {
+        color: $cyan;
+        border-bottom-color: $cyan;
+      }
+    }
+  }
+  /*
+  .checkbox,
+  .radio {
+    &:hover {
+      color: $white-ter;
+    }
+  }
+  .message {
+    background-color: $grey-darker;
+    color: $white-bis;
+    &.is-warning {
+      background-color: $grey-darker;
+      .message-body {
+        color: $white-bis;
+      }
+    }
+
+    a:not(.button):not(.tag) {
+      color: $turquoise;
+      &[disabled] {
+        color: $grey-dark;
+        &.is-current {
+          color: $grey-light;
+        }
+      }
+    }
+  }
+  .message-header {
+    background-color: $black-ter;
+    color: $white-bis;
+  }
+  .message-body {
+    color: $white-bis;
+    border: 1px solid $grey-darker;
+  }
+
+  .content {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: $white-bis;
+    }
+    table {
+      thead {
+        th {
+          color: $white-bis;
+        }
+      }
+      th {
+        color: $white-bis;
+      }
+      tr {
+        &:hover {
+          background-color: $black-ter;
+        }
+      }
+    }
+  }
+  */
+}

@@ -62,15 +62,11 @@ const Player = ({ player, quizzes }) => {
 
   return (
     <tr>
-      <td className={`${classes.rankCell} has-background-white`}>
-        {player.rank}
-      </td>
-      <td
-        className={`${classes.changeCell} has-background-white has-text-centered`}
-      >
+      <td className={classes.rankCell}>{player.rank}</td>
+      <td className={classames(classes.changeCell, 'has-text-centered')}>
         <RankChange change={player.change} />
       </td>
-      <td className={`${classes.userCell} has-background-white`}>
+      <td className={classes.userCell}>
         <div className={classes.userCellContent}>
           <ConditionalWrapper
             condition={player.data.info}

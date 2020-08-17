@@ -186,29 +186,16 @@ const NationalRanking = () => {
             <table className="table">
               <thead>
                 <tr>
-                  <th
-                    className={classames(
-                      classes.rankCell,
-                      'has-background-white'
-                    )}
-                  >
-                    #
-                  </th>
+                  <th className={classes.rankCell}>#</th>
                   <th
                     className={classames(
                       classes.changeCell,
-                      'has-background-white',
                       'has-text-centered'
                     )}
                   >
                     ±
                   </th>
-                  <th
-                    className={classames(
-                      classes.userCell,
-                      'has-background-white'
-                    )}
-                  >
+                  <th className={classes.userCell}>
                     <Trans>Nome</Trans>
                   </th>
                   <th className="sortable">

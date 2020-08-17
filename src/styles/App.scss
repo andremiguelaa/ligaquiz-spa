@@ -11,6 +11,7 @@ $red: #e74c3c;
 @import '@creativebulma/bulma-tooltip';
 @import 'styles/Toasts.scss';
 @import 'styles/DatePickers.scss';
+@import 'styles/DarkMode.scss';
 
 .has-background-success,
 .has-background-danger {
@@ -174,7 +175,17 @@ button.navbar-link {
       height: 100%;
     }
   }
+  li{
+    &:not(:last-child){
+      ul:last-child{
+        margin-bottom: 1rem;
+      }
+    }
+  }
   table {
+    &.is-not-fullwidth {
+      width: auto;
+    }
     th {
       &.sortable {
         padding: 0;
@@ -197,5 +208,12 @@ button.navbar-link {
         }
       }
     }
+  }
+}
+
+.switch[type='checkbox'] {
+  &:focus + label::after,
+  &:focus + label::before {
+    outline: none;
   }
 }

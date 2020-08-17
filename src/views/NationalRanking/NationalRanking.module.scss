@@ -1,6 +1,6 @@
-@import "bulma/sass/utilities/initial-variables.sass";
-@import "bulma/sass/utilities/derived-variables.scss";
-@import "bulma/sass/utilities/mixins.sass";
+@import 'bulma/sass/utilities/initial-variables.sass';
+@import 'bulma/sass/utilities/derived-variables.scss';
+@import 'bulma/sass/utilities/mixins.sass';
 
 .tableWrapper {
   position: relative;
@@ -17,13 +17,17 @@
       height: 37px;
       white-space: nowrap;
     }
-    
+
     .rankCell {
       position: absolute;
       left: 0;
       width: 40px;
       width: 25px;
       padding: 0.5em 0.25em !important;
+      background-color: $white;
+      @media (prefers-color-scheme: dark) {
+        background-color: $black-bis;
+      }
     }
 
     .changeCell {
@@ -31,12 +35,20 @@
       left: 25px;
       width: 25px;
       padding: 0.5em 0 !important;
+      background-color: $white;
+      @media (prefers-color-scheme: dark) {
+        background-color: $black-bis;
+      }
     }
 
     .userCell {
       position: absolute;
       left: 50px;
       width: 260px;
+      background-color: $white;
+      @media (prefers-color-scheme: dark) {
+        background-color: $black-bis;
+      }
       @include mobile {
         width: 90px;
       }
@@ -109,7 +121,7 @@
 }
 
 .top10 {
-  background-color: #121212b3;
+  background-color: #2f2f2fb3;
   color: $white;
 }
 

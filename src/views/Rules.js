@@ -245,7 +245,7 @@ const Rules = () => {
             <br />A partir desse primeiro mês o preço da participação será de
             acordo com a tabela abaixo:
           </p>
-          <table className="table is-fullwidth">
+          <table className="table is-not-fullwidth">
             <thead>
               <tr>
                 <th>Duração</th>
