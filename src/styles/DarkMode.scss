@@ -264,9 +264,21 @@
     &.is-danger,
     &.is-warning {
       background-color: $grey-darker;
+      .message-body {
+        color: $white-bis;
+      }
     }
   }
   .message-body {
     color: $white-bis;
+  }
+  .box {
+    background-color: $grey-darker;
+  }
+  .checkbox,
+  .radio {
+    &:hover {
+      color: $grey-lighter;
+    }
   }
 }

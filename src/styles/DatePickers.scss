@@ -32,6 +32,9 @@
       &[disabled] {
         background-color: $white-ter;
         cursor: not-allowed;
+        @media (prefers-color-scheme: dark) {
+          background-color: $grey;
+        }
       }
     }
   }
