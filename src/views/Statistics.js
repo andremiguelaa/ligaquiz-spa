@@ -21,6 +21,10 @@ import formatDate from 'utils/formatDate';
 
 import classes from './Statistics/Statistics.module.scss';
 
+const isDarkMode =
+  window.matchMedia &&
+  window.matchMedia('(prefers-color-scheme: dark)').matches;
+
 const Statistics = () => {
   const { id: userId } = useParams();
   const [
@@ -202,18 +206,32 @@ const Statistics = () => {
             }}
             options={{
               scale: {
+                gridLines: {
+                  color: isDarkMode
+                    ? 'rgba(255, 255, 255, 0.3)'
+                    : 'rgba(0, 0, 0, 0.3)',
+                },
                 ticks: {
                   beginAtZero: true,
                   max: 100,
                   display: false,
                 },
+                angleLines: {
+                  color: isDarkMode
+                    ? 'rgba(255, 255, 255, 0.3)'
+                    : 'rgba(0, 0, 0, 0.3)',
+                },
                 pointLabels: {
-                  fontSize: 12,
+                  fontSize: 14,
+                  fontColor: isDarkMode ? 'white' : 'black',
+                  fontFamily:
+                    'BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif',
                 },
               },
               legend: {
                 display: false,
               },
+              borderColor: 'white',
             }}
           />
         </div>
@@ -379,7 +397,7 @@ const Statistics = () => {
                     </thead>
                     <tbody>
                       {logs.map((log) => (
-                        <tr key={`${log.action}-${log.created_at}`}>
+                        <tr key={log.id}>
                           <td>{log.action}</td>
                           <td>
                             {log.created_at.substring(0, 19).replace('T', ' ')}
