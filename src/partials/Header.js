@@ -8,7 +8,12 @@ import Cookies from 'js-cookie';
 import { catalogs } from 'utils/catalogs';
 import { useStateValue } from 'state/State';
 import logo from 'img/logo.png';
+import logoDark from 'img/logo-dark.png';
 import classes from './Header.module.scss';
+
+const isDarkMode =
+  window.matchMedia &&
+  window.matchMedia('(prefers-color-scheme: dark)').matches;
 
 const Header = () => {
   const [{ settings, user }, dispatch] = useStateValue();
@@ -32,7 +37,7 @@ const Header = () => {
       >
         <div className="navbar-brand">
           <Link to="/" className="navbar-item">
-            <img src={logo} alt="logo" />
+            <img src={isDarkMode ? logoDark : logo} alt="logo" />
           </Link>
           <div className={classes.burgerWrapper}>
             <OutsideClickHandler
