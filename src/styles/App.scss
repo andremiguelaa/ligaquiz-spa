@@ -11,7 +11,6 @@ $red: #e74c3c;
 @import '@creativebulma/bulma-tooltip';
 @import 'styles/Toasts.scss';
 @import 'styles/DatePickers.scss';
-@import 'styles/DarkMode.scss';
 
 .has-background-success,
 .has-background-danger {
@@ -131,10 +130,7 @@ button.navbar-link {
   &.is-loading {
     > .file-label {
       color: transparent;
-      background-color: white;
-      border-color: #dbdbdb;
       box-shadow: none;
-      opacity: 0.5;
       pointer-events: none;
       &::after {
         position: absolute;
@@ -230,3 +226,5 @@ button.navbar-link {
     outline: none;
   }
 }
+
+@import 'styles/DarkMode.scss';

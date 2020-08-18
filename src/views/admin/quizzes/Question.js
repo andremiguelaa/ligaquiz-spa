@@ -159,6 +159,7 @@ const Question = ({
       {media && (
         <>
           <button
+            disabled={disabled || uploading}
             className="button is-danger"
             onClick={() => {
               setMediaId();

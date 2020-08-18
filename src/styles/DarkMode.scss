@@ -191,6 +191,13 @@
         }
       }
     }
+    &.is-loading{
+      & > .file-label{
+        &::after{
+          border-color: transparent transparent $grey-darker $grey-darker !important;
+        }
+      }
+    }
   }
   input:-webkit-autofill,
   input:-webkit-autofill:hover,
