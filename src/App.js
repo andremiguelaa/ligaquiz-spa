@@ -65,7 +65,7 @@ const App = () => {
           </main>
           <Message />
           <ToastContainer />
-          <Logger />
+          {user && <Logger />}
         </BrowserRouter>
       </I18nProvider>
     </Auth>
