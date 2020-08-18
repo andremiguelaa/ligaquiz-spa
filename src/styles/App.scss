@@ -160,6 +160,19 @@ button.navbar-link {
       }
     }
   }
+  .file-input {
+    &[disabled] {
+      & + .file-cta {
+        cursor: not-allowed;
+        background-color: $white-ter;
+        border-color: transparent;
+        color: $grey;
+        & > * {
+          pointer-events: none;
+        }
+      }
+    }
+  }
 }
 
 .content {
@@ -175,9 +188,9 @@ button.navbar-link {
       height: 100%;
     }
   }
-  li{
-    &:not(:last-child){
-      ul:last-child{
+  li {
+    &:not(:last-child) {
+      ul:last-child {
         margin-bottom: 1rem;
       }
     }

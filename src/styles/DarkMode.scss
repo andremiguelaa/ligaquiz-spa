@@ -157,19 +157,38 @@
     &:hover {
       border-color: $grey-lighter;
     }
-  }
-  .file-label {
-    .file-cta {
-      background-color: $black-ter;
-      color: $white-bis;
-      border-color: $grey-light;
+    &[disabled] {
+      background-color: $grey;
+      color: $grey-darker;
+      border-color: transparent;
     }
-    &:hover {
-      border-color: $grey-lighter;
+  }
+  .file {
+    .file-label {
       .file-cta {
         background-color: $black-ter;
         color: $white-bis;
+        border-color: $grey-light;
+      }
+      &:hover {
         border-color: $grey-lighter;
+        .file-cta {
+          background-color: $black-ter;
+          color: $white-bis;
+          border-color: $grey-lighter;
+        }
+      }
+      .file-input {
+        &[disabled] {
+          & + .file-cta {
+            cursor: not-allowed;
+            background-color: $grey;
+            color: $grey-darker;
+            & > * {
+              pointer-events: none;
+            }
+          }
+        }
       }
     }
   }
