@@ -231,7 +231,6 @@ const Statistics = () => {
               legend: {
                 display: false,
               },
-              borderColor: 'white',
             }}
           />
         </div>

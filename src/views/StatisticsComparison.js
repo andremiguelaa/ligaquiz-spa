@@ -14,6 +14,10 @@ import NoMatch from './NoMatch';
 
 import classes from './Statistics/Statistics.module.scss';
 
+const isDarkMode =
+  window.matchMedia &&
+  window.matchMedia('(prefers-color-scheme: dark)').matches;
+
 const Statistics = () => {
   const { id1: userId1, id2: userId2 } = useParams();
   const [
@@ -220,13 +224,26 @@ const Statistics = () => {
             }}
             options={{
               scale: {
+                gridLines: {
+                  color: isDarkMode
+                    ? 'rgba(255, 255, 255, 0.3)'
+                    : 'rgba(0, 0, 0, 0.3)',
+                },
                 ticks: {
                   beginAtZero: true,
                   max: 100,
                   display: false,
                 },
+                angleLines: {
+                  color: isDarkMode
+                    ? 'rgba(255, 255, 255, 0.3)'
+                    : 'rgba(0, 0, 0, 0.3)',
+                },
                 pointLabels: {
-                  fontSize: 12,
+                  fontSize: 14,
+                  fontColor: isDarkMode ? 'white' : 'black',
+                  fontFamily:
+                    'BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif',
                 },
               },
               legend: {
