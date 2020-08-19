@@ -7,7 +7,11 @@ const defaultLanguage = Object.keys(catalogs).includes(userLanguage)
   : 'pt';
 
 export const settingsInitialState = {
-  language: Cookies.get('language') ? Cookies.get('language') : defaultLanguage
+  language:
+    Cookies.get('language') &&
+    Object.keys(catalogs).includes(Cookies.get('language'))
+      ? Cookies.get('language')
+      : defaultLanguage,
 };
 
 export const settingsReducer = (state, { type, payload }) => {
@@ -15,7 +19,7 @@ export const settingsReducer = (state, { type, payload }) => {
     case 'settings.language':
       return {
         ...state,
-        language: payload
+        language: payload,
       };
 
     default:

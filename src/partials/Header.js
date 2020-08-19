@@ -91,23 +91,25 @@ const Header = () => {
           </div>
 
           <div className="navbar-end">
-            <div className="navbar-item">
-              <div className="buttons are-small">
-                {Object.keys(catalogs).map((language) => (
-                  <button
-                    key={language}
-                    disabled={settings.language === language}
-                    className="button"
-                    onClick={() => changeLanguage(language)}
-                  >
-                    {language.toUpperCase()}
-                  </button>
-                ))}
+            {Object.keys(catalogs).length > 1 && (
+              <div className="navbar-item">
+                <div className="buttons are-small">
+                  {Object.keys(catalogs).map((language) => (
+                    <button
+                      key={language}
+                      disabled={settings.language === language}
+                      className="button"
+                      onClick={() => changeLanguage(language)}
+                    >
+                      {language.toUpperCase()}
+                    </button>
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
             {!user && (
               <div className="navbar-item">
-                <div className="buttons">
+                <div className="buttons are-small">
                   <Link to="/login/" className="button is-light">
                     <Trans>Entrar</Trans>
                   </Link>
