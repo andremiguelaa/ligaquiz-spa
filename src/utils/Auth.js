@@ -13,7 +13,7 @@ export const setLoginData = (data, dispatch) => {
     const validity = Math.round(
       (Date.parse(data.expires_at) - Date.now()) / 1000 / 60 / 60 / 24 / 2
     );
-    Cookies.set('BEARER-TOKEN', data.access_token, { expires: validity });
+    Cookies.set('AUTH-TOKEN', data.access_token, { expires: validity });
     setBearerToken(data.access_token);
   }
   dispatch({
@@ -27,7 +27,7 @@ export default (props) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState();
   useEffect(() => {
-    const token = Cookies.get('BEARER-TOKEN');
+    const token = Cookies.get('AUTH-TOKEN');
     if (token) {
       ApiRequest.patch('session')
         .then(({ data }) => {
@@ -40,7 +40,7 @@ export default (props) => {
               hideProgressBar: true,
               closeButton: false,
             });
-            Cookies.remove('BEARER-TOKEN');
+            Cookies.remove('AUTH-TOKEN');
             setLoading(false);
           } else {
             setError(true);

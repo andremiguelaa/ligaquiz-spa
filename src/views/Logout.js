@@ -12,7 +12,7 @@ const Logout = ({ history }) => {
   useEffect(() => {
     if (user) {
       ApiRequest.delete('session').finally(() => {
-        Cookies.remove('BEARER-TOKEN');
+        Cookies.remove('AUTH-TOKEN');
         dispatch({
           type: 'user.logout'
         });

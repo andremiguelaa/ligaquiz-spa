@@ -10,6 +10,6 @@ export const setBearerToken = (token) => {
   }
 };
 
-setBearerToken(Cookies.get('BEARER-TOKEN'));
+setBearerToken(Cookies.get('AUTH-TOKEN'));
 
 export default axios;
