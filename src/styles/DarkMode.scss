@@ -51,6 +51,9 @@
         color: $white-bis;
       }
     }
+    th {
+      color: $white-bis;
+    }
     &.is-hoverable {
       tbody {
         tr:not(.is-selected):hover {
@@ -191,9 +194,9 @@
         }
       }
     }
-    &.is-loading{
-      & > .file-label{
-        &::after{
+    &.is-loading {
+      & > .file-label {
+        &::after {
           border-color: transparent transparent $grey-darker $grey-darker !important;
         }
       }
