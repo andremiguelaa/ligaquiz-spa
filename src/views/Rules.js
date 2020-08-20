@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Trans } from '@lingui/macro';
 
 import { useStateValue } from 'state/State';
@@ -7,9 +7,19 @@ import PageHeader from 'components/PageHeader';
 
 const Rules = () => {
   const [{ user }] = useStateValue();
+
+  useEffect(() => {
+    if (window.location.hash) {
+      document
+        .getElementById(window.location.hash.substring(1))
+        .scrollIntoView();
+    }
+  }, []);
+
   if (!user) {
     return <NoMatch />;
   }
+
   return (
     <>
       <PageHeader title={<Trans>Regras</Trans>} />
@@ -238,7 +248,9 @@ const Rules = () => {
             </li>
             <li>Caso uses um joker e falhes a pergunta, perdes 20 pontos!</li>
           </ol>
-          <h2 className="subtitle">Subscrição</h2>
+          <h2 className="subtitle" id="subscription">
+            Subscrição
+          </h2>
           <p>
             Os novos participantes terão sempre um mês de experiência totalmente
             gratuito tal como estão a ter os actuais participantes.
