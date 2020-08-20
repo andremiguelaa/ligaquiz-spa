@@ -80,8 +80,8 @@ const Notifications = () => {
 
   if (
     notifications.data.length > 0 ||
-    notifications.quiz ||
-    notifications.special_quiz
+    (notifications.quiz && location.pathname !== '/quiz') ||
+    (notifications.special_quiz && location.pathname !== '/special-quiz')
   ) {
     return (
       <section className="section">

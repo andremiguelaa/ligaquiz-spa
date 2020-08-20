@@ -220,6 +220,14 @@ button.navbar-link {
   }
 }
 
+.table {
+  th {
+    &:not([align]) {
+      text-align: left;
+    }
+  }
+}
+
 .switch[type='checkbox'] {
   &:focus + label::after,
   &:focus + label::before {
