@@ -92,7 +92,7 @@ const Question = () => {
     );
   }
 
-  if (!question || !users) {
+  if (!question || !users || !statistics) {
     return <Loading />;
   }
 
@@ -194,7 +194,6 @@ const Question = () => {
                 'table',
                 'is-fullwidth',
                 'is-hoverable',
-                'is-striped',
                 classes.table
               )}
             >
