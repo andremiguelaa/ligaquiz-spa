@@ -81,7 +81,7 @@ const Notifications = () => {
   }
 
   let remainingDays;
-  if (user && notifications.now) {
+  if (user && user.roles && notifications.now) {
     if (user.roles.regular_player) {
       remainingDays = differenceInDays(
         new Date(user.roles.regular_player),
