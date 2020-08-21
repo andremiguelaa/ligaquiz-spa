@@ -4,14 +4,21 @@ import { omit } from 'lodash';
 import classames from 'classnames';
 import { toast } from 'react-toastify';
 
+import { convertToLongDate } from 'utils/formatDate';
 import { useStateValue } from 'state/State';
 import Forbidden from './Forbidden';
 import PageHeader from 'components/PageHeader';
 import ApiRequest from 'utils/ApiRequest';
-import ProfileAvatar from './Account/Avatar';
+import Avatar from './Account/Avatar';
 
 const Account = () => {
-  const [{ user }, dispatch] = useStateValue();
+  const [
+    {
+      user,
+      settings: { language },
+    },
+    dispatch,
+  ] = useStateValue();
   const [error, setError] = useState(null);
   const [submitting, setSubmitting] = useState(false);
   const [formData, setFormData] = useState({
@@ -302,7 +309,23 @@ const Account = () => {
             </form>
           </div>
           <div className="column is-6">
-            <ProfileAvatar />
+            <Avatar />
+            {(user.valid_roles.regular_player ||
+              user.valid_roles.special_quiz_player) && (
+              <>
+                <hr />
+                <div>
+                  <div className="label">Validade da subscrição</div>
+                  <div>
+                    {convertToLongDate(
+                      user.roles.regular_player ||
+                        user.roles.special_quiz_player,
+                      language
+                    )}
+                  </div>
+                </div>
+              </>
+            )}
           </div>
         </div>
       </div>
