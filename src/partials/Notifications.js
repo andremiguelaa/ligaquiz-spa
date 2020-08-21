@@ -99,10 +99,19 @@ const Notifications = () => {
     notifications.data.length > 0 ||
     (notifications.quiz && location.pathname !== '/quiz') ||
     (notifications.special_quiz && location.pathname !== '/special-quiz') ||
-    (remainingDays !== undefined && remainingDays < 8)
+    (remainingDays !== undefined && remainingDays < 8) ||
+    (user && user.roles === null)
   ) {
     return (
       <section className="section">
+        {user && user.roles === null && (
+          <div className={`notification is-info`}>
+            <Trans>
+              Obrigado pela tua inscrição! O teu registo encontra-se a aguardar
+              aprovação da equipa da Liga Quiz.
+            </Trans>
+          </div>
+        )}
         {notifications.data.map((notification) => (
           <div
             key={notification.id}
