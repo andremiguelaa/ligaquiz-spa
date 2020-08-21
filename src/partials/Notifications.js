@@ -81,16 +81,18 @@ const Notifications = () => {
   }
 
   let remainingDays;
-  if (notifications.now && user.roles.regular_player) {
-    remainingDays = differenceInDays(
-      new Date(user.roles.regular_player),
-      new Date(notifications.now)
-    );
-  } else if (notifications.now && user.roles.special_quiz_player) {
-    remainingDays = differenceInDays(
-      new Date(user.roles.special_quiz_player),
-      new Date(notifications.now)
-    );
+  if (user && notifications.now) {
+    if (user.roles.regular_player) {
+      remainingDays = differenceInDays(
+        new Date(user.roles.regular_player),
+        new Date(notifications.now)
+      );
+    } else if (user.roles.special_quiz_player) {
+      remainingDays = differenceInDays(
+        new Date(user.roles.special_quiz_player),
+        new Date(notifications.now)
+      );
+    }
   }
 
   if (
