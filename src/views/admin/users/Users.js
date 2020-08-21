@@ -308,6 +308,7 @@ const Users = () => {
                               onClick={() => {
                                 setUserToEdit({
                                   ...user,
+                                  roles: user.roles || {},
                                   newRoles: user.roles,
                                 });
                               }}
