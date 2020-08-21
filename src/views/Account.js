@@ -15,13 +15,13 @@ const Account = () => {
   const [error, setError] = useState(null);
   const [submitting, setSubmitting] = useState(false);
   const [formData, setFormData] = useState({
-    id: user.id,
-    name: user.name,
-    surname: user.surname,
-    email: user.email,
+    id: user?.id,
+    name: user?.name,
+    surname: user?.surname,
+    email: user?.email,
     password: '',
     password2: '',
-    reminders: user.reminders,
+    reminders: user?.reminders,
   });
 
   if (!user) {
