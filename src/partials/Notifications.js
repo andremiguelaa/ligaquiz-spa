@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
+import { differenceInDays } from 'date-fns';
 
 import Markdown from 'components/Markdown';
 import { useStateValue } from 'state/State';
@@ -25,6 +26,7 @@ const Notifications = () => {
               data: data.manual,
               quiz: data.quiz,
               special_quiz: data.special_quiz,
+              now: data.now,
             },
           });
         })
@@ -78,10 +80,24 @@ const Notifications = () => {
     return <Loading />;
   }
 
+  let remainingDays;
+  if (notifications.now && user.roles.regular_player) {
+    remainingDays = differenceInDays(
+      new Date(user.roles.regular_player),
+      new Date(notifications.now)
+    );
+  } else if (notifications.now && user.roles.special_quiz_player) {
+    remainingDays = differenceInDays(
+      new Date(user.roles.special_quiz_player),
+      new Date(notifications.now)
+    );
+  }
+
   if (
     notifications.data.length > 0 ||
     (notifications.quiz && location.pathname !== '/quiz') ||
-    (notifications.special_quiz && location.pathname !== '/special-quiz')
+    (notifications.special_quiz && location.pathname !== '/special-quiz') ||
+    (remainingDays !== undefined && remainingDays < 8)
   ) {
     return (
       <section className="section">
@@ -93,6 +109,26 @@ const Notifications = () => {
             <Markdown content={notification.content} />
           </div>
         ))}
+        {remainingDays !== undefined && remainingDays < 8 && (
+          <div className={`notification is-danger`}>
+            {remainingDays > 1 && (
+              <Trans>
+                A tua subscrição termina daqui a {remainingDays} dias.
+              </Trans>
+            )}
+            {remainingDays === 1 && (
+              <Trans>A tua subscrição termina amanhã.</Trans>
+            )}
+            {remainingDays === 0 && (
+              <Trans>A tua subscrição termina hoje.</Trans>
+            )}
+            {remainingDays < 0 && <Trans>A tua subscrição expirou.</Trans>}{' '}
+            <Trans>
+              Clica <Link to="/rules#subscription">aqui</Link> para saber como
+              renovar.
+            </Trans>
+          </div>
+        )}
         {notifications.quiz && location.pathname !== '/quiz' && (
           <div className={`notification is-info`}>
             <Link to="/quiz">
