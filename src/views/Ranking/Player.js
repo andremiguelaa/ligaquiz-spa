@@ -9,7 +9,7 @@ import classes from './Ranking.module.scss';
 const Player = ({ player, index, tierNumber, users }) => (
   <tr
     className={classnames({
-      'has-background-warning': player.forfeits === 3,
+      'has-background-warning': player.forfeits === 3 && index < 8,
       'has-background-success':
         (index === 0 || (index === 1 && tierNumber > 1)) && player.forfeits < 3,
       'has-background-danger': index >= 8 || player.forfeits > 3,
