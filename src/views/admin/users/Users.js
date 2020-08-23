@@ -198,7 +198,7 @@ const Users = () => {
                             classes.permissionsCell
                           )}
                         >
-                          {user.roles?.admin && (
+                          {user.valid_roles?.admin && (
                             <I18n>
                               {({ i18n }) => (
                                 <span
@@ -210,24 +210,33 @@ const Users = () => {
                               )}
                             </I18n>
                           )}
-                          {user.roles?.regular_player &&
-                            user.roles?.regular_player.localeCompare(
-                              formatDate(new Date())
-                            ) > 0 && (
-                              <I18n>
-                                {({ i18n }) => (
-                                  <span
-                                    className="icon"
-                                    data-tooltip={`${i18n._(
-                                      t`Jogador regular`
-                                    )}`}
-                                  >
-                                    <i className="fa fa-user"></i>
-                                  </span>
-                                )}
-                              </I18n>
-                            )}
-                          {user.roles?.ranking_manager && (
+                          {user.valid_roles?.regular_player && (
+                            <I18n>
+                              {({ i18n }) => (
+                                <span
+                                  className="icon"
+                                  data-tooltip={`${i18n._(t`Jogador regular`)}`}
+                                >
+                                  <i className="fa fa-user"></i>
+                                </span>
+                              )}
+                            </I18n>
+                          )}
+                          {user.valid_roles?.special_quiz_player && (
+                            <I18n>
+                              {({ i18n }) => (
+                                <span
+                                  className="icon"
+                                  data-tooltip={`${i18n._(
+                                    t`Jogador de quizzes especiais`
+                                  )}`}
+                                >
+                                  <i className="fa fa-user"></i>
+                                </span>
+                              )}
+                            </I18n>
+                          )}
+                          {user.valid_roles?.ranking_manager && (
                             <I18n>
                               {({ i18n }) => (
                                 <span
@@ -241,7 +250,7 @@ const Users = () => {
                               )}
                             </I18n>
                           )}
-                          {user.roles?.quiz_editor && (
+                          {user.valid_roles?.quiz_editor && (
                             <I18n>
                               {({ i18n }) => (
                                 <span
@@ -253,7 +262,7 @@ const Users = () => {
                               )}
                             </I18n>
                           )}
-                          {user.roles?.special_quiz_editor && (
+                          {user.valid_roles?.special_quiz_editor && (
                             <I18n>
                               {({ i18n }) => (
                                 <span
@@ -267,7 +276,7 @@ const Users = () => {
                               )}
                             </I18n>
                           )}
-                          {user.roles?.answer_reviewer && (
+                          {user.valid_roles?.answer_reviewer && (
                             <I18n>
                               {({ i18n }) => (
                                 <span
@@ -279,7 +288,7 @@ const Users = () => {
                               )}
                             </I18n>
                           )}
-                          {user.roles?.blocked && (
+                          {user.valid_roles?.blocked && (
                             <I18n>
                               {({ i18n }) => (
                                 <span

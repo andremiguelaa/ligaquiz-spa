@@ -141,6 +141,64 @@ const EditPermissionsModal = ({
           <fieldset className="fieldset">
             <div className="field">
               <input
+                id="special-quiz-player"
+                type="checkbox"
+                className="switch"
+                value="true"
+                onClick={(event) => {
+                  setUserToEdit({
+                    ...userToEdit,
+                    newRoles: {
+                      ...userToEdit.newRoles,
+                      special_quiz_player: event.target.checked
+                        ? userToEdit.roles.special_quiz_player ||
+                          formatDate(new Date())
+                        : event.target.checked,
+                    },
+                  });
+                }}
+                defaultChecked={Boolean(userToEdit.roles?.special_quiz_player)}
+              />
+              <label htmlFor="special-quiz-player">
+                <Trans>Jogador de quizzes especiais</Trans>
+              </label>
+            </div>
+            <div className="field">
+              <div className="control">
+                <label className="label">
+                  <Trans>Validade da subscrição</Trans>
+                </label>
+                <div className="control has-icons-left">
+                  <DatePicker
+                    disabled={!Boolean(userToEdit.newRoles?.special_quiz_player)}
+                    selected={
+                      userToEdit.newRoles?.special_quiz_player
+                        ? new Date(userToEdit.newRoles?.special_quiz_player)
+                        : userToEdit.roles?.special_quiz_player
+                        ? new Date(userToEdit.roles?.special_quiz_player)
+                        : new Date()
+                    }
+                    onChange={(value) => {
+                      setUserToEdit({
+                        ...userToEdit,
+                        newRoles: {
+                          ...userToEdit.newRoles,
+                          special_quiz_player: formatDate(value),
+                        },
+                      });
+                    }}
+                    dateFormat="yyyy-MM-dd"
+                  />
+                  <span className="icon is-small is-left">
+                    <i className="fa fa-calendar" />
+                  </span>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset className="fieldset">
+            <div className="field">
+              <input
                 id="national-ranking-manager"
                 type="checkbox"
                 className="switch"
