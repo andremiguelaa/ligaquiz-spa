@@ -200,7 +200,6 @@ const QuizForm = () => {
               </div>
             </div>
           )}
-
           {genres.map((genre, index) => (
             <Question
               genre={genre}

@@ -26,7 +26,7 @@ const SpecialQuizForm = () => {
   const [users, setUsers] = useState();
   const [quizDates, setQuizDates] = useState();
   const [quizDate, setQuizDate] = useState();
-  const [quiz, setQuiz] = useState();
+  const [quizData, setQuizData] = useState();
   const [subject, setSubject] = useState('');
   const [description, setDescription] = useState('');
   const [author, setAuthor] = useState(null);
@@ -42,28 +42,28 @@ const SpecialQuizForm = () => {
   const editMode = Boolean(date);
 
   useEffect(() => {
-    if (!editMode) {
-      ApiRequest.get(`special-quizzes`)
-        .then(({ data }) => {
-          setQuizDates(
-            data.reduce((dates, quiz) => {
-              if (new Date(quiz.date) > new Date()) {
-                dates.push(new Date(quiz.date));
-              }
-              return dates;
-            }, [])
-          );
-        })
-        .catch(() => {
-          setError(true);
-        });
-    } else {
+    ApiRequest.get(`special-quizzes`)
+      .then(({ data }) => {
+        setQuizDates(
+          data.reduce((dates, quiz) => {
+            if (!quiz.past) {
+              dates.push(new Date(quiz.date));
+            }
+            return dates;
+          }, [])
+        );
+      })
+      .catch(({ response }) => {
+        setError(response?.status);
+      });
+    if (editMode) {
+      setQuizDate(new Date(date));
       ApiRequest.get(`special-quizzes?date=${date}`)
         .then(({ data }) => {
           setSubject(data.quiz.subject || '');
           setDescription(data.quiz.description || '');
           setAuthor(data.quiz.user_id);
-          setQuiz(data);
+          setQuizData(data);
           setFormData(data.quiz);
         })
         .catch(({ response }) => {
@@ -82,23 +82,26 @@ const SpecialQuizForm = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     setSubmitting(true);
-    setError(null);
+    setError();
     const newFormData = { ...formData };
     newFormData.subject = subject || '';
     newFormData.description = description || '';
     newFormData.user_id = author || null;
+    if (!quizData || (!quizData.quiz.past && !quizData.quiz.today)) {
+      newFormData.date = formatDate(quizDate);
+    }
     if (editMode) {
       ApiRequest.patch('special-quizzes', newFormData)
         .then(() => {
           setSubmitting(false);
           toast.success(<Trans>Quiz especial gravado com sucesso.</Trans>);
+          history.push(`/admin/special-quiz/${newFormData.date}/edit/`);
         })
         .catch(() => {
           toast.error(<Trans>Não foi possível gravar o quiz especial.</Trans>);
           setSubmitting(false);
         });
     } else {
-      newFormData.date = formatDate(quizDate);
       ApiRequest.post('special-quizzes', newFormData)
         .then(() => {
           setSubmitting(false);
@@ -123,9 +126,19 @@ const SpecialQuizForm = () => {
     );
   }
 
-  if ((!editMode && !quizDates) || (editMode && !quiz) || !users) {
+  if (!quizDates || (editMode && !quizData) || !users) {
     return <Loading />;
   }
+
+  const nonValidDates = quizDates.reduce((acc, item) => {
+    if (
+      !quizData ||
+      item.getTime() !== new Date(quizData.quiz.date).getTime()
+    ) {
+      acc.push(item);
+    }
+    return acc;
+  }, []);
 
   return (
     <>
@@ -142,7 +155,7 @@ const SpecialQuizForm = () => {
       />
       <div className="section content">
         <form onSubmit={handleSubmit}>
-          {!editMode && (
+          {(!quizData || (!quizData.quiz.past && !quizData.quiz.today)) && (
             <div className="field">
               <div className="control">
                 <label className="label">
@@ -151,7 +164,7 @@ const SpecialQuizForm = () => {
                 <div className="control has-icons-left">
                   <DatePicker
                     minDate={new Date()}
-                    excludeDates={quizDates}
+                    excludeDates={nonValidDates}
                     selected={quizDate}
                     onChange={(date) => {
                       setQuizDate(date);
@@ -224,7 +237,7 @@ const SpecialQuizForm = () => {
             <Question
               index={index}
               key={index}
-              quiz={quiz}
+              quizData={quizData}
               setFormData={setFormData}
               uploading={uploading}
               setUploading={setUploading}

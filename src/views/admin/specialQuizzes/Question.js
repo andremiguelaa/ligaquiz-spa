@@ -10,7 +10,7 @@ import classes from '../quizzes/Quizzes.module.scss';
 
 const Question = ({
   index,
-  quiz: quizData,
+  quizData,
   setFormData,
   uploading,
   setUploading,
