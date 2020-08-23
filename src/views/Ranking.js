@@ -82,9 +82,7 @@ const Ranking = () => {
       ApiRequest.get(`seasons`)
         .then(({ data }) => {
           if (data.length) {
-            let lastSeason = data.find(
-              (season) => new Date(season.rounds[0].date) < new Date()
-            );
+            let lastSeason = data.find((season) => season.past);
             if (!lastSeason) {
               lastSeason = data[data.length - 1];
             }

@@ -41,7 +41,7 @@ const SeasonForm = () => {
           const usersObject = data.reduce(
             (acc, user) => {
               acc.users[user.id] = user;
-              if (new Date(user.roles.regular_player) > new Date()) {
+              if (user.valid_roles.regular_player) {
                 acc.validUsers.push(user);
               }
               return acc;

@@ -24,7 +24,7 @@ const Seasons = () => {
       .then(({ data }) => {
         setSeasonsList(
           data.reduce((acc, season) => {
-            if (new Date(season.rounds[0].date) < new Date()) {
+            if (season.past) {
               acc.push(season);
             }
             return acc;

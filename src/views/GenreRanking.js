@@ -24,6 +24,7 @@ const GenreRanking = () => {
   const [error, setError] = useState();
   const [users, setUsers] = useState();
   const [genres, setGenres] = useState();
+  const [seasonNumber, setSeasonNumber] = useState();
 
   const getStatistics = (season) => {
     setStatistics();
@@ -106,16 +107,16 @@ const GenreRanking = () => {
   useEffect(() => {
     if (season) {
       getStatistics(season);
+      setSeasonNumber(parseInt(season));
     } else {
       ApiRequest.get(`seasons`)
         .then(({ data }) => {
           if (data.length) {
-            let lastSeason = data.find(
-              (season) => new Date(season.rounds[0].date) < new Date()
-            );
+            let lastSeason = data.find((season) => season.past);
             if (!lastSeason) {
               lastSeason = data[data.length - 1];
             }
+            setSeasonNumber(lastSeason.season);
             getStatistics(lastSeason.season);
           }
         })
@@ -157,7 +158,10 @@ const GenreRanking = () => {
 
   return (
     <>
-      <PageHeader title={<Trans>Rankings temáticos</Trans>} />
+      <PageHeader
+        title={<Trans>Rankings temáticos</Trans>}
+        subtitle={<Trans>Temporada {seasonNumber}</Trans>}
+      />
       <div className="section content">
         {Object.keys(statistics).length > 0 ? (
           <>
