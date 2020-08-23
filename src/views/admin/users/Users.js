@@ -9,7 +9,6 @@ import { get } from 'lodash';
 import { useStateValue } from 'state/State';
 import getAcronym from 'utils/getAcronym';
 import ApiRequest from 'utils/ApiRequest';
-import formatDate from 'utils/formatDate';
 import Loading from 'components/Loading';
 import Error from 'components/Error';
 import PageHeader from 'components/PageHeader';
