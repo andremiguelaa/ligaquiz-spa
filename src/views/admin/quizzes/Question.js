@@ -14,7 +14,7 @@ const Question = ({
   genre,
   genreStats,
   index,
-  quiz: quizData,
+  quizData,
   setFormData,
   uploading,
   setUploading,

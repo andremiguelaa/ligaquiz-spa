@@ -24,7 +24,7 @@ const QuizForm = () => {
   const [error, setError] = useState();
   const [quizDates, setQuizDates] = useState();
   const [quizDate, setQuizDate] = useState();
-  const [quiz, setQuiz] = useState();
+  const [quizData, setQuizData] = useState();
   const [genres, setGenres] = useState();
   const [submitting, setSubmitting] = useState(false);
   const [uploading, setUploading] = useState(false);
@@ -57,26 +57,26 @@ const QuizForm = () => {
   }, []);
 
   useEffect(() => {
-    if (!editMode) {
-      ApiRequest.get(`quizzes`)
-        .then(({ data }) => {
-          setQuizDates(
-            data.reduce((dates, quiz) => {
-              if (new Date(quiz.date) > new Date()) {
-                dates.push(new Date(quiz.date));
-              }
-              return dates;
-            }, [])
-          );
-        })
-        .catch(({ response }) => {
-          setError(response?.status);
-        });
-    } else {
+    ApiRequest.get(`quizzes`)
+      .then(({ data }) => {
+        setQuizDates(
+          data.reduce((dates, quiz) => {
+            if (!quiz.past) {
+              dates.push(new Date(quiz.date));
+            }
+            return dates;
+          }, [])
+        );
+      })
+      .catch(({ response }) => {
+        setError(response?.status);
+      });
+    if (editMode) {
+      setQuizDate(new Date(date));
       ApiRequest.get(`quizzes?date=${date}`)
         .then(({ data }) => {
           setFormData(data.quiz);
-          setQuiz(data);
+          setQuizData(data);
         })
         .catch(({ response }) => {
           setError(response?.status);
@@ -95,19 +95,22 @@ const QuizForm = () => {
     event.preventDefault();
     setSubmitting(true);
     setError();
+    const newFormData = { ...formData };
+    if (!quizData || (!quizData.quiz.past && !quizData.quiz.today)) {
+      newFormData.date = formatDate(quizDate);
+    }
     if (editMode) {
-      ApiRequest.patch('quizzes', formData)
+      ApiRequest.patch('quizzes', newFormData)
         .then(() => {
           setSubmitting(false);
           toast.success(<Trans>Quiz gravado com sucesso.</Trans>);
+          history.push(`/admin/quiz/${newFormData.date}/edit/`);
         })
         .catch(() => {
           toast.error(<Trans>Não foi possível gravar o quiz.</Trans>);
           setSubmitting(false);
         });
     } else {
-      const newFormData = { ...formData };
-      newFormData.date = formatDate(quizDate);
       ApiRequest.post('quizzes', newFormData)
         .then(() => {
           setSubmitting(false);
@@ -132,14 +135,19 @@ const QuizForm = () => {
     );
   }
 
-  if (
-    (!editMode && !quizDates) ||
-    (editMode && !quiz) ||
-    !genres ||
-    !genreStats
-  ) {
+  if (!quizDates || (editMode && !quizData) || !genres || !genreStats) {
     return <Loading />;
   }
+
+  const nonValidDates = quizDates.reduce((acc, item) => {
+    if (
+      !quizData ||
+      item.getTime() !== new Date(quizData.quiz.date).getTime()
+    ) {
+      acc.push(item);
+    }
+    return acc;
+  }, []);
 
   return (
     <>
@@ -161,7 +169,7 @@ const QuizForm = () => {
               </strong>
               <ul>
                 <li>Literatura / Banda Desenhada</li>
-                <li>Literatura / Filosofia</li>{' '}
+                <li>Literatura / Filosofia</li>
                 <li>Óperas e Musicais / Música</li>
                 <li>Belas Artes / Museus</li>
               </ul>
@@ -169,7 +177,7 @@ const QuizForm = () => {
           </div>
         </div>
         <form onSubmit={handleSubmit}>
-          {!editMode && (
+          {(!quizData || (!quizData.quiz.past && !quizData.quiz.today)) && (
             <div className="field">
               <div className="control">
                 <label className="label">
@@ -178,7 +186,7 @@ const QuizForm = () => {
                 <div className="control has-icons-left">
                   <DatePicker
                     minDate={new Date()}
-                    excludeDates={quizDates}
+                    excludeDates={nonValidDates}
                     selected={quizDate}
                     onChange={(date) => {
                       setQuizDate(date);
@@ -192,13 +200,14 @@ const QuizForm = () => {
               </div>
             </div>
           )}
+
           {genres.map((genre, index) => (
             <Question
               genre={genre}
               genreStats={genreStats}
               index={index}
               key={genre.id}
-              quiz={quiz}
+              quizData={quizData}
               setFormData={setFormData}
               uploading={uploading}
               setUploading={setUploading}
