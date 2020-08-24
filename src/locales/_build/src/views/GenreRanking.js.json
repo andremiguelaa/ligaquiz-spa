@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/GenreRanking.js",
-        149
+        150
       ]
     ]
   },
@@ -11,7 +11,15 @@
     "origin": [
       [
         "src/views/GenreRanking.js",
-        160
+        162
+      ]
+    ]
+  },
+  "Temporada {seasonNumber}": {
+    "origin": [
+      [
+        "src/views/GenreRanking.js",
+        163
       ]
     ]
   },
@@ -19,7 +27,7 @@
     "origin": [
       [
         "src/views/GenreRanking.js",
-        165
+        169
       ]
     ]
   },
@@ -27,7 +35,7 @@
     "origin": [
       [
         "src/views/GenreRanking.js",
-        190
+        194
       ]
     ]
   }

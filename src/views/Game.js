@@ -109,7 +109,12 @@ const Game = () => {
                     <Markdown content={question.content} />
                   </div>
                   {question.media_id && (
-                    <div className={classes.media}>
+                    <div
+                      className={classnames(
+                        classes.media,
+                        classes[game.media[question.media_id].type]
+                      )}
+                    >
                       {renderMedia(
                         game.media[question.media_id].type,
                         game.media[question.media_id].url,

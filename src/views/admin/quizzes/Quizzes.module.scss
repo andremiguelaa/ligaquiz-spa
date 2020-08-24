@@ -1,6 +1,6 @@
-@import "bulma/sass/utilities/initial-variables.sass";
-@import "bulma/sass/utilities/derived-variables.scss";
-@import "bulma/sass/utilities/mixins.sass";
+@import 'bulma/sass/utilities/initial-variables.sass';
+@import 'bulma/sass/utilities/derived-variables.scss';
+@import 'bulma/sass/utilities/mixins.sass';
 
 .question {
   & + .question {
@@ -25,10 +25,12 @@
 }
 
 .media {
-  background-color: $white;
   width: 300px;
   max-width: 100%;
   margin: 1rem auto 0;
+  &.image {
+    background-color: $white;
+  }
   & > * {
     width: 100%;
     vertical-align: top;

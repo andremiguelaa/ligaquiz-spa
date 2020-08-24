@@ -23,11 +23,19 @@
       ]
     ]
   },
+  "Descrição": {
+    "origin": [
+      [
+        "src/views/SpecialQuiz/SpecialQuizDone.js",
+        130
+      ]
+    ]
+  },
   "Resposta correcta": {
     "origin": [
       [
         "src/views/SpecialQuiz/SpecialQuizDone.js",
-        137
+        147
       ]
     ]
   },
@@ -35,7 +43,7 @@
     "origin": [
       [
         "src/views/SpecialQuiz/SpecialQuizDone.js",
-        146
+        156
       ]
     ]
   },
@@ -43,7 +51,7 @@
     "origin": [
       [
         "src/views/SpecialQuiz/SpecialQuizDone.js",
-        154
+        164
       ]
     ]
   },
@@ -51,7 +59,7 @@
     "origin": [
       [
         "src/views/SpecialQuiz/SpecialQuizDone.js",
-        157
+        167
       ]
     ]
   },
@@ -59,7 +67,7 @@
     "origin": [
       [
         "src/views/SpecialQuiz/SpecialQuizDone.js",
-        159
+        169
       ]
     ]
   },
@@ -67,7 +75,7 @@
     "origin": [
       [
         "src/views/SpecialQuiz/SpecialQuizDone.js",
-        167
+        177
       ]
     ]
   }

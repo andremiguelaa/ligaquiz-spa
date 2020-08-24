@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
+import classnames from 'classnames';
 
 import renderMedia from 'utils/renderMedia';
 import Markdown from 'components/Markdown';
@@ -53,7 +54,12 @@ const QuizDone = ({ data, userAnswers }) => (
           </div>
         )}
         {question.media_id && (
-          <div className={classes.media}>
+          <div
+            className={classnames(
+              classes.media,
+              classes[data.media[question.media_id].type]
+            )}
+          >
             {renderMedia(
               data.media[question.media_id].type,
               data.media[question.media_id].url,

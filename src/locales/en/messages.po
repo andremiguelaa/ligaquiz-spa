@@ -17,17 +17,17 @@ msgstr ""
 msgid "<0>A Liga Quiz é um jogo de cultura geral onde a confiança na honestidade dos jogadores é crucial.</0><1><2>É expressamente proibido usar qualquer fonte externa para obter respostas às perguntas.</2> Isto inclui:</1><3><4>Pedir pistas/respostas a outras pessoas.</4><5>Usar a Internet, livros ou outro material de consulta para pesquisa de pistas/respostas.</5><6>Usar calculadoras, instrumentos musicais ou outros equipamentos para ajudar à resposta.</6></3><7>Apenas papel e caneta/lápis são permitidos.</7><8><9>Pede-se também a todos os jogadores que joguem todos os dias.</9> As faltas adulteram a veracidade da classificação final e podem levar à descida de divisão ao incumpridor.</8>"
 msgstr "<0>Quiz League is a general knowledge game where the trust in players honesty is essential.</0><1><2>It's completly forbidden the use of any external source to obtain answers.</2> This includes:</1><3><4>Ask for hints/answers to another people.</4><5>Use Internet, books or any other resource to looking for hints/answers.</5><6>Use calculators, musical instruments or any other devices to help getting the answer.</6></3><7>Only paper and pen/pencil are permitted.</7><8><9>Additionally, we ask to all players to play everyday</9>. The forfeits distort the final ranking trustiness and can lead to the relegation of the player.</8>"
 
-#: src/views/SpecialQuiz/SpecialQuizForm.js:177
+#: src/views/SpecialQuiz/SpecialQuizForm.js:183
 msgid "<0>Cada pergunta certa num quiz especial vale 20 pontos.</0><1>Em cada quiz especial podes usar até 5 jokers.</1><2>Ao usares um joker numa pergunta, caso acertes, ganhas pontos adicionais consoante a percentagem de pessoas que erraram essa pergunta.</2><3><4>Exemplo:</4> Se acertares uma pergunta onde usaste um joker e 60% dos jogadores falharem ganhas 80 pontos (20+60).</3><5>Caso uses um joker e falhes a pergunta, perdes 20 pontos!</5>"
-msgstr ""
+msgstr "<0>For each right answer in a special quiz, you get 20 points.</0><1>You can use up to 5 jokers in each special quiz.</1><2>When you use a joker in a question and get it right, you earn additional points depending on the percentage of players who got that question wrong.</2><3><4>Example:</4> If you get a question right with a joker and 60% of the players failed to give the correct answer you get 80 points (20+60).</3><5>But if you use a joker and miss the correct answer, you get 20 negative points!</5>"
 
-#: src/views/Rules.js:17
+#: src/views/Rules.js:27
 msgid "<0>Liga Quiz</0><1><2><3>A Liga Quiz é um jogo de cultura geral onde a confiança na honestidade dos jogadores é crucial. É expressamente proibido usar qualquer fonte externa para obter respostas às perguntas. Isto inclui:</3><4><5>Pedir pistas/respostas a outras pessoas</5><6>Usar a Internet, livros ou outro material de consulta para pesquisa de pistas/respostas</6><7>Usar calculadoras, instrumentos musicais ou outros equipamentos para ajudar à resposta</7></4><8>Apenas papel e caneta/lápis são permitidos.</8></2><9>A organização reserva-se ao direito de inibir o acesso à Liga Quiz a qualquer jogador que não cumpra este critério.</9><10>Para receber um convite para entrar na Liga Quiz, todos os novos jogadores deverão ser referidos por um jogador activo na Liga Quiz, que irá atestar da honestidade e integridade do novo membro. A Liga Quiz é uma liga por convite.</10><11>Todos os estreantes na Liga Quiz serão colocados na divisão mais baixa. A preferência de entrada numa divisão é a ordem de entrada na lista de espera.</11><12>Caso um jogador saia da Liga Quiz temporariamente sem aviso e reentre novamente na Liga Quiz será colocado na divisão mais baixa disponível.<13/>Caso um jogador saia da Liga Quiz temporariamente com aviso prévio, por um período máximo de 3 meses, será colocado na mesma divisão em que estava quando saiu; existindo os naturais ajustes de descidas de divisão.<14/>Um jogador perde o privilégio de voltar à mesma divisão, mesmo com aviso prévio, caso esteja mais que três meses de fora no último período de 12 meses.</12><15>As várias divisões da Liga Quiz terão, no máximo, 10 jogadores.</15><16>Cada jogador jogará 20 jogos a partir da primeira segunda-feira de cada mês e nos 19 dias úteis seguintes: duas vezes contra cada um dos outros membros da mesma divisão e duas vezes sem adversário (no 10º dia e no 20º dia).</16><17>Cada jogo terá oito perguntas, cada uma de um tema diferente.</17><18>Os jogadores poderão submeter as respostas a um jogo das 0h até às 24h (hora de Lisboa) do respectivo dia.</18><19>Respostas com erros ortográficos serão aceites desde que não se altere a fonética da resposta e não esteja explícito na pergunta que a correcção ortográfica é obrigatória. Este não é um jogo de ortografia mas sim de cultural geral.</19><20>Quando a resposta é o nome de uma pessoa é aceite como certa se for respondido apenas o apelido ou nome pelo qual é mais conhecido, excepto se na pergunta estiver explícito que é pedido mais isso.<21/>Apesar disso, caso um jogador responda com um apelido certo mas o primeiro nome esteja errado, a resposta será considerada errada.</20><22>Caso um jogador coloque no campo da resposta várias respostas, caso alguma esteja errada, será marcado errado.</22><23>As respostas serão aceites na língua portuguesa, inglesa ou na original (no caso de um livro/filme/etc.) a não ser que esteja indicado o contrário.<24/>Caso a reposta não seja numa destas línguas deverão indicar entre parênteses qual a língua da vossa resposta, caso contrário a resposta poderá ser marcada como errada.</23><25>Além de responder às perguntas, cada jogador deverá atribuir uma pontuação à pergunta (à excepção das jornadas 10 e 20). Essa pontuação corresponderá aos pontos que o adversário ganhará se acertar à pergunta.</25><26><27>Num jogo, um jogador deverá distribuir a pontuação às perguntas da seguinte forma:</27><28><29>1 pergunta a valer 3 pontos</29><30>3 perguntas a valer 2 pontos</30><31>3 perguntas a valer 1 ponto</31><32>1 pergunta a valer 0 pontos</32></28></26><33>O jogador que conseguir mais pontos num jogo é declarado vencedor e ganhará 3 pontos na classificação.</33><34>Em caso de empate ambos os jogadores terão 2 pontos atribuídos na classificação.</34><35>Em caso de derrota, o jogador terá atribuído 1 ponto.</35><36><37>Em caso de um jogador não ter submetido respostas a um jogo não terá atribuído qualquer ponto na classificação e o adversário será declarado vencedor. O vencedor terá atribuído nesse jogo (não na classificação) os seguintes pontos totais:</37><38><39>12 pontos caso acerte 8 perguntas</39><40>10 pontos caso acerte 7 perguntas</40><41>9 pontos caso acerte 6 perguntas</41><42>8 pontos caso acerte 5 perguntas</42><43>6 pontos caso acerte 4 perguntas</43><44>5 pontos caso acerte 3 perguntas</44><45>3 pontos caso acerte 2 perguntas</45><46>2 pontos caso acerte 1 pergunta</46><47>0 pontos caso acerte 0 perguntas</47></38></36><48>No 10º e no 20º dia, os jogos não terão adversário e a pontuação para a classificação é atribuída da seguinte forma: meio ponto por cada resposta correcta e um ponto por participar na ronda, ou seja, um máximo de 5 pontos.</48><49>No final dos 20 jogos os 2 piores classificados serão relegados para a divisão imediatamente inferior (caso exista) e os 2 melhores classificados serão promovidos à divisão imediatamente acima (caso exista).</49><50>Adicionalmente, caso um (ou mais) dos outros oito jogadores tenha mais de 3 faltas ao fim dos 20 jogos, será relegado para a divisão imediatamente inferior (caso exista). Em sua substituição será promovido mais um jogador da divisão abaixo.</50><51>A divisão Carolina Beatriz Ângelo é de acesso exclusivo a jogadores com ranking nacional, ou seja, que tenham um jogo ao vivo a contar para o ranking nos últimos 12 meses. Serão feitos os ajustes necessários às subidas/descidas para que isso se verifique.</51><52>O primeiro classificado da divisão Carolina Beatriz Ângelo no final dos 20 jogos é declarado o campeão mensal da Liga Quiz.</52><53><54>Se houver empates na classificação, os critérios de desempate serão aplicados por esta ordem:</54><55><56>Maior diferencial de pontos obtidos nos jogos de cada dia</56><57>Maior total de pontos obtidos nos jogos de cada dia</57><58>Maior total de vitórias</58><59>Maior total de perguntas respondidas acertadamente</59></55><60>Se após a aplicação dos critérios de desempate persistir o empate, será atribuída a mesma classificação aos dois jogadores.</60></53></1><61>Quizzes Especiais</61><62><63><64>Tal como nos jogos da Liga Quiz é expressamente proibido usar qualquer fonte externa para obter respostas às perguntas. Isto inclui:</64><65><66>Pedir pistas/respostas a outras pessoas</66><67>Usar a Internet, livros ou outro material de consulta para pesquisa de pistas/respostas</67><68>Usar calculadoras, instrumentos musicais ou outros equipamentos para ajudar à resposta</68></65><69>Apenas papel e caneta/lápis são permitidos.</69></63><70>Os quizzes especiais são compostos por 12 perguntas.</70><71>Cada pergunta certa num quiz especial vale 20 pontos.</71><72>Em cada quiz especial podes usar até 5 jokers.</72><73>Ao usares um joker numa pergunta, caso acertes, ganhas pontos adicionais consoante a percentagem de pessoas que erraram essa pergunta.<74/> <75>Exemplo:</75> Se acertares uma pergunta onde usaste um joker e 60% dos jogadores falharem ganhas 80 pontos (20+60).</73><76>Caso uses um joker e falhes a pergunta, perdes 20 pontos!</76></62><77>Subscrição</77><78>Os novos participantes terão sempre um mês de experiência totalmente gratuito tal como estão a ter os actuais participantes.<79/>A partir desse primeiro mês o preço da participação será de acordo com a tabela abaixo:</78><80><81><82><83>Duração</83><84>Preço</84><85>Desconto</85></82></81><86><87><88>1 mês</88><89>3 euros</89><90>-</90></87><91><92>3 meses</92><93>8.5 euros</93><94>6%</94></91><95><96>6 meses</96><97>16 euros</97><98>11%</98></95><99><100>12 meses</100><101>30 euros</101><102>17% (dois meses grátis)</102></99></86></80><103>Os jogadores terão direito a jogar, pelo menos, 20 jogos de 8 perguntas por mês perfazendo um total de 160 perguntas.</103><104>Adicionalmente serão feitos alguns quizzes especiais temáticos de 12 perguntas que não contarão para a classificação da liga havendo apenas uma classificação do respectivo quiz.</104><105>O pagamento das inscrições poderá ser feito das seguintes formas:</105><106><107>Em mão a qualquer elemento da organização:<108>André Ascensão, Sofia Santos ou Paulo Martins</108></107><109>Por transferência bancária para a conta com o seguinte IBAN enviando o comprovativo para <110>andremiguelaa@gmail.com</110>: <111>PT50 0018 000344544914020 29</111></109><112>Por MB WAY usando o seguinte número: <113>916682562</113></112></106><114>O prazo limite de pagamento para uma determinada temporada será o final do dia de sábado antes do início da mesma. Cada temporada mensal começa na primeira segunda-feira de cada mês.</114>"
 msgstr ""
 
-#: src/views/admin/quizzes/QuizForm.js:158
-msgid "<0>Não devem ser feitos quizzes com a seguinte combinação de temas:</0><1><2>Literatura / Banda Desenhada</2><3>Literatura / Filosofia</3> <4>Óperas e Musicais / Música</4><5>Belas Artes / Museus</5></1>"
-msgstr "<0>We must avoid to do quizzes with the following genre combinations:</0><1><2>Literature / Comics</2><3>Literature / Philosophy</3> <4>Operas and Musicals / Music</4><5>Fine Arts / Museums</5></1>"
+#: src/views/admin/quizzes/QuizForm.js:166
+msgid "<0>Não devem ser feitos quizzes com a seguinte combinação de temas:</0><1><2>Literatura / Banda Desenhada</2><3>Literatura / Filosofia</3><4>Óperas e Musicais / Música</4><5>Belas Artes / Museus</5></1>"
+msgstr "<0>We must avoid to do quizzes with the following genre combinations:</0><1><2>Literature / Comics</2><3>Literature / Philosophy</3><4>Operas and Musicals / Music</4><5>Fine Arts / Museums</5></1>"
 
 #: src/views/NationalRanking/Legend.js:62
 msgid "<0>{0}</0> resultado a contar para o ranking"
@@ -35,9 +35,25 @@ msgstr "<0>{0}</0> result counting to national ranking"
 
 #: src/utils/Auth.js:39
 msgid "A tua sessão expirou."
-msgstr "Your session expired."
+msgstr "Your session has expired."
 
-#: src/views/Statistics.js:373
+#: src/partials/Notifications.js:136
+msgid "A tua subscrição expirou."
+msgstr "Your subscription expired."
+
+#: src/partials/Notifications.js:131
+msgid "A tua subscrição termina amanhã."
+msgstr "Your subscription expires tomorrow."
+
+#: src/partials/Notifications.js:126
+msgid "A tua subscrição termina daqui a {remainingDays} dias."
+msgstr "Your subscription will expire in {remainingDays} days."
+
+#: src/partials/Notifications.js:134
+msgid "A tua subscrição termina hoje."
+msgstr "Your subscription expires today."
+
+#: src/views/Statistics.js:390
 msgid "Acção"
 msgstr "Action"
 
@@ -45,7 +61,7 @@ msgstr "Action"
 #: src/views/admin/nationalRanking/Players/List.js:34
 #: src/views/admin/nationalRanking/Rankings.js:116
 #: src/views/admin/notifications/Notifications.js:87
-#: src/views/admin/users/Users.js:156
+#: src/views/admin/users/Users.js:155
 msgid "Acções"
 msgstr "Actions"
 
@@ -70,16 +86,16 @@ msgstr "Add event"
 msgid "Adicionar provas mensais"
 msgstr "Add month events"
 
-#: src/views/admin/users/Users.js:206
+#: src/views/admin/users/Users.js:205
 #: src/views/admin/users/modals/EditPermissionsModal.js:79
 msgid "Administrador"
 msgstr "Administrator"
 
-#: src/partials/Header.js:140
+#: src/partials/Header.js:147
 msgid "Administração"
 msgstr "Administration"
 
-#: src/components/PaginatedTable.js:91
+#: src/components/PaginatedTable.js:84
 #: src/views/Ranking/Rounds.js:32
 msgid "Anterior"
 msgstr "Previous"
@@ -116,7 +132,7 @@ msgstr "Delete month ranking"
 msgid "Apagar temporada"
 msgstr "Delete season"
 
-#: src/views/Account.js:91
+#: src/views/Account.js:98
 #: src/views/Register.js:80
 #: src/views/admin/nationalRanking/Players/Form.js:174
 msgid "Apelido"
@@ -126,23 +142,23 @@ msgstr "Surname"
 msgid "Arquitectura"
 msgstr "Architecture"
 
-#: src/views/NationalRanking.js:322
+#: src/views/NationalRanking.js:309
 msgid "Arquivo"
 msgstr "Archive"
 
-#: src/partials/Header.js:242
+#: src/partials/Header.js:249
 #: src/routes.js:117
 #: src/views/Quizzes.js:57
 msgid "Arquivo de quizzes"
 msgstr "Quizzes archive"
 
-#: src/partials/Header.js:253
+#: src/partials/Header.js:260
 #: src/routes.js:122
 #: src/views/SpecialQuizzes.js:73
 msgid "Arquivo de quizzes especiais"
 msgstr "Special quizzes archive"
 
-#: src/partials/Header.js:238
+#: src/partials/Header.js:245
 #: src/routes.js:112
 #: src/views/Seasons.js:57
 msgid "Arquivo de temporadas"
@@ -152,13 +168,13 @@ msgstr "Seasons archive"
 msgid "Artesanato"
 msgstr "Handicraft"
 
-#: src/partials/Header.js:79
-#: src/views/Statistics.js:151
+#: src/partials/Header.js:84
+#: src/views/Statistics.js:155
 msgid "As minhas estatísticas"
 msgstr "My statistics"
 
 #: src/views/SpecialQuizzes.js:96
-#: src/views/admin/specialQuizzes/SpecialQuizForm.js:199
+#: src/views/admin/specialQuizzes/SpecialQuizForm.js:212
 msgid "Autor"
 msgstr "Author"
 
@@ -178,12 +194,12 @@ msgstr "Fine Arts"
 msgid "Biologia"
 msgstr "Biology"
 
-#: src/views/admin/users/Users.js:287
-#: src/views/admin/users/modals/EditPermissionsModal.js:254
+#: src/views/admin/users/Users.js:295
+#: src/views/admin/users/modals/EditPermissionsModal.js:312
 msgid "Bloqueado"
 msgstr "Blocked"
 
-#: src/views/Statistics.js:245
+#: src/views/Statistics.js:262
 msgid "C"
 msgstr "C"
 
@@ -219,24 +235,28 @@ msgstr "Science"
 msgid "Ciências Sociais"
 msgstr "Social Sciences"
 
-#: src/partials/Header.js:73
+#: src/partials/Header.js:78
 #: src/routes.js:107
-#: src/views/Ranking.js:151
+#: src/views/Ranking.js:149
 #: src/views/Seasons.js:88
 #: src/views/SpecialQuiz/SpecialQuizDone.js:40
 msgid "Classificação"
 msgstr "Ranking"
 
+#: src/partials/Notifications.js:137
+msgid "Clica <0>aqui</0> para saber como renovar."
+msgstr "Click <0>here</0> to find out how to renew."
+
 #: src/utils/getGenreTranslation.js:43
 msgid "Comida e Bebida"
 msgstr "Food and Beverage"
 
-#: src/views/Statistics.js:223
+#: src/views/Statistics.js:240
 msgid "Comparar comigo"
 msgstr "Compare with me"
 
 #: src/routes.js:96
-#: src/views/StatisticsComparison.js:186
+#: src/views/StatisticsComparison.js:190
 msgid "Comparação de Estatísticas"
 msgstr "Statistics Comparison"
 
@@ -244,15 +264,15 @@ msgstr "Statistics Comparison"
 msgid "Comunicação Social e Redes Sociais"
 msgstr "Press and Social Networks"
 
-#: src/views/Account.js:170
+#: src/views/Account.js:177
 #: src/views/Register.js:157
 #: src/views/ResetPassword.js:84
 msgid "Confirmação da palavra-passe"
 msgstr "Password confirmation"
 
-#: src/partials/Header.js:226
+#: src/partials/Header.js:233
 #: src/routes.js:75
-#: src/views/Account.js:61
+#: src/views/Account.js:68
 msgid "Conta"
 msgstr "Account"
 
@@ -260,19 +280,19 @@ msgstr "Account"
 msgid "Conteúdo"
 msgstr "Content"
 
-#: src/views/Game.js:165
-#: src/views/Game.js:205
-#: src/views/Question.js:235
+#: src/views/Game.js:170
+#: src/views/Game.js:210
+#: src/views/Question.js:239
 #: src/views/admin/quizzes/Answer.js:17
 msgid "Correcta"
 msgstr "Correct"
 
-#: src/views/admin/users/Users.js:275
-#: src/views/admin/users/modals/EditPermissionsModal.js:231
+#: src/views/admin/users/Users.js:283
+#: src/views/admin/users/modals/EditPermissionsModal.js:289
 msgid "Corrector"
 msgstr "Answer reviewer"
 
-#: src/views/Question.js:217
+#: src/views/Question.js:221
 #: src/views/admin/quizzes/QuizCorrect.js:151
 #: src/views/admin/specialQuizzes/SpecialQuizCorrect.js:151
 msgid "Correcção"
@@ -295,12 +315,12 @@ msgstr "Wrong credentials."
 msgid "Criar notificação"
 msgstr "Create notification"
 
-#: src/views/admin/quizzes/QuizForm.js:149
+#: src/views/admin/quizzes/QuizForm.js:157
 #: src/views/admin/quizzes/Quizzes.js:98
 msgid "Criar quiz"
 msgstr "Create quiz"
 
-#: src/views/admin/specialQuizzes/SpecialQuizForm.js:135
+#: src/views/admin/specialQuizzes/SpecialQuizForm.js:148
 #: src/views/admin/specialQuizzes/SpecialQuizzes.js:105
 msgid "Criar quiz especial"
 msgstr "Create special quiz"
@@ -314,7 +334,7 @@ msgstr "Create season"
 msgid "Cultura"
 msgstr "Culture"
 
-#: src/views/Ranking/TableHeader.js:116
+#: src/views/Ranking/TableHeader.js:118
 msgid "D"
 msgstr "L"
 
@@ -323,7 +343,7 @@ msgid "Dança"
 msgstr "Dance"
 
 #: src/views/SpecialQuizzes.js:113
-#: src/views/StatisticsComparison.js:299
+#: src/views/StatisticsComparison.js:316
 msgid "Data"
 msgstr "Date"
 
@@ -335,8 +355,8 @@ msgstr "End date"
 msgid "Data de início"
 msgstr "Begin date"
 
-#: src/views/admin/quizzes/QuizForm.js:176
-#: src/views/admin/specialQuizzes/SpecialQuizForm.js:149
+#: src/views/admin/quizzes/QuizForm.js:184
+#: src/views/admin/specialQuizzes/SpecialQuizForm.js:162
 msgid "Data do quiz"
 msgstr "Quiz's date"
 
@@ -344,11 +364,11 @@ msgstr "Quiz's date"
 msgid "Datas"
 msgstr "Dates"
 
-#: src/views/Ranking/TableHeader.js:56
+#: src/views/Ranking/TableHeader.js:58
 msgid "DdP"
 msgstr "PD"
 
-#: src/views/Ranking/TableHeader.js:114
+#: src/views/Ranking/TableHeader.js:116
 msgid "Derrotas"
 msgstr "Losses"
 
@@ -356,8 +376,9 @@ msgstr "Losses"
 msgid "Desceu"
 msgstr "Move down"
 
-#: src/views/SpecialQuiz/SpecialQuizForm.js:78
-#: src/views/admin/specialQuizzes/SpecialQuizForm.js:183
+#: src/views/SpecialQuiz/SpecialQuizDone.js:130
+#: src/views/SpecialQuiz/SpecialQuizForm.js:79
+#: src/views/admin/specialQuizzes/SpecialQuizForm.js:196
 msgid "Descrição"
 msgstr "Description"
 
@@ -369,7 +390,7 @@ msgstr "Design"
 msgid "Desporto"
 msgstr "Sports"
 
-#: src/views/Ranking/TableHeader.js:54
+#: src/views/Ranking/TableHeader.js:56
 msgid "Diferença de pontos"
 msgstr "Point difference"
 
@@ -377,11 +398,11 @@ msgstr "Point difference"
 msgid "Divisões"
 msgstr "Tiers"
 
-#: src/views/Ranking/TableHeader.js:104
+#: src/views/Ranking/TableHeader.js:106
 msgid "E"
 msgstr "D"
 
-#: src/views/Account.js:114
+#: src/views/Account.js:121
 #: src/views/Login.js:54
 #: src/views/RecoverPassword.js:56
 #: src/views/Register.js:102
@@ -401,11 +422,11 @@ msgstr "Edit notification"
 msgid "Editar permissões de {0} {1}"
 msgstr "Edit permissions from {0} {1}"
 
-#: src/views/admin/quizzes/QuizForm.js:151
+#: src/views/admin/quizzes/QuizForm.js:159
 msgid "Editar quiz de {0}"
 msgstr "Edit {0}'s quiz"
 
-#: src/views/admin/specialQuizzes/SpecialQuizForm.js:137
+#: src/views/admin/specialQuizzes/SpecialQuizForm.js:150
 msgid "Editar quiz especial de {0}"
 msgstr "Edit {0}'s special quiz"
 
@@ -413,22 +434,22 @@ msgstr "Edit {0}'s special quiz"
 msgid "Editar temporada {season}"
 msgstr "Edit season {season}"
 
-#: src/views/admin/users/Users.js:249
-#: src/views/admin/users/modals/EditPermissionsModal.js:183
+#: src/views/admin/users/Users.js:257
+#: src/views/admin/users/modals/EditPermissionsModal.js:241
 msgid "Editor de Quizzes"
 msgstr "Quiz Editor"
 
-#: src/views/admin/users/Users.js:262
-#: src/views/admin/users/modals/EditPermissionsModal.js:208
+#: src/views/admin/users/Users.js:270
+#: src/views/admin/users/modals/EditPermissionsModal.js:266
 msgid "Editor de Quizzes Especiais"
 msgstr "Special Quiz Editor"
 
-#: src/views/Ranking/TableHeader.js:102
-#: src/views/StatisticsComparison.js:261
+#: src/views/Ranking/TableHeader.js:104
+#: src/views/StatisticsComparison.js:278
 msgid "Empates"
 msgstr "Draws"
 
-#: src/partials/Header.js:107
+#: src/partials/Header.js:114
 #: src/routes.js:49
 #: src/views/Login.js:47
 #: src/views/Login.js:114
@@ -440,7 +461,7 @@ msgid "Entretenimento"
 msgstr "Entertainment"
 
 #: src/views/admin/quizzes/Question.js:90
-#: src/views/admin/search/Search.js:89
+#: src/views/admin/search/Search.js:91
 #: src/views/admin/specialQuizzes/Question.js:50
 msgid "Enunciado"
 msgstr "Formulation"
@@ -457,9 +478,9 @@ msgstr "Send suggestion/complain"
 msgid "Enviámos-te um e-mail, segue as instruções para definir uma nova palavra-passe."
 msgstr "We sent you an e-mail, follow its instructions to set a new password"
 
-#: src/views/Game.js:167
-#: src/views/Game.js:207
-#: src/views/Question.js:237
+#: src/views/Game.js:172
+#: src/views/Game.js:212
+#: src/views/Question.js:241
 #: src/views/admin/quizzes/Answer.js:18
 msgid "Errada"
 msgstr "Wrong"
@@ -467,36 +488,36 @@ msgstr "Wrong"
 #: src/utils/Auth.js:56
 #: src/views/Account/Avatar.js:103
 #: src/views/Game.js:66
-#: src/views/GenreRanking.js:149
+#: src/views/GenreRanking.js:150
 #: src/views/Login.js:101
 #: src/views/NationalRanking.js:138
 #: src/views/Question.js:90
 #: src/views/Quiz.js:62
 #: src/views/Quizzes.js:46
-#: src/views/Ranking.js:139
+#: src/views/Ranking.js:137
 #: src/views/RecoverPassword.js:85
 #: src/views/Register.js:185
 #: src/views/ResetPassword.js:125
 #: src/views/Seasons.js:46
 #: src/views/SpecialQuiz.js:70
 #: src/views/SpecialQuizzes.js:62
-#: src/views/Statistics.js:133
-#: src/views/StatisticsComparison.js:174
+#: src/views/Statistics.js:137
+#: src/views/StatisticsComparison.js:178
 #: src/views/admin/nationalRanking/Events.js:95
 #: src/views/admin/nationalRanking/Players/Form.js:114
 #: src/views/admin/nationalRanking/Players.js:77
 #: src/views/admin/nationalRanking/Rankings.js:76
 #: src/views/admin/notifications/Notifications.js:42
 #: src/views/admin/quizzes/QuizCorrect.js:104
-#: src/views/admin/quizzes/QuizForm.js:130
+#: src/views/admin/quizzes/QuizForm.js:133
 #: src/views/admin/quizzes/Quizzes.js:78
-#: src/views/admin/search/Search.js:49
+#: src/views/admin/search/Search.js:51
 #: src/views/admin/seasons/SeasonForm.js:150
 #: src/views/admin/seasons/Seasons.js:63
 #: src/views/admin/specialQuizzes/SpecialQuizCorrect.js:104
-#: src/views/admin/specialQuizzes/SpecialQuizForm.js:121
+#: src/views/admin/specialQuizzes/SpecialQuizForm.js:124
 #: src/views/admin/specialQuizzes/SpecialQuizzes.js:81
-#: src/views/admin/users/Users.js:89
+#: src/views/admin/users/Users.js:88
 msgid "Erro de servidor. Tenta mais tarde."
 msgstr "Server error. Try again later."
 
@@ -533,11 +554,11 @@ msgstr "This page does not exist"
 msgid "Estatísticas"
 msgstr "Statistics"
 
-#: src/views/Statistics.js:147
+#: src/views/Statistics.js:151
 msgid "Estatísticas de {0} {1}"
 msgstr "Statistics from {0} {1}"
 
-#: src/views/Quiz/QuizForm.js:379
+#: src/views/Quiz/QuizForm.js:384
 msgid "Estatísticas do adversário"
 msgstr "Opponent Statistics"
 
@@ -545,16 +566,16 @@ msgstr "Opponent Statistics"
 msgid "Estilo de Vida"
 msgstr "Lifestyle"
 
-#: src/views/Ranking/TableHeader.js:80
+#: src/views/Ranking/TableHeader.js:82
 msgid "F"
 msgstr "F"
 
-#: src/views/Game.js:173
-#: src/views/Game.js:213
+#: src/views/Game.js:178
+#: src/views/Game.js:218
 msgid "Falta"
 msgstr "Forfeit"
 
-#: src/views/Ranking/TableHeader.js:78
+#: src/views/Ranking/TableHeader.js:80
 msgid "Faltas"
 msgstr "Forfeits"
 
@@ -586,27 +607,27 @@ msgstr "Geography"
 msgid "Geologia"
 msgstr "Geology"
 
-#: src/views/admin/users/Users.js:236
-#: src/views/admin/users/modals/EditPermissionsModal.js:160
+#: src/views/admin/users/Users.js:244
+#: src/views/admin/users/modals/EditPermissionsModal.js:218
 msgid "Gestor de Ranking Nacional"
 msgstr "National Ranking Manager"
 
-#: src/partials/Header.js:163
+#: src/partials/Header.js:170
 msgid "Gestão de Quizzes"
 msgstr "Quiz Management"
 
-#: src/partials/Header.js:198
+#: src/partials/Header.js:205
 msgid "Gestão de Ranking Nacional"
 msgstr "National Ranking Management"
 
 #: src/views/Account/Avatar.js:114
-#: src/views/Account.js:288
-#: src/views/Quiz/QuizForm.js:351
-#: src/views/SpecialQuiz/SpecialQuizForm.js:164
+#: src/views/Account.js:305
+#: src/views/Quiz/QuizForm.js:356
+#: src/views/SpecialQuiz/SpecialQuizForm.js:170
 #: src/views/admin/nationalRanking/Players/Form.js:242
-#: src/views/admin/quizzes/QuizForm.js:214
+#: src/views/admin/quizzes/QuizForm.js:222
 #: src/views/admin/seasons/SeasonForm.js:293
-#: src/views/admin/specialQuizzes/SpecialQuizForm.js:240
+#: src/views/admin/specialQuizzes/SpecialQuizForm.js:253
 msgid "Gravar"
 msgstr "Save"
 
@@ -622,7 +643,7 @@ msgstr "HOT 100"
 msgid "História"
 msgstr "History"
 
-#: src/views/Statistics.js:376
+#: src/views/Statistics.js:393
 msgid "Hora"
 msgstr "Time"
 
@@ -655,7 +676,7 @@ msgstr "Inquizição"
 msgid "Início"
 msgstr "Begin"
 
-#: src/views/Ranking/TableHeader.js:68
+#: src/views/Ranking/TableHeader.js:70
 msgid "J"
 msgstr "G"
 
@@ -676,12 +697,17 @@ msgstr "Player created successfully."
 msgid "Jogador da liga"
 msgstr "Quiz league player"
 
-#: src/views/admin/users/Users.js:222
+#: src/views/admin/users/Users.js:230
+#: src/views/admin/users/modals/EditPermissionsModal.js:163
+msgid "Jogador de quizzes especiais"
+msgstr "Special quizzes player"
+
+#: src/views/admin/users/Users.js:217
 #: src/views/admin/users/modals/EditPermissionsModal.js:105
 msgid "Jogador regular"
 msgstr "Regular player"
 
-#: src/partials/Header.js:219
+#: src/partials/Header.js:226
 #: src/views/admin/nationalRanking/Players.js:84
 msgid "Jogadores"
 msgstr "Players"
@@ -690,8 +716,8 @@ msgstr "Players"
 msgid "Jogo"
 msgstr "Game"
 
-#: src/views/Ranking/TableHeader.js:66
-#: src/views/StatisticsComparison.js:255
+#: src/views/Ranking/TableHeader.js:68
+#: src/views/StatisticsComparison.js:272
 msgid "Jogos"
 msgstr "Games"
 
@@ -699,12 +725,12 @@ msgstr "Games"
 msgid "Jogos e Passatempos"
 msgstr "Games and Hobbies"
 
-#: src/views/Question.js:213
-#: src/views/SpecialQuiz/SpecialQuizForm.js:156
+#: src/views/Question.js:217
+#: src/views/SpecialQuiz/SpecialQuizForm.js:162
 msgid "Joker"
 msgstr "Joker"
 
-#: src/views/SpecialQuiz/SpecialQuizDone.js:154
+#: src/views/SpecialQuiz/SpecialQuizDone.js:164
 msgid "Joker usado"
 msgstr "Used Joker"
 
@@ -716,7 +742,7 @@ msgstr "Round {0}"
 msgid "Jornada {0} ({1})"
 msgstr "Round {0} ({1})"
 
-#: src/views/Account.js:140
+#: src/views/Account.js:147
 #: src/views/Register.js:127
 msgid "Já existe uma conta com este e-mail."
 msgstr "There is another account using this e-mail."
@@ -728,8 +754,8 @@ msgstr "Legend"
 #: src/App.js:48
 #: src/routes.js:44
 #: src/views/Home.js:8
-#: src/views/Statistics.js:185
-#: src/views/StatisticsComparison.js:196
+#: src/views/Statistics.js:189
+#: src/views/StatisticsComparison.js:200
 msgid "Liga Quiz"
 msgstr "Quiz League"
 
@@ -774,11 +800,11 @@ msgstr "Museums"
 msgid "Máximo 200 KB"
 msgstr "Max. 200 KB"
 
-#: src/views/NationalRanking.js:244
+#: src/views/NationalRanking.js:231
 msgid "Média"
 msgstr "Average"
 
-#: src/views/Statistics.js:314
+#: src/views/Statistics.js:331
 #: src/views/admin/nationalRanking/Events/Form.js:165
 #: src/views/admin/nationalRanking/Events/Form.js:172
 #: src/views/admin/nationalRanking/Events/List.js:31
@@ -792,18 +818,18 @@ msgid "Música"
 msgstr "Music"
 
 #: src/views/admin/nationalRanking/Players/Form.js:218
-#: src/views/admin/specialQuizzes/SpecialQuizForm.js:210
+#: src/views/admin/specialQuizzes/SpecialQuizForm.js:223
 msgid "Nenhum"
 msgstr "None"
 
-#: src/views/Account.js:68
+#: src/views/Account.js:75
 #: src/views/GenreRanking/Table.js:13
-#: src/views/NationalRanking.js:212
-#: src/views/Question.js:204
-#: src/views/Ranking/TableHeader.js:11
+#: src/views/NationalRanking.js:199
+#: src/views/Question.js:208
+#: src/views/Ranking/TableHeader.js:13
 #: src/views/Register.js:58
 #: src/views/admin/nationalRanking/Players/Form.js:148
-#: src/views/admin/users/Users.js:108
+#: src/views/admin/users/Users.js:107
 msgid "Nome"
 msgstr "Name"
 
@@ -819,19 +845,19 @@ msgstr "Notification successfully deleted."
 msgid "Notificação criada com sucesso."
 msgstr "Notification successfully created."
 
-#: src/views/Account.js:254
+#: src/views/Account.js:269
 msgid "Notificação de quiz especial (00h00)"
 msgstr "Special quiz notification (12.00a.m.)"
 
-#: src/views/Account.js:275
+#: src/views/Account.js:290
 msgid "Notificação de quiz especial (22h00)"
 msgstr "Special quiz notification (22.00p.m.)"
 
-#: src/views/Account.js:212
+#: src/views/Account.js:221
 msgid "Notificação de quiz regular (00h00)"
 msgstr "Regular quiz notification (12.00a.m.)"
 
-#: src/views/Account.js:233
+#: src/views/Account.js:242
 msgid "Notificação de quiz regular (22h00)"
 msgstr "Regular quiz notification (22.00p.m.)"
 
@@ -839,7 +865,7 @@ msgstr "Regular quiz notification (22.00p.m.)"
 msgid "Notificação editada com sucesso."
 msgstr "Notification successfully edited."
 
-#: src/partials/Header.js:148
+#: src/partials/Header.js:155
 #: src/routes.js:162
 #: src/views/admin/notifications/Notifications.js:49
 msgid "Notificações"
@@ -849,7 +875,7 @@ msgstr "Notifications"
 msgid "Nova entrada para o ranking"
 msgstr "New appearance in the ranking"
 
-#: src/views/SpecialQuiz/SpecialQuizDone.js:159
+#: src/views/SpecialQuiz/SpecialQuizDone.js:169
 msgid "Não"
 msgstr "No"
 
@@ -869,7 +895,7 @@ msgstr "There is no national ranking available."
 msgid "Não foi possível abrir a edição das provas mensais."
 msgstr "Month events edit page could not be loaded."
 
-#: src/views/Account.js:54
+#: src/views/Account.js:61
 msgid "Não foi possível actualizar o perfil."
 msgstr "Profile could not be update."
 
@@ -918,11 +944,11 @@ msgstr "Notification could not be created."
 msgid "Não foi possível criar a temporada."
 msgstr "Season could not be created."
 
-#: src/views/admin/specialQuizzes/SpecialQuizForm.js:109
+#: src/views/admin/specialQuizzes/SpecialQuizForm.js:112
 msgid "Não foi possível criar o quiz especial."
 msgstr "Special Quiz could not be created."
 
-#: src/views/admin/quizzes/QuizForm.js:118
+#: src/views/admin/quizzes/QuizForm.js:121
 msgid "Não foi possível criar o quiz."
 msgstr "Quiz could not be created."
 
@@ -948,15 +974,15 @@ msgstr "Month events could not be saved."
 msgid "Não foi possível gravar o jogador."
 msgstr "Player could not be saved."
 
-#: src/views/admin/specialQuizzes/SpecialQuizForm.js:97
+#: src/views/admin/specialQuizzes/SpecialQuizForm.js:101
 msgid "Não foi possível gravar o quiz especial."
 msgstr "Special Quiz could not be saved."
 
-#: src/views/admin/quizzes/QuizForm.js:105
+#: src/views/admin/quizzes/QuizForm.js:110
 msgid "Não foi possível gravar o quiz."
 msgstr "Quiz could not be saved."
 
-#: src/views/Quiz/QuizForm.js:361
+#: src/views/Quiz/QuizForm.js:366
 msgid "Não foi possível obter as estatísticas do adversário"
 msgstr "Opponent statistics could not be retrieved."
 
@@ -964,7 +990,7 @@ msgstr "Opponent statistics could not be retrieved."
 msgid "Não foi possível publicar o ranking mensal."
 msgstr "Month ranking could not be published."
 
-#: src/views/SpecialQuiz/SpecialQuizForm.js:61
+#: src/views/SpecialQuiz/SpecialQuizForm.js:62
 msgid "Não foi possível submeter o quiz especial."
 msgstr "Special quiz could not be submitted."
 
@@ -976,7 +1002,7 @@ msgstr "Quiz could not be submitted."
 msgid "Não tens permissões para aceder a esta página."
 msgstr "You have no permission to see this page."
 
-#: src/views/Statistics.js:175
+#: src/views/Statistics.js:179
 msgid "Número {0} no <0>Ranking Nacional</0>"
 msgstr "<0>National Ranking</0>'s number {0}"
 
@@ -992,7 +1018,11 @@ msgstr "Your password change request is not valid"
 msgid "OK"
 msgstr "OK"
 
-#: src/views/Ranking/TableHeader.js:44
+#: src/partials/Notifications.js:109
+msgid "Obrigado pela tua inscrição! O teu registo encontra-se a aguardar aprovação da equipa da Liga Quiz."
+msgstr "Thank you for you registration! Your registration is pending approval from the Liga Quiz team."
+
+#: src/views/Ranking/TableHeader.js:46
 msgid "PC"
 msgstr "PA"
 
@@ -1000,11 +1030,11 @@ msgstr "PA"
 msgid "PR"
 msgstr "AQ"
 
-#: src/views/Ranking/TableHeader.js:32
+#: src/views/Ranking/TableHeader.js:34
 msgid "PaF"
 msgstr "PF"
 
-#: src/views/Account.js:146
+#: src/views/Account.js:153
 #: src/views/Login.js:75
 #: src/views/Register.js:133
 #: src/views/ResetPassword.js:60
@@ -1019,40 +1049,40 @@ msgstr "Password changed successfully.<0/>Click <1>here</1> and use the new cred
 msgid "Para mais pormenores de como o ranking é calculado deve ser consultado este artigo:"
 msgstr "More details about ranking calculation can be found in this article (only in portuguese):"
 
-#: src/views/Game.js:133
+#: src/views/Game.js:138
 #: src/views/GenreRanking/Table.js:44
-#: src/views/Quiz/QuizDone.js:48
-#: src/views/Quiz/QuizForm.js:416
-#: src/views/SpecialQuiz/SpecialQuizDone.js:167
-#: src/views/Statistics.js:267
+#: src/views/Quiz/QuizDone.js:49
+#: src/views/Quiz/QuizForm.js:421
+#: src/views/SpecialQuiz/SpecialQuizDone.js:177
+#: src/views/Statistics.js:284
 msgid "Percentagem de acerto"
 msgstr "Percentage of correct answers"
 
-#: src/views/Question.js:144
+#: src/views/Question.js:149
 msgid "Percentagem de jogadores que atribuíram 0 pontos"
 msgstr "Percentage of players that assign 0 points"
 
-#: src/views/Question.js:155
+#: src/views/Question.js:160
 msgid "Percentagem de jogadores que atribuíram 1 ponto"
 msgstr "Percentage of players that assign 1 point"
 
-#: src/views/Question.js:165
+#: src/views/Question.js:170
 msgid "Percentagem de jogadores que atribuíram 2 pontos"
 msgstr "Percentage of players that assign 2 points"
 
-#: src/views/Question.js:175
+#: src/views/Question.js:180
 msgid "Percentagem de jogadores que atribuíram 3 pontos"
 msgstr "Percentage of players that assign 3 points"
 
-#: src/views/Question.js:133
+#: src/views/Question.js:138
 msgid "Percentagem de jogadores que usaram joker"
 msgstr "Percentage of players that used a joker"
 
-#: src/views/Question.js:123
+#: src/views/Question.js:128
 msgid "Percentagem de respostas correctas"
 msgstr "Percentage of correct answers"
 
-#: src/views/Account.js:42
+#: src/views/Account.js:49
 msgid "Perfil actualizado com sucesso."
 msgstr "Profile successfully updated."
 
@@ -1068,17 +1098,17 @@ msgstr "Question {0}"
 msgid "Perguntas respondidas"
 msgstr "Answered questions"
 
-#: src/views/admin/users/Users.js:126
+#: src/views/admin/users/Users.js:125
 msgid "Permissões"
 msgstr "Permissions"
 
-#: src/partials/Header.js:188
+#: src/partials/Header.js:195
 #: src/routes.js:227
-#: src/views/admin/search/Search.js:60
+#: src/views/admin/search/Search.js:62
 msgid "Pesquisa de perguntas"
 msgstr "Question search"
 
-#: src/views/admin/search/Search.js:78
+#: src/views/admin/search/Search.js:80
 msgid "Pesquisar"
 msgstr "Search"
 
@@ -1086,32 +1116,32 @@ msgstr "Search"
 msgid "Política Actual"
 msgstr "Nowadays Politics"
 
-#: src/views/NationalRanking.js:216
-#: src/views/Statistics.js:321
+#: src/views/NationalRanking.js:203
+#: src/views/Statistics.js:338
 msgid "Pontos"
 msgstr "Points"
 
-#: src/views/Quiz/QuizForm.js:216
+#: src/views/Quiz/QuizForm.js:221
 msgid "Pontos a atribuir ao adversário"
 msgstr "Points to be assigned to your opponent"
 
-#: src/views/Ranking/TableHeader.js:30
+#: src/views/Ranking/TableHeader.js:32
 msgid "Pontos a favor"
 msgstr "Points for"
 
-#: src/views/Question.js:208
+#: src/views/Question.js:212
 msgid "Pontos atribuídos"
 msgstr "Assigned points"
 
-#: src/views/Quiz/QuizDone.js:40
+#: src/views/Quiz/QuizDone.js:41
 msgid "Pontos atribuídos ao adverário"
 msgstr "Points assigned to the opponent"
 
-#: src/views/Ranking/TableHeader.js:42
+#: src/views/Ranking/TableHeader.js:44
 msgid "Pontos contra"
 msgstr "Points against"
 
-#: src/views/Ranking/TableHeader.js:18
+#: src/views/Ranking/TableHeader.js:20
 msgid "Pontos na liga"
 msgstr "League points"
 
@@ -1119,15 +1149,15 @@ msgstr "League points"
 msgid "Produtos e Marcas"
 msgstr "Products and Brands"
 
-#: src/views/Statistics.js:311
+#: src/views/Statistics.js:328
 msgid "Prova"
 msgstr "Event"
 
-#: src/views/Statistics.js:305
+#: src/views/Statistics.js:322
 msgid "Provas individuais"
 msgstr "Individual quizzes"
 
-#: src/partials/Header.js:212
+#: src/partials/Header.js:219
 #: src/views/admin/nationalRanking/Events.js:102
 msgid "Provas mensais"
 msgstr "Month events"
@@ -1144,13 +1174,13 @@ msgstr "Month events successfully deleted."
 msgid "Provas mensais criadas com sucesso."
 msgstr "Month events successfully created."
 
-#: src/components/PaginatedTable.js:100
+#: src/components/PaginatedTable.js:93
 #: src/views/Ranking/Rounds.js:42
 msgid "Próxima"
 msgstr "Next"
 
-#: src/views/Ranking/TableHeader.js:20
-#: src/views/Statistics.js:324
+#: src/views/Ranking/TableHeader.js:22
+#: src/views/Statistics.js:341
 msgid "Pts"
 msgstr "Pts"
 
@@ -1176,11 +1206,11 @@ msgstr "Special Quiz"
 msgid "Quiz apagado com sucesso."
 msgstr "Quiz successfully deleted."
 
-#: src/views/admin/quizzes/QuizForm.js:114
+#: src/views/admin/quizzes/QuizForm.js:117
 msgid "Quiz criado com sucesso."
 msgstr "Quiz successfully created."
 
-#: src/partials/Notifications.js:99
+#: src/partials/Notifications.js:146
 msgid "Quiz de hoje disponível aqui"
 msgstr "Today's quiz available here"
 
@@ -1192,19 +1222,19 @@ msgstr "{0}'s quiz"
 msgid "Quiz especial apagado com sucesso."
 msgstr "Special quiz successfully deleted."
 
-#: src/views/admin/specialQuizzes/SpecialQuizForm.js:105
+#: src/views/admin/specialQuizzes/SpecialQuizForm.js:108
 msgid "Quiz especial criado com sucesso."
 msgstr "Special quiz successfully created."
 
-#: src/partials/Notifications.js:106
+#: src/partials/Notifications.js:153
 msgid "Quiz especial disponível aqui"
 msgstr "Special quiz available here"
 
-#: src/views/admin/specialQuizzes/SpecialQuizForm.js:94
+#: src/views/admin/specialQuizzes/SpecialQuizForm.js:97
 msgid "Quiz especial gravado com sucesso."
 msgstr "Special quiz successfully saved."
 
-#: src/views/SpecialQuiz/SpecialQuizForm.js:57
+#: src/views/SpecialQuiz/SpecialQuizForm.js:58
 msgid "Quiz especial submetido com sucesso."
 msgstr "Special quiz successfully submitted."
 
@@ -1220,7 +1250,7 @@ msgstr "Special quiz | Create"
 msgid "Quiz especial | Editar"
 msgstr "Special quiz | Edit"
 
-#: src/views/admin/quizzes/QuizForm.js:102
+#: src/views/admin/quizzes/QuizForm.js:106
 msgid "Quiz gravado com sucesso."
 msgstr "Quiz successfully saved."
 
@@ -1240,9 +1270,9 @@ msgstr "Quiz | Create"
 msgid "Quiz | Editar"
 msgstr "Quiz | Edit"
 
-#: src/partials/Header.js:170
+#: src/partials/Header.js:177
 #: src/routes.js:172
-#: src/views/NationalRanking.js:258
+#: src/views/NationalRanking.js:245
 #: src/views/admin/quizzes/Quizzes.js:85
 msgid "Quizzes"
 msgstr "Quizzes"
@@ -1251,7 +1281,7 @@ msgstr "Quizzes"
 msgid "Quizzes Especiais"
 msgstr "Special Quizzes"
 
-#: src/partials/Header.js:181
+#: src/partials/Header.js:188
 #: src/routes.js:192
 msgid "Quizzes especiais"
 msgstr "Special quizzes"
@@ -1261,11 +1291,11 @@ msgid "Química"
 msgstr "Chemistry"
 
 #: src/views/GenreRanking/Table.js:22
-#: src/views/Ranking/TableHeader.js:128
+#: src/views/Ranking/TableHeader.js:130
 msgid "RC"
 msgstr "CA"
 
-#: src/partials/Header.js:84
+#: src/partials/Header.js:89
 #: src/routes.js:101
 #: src/views/NationalRanking.js:155
 #: src/views/NationalRanking.js:180
@@ -1288,7 +1318,7 @@ msgstr "National Ranking | Month events"
 msgid "Ranking Nacional | Ranking"
 msgstr "National Ranking | Ranking"
 
-#: src/views/GenreRanking.js:165
+#: src/views/GenreRanking.js:169
 msgid "Ranking global"
 msgstr "Global ranking"
 
@@ -1300,14 +1330,14 @@ msgstr "Month ranking successfully deleted."
 msgid "Ranking mensal publicado com sucesso."
 msgstr "Month ranking successfully published."
 
-#: src/partials/Header.js:205
+#: src/partials/Header.js:212
 #: src/views/admin/nationalRanking/Rankings.js:83
 msgid "Rankings mensais"
 msgstr "Month rankings"
 
-#: src/partials/Header.js:234
+#: src/partials/Header.js:241
 #: src/routes.js:86
-#: src/views/GenreRanking.js:160
+#: src/views/GenreRanking.js:162
 #: src/views/Seasons.js:82
 msgid "Rankings temáticos"
 msgstr "Genre rankings"
@@ -1323,7 +1353,7 @@ msgstr "Recover password"
 msgid "Redefinir palavra-passe"
 msgstr "Reset password"
 
-#: src/partials/Header.js:110
+#: src/partials/Header.js:117
 #: src/views/Register.js:199
 msgid "Registar"
 msgstr "Register"
@@ -1333,14 +1363,14 @@ msgstr "Register"
 msgid "Registo"
 msgstr "Registration"
 
-#: src/views/Statistics.js:365
+#: src/views/Statistics.js:382
 msgid "Registo de acções (últimos 7 dias)"
 msgstr "Action log (last 7 days)"
 
-#: src/partials/Header.js:66
+#: src/partials/Header.js:71
 #: src/routes.js:81
-#: src/views/Rules.js:15
-#: src/views/SpecialQuiz/SpecialQuizForm.js:174
+#: src/views/Rules.js:25
+#: src/views/SpecialQuiz/SpecialQuizForm.js:180
 msgid "Regras"
 msgstr "Rules"
 
@@ -1362,37 +1392,37 @@ msgstr "Delete event"
 msgid "Remover última divisão"
 msgstr "Remove last tier"
 
-#: src/views/Quiz/QuizForm.js:186
-#: src/views/SpecialQuiz/SpecialQuizForm.js:102
+#: src/views/Quiz/QuizForm.js:191
+#: src/views/SpecialQuiz/SpecialQuizForm.js:108
 #: src/views/admin/quizzes/Question.js:106
-#: src/views/admin/search/Search.js:94
+#: src/views/admin/search/Search.js:101
 #: src/views/admin/specialQuizzes/Question.js:66
 msgid "Resposta"
 msgstr "Answer"
 
-#: src/views/Question.js:115
-#: src/views/Quiz/QuizDone.js:22
-#: src/views/SpecialQuiz/SpecialQuizDone.js:137
+#: src/views/Question.js:120
+#: src/views/Quiz/QuizDone.js:23
+#: src/views/SpecialQuiz/SpecialQuizDone.js:147
 #: src/views/admin/quizzes/QuizCorrect.js:133
 #: src/views/admin/specialQuizzes/SpecialQuizCorrect.js:133
 msgid "Resposta correcta"
 msgstr "Correct answer"
 
-#: src/views/Quiz/QuizDone.js:30
-#: src/views/SpecialQuiz/SpecialQuizDone.js:146
+#: src/views/Quiz/QuizDone.js:31
+#: src/views/SpecialQuiz/SpecialQuizDone.js:156
 #: src/views/admin/quizzes/QuizCorrect.js:148
 #: src/views/admin/specialQuizzes/SpecialQuizCorrect.js:148
 msgid "Resposta dada"
 msgstr "Given answer"
 
 #: src/views/GenreRanking/Table.js:20
-#: src/views/Ranking/TableHeader.js:126
-#: src/views/Statistics.js:243
+#: src/views/Ranking/TableHeader.js:128
+#: src/views/Statistics.js:260
 msgid "Respostas correctas"
 msgstr "Correct answers"
 
-#: src/views/Statistics.js:317
-#: src/views/StatisticsComparison.js:302
+#: src/views/Statistics.js:334
+#: src/views/StatisticsComparison.js:319
 msgid "Resultado"
 msgstr "Result"
 
@@ -1420,7 +1450,7 @@ msgstr "World Quizzing Championship result"
 msgid "Resultado no Campeonato Nacional"
 msgstr "National Championship result"
 
-#: src/partials/Header.js:259
+#: src/partials/Header.js:266
 #: src/routes.js:69
 msgid "Sair"
 msgstr "Logout"
@@ -1437,26 +1467,26 @@ msgstr "Select players for this tier:"
 msgid "Selecciona os jogadores que jogaram esta prova:"
 msgstr "Select players for this event:"
 
-#: src/views/GenreRanking.js:190
+#: src/views/GenreRanking.js:194
 #: src/views/Quizzes.js:84
-#: src/views/Ranking.js:193
+#: src/views/Ranking.js:191
 #: src/views/Seasons.js:104
 #: src/views/SpecialQuizzes.js:129
-#: src/views/Statistics.js:394
+#: src/views/Statistics.js:411
 #: src/views/admin/nationalRanking/Events/List.js:78
 #: src/views/admin/nationalRanking/Players/List.js:95
 #: src/views/admin/nationalRanking/Rankings.js:154
 #: src/views/admin/notifications/Notifications.js:140
 #: src/views/admin/quizzes/Quizzes.js:189
-#: src/views/admin/search/Search.js:108
+#: src/views/admin/search/Search.js:116
 #: src/views/admin/seasons/Seasons.js:142
 #: src/views/admin/specialQuizzes/SpecialQuizzes.js:204
-#: src/views/admin/users/Users.js:328
+#: src/views/admin/users/Users.js:337
 msgid "Sem registos"
 msgstr "No records"
 
-#: src/views/Question.js:232
-#: src/views/SpecialQuiz/SpecialQuizDone.js:157
+#: src/views/Question.js:236
+#: src/views/SpecialQuiz/SpecialQuizDone.js:167
 msgid "Sim"
 msgstr "Yes"
 
@@ -1464,7 +1494,7 @@ msgstr "Yes"
 msgid "Sociedade"
 msgstr "Society"
 
-#: src/views/NationalRanking.js:230
+#: src/views/NationalRanking.js:217
 msgid "Soma"
 msgstr "Sum"
 
@@ -1481,21 +1511,21 @@ msgstr "Move up"
 msgid "Submeter"
 msgstr "Submit"
 
-#: src/views/Quiz/QuizForm.js:487
-#: src/views/SpecialQuiz/SpecialQuizForm.js:202
+#: src/views/Quiz/QuizForm.js:492
+#: src/views/SpecialQuiz/SpecialQuizForm.js:208
 msgid "Submeter quiz"
 msgstr "Submit quiz"
 
-#: src/views/Quiz/QuizForm.js:473
+#: src/views/Quiz/QuizForm.js:478
 msgid "Submissão inválida"
 msgstr "Invalid submission"
 
-#: src/views/admin/users/Users.js:137
+#: src/views/admin/users/Users.js:136
 msgid "Subscrição"
 msgstr "Subscription"
 
-#: src/views/Quiz/QuizForm.js:405
-#: src/views/Statistics.js:257
+#: src/views/Quiz/QuizForm.js:410
+#: src/views/Statistics.js:274
 msgid "T"
 msgstr "T"
 
@@ -1511,10 +1541,10 @@ msgstr "Technology and Inventions"
 msgid "Televisão"
 msgstr "TV"
 
-#: src/views/Quiz/QuizForm.js:394
+#: src/views/Quiz/QuizForm.js:399
 #: src/views/SpecialQuizzes.js:83
-#: src/views/Statistics.js:236
-#: src/views/admin/specialQuizzes/SpecialQuizForm.js:170
+#: src/views/Statistics.js:253
+#: src/views/admin/specialQuizzes/SpecialQuizForm.js:183
 #: src/views/admin/specialQuizzes/SpecialQuizzes.js:125
 msgid "Tema"
 msgstr "Subject"
@@ -1536,7 +1566,8 @@ msgstr "Season successfully saved."
 msgid "Temporada {0}"
 msgstr "Season {0}"
 
-#: src/views/Ranking.js:152
+#: src/views/GenreRanking.js:163
+#: src/views/Ranking.js:150
 msgid "Temporada {seasonNumber}"
 msgstr "Season {seasonNumber}"
 
@@ -1548,7 +1579,7 @@ msgstr "Season | Create"
 msgid "Temporada | Editar"
 msgstr "Season | Edit"
 
-#: src/partials/Header.js:152
+#: src/partials/Header.js:159
 #: src/routes.js:212
 #: src/views/admin/seasons/Seasons.js:70
 msgid "Temporadas"
@@ -1594,12 +1625,12 @@ msgstr "Do you really want to delete this quiz?"
 msgid "Tens a certeza que queres apagar este ranking mensal?"
 msgstr "Do you really want to delete this month ranking?"
 
-#: src/views/Quiz/QuizForm.js:488
-#: src/views/SpecialQuiz/SpecialQuizForm.js:203
+#: src/views/Quiz/QuizForm.js:493
+#: src/views/SpecialQuiz/SpecialQuizForm.js:209
 msgid "Tens a certeza que queres submeter o quiz?"
 msgstr "Do you really want to submit the quiz?"
 
-#: src/views/Quiz/QuizForm.js:475
+#: src/views/Quiz/QuizForm.js:480
 msgid "Tens pontos por atribuir.<0/>Atribui-os antes de fazer a submissão."
 msgstr "You have points to be assigned.<0/>Assigned them before submit."
 
@@ -1620,8 +1651,8 @@ msgstr "All form data will be discarded.<0/>Do you really want to proceed?"
 msgid "Total"
 msgstr "Total"
 
-#: src/views/Quiz/QuizForm.js:402
-#: src/views/Statistics.js:255
+#: src/views/Quiz/QuizForm.js:407
+#: src/views/Statistics.js:272
 msgid "Total de respostas"
 msgstr "Total of given answers"
 
@@ -1649,25 +1680,26 @@ msgstr "User successfully updated."
 msgid "Utilizador registado com sucesso.<0/>Clica <1>aqui</1> e usa as tuas credenciais."
 msgstr "User registerd successfully.<0/>Click <1>here</1> and use your credentials."
 
-#: src/partials/Header.js:144
+#: src/partials/Header.js:151
 #: src/routes.js:167
-#: src/views/admin/users/Users.js:96
+#: src/views/admin/users/Users.js:95
 msgid "Utilizadores"
 msgstr "Users"
 
-#: src/views/Ranking/TableHeader.js:92
+#: src/views/Ranking/TableHeader.js:94
 msgid "V"
 msgstr "W"
 
 #: src/views/admin/users/modals/EditPermissionsModal.js:111
+#: src/views/admin/users/modals/EditPermissionsModal.js:169
 msgid "Validade da subscrição"
 msgstr "Subscription deadline"
 
-#: src/partials/Header.js:263
+#: src/partials/Header.js:270
 msgid "Versão 4.0"
 msgstr "Version 4.0"
 
-#: src/views/Ranking/TableHeader.js:90
+#: src/views/Ranking/TableHeader.js:92
 msgid "Vitórias"
 msgstr "Wins"
 
@@ -1684,7 +1716,7 @@ msgstr "Back to list"
 msgid "Voltar à página inicial"
 msgstr "Return to homepage"
 
-#: src/views/Account.js:147
+#: src/views/Account.js:154
 msgid "deixa em branco para não alterar"
 msgstr "leave it blank to keep"
 
@@ -1711,17 +1743,17 @@ msgid "{0, selectordinal, two {2º} few {3º} other {#º}}"
 msgstr "{0, selectordinal, two {2nd} few {3nd} other {#rd}}"
 
 #: src/views/NationalRanking.js:172
-#: src/views/NationalRanking.js:328
+#: src/views/NationalRanking.js:315
 #: src/views/admin/nationalRanking/Events/List.js:43
 #: src/views/admin/nationalRanking/Rankings.js:126
 msgid "{0} de {1}"
 msgstr "{0} {1}"
 
-#: src/views/StatisticsComparison.js:188
+#: src/views/StatisticsComparison.js:192
 msgid "{0} {1} e {2} {3}"
 msgstr "{0} {1} and {2} {3}"
 
-#: src/views/Ranking.js:164
+#: src/views/Ranking.js:162
 #: src/views/admin/seasons/Tier.js:29
 msgid "{0}ª divisão"
 msgstr "Tier {0}"

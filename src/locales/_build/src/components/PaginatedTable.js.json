@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/components/PaginatedTable.js",
-        91
+        84
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/components/PaginatedTable.js",
-        100
+        93
       ]
     ]
   }

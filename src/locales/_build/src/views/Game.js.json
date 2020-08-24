@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/views/Game.js",
-        133
+        138
       ]
     ]
   },
@@ -19,11 +19,11 @@
     "origin": [
       [
         "src/views/Game.js",
-        165
+        170
       ],
       [
         "src/views/Game.js",
-        205
+        210
       ]
     ]
   },
@@ -31,11 +31,11 @@
     "origin": [
       [
         "src/views/Game.js",
-        167
+        172
       ],
       [
         "src/views/Game.js",
-        207
+        212
       ]
     ]
   },
@@ -43,11 +43,11 @@
     "origin": [
       [
         "src/views/Game.js",
-        173
+        178
       ],
       [
         "src/views/Game.js",
-        213
+        218
       ]
     ]
   }

@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/admin/quizzes/QuizForm.js",
-        102
+        106
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/views/admin/quizzes/QuizForm.js",
-        105
+        110
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/views/admin/quizzes/QuizForm.js",
-        114
+        117
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/views/admin/quizzes/QuizForm.js",
-        118
+        121
       ]
     ]
   },
@@ -35,7 +35,7 @@
     "origin": [
       [
         "src/views/admin/quizzes/QuizForm.js",
-        130
+        133
       ]
     ]
   },
@@ -43,7 +43,7 @@
     "origin": [
       [
         "src/views/admin/quizzes/QuizForm.js",
-        149
+        157
       ]
     ]
   },
@@ -51,15 +51,15 @@
     "origin": [
       [
         "src/views/admin/quizzes/QuizForm.js",
-        151
+        159
       ]
     ]
   },
-  "<0>Não devem ser feitos quizzes com a seguinte combinação de temas:</0><1><2>Literatura / Banda Desenhada</2><3>Literatura / Filosofia</3> <4>Óperas e Musicais / Música</4><5>Belas Artes / Museus</5></1>": {
+  "<0>Não devem ser feitos quizzes com a seguinte combinação de temas:</0><1><2>Literatura / Banda Desenhada</2><3>Literatura / Filosofia</3><4>Óperas e Musicais / Música</4><5>Belas Artes / Museus</5></1>": {
     "origin": [
       [
         "src/views/admin/quizzes/QuizForm.js",
-        158
+        166
       ]
     ]
   },
@@ -67,7 +67,7 @@
     "origin": [
       [
         "src/views/admin/quizzes/QuizForm.js",
-        176
+        184
       ]
     ]
   },
@@ -75,7 +75,7 @@
     "origin": [
       [
         "src/views/admin/quizzes/QuizForm.js",
-        214
+        222
       ]
     ]
   }

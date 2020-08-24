@@ -173,7 +173,12 @@ const QuizForm = ({ data, userAnswers }) => {
                   <Markdown content={question.content} />
                 </div>
                 {question.media_id && (
-                  <div className={classes.media}>
+                  <div
+                    className={classnames(
+                      classes.media,
+                      classes[data.media[question.media_id].type]
+                    )}
+                  >
                     {renderMedia(
                       data.media[question.media_id].type,
                       data.media[question.media_id].url,

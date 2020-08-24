@@ -105,7 +105,12 @@ const Question = () => {
             <Markdown content={question.content} />
           </div>
           {question.media && (
-            <div className={classes.media}>
+            <div
+              className={classnames(
+                classes.media,
+                classes[question.media.type]
+              )}
+            >
               {renderMedia(question.media.type, question.media.url)}
             </div>
           )}

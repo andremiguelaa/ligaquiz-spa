@@ -3,6 +3,7 @@ import { Trans } from '@lingui/macro';
 import { useHistory } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { debounce } from 'lodash';
+import classnames from 'classnames';
 
 import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
@@ -89,7 +90,12 @@ const SpecialQuizForm = ({ data, userAnswers }) => {
                   <Markdown content={question.content} />
                 </div>
                 {question.media_id && (
-                  <div className={classes.media}>
+                  <div
+                    className={classnames(
+                      classes.media,
+                      classes[data.media[question.media_id].type]
+                    )}
+                  >
                     {renderMedia(
                       data.media[question.media_id].type,
                       data.media[question.media_id].url,

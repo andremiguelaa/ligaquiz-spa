@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        89
+        88
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        96
+        95
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        108
+        107
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        126
+        125
       ]
     ]
   },
@@ -35,7 +35,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        137
+        136
       ]
     ]
   },
@@ -43,7 +43,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        156
+        155
       ]
     ]
   },
@@ -51,7 +51,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        206
+        205
       ]
     ]
   },
@@ -59,7 +59,15 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        222
+        217
+      ]
+    ]
+  },
+  "Jogador de quizzes especiais": {
+    "origin": [
+      [
+        "src/views/admin/users/Users.js",
+        230
       ]
     ]
   },
@@ -67,7 +75,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        236
+        244
       ]
     ]
   },
@@ -75,7 +83,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        249
+        257
       ]
     ]
   },
@@ -83,7 +91,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        262
+        270
       ]
     ]
   },
@@ -91,7 +99,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        275
+        283
       ]
     ]
   },
@@ -99,7 +107,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        287
+        295
       ]
     ]
   },
@@ -107,7 +115,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        328
+        337
       ]
     ]
   }

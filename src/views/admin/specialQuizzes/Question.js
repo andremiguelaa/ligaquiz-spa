@@ -129,7 +129,7 @@ const Question = ({
               <i className="fa fa-trash"></i>
             </span>
           </button>
-          <div className={classes.media}>
+          <div className={classnames(classes.media, classes[media.type])}>
             {renderMedia(media.type, media.url, index + 1)}
           </div>
         </>

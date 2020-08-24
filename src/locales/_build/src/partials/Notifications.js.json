@@ -1,9 +1,57 @@
 {
+  "Obrigado pela tua inscrição! O teu registo encontra-se a aguardar aprovação da equipa da Liga Quiz.": {
+    "origin": [
+      [
+        "src/partials/Notifications.js",
+        109
+      ]
+    ]
+  },
+  "A tua subscrição termina daqui a {remainingDays} dias.": {
+    "origin": [
+      [
+        "src/partials/Notifications.js",
+        126
+      ]
+    ]
+  },
+  "A tua subscrição termina amanhã.": {
+    "origin": [
+      [
+        "src/partials/Notifications.js",
+        131
+      ]
+    ]
+  },
+  "A tua subscrição termina hoje.": {
+    "origin": [
+      [
+        "src/partials/Notifications.js",
+        134
+      ]
+    ]
+  },
+  "A tua subscrição expirou.": {
+    "origin": [
+      [
+        "src/partials/Notifications.js",
+        136
+      ]
+    ]
+  },
+  "Clica <0>aqui</0> para saber como renovar.": {
+    "origin": [
+      [
+        "src/partials/Notifications.js",
+        137
+      ]
+    ]
+  },
   "Quiz de hoje disponível aqui": {
     "origin": [
       [
         "src/partials/Notifications.js",
-        99
+        146
       ]
     ]
   },
@@ -11,7 +59,7 @@
     "origin": [
       [
         "src/partials/Notifications.js",
-        106
+        153
       ]
     ]
   }

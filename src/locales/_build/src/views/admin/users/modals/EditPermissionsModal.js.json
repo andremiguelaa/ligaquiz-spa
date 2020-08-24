@@ -44,6 +44,18 @@
       [
         "src/views/admin/users/modals/EditPermissionsModal.js",
         111
+      ],
+      [
+        "src/views/admin/users/modals/EditPermissionsModal.js",
+        169
+      ]
+    ]
+  },
+  "Jogador de quizzes especiais": {
+    "origin": [
+      [
+        "src/views/admin/users/modals/EditPermissionsModal.js",
+        163
       ]
     ]
   },
@@ -51,7 +63,7 @@
     "origin": [
       [
         "src/views/admin/users/modals/EditPermissionsModal.js",
-        160
+        218
       ]
     ]
   },
@@ -59,7 +71,7 @@
     "origin": [
       [
         "src/views/admin/users/modals/EditPermissionsModal.js",
-        183
+        241
       ]
     ]
   },
@@ -67,7 +79,7 @@
     "origin": [
       [
         "src/views/admin/users/modals/EditPermissionsModal.js",
-        208
+        266
       ]
     ]
   },
@@ -75,7 +87,7 @@
     "origin": [
       [
         "src/views/admin/users/modals/EditPermissionsModal.js",
-        231
+        289
       ]
     ]
   },
@@ -83,7 +95,7 @@
     "origin": [
       [
         "src/views/admin/users/modals/EditPermissionsModal.js",
-        254
+        312
       ]
     ]
   }
