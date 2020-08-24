@@ -167,7 +167,7 @@ const SpecialQuizForm = ({ data, userAnswers }) => {
             <div className="field">
               <div className="control">
                 <button className="button is-primary">
-                  <Trans>Gravar</Trans>
+                  <Trans>Submeter</Trans>
                 </button>
               </div>
             </div>

@@ -39,7 +39,7 @@
       ]
     ]
   },
-  "Gravar": {
+  "Submeter": {
     "origin": [
       [
         "src/views/SpecialQuiz/SpecialQuizForm.js",

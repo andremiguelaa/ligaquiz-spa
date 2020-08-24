@@ -622,8 +622,6 @@ msgstr "Gestão de Ranking Nacional"
 
 #: src/views/Account/Avatar.js:114
 #: src/views/Account.js:305
-#: src/views/Quiz/QuizForm.js:356
-#: src/views/SpecialQuiz/SpecialQuizForm.js:170
 #: src/views/admin/nationalRanking/Players/Form.js:242
 #: src/views/admin/quizzes/QuizForm.js:222
 #: src/views/admin/seasons/SeasonForm.js:293
@@ -1506,8 +1504,10 @@ msgstr "Squizzed"
 msgid "Subiu"
 msgstr "Subiu"
 
+#: src/views/Quiz/QuizForm.js:356
 #: src/views/RecoverPassword.js:98
 #: src/views/ResetPassword.js:140
+#: src/views/SpecialQuiz/SpecialQuizForm.js:170
 msgid "Submeter"
 msgstr "Submeter"
 
