@@ -196,6 +196,9 @@ button.navbar-link {
       width: auto;
     }
     th {
+      &:not([align]) {
+        text-align: left;
+      }
       &.sortable {
         padding: 0;
         button {
