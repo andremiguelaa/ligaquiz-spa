@@ -31,12 +31,12 @@ const SpecialQuizDone = ({ data, userAnswers, setError }) => {
   }, [data.quiz.result, users, setError]);
 
   return (
-    <div className="content">
+    <>
       {data.quiz.result && (
         <div className={classes.results}>
           {users ? (
             <>
-              <h2 className="subtile is-size-4">
+              <h2 className="subtitle has-text-weight-bold">
                 <Trans>Classificação</Trans>
               </h2>
               <div className="table-container">
@@ -124,6 +124,16 @@ const SpecialQuizDone = ({ data, userAnswers, setError }) => {
           )}
         </div>
       )}
+      {data.quiz.description && (
+        <div className={classes.description}>
+          <h2 className="subtitle has-text-weight-bold">
+            <Trans>Descrição</Trans>
+          </h2>
+          <p>
+            <Markdown content={data.quiz.description} />
+          </p>
+        </div>
+      )}
       {data.quiz.questions.map((question, index) => (
         <div key={question.id} className={classes.question}>
           {question.content && (
@@ -185,7 +195,7 @@ const SpecialQuizDone = ({ data, userAnswers, setError }) => {
           )}
         </div>
       ))}
-    </div>
+    </>
   );
 };
 
