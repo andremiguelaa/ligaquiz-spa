@@ -47,7 +47,8 @@ const QuizForm = ({ data, userAnswers }) => {
   const [submitModal, setSubmitModal] = useState(false);
   const [genres, setGenres] = useState();
   const [opponent, setOpponent] = useState();
-  const [opponentStats, setOpponentStats] = useState();
+  const [opponentGenreStats, setOpponentGenreStats] = useState();
+  const [opponentSubgenreStats, setOpponentSubgenreStats] = useState();
   const [statsError, setStatsError] = useState(false);
 
   useEffect(() => {
@@ -65,7 +66,7 @@ const QuizForm = ({ data, userAnswers }) => {
           ApiRequest.get(`users?id[]=${opponent}&statistics=true`)
             .then(({ data }) => {
               const user = data[0];
-              const computedStatistics = genres.map((genre) => {
+              const computedGenreStatistics = genres.map((genre) => {
                 let genreStatistics = {
                   id: genre.id,
                   slug: genre.slug,
@@ -79,16 +80,6 @@ const QuizForm = ({ data, userAnswers }) => {
                     user.statistics[subgenre.id]?.total || 0;
                   genreStatistics.correct +=
                     user.statistics[subgenre.id]?.correct || 0;
-                  genreStatistics.subgenres.push({
-                    id: subgenre.id,
-                    slug: subgenre.slug,
-                    total: user.statistics[subgenre.id]?.total || 0,
-                    correct: user.statistics[subgenre.id]?.correct || 0,
-                    percentage:
-                      ((user.statistics[subgenre.id]?.correct || 0) /
-                        (user.statistics[subgenre.id]?.total || 1)) *
-                      100,
-                  });
                 });
                 genreStatistics.percentage =
                   ((genreStatistics?.correct || 0) /
@@ -97,7 +88,32 @@ const QuizForm = ({ data, userAnswers }) => {
                 return genreStatistics;
               });
               setOpponent(user);
-              setOpponentStats(computedStatistics);
+              setOpponentGenreStats(
+                computedGenreStatistics.sort(
+                  (a, b) => b.percentage - a.percentage
+                )
+              );
+              const computedSubgenreStatistics = genres.reduce((acc, genre) => {
+                genre.subgenres.forEach((subgenre) => {
+                  acc.push({
+                    id: subgenre.id,
+                    slug: subgenre.slug,
+                    total: user.statistics[subgenre.id]?.total || 0,
+                    correct: user.statistics[subgenre.id]?.correct || 0,
+                    percentage:
+                      (user.statistics[subgenre.id]?.correct
+                        ? user.statistics[subgenre.id]?.correct /
+                          user.statistics[subgenre.id]?.total
+                        : 0) * 100,
+                  });
+                });
+                return acc;
+              }, []);
+              setOpponentSubgenreStats(
+                computedSubgenreStatistics.sort(
+                  (a, b) => b.percentage - a.percentage
+                )
+              );
             })
             .catch(() => {
               setStatsError(true);
@@ -369,7 +385,7 @@ const QuizForm = ({ data, userAnswers }) => {
               </Error>
             ) : (
               <>
-                {!opponentStats || !genres ? (
+                {!opponentGenreStats || !opponentSubgenreStats || !genres ? (
                   <Loading />
                 ) : (
                   <div className={classnames('card', classes.statistics)}>
@@ -398,7 +414,7 @@ const QuizForm = ({ data, userAnswers }) => {
                               <th>
                                 <Trans>Tema</Trans>
                               </th>
-                              <th>
+                              <th className={classes.total}>
                                 <I18n>
                                   {({ i18n }) => (
                                     <span
@@ -412,7 +428,7 @@ const QuizForm = ({ data, userAnswers }) => {
                                   )}
                                 </I18n>
                               </th>
-                              <th>
+                              <th className={classes.percentage}>
                                 <I18n>
                                   {({ i18n }) => (
                                     <span
@@ -429,36 +445,80 @@ const QuizForm = ({ data, userAnswers }) => {
                             </tr>
                           </thead>
                           <tbody>
-                            {opponentStats.map((genre) => (
+                            {opponentGenreStats.map((genre) => (
                               <Fragment key={genre.id}>
                                 <tr>
                                   <th>
                                     {getGenreTranslation(genre.slug, language)}
                                   </th>
-                                  <td>{genre.total}</td>
-                                  <td>{Math.round(genre.percentage)}%</td>
+                                  <td className={classes.total}>
+                                    {genre.total}
+                                  </td>
+                                  <td className={classes.percentage}>
+                                    {Math.round(genre.percentage)}%
+                                  </td>
                                 </tr>
-                                {genre.subgenres.length > 1 && (
-                                  <>
-                                    {genre.subgenres.map((subgenre) => (
-                                      <tr
-                                        key={subgenre.id}
-                                        className={classes.subgenre}
-                                      >
-                                        <th>
-                                          {getGenreTranslation(
-                                            subgenre.slug,
-                                            language
-                                          )}
-                                        </th>
-                                        <td>{subgenre.total}</td>
-                                        <td>
-                                          {Math.round(subgenre.percentage)}%
-                                        </td>
-                                      </tr>
-                                    ))}
-                                  </>
-                                )}
+                              </Fragment>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                      <div className="table-container">
+                        <table
+                          className={classnames(
+                            'table is-fullwidth is-hoverable',
+                            classes.genresTable
+                          )}
+                        >
+                          <thead>
+                            <tr>
+                              <th>
+                                <Trans>Subtema</Trans>
+                              </th>
+                              <th className={classes.total}>
+                                <I18n>
+                                  {({ i18n }) => (
+                                    <span
+                                      className="icon has-tooltip-bottom"
+                                      data-tooltip={i18n._(
+                                        t`Total de respostas`
+                                      )}
+                                    >
+                                      <Trans>T</Trans>
+                                    </span>
+                                  )}
+                                </I18n>
+                              </th>
+                              <th className={classes.percentage}>
+                                <I18n>
+                                  {({ i18n }) => (
+                                    <span
+                                      className="icon has-tooltip-bottom has-tooltip-left"
+                                      data-tooltip={i18n._(
+                                        t`Percentagem de acerto`
+                                      )}
+                                    >
+                                      %
+                                    </span>
+                                  )}
+                                </I18n>
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {opponentSubgenreStats.map((genre) => (
+                              <Fragment key={genre.id}>
+                                <tr>
+                                  <th>
+                                    {getGenreTranslation(genre.slug, language)}
+                                  </th>
+                                  <td className={classes.total}>
+                                    {genre.total}
+                                  </td>
+                                  <td className={classes.percentage}>
+                                    {Math.round(genre.percentage)}%
+                                  </td>
+                                </tr>
                               </Fragment>
                             ))}
                           </tbody>

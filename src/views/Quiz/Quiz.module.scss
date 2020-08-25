@@ -1,6 +1,6 @@
-@import "bulma/sass/utilities/initial-variables.sass";
-@import "bulma/sass/utilities/derived-variables.scss";
-@import "bulma/sass/utilities/mixins.sass";
+@import 'bulma/sass/utilities/initial-variables.sass';
+@import 'bulma/sass/utilities/derived-variables.scss';
+@import 'bulma/sass/utilities/mixins.sass';
 
 .question {
   padding-bottom: 3rem;
@@ -35,10 +35,11 @@
     margin-bottom: 1rem;
   }
   .genresTable {
-    .subgenre {
-      th {
-        padding-left: 1.5rem;
-      }
+    .total {
+      width: 50px;
+    }
+    .percentage {
+      width: 60px;
     }
   }
 }
