@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/StatisticsComparison.js",
-        178
+        184
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/views/StatisticsComparison.js",
-        190
+        196
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/views/StatisticsComparison.js",
-        192
+        198
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/views/StatisticsComparison.js",
-        200
+        206
       ]
     ]
   },
@@ -35,7 +35,19 @@
     "origin": [
       [
         "src/views/StatisticsComparison.js",
-        272
+        286
+      ]
+    ]
+  },
+  "Vitórias": {
+    "origin": [
+      [
+        "src/views/StatisticsComparison.js",
+        293
+      ],
+      [
+        "src/views/StatisticsComparison.js",
+        306
       ]
     ]
   },
@@ -43,7 +55,19 @@
     "origin": [
       [
         "src/views/StatisticsComparison.js",
-        278
+        318
+      ]
+    ]
+  },
+  "Respostas correctas": {
+    "origin": [
+      [
+        "src/views/StatisticsComparison.js",
+        331
+      ],
+      [
+        "src/views/StatisticsComparison.js",
+        338
       ]
     ]
   },
@@ -51,7 +75,7 @@
     "origin": [
       [
         "src/views/StatisticsComparison.js",
-        316
+        357
       ]
     ]
   },
@@ -59,7 +83,7 @@
     "origin": [
       [
         "src/views/StatisticsComparison.js",
-        319
+        360
       ]
     ]
   }

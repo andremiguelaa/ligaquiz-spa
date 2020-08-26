@@ -256,7 +256,7 @@ msgid "Comparar comigo"
 msgstr "Comparar comigo"
 
 #: src/routes.js:96
-#: src/views/StatisticsComparison.js:190
+#: src/views/StatisticsComparison.js:196
 msgid "Comparação de Estatísticas"
 msgstr "Comparação de Estatísticas"
 
@@ -343,7 +343,7 @@ msgid "Dança"
 msgstr "Dança"
 
 #: src/views/SpecialQuizzes.js:113
-#: src/views/StatisticsComparison.js:316
+#: src/views/StatisticsComparison.js:357
 msgid "Data"
 msgstr "Data"
 
@@ -445,7 +445,7 @@ msgid "Editor de Quizzes Especiais"
 msgstr "Editor de Quizzes Especiais"
 
 #: src/views/Ranking/TableHeader.js:104
-#: src/views/StatisticsComparison.js:278
+#: src/views/StatisticsComparison.js:318
 msgid "Empates"
 msgstr "Empates"
 
@@ -502,7 +502,7 @@ msgstr "Errada"
 #: src/views/SpecialQuiz.js:70
 #: src/views/SpecialQuizzes.js:62
 #: src/views/Statistics.js:137
-#: src/views/StatisticsComparison.js:178
+#: src/views/StatisticsComparison.js:184
 #: src/views/admin/nationalRanking/Events.js:95
 #: src/views/admin/nationalRanking/Players/Form.js:114
 #: src/views/admin/nationalRanking/Players.js:77
@@ -715,7 +715,7 @@ msgid "Jogo"
 msgstr "Jogo"
 
 #: src/views/Ranking/TableHeader.js:68
-#: src/views/StatisticsComparison.js:272
+#: src/views/StatisticsComparison.js:286
 msgid "Jogos"
 msgstr "Jogos"
 
@@ -753,7 +753,7 @@ msgstr "Legenda"
 #: src/routes.js:44
 #: src/views/Home.js:8
 #: src/views/Statistics.js:189
-#: src/views/StatisticsComparison.js:200
+#: src/views/StatisticsComparison.js:206
 msgid "Liga Quiz"
 msgstr "Liga Quiz"
 
@@ -1423,11 +1423,13 @@ msgstr "Resposta dada"
 #: src/views/GenreRanking/Table.js:20
 #: src/views/Ranking/TableHeader.js:128
 #: src/views/Statistics.js:260
+#: src/views/StatisticsComparison.js:331
+#: src/views/StatisticsComparison.js:338
 msgid "Respostas correctas"
 msgstr "Respostas correctas"
 
 #: src/views/Statistics.js:334
-#: src/views/StatisticsComparison.js:319
+#: src/views/StatisticsComparison.js:360
 msgid "Resultado"
 msgstr "Resultado"
 
@@ -1713,6 +1715,8 @@ msgid "Versão 4.0"
 msgstr "Versão 4.0"
 
 #: src/views/Ranking/TableHeader.js:92
+#: src/views/StatisticsComparison.js:293
+#: src/views/StatisticsComparison.js:306
 msgid "Vitórias"
 msgstr "Vitórias"
 
@@ -1762,7 +1766,7 @@ msgstr "{0, selectordinal, two {2º} few {3ª} other {#º}}"
 msgid "{0} de {1}"
 msgstr "{0} de {1}"
 
-#: src/views/StatisticsComparison.js:192
+#: src/views/StatisticsComparison.js:198
 msgid "{0} {1} e {2} {3}"
 msgstr "{0} {1} e {2} {3}"
 
