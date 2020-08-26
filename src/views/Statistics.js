@@ -398,9 +398,7 @@ const Statistics = () => {
                       {logs.map((log) => (
                         <tr key={log.id}>
                           <td>{log.action}</td>
-                          <td>
-                            {log.created_at.substring(0, 19).replace('T', ' ')}
-                          </td>
+                          <td>{log.time}</td>
                         </tr>
                       ))}
                     </tbody>
