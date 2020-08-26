@@ -45,6 +45,9 @@ const Question = ({
 
   return (
     <fieldset className="fieldset" key={index}>
+      <legend className="legend">
+        <Trans>Pergunta {index + 1}</Trans>
+      </legend>
       <div className="field">
         <label className="label">
           <Trans>Enunciado</Trans>

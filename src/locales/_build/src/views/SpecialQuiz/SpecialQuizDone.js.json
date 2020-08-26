@@ -31,11 +31,19 @@
       ]
     ]
   },
+  "Pergunta {0}": {
+    "origin": [
+      [
+        "src/views/SpecialQuiz/SpecialQuizDone.js",
+        140
+      ]
+    ]
+  },
   "Resposta correcta": {
     "origin": [
       [
         "src/views/SpecialQuiz/SpecialQuizDone.js",
-        147
+        150
       ]
     ]
   },
@@ -43,7 +51,7 @@
     "origin": [
       [
         "src/views/SpecialQuiz/SpecialQuizDone.js",
-        156
+        159
       ]
     ]
   },
@@ -51,7 +59,7 @@
     "origin": [
       [
         "src/views/SpecialQuiz/SpecialQuizDone.js",
-        164
+        167
       ]
     ]
   },
@@ -59,7 +67,7 @@
     "origin": [
       [
         "src/views/SpecialQuiz/SpecialQuizDone.js",
-        167
+        170
       ]
     ]
   },
@@ -67,7 +75,7 @@
     "origin": [
       [
         "src/views/SpecialQuiz/SpecialQuizDone.js",
-        169
+        172
       ]
     ]
   },
@@ -75,7 +83,7 @@
     "origin": [
       [
         "src/views/SpecialQuiz/SpecialQuizDone.js",
-        177
+        180
       ]
     ]
   }

@@ -1,9 +1,17 @@
 {
+  "Pergunta {0}": {
+    "origin": [
+      [
+        "src/views/admin/specialQuizzes/Question.js",
+        49
+      ]
+    ]
+  },
   "Enunciado": {
     "origin": [
       [
         "src/views/admin/specialQuizzes/Question.js",
-        50
+        53
       ]
     ]
   },
@@ -11,7 +19,7 @@
     "origin": [
       [
         "src/views/admin/specialQuizzes/Question.js",
-        66
+        69
       ]
     ]
   },
@@ -19,7 +27,7 @@
     "origin": [
       [
         "src/views/admin/specialQuizzes/Question.js",
-        79
+        82
       ]
     ]
   },
@@ -27,7 +35,7 @@
     "origin": [
       [
         "src/views/admin/specialQuizzes/Question.js",
-        113
+        116
       ]
     ]
   }

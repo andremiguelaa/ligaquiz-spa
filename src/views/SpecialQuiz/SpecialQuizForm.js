@@ -86,6 +86,9 @@ const SpecialQuizForm = ({ data, userAnswers }) => {
           <form onSubmit={handleSubmit}>
             {data.quiz.questions.map((question, index) => (
               <div key={question.id} className={classes.question}>
+                <h2 className="subtitle has-text-weight-bold">
+                  <Trans>Pergunta {index + 1}</Trans>
+                </h2>
                 <div className={classes.questionText}>
                   <Markdown content={question.content} />
                 </div>

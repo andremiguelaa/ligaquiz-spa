@@ -17,7 +17,7 @@ msgstr ""
 msgid "<0>A Liga Quiz é um jogo de cultura geral onde a confiança na honestidade dos jogadores é crucial.</0><1><2>É expressamente proibido usar qualquer fonte externa para obter respostas às perguntas.</2> Isto inclui:</1><3><4>Pedir pistas/respostas a outras pessoas.</4><5>Usar a Internet, livros ou outro material de consulta para pesquisa de pistas/respostas.</5><6>Usar calculadoras, instrumentos musicais ou outros equipamentos para ajudar à resposta.</6></3><7>Apenas papel e caneta/lápis são permitidos.</7><8><9>Pede-se também a todos os jogadores que joguem todos os dias.</9> As faltas adulteram a veracidade da classificação final e podem levar à descida de divisão ao incumpridor.</8>"
 msgstr "<0>A Liga Quiz é um jogo de cultura geral onde a confiança na honestidade dos jogadores é crucial.</0><1><2>É expressamente proibido usar qualquer fonte externa para obter respostas às perguntas.</2> Isto inclui:</1><3><4>Pedir pistas/respostas a outras pessoas.</4><5>Usar a Internet, livros ou outro material de consulta para pesquisa de pistas/respostas.</5><6>Usar calculadoras, instrumentos musicais ou outros equipamentos para ajudar à resposta.</6></3><7>Apenas papel e caneta/lápis são permitidos.</7><8><9>Pede-se também a todos os jogadores que joguem todos os dias.</9> As faltas adulteram a veracidade da classificação final e podem levar à descida de divisão ao incumpridor.</8>"
 
-#: src/views/SpecialQuiz/SpecialQuizForm.js:183
+#: src/views/SpecialQuiz/SpecialQuizForm.js:186
 msgid "<0>Cada pergunta certa num quiz especial vale 20 pontos.</0><1>Em cada quiz especial podes usar até 5 jokers.</1><2>Ao usares um joker numa pergunta, caso acertes, ganhas pontos adicionais consoante a percentagem de pessoas que erraram essa pergunta.</2><3><4>Exemplo:</4> Se acertares uma pergunta onde usaste um joker e 60% dos jogadores falharem ganhas 80 pontos (20+60).</3><5>Caso uses um joker e falhes a pergunta, perdes 20 pontos!</5>"
 msgstr "<0>Cada pergunta certa num quiz especial vale 20 pontos.</0><1>Em cada quiz especial podes usar até 5 jokers.</1><2>Ao usares um joker numa pergunta, caso acertes, ganhas pontos adicionais consoante a percentagem de pessoas que erraram essa pergunta.</2><3><4>Exemplo:</4> Se acertares uma pergunta onde usaste um joker e 60% dos jogadores falharem ganhas 80 pontos (20+60).</3><5>Caso uses um joker e falhes a pergunta, perdes 20 pontos!</5>"
 
@@ -280,8 +280,8 @@ msgstr "Conta"
 msgid "Conteúdo"
 msgstr "Conteúdo"
 
-#: src/views/Game.js:170
-#: src/views/Game.js:210
+#: src/views/Game.js:173
+#: src/views/Game.js:213
 #: src/views/Question.js:239
 #: src/views/admin/quizzes/Answer.js:17
 msgid "Correcta"
@@ -462,7 +462,7 @@ msgstr "Entretenimento"
 
 #: src/views/admin/quizzes/Question.js:90
 #: src/views/admin/search/Search.js:91
-#: src/views/admin/specialQuizzes/Question.js:50
+#: src/views/admin/specialQuizzes/Question.js:53
 msgid "Enunciado"
 msgstr "Enunciado"
 
@@ -478,8 +478,8 @@ msgstr "Enviar sugestão/reclamação"
 msgid "Enviámos-te um e-mail, segue as instruções para definir uma nova palavra-passe."
 msgstr "Enviámos-te um e-mail, segue as instruções para definir uma nova palavra-passe."
 
-#: src/views/Game.js:172
-#: src/views/Game.js:212
+#: src/views/Game.js:175
+#: src/views/Game.js:215
 #: src/views/Question.js:241
 #: src/views/admin/quizzes/Answer.js:18
 msgid "Errada"
@@ -526,7 +526,7 @@ msgid "Escala"
 msgstr "Escala"
 
 #: src/views/admin/quizzes/Question.js:153
-#: src/views/admin/specialQuizzes/Question.js:113
+#: src/views/admin/specialQuizzes/Question.js:116
 msgid "Escolhe o ficheiro"
 msgstr "Escolhe o ficheiro"
 
@@ -558,7 +558,7 @@ msgstr "Estatísticas"
 msgid "Estatísticas de {0} {1}"
 msgstr "Estatísticas de {0} {1}"
 
-#: src/views/Quiz/QuizForm.js:384
+#: src/views/Quiz/QuizForm.js:403
 msgid "Estatísticas do adversário"
 msgstr "Estatísticas do adversário"
 
@@ -570,8 +570,8 @@ msgstr "Estilo de Vida"
 msgid "F"
 msgstr "F"
 
-#: src/views/Game.js:178
-#: src/views/Game.js:218
+#: src/views/Game.js:181
+#: src/views/Game.js:221
 msgid "Falta"
 msgstr "Falta"
 
@@ -724,11 +724,11 @@ msgid "Jogos e Passatempos"
 msgstr "Jogos e Passatempos"
 
 #: src/views/Question.js:217
-#: src/views/SpecialQuiz/SpecialQuizForm.js:162
+#: src/views/SpecialQuiz/SpecialQuizForm.js:165
 msgid "Joker"
 msgstr "Joker"
 
-#: src/views/SpecialQuiz/SpecialQuizDone.js:164
+#: src/views/SpecialQuiz/SpecialQuizDone.js:167
 msgid "Joker usado"
 msgstr "Joker usado"
 
@@ -786,7 +786,7 @@ msgid "Moda"
 msgstr "Moda"
 
 #: src/views/admin/quizzes/Question.js:119
-#: src/views/admin/specialQuizzes/Question.js:79
+#: src/views/admin/specialQuizzes/Question.js:82
 msgid "Multimédia"
 msgstr "Multimédia"
 
@@ -873,7 +873,7 @@ msgstr "Notificações"
 msgid "Nova entrada para o ranking"
 msgstr "Nova entrada para o ranking"
 
-#: src/views/SpecialQuiz/SpecialQuizDone.js:169
+#: src/views/SpecialQuiz/SpecialQuizDone.js:172
 msgid "Não"
 msgstr "Não"
 
@@ -980,7 +980,7 @@ msgstr "Não foi possível gravar o quiz especial."
 msgid "Não foi possível gravar o quiz."
 msgstr "Não foi possível gravar o quiz."
 
-#: src/views/Quiz/QuizForm.js:366
+#: src/views/Quiz/QuizForm.js:385
 msgid "Não foi possível obter as estatísticas do adversário"
 msgstr "Não foi possível obter as estatísticas do adversário"
 
@@ -992,7 +992,7 @@ msgstr "Não foi possível publicar o ranking mensal."
 msgid "Não foi possível submeter o quiz especial."
 msgstr "Não foi possível submeter o quiz especial."
 
-#: src/views/Quiz/QuizForm.js:140
+#: src/views/Quiz/QuizForm.js:156
 msgid "Não foi possível submeter o quiz."
 msgstr "Não foi possível submeter o quiz."
 
@@ -1047,11 +1047,12 @@ msgstr "Palavra-passe alterada com sucesso.<0/>Clica <1>aqui</1> e usa as novas 
 msgid "Para mais pormenores de como o ranking é calculado deve ser consultado este artigo:"
 msgstr "Para mais pormenores de como o ranking é calculado deve ser consultado este artigo:"
 
-#: src/views/Game.js:138
+#: src/views/Game.js:141
 #: src/views/GenreRanking/Table.js:44
-#: src/views/Quiz/QuizDone.js:49
-#: src/views/Quiz/QuizForm.js:421
-#: src/views/SpecialQuiz/SpecialQuizDone.js:177
+#: src/views/Quiz/QuizDone.js:52
+#: src/views/Quiz/QuizForm.js:440
+#: src/views/Quiz/QuizForm.js:501
+#: src/views/SpecialQuiz/SpecialQuizDone.js:180
 #: src/views/Statistics.js:284
 msgid "Percentagem de acerto"
 msgstr "Percentagem de acerto"
@@ -1088,7 +1089,13 @@ msgstr "Perfil actualizado com sucesso."
 msgid "Pergunta"
 msgstr "Pergunta"
 
+#: src/views/Game.js:109
+#: src/views/Quiz/QuizDone.js:16
+#: src/views/Quiz/QuizForm.js:189
+#: src/views/SpecialQuiz/SpecialQuizDone.js:140
+#: src/views/SpecialQuiz/SpecialQuizForm.js:90
 #: src/views/admin/quizzes/Question.js:63
+#: src/views/admin/specialQuizzes/Question.js:49
 msgid "Pergunta {0}"
 msgstr "Pergunta {0}"
 
@@ -1119,7 +1126,7 @@ msgstr "Política Actual"
 msgid "Pontos"
 msgstr "Pontos"
 
-#: src/views/Quiz/QuizForm.js:221
+#: src/views/Quiz/QuizForm.js:240
 msgid "Pontos a atribuir ao adversário"
 msgstr "Pontos a atribuir ao adversário"
 
@@ -1131,7 +1138,7 @@ msgstr "Pontos a favor"
 msgid "Pontos atribuídos"
 msgstr "Pontos atribuídos"
 
-#: src/views/Quiz/QuizDone.js:41
+#: src/views/Quiz/QuizDone.js:44
 msgid "Pontos atribuídos ao adverário"
 msgstr "Pontos atribuídos ao adverário"
 
@@ -1252,7 +1259,7 @@ msgstr "Quiz especial | Editar"
 msgid "Quiz gravado com sucesso."
 msgstr "Quiz gravado com sucesso."
 
-#: src/views/Quiz/QuizForm.js:136
+#: src/views/Quiz/QuizForm.js:152
 msgid "Quiz submetido com sucesso."
 msgstr "Quiz submetido com sucesso."
 
@@ -1368,7 +1375,7 @@ msgstr "Registo de acções (últimos 7 dias)"
 #: src/partials/Header.js:71
 #: src/routes.js:81
 #: src/views/Rules.js:25
-#: src/views/SpecialQuiz/SpecialQuizForm.js:180
+#: src/views/SpecialQuiz/SpecialQuizForm.js:183
 msgid "Regras"
 msgstr "Regras"
 
@@ -1390,24 +1397,24 @@ msgstr "Remover prova"
 msgid "Remover última divisão"
 msgstr "Remover última divisão"
 
-#: src/views/Quiz/QuizForm.js:191
-#: src/views/SpecialQuiz/SpecialQuizForm.js:108
+#: src/views/Quiz/QuizForm.js:210
+#: src/views/SpecialQuiz/SpecialQuizForm.js:111
 #: src/views/admin/quizzes/Question.js:106
 #: src/views/admin/search/Search.js:101
-#: src/views/admin/specialQuizzes/Question.js:66
+#: src/views/admin/specialQuizzes/Question.js:69
 msgid "Resposta"
 msgstr "Resposta"
 
 #: src/views/Question.js:120
-#: src/views/Quiz/QuizDone.js:23
-#: src/views/SpecialQuiz/SpecialQuizDone.js:147
+#: src/views/Quiz/QuizDone.js:26
+#: src/views/SpecialQuiz/SpecialQuizDone.js:150
 #: src/views/admin/quizzes/QuizCorrect.js:133
 #: src/views/admin/specialQuizzes/SpecialQuizCorrect.js:133
 msgid "Resposta correcta"
 msgstr "Resposta correcta"
 
-#: src/views/Quiz/QuizDone.js:31
-#: src/views/SpecialQuiz/SpecialQuizDone.js:156
+#: src/views/Quiz/QuizDone.js:34
+#: src/views/SpecialQuiz/SpecialQuizDone.js:159
 #: src/views/admin/quizzes/QuizCorrect.js:148
 #: src/views/admin/specialQuizzes/SpecialQuizCorrect.js:148
 msgid "Resposta dada"
@@ -1470,7 +1477,7 @@ msgstr "Selecciona os jogadores que jogaram esta prova:"
 #: src/views/Ranking.js:191
 #: src/views/Seasons.js:104
 #: src/views/SpecialQuizzes.js:129
-#: src/views/Statistics.js:411
+#: src/views/Statistics.js:409
 #: src/views/admin/nationalRanking/Events/List.js:78
 #: src/views/admin/nationalRanking/Players/List.js:95
 #: src/views/admin/nationalRanking/Rankings.js:154
@@ -1484,7 +1491,7 @@ msgid "Sem registos"
 msgstr "Sem registos"
 
 #: src/views/Question.js:236
-#: src/views/SpecialQuiz/SpecialQuizDone.js:167
+#: src/views/SpecialQuiz/SpecialQuizDone.js:170
 msgid "Sim"
 msgstr "Sim"
 
@@ -1504,19 +1511,19 @@ msgstr "Squizzed"
 msgid "Subiu"
 msgstr "Subiu"
 
-#: src/views/Quiz/QuizForm.js:356
+#: src/views/Quiz/QuizForm.js:375
 #: src/views/RecoverPassword.js:98
 #: src/views/ResetPassword.js:140
-#: src/views/SpecialQuiz/SpecialQuizForm.js:170
+#: src/views/SpecialQuiz/SpecialQuizForm.js:173
 msgid "Submeter"
 msgstr "Submeter"
 
-#: src/views/Quiz/QuizForm.js:492
-#: src/views/SpecialQuiz/SpecialQuizForm.js:208
+#: src/views/Quiz/QuizForm.js:555
+#: src/views/SpecialQuiz/SpecialQuizForm.js:211
 msgid "Submeter quiz"
 msgstr "Submeter quiz"
 
-#: src/views/Quiz/QuizForm.js:478
+#: src/views/Quiz/QuizForm.js:541
 msgid "Submissão inválida"
 msgstr "Submissão inválida"
 
@@ -1524,7 +1531,12 @@ msgstr "Submissão inválida"
 msgid "Subscrição"
 msgstr "Subscrição"
 
-#: src/views/Quiz/QuizForm.js:410
+#: src/views/Quiz/QuizForm.js:479
+msgid "Subtema"
+msgstr "Subtema"
+
+#: src/views/Quiz/QuizForm.js:429
+#: src/views/Quiz/QuizForm.js:490
 #: src/views/Statistics.js:274
 msgid "T"
 msgstr "T"
@@ -1541,7 +1553,7 @@ msgstr "Tecnologia e Invenções"
 msgid "Televisão"
 msgstr "Televisão"
 
-#: src/views/Quiz/QuizForm.js:399
+#: src/views/Quiz/QuizForm.js:418
 #: src/views/SpecialQuizzes.js:83
 #: src/views/Statistics.js:253
 #: src/views/admin/specialQuizzes/SpecialQuizForm.js:183
@@ -1625,12 +1637,12 @@ msgstr "Tens a certeza que queres apagar este quiz?"
 msgid "Tens a certeza que queres apagar este ranking mensal?"
 msgstr "Tens a certeza que queres apagar este ranking mensal?"
 
-#: src/views/Quiz/QuizForm.js:493
-#: src/views/SpecialQuiz/SpecialQuizForm.js:209
+#: src/views/Quiz/QuizForm.js:556
+#: src/views/SpecialQuiz/SpecialQuizForm.js:212
 msgid "Tens a certeza que queres submeter o quiz?"
 msgstr "Tens a certeza que queres submeter o quiz?"
 
-#: src/views/Quiz/QuizForm.js:480
+#: src/views/Quiz/QuizForm.js:543
 msgid "Tens pontos por atribuir.<0/>Atribui-os antes de fazer a submissão."
 msgstr "Tens pontos por atribuir.<0/>Atribui-os antes de fazer a submissão."
 
@@ -1651,7 +1663,8 @@ msgstr "Todos os dados deste formulário serão descartados.<0/>Tens a certeza q
 msgid "Total"
 msgstr "Total"
 
-#: src/views/Quiz/QuizForm.js:407
+#: src/views/Quiz/QuizForm.js:426
+#: src/views/Quiz/QuizForm.js:487
 #: src/views/Statistics.js:272
 msgid "Total de respostas"
 msgstr "Total de respostas"

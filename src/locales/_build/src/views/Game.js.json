@@ -7,11 +7,19 @@
       ]
     ]
   },
+  "Pergunta {0}": {
+    "origin": [
+      [
+        "src/views/Game.js",
+        109
+      ]
+    ]
+  },
   "Percentagem de acerto": {
     "origin": [
       [
         "src/views/Game.js",
-        138
+        141
       ]
     ]
   },
@@ -19,11 +27,11 @@
     "origin": [
       [
         "src/views/Game.js",
-        170
+        173
       ],
       [
         "src/views/Game.js",
-        210
+        213
       ]
     ]
   },
@@ -31,11 +39,11 @@
     "origin": [
       [
         "src/views/Game.js",
-        172
+        175
       ],
       [
         "src/views/Game.js",
-        212
+        215
       ]
     ]
   },
@@ -43,11 +51,11 @@
     "origin": [
       [
         "src/views/Game.js",
-        178
+        181
       ],
       [
         "src/views/Game.js",
-        218
+        221
       ]
     ]
   }

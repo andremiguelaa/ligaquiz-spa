@@ -1,9 +1,17 @@
 {
+  "Pergunta {0}": {
+    "origin": [
+      [
+        "src/views/Quiz/QuizDone.js",
+        16
+      ]
+    ]
+  },
   "Resposta correcta": {
     "origin": [
       [
         "src/views/Quiz/QuizDone.js",
-        23
+        26
       ]
     ]
   },
@@ -11,7 +19,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizDone.js",
-        31
+        34
       ]
     ]
   },
@@ -19,7 +27,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizDone.js",
-        41
+        44
       ]
     ]
   },
@@ -27,7 +35,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizDone.js",
-        49
+        52
       ]
     ]
   }

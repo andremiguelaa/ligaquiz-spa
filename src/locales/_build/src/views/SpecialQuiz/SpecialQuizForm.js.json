@@ -23,11 +23,19 @@
       ]
     ]
   },
+  "Pergunta {0}": {
+    "origin": [
+      [
+        "src/views/SpecialQuiz/SpecialQuizForm.js",
+        90
+      ]
+    ]
+  },
   "Resposta": {
     "origin": [
       [
         "src/views/SpecialQuiz/SpecialQuizForm.js",
-        108
+        111
       ]
     ]
   },
@@ -35,7 +43,7 @@
     "origin": [
       [
         "src/views/SpecialQuiz/SpecialQuizForm.js",
-        162
+        165
       ]
     ]
   },
@@ -43,7 +51,7 @@
     "origin": [
       [
         "src/views/SpecialQuiz/SpecialQuizForm.js",
-        170
+        173
       ]
     ]
   },
@@ -51,7 +59,7 @@
     "origin": [
       [
         "src/views/SpecialQuiz/SpecialQuizForm.js",
-        180
+        183
       ]
     ]
   },
@@ -59,7 +67,7 @@
     "origin": [
       [
         "src/views/SpecialQuiz/SpecialQuizForm.js",
-        183
+        186
       ]
     ]
   },
@@ -67,7 +75,7 @@
     "origin": [
       [
         "src/views/SpecialQuiz/SpecialQuizForm.js",
-        208
+        211
       ]
     ]
   },
@@ -75,7 +83,7 @@
     "origin": [
       [
         "src/views/SpecialQuiz/SpecialQuizForm.js",
-        209
+        212
       ]
     ]
   }

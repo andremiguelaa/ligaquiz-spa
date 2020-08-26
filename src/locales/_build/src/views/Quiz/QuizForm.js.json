@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        136
+        152
       ]
     ]
   },
@@ -11,7 +11,15 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        140
+        156
+      ]
+    ]
+  },
+  "Pergunta {0}": {
+    "origin": [
+      [
+        "src/views/Quiz/QuizForm.js",
+        189
       ]
     ]
   },
@@ -19,7 +27,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        191
+        210
       ]
     ]
   },
@@ -27,7 +35,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        221
+        240
       ]
     ]
   },
@@ -35,7 +43,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        356
+        375
       ]
     ]
   },
@@ -43,7 +51,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        366
+        385
       ]
     ]
   },
@@ -51,7 +59,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        384
+        403
       ]
     ]
   },
@@ -59,7 +67,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        399
+        418
       ]
     ]
   },
@@ -67,7 +75,11 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        407
+        426
+      ],
+      [
+        "src/views/Quiz/QuizForm.js",
+        487
       ]
     ]
   },
@@ -75,7 +87,11 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        410
+        429
+      ],
+      [
+        "src/views/Quiz/QuizForm.js",
+        490
       ]
     ]
   },
@@ -83,7 +99,19 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        421
+        440
+      ],
+      [
+        "src/views/Quiz/QuizForm.js",
+        501
+      ]
+    ]
+  },
+  "Subtema": {
+    "origin": [
+      [
+        "src/views/Quiz/QuizForm.js",
+        479
       ]
     ]
   },
@@ -91,7 +119,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        478
+        541
       ]
     ]
   },
@@ -99,7 +127,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        480
+        543
       ]
     ]
   },
@@ -107,7 +135,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        492
+        555
       ]
     ]
   },
@@ -115,7 +143,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        493
+        556
       ]
     ]
   }

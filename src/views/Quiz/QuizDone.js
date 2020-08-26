@@ -12,6 +12,9 @@ const QuizDone = ({ data, userAnswers }) => (
   <>
     {data.quiz.questions.map((question, index) => (
       <div key={question.id} className={classes.question}>
+        <h2 className="subtitle has-text-weight-bold">
+          <Trans>Pergunta {index + 1}</Trans>
+        </h2>
         {question.content && (
           <div className={classes.questionText}>
             <Markdown content={question.content} />
