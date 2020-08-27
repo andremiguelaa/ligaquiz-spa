@@ -20,7 +20,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "prod": "react-scripts build && rm -rf prod && mv ./build ./prod",
+    "prod": "react-scripts build && rm -rf prod && mv ./build ./prod && find ./prod -name \"*.map\" -type f -delete",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "add-locale": "lingui add-locale",
