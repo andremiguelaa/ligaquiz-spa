@@ -234,7 +234,7 @@ const Statistics = () => {
             }}
           />
         </div>
-        {userId && userId !== authUser?.id && (
+        {userId && authUser && userId !== authUser?.id && (
           <div className={classnames('has-text-centered', classes.compare)}>
             <Link to={`/statistics-comparison/${userId}/${authUser?.id}`}>
               <Trans>Comparar comigo</Trans>
