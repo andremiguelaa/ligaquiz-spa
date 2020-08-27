@@ -56,7 +56,7 @@ const Statistics = () => {
     setIndividualQuizzes();
     setStatistics();
     setChartSeries();
-    ApiRequest.get(`users?id[]=${userId || authUser.id}&statistics=true`)
+    ApiRequest.get(`users?id[]=${userId || authUser?.id}&statistics=true`)
       .then(({ data }) => {
         setUser(data[0]);
       })
@@ -234,9 +234,9 @@ const Statistics = () => {
             }}
           />
         </div>
-        {userId && userId !== authUser.id && (
+        {userId && userId !== authUser?.id && (
           <div className={classnames('has-text-centered', classes.compare)}>
-            <Link to={`/statistics-comparison/${userId}/${authUser.id}`}>
+            <Link to={`/statistics-comparison/${userId}/${authUser?.id}`}>
               <Trans>Comparar comigo</Trans>
             </Link>
           </div>
@@ -374,7 +374,7 @@ const Statistics = () => {
           </table>
         </section>
       )}
-      {authUser.valid_roles.admin && (
+      {authUser?.valid_roles.admin && (
         <>
           {logs ? (
             <section className="section content">
