@@ -113,7 +113,7 @@ const Statistics = () => {
   }, [user, genres]);
 
   useEffect(() => {
-    if (authUser.valid_roles.admin) {
+    if (authUser?.valid_roles.admin) {
       ApiRequest.get(
         `logs?user_id[]=${userId || authUser.id}&start_date=${formatDate(
           subDays(new Date(), 7)
