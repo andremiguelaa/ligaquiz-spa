@@ -38,8 +38,8 @@ const Statistics = () => {
       .then(({ data }) => {
         setGenres(data);
       })
-      .catch(() => {
-        setError(true);
+      .catch(({ response }) => {
+        setError(response?.status);
       });
   }, []);
 
@@ -122,12 +122,12 @@ const Statistics = () => {
             );
             setGameStatistics(statistics);
           })
-          .catch(() => {
-            setError(true);
+          .catch(({ response }) => {
+            setError(response?.status);
           });
       })
-      .catch(() => {
-        setError(true);
+      .catch(({ response }) => {
+        setError(response?.status);
       });
   }, [userId1, userId2]);
 
@@ -179,6 +179,9 @@ const Statistics = () => {
   }
 
   if (error) {
+    if (error === 404 || error === 400 || error === 401 || error === 403) {
+      return <NoMatch />;
+    }
     return (
       <Error>
         <Trans>Erro de servidor. Tenta mais tarde.</Trans>
