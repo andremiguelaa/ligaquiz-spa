@@ -42,6 +42,9 @@
       font-size: 8px;
       top: 4px;
       text-decoration: none;
+      &:hover {
+        color: $black-bis;
+      }
     }
   }
   .roundsWrapper {

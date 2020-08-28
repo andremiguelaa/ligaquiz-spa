@@ -21,6 +21,8 @@ import formatDate from 'utils/formatDate';
 
 import classes from './Statistics/Statistics.module.scss';
 
+const logsDays = 2;
+
 const isDarkMode =
   window.matchMedia &&
   window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -116,7 +118,7 @@ const Statistics = () => {
     if (authUser?.valid_roles.admin) {
       ApiRequest.get(
         `logs?user_id[]=${userId || authUser.id}&start_date=${formatDate(
-          subDays(new Date(), 7)
+          subDays(new Date(), logsDays)
         )}`
       )
         .then(({ data }) => {
@@ -379,7 +381,7 @@ const Statistics = () => {
           {logs ? (
             <section className="section content">
               <h1 className="has-text-weight-bold is-size-4">
-                <Trans>Registo de acções (últimos 7 dias)</Trans>
+                <Trans>Registo de acções (últimos {logsDays} dias)</Trans>
               </h1>
               {logs.length > 0 ? (
                 <div className="table-container">
@@ -387,7 +389,7 @@ const Statistics = () => {
                     <thead>
                       <tr>
                         <th>
-                          <Trans>Acção</Trans>
+                          <Trans>Descrição</Trans>
                         </th>
                         <th>
                           <Trans>Hora</Trans>
@@ -397,7 +399,21 @@ const Statistics = () => {
                     <tbody>
                       {logs.map((log) => (
                         <tr key={log.id}>
-                          <td>{log.action}</td>
+                          <td>
+                            {log.action || (
+                              <>
+                                Question Id: {log.question_id}
+                                <br />
+                                Text: {log.text}
+                                <br />
+                                Points: {log.points}
+                                <br />
+                                Submitted: {log.submitted}
+                                <br />
+                                Correct: {log.correct}
+                              </>
+                            )}
+                          </td>
                           <td>{log.time}</td>
                         </tr>
                       ))}
