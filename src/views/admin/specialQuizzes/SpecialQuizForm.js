@@ -72,7 +72,11 @@ const SpecialQuizForm = () => {
     }
     ApiRequest.get('users')
       .then(({ data }) => {
-        setUsers(data);
+        setUsers(
+          data.sort((a, b) =>
+            `${a.name} ${a.surname}`.localeCompare(`${b.name} ${b.surname}`)
+          )
+        );
       })
       .catch((response) => {
         setError(response?.status);
@@ -223,7 +227,8 @@ const SpecialQuizForm = () => {
                   <Trans render={<option value={0} />}>Nenhum</Trans>
                   {users.map((user) => (
                     <option key={user.id} value={user.id}>
-                      {user.name} {user.surname} ({user.email})
+                      {user.name} {user.surname} (
+                      {user.email ? user.email : `ID: ${user.id}`})
                     </option>
                   ))}
                 </select>

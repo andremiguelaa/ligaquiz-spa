@@ -93,9 +93,15 @@ const Seasons = () => {
                     id: 'season',
                     className: 'is-vertical-middle',
                     render: (item) => (
-                      <Link to={`/ranking/${item.season}`}>
-                        <Trans>Temporada {item.season}</Trans>
-                      </Link>
+                      <>
+                        {item.leagues.length > 0 ? (
+                          <Link to={`/ranking/${item.season}`}>
+                            <Trans>Temporada {item.season}</Trans>
+                          </Link>
+                        ) : (
+                          <Trans>Temporada {item.season}</Trans>
+                        )}
+                      </>
                     ),
                   },
                   {

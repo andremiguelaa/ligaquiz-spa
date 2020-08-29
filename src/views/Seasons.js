@@ -24,7 +24,7 @@ const Seasons = () => {
       .then(({ data }) => {
         setSeasonsList(
           data.reduce((acc, season) => {
-            if (season.past) {
+            if (season.public && season.leagues.length > 0) {
               acc.push(season);
             }
             return acc;

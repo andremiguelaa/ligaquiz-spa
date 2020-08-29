@@ -82,9 +82,9 @@ const Ranking = () => {
       ApiRequest.get(`seasons`)
         .then(({ data }) => {
           if (data.length) {
-            let lastSeason = data.find((season) => season.past); // WRONG
+            let lastSeason = data.find((season) => season.public);
             if (!lastSeason) {
-              lastSeason = data[data.length - 1]; // WRONG
+              lastSeason = data[0];
             }
             const userLeague = lastSeason.leagues.find(({ user_ids }) =>
               user_ids.includes(user.id.toString())
