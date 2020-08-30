@@ -1,12 +1,14 @@
 import React from 'react';
 import { Trans } from '@lingui/macro';
 
+import Login from 'views/Login';
+
 import classes from './Error.module.scss';
 
 const error = {
   400: {
     icon: <i className="fa fa-bomb" />,
-    message: <Trans>Erro de servidor. Tenta mais tarde.</Trans>,
+    message: <Trans>Conteúdo não encontrado.</Trans>,
   },
   401: {
     icon: <i className="fa fa-ban" />,
@@ -46,6 +48,7 @@ const Error = ({ status }) => (
         <Trans>Erro de servidor. Tenta mais tarde.</Trans>
       )}
     </div>
+    {status === 401 && <Login refresh />}
   </>
 );
 

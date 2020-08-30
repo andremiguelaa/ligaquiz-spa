@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 
 import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
 import { setLoginData } from 'utils/Auth';
 import PageHeader from 'components/PageHeader';
+import Loading from 'components/Loading';
 import Forbidden from './Forbidden';
 
-const Login = ({ history }) => {
+const Login = ({ refresh }) => {
+  const history = useHistory();
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -19,8 +21,11 @@ const Login = ({ history }) => {
 
   const [{ user }, dispatch] = useStateValue();
 
-  if (user) {
+  if (user && !refresh) {
     return <Forbidden />;
+  }
+  if (user && refresh) {
+    return <Loading type="full" />;
   }
 
   const handleSubmit = (event) => {
@@ -30,7 +35,11 @@ const Login = ({ history }) => {
     ApiRequest.post('session', formData)
       .then(({ data }) => {
         setLoginData(data, dispatch);
-        history.push('/');
+        if (refresh) {
+          window.location.reload();
+        } else {
+          history.push('/');
+        }
       })
       .catch((error) => {
         try {
