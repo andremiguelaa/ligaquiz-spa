@@ -37,7 +37,7 @@ const Search = () => {
     }
   }, [string]);
 
-  if(!user){
+  if (!user) {
     return <Error status={401} />;
   }
 
@@ -97,6 +97,30 @@ const Search = () => {
                 label: <Trans>Resposta</Trans>,
                 render: (item) => <Markdown content={item.answer} />,
                 className: classes.answer,
+              },
+              {
+                id: 'quiz',
+                label: <Trans>Quiz</Trans>,
+                render: (item) => (
+                  <>
+                    {item.quiz.type === 'quiz' ? (
+                      <Link to={`/quiz/${item.quiz.date}`}>
+                        <Trans>Quiz</Trans>
+                      </Link>
+                    ) : (
+                      <Link to={`/special-quiz/${item.quiz.date}`}>
+                        <Trans>Quiz especial</Trans>
+                      </Link>
+                    )}
+                  </>
+                ),
+                className: classes.quiz,
+              },
+              {
+                id: 'date',
+                label: <Trans>Data</Trans>,
+                render: (item) => <>{item.quiz.date}</>,
+                className: classes.date,
               },
             ]}
             onChange={(newPage) => {
