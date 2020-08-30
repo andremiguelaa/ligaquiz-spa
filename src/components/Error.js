@@ -10,7 +10,11 @@ const error = {
   },
   401: {
     icon: <i className="fa fa-ban" />,
-    message: <Trans>É necessário autenticares-te primeiro para aceder a esta página.</Trans>,
+    message: (
+      <Trans>
+        É necessário autenticares-te primeiro para aceder a esta página.
+      </Trans>
+    ),
   },
   403: {
     icon: <i className="fa fa-ban" />,
@@ -29,10 +33,14 @@ const error = {
 const Error = ({ status }) => (
   <>
     <div className={classes.icon}>
-      {error[status] ? error[status].icon : <i className="fa fa-bomb" />}
+      {status && error[status] ? (
+        error[status].icon
+      ) : (
+        <i className="fa fa-bomb" />
+      )}
     </div>
     <div className={classes.content}>
-      {error[status] ? (
+      {status && error[status] ? (
         error[status].message
       ) : (
         <Trans>Erro de servidor. Tenta mais tarde.</Trans>
