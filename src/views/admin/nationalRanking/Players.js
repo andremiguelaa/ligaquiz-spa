@@ -3,6 +3,7 @@ import { Trans } from '@lingui/macro';
 import { toast } from 'react-toastify';
 
 import ApiRequest from 'utils/ApiRequest';
+import { useStateValue } from 'state/State';
 import Loading from 'components/Loading';
 import Error from 'components/Error';
 import Modal from 'components/Modal';
@@ -12,6 +13,7 @@ import List from './Players/List';
 import Form from './Players/Form';
 
 const Players = () => {
+  const [{ user }] = useStateValue();
   const [error, setError] = useState(false);
   const [individualQuizPlayers, setIndividualQuizPlayers] = useState();
 
@@ -70,6 +72,10 @@ const Players = () => {
         setDeleting(false);
       });
   };
+
+  if (!user) {
+    return <Error status={401} />;
+  }
 
   if (error) {
     return <Error status={error} />;

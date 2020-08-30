@@ -37,6 +37,10 @@ const Search = () => {
     }
   }, [string]);
 
+  if(!user){
+    return <Error status={401} />;
+  }
+
   if (!(user.valid_roles.admin || user.valid_roles.quiz_editor)) {
     return <Error status={403} />;
   }

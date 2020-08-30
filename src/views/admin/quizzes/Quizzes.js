@@ -58,6 +58,10 @@ const Quizzes = () => {
       });
   };
 
+  if(!user){
+    return <Error status={401} />;
+  }
+
   if (
     !(
       user.valid_roles.admin ||

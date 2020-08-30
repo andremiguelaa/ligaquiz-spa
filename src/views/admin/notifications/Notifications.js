@@ -31,6 +31,10 @@ const Notifications = () => {
       });
   }, []);
 
+  if(!user){
+    return <Error status={401} />;
+  }
+
   if (!user.valid_roles.admin) {
     return <Error status={404} />;
   }

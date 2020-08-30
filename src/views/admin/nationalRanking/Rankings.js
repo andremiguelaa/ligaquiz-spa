@@ -17,6 +17,7 @@ import { monthListOptions } from './utils/options';
 const Rankings = () => {
   const [
     {
+      user,
       settings: { language },
     },
   ] = useStateValue();
@@ -69,6 +70,10 @@ const Rankings = () => {
         setDeleting(false);
       });
   };
+
+  if (!user) {
+    return <Error status={401} />;
+  }
 
   if (error) {
     return <Error status={error} />;
