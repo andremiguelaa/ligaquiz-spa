@@ -95,7 +95,6 @@ const Question = ({
               onChange={(event) => {
                 const mediaFormData = new FormData();
                 mediaFormData.append('file', event.target.files[0]);
-                mediaFormData.append('name', event.target.files[0].name);
                 setUploading(true);
                 ApiRequest.post('media', mediaFormData, {
                   headers: {
