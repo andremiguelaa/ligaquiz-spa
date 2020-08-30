@@ -123,13 +123,14 @@ const Users = () => {
                     <th
                       className={classames(
                         'sortable',
+                        'is-hidden-touch',
                         classes.subscriptionCell
                       )}
                     >
                       <button
                         onClick={() => sortUsersBy('roles.regular_player')}
                       >
-                        <Trans>Subscrição</Trans>
+                        <Trans>Subscrição p/ quizzes da liga</Trans>
                         <span className="icon">
                           <i
                             className={classames('fa', {
@@ -137,6 +138,29 @@ const Users = () => {
                                 order.column !== 'roles.regular_player',
                               [`fa-sort-amount-${order.direction}`]:
                                 order.column === 'roles.regular_player',
+                            })}
+                          ></i>
+                        </span>
+                      </button>
+                    </th>
+                    <th
+                      className={classames(
+                        'sortable',
+                        'is-hidden-touch',
+                        classes.subscriptionCell
+                      )}
+                    >
+                      <button
+                        onClick={() => sortUsersBy('roles.special_quiz_player')}
+                      >
+                        <Trans>Subscrição p/ quizzes especiais</Trans>
+                        <span className="icon">
+                          <i
+                            className={classames('fa', {
+                              'fa-sort':
+                                order.column !== 'roles.special_quiz_player',
+                              [`fa-sort-amount-${order.direction}`]:
+                                order.column === 'roles.special_quiz_player',
                             })}
                           ></i>
                         </span>
@@ -299,10 +323,20 @@ const Users = () => {
                         <td
                           className={classames(
                             classes.subscriptionCell,
+                            'is-hidden-touch',
                             'is-vertical-middle'
                           )}
                         >
                           {get(user, 'roles.regular_player', '-')}
+                        </td>
+                        <td
+                          className={classames(
+                            classes.subscriptionCell,
+                            'is-hidden-touch',
+                            'is-vertical-middle'
+                          )}
+                        >
+                          {get(user, 'roles.special_quiz_player', '-')}
                         </td>
                         <td className={classes.actionsCell}>
                           <div className="is-pulled-right">

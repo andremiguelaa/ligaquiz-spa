@@ -252,8 +252,8 @@ const Rules = () => {
             Subscrição
           </h2>
           <p>
-            Os novos participantes terão sempre um mês de experiência totalmente
-            gratuito tal como estão a ter os actuais participantes.
+            Os novos participantes têm um mês de experiência totalmente
+            gratuito.
             <br />A partir desse primeiro mês o preço da participação será de
             acordo com a tabela abaixo:
           </p>

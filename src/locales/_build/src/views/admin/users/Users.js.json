@@ -23,11 +23,19 @@
       ]
     ]
   },
-  "Subscrição": {
+  "Subscrição p/ quizzes da liga": {
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        132
+        133
+      ]
+    ]
+  },
+  "Subscrição p/ quizzes especiais": {
+    "origin": [
+      [
+        "src/views/admin/users/Users.js",
+        156
       ]
     ]
   },
@@ -35,7 +43,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        151
+        175
       ]
     ]
   },
@@ -43,7 +51,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        201
+        225
       ]
     ]
   },
@@ -51,7 +59,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        213
+        237
       ]
     ]
   },
@@ -59,7 +67,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        226
+        250
       ]
     ]
   },
@@ -67,7 +75,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        240
+        264
       ]
     ]
   },
@@ -75,7 +83,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        253
+        277
       ]
     ]
   },
@@ -83,7 +91,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        266
+        290
       ]
     ]
   },
@@ -91,7 +99,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        279
+        303
       ]
     ]
   },
@@ -99,7 +107,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        291
+        315
       ]
     ]
   },
@@ -107,7 +115,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        333
+        367
       ]
     ]
   }
