@@ -11,7 +11,6 @@ import Error from 'components/Error';
 import PageHeader from 'components/PageHeader';
 import EmptyState from 'components/EmptyState';
 import PaginatedTable from 'components/PaginatedTable';
-import NoMatch from 'views/NoMatch';
 
 const Seasons = () => {
   const { page } = useParams();
@@ -32,8 +31,8 @@ const Seasons = () => {
       .then(({ data }) => {
         setSeasons(data);
       })
-      .catch(() => {
-        setError(true);
+      .catch(({ response }) => {
+        setError(response?.status);
       });
   };
 
@@ -54,15 +53,11 @@ const Seasons = () => {
   };
 
   if (!user.valid_roles.admin) {
-    return <NoMatch />;
+    return <Error status={403} />;
   }
 
   if (error) {
-    return (
-      <Error>
-        <Trans>Erro de servidor. Tenta mais tarde.</Trans>
-      </Error>
-    );
+    return <Error status={error} />;
   }
 
   return (

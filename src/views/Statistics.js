@@ -12,7 +12,6 @@ import ApiRequest from 'utils/ApiRequest';
 import { getGenreTranslation } from 'utils/getGenreTranslation';
 import Loading from 'components/Loading';
 import Error from 'components/Error';
-import NoMatch from 'views/NoMatch';
 import EmptyState from 'components/EmptyState';
 import PageHeader from 'components/PageHeader';
 import { individualQuizTypeOptions } from 'views/admin/nationalRanking/utils/options';
@@ -130,15 +129,12 @@ const Statistics = () => {
     }
   }, [authUser, userId]);
 
+  if (!authUser) {
+    return <Error status={401} />;
+  }
+
   if (error) {
-    if (error === 404 || error === 400 || error === 401 || error === 403) {
-      return <NoMatch />;
-    }
-    return (
-      <Error>
-        <Trans>Erro de servidor. Tenta mais tarde.</Trans>
-      </Error>
-    );
+    return <Error status={error} />;
   }
 
   if (!user || !genres || !statistics) {

@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
-import { Trans } from '@lingui/macro';
 
 import { useStateValue } from 'state/State';
 import { convertToLongDate } from 'utils/formatDate';
 import ApiRequest from 'utils/ApiRequest';
 import Error from 'components/Error';
 import Loading from 'components/Loading';
-import NoMatch from './NoMatch';
 import SpecialQuizDone from './SpecialQuiz/SpecialQuizDone';
 import SpecialQuizForm from './SpecialQuiz/SpecialQuizForm';
 
@@ -51,8 +49,8 @@ const SpecialQuiz = () => {
             .then(({ data }) => {
               setAuthor(data[0]);
             })
-            .catch(() => {
-              setError(true);
+            .catch(({ response }) => {
+              setError(response?.status);
             });
         }
       })
@@ -62,14 +60,7 @@ const SpecialQuiz = () => {
   }, [date, history]);
 
   if (error) {
-    if (error === 404 || error === 400) {
-      return <NoMatch />;
-    }
-    return (
-      <Error>
-        <Trans>Erro de servidor. Tenta mais tarde.</Trans>
-      </Error>
-    );
+    return <Error status={error} />;
   }
 
   if (loading) {

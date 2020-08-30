@@ -40,6 +40,7 @@ export default (props) => {
           setLoading(false);
         })
         .catch(({ response }) => {
+          setError(response?.status);
           if (response?.status === 401) {
             toast.error(<Trans>A tua sessão expirou.</Trans>, {
               hideProgressBar: true,
@@ -47,20 +48,16 @@ export default (props) => {
             });
             Cookies.remove('AUTH-TOKEN');
             setLoading(false);
-          } else {
-            setError(true);
           }
         });
     } else {
       setLoading(false);
     }
   }, [dispatch, setLoading]);
+
   if (error) {
-    return (
-      <Error>
-        <Trans>Erro de servidor. Tenta mais tarde.</Trans>
-      </Error>
-    );
+    return <Error status={error} />;
   }
+
   return <>{!loading ? props.children : <Loading type="full" />}</>;
 };

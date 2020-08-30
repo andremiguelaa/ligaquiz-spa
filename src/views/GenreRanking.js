@@ -9,7 +9,6 @@ import PageHeader from 'components/PageHeader';
 import Loading from 'components/Loading';
 import Error from 'components/Error';
 import EmptyState from 'components/EmptyState';
-import NoMatch from 'views/NoMatch';
 
 import Table from './GenreRanking/Table';
 
@@ -142,14 +141,7 @@ const GenreRanking = () => {
   }, []);
 
   if (error) {
-    if (error === 404 || error === 400 || error === 401 || error === 403) {
-      return <NoMatch />;
-    }
-    return (
-      <Error>
-        <Trans>Erro de servidor. Tenta mais tarde.</Trans>
-      </Error>
-    );
+    return <Error status={error} />;
   }
 
   if (!statistics || !users) {

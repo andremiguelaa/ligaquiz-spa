@@ -1,13 +1,43 @@
 import React from 'react';
+import { Trans } from '@lingui/macro';
 
 import classes from './Error.module.scss';
 
-const Error = ({ children }) => (
+const error = {
+  400: {
+    icon: <i className="fa fa-bomb" />,
+    message: <Trans>Erro de servidor. Tenta mais tarde.</Trans>,
+  },
+  401: {
+    icon: <i className="fa fa-ban" />,
+    message: <Trans>É necessário autenticares-te primeiro para aceder a esta página.</Trans>,
+  },
+  403: {
+    icon: <i className="fa fa-ban" />,
+    message: <Trans>Não tens acesso a esta página.</Trans>,
+  },
+  404: {
+    icon: <i className="fa fa-exclamation-triangle" />,
+    message: <Trans>Página não encontrada</Trans>,
+  },
+  500: {
+    icon: <i className="fa fa-bomb" />,
+    message: <Trans>Erro de servidor. Tenta mais tarde.</Trans>,
+  },
+};
+
+const Error = ({ status }) => (
   <>
     <div className={classes.icon}>
-      <i className="fa fa-bomb" />
+      {error[status] ? error[status].icon : <i className="fa fa-bomb" />}
     </div>
-    {children && <div className={classes.content}>{children}</div>}
+    <div className={classes.content}>
+      {error[status] ? (
+        error[status].message
+      ) : (
+        <Trans>Erro de servidor. Tenta mais tarde.</Trans>
+      )}
+    </div>
   </>
 );
 

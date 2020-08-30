@@ -115,12 +115,12 @@ const QuizForm = ({ data, userAnswers }) => {
                 )
               );
             })
-            .catch(() => {
-              setStatsError(true);
+            .catch(({ response }) => {
+              setStatsError(response?.status);
             });
         })
-        .catch(() => {
-          setStatsError(true);
+        .catch(({ response }) => {
+          setStatsError(response?.status);
         });
     }
   }, [data.quiz, user]);
@@ -381,11 +381,7 @@ const QuizForm = ({ data, userAnswers }) => {
         {!data.quiz.solo && data.quiz.game && (
           <div className="column is-4">
             {statsError ? (
-              <Error>
-                <Trans>
-                  Não foi possível obter as estatísticas do adversário
-                </Trans>
-              </Error>
+              <Error status={statsError} />
             ) : (
               <>
                 {!opponentGenreStats || !opponentSubgenreStats || !genres ? (

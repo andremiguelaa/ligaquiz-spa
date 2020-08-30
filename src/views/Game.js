@@ -11,7 +11,6 @@ import PageHeader from 'components/PageHeader';
 import Error from 'components/Error';
 import Loading from 'components/Loading';
 import Markdown from 'components/Markdown';
-import NoMatch from './NoMatch';
 
 import classes from './Game/Game.module.scss';
 
@@ -39,8 +38,8 @@ const Game = () => {
           }, {})
         );
       })
-      .catch(() => {
-        setError(true);
+      .catch(({ response }) => {
+        setError(response?.status);
       });
   }, []);
 
@@ -58,18 +57,11 @@ const Game = () => {
   }, [date, user1, user2]);
 
   if (error) {
-    if (error === 404) {
-      return <NoMatch />;
-    }
-    return (
-      <Error>
-        <Trans>Erro de servidor. Tenta mais tarde.</Trans>
-      </Error>
-    );
+    return <Error status={error} />;
   }
 
   if (game && !game.quiz) {
-    return <NoMatch />;
+    return <Error status={404} />;
   }
 
   return (

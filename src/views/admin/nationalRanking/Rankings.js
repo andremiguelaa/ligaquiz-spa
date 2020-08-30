@@ -37,8 +37,8 @@ const Rankings = () => {
       .then(({ data }) => {
         setMonths(data);
       })
-      .catch(() => {
-        setError(true);
+      .catch(({ response }) => {
+        setError(response?.status);
       });
   }, []);
 
@@ -71,11 +71,7 @@ const Rankings = () => {
   };
 
   if (error) {
-    return (
-      <Error>
-        <Trans>Erro de servidor. Tenta mais tarde.</Trans>
-      </Error>
-    );
+    return <Error status={error} />;
   }
 
   return (

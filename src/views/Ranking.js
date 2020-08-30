@@ -9,7 +9,6 @@ import PageHeader from 'components/PageHeader';
 import Error from 'components/Error';
 import EmptyState from 'components/EmptyState';
 import Loading from 'components/Loading';
-import NoMatch from 'views/NoMatch';
 
 import TableHeader from './Ranking/TableHeader';
 import Player from './Ranking/Player';
@@ -129,14 +128,7 @@ const Ranking = () => {
   }, [season, tier, user]);
 
   if (error) {
-    if (error === 404 || error === 400) {
-      return <NoMatch />;
-    }
-    return (
-      <Error>
-        <Trans>Erro de servidor. Tenta mais tarde.</Trans>
-      </Error>
-    );
+    return <Error status={error} />;
   }
 
   if (loading || !users || !seasonData) {

@@ -7,7 +7,6 @@ import Loading from 'components/Loading';
 import Error from 'components/Error';
 import PageHeader from 'components/PageHeader';
 import EmptyState from 'components/EmptyState';
-import NoMatch from 'views/NoMatch';
 
 import FormModal from './modals/FormModal';
 import DeleteModal from './modals/DeleteModal';
@@ -27,21 +26,17 @@ const Notifications = () => {
       .then(({ data }) => {
         setNotifications(data.manual.sort(notificationSort));
       })
-      .catch(() => {
-        setError(true);
+      .catch(({ response }) => {
+        setError(response?.status);
       });
   }, []);
 
   if (!user.valid_roles.admin) {
-    return <NoMatch />;
+    return <Error status={404} />;
   }
 
   if (error) {
-    return (
-      <Error>
-        <Trans>Erro de servidor. Tenta mais tarde.</Trans>
-      </Error>
-    );
+    return <Error status={error} />;
   }
 
   return (

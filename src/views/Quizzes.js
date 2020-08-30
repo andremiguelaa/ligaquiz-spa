@@ -10,7 +10,6 @@ import Error from 'components/Error';
 import EmptyState from 'components/EmptyState';
 import Loading from 'components/Loading';
 import PaginatedTable from 'components/PaginatedTable';
-import NoMatch from './NoMatch';
 
 const Quizzes = () => {
   const { page } = useParams();
@@ -38,14 +37,7 @@ const Quizzes = () => {
   }, []);
 
   if (error) {
-    if (error === 404 || error === 403 || error === 401) {
-      return <NoMatch />;
-    }
-    return (
-      <Error>
-        <Trans>Erro de servidor. Tenta mais tarde.</Trans>
-      </Error>
-    );
+    return <Error status={error} />;
   }
 
   return (

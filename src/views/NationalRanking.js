@@ -8,7 +8,6 @@ import ScrollContainer from 'react-indiana-drag-scroll';
 import PageHeader from 'components/PageHeader';
 import Loading from 'components/Loading';
 import Error from 'components/Error';
-import NoMatch from './NoMatch';
 import ApiRequest from 'utils/ApiRequest';
 import getLocaleMonth from 'utils/getLocaleMonth';
 import { useStateValue } from 'state/State';
@@ -50,8 +49,8 @@ const NationalRanking = () => {
           )
         );
       })
-      .catch(() => {
-        setError(true);
+      .catch(({ response }) => {
+        setError(response?.status);
       });
 
     ApiRequest.get('national-rankings')
@@ -93,22 +92,22 @@ const NationalRanking = () => {
                     });
                     setRanking(rankingWithChanges);
                   })
-                  .catch(() => {
-                    setError(true);
+                  .catch(({ response }) => {
+                    setError(response?.status);
                   });
               } else {
                 setRanking(data.ranking);
               }
             })
-            .catch(() => {
-              setError(true);
+            .catch(({ response }) => {
+              setError(response?.status);
             });
         } else {
           setRanking({});
         }
       })
-      .catch(() => {
-        setError(true);
+      .catch(({ response }) => {
+        setError(response?.status);
       });
   }, [month]);
 
@@ -133,11 +132,7 @@ const NationalRanking = () => {
   };
 
   if (error) {
-    return (
-      <Error>
-        <Trans>Erro de servidor. Tenta mais tarde.</Trans>
-      </Error>
-    );
+    return <Error status={error} />;
   }
 
   if (!players || !ranking) {
@@ -145,7 +140,7 @@ const NationalRanking = () => {
   }
 
   if (month && !rankingList.includes(month)) {
-    return <NoMatch />;
+    return <Error status={404} />;
   }
 
   if (isEmpty(ranking)) {

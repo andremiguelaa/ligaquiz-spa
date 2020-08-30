@@ -10,7 +10,6 @@ import formatDate, { convertToLongDate } from 'utils/formatDate';
 import Loading from 'components/Loading';
 import Error from 'components/Error';
 import PageHeader from 'components/PageHeader';
-import NoMatch from 'views/NoMatch';
 import Question from './Question';
 
 const QuizForm = () => {
@@ -125,14 +124,7 @@ const QuizForm = () => {
   };
 
   if (error) {
-    if (error === 404) {
-      return <NoMatch />;
-    }
-    return (
-      <Error>
-        <Trans>Erro de servidor. Tenta mais tarde.</Trans>
-      </Error>
-    );
+    return <Error status={error} />;
   }
 
   if (!quizDates || (editMode && !quizData) || !genres || !genreStats) {

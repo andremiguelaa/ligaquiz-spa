@@ -9,7 +9,6 @@ import { convertToLongDate } from 'utils/formatDate';
 import ApiRequest from 'utils/ApiRequest';
 import Error from 'components/Error';
 import Loading from 'components/Loading';
-import NoMatch from './NoMatch';
 import QuizDone from './Quiz/QuizDone';
 import QuizForm from './Quiz/QuizForm';
 
@@ -54,14 +53,7 @@ const Quiz = () => {
   }, [date, history]);
 
   if (error) {
-    if (error === 404 || error === 400) {
-      return <NoMatch />;
-    }
-    return (
-      <Error>
-        <Trans>Erro de servidor. Tenta mais tarde.</Trans>
-      </Error>
-    );
+    return <Error status={error} />;
   }
 
   if (loading) {

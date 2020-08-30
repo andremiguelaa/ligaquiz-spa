@@ -51,8 +51,8 @@ const Form = ({ setPage, individualQuizPlayers, initialEditData }) => {
           );
         setUsers(sortedValidUsers);
       })
-      .catch(() => {
-        setError(true);
+      .catch(({ response }) => {
+        setError(response?.status);
       });
   }, [individualQuizPlayers, initialEditData]);
 
@@ -109,11 +109,7 @@ const Form = ({ setPage, individualQuizPlayers, initialEditData }) => {
   }
 
   if (error) {
-    return (
-      <Error>
-        <Trans>Erro de servidor. Tenta mais tarde.</Trans>
-      </Error>
-    );
+    return <Error status={error} />;
   }
 
   return (

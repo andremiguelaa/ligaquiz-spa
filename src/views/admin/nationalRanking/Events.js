@@ -28,15 +28,15 @@ const Events = () => {
       .then(({ data }) => {
         setIndividualQuizTypes(data);
       })
-      .catch(() => {
-        setError(true);
+      .catch(({ response }) => {
+        setError(response?.status);
       });
     ApiRequest.get('individual-quiz-players')
       .then(({ data }) => {
         setIndividualQuizPlayers(data);
       })
-      .catch(() => {
-        setError(true);
+      .catch(({ response }) => {
+        setError(response?.status);
       });
   }, []);
 
@@ -50,8 +50,8 @@ const Events = () => {
           ].sort((a, b) => b.localeCompare(a));
           setMonthList(list);
         })
-        .catch(() => {
-          setError(true);
+        .catch(({ response }) => {
+          setError(response?.status);
         });
     }
   }, [page]);
@@ -90,11 +90,7 @@ const Events = () => {
   };
 
   if (error) {
-    return (
-      <Error>
-        <Trans>Erro de servidor. Tenta mais tarde.</Trans>
-      </Error>
-    );
+    return <Error status={error} />;
   }
 
   return (

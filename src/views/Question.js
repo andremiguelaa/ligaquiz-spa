@@ -9,7 +9,6 @@ import PageHeader from 'components/PageHeader';
 import Error from 'components/Error';
 import Loading from 'components/Loading';
 import Markdown from 'components/Markdown';
-import NoMatch from './NoMatch';
 
 import classes from './Question/Question.module.scss';
 
@@ -31,8 +30,8 @@ const Question = () => {
           }, {})
         );
       })
-      .catch(() => {
-        setError(true);
+      .catch(({ response }) => {
+        setError(response?.status);
       });
   }, []);
 
@@ -82,14 +81,7 @@ const Question = () => {
   }, [id]);
 
   if (error) {
-    if (error === 404 || error === 400 || error === 403) {
-      return <NoMatch />;
-    }
-    return (
-      <Error>
-        <Trans>Erro de servidor. Tenta mais tarde.</Trans>
-      </Error>
-    );
+    return <Error status={error} />;
   }
 
   if (!question || !users || !statistics) {

@@ -9,7 +9,6 @@ import formatDate from 'utils/formatDate';
 import Loading from 'components/Loading';
 import Error from 'components/Error';
 import PageHeader from 'components/PageHeader';
-import NoMatch from 'views/NoMatch';
 
 import Tier from './Tier';
 
@@ -54,8 +53,8 @@ const SeasonForm = () => {
           setUsers(usersObject.users);
           setValidUsers(usersObject.validUsers);
         })
-        .catch(() => {
-          setError(true);
+        .catch(({ response }) => {
+          setError(response?.status);
         });
     }
     setMinDate();
@@ -142,14 +141,7 @@ const SeasonForm = () => {
   };
 
   if (error) {
-    if (error === 404) {
-      return <NoMatch />;
-    }
-    return (
-      <Error>
-        <Trans>Erro de servidor. Tenta mais tarde.</Trans>
-      </Error>
-    );
+    return <Error status={error} />;
   }
 
   if (!minDate || !users || !validUsers) {

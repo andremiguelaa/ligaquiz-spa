@@ -11,7 +11,6 @@ import PageHeader from 'components/PageHeader';
 import EmptyState from 'components/EmptyState';
 import Markdown from 'components/Markdown';
 import PaginatedTable from 'components/PaginatedTable';
-import NoMatch from 'views/NoMatch';
 
 import classes from './Search.module.scss';
 
@@ -39,18 +38,11 @@ const Search = () => {
   }, [string]);
 
   if (!(user.valid_roles.admin || user.valid_roles.quiz_editor)) {
-    return <NoMatch />;
+    return <Error status={403} />;
   }
 
   if (error) {
-    if (error === 404) {
-      return <NoMatch />;
-    }
-    return (
-      <Error>
-        <Trans>Erro de servidor. Tenta mais tarde.</Trans>
-      </Error>
-    );
+    return <Error status={error} />;
   }
 
   if (!questions) {

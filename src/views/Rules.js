@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Trans } from '@lingui/macro';
 
 import { useStateValue } from 'state/State';
-import NoMatch from './NoMatch';
+import Error from 'components/Error';
 import PageHeader from 'components/PageHeader';
 
 const Rules = () => {
@@ -17,7 +17,7 @@ const Rules = () => {
   }, []);
 
   if (!user) {
-    return <NoMatch />;
+    return <Error status={401} />;
   }
 
   return (

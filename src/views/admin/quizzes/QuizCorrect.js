@@ -11,7 +11,6 @@ import Loading from 'components/Loading';
 import Error from 'components/Error';
 import PageHeader from 'components/PageHeader';
 import Markdown from 'components/Markdown';
-import NoMatch from 'views/NoMatch';
 import Answer from './Answer';
 
 import classes from './Quizzes.module.scss';
@@ -96,14 +95,7 @@ const QuizCorrect = () => {
   };
 
   if (error) {
-    if (error === 404 || error === 400) {
-      return <NoMatch />;
-    }
-    return (
-      <Error>
-        <Trans>Erro de servidor. Tenta mais tarde.</Trans>
-      </Error>
-    );
+    return <Error status={error} />;
   }
 
   if (!quiz || !answers) {

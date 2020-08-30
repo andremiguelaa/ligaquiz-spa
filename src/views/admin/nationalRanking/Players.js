@@ -29,8 +29,8 @@ const Players = () => {
         .then(({ data }) => {
           setIndividualQuizPlayers(data);
         })
-        .catch(() => {
-          setError(true);
+        .catch(({ response }) => {
+          setError(response?.status);
         });
     }
   }, [page]);
@@ -72,11 +72,7 @@ const Players = () => {
   };
 
   if (error) {
-    return (
-      <Error>
-        <Trans>Erro de servidor. Tenta mais tarde.</Trans>
-      </Error>
-    );
+    return <Error status={error} />;
   }
 
   return (

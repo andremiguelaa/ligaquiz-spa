@@ -8,7 +8,6 @@ import Error from 'components/Error';
 import EmptyState from 'components/EmptyState';
 import Loading from 'components/Loading';
 import PaginatedTable from 'components/PaginatedTable';
-import NoMatch from './NoMatch';
 
 import classes from './Seasons/Seasons.module.scss';
 
@@ -32,20 +31,13 @@ const Seasons = () => {
         );
         setLoading(false);
       })
-      .catch(() => {
-        setError(true);
+      .catch(({ response }) => {
+        setError(response?.status);
       });
   }, []);
 
   if (error) {
-    if (error === 404) {
-      return <NoMatch />;
-    }
-    return (
-      <Error>
-        <Trans>Erro de servidor. Tenta mais tarde.</Trans>
-      </Error>
-    );
+    return <Error status={error} />;
   }
 
   return (

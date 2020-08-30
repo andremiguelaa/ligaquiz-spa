@@ -12,7 +12,6 @@ import Error from 'components/Error';
 import PageHeader from 'components/PageHeader';
 import EmptyState from 'components/EmptyState';
 import PaginatedTable from 'components/PaginatedTable';
-import NoMatch from 'views/NoMatch';
 
 const Quizzes = () => {
   const { page } = useParams();
@@ -38,8 +37,8 @@ const Quizzes = () => {
       .then(({ data }) => {
         setQuizzes(data);
       })
-      .catch(() => {
-        setError(true);
+      .catch(({ response }) => {
+        setError(response?.status);
       });
   };
 
@@ -66,18 +65,11 @@ const Quizzes = () => {
       user.valid_roles.answer_reviewer
     )
   ) {
-    return <NoMatch />;
+    return <Error status={403} />;
   }
 
   if (error) {
-    if (error === 404) {
-      return <NoMatch />;
-    }
-    return (
-      <Error>
-        <Trans>Erro de servidor. Tenta mais tarde.</Trans>
-      </Error>
-    );
+    return <Error status={error} />;
   }
 
   return (

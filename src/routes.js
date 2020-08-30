@@ -37,7 +37,7 @@ import SeasonsAdmin from 'views/admin/seasons/Seasons';
 import SeasonForm from 'views/admin/seasons/SeasonForm';
 import Search from 'views/admin/search/Search';
 
-import NoMatch from 'views/NoMatch';
+import NoMatch from 'components/NoMatch';
 
 export default [
   {

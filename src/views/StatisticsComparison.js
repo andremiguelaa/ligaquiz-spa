@@ -11,7 +11,6 @@ import ApiRequest from 'utils/ApiRequest';
 import Loading from 'components/Loading';
 import Error from 'components/Error';
 import PageHeader from 'components/PageHeader';
-import NoMatch from './NoMatch';
 
 import classes from './Statistics/Statistics.module.scss';
 
@@ -175,18 +174,11 @@ const Statistics = () => {
   }, [users, genres]);
 
   if (userId1 === userId2) {
-    return <NoMatch />;
+    return <Error status={404} />;
   }
 
   if (error) {
-    if (error === 404 || error === 400 || error === 401 || error === 403) {
-      return <NoMatch />;
-    }
-    return (
-      <Error>
-        <Trans>Erro de servidor. Tenta mais tarde.</Trans>
-      </Error>
-    );
+    return <Error status={error} />;
   }
 
   if (!users || !genres || !chartSeries) {
