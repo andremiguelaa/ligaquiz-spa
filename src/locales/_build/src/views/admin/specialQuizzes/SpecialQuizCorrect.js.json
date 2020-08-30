@@ -1,17 +1,9 @@
 {
-  "Erro de servidor. Tenta mais tarde.": {
-    "origin": [
-      [
-        "src/views/admin/specialQuizzes/SpecialQuizCorrect.js",
-        104
-      ]
-    ]
-  },
   "Corrigir quiz especial de {0}": {
     "origin": [
       [
         "src/views/admin/specialQuizzes/SpecialQuizCorrect.js",
-        117
+        109
       ]
     ]
   },
@@ -19,7 +11,7 @@
     "origin": [
       [
         "src/views/admin/specialQuizzes/SpecialQuizCorrect.js",
-        133
+        125
       ]
     ]
   },
@@ -27,7 +19,7 @@
     "origin": [
       [
         "src/views/admin/specialQuizzes/SpecialQuizCorrect.js",
-        148
+        140
       ]
     ]
   },
@@ -35,7 +27,7 @@
     "origin": [
       [
         "src/views/admin/specialQuizzes/SpecialQuizCorrect.js",
-        151
+        143
       ]
     ]
   }

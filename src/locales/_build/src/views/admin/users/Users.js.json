@@ -1,17 +1,9 @@
 {
-  "Erro de servidor. Tenta mais tarde.": {
-    "origin": [
-      [
-        "src/views/admin/users/Users.js",
-        88
-      ]
-    ]
-  },
   "Utilizadores": {
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        95
+        91
       ]
     ]
   },
@@ -19,7 +11,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        107
+        103
       ]
     ]
   },
@@ -27,7 +19,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        125
+        121
       ]
     ]
   },
@@ -35,7 +27,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        136
+        132
       ]
     ]
   },
@@ -43,7 +35,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        155
+        151
       ]
     ]
   },
@@ -51,7 +43,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        205
+        201
       ]
     ]
   },
@@ -59,7 +51,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        217
+        213
       ]
     ]
   },
@@ -67,7 +59,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        230
+        226
       ]
     ]
   },
@@ -75,7 +67,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        244
+        240
       ]
     ]
   },
@@ -83,7 +75,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        257
+        253
       ]
     ]
   },
@@ -91,7 +83,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        270
+        266
       ]
     ]
   },
@@ -99,7 +91,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        283
+        279
       ]
     ]
   },
@@ -107,7 +99,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        295
+        291
       ]
     ]
   },
@@ -115,7 +107,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        337
+        333
       ]
     ]
   }

@@ -1,17 +1,9 @@
 {
-  "Erro de servidor. Tenta mais tarde.": {
-    "origin": [
-      [
-        "src/views/admin/notifications/Notifications.js",
-        42
-      ]
-    ]
-  },
   "Notificações": {
     "origin": [
       [
         "src/views/admin/notifications/Notifications.js",
-        49
+        48
       ]
     ]
   },
@@ -19,7 +11,7 @@
     "origin": [
       [
         "src/views/admin/notifications/Notifications.js",
-        65
+        64
       ]
     ]
   },
@@ -27,7 +19,7 @@
     "origin": [
       [
         "src/views/admin/notifications/Notifications.js",
-        75
+        74
       ]
     ]
   },
@@ -35,7 +27,7 @@
     "origin": [
       [
         "src/views/admin/notifications/Notifications.js",
-        78
+        77
       ]
     ]
   },
@@ -43,7 +35,7 @@
     "origin": [
       [
         "src/views/admin/notifications/Notifications.js",
-        81
+        80
       ]
     ]
   },
@@ -51,7 +43,7 @@
     "origin": [
       [
         "src/views/admin/notifications/Notifications.js",
-        84
+        83
       ]
     ]
   },
@@ -59,7 +51,7 @@
     "origin": [
       [
         "src/views/admin/notifications/Notifications.js",
-        87
+        86
       ]
     ]
   },
@@ -67,7 +59,7 @@
     "origin": [
       [
         "src/views/admin/notifications/Notifications.js",
-        140
+        139
       ]
     ]
   }

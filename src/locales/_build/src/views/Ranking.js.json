@@ -1,17 +1,9 @@
 {
-  "Erro de servidor. Tenta mais tarde.": {
-    "origin": [
-      [
-        "src/views/Ranking.js",
-        137
-      ]
-    ]
-  },
   "Classificação": {
     "origin": [
       [
         "src/views/Ranking.js",
-        149
+        141
       ]
     ]
   },
@@ -19,7 +11,7 @@
     "origin": [
       [
         "src/views/Ranking.js",
-        150
+        142
       ]
     ]
   },
@@ -27,7 +19,7 @@
     "origin": [
       [
         "src/views/Ranking.js",
-        162
+        154
       ]
     ]
   },
@@ -35,7 +27,7 @@
     "origin": [
       [
         "src/views/Ranking.js",
-        191
+        183
       ]
     ]
   }

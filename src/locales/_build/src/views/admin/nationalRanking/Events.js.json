@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Events.js",
-        68
+        70
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Events.js",
-        81
+        83
       ]
     ]
   },
@@ -19,15 +19,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Events.js",
-        84
-      ]
-    ]
-  },
-  "Erro de servidor. Tenta mais tarde.": {
-    "origin": [
-      [
-        "src/views/admin/nationalRanking/Events.js",
-        95
+        86
       ]
     ]
   },
@@ -35,7 +27,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Events.js",
-        102
+        104
       ]
     ]
   },
@@ -43,7 +35,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Events.js",
-        146
+        148
       ]
     ]
   },
@@ -51,7 +43,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Events.js",
-        148
+        150
       ]
     ]
   }

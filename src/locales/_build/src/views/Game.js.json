@@ -1,17 +1,9 @@
 {
-  "Erro de servidor. Tenta mais tarde.": {
-    "origin": [
-      [
-        "src/views/Game.js",
-        66
-      ]
-    ]
-  },
   "Pergunta {0}": {
     "origin": [
       [
         "src/views/Game.js",
-        109
+        101
       ]
     ]
   },
@@ -19,11 +11,35 @@
     "origin": [
       [
         "src/views/Game.js",
-        141
+        133
       ]
     ]
   },
   "Correcta": {
+    "origin": [
+      [
+        "src/views/Game.js",
+        165
+      ],
+      [
+        "src/views/Game.js",
+        205
+      ]
+    ]
+  },
+  "Errada": {
+    "origin": [
+      [
+        "src/views/Game.js",
+        167
+      ],
+      [
+        "src/views/Game.js",
+        207
+      ]
+    ]
+  },
+  "Falta": {
     "origin": [
       [
         "src/views/Game.js",
@@ -32,30 +48,6 @@
       [
         "src/views/Game.js",
         213
-      ]
-    ]
-  },
-  "Errada": {
-    "origin": [
-      [
-        "src/views/Game.js",
-        175
-      ],
-      [
-        "src/views/Game.js",
-        215
-      ]
-    ]
-  },
-  "Falta": {
-    "origin": [
-      [
-        "src/views/Game.js",
-        181
-      ],
-      [
-        "src/views/Game.js",
-        221
       ]
     ]
   }

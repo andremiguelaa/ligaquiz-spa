@@ -1,21 +1,13 @@
 {
-  "Erro de servidor. Tenta mais tarde.": {
-    "origin": [
-      [
-        "src/views/NationalRanking.js",
-        138
-      ]
-    ]
-  },
   "Ranking Nacional": {
     "origin": [
       [
         "src/views/NationalRanking.js",
-        155
+        150
       ],
       [
         "src/views/NationalRanking.js",
-        180
+        175
       ]
     ]
   },
@@ -23,7 +15,7 @@
     "origin": [
       [
         "src/views/NationalRanking.js",
-        156
+        151
       ]
     ]
   },
@@ -31,7 +23,7 @@
     "origin": [
       [
         "src/views/NationalRanking.js",
-        161
+        156
       ]
     ]
   },
@@ -39,11 +31,11 @@
     "origin": [
       [
         "src/views/NationalRanking.js",
-        172
+        167
       ],
       [
         "src/views/NationalRanking.js",
-        315
+        310
       ]
     ]
   },
@@ -51,7 +43,7 @@
     "origin": [
       [
         "src/views/NationalRanking.js",
-        199
+        194
       ]
     ]
   },
@@ -59,7 +51,7 @@
     "origin": [
       [
         "src/views/NationalRanking.js",
-        203
+        198
       ]
     ]
   },
@@ -67,7 +59,7 @@
     "origin": [
       [
         "src/views/NationalRanking.js",
-        217
+        212
       ]
     ]
   },
@@ -75,7 +67,7 @@
     "origin": [
       [
         "src/views/NationalRanking.js",
-        231
+        226
       ]
     ]
   },
@@ -83,7 +75,7 @@
     "origin": [
       [
         "src/views/NationalRanking.js",
-        245
+        240
       ]
     ]
   },
@@ -91,7 +83,7 @@
     "origin": [
       [
         "src/views/NationalRanking.js",
-        309
+        304
       ]
     ]
   }

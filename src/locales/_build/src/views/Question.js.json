@@ -1,17 +1,9 @@
 {
-  "Erro de servidor. Tenta mais tarde.": {
-    "origin": [
-      [
-        "src/views/Question.js",
-        90
-      ]
-    ]
-  },
   "Resposta correcta": {
     "origin": [
       [
         "src/views/Question.js",
-        120
+        112
       ]
     ]
   },
@@ -19,7 +11,7 @@
     "origin": [
       [
         "src/views/Question.js",
-        128
+        120
       ]
     ]
   },
@@ -27,7 +19,7 @@
     "origin": [
       [
         "src/views/Question.js",
-        138
+        130
       ]
     ]
   },
@@ -35,7 +27,7 @@
     "origin": [
       [
         "src/views/Question.js",
-        149
+        141
       ]
     ]
   },
@@ -43,7 +35,7 @@
     "origin": [
       [
         "src/views/Question.js",
-        160
+        152
       ]
     ]
   },
@@ -51,7 +43,7 @@
     "origin": [
       [
         "src/views/Question.js",
-        170
+        162
       ]
     ]
   },
@@ -59,7 +51,7 @@
     "origin": [
       [
         "src/views/Question.js",
-        180
+        172
       ]
     ]
   },
@@ -67,7 +59,7 @@
     "origin": [
       [
         "src/views/Question.js",
-        208
+        200
       ]
     ]
   },
@@ -75,7 +67,7 @@
     "origin": [
       [
         "src/views/Question.js",
-        212
+        204
       ]
     ]
   },
@@ -83,7 +75,7 @@
     "origin": [
       [
         "src/views/Question.js",
-        217
+        209
       ]
     ]
   },
@@ -91,7 +83,7 @@
     "origin": [
       [
         "src/views/Question.js",
-        221
+        213
       ]
     ]
   },
@@ -99,7 +91,7 @@
     "origin": [
       [
         "src/views/Question.js",
-        236
+        228
       ]
     ]
   },
@@ -107,7 +99,7 @@
     "origin": [
       [
         "src/views/Question.js",
-        239
+        231
       ]
     ]
   },
@@ -115,7 +107,7 @@
     "origin": [
       [
         "src/views/Question.js",
-        241
+        233
       ]
     ]
   }

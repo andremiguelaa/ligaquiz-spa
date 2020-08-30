@@ -1,17 +1,9 @@
 {
-  "Erro de servidor. Tenta mais tarde.": {
-    "origin": [
-      [
-        "src/views/Statistics.js",
-        139
-      ]
-    ]
-  },
   "Estatísticas de {0} {1}": {
     "origin": [
       [
         "src/views/Statistics.js",
-        153
+        149
       ]
     ]
   },
@@ -19,7 +11,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        157
+        153
       ]
     ]
   },
@@ -27,7 +19,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        181
+        177
       ]
     ]
   },
@@ -35,7 +27,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        191
+        187
       ]
     ]
   },
@@ -43,7 +35,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        242
+        238
       ]
     ]
   },
@@ -51,7 +43,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        255
+        251
       ]
     ]
   },
@@ -59,7 +51,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        262
+        258
       ]
     ]
   },
@@ -67,7 +59,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        264
+        260
       ]
     ]
   },
@@ -75,7 +67,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        274
+        270
       ]
     ]
   },
@@ -83,7 +75,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        276
+        272
       ]
     ]
   },
@@ -91,7 +83,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        286
+        282
       ]
     ]
   },
@@ -99,7 +91,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        324
+        320
       ]
     ]
   },
@@ -107,7 +99,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        330
+        326
       ]
     ]
   },
@@ -115,7 +107,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        333
+        329
       ]
     ]
   },
@@ -123,7 +115,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        336
+        332
       ]
     ]
   },
@@ -131,7 +123,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        340
+        336
       ]
     ]
   },
@@ -139,7 +131,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        343
+        339
       ]
     ]
   },
@@ -147,7 +139,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        384
+        380
       ]
     ]
   },
@@ -155,7 +147,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        392
+        388
       ]
     ]
   },
@@ -163,7 +155,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        395
+        391
       ]
     ]
   },
@@ -171,7 +163,7 @@
     "origin": [
       [
         "src/views/Statistics.js",
-        425
+        421
       ]
     ]
   }

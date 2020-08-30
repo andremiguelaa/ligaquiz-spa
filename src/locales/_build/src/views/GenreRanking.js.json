@@ -1,17 +1,9 @@
 {
-  "Erro de servidor. Tenta mais tarde.": {
-    "origin": [
-      [
-        "src/views/GenreRanking.js",
-        150
-      ]
-    ]
-  },
   "Rankings temáticos": {
     "origin": [
       [
         "src/views/GenreRanking.js",
-        162
+        154
       ]
     ]
   },
@@ -19,7 +11,7 @@
     "origin": [
       [
         "src/views/GenreRanking.js",
-        163
+        155
       ]
     ]
   },
@@ -27,7 +19,7 @@
     "origin": [
       [
         "src/views/GenreRanking.js",
-        169
+        161
       ]
     ]
   },
@@ -35,7 +27,7 @@
     "origin": [
       [
         "src/views/GenreRanking.js",
-        194
+        186
       ]
     ]
   }

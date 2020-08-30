@@ -1,17 +1,9 @@
 {
-  "Erro de servidor. Tenta mais tarde.": {
-    "origin": [
-      [
-        "src/views/Quizzes.js",
-        46
-      ]
-    ]
-  },
   "Arquivo de quizzes": {
     "origin": [
       [
         "src/views/Quizzes.js",
-        57
+        49
       ]
     ]
   },
@@ -19,7 +11,7 @@
     "origin": [
       [
         "src/views/Quizzes.js",
-        84
+        76
       ]
     ]
   }

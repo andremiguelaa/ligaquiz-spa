@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/admin/quizzes/Quizzes.js",
-        50
+        49
       ]
     ]
   },
@@ -11,15 +11,7 @@
     "origin": [
       [
         "src/views/admin/quizzes/Quizzes.js",
-        55
-      ]
-    ]
-  },
-  "Erro de servidor. Tenta mais tarde.": {
-    "origin": [
-      [
-        "src/views/admin/quizzes/Quizzes.js",
-        78
+        54
       ]
     ]
   },
@@ -27,7 +19,7 @@
     "origin": [
       [
         "src/views/admin/quizzes/Quizzes.js",
-        85
+        81
       ]
     ]
   },
@@ -35,7 +27,7 @@
     "origin": [
       [
         "src/views/admin/quizzes/Quizzes.js",
-        98
+        94
       ]
     ]
   },
@@ -43,7 +35,7 @@
     "origin": [
       [
         "src/views/admin/quizzes/Quizzes.js",
-        125
+        121
       ]
     ]
   },
@@ -51,7 +43,7 @@
     "origin": [
       [
         "src/views/admin/quizzes/Quizzes.js",
-        189
+        185
       ]
     ]
   },
@@ -59,7 +51,7 @@
     "origin": [
       [
         "src/views/admin/quizzes/Quizzes.js",
-        199
+        195
       ]
     ]
   },
@@ -67,7 +59,7 @@
     "origin": [
       [
         "src/views/admin/quizzes/Quizzes.js",
-        200
+        196
       ]
     ]
   }

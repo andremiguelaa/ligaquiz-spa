@@ -80,15 +80,17 @@ const Notifications = () => {
     return <Loading />;
   }
 
-  let remainingDays;
+  let regularRemainingDays;
+  let specialRemainingDays;
   if (user && user.roles && notifications.now) {
     if (user.roles.regular_player) {
-      remainingDays = differenceInDays(
+      regularRemainingDays = differenceInDays(
         new Date(user.roles.regular_player),
         new Date(notifications.now)
       );
-    } else if (user.roles.special_quiz_player) {
-      remainingDays = differenceInDays(
+    }
+    if (user.roles.special_quiz_player) {
+      specialRemainingDays = differenceInDays(
         new Date(user.roles.special_quiz_player),
         new Date(notifications.now)
       );
@@ -99,7 +101,8 @@ const Notifications = () => {
     notifications.data.length > 0 ||
     (notifications.quiz && location.pathname !== '/quiz') ||
     (notifications.special_quiz && location.pathname !== '/special-quiz') ||
-    (remainingDays !== undefined && remainingDays < 8) ||
+    (regularRemainingDays !== undefined && regularRemainingDays < 8) ||
+    (specialRemainingDays !== undefined && specialRemainingDays < 8) ||
     (user && user.roles === null)
   ) {
     return (
@@ -120,20 +123,58 @@ const Notifications = () => {
             <Markdown content={notification.content} />
           </div>
         ))}
-        {remainingDays !== undefined && remainingDays < 8 && (
+        {regularRemainingDays !== undefined && regularRemainingDays < 8 && (
           <div className={`notification is-danger`}>
-            {remainingDays > 1 && (
+            {regularRemainingDays > 1 && (
               <Trans>
-                A tua subscrição termina daqui a {remainingDays} dias.
+                A tua subscrição para jogar quizzes da liga termina daqui a{' '}
+                {regularRemainingDays} dias.
               </Trans>
             )}
-            {remainingDays === 1 && (
-              <Trans>A tua subscrição termina amanhã.</Trans>
+            {regularRemainingDays === 1 && (
+              <Trans>
+                A tua subscrição para jogar quizzes da liga termina amanhã.
+              </Trans>
             )}
-            {remainingDays === 0 && (
-              <Trans>A tua subscrição termina hoje.</Trans>
+            {regularRemainingDays === 0 && (
+              <Trans>
+                A tua subscrição para jogar quizzes da liga termina hoje.
+              </Trans>
             )}
-            {remainingDays < 0 && <Trans>A tua subscrição expirou.</Trans>}{' '}
+            {regularRemainingDays < 0 && (
+              <Trans>
+                A tua subscrição para jogar quizzes da liga expirou.
+              </Trans>
+            )}{' '}
+            <Trans>
+              Clica <Link to="/rules#subscription">aqui</Link> para saber como
+              renovar.
+            </Trans>
+          </div>
+        )}
+        {specialRemainingDays !== undefined && specialRemainingDays < 8 && (
+          <div className={`notification is-danger`}>
+            {specialRemainingDays > 1 && (
+              <Trans>
+                A tua subscrição para jogar quizzes especiais termina daqui a{' '}
+                {specialRemainingDays} dias.
+              </Trans>
+            )}
+            {specialRemainingDays === 1 && (
+              <Trans>
+                A tua subscrição para jogar quizzes especiais termina amanhã.
+              </Trans>
+            )}
+            {specialRemainingDays === 0 && (
+              <Trans>
+                A tua subscrição para jogar quizzes especiais termina hoje.
+              </Trans>
+            )}
+            {specialRemainingDays < 0 && (
+              <Trans>
+                A tua subscrição para jogar quizzes especiais expirou.
+              </Trans>
+            )}{' '}
             <Trans>
               Clica <Link to="/rules#subscription">aqui</Link> para saber como
               renovar.

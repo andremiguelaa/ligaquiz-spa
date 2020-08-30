@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/admin/seasons/SeasonForm.js",
-        124
+        123
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/views/admin/seasons/SeasonForm.js",
-        127
+        126
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/views/admin/seasons/SeasonForm.js",
-        134
+        133
       ]
     ]
   },
@@ -27,15 +27,7 @@
     "origin": [
       [
         "src/views/admin/seasons/SeasonForm.js",
-        138
-      ]
-    ]
-  },
-  "Erro de servidor. Tenta mais tarde.": {
-    "origin": [
-      [
-        "src/views/admin/seasons/SeasonForm.js",
-        150
+        137
       ]
     ]
   },
@@ -43,7 +35,7 @@
     "origin": [
       [
         "src/views/admin/seasons/SeasonForm.js",
-        185
+        177
       ]
     ]
   },
@@ -51,7 +43,7 @@
     "origin": [
       [
         "src/views/admin/seasons/SeasonForm.js",
-        187
+        179
       ]
     ]
   },
@@ -59,7 +51,7 @@
     "origin": [
       [
         "src/views/admin/seasons/SeasonForm.js",
-        195
+        187
       ]
     ]
   },
@@ -67,7 +59,7 @@
     "origin": [
       [
         "src/views/admin/seasons/SeasonForm.js",
-        201
+        193
       ]
     ]
   },
@@ -75,7 +67,7 @@
     "origin": [
       [
         "src/views/admin/seasons/SeasonForm.js",
-        239
+        231
       ]
     ]
   },
@@ -83,7 +75,7 @@
     "origin": [
       [
         "src/views/admin/seasons/SeasonForm.js",
-        278
+        270
       ]
     ]
   },
@@ -91,7 +83,7 @@
     "origin": [
       [
         "src/views/admin/seasons/SeasonForm.js",
-        293
+        285
       ]
     ]
   }

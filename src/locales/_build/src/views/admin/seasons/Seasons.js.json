@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/admin/seasons/Seasons.js",
-        44
+        43
       ]
     ]
   },
@@ -11,15 +11,7 @@
     "origin": [
       [
         "src/views/admin/seasons/Seasons.js",
-        49
-      ]
-    ]
-  },
-  "Erro de servidor. Tenta mais tarde.": {
-    "origin": [
-      [
-        "src/views/admin/seasons/Seasons.js",
-        63
+        48
       ]
     ]
   },
@@ -27,7 +19,7 @@
     "origin": [
       [
         "src/views/admin/seasons/Seasons.js",
-        70
+        65
       ]
     ]
   },
@@ -35,12 +27,16 @@
     "origin": [
       [
         "src/views/admin/seasons/Seasons.js",
-        81
+        76
       ]
     ]
   },
   "Temporada {0}": {
     "origin": [
+      [
+        "src/views/admin/seasons/Seasons.js",
+        94
+      ],
       [
         "src/views/admin/seasons/Seasons.js",
         97
@@ -51,7 +47,7 @@
     "origin": [
       [
         "src/views/admin/seasons/Seasons.js",
-        142
+        143
       ]
     ]
   },
@@ -59,7 +55,7 @@
     "origin": [
       [
         "src/views/admin/seasons/Seasons.js",
-        152
+        153
       ]
     ]
   },
@@ -67,7 +63,7 @@
     "origin": [
       [
         "src/views/admin/seasons/Seasons.js",
-        153
+        154
       ]
     ]
   }

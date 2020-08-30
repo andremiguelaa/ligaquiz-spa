@@ -1,17 +1,9 @@
 {
-  "Erro de servidor. Tenta mais tarde.": {
-    "origin": [
-      [
-        "src/views/Seasons.js",
-        46
-      ]
-    ]
-  },
   "Arquivo de temporadas": {
     "origin": [
       [
         "src/views/Seasons.js",
-        57
+        49
       ]
     ]
   },
@@ -19,7 +11,7 @@
     "origin": [
       [
         "src/views/Seasons.js",
-        70
+        62
       ]
     ]
   },
@@ -27,7 +19,7 @@
     "origin": [
       [
         "src/views/Seasons.js",
-        82
+        74
       ]
     ]
   },
@@ -35,7 +27,7 @@
     "origin": [
       [
         "src/views/Seasons.js",
-        88
+        80
       ]
     ]
   },
@@ -43,7 +35,7 @@
     "origin": [
       [
         "src/views/Seasons.js",
-        104
+        96
       ]
     ]
   }

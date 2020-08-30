@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Rankings.js",
-        62
+        63
       ]
     ]
   },
@@ -11,15 +11,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Rankings.js",
-        65
-      ]
-    ]
-  },
-  "Erro de servidor. Tenta mais tarde.": {
-    "origin": [
-      [
-        "src/views/admin/nationalRanking/Rankings.js",
-        76
+        66
       ]
     ]
   },
@@ -27,7 +19,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Rankings.js",
-        83
+        84
       ]
     ]
   },
@@ -35,11 +27,11 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Rankings.js",
-        101
+        102
       ],
       [
         "src/views/admin/nationalRanking/Rankings.js",
-        175
+        176
       ]
     ]
   },
@@ -47,11 +39,11 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Rankings.js",
-        113
+        114
       ],
       [
         "src/views/admin/nationalRanking/Rankings.js",
-        180
+        181
       ]
     ]
   },
@@ -59,7 +51,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Rankings.js",
-        116
+        117
       ]
     ]
   },
@@ -67,7 +59,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Rankings.js",
-        126
+        127
       ]
     ]
   },
@@ -75,7 +67,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Rankings.js",
-        154
+        155
       ]
     ]
   },
@@ -83,7 +75,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Rankings.js",
-        163
+        164
       ]
     ]
   },
@@ -91,7 +83,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Rankings.js",
-        165
+        166
       ]
     ]
   },
@@ -99,7 +91,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Rankings.js",
-        212
+        213
       ]
     ]
   },
@@ -107,7 +99,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Rankings.js",
-        217
+        218
       ]
     ]
   }

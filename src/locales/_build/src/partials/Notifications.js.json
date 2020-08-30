@@ -3,39 +3,39 @@
     "origin": [
       [
         "src/partials/Notifications.js",
-        109
+        112
       ]
     ]
   },
-  "A tua subscrição termina daqui a {remainingDays} dias.": {
+  "A tua subscrição para jogar quizzes da liga termina daqui a {regularRemainingDays} dias.": {
     "origin": [
       [
         "src/partials/Notifications.js",
-        126
+        129
       ]
     ]
   },
-  "A tua subscrição termina amanhã.": {
+  "A tua subscrição para jogar quizzes da liga termina amanhã.": {
     "origin": [
       [
         "src/partials/Notifications.js",
-        131
+        135
       ]
     ]
   },
-  "A tua subscrição termina hoje.": {
+  "A tua subscrição para jogar quizzes da liga termina hoje.": {
     "origin": [
       [
         "src/partials/Notifications.js",
-        134
+        140
       ]
     ]
   },
-  "A tua subscrição expirou.": {
+  "A tua subscrição para jogar quizzes da liga expirou.": {
     "origin": [
       [
         "src/partials/Notifications.js",
-        136
+        145
       ]
     ]
   },
@@ -43,7 +43,43 @@
     "origin": [
       [
         "src/partials/Notifications.js",
-        137
+        149
+      ],
+      [
+        "src/partials/Notifications.js",
+        178
+      ]
+    ]
+  },
+  "A tua subscrição para jogar quizzes especiais termina daqui a {specialRemainingDays} dias.": {
+    "origin": [
+      [
+        "src/partials/Notifications.js",
+        158
+      ]
+    ]
+  },
+  "A tua subscrição para jogar quizzes especiais termina amanhã.": {
+    "origin": [
+      [
+        "src/partials/Notifications.js",
+        164
+      ]
+    ]
+  },
+  "A tua subscrição para jogar quizzes especiais termina hoje.": {
+    "origin": [
+      [
+        "src/partials/Notifications.js",
+        169
+      ]
+    ]
+  },
+  "A tua subscrição para jogar quizzes especiais expirou.": {
+    "origin": [
+      [
+        "src/partials/Notifications.js",
+        174
       ]
     ]
   },
@@ -51,7 +87,7 @@
     "origin": [
       [
         "src/partials/Notifications.js",
-        146
+        187
       ]
     ]
   },
@@ -59,7 +95,7 @@
     "origin": [
       [
         "src/partials/Notifications.js",
-        153
+        194
       ]
     ]
   }

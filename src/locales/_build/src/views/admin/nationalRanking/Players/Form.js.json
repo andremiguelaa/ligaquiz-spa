@@ -19,23 +19,15 @@
       ]
     ]
   },
-  "Erro de servidor. Tenta mais tarde.": {
-    "origin": [
-      [
-        "src/views/admin/nationalRanking/Players/Form.js",
-        114
-      ]
-    ]
-  },
   "Voltar à listagem": {
     "origin": [
       [
         "src/views/admin/nationalRanking/Players/Form.js",
-        138
+        134
       ],
       [
         "src/views/admin/nationalRanking/Players/Form.js",
-        252
+        248
       ]
     ]
   },
@@ -43,7 +35,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Players/Form.js",
-        148
+        144
       ]
     ]
   },
@@ -51,7 +43,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Players/Form.js",
-        174
+        170
       ]
     ]
   },
@@ -59,7 +51,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Players/Form.js",
-        200
+        196
       ]
     ]
   },
@@ -67,7 +59,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Players/Form.js",
-        218
+        214
       ]
     ]
   },
@@ -75,7 +67,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Players/Form.js",
-        242
+        238
       ]
     ]
   },
@@ -83,7 +75,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Players/Form.js",
-        254
+        250
       ]
     ]
   }

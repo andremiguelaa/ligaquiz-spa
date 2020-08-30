@@ -1,17 +1,9 @@
 {
-  "Erro de servidor. Tenta mais tarde.": {
-    "origin": [
-      [
-        "src/views/SpecialQuizzes.js",
-        62
-      ]
-    ]
-  },
   "Arquivo de quizzes especiais": {
     "origin": [
       [
         "src/views/SpecialQuizzes.js",
-        73
+        65
       ]
     ]
   },
@@ -19,7 +11,7 @@
     "origin": [
       [
         "src/views/SpecialQuizzes.js",
-        83
+        75
       ]
     ]
   },
@@ -27,7 +19,7 @@
     "origin": [
       [
         "src/views/SpecialQuizzes.js",
-        96
+        88
       ]
     ]
   },
@@ -35,7 +27,7 @@
     "origin": [
       [
         "src/views/SpecialQuizzes.js",
-        113
+        105
       ]
     ]
   },
@@ -43,7 +35,7 @@
     "origin": [
       [
         "src/views/SpecialQuizzes.js",
-        129
+        121
       ]
     ]
   }

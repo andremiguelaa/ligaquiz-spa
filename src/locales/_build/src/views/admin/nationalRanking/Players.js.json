@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Players.js",
-        50
+        52
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Players.js",
-        56
+        58
       ]
     ]
   },
@@ -19,19 +19,11 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Players.js",
-        62
+        64
       ],
       [
         "src/views/admin/nationalRanking/Players.js",
-        65
-      ]
-    ]
-  },
-  "Erro de servidor. Tenta mais tarde.": {
-    "origin": [
-      [
-        "src/views/admin/nationalRanking/Players.js",
-        77
+        67
       ]
     ]
   },
@@ -39,7 +31,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Players.js",
-        84
+        86
       ]
     ]
   },
@@ -47,7 +39,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Players.js",
-        121
+        123
       ]
     ]
   },
@@ -55,7 +47,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Players.js",
-        122
+        124
       ]
     ]
   }

@@ -1,0 +1,46 @@
+{
+  "Conteúdo não encontrado.": {
+    "origin": [
+      [
+        "src/components/Error.js",
+        11
+      ]
+    ]
+  },
+  "É necessário autenticares-te primeiro para aceder a esta página.": {
+    "origin": [
+      [
+        "src/components/Error.js",
+        16
+      ]
+    ]
+  },
+  "Não tens acesso a esta página.": {
+    "origin": [
+      [
+        "src/components/Error.js",
+        23
+      ]
+    ]
+  },
+  "Página não encontrada": {
+    "origin": [
+      [
+        "src/components/Error.js",
+        27
+      ]
+    ]
+  },
+  "Erro de servidor. Tenta mais tarde.": {
+    "origin": [
+      [
+        "src/components/Error.js",
+        31
+      ],
+      [
+        "src/components/Error.js",
+        48
+      ]
+    ]
+  }
+}

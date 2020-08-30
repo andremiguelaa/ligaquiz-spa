@@ -1,17 +1,9 @@
 {
-  "Erro de servidor. Tenta mais tarde.": {
-    "origin": [
-      [
-        "src/views/admin/search/Search.js",
-        51
-      ]
-    ]
-  },
   "Pesquisa de perguntas": {
     "origin": [
       [
         "src/views/admin/search/Search.js",
-        62
+        58
       ]
     ]
   },
@@ -19,7 +11,7 @@
     "origin": [
       [
         "src/views/admin/search/Search.js",
-        80
+        76
       ]
     ]
   },
@@ -27,7 +19,7 @@
     "origin": [
       [
         "src/views/admin/search/Search.js",
-        91
+        87
       ]
     ]
   },
@@ -35,7 +27,35 @@
     "origin": [
       [
         "src/views/admin/search/Search.js",
-        101
+        97
+      ]
+    ]
+  },
+  "Quiz": {
+    "origin": [
+      [
+        "src/views/admin/search/Search.js",
+        103
+      ],
+      [
+        "src/views/admin/search/Search.js",
+        108
+      ]
+    ]
+  },
+  "Quiz especial": {
+    "origin": [
+      [
+        "src/views/admin/search/Search.js",
+        112
+      ]
+    ]
+  },
+  "Data": {
+    "origin": [
+      [
+        "src/views/admin/search/Search.js",
+        121
       ]
     ]
   },
@@ -43,7 +63,7 @@
     "origin": [
       [
         "src/views/admin/search/Search.js",
-        116
+        136
       ]
     ]
   }

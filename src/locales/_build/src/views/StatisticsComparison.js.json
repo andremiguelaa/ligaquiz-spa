@@ -1,17 +1,9 @@
 {
-  "Erro de servidor. Tenta mais tarde.": {
-    "origin": [
-      [
-        "src/views/StatisticsComparison.js",
-        187
-      ]
-    ]
-  },
   "Comparação de Estatísticas": {
     "origin": [
       [
         "src/views/StatisticsComparison.js",
-        199
+        191
       ]
     ]
   },
@@ -19,7 +11,7 @@
     "origin": [
       [
         "src/views/StatisticsComparison.js",
-        201
+        193
       ]
     ]
   },
@@ -27,7 +19,7 @@
     "origin": [
       [
         "src/views/StatisticsComparison.js",
-        209
+        201
       ]
     ]
   },
@@ -35,7 +27,7 @@
     "origin": [
       [
         "src/views/StatisticsComparison.js",
-        289
+        281
       ]
     ]
   },
@@ -43,11 +35,11 @@
     "origin": [
       [
         "src/views/StatisticsComparison.js",
-        296
+        288
       ],
       [
         "src/views/StatisticsComparison.js",
-        309
+        301
       ]
     ]
   },
@@ -55,7 +47,7 @@
     "origin": [
       [
         "src/views/StatisticsComparison.js",
-        321
+        313
       ]
     ]
   },
@@ -63,11 +55,11 @@
     "origin": [
       [
         "src/views/StatisticsComparison.js",
-        334
+        326
       ],
       [
         "src/views/StatisticsComparison.js",
-        341
+        333
       ]
     ]
   },
@@ -75,7 +67,7 @@
     "origin": [
       [
         "src/views/StatisticsComparison.js",
-        360
+        352
       ]
     ]
   },
@@ -83,7 +75,7 @@
     "origin": [
       [
         "src/views/StatisticsComparison.js",
-        363
+        355
       ]
     ]
   }

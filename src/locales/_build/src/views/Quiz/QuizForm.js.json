@@ -47,19 +47,11 @@
       ]
     ]
   },
-  "Não foi possível obter as estatísticas do adversário": {
-    "origin": [
-      [
-        "src/views/Quiz/QuizForm.js",
-        385
-      ]
-    ]
-  },
   "Estatísticas do adversário": {
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        403
+        399
       ]
     ]
   },
@@ -67,7 +59,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        418
+        414
       ]
     ]
   },
@@ -75,11 +67,11 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        426
+        422
       ],
       [
         "src/views/Quiz/QuizForm.js",
-        487
+        483
       ]
     ]
   },
@@ -87,11 +79,11 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        429
+        425
       ],
       [
         "src/views/Quiz/QuizForm.js",
-        490
+        486
       ]
     ]
   },
@@ -99,11 +91,11 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        440
+        436
       ],
       [
         "src/views/Quiz/QuizForm.js",
-        501
+        497
       ]
     ]
   },
@@ -111,7 +103,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        479
+        475
       ]
     ]
   },
@@ -119,7 +111,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        541
+        537
       ]
     ]
   },
@@ -127,7 +119,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        543
+        539
       ]
     ]
   },
@@ -135,7 +127,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        555
+        551
       ]
     ]
   },
@@ -143,7 +135,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        556
+        552
       ]
     ]
   }
