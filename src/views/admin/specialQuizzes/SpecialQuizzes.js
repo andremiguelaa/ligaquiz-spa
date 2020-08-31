@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Link, useParams, useHistory } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 import { toast } from 'react-toastify';
-import classnames from 'classnames';
 
 import { useStateValue } from 'state/State';
 import { convertToLongDate } from 'utils/formatDate';
@@ -114,7 +113,7 @@ const SpecialQuizzes = () => {
                 columns={[
                   {
                     id: 'subject',
-                    label: <Trans>Tema</Trans>,
+                    className: 'is-vertical-middle',
                     render: (item) => (
                       <Link
                         to={`/special-quiz/${item.date}`}
@@ -130,13 +129,10 @@ const SpecialQuizzes = () => {
                         )}
                       </Link>
                     ),
-                    className: classnames(
-                      'is-vertical-middle',
-                      classes.subject
-                    ),
                   },
                   {
                     id: 'actions',
+                    className: classes.actions,
                     render: (item) => (
                       <>
                         <div className="buttons has-addons is-pulled-right">

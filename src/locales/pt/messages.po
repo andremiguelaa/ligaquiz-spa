@@ -132,7 +132,7 @@ msgstr "Apagar provas mensais"
 msgid "Apagar quiz"
 msgstr "Apagar quiz"
 
-#: src/views/admin/specialQuizzes/SpecialQuizzes.js:206
+#: src/views/admin/specialQuizzes/SpecialQuizzes.js:202
 msgid "Apagar quiz especial"
 msgstr "Apagar quiz especial"
 
@@ -338,7 +338,7 @@ msgid "Criar quiz"
 msgstr "Criar quiz"
 
 #: src/views/admin/specialQuizzes/SpecialQuizForm.js:144
-#: src/views/admin/specialQuizzes/SpecialQuizzes.js:97
+#: src/views/admin/specialQuizzes/SpecialQuizzes.js:96
 msgid "Criar quiz especial"
 msgstr "Criar quiz especial"
 
@@ -647,7 +647,7 @@ msgid "Imagem de perfil actualizada com sucesso."
 msgstr "Imagem de perfil actualizada com sucesso."
 
 #: src/views/admin/quizzes/Quizzes.js:121
-#: src/views/admin/specialQuizzes/SpecialQuizzes.js:128
+#: src/views/admin/specialQuizzes/SpecialQuizzes.js:127
 msgid "Incompleto"
 msgstr "Incompleto"
 
@@ -911,7 +911,7 @@ msgstr "Não foi possível apagar as provas mensais."
 msgid "Não foi possível apagar notificação."
 msgstr "Não foi possível apagar notificação."
 
-#: src/views/admin/specialQuizzes/SpecialQuizzes.js:57
+#: src/views/admin/specialQuizzes/SpecialQuizzes.js:56
 msgid "Não foi possível apagar o quiz especial."
 msgstr "Não foi possível apagar o quiz especial."
 
@@ -1218,7 +1218,7 @@ msgstr "Quiz de {0}"
 msgid "Quiz especial"
 msgstr "Quiz especial"
 
-#: src/views/admin/specialQuizzes/SpecialQuizzes.js:52
+#: src/views/admin/specialQuizzes/SpecialQuizzes.js:51
 msgid "Quiz especial apagado com sucesso."
 msgstr "Quiz especial apagado com sucesso."
 
@@ -1277,7 +1277,7 @@ msgstr "Quiz | Editar"
 msgid "Quizzes"
 msgstr "Quizzes"
 
-#: src/views/admin/specialQuizzes/SpecialQuizzes.js:80
+#: src/views/admin/specialQuizzes/SpecialQuizzes.js:79
 msgid "Quizzes Especiais"
 msgstr "Quizzes Especiais"
 
@@ -1482,7 +1482,7 @@ msgstr "Selecciona os jogadores que jogaram esta prova:"
 #: src/views/admin/quizzes/Quizzes.js:185
 #: src/views/admin/search/Search.js:136
 #: src/views/admin/seasons/Seasons.js:143
-#: src/views/admin/specialQuizzes/SpecialQuizzes.js:196
+#: src/views/admin/specialQuizzes/SpecialQuizzes.js:192
 #: src/views/admin/users/Users.js:367
 msgid "Sem registos"
 msgstr "Sem registos"
@@ -1558,7 +1558,6 @@ msgstr "Televisão"
 #: src/views/SpecialQuizzes.js:75
 #: src/views/Statistics.js:251
 #: src/views/admin/specialQuizzes/SpecialQuizForm.js:179
-#: src/views/admin/specialQuizzes/SpecialQuizzes.js:117
 msgid "Tema"
 msgstr "Tema"
 
@@ -1627,7 +1626,7 @@ msgstr "Tens a certeza que queres apagar este jogador e o resultado associado?"
 msgid "Tens a certeza que queres apagar este jogador?"
 msgstr "Tens a certeza que queres apagar este jogador?"
 
-#: src/views/admin/specialQuizzes/SpecialQuizzes.js:208
+#: src/views/admin/specialQuizzes/SpecialQuizzes.js:204
 msgid "Tens a certeza que queres apagar este quiz especial?"
 msgstr "Tens a certeza que queres apagar este quiz especial?"
 
