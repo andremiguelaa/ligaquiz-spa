@@ -87,12 +87,16 @@ const SpecialQuiz = () => {
           date ? `(${convertToLongDate(data.quiz.date, language)})` : ''
         }`}
         subtitle={
-          author && (
+          (author || globalPercentage) && (
             <>
-              Por {author.name} {author.surname}
+              {author && (
+                <>
+                  Por {author.name} {author.surname}
+                </>
+              )}
+              {author && percentage && ' / '}
               {globalPercentage && (
                 <>
-                  {' / '}
                   <Trans>Percentagem global de acerto</Trans>
                   {': '}
                   {globalPercentage}%
