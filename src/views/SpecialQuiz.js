@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
+import { Trans } from '@lingui/macro';
 
 import { useStateValue } from 'state/State';
 import { convertToLongDate } from 'utils/formatDate';
@@ -67,6 +68,18 @@ const SpecialQuiz = () => {
     return <Loading />;
   }
 
+  let globalPercentage;
+  if (data.quiz.result && data.quiz.result.ranking.length > 0) {
+    const stats = Object.values(data.quiz.result.question_statistics);
+    globalPercentage = Math.round(
+      stats.reduce((acc, item) => {
+        return acc + item.percentage;
+      }, 0) / stats.length
+    );
+  }
+
+  console.log(globalPercentage);
+
   return (
     <>
       <PageHeader
@@ -77,6 +90,14 @@ const SpecialQuiz = () => {
           author && (
             <>
               Por {author.name} {author.surname}
+              {globalPercentage && (
+                <>
+                  {' / '}
+                  <Trans>Percentagem global de acerto</Trans>
+                  {': '}
+                  {globalPercentage}%
+                </>
+              )}
             </>
           )
         }

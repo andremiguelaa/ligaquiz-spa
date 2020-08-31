@@ -32,7 +32,7 @@ const SpecialQuizDone = ({ data, userAnswers, setError }) => {
 
   return (
     <>
-      {data.quiz.result && (
+      {data.quiz.result && data.quiz.result.ranking.length > 0 && (
         <div className={classes.results}>
           {users ? (
             <>
@@ -174,7 +174,7 @@ const SpecialQuizDone = ({ data, userAnswers, setError }) => {
               </div>
             </>
           )}
-          {data.quiz.result && (
+          {data.quiz.result && data.quiz.result.ranking.length > 0 && (
             <div>
               <strong>
                 <Trans>Percentagem de acerto</Trans>:

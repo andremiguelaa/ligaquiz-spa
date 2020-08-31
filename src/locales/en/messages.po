@@ -1070,6 +1070,11 @@ msgstr "Percentage of players that used a joker"
 msgid "Percentagem de respostas correctas"
 msgstr "Percentage of correct answers"
 
+#: src/views/Quiz.js:88
+#: src/views/SpecialQuiz.js:96
+msgid "Percentagem global de acerto"
+msgstr "Global percentage of correct answers"
+
 #: src/views/Account.js:49
 msgid "Perfil actualizado com sucesso."
 msgstr "Profile successfully updated."
@@ -1210,7 +1215,7 @@ msgstr "Quiz successfully created."
 msgid "Quiz de hoje disponível aqui"
 msgstr "Today's quiz available here"
 
-#: src/views/Quiz.js:67
+#: src/views/Quiz.js:76
 msgid "Quiz de {0}"
 msgstr "{0}'s quiz"
 
@@ -1735,7 +1740,7 @@ msgstr "Return to homepage"
 msgid "deixa em branco para não alterar"
 msgstr "leave it blank to keep"
 
-#: src/views/Quiz.js:72
+#: src/views/Quiz.js:81
 msgid "hoje"
 msgstr "Today"
 

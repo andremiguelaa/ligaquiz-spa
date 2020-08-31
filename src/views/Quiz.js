@@ -60,6 +60,15 @@ const Quiz = () => {
     return <Loading />;
   }
 
+  let globalPercentage;
+  if (data.quiz.questions[0].hasOwnProperty('percentage')) {
+    globalPercentage = Math.round(
+      data.quiz.questions.reduce((acc, item) => {
+        return acc + item.percentage;
+      }, 0) / data.quiz.questions.length
+    );
+  }
+
   return (
     <>
       <PageHeader
@@ -72,6 +81,13 @@ const Quiz = () => {
               <I18n>{({ i18n }) => i18n._(t`hoje`)}</I18n>
             )}
           </Trans>
+        }
+        subtitle={
+          globalPercentage && (
+            <>
+              <Trans>Percentagem global de acerto</Trans>: {globalPercentage}%
+            </>
+          )
         }
       />
       <div className="section">
