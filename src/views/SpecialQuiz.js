@@ -94,7 +94,7 @@ const SpecialQuiz = () => {
                   Por {author.name} {author.surname}
                 </>
               )}
-              {author && percentage && ' / '}
+              {author && globalPercentage && ' / '}
               {globalPercentage && (
                 <>
                   <Trans>Percentagem global de acerto</Trans>
