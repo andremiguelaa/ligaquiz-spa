@@ -21,10 +21,12 @@ export const setLoginData = (data, dispatch) => {
     Cookies.set('AUTH-TOKEN', data.access_token, { expires: validity });
     setBearerToken(data.access_token);
   }
-  dispatch({
-    type: 'user.login',
-    payload: data.user,
-  });
+  if (dispatch) {
+    dispatch({
+      type: 'user.login',
+      payload: data.user,
+    });
+  }
 };
 
 export default (props) => {

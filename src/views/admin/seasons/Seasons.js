@@ -52,6 +52,10 @@ const Seasons = () => {
       });
   };
 
+  if (!user) {
+    return <Error status={401} />;
+  }
+
   if (!user.valid_roles.admin) {
     return <Error status={403} />;
   }

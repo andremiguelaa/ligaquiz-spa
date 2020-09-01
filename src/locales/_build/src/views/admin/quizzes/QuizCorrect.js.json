@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/admin/quizzes/QuizCorrect.js",
-        109
+        118
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/views/admin/quizzes/QuizCorrect.js",
-        125
+        134
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/views/admin/quizzes/QuizCorrect.js",
-        140
+        149
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/views/admin/quizzes/QuizCorrect.js",
-        143
+        152
       ]
     ]
   }

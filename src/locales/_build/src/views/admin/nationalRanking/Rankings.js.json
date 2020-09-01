@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Rankings.js",
-        84
+        88
       ]
     ]
   },
@@ -27,11 +27,11 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Rankings.js",
-        102
+        106
       ],
       [
         "src/views/admin/nationalRanking/Rankings.js",
-        176
+        180
       ]
     ]
   },
@@ -39,11 +39,11 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Rankings.js",
-        114
+        118
       ],
       [
         "src/views/admin/nationalRanking/Rankings.js",
-        181
+        185
       ]
     ]
   },
@@ -51,7 +51,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Rankings.js",
-        117
+        121
       ]
     ]
   },
@@ -59,7 +59,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Rankings.js",
-        127
+        131
       ]
     ]
   },
@@ -67,7 +67,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Rankings.js",
-        155
+        159
       ]
     ]
   },
@@ -75,7 +75,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Rankings.js",
-        164
+        168
       ]
     ]
   },
@@ -83,7 +83,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Rankings.js",
-        166
+        170
       ]
     ]
   },
@@ -91,7 +91,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Rankings.js",
-        213
+        217
       ]
     ]
   },
@@ -99,7 +99,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Rankings.js",
-        218
+        222
       ]
     ]
   }

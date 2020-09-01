@@ -82,6 +82,14 @@ const Users = () => {
     setOrder(newOrder);
   };
 
+  if (!authUser) {
+    return <Error status={401} />;
+  }
+
+  if (!authUser.valid_roles.admin) {
+    return <Error status={403} />;
+  }
+
   if (error) {
     return <Error status={error} />;
   }

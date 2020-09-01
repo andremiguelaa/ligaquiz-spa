@@ -7,7 +7,7 @@ import ApiRequest from 'utils/ApiRequest';
 import { setLoginData } from 'utils/Auth';
 import PageHeader from 'components/PageHeader';
 import Loading from 'components/Loading';
-import Forbidden from './Forbidden';
+import Error from 'components/Error';
 
 const Login = ({ refresh }) => {
   const history = useHistory();
@@ -22,7 +22,7 @@ const Login = ({ refresh }) => {
   const [{ user }, dispatch] = useStateValue();
 
   if (user && !refresh) {
-    return <Forbidden />;
+    return <Error status={403} />;
   }
   if (user && refresh) {
     return <Loading type="full" />;
@@ -34,10 +34,11 @@ const Login = ({ refresh }) => {
     setErrorMessage(null);
     ApiRequest.post('session', formData)
       .then(({ data }) => {
-        setLoginData(data, dispatch);
         if (refresh) {
+          setLoginData(data);
           window.location.reload();
         } else {
+          setLoginData(data, dispatch);
           history.push('/');
         }
       })

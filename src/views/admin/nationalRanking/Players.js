@@ -77,6 +77,10 @@ const Players = () => {
     return <Error status={401} />;
   }
 
+  if (!user.valid_roles.admin && !user.valid_roles.national_ranking_manager) {
+    return <Error status={403} />;
+  }
+
   if (error) {
     return <Error status={error} />;
   }

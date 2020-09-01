@@ -19,6 +19,7 @@ const SpecialQuizCorrect = () => {
   const { date } = useParams();
   const [
     {
+      user,
       settings: { language },
     },
   ] = useStateValue();
@@ -93,6 +94,14 @@ const SpecialQuizCorrect = () => {
     });
     bulkCorrectAnswer(answerIds, questionId, correct);
   };
+
+  if (!user) {
+    return <Error status={401} />;
+  }
+
+  if (!(user.valid_roles.admin || user.valid_roles.answer_reviewer)) {
+    return <Error status={403} />;
+  }
 
   if (error) {
     return <Error status={error} />;

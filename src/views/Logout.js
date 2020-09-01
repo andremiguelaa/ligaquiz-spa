@@ -5,7 +5,7 @@ import Cookies from 'js-cookie';
 import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
 import Loading from 'components/Loading';
-import Forbidden from './Forbidden';
+import Error from 'components/Error';
 
 const Logout = () => {
   const history = useHistory();
@@ -25,7 +25,7 @@ const Logout = () => {
   });
 
   if (!user) {
-    return <Forbidden />;
+    return <Error status={403} />;
   }
 
   return <Loading type="full" />;

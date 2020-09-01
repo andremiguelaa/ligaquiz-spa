@@ -6,7 +6,7 @@ import classnames from 'classnames';
 import PageHeader from 'components/PageHeader';
 import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
-import Forbidden from './Forbidden';
+import Error from 'components/Error';
 
 const Register = () => {
   const [formData, setformData] = useState({
@@ -24,7 +24,7 @@ const Register = () => {
   const [{ user }] = useStateValue();
 
   if (user) {
-    return <Forbidden />;
+    return <Error status={403} />;
   }
 
   const handleSubmit = (event) => {

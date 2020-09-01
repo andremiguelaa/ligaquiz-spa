@@ -4,8 +4,8 @@ import { Trans } from '@lingui/macro';
 
 import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
+import Error from 'components/Error';
 import PageHeader from 'components/PageHeader';
-import Forbidden from './Forbidden';
 
 const ResetPassword = ({
   match: {
@@ -24,7 +24,7 @@ const ResetPassword = ({
   const [submitting, setSubmitting] = useState(false);
 
   if (user) {
-    return <Forbidden />;
+    return <Error status={403} />;
   }
 
   const handleSubmit = (event) => {

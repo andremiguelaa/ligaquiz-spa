@@ -11,6 +11,8 @@ import logo from 'img/logo.png';
 import logoDark from 'img/logo-dark.png';
 import classes from './Header.module.scss';
 
+const version = '4.0.1';
+
 const isDarkMode =
   window.matchMedia &&
   window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -267,7 +269,7 @@ const Header = () => {
                   </Link>
                   <hr className="navbar-divider" />
                   <div className="navbar-item">
-                    <Trans>Versão 4.0</Trans>
+                    <Trans>Versão {version}</Trans>
                   </div>
                 </div>
               </div>

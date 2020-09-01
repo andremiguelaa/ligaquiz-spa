@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        71
+        73
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        78
+        80
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        84
+        86
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        89
+        91
       ]
     ]
   },
@@ -35,7 +35,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        114
+        116
       ]
     ]
   },
@@ -43,7 +43,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        117
+        119
       ]
     ]
   },
@@ -51,7 +51,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        147
+        149
       ]
     ]
   },
@@ -59,7 +59,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        151
+        153
       ]
     ]
   },
@@ -67,7 +67,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        155
+        157
       ]
     ]
   },
@@ -75,7 +75,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        159
+        161
       ]
     ]
   },
@@ -83,7 +83,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        170
+        172
       ]
     ]
   },
@@ -91,7 +91,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        177
+        179
       ]
     ]
   },
@@ -99,7 +99,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        188
+        190
       ]
     ]
   },
@@ -107,7 +107,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        195
+        197
       ]
     ]
   },
@@ -115,7 +115,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        205
+        207
       ]
     ]
   },
@@ -123,7 +123,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        212
+        214
       ]
     ]
   },
@@ -131,7 +131,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        219
+        221
       ]
     ]
   },
@@ -139,7 +139,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        226
+        228
       ]
     ]
   },
@@ -147,7 +147,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        233
+        235
       ]
     ]
   },
@@ -155,7 +155,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        241
+        243
       ]
     ]
   },
@@ -163,7 +163,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        245
+        247
       ]
     ]
   },
@@ -171,7 +171,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        249
+        251
       ]
     ]
   },
@@ -179,7 +179,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        260
+        262
       ]
     ]
   },
@@ -187,15 +187,15 @@
     "origin": [
       [
         "src/partials/Header.js",
-        266
+        268
       ]
     ]
   },
-  "Versão 4.0": {
+  "Versão {version}": {
     "origin": [
       [
         "src/partials/Header.js",
-        270
+        272
       ]
     ]
   }

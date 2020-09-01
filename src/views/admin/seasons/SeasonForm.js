@@ -4,6 +4,7 @@ import { Trans } from '@lingui/macro';
 import DatePicker from 'react-datepicker';
 import { toast } from 'react-toastify';
 
+import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
 import formatDate from 'utils/formatDate';
 import Loading from 'components/Loading';
@@ -21,6 +22,7 @@ const getDayDifference = (date, days) => {
 const SeasonForm = () => {
   const { season } = useParams();
   const history = useHistory();
+  const [{ user }] = useStateValue();
   const [error, setError] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [minDate, setMinDate] = useState();
@@ -139,6 +141,14 @@ const SeasonForm = () => {
         });
     }
   };
+
+  if (!user) {
+    return <Error status={401} />;
+  }
+
+  if (!user.valid_roles.admin) {
+    return <Error status={403} />;
+  }
 
   if (error) {
     return <Error status={error} />;

@@ -6,8 +6,8 @@ import { toast } from 'react-toastify';
 
 import { convertToLongDate } from 'utils/formatDate';
 import { useStateValue } from 'state/State';
-import Forbidden from './Forbidden';
 import PageHeader from 'components/PageHeader';
+import Error from 'components/Error';
 import ApiRequest from 'utils/ApiRequest';
 import Avatar from './Account/Avatar';
 
@@ -32,7 +32,7 @@ const Account = () => {
   });
 
   if (!user) {
-    return <Forbidden />;
+    return <Error status={401} />;
   }
 
   const handleSubmit = (event) => {

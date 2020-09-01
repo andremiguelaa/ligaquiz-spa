@@ -16,6 +16,7 @@ const QuizForm = () => {
   const { date } = useParams();
   const [
     {
+      user,
       settings: { language },
     },
   ] = useStateValue();
@@ -122,6 +123,14 @@ const QuizForm = () => {
         });
     }
   };
+
+  if (!user) {
+    return <Error status={401} />;
+  }
+
+  if (!(user.valid_roles.admin || user.valid_roles.quiz_editor)) {
+    return <Error status={403} />;
+  }
 
   if (error) {
     return <Error status={error} />;

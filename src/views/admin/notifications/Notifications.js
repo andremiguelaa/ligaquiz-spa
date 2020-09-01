@@ -36,7 +36,7 @@ const Notifications = () => {
   }
 
   if (!user.valid_roles.admin) {
-    return <Error status={404} />;
+    return <Error status={403} />;
   }
 
   if (error) {

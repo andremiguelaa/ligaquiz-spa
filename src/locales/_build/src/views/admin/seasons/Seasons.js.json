@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/views/admin/seasons/Seasons.js",
-        65
+        69
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/views/admin/seasons/Seasons.js",
-        76
+        80
       ]
     ]
   },
@@ -35,11 +35,11 @@
     "origin": [
       [
         "src/views/admin/seasons/Seasons.js",
-        94
+        98
       ],
       [
         "src/views/admin/seasons/Seasons.js",
-        97
+        101
       ]
     ]
   },
@@ -47,7 +47,7 @@
     "origin": [
       [
         "src/views/admin/seasons/Seasons.js",
-        143
+        147
       ]
     ]
   },
@@ -55,7 +55,7 @@
     "origin": [
       [
         "src/views/admin/seasons/Seasons.js",
-        153
+        157
       ]
     ]
   },
@@ -63,7 +63,7 @@
     "origin": [
       [
         "src/views/admin/seasons/Seasons.js",
-        154
+        158
       ]
     ]
   }
