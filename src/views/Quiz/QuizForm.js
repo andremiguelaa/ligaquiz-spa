@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useEffect } from 'react';
-import { Trans, Plural } from '@lingui/macro';
+import { Trans } from '@lingui/macro';
 import { I18n } from '@lingui/react';
 import { t } from '@lingui/macro';
 import { useHistory } from 'react-router-dom';
@@ -555,11 +555,11 @@ const QuizForm = ({ data, userAnswers }) => {
           <>
             {blankAnsers > 0 && (
               <>
-                <Plural
-                  value={blankAnsers}
-                  one={<>Ainda tens {blankAnsers} pergunta em branco.</>}
-                  other={<>Ainda tens {blankAnsers} perguntas em branco.</>}
-                />
+                {blankAnsers > 1 ? (
+                  <Trans>Ainda tens {blankAnsers} perguntas em branco.</Trans>
+                ) : (
+                  <Trans>Ainda tens uma pergunta em branco.</Trans>
+                )}
                 <br />
               </>
             )}

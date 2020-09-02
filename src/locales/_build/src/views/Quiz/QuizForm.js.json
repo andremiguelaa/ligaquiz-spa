@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        189
+        191
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        210
+        212
       ]
     ]
   },
@@ -35,7 +35,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        240
+        242
       ]
     ]
   },
@@ -43,7 +43,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        375
+        377
       ]
     ]
   },
@@ -51,7 +51,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        399
+        401
       ]
     ]
   },
@@ -59,7 +59,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        414
+        416
       ]
     ]
   },
@@ -67,11 +67,11 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        422
+        424
       ],
       [
         "src/views/Quiz/QuizForm.js",
-        483
+        485
       ]
     ]
   },
@@ -79,11 +79,11 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        425
+        427
       ],
       [
         "src/views/Quiz/QuizForm.js",
-        486
+        488
       ]
     ]
   },
@@ -91,11 +91,11 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        436
+        438
       ],
       [
         "src/views/Quiz/QuizForm.js",
-        497
+        499
       ]
     ]
   },
@@ -103,7 +103,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        475
+        477
       ]
     ]
   },
@@ -111,7 +111,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        537
+        539
       ]
     ]
   },
@@ -119,7 +119,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        539
+        541
       ]
     ]
   },
@@ -127,7 +127,23 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        551
+        553
+      ]
+    ]
+  },
+  "Ainda tens {blankAnsers} perguntas em branco.": {
+    "origin": [
+      [
+        "src/views/Quiz/QuizForm.js",
+        559
+      ]
+    ]
+  },
+  "Ainda tens uma pergunta em branco.": {
+    "origin": [
+      [
+        "src/views/Quiz/QuizForm.js",
+        561
       ]
     ]
   },
@@ -135,7 +151,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        552
+        566
       ]
     ]
   }

@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/views/SpecialQuiz/SpecialQuizForm.js",
-        79
+        81
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/views/SpecialQuiz/SpecialQuizForm.js",
-        90
+        92
       ]
     ]
   },
@@ -35,7 +35,7 @@
     "origin": [
       [
         "src/views/SpecialQuiz/SpecialQuizForm.js",
-        111
+        113
       ]
     ]
   },
@@ -43,7 +43,7 @@
     "origin": [
       [
         "src/views/SpecialQuiz/SpecialQuizForm.js",
-        165
+        167
       ]
     ]
   },
@@ -51,7 +51,7 @@
     "origin": [
       [
         "src/views/SpecialQuiz/SpecialQuizForm.js",
-        173
+        175
       ]
     ]
   },
@@ -59,7 +59,7 @@
     "origin": [
       [
         "src/views/SpecialQuiz/SpecialQuizForm.js",
-        183
+        185
       ]
     ]
   },
@@ -67,7 +67,7 @@
     "origin": [
       [
         "src/views/SpecialQuiz/SpecialQuizForm.js",
-        186
+        188
       ]
     ]
   },
@@ -75,7 +75,23 @@
     "origin": [
       [
         "src/views/SpecialQuiz/SpecialQuizForm.js",
-        211
+        213
+      ]
+    ]
+  },
+  "Ainda tens {blankAnsers} perguntas em branco.": {
+    "origin": [
+      [
+        "src/views/SpecialQuiz/SpecialQuizForm.js",
+        219
+      ]
+    ]
+  },
+  "Ainda tens uma pergunta em branco.": {
+    "origin": [
+      [
+        "src/views/SpecialQuiz/SpecialQuizForm.js",
+        221
       ]
     ]
   },
@@ -83,7 +99,7 @@
     "origin": [
       [
         "src/views/SpecialQuiz/SpecialQuizForm.js",
-        212
+        226
       ]
     ]
   }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Trans, Plural } from '@lingui/macro';
+import { Trans } from '@lingui/macro';
 import { useHistory } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { debounce } from 'lodash';
@@ -215,11 +215,11 @@ const SpecialQuizForm = ({ data, userAnswers }) => {
           <>
             {blankAnsers > 0 && (
               <>
-                <Plural
-                  value={blankAnsers}
-                  one={<>Ainda tens {blankAnsers} pergunta em branco.</>}
-                  other={<>Ainda tens {blankAnsers} perguntas em branco.</>}
-                />
+                {blankAnsers > 1 ? (
+                  <Trans>Ainda tens {blankAnsers} perguntas em branco.</Trans>
+                ) : (
+                  <Trans>Ainda tens uma pergunta em branco.</Trans>
+                )}
                 <br />
               </>
             )}
