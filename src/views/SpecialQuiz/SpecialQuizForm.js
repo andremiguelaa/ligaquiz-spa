@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Trans } from '@lingui/macro';
+import { Trans, Plural } from '@lingui/macro';
 import { useHistory } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { debounce } from 'lodash';
@@ -68,6 +68,8 @@ const SpecialQuizForm = ({ data, userAnswers }) => {
 
   const jokersAssigned = formData.answers.filter((item) => item.points === 1)
     .length;
+
+  const blankAnsers = formData.answers.filter((item) => !item.text).length;
 
   return (
     <>
@@ -209,7 +211,21 @@ const SpecialQuizForm = ({ data, userAnswers }) => {
         type="info"
         open={submitModal}
         title={<Trans>Submeter quiz</Trans>}
-        body={<Trans>Tens a certeza que queres submeter o quiz?</Trans>}
+        body={
+          <>
+            {blankAnsers > 0 && (
+              <>
+                <Plural
+                  value={blankAnsers}
+                  one={<>Ainda tens {blankAnsers} pergunta em branco.</>}
+                  other={<>Ainda tens {blankAnsers} perguntas em branco.</>}
+                />
+                <br />
+              </>
+            )}
+            <Trans>Tens a certeza que queres submeter o quiz?</Trans>
+          </>
+        }
         action={() => {
           submitQuiz();
         }}

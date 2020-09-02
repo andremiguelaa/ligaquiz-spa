@@ -78,8 +78,6 @@ const SpecialQuiz = () => {
     );
   }
 
-  console.log(globalPercentage);
-
   return (
     <>
       <PageHeader
