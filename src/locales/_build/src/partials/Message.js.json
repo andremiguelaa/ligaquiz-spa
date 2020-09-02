@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/partials/Message.js",
-        28
+        30
       ]
     ]
   },
@@ -11,7 +11,15 @@
     "origin": [
       [
         "src/partials/Message.js",
-        33
+        35
+      ]
+    ]
+  },
+  "Enviar mensagem": {
+    "origin": [
+      [
+        "src/partials/Message.js",
+        58
       ]
     ]
   },
@@ -19,7 +27,7 @@
     "origin": [
       [
         "src/partials/Message.js",
-        63
+        68
       ]
     ]
   },
@@ -27,7 +35,7 @@
     "origin": [
       [
         "src/partials/Message.js",
-        67
+        72
       ]
     ]
   },
@@ -35,7 +43,7 @@
     "origin": [
       [
         "src/partials/Message.js",
-        83
+        88
       ]
     ]
   }

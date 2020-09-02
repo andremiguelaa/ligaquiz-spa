@@ -39,7 +39,15 @@
       ],
       [
         "src/components/Error.js",
-        48
+        52
+      ]
+    ]
+  },
+  "Estás sem ligação à internet.": {
+    "origin": [
+      [
+        "src/components/Error.js",
+        35
       ]
     ]
   }

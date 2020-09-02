@@ -30,6 +30,10 @@ const error = {
     icon: <i className="fa fa-bomb" />,
     message: <Trans>Erro de servidor. Tenta mais tarde.</Trans>,
   },
+  666: {
+    icon: <i className="fa fa-chain-broken" />,
+    message: <Trans>Estás sem ligação à internet.</Trans>,
+  },
 };
 
 const Error = ({ status }) => (

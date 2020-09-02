@@ -103,7 +103,7 @@ msgstr "Adicionar provas mensais"
 msgid "Administrador"
 msgstr "Administrador"
 
-#: src/partials/Header.js:149
+#: src/partials/Header.js:155
 msgid "Administração"
 msgstr "Administração"
 
@@ -168,19 +168,19 @@ msgstr "Arquitectura"
 msgid "Arquivo"
 msgstr "Arquivo"
 
-#: src/partials/Header.js:251
+#: src/partials/Header.js:260
 #: src/routes.js:117
 #: src/views/Quizzes.js:49
 msgid "Arquivo de quizzes"
 msgstr "Arquivo de quizzes"
 
-#: src/partials/Header.js:262
+#: src/partials/Header.js:271
 #: src/routes.js:122
 #: src/views/SpecialQuizzes.js:65
 msgid "Arquivo de quizzes especiais"
 msgstr "Arquivo de quizzes especiais"
 
-#: src/partials/Header.js:247
+#: src/partials/Header.js:256
 #: src/routes.js:112
 #: src/views/Seasons.js:49
 msgid "Arquivo de temporadas"
@@ -190,7 +190,7 @@ msgstr "Arquivo de temporadas"
 msgid "Artesanato"
 msgstr "Artesanato"
 
-#: src/partials/Header.js:86
+#: src/partials/Header.js:92
 #: src/views/Statistics.js:153
 msgid "As minhas estatísticas"
 msgstr "As minhas estatísticas"
@@ -257,7 +257,7 @@ msgstr "Ciência"
 msgid "Ciências Sociais"
 msgstr "Ciências Sociais"
 
-#: src/partials/Header.js:80
+#: src/partials/Header.js:86
 #: src/routes.js:107
 #: src/views/Ranking.js:141
 #: src/views/Seasons.js:80
@@ -293,7 +293,7 @@ msgstr "Comunicação Social e Redes Sociais"
 msgid "Confirmação da palavra-passe"
 msgstr "Confirmação da palavra-passe"
 
-#: src/partials/Header.js:235
+#: src/partials/Header.js:244
 #: src/routes.js:75
 #: src/views/Account.js:68
 msgid "Conta"
@@ -478,7 +478,7 @@ msgstr "Editor de Quizzes Especiais"
 msgid "Empates"
 msgstr "Empates"
 
-#: src/partials/Header.js:116
+#: src/partials/Header.js:122
 #: src/routes.js:49
 #: src/views/Login.js:57
 #: src/views/Login.js:124
@@ -495,11 +495,15 @@ msgstr "Entretenimento"
 msgid "Enunciado"
 msgstr "Enunciado"
 
-#: src/partials/Message.js:83
+#: src/partials/Message.js:88
 msgid "Enviar"
 msgstr "Enviar"
 
-#: src/partials/Message.js:63
+#: src/partials/Message.js:58
+msgid "Enviar mensagem"
+msgstr "Enviar mensagem"
+
+#: src/partials/Message.js:68
 msgid "Enviar sugestão/reclamação"
 msgstr "Enviar sugestão/reclamação"
 
@@ -515,7 +519,7 @@ msgid "Errada"
 msgstr "Errada"
 
 #: src/components/Error.js:31
-#: src/components/Error.js:48
+#: src/components/Error.js:52
 #: src/views/Account/Avatar.js:103
 #: src/views/Login.js:111
 #: src/views/RecoverPassword.js:85
@@ -565,6 +569,10 @@ msgstr "Estatísticas do adversário"
 msgid "Estilo de Vida"
 msgstr "Estilo de Vida"
 
+#: src/components/Error.js:35
+msgid "Estás sem ligação à internet."
+msgstr "Estás sem ligação à internet."
+
 #: src/views/Ranking/TableHeader.js:82
 msgid "F"
 msgstr "F"
@@ -611,11 +619,11 @@ msgstr "Geologia"
 msgid "Gestor de Ranking Nacional"
 msgstr "Gestor de Ranking Nacional"
 
-#: src/partials/Header.js:172
+#: src/partials/Header.js:181
 msgid "Gestão de Quizzes"
 msgstr "Gestão de Quizzes"
 
-#: src/partials/Header.js:207
+#: src/partials/Header.js:216
 msgid "Gestão de Ranking Nacional"
 msgstr "Gestão de Ranking Nacional"
 
@@ -704,7 +712,7 @@ msgstr "Jogador de quizzes especiais"
 msgid "Jogador regular"
 msgstr "Jogador regular"
 
-#: src/partials/Header.js:228
+#: src/partials/Header.js:237
 #: src/views/admin/nationalRanking/Players.js:90
 msgid "Jogadores"
 msgstr "Jogadores"
@@ -748,7 +756,7 @@ msgstr "Já existe uma conta com este e-mail."
 msgid "Legenda"
 msgstr "Legenda"
 
-#: src/App.js:48
+#: src/App.js:67
 #: src/routes.js:44
 #: src/views/Home.js:8
 #: src/views/Statistics.js:187
@@ -768,13 +776,17 @@ msgstr "Matemática"
 msgid "Melhor"
 msgstr "Melhor"
 
-#: src/partials/Message.js:67
+#: src/partials/Message.js:72
 msgid "Mensagem"
 msgstr "Mensagem"
 
-#: src/partials/Message.js:28
+#: src/partials/Message.js:30
 msgid "Mensagem enviada com sucesso."
 msgstr "Mensagem enviada com sucesso."
+
+#: src/partials/Header.js:59
+msgid "Menu"
+msgstr "Menu"
 
 #: src/utils/getGenreTranslation.js:41
 msgid "Mitologia"
@@ -813,6 +825,10 @@ msgstr "Mês"
 #: src/utils/getGenreTranslation.js:25
 msgid "Música"
 msgstr "Música"
+
+#: src/partials/Header.js:42
+msgid "Navegação primária"
+msgstr "Navegação primária"
 
 #: src/views/admin/nationalRanking/Players/Form.js:214
 #: src/views/admin/specialQuizzes/SpecialQuizForm.js:228
@@ -862,7 +878,7 @@ msgstr "Notificação de quiz regular (22h00)"
 msgid "Notificação editada com sucesso."
 msgstr "Notificação editada com sucesso."
 
-#: src/partials/Header.js:157
+#: src/partials/Header.js:166
 #: src/routes.js:162
 #: src/views/admin/notifications/Notifications.js:48
 msgid "Notificações"
@@ -949,7 +965,7 @@ msgstr "Não foi possível criar o quiz."
 msgid "Não foi possível editar a notificação."
 msgstr "Não foi possível editar a notificação."
 
-#: src/partials/Message.js:33
+#: src/partials/Message.js:35
 msgid "Não foi possível enviar a mensagem."
 msgstr "Não foi possível enviar a mensagem."
 
@@ -1077,6 +1093,10 @@ msgstr "Percentagem de respostas correctas"
 msgid "Percentagem global de acerto"
 msgstr "Percentagem global de acerto"
 
+#: src/App.js:38
+msgid "Perdeste a ligação à internet."
+msgstr "Perdeste a ligação à internet."
+
 #: src/views/Account.js:49
 msgid "Perfil actualizado com sucesso."
 msgstr "Perfil actualizado com sucesso."
@@ -1103,7 +1123,7 @@ msgstr "Perguntas respondidas"
 msgid "Permissões"
 msgstr "Permissões"
 
-#: src/partials/Header.js:197
+#: src/partials/Header.js:206
 #: src/routes.js:227
 #: src/views/admin/search/Search.js:58
 msgid "Pesquisa de perguntas"
@@ -1158,7 +1178,7 @@ msgstr "Prova"
 msgid "Provas individuais"
 msgstr "Provas individuais"
 
-#: src/partials/Header.js:221
+#: src/partials/Header.js:230
 #: src/views/admin/nationalRanking/Events.js:108
 msgid "Provas mensais"
 msgstr "Provas mensais"
@@ -1277,7 +1297,7 @@ msgstr "Quiz | Criar"
 msgid "Quiz | Editar"
 msgstr "Quiz | Editar"
 
-#: src/partials/Header.js:179
+#: src/partials/Header.js:188
 #: src/routes.js:172
 #: src/views/NationalRanking.js:240
 #: src/views/admin/quizzes/Quizzes.js:81
@@ -1288,7 +1308,7 @@ msgstr "Quizzes"
 msgid "Quizzes Especiais"
 msgstr "Quizzes Especiais"
 
-#: src/partials/Header.js:190
+#: src/partials/Header.js:199
 #: src/routes.js:192
 msgid "Quizzes especiais"
 msgstr "Quizzes especiais"
@@ -1302,7 +1322,7 @@ msgstr "Química"
 msgid "RC"
 msgstr "RC"
 
-#: src/partials/Header.js:91
+#: src/partials/Header.js:97
 #: src/routes.js:101
 #: src/views/NationalRanking.js:150
 #: src/views/NationalRanking.js:175
@@ -1337,12 +1357,12 @@ msgstr "Ranking mensal apagado com sucesso."
 msgid "Ranking mensal publicado com sucesso."
 msgstr "Ranking mensal publicado com sucesso."
 
-#: src/partials/Header.js:214
+#: src/partials/Header.js:223
 #: src/views/admin/nationalRanking/Rankings.js:88
 msgid "Rankings mensais"
 msgstr "Rankings mensais"
 
-#: src/partials/Header.js:243
+#: src/partials/Header.js:252
 #: src/routes.js:86
 #: src/views/GenreRanking.js:154
 #: src/views/Seasons.js:74
@@ -1360,7 +1380,7 @@ msgstr "Recuperar palavra-passe"
 msgid "Redefinir palavra-passe"
 msgstr "Redefinir palavra-passe"
 
-#: src/partials/Header.js:119
+#: src/partials/Header.js:125
 #: src/views/Register.js:199
 msgid "Registar"
 msgstr "Registar"
@@ -1374,7 +1394,7 @@ msgstr "Registo"
 msgid "Registo de acções (últimos {logsDays} dias)"
 msgstr "Registo de acções (últimos {logsDays} dias)"
 
-#: src/partials/Header.js:73
+#: src/partials/Header.js:78
 #: src/routes.js:81
 #: src/views/Rules.js:25
 #: src/views/SpecialQuiz/SpecialQuizForm.js:185
@@ -1459,7 +1479,7 @@ msgstr "Resultado no Campeonato Mundial"
 msgid "Resultado no Campeonato Nacional"
 msgstr "Resultado no Campeonato Nacional"
 
-#: src/partials/Header.js:268
+#: src/partials/Header.js:277
 #: src/routes.js:69
 msgid "Sair"
 msgstr "Sair"
@@ -1599,7 +1619,7 @@ msgstr "Temporada | Criar"
 msgid "Temporada | Editar"
 msgstr "Temporada | Editar"
 
-#: src/partials/Header.js:161
+#: src/partials/Header.js:170
 #: src/routes.js:212
 #: src/views/admin/seasons/Seasons.js:69
 msgid "Temporadas"
@@ -1701,7 +1721,7 @@ msgstr "Utilizador actualizado com sucesso."
 msgid "Utilizador registado com sucesso.<0/>Clica <1>aqui</1> e usa as tuas credenciais."
 msgstr "Utilizador registado com sucesso.<0/>Clica <1>aqui</1> e usa as tuas credenciais."
 
-#: src/partials/Header.js:153
+#: src/partials/Header.js:159
 #: src/routes.js:167
 #: src/views/admin/users/Users.js:99
 msgid "Utilizadores"
@@ -1716,7 +1736,7 @@ msgstr "V"
 msgid "Validade da subscrição"
 msgstr "Validade da subscrição"
 
-#: src/partials/Header.js:272
+#: src/partials/Header.js:281
 msgid "Versão {version}"
 msgstr "Versão {version}"
 

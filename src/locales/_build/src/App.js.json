@@ -1,9 +1,17 @@
 {
+  "Perdeste a ligação à internet.": {
+    "origin": [
+      [
+        "src/App.js",
+        38
+      ]
+    ]
+  },
   "Liga Quiz": {
     "origin": [
       [
         "src/App.js",
-        48
+        67
       ]
     ]
   }
