@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Trans } from '@lingui/macro';
+import { I18n } from '@lingui/react';
+import { t } from '@lingui/macro';
 import { toast } from 'react-toastify';
 import classnames from 'classnames';
 
@@ -42,48 +44,53 @@ const Message = () => {
   }
 
   return (
-    <>
-      <button
-        className={classnames(
-          'button',
-          'is-large',
-          'is-info',
-          classes.button
-        )}
-        onClick={() => setModal(true)}
-      >
-        <span className="icon">
-          <i className="fa fa-envelope-o"></i>
-        </span>
-      </button>
-      {modal && (
-        <Modal
-          type="info"
-          open
-          title={<Trans>Enviar sugestão/reclamação</Trans>}
-          body={
-            <div className="field">
-              <label className="label">
-                <Trans>Mensagem</Trans>
-              </label>
-              <div className="control">
-                <textarea
-                  className="textarea"
-                  defaultValue={content}
-                  onChange={(event) => {
-                    setContent(event.target.value);
-                  }}
-                ></textarea>
-              </div>
-            </div>
-          }
-          doingAction={submitting}
-          action={() => sendMessage(content)}
-          onClose={() => setModal(false)}
-          confirmButtonText={<Trans>Enviar</Trans>}
-        />
+    <I18n>
+      {({ i18n }) => (
+        <>
+          <button
+            className={classnames(
+              'button',
+              'is-large',
+              'is-info',
+              classes.button
+            )}
+            onClick={() => setModal(true)}
+            aria-label={i18n._(t`Enviar mensagem`)}
+          >
+            <span className="icon">
+              <i className="fa fa-envelope-o"></i>
+            </span>
+          </button>
+          {modal && (
+            <Modal
+              type="info"
+              open
+              title={<Trans>Enviar sugestão/reclamação</Trans>}
+              body={
+                <div className="field">
+                  <label className="label">
+                    <Trans>Mensagem</Trans>
+                  </label>
+                  <div className="control">
+                    <textarea
+                      className="textarea"
+                      defaultValue={content}
+                      onChange={(event) => {
+                        setContent(event.target.value);
+                      }}
+                    ></textarea>
+                  </div>
+                </div>
+              }
+              doingAction={submitting}
+              action={() => sendMessage(content)}
+              onClose={() => setModal(false)}
+              confirmButtonText={<Trans>Enviar</Trans>}
+            />
+          )}
+        </>
       )}
-    </>
+    </I18n>
   );
 };
 
