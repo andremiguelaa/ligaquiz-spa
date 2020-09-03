@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Cookies from 'js-cookie';
-import { toast } from 'react-toastify';
-import { Trans } from '@lingui/macro';
 
 import { useStateValue } from 'state/State';
 import Loading from 'components/Loading';
