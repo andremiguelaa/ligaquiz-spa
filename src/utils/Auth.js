@@ -5,7 +5,6 @@ import { Trans } from '@lingui/macro';
 
 import { useStateValue } from 'state/State';
 import Loading from 'components/Loading';
-import Error from 'components/Error';
 import ApiRequest, { setBearerToken } from 'utils/ApiRequest';
 
 export const setLoginData = (data, dispatch) => {
@@ -32,34 +31,25 @@ export const setLoginData = (data, dispatch) => {
 export default (props) => {
   const [, dispatch] = useStateValue();
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState();
   useEffect(() => {
     const token = Cookies.get('AUTH-TOKEN');
     if (token) {
       ApiRequest.patch('session')
         .then(({ data }) => {
           setLoginData(data, dispatch);
-          setLoading(false);
         })
         .catch(({ response }) => {
-          setError(response?.status);
           if (response?.status === 401) {
-            toast.error(<Trans>A tua sessão expirou.</Trans>, {
-              hideProgressBar: true,
-              closeButton: false,
-            });
             Cookies.remove('AUTH-TOKEN');
-            setLoading(false);
           }
+        })
+        .finally(() => {
+          setLoading(false);
         });
     } else {
       setLoading(false);
     }
   }, [dispatch, setLoading]);
-
-  if (error) {
-    return <Error status={error} />;
-  }
 
   return <>{!loading ? props.children : <Loading type="full" />}</>;
 };
