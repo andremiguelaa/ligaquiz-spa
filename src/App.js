@@ -31,7 +31,7 @@ const App = () => {
   ] = useStateValue();
   setDefaultLocale(language);
 
-  const [online, setOnline] = useState(true);
+  const [online, setOnline] = useState(navigator.onLine);
 
   useEffect(() => {
     if (!online) {
