@@ -28,16 +28,17 @@ const QuizDone = ({ data, userAnswers }) => (
             {question.answer}
           </div>
         )}
-        {userAnswers?.[question.id]?.[0] && (
-          <div>
-            <strong>
-              <Trans>Resposta dada</Trans>:
-            </strong>{' '}
-            {userAnswers[question.id][0].text
-              ? userAnswers[question.id][0].text
-              : '-'}
-          </div>
-        )}
+        {userAnswers?.[question.id]?.[0] &&
+          Boolean(userAnswers?.[question.id]?.[0].submitted) && (
+            <div>
+              <strong>
+                <Trans>Resposta dada</Trans>:
+              </strong>{' '}
+              {userAnswers[question.id][0].text
+                ? userAnswers[question.id][0].text
+                : '-'}
+            </div>
+          )}
         {!data.quiz.solo && userAnswers?.[question.id]?.[0] && (
           <div>
             <strong>

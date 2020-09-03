@@ -152,28 +152,29 @@ const SpecialQuizDone = ({ data, userAnswers, setError }) => {
               {question.answer}
             </div>
           )}
-          {userAnswers?.[question.id]?.[0] && (
-            <>
-              <div>
-                <strong>
-                  <Trans>Resposta dada</Trans>:
-                </strong>{' '}
-                {userAnswers[question.id][0].text
-                  ? userAnswers[question.id][0].text
-                  : '-'}
-              </div>
-              <div>
-                <strong>
-                  <Trans>Joker usado</Trans>:
-                </strong>{' '}
-                {userAnswers[question.id][0].points ? (
-                  <Trans>Sim</Trans>
-                ) : (
-                  <Trans>Não</Trans>
-                )}
-              </div>
-            </>
-          )}
+          {userAnswers?.[question.id]?.[0] &&
+            Boolean(userAnswers?.[question.id]?.[0].submitted) && (
+              <>
+                <div>
+                  <strong>
+                    <Trans>Resposta dada</Trans>:
+                  </strong>{' '}
+                  {userAnswers[question.id][0].text
+                    ? userAnswers[question.id][0].text
+                    : '-'}
+                </div>
+                <div>
+                  <strong>
+                    <Trans>Joker usado</Trans>:
+                  </strong>{' '}
+                  {userAnswers[question.id][0].points ? (
+                    <Trans>Sim</Trans>
+                  ) : (
+                    <Trans>Não</Trans>
+                  )}
+                </div>
+              </>
+            )}
           {data.quiz.result && data.quiz.result.ranking.length > 0 && (
             <div>
               <strong>
