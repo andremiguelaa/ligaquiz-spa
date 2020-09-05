@@ -27,7 +27,10 @@ const FormModal = ({
   const [submitting, setSubmitting] = useState(false);
   const [dates, setDates] = useState(
     notification
-      ? [new Date(notification.start_date), new Date(notification.end_date)]
+      ? [
+          new Date(notification.start_date.replace(/ /g, 'T')),
+          new Date(notification.end_date.replace(/ /g, 'T')),
+        ]
       : [new Date(), new Date()]
   );
   const [content, setContent] = useState(
