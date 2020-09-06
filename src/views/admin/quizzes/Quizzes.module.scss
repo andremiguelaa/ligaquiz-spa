@@ -2,6 +2,10 @@
 @import 'bulma/sass/utilities/derived-variables.scss';
 @import 'bulma/sass/utilities/mixins.sass';
 
+.actions {
+  min-width: 100px;
+}
+
 .question {
   & + .question {
     border-top: 1px solid $grey-lighter;

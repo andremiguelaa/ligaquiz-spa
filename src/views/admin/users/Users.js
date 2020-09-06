@@ -7,7 +7,6 @@ import classames from 'classnames';
 import { get } from 'lodash';
 
 import { useStateValue } from 'state/State';
-import getAcronym from 'utils/getAcronym';
 import ApiRequest from 'utils/ApiRequest';
 import Loading from 'components/Loading';
 import Error from 'components/Error';
@@ -205,16 +204,9 @@ const Users = () => {
                                   <i className="fa fa-user" />
                                 )}
                               </div>
-                              <span className="is-hidden-mobile">
+                              <span className={classes.username}>
                                 {user.name} {user.surname}
                               </span>
-                              <abbr
-                                data-tooltip={`${user.name} ${user.surname}`}
-                                className="is-hidden-tablet has-tooltip-right"
-                              >
-                                {getAcronym(user.name)}
-                                {getAcronym(user.surname)}
-                              </abbr>
                             </Link>
                           </div>
                         </td>

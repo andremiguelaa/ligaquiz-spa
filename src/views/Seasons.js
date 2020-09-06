@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams, useHistory } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
+import classnames from 'classnames';
 
 import ApiRequest from 'utils/ApiRequest';
 import PageHeader from 'components/PageHeader';
@@ -58,13 +59,17 @@ const Seasons = () => {
                     columns={[
                       {
                         id: 'season',
+                        className: classes.season,
                         render: (item) => (
                           <Trans>Temporada {item.season}</Trans>
                         ),
                       },
                       {
                         id: 'actions',
-                        className: 'has-text-right',
+                        className: classnames(
+                          'has-text-right',
+                          classes.actions
+                        ),
                         render: (item) => (
                           <>
                             <Link

@@ -13,6 +13,8 @@ import PageHeader from 'components/PageHeader';
 import EmptyState from 'components/EmptyState';
 import PaginatedTable from 'components/PaginatedTable';
 
+import classes from './Quizzes.module.scss';
+
 const Quizzes = () => {
   const { page } = useParams();
   const history = useHistory();
@@ -126,6 +128,7 @@ const Quizzes = () => {
                   },
                   {
                     id: 'actions',
+                    className: classes.actions,
                     render: (item) => (
                       <>
                         <div className="buttons has-addons is-pulled-right">

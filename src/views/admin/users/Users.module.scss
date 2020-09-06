@@ -1,6 +1,6 @@
-@import "bulma/sass/utilities/initial-variables.sass";
-@import "bulma/sass/utilities/derived-variables.scss";
-@import "bulma/sass/utilities/mixins.sass";
+@import 'bulma/sass/utilities/initial-variables.sass';
+@import 'bulma/sass/utilities/derived-variables.scss';
+@import 'bulma/sass/utilities/mixins.sass';
 
 .userCellContent {
   padding-left: 32px;
@@ -26,6 +26,14 @@
       min-width: 28px;
       object-fit: cover;
     }
+  }
+  .username {
+    max-width: calc(100vw - 160px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: middle;
   }
 }
 

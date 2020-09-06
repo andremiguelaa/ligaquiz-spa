@@ -2,9 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 
-import getAcronym from 'utils/getAcronym';
 import EmptyState from 'components/EmptyState';
 import ConditionalWrapper from 'components/ConditionalWrapper';
+
+import classes from '../NationalRanking.module.scss';
 
 const List = ({
   individualQuizPlayers,
@@ -45,16 +46,9 @@ const List = ({
                     <Link to={`/statistics/${player.info.id}`}>{children}</Link>
                   )}
                 >
-                  <span className="is-hidden-mobile">
+                  <span className={classes.username}>
                     {player.name} {player.surname}
                   </span>
-                  <abbr
-                    data-tooltip={`${player.name} ${player.surname}`}
-                    className="is-hidden-tablet has-tooltip-right"
-                  >
-                    {getAcronym(player.name)}
-                    {getAcronym(player.surname)}
-                  </abbr>
                 </ConditionalWrapper>
               </td>
               <td>
