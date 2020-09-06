@@ -2,7 +2,7 @@
   "name": "liga-quiz-spa",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://spa.ligaquiz.pt",
+  "homepage": "https://ligaquiz.pt",
   "dependencies": {
     "@creativebulma/bulma-tooltip": "^1.2.0",
     "bulma-switch": "^2.0.0",
