@@ -23,7 +23,8 @@ import Rules from 'views/Rules';
 import GenreRanking from 'views/GenreRanking';
 
 import NationalRankingAdminRankings from 'views/admin/nationalRanking/Rankings';
-import NationalRankingAdminEvents from 'views/admin/nationalRanking/Events';
+import NationalRankingAdminEventsList from 'views/admin/nationalRanking/Events/List';
+import NationalRankingAdminEventsForm from 'views/admin/nationalRanking/Events/Form';
 import NationalRankingAdminPlayers from 'views/admin/nationalRanking/Players';
 import NotificationsAdmin from 'views/admin/notifications/Notifications';
 import UsersAdmin from 'views/admin/users/Users';
@@ -151,7 +152,17 @@ export default [
   {
     title: <Trans>Ranking Nacional | Provas mensais</Trans>,
     path: '/admin/national-ranking/events',
-    component: NationalRankingAdminEvents,
+    component: NationalRankingAdminEventsList,
+  },
+  {
+    title: <Trans>Ranking Nacional | Provas mensais | Criar</Trans>,
+    path: '/admin/national-ranking/events/create',
+    component: NationalRankingAdminEventsForm,
+  },
+  {
+    title: <Trans>Ranking Nacional | Provas mensais | Editar</Trans>,
+    path: '/admin/national-ranking/events/:month/edit',
+    component: NationalRankingAdminEventsForm,
   },
   {
     title: <Trans>Ranking Nacional | Jogadores</Trans>,

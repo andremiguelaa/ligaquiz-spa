@@ -1,9 +1,17 @@
 {
+  "Não foi possível abrir a edição das provas mensais.": {
+    "origin": [
+      [
+        "src/views/admin/nationalRanking/Events/Form.js",
+        87
+      ]
+    ]
+  },
   "Provas mensais criadas com sucesso.": {
     "origin": [
       [
         "src/views/admin/nationalRanking/Events/Form.js",
-        105
+        127
       ]
     ]
   },
@@ -11,11 +19,11 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Events/Form.js",
-        110
+        132
       ],
       [
         "src/views/admin/nationalRanking/Events/Form.js",
-        126
+        147
       ]
     ]
   },
@@ -23,19 +31,23 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Events/Form.js",
-        121
+        142
       ]
     ]
   },
-  "Voltar à listagem": {
+  "Adicionar provas mensais": {
     "origin": [
       [
         "src/views/admin/nationalRanking/Events/Form.js",
-        154
-      ],
+        197
+      ]
+    ]
+  },
+  "Editar provas mensais de {0}": {
+    "origin": [
       [
         "src/views/admin/nationalRanking/Events/Form.js",
-        281
+        199
       ]
     ]
   },
@@ -43,11 +55,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Events/Form.js",
-        165
-      ],
-      [
-        "src/views/admin/nationalRanking/Events/Form.js",
-        172
+        212
       ]
     ]
   },
@@ -55,7 +63,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Events/Form.js",
-        220
+        260
       ]
     ]
   },
@@ -63,7 +71,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Events/Form.js",
-        238
+        278
       ]
     ]
   },
@@ -71,15 +79,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Events/Form.js",
-        248
-      ]
-    ]
-  },
-  "Todos os dados deste formulário serão descartados.<0/>Tens a certeza que queres voltar à listagem?": {
-    "origin": [
-      [
-        "src/views/admin/nationalRanking/Events/Form.js",
-        283
+        288
       ]
     ]
   }
