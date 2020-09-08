@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Players/Form.js",
-        86
+        107
       ]
     ]
   },
@@ -11,23 +11,35 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Players/Form.js",
-        90
+        111
       ],
       [
         "src/views/admin/nationalRanking/Players/Form.js",
-        99
+        123
       ]
     ]
   },
-  "Voltar à listagem": {
+  "Jogador actualizado com sucesso.": {
     "origin": [
       [
         "src/views/admin/nationalRanking/Players/Form.js",
-        134
-      ],
+        120
+      ]
+    ]
+  },
+  "Adicionar jogador": {
+    "origin": [
       [
         "src/views/admin/nationalRanking/Players/Form.js",
-        248
+        157
+      ]
+    ]
+  },
+  "Editar jogador": {
+    "origin": [
+      [
+        "src/views/admin/nationalRanking/Players/Form.js",
+        157
       ]
     ]
   },
@@ -35,7 +47,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Players/Form.js",
-        144
+        166
       ]
     ]
   },
@@ -43,7 +55,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Players/Form.js",
-        170
+        192
       ]
     ]
   },
@@ -51,7 +63,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Players/Form.js",
-        196
+        218
       ]
     ]
   },
@@ -59,7 +71,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Players/Form.js",
-        214
+        236
       ]
     ]
   },
@@ -67,15 +79,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Players/Form.js",
-        238
-      ]
-    ]
-  },
-  "Todos os dados deste formulário serão descartados.<0/>Tens a certeza que queres voltar à listagem?": {
-    "origin": [
-      [
-        "src/views/admin/nationalRanking/Players/Form.js",
-        250
+        260
       ]
     ]
   }

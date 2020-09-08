@@ -25,7 +25,8 @@ import GenreRanking from 'views/GenreRanking';
 import NationalRankingAdminRankings from 'views/admin/nationalRanking/Rankings';
 import NationalRankingAdminEventsList from 'views/admin/nationalRanking/Events/List';
 import NationalRankingAdminEventsForm from 'views/admin/nationalRanking/Events/Form';
-import NationalRankingAdminPlayers from 'views/admin/nationalRanking/Players';
+import NationalRankingAdminPlayersList from 'views/admin/nationalRanking/Players/List';
+import NationalRankingAdminPlayersForm from 'views/admin/nationalRanking/Players/Form';
 import NotificationsAdmin from 'views/admin/notifications/Notifications';
 import UsersAdmin from 'views/admin/users/Users';
 import QuizzesAdmin from 'views/admin/quizzes/Quizzes';
@@ -167,7 +168,17 @@ export default [
   {
     title: <Trans>Ranking Nacional | Jogadores</Trans>,
     path: '/admin/national-ranking/players',
-    component: NationalRankingAdminPlayers,
+    component: NationalRankingAdminPlayersList,
+  },
+  {
+    title: <Trans>Ranking Nacional | Jogadores | Criar</Trans>,
+    path: '/admin/national-ranking/players/create',
+    component: NationalRankingAdminPlayersForm,
+  },
+  {
+    title: <Trans>Ranking Nacional | Jogadores | Editar</Trans>,
+    path: '/admin/national-ranking/players/:id/edit',
+    component: NationalRankingAdminPlayersForm,
   },
   {
     title: <Trans>Notificações</Trans>,

@@ -1,9 +1,45 @@
 {
+  "Jogador apagado com sucesso.": {
+    "origin": [
+      [
+        "src/views/admin/nationalRanking/Players/List.js",
+        43
+      ]
+    ]
+  },
+  "Não foi possível apagar ao jogador.<0/>O jogador tem resultados associados.": {
+    "origin": [
+      [
+        "src/views/admin/nationalRanking/Players/List.js",
+        49
+      ]
+    ]
+  },
+  "Não foi possível apagar ao jogador.": {
+    "origin": [
+      [
+        "src/views/admin/nationalRanking/Players/List.js",
+        55
+      ],
+      [
+        "src/views/admin/nationalRanking/Players/List.js",
+        58
+      ]
+    ]
+  },
+  "Jogadores": {
+    "origin": [
+      [
+        "src/views/admin/nationalRanking/Players/List.js",
+        85
+      ]
+    ]
+  },
   "Adicionar jogador": {
     "origin": [
       [
         "src/views/admin/nationalRanking/Players/List.js",
-        22
+        95
       ]
     ]
   },
@@ -11,7 +47,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Players/List.js",
-        32
+        106
       ]
     ]
   },
@@ -19,7 +55,23 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Players/List.js",
-        35
+        109
+      ]
+    ]
+  },
+  "Apagar jogador": {
+    "origin": [
+      [
+        "src/views/admin/nationalRanking/Players/List.js",
+        157
+      ]
+    ]
+  },
+  "Tens a certeza que queres apagar este jogador?": {
+    "origin": [
+      [
+        "src/views/admin/nationalRanking/Players/List.js",
+        159
       ]
     ]
   },
@@ -27,7 +79,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Players/List.js",
-        89
+        168
       ]
     ]
   }
