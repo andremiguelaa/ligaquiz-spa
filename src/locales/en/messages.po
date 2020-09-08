@@ -1159,7 +1159,7 @@ msgid "Pontos atribuídos"
 msgstr "Assigned points"
 
 #: src/views/Quiz/QuizDone.js:45
-msgid "Pontos atribuídos ao adverário"
+msgid "Pontos atribuídos ao adversário"
 msgstr "Points assigned to the opponent"
 
 #: src/views/Ranking/TableHeader.js:44

@@ -1155,8 +1155,8 @@ msgid "Pontos atribuídos"
 msgstr "Pontos atribuídos"
 
 #: src/views/Quiz/QuizDone.js:45
-msgid "Pontos atribuídos ao adverário"
-msgstr "Pontos atribuídos ao adverário"
+msgid "Pontos atribuídos ao adversário"
+msgstr "Pontos atribuídos ao adversário"
 
 #: src/views/Ranking/TableHeader.js:44
 msgid "Pontos contra"

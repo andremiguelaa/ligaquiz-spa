@@ -42,7 +42,7 @@ const QuizDone = ({ data, userAnswers }) => (
         {!data.quiz.solo && userAnswers?.[question.id]?.[0] && (
           <div>
             <strong>
-              <Trans>Pontos atribuídos ao adverário</Trans>:
+              <Trans>Pontos atribuídos ao adversário</Trans>:
             </strong>{' '}
             {userAnswers[question.id][0].points}
           </div>
