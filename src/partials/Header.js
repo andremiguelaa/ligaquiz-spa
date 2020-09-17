@@ -13,7 +13,7 @@ import logo from 'img/logo.png';
 import logoDark from 'img/logo-dark.png';
 import classes from './Header.module.scss';
 
-const version = '4.2.1';
+const version = '4.2.2';
 
 const isDarkMode =
   window.matchMedia &&

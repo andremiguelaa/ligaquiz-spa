@@ -49,7 +49,7 @@ const Ranking = () => {
           let defaultTier = parseInt(tier) || 1;
           if (!tier) {
             const userLeague = seasonData.leagues.find(({ user_ids }) =>
-              user_ids.includes(user.id.toString())
+              user_ids.includes(user.id)
             );
             if (userLeague) {
               defaultTier = userLeague.tier;
@@ -86,7 +86,7 @@ const Ranking = () => {
               lastSeason = data[0];
             }
             const userLeague = lastSeason.leagues.find(({ user_ids }) =>
-              user_ids.includes(user.id.toString())
+              user_ids.includes(user.id)
             );
             let defaultTier = 1;
             if (userLeague) {
