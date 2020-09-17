@@ -7,7 +7,7 @@ marked.setOptions({
 });
 
 const Markdown = ({ content }) => (
-  <span dangerouslySetInnerHTML={{ __html: marked(content) }}></span>
+  <span dangerouslySetInnerHTML={{ __html: marked(content || '') }}></span>
 );
 
 export default Markdown;
