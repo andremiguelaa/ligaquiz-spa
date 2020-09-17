@@ -9,7 +9,7 @@ const RankChange = ({ change }) => (
       <I18n>
         {({ i18n }) => (
           <span
-            className="icon"
+            className="icon has-tooltip-right"
             data-tooltip={i18n._(t`Nova entrada para o ranking`)}
           >
             <i className="fa fa-star has-text-warning"></i>
@@ -21,7 +21,7 @@ const RankChange = ({ change }) => (
       <I18n>
         {({ i18n }) => (
           <span
-            className="icon"
+            className="icon has-tooltip-right"
             data-tooltip={`${i18n._(t`Subiu`)} ${Math.abs(change)} ${
               Math.abs(change) > 1 ? i18n._(t`posições`) : i18n._(t`posição`)
             }`}
@@ -35,7 +35,7 @@ const RankChange = ({ change }) => (
       <I18n>
         {({ i18n }) => (
           <span
-            className="icon"
+            className="icon has-tooltip-right"
             data-tooltip={`${i18n._(t`Desceu`)} ${Math.abs(change)} ${
               Math.abs(change) > 1 ? i18n._(t`posições`) : i18n._(t`posição`)
             }`}
