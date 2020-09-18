@@ -1,6 +1,7 @@
-import React, { Fragment, useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useParams } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
+import classnames from 'classnames';
 
 import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
@@ -13,7 +14,7 @@ import EmptyState from 'components/EmptyState';
 import Table from './GenreRanking/Table';
 
 const GenreRanking = () => {
-  const { season } = useParams();
+  const { season, genre } = useParams();
   const [
     {
       settings: { language },
@@ -105,8 +106,10 @@ const GenreRanking = () => {
 
   useEffect(() => {
     if (season) {
-      getStatistics(season);
-      setSeasonNumber(parseInt(season));
+      if (parseInt(season) !== seasonNumber) {
+        getStatistics(season);
+        setSeasonNumber(parseInt(season));
+      }
     } else {
       ApiRequest.get(`seasons`)
         .then(({ data }) => {
@@ -123,7 +126,7 @@ const GenreRanking = () => {
           setError(response?.status);
         });
     }
-  }, [season]);
+  }, [season, seasonNumber]);
 
   useEffect(() => {
     ApiRequest.get(`users`)
@@ -154,32 +157,57 @@ const GenreRanking = () => {
         title={<Trans>Rankings temáticos</Trans>}
         subtitle={<Trans>Temporada {seasonNumber}</Trans>}
       />
+      <div className="section">
+        <div className="tabs is-fullwidth">
+          <ul>
+            <li
+              className={classnames({
+                'is-active': !genre,
+              })}
+            >
+              <Link to={`/genre-rankings/${seasonNumber}`}>
+                <Trans>Global</Trans>
+              </Link>
+            </li>
+            {genres.map((item) => (
+              <li
+                key={item.id}
+                className={classnames({
+                  'is-active': item.id === parseInt(genre),
+                })}
+              >
+                <Link to={`/genre-rankings/${seasonNumber}/${item.id}`}>
+                  {getGenreTranslation(item.slug, language)}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
       <div className="section content">
         {Object.keys(statistics).length > 0 ? (
           <>
-            <h2>
-              <Trans>Ranking global</Trans>
-            </h2>
-            <Table
-              data={Object.values(statistics).sort(
-                (a, b) => b.correct - a.correct
-              )}
-              users={users}
-            />
-            {genres.map((genre) => (
-              <Fragment key={genre.id}>
-                <h2>{getGenreTranslation(genre.slug, language)}</h2>
-                <Table
-                  data={Object.values(statistics).sort(
-                    (a, b) =>
-                      (b.genres[genre.id]?.correct || 0) -
-                      (a.genres[genre.id]?.correct || 0)
-                  )}
-                  genre={genre.id}
-                  users={users}
-                />
-              </Fragment>
-            ))}
+            {!genre ? (
+              <Table
+                data={Object.values(statistics).sort(
+                  (a, b) =>
+                    b.correct * 10 + b.total - (a.correct * 10 + a.total)
+                )}
+                users={users}
+              />
+            ) : (
+              <Table
+                data={Object.values(statistics).sort(
+                  (a, b) =>
+                    (b.genres[genre]?.correct || 0) * 10 +
+                    (b.genres[genre]?.total || 0) -
+                    ((a.genres[genre]?.correct || 0) * 10 +
+                      (a.genres[genre]?.total || 0))
+                )}
+                genre={genre}
+                users={users}
+              />
+            )}
           </>
         ) : (
           <EmptyState>

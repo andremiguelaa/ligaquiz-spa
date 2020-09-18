@@ -141,21 +141,23 @@ const Ranking = () => {
         title={<Trans>Classificação</Trans>}
         subtitle={<Trans>Temporada {seasonNumber}</Trans>}
       />
-      <div className="tabs is-fullwidth">
-        <ul>
-          {seasonData.leagues.map((league) => (
-            <li
-              key={league.tier}
-              className={classnames({
-                'is-active': league.tier === tierNumber,
-              })}
-            >
-              <Link to={`/ranking/${seasonNumber}/${league.tier}`}>
-                <Trans>{league.tier}ª divisão</Trans>
-              </Link>
-            </li>
-          ))}
-        </ul>
+      <div className="section">
+        <div className="tabs is-fullwidth">
+          <ul>
+            {seasonData.leagues.map((league) => (
+              <li
+                key={league.tier}
+                className={classnames({
+                  'is-active': league.tier === tierNumber,
+                })}
+              >
+                <Link to={`/ranking/${seasonNumber}/${league.tier}`}>
+                  <Trans>{league.tier}ª divisão</Trans>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
       <section className={classnames('section', 'content', classes.ranking)}>
         {seasonData ? (

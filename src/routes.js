@@ -86,7 +86,7 @@ export default [
   },
   {
     title: <Trans>Rankings temáticos</Trans>,
-    path: '/genre-rankings/:season?',
+    path: '/genre-rankings/:season?/:genre?',
     component: GenreRanking,
   },
   {
