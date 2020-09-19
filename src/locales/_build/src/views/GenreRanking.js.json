@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/GenreRanking.js",
-        154
+        160
       ]
     ]
   },
@@ -11,15 +11,15 @@
     "origin": [
       [
         "src/views/GenreRanking.js",
-        155
+        161
       ]
     ]
   },
-  "Ranking global": {
+  "Global": {
     "origin": [
       [
         "src/views/GenreRanking.js",
-        161
+        172
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/views/GenreRanking.js",
-        186
+        225
       ]
     ]
   }

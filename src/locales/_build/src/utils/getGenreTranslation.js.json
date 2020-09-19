@@ -1,5 +1,5 @@
 {
-  "Cultura": {
+  "Cul": {
     "origin": [
       [
         "src/utils/getGenreTranslation.js",
@@ -7,7 +7,7 @@
       ]
     ]
   },
-  "Entretenimento": {
+  "Ent": {
     "origin": [
       [
         "src/utils/getGenreTranslation.js",
@@ -15,7 +15,7 @@
       ]
     ]
   },
-  "História": {
+  "His": {
     "origin": [
       [
         "src/utils/getGenreTranslation.js",
@@ -23,7 +23,7 @@
       ]
     ]
   },
-  "Ciência": {
+  "Ciê": {
     "origin": [
       [
         "src/utils/getGenreTranslation.js",
@@ -31,7 +31,7 @@
       ]
     ]
   },
-  "Desporto": {
+  "Des": {
     "origin": [
       [
         "src/utils/getGenreTranslation.js",
@@ -39,7 +39,7 @@
       ]
     ]
   },
-  "Geografia": {
+  "Geo": {
     "origin": [
       [
         "src/utils/getGenreTranslation.js",
@@ -47,7 +47,7 @@
       ]
     ]
   },
-  "Estilo de Vida": {
+  "EdV": {
     "origin": [
       [
         "src/utils/getGenreTranslation.js",
@@ -55,7 +55,7 @@
       ]
     ]
   },
-  "Sociedade": {
+  "Soc": {
     "origin": [
       [
         "src/utils/getGenreTranslation.js",
@@ -63,55 +63,7 @@
       ]
     ]
   },
-  "Arquitectura": {
-    "origin": [
-      [
-        "src/utils/getGenreTranslation.js",
-        18
-      ]
-    ]
-  },
-  "Belas Artes": {
-    "origin": [
-      [
-        "src/utils/getGenreTranslation.js",
-        19
-      ]
-    ]
-  },
-  "Literatura": {
-    "origin": [
-      [
-        "src/utils/getGenreTranslation.js",
-        20
-      ]
-    ]
-  },
-  "Dança": {
-    "origin": [
-      [
-        "src/utils/getGenreTranslation.js",
-        21
-      ]
-    ]
-  },
-  "Óperas e Musicais": {
-    "origin": [
-      [
-        "src/utils/getGenreTranslation.js",
-        22
-      ]
-    ]
-  },
-  "Teatro": {
-    "origin": [
-      [
-        "src/utils/getGenreTranslation.js",
-        23
-      ]
-    ]
-  },
-  "Banda Desenhada": {
+  "Cultura": {
     "origin": [
       [
         "src/utils/getGenreTranslation.js",
@@ -119,7 +71,7 @@
       ]
     ]
   },
-  "Música": {
+  "Entretenimento": {
     "origin": [
       [
         "src/utils/getGenreTranslation.js",
@@ -127,7 +79,7 @@
       ]
     ]
   },
-  "Televisão": {
+  "História": {
     "origin": [
       [
         "src/utils/getGenreTranslation.js",
@@ -135,7 +87,7 @@
       ]
     ]
   },
-  "Cinema": {
+  "Ciência": {
     "origin": [
       [
         "src/utils/getGenreTranslation.js",
@@ -143,7 +95,7 @@
       ]
     ]
   },
-  "Fauna e Flora": {
+  "Desporto": {
     "origin": [
       [
         "src/utils/getGenreTranslation.js",
@@ -151,7 +103,7 @@
       ]
     ]
   },
-  "Matemática": {
+  "Geografia": {
     "origin": [
       [
         "src/utils/getGenreTranslation.js",
@@ -159,7 +111,7 @@
       ]
     ]
   },
-  "Física": {
+  "Estilo de Vida": {
     "origin": [
       [
         "src/utils/getGenreTranslation.js",
@@ -167,7 +119,7 @@
       ]
     ]
   },
-  "Química": {
+  "Sociedade": {
     "origin": [
       [
         "src/utils/getGenreTranslation.js",
@@ -175,7 +127,7 @@
       ]
     ]
   },
-  "Biologia": {
+  "Arquitectura": {
     "origin": [
       [
         "src/utils/getGenreTranslation.js",
@@ -183,7 +135,7 @@
       ]
     ]
   },
-  "Geologia": {
+  "Belas Artes": {
     "origin": [
       [
         "src/utils/getGenreTranslation.js",
@@ -191,7 +143,7 @@
       ]
     ]
   },
-  "Espaço": {
+  "Literatura": {
     "origin": [
       [
         "src/utils/getGenreTranslation.js",
@@ -199,7 +151,7 @@
       ]
     ]
   },
-  "Saúde e Corpo Humano": {
+  "Dança": {
     "origin": [
       [
         "src/utils/getGenreTranslation.js",
@@ -207,7 +159,7 @@
       ]
     ]
   },
-  "Jogos e Passatempos": {
+  "Óperas e Musicais": {
     "origin": [
       [
         "src/utils/getGenreTranslation.js",
@@ -215,7 +167,7 @@
       ]
     ]
   },
-  "Design": {
+  "Teatro": {
     "origin": [
       [
         "src/utils/getGenreTranslation.js",
@@ -223,7 +175,7 @@
       ]
     ]
   },
-  "Moda": {
+  "Banda Desenhada": {
     "origin": [
       [
         "src/utils/getGenreTranslation.js",
@@ -231,7 +183,7 @@
       ]
     ]
   },
-  "Artesanato": {
+  "Música": {
     "origin": [
       [
         "src/utils/getGenreTranslation.js",
@@ -239,7 +191,7 @@
       ]
     ]
   },
-  "Religião e Crenças": {
+  "Televisão": {
     "origin": [
       [
         "src/utils/getGenreTranslation.js",
@@ -247,7 +199,7 @@
       ]
     ]
   },
-  "Mitologia": {
+  "Cinema": {
     "origin": [
       [
         "src/utils/getGenreTranslation.js",
@@ -255,7 +207,7 @@
       ]
     ]
   },
-  "Tradições": {
+  "Fauna e Flora": {
     "origin": [
       [
         "src/utils/getGenreTranslation.js",
@@ -263,7 +215,7 @@
       ]
     ]
   },
-  "Comida e Bebida": {
+  "Matemática": {
     "origin": [
       [
         "src/utils/getGenreTranslation.js",
@@ -271,7 +223,7 @@
       ]
     ]
   },
-  "Turismo": {
+  "Física": {
     "origin": [
       [
         "src/utils/getGenreTranslation.js",
@@ -279,7 +231,7 @@
       ]
     ]
   },
-  "Museus": {
+  "Química": {
     "origin": [
       [
         "src/utils/getGenreTranslation.js",
@@ -287,7 +239,7 @@
       ]
     ]
   },
-  "Transportes": {
+  "Biologia": {
     "origin": [
       [
         "src/utils/getGenreTranslation.js",
@@ -295,7 +247,7 @@
       ]
     ]
   },
-  "Filosofia": {
+  "Geologia": {
     "origin": [
       [
         "src/utils/getGenreTranslation.js",
@@ -303,7 +255,7 @@
       ]
     ]
   },
-  "Ciências Sociais": {
+  "Espaço": {
     "origin": [
       [
         "src/utils/getGenreTranslation.js",
@@ -311,7 +263,7 @@
       ]
     ]
   },
-  "Tecnologia e Invenções": {
+  "Saúde e Corpo Humano": {
     "origin": [
       [
         "src/utils/getGenreTranslation.js",
@@ -319,7 +271,7 @@
       ]
     ]
   },
-  "Produtos e Marcas": {
+  "Jogos e Passatempos": {
     "origin": [
       [
         "src/utils/getGenreTranslation.js",
@@ -327,7 +279,7 @@
       ]
     ]
   },
-  "Comunicação Social e Redes Sociais": {
+  "Design": {
     "origin": [
       [
         "src/utils/getGenreTranslation.js",
@@ -335,7 +287,7 @@
       ]
     ]
   },
-  "Política Actual": {
+  "Moda": {
     "origin": [
       [
         "src/utils/getGenreTranslation.js",
@@ -343,11 +295,123 @@
       ]
     ]
   },
-  "Trivialidades": {
+  "Artesanato": {
     "origin": [
       [
         "src/utils/getGenreTranslation.js",
         53
+      ]
+    ]
+  },
+  "Religião e Crenças": {
+    "origin": [
+      [
+        "src/utils/getGenreTranslation.js",
+        54
+      ]
+    ]
+  },
+  "Mitologia": {
+    "origin": [
+      [
+        "src/utils/getGenreTranslation.js",
+        55
+      ]
+    ]
+  },
+  "Tradições": {
+    "origin": [
+      [
+        "src/utils/getGenreTranslation.js",
+        56
+      ]
+    ]
+  },
+  "Comida e Bebida": {
+    "origin": [
+      [
+        "src/utils/getGenreTranslation.js",
+        57
+      ]
+    ]
+  },
+  "Turismo": {
+    "origin": [
+      [
+        "src/utils/getGenreTranslation.js",
+        58
+      ]
+    ]
+  },
+  "Museus": {
+    "origin": [
+      [
+        "src/utils/getGenreTranslation.js",
+        59
+      ]
+    ]
+  },
+  "Transportes": {
+    "origin": [
+      [
+        "src/utils/getGenreTranslation.js",
+        60
+      ]
+    ]
+  },
+  "Filosofia": {
+    "origin": [
+      [
+        "src/utils/getGenreTranslation.js",
+        61
+      ]
+    ]
+  },
+  "Ciências Sociais": {
+    "origin": [
+      [
+        "src/utils/getGenreTranslation.js",
+        62
+      ]
+    ]
+  },
+  "Tecnologia e Invenções": {
+    "origin": [
+      [
+        "src/utils/getGenreTranslation.js",
+        63
+      ]
+    ]
+  },
+  "Produtos e Marcas": {
+    "origin": [
+      [
+        "src/utils/getGenreTranslation.js",
+        64
+      ]
+    ]
+  },
+  "Comunicação Social e Redes Sociais": {
+    "origin": [
+      [
+        "src/utils/getGenreTranslation.js",
+        65
+      ]
+    ]
+  },
+  "Política Actual": {
+    "origin": [
+      [
+        "src/utils/getGenreTranslation.js",
+        66
+      ]
+    ]
+  },
+  "Trivialidades": {
+    "origin": [
+      [
+        "src/utils/getGenreTranslation.js",
+        67
       ]
     ]
   }

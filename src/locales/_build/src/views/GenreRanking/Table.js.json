@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/GenreRanking/Table.js",
-        13
+        17
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/views/GenreRanking/Table.js",
-        20
+        24
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/views/GenreRanking/Table.js",
-        22
+        26
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/views/GenreRanking/Table.js",
-        32
+        36
       ]
     ]
   },
@@ -35,7 +35,7 @@
     "origin": [
       [
         "src/views/GenreRanking/Table.js",
-        34
+        38
       ]
     ]
   },
@@ -43,7 +43,7 @@
     "origin": [
       [
         "src/views/GenreRanking/Table.js",
-        44
+        48
       ]
     ]
   }
