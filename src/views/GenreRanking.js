@@ -5,7 +5,10 @@ import classnames from 'classnames';
 
 import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
-import { getGenreTranslation } from 'utils/getGenreTranslation';
+import {
+  getGenreTranslationAbbr,
+  getGenreTranslation,
+} from 'utils/getGenreTranslation';
 import PageHeader from 'components/PageHeader';
 import Loading from 'components/Loading';
 import Error from 'components/Error';
@@ -177,7 +180,15 @@ const GenreRanking = () => {
                 })}
               >
                 <Link to={`/genre-rankings/${seasonNumber}/${item.id}`}>
-                  {getGenreTranslation(item.slug, language)}
+                  <span className="is-hidden-touch">
+                    {getGenreTranslation(item.slug, language)}
+                  </span>
+                  <abbr
+                    className="is-hidden-desktop has-tooltip-left"
+                    data-tooltip={getGenreTranslation(item.slug, language)}
+                  >
+                    {getGenreTranslationAbbr(item.slug, language)}
+                  </abbr>
                 </Link>
               </li>
             ))}

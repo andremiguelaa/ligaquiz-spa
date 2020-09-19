@@ -4,6 +4,20 @@ import { catalogs } from 'utils/catalogs';
 const i18n = setupI18n();
 i18n.load(catalogs);
 
+export const getGenreTranslationAbbr = (slug, language) => {
+  i18n.activate(language);
+  return {
+    culture: i18n._('Cul'),
+    entertainment: i18n._('Ent'),
+    history: i18n._('His'),
+    science: i18n._('Ciê'),
+    sports: i18n._('Des'),
+    geography: i18n._('Geo'),
+    lifestyle: i18n._('EdV'),
+    society: i18n._('Soc'),
+  }[slug];
+};
+
 export const getGenreTranslation = (slug, language) => {
   i18n.activate(language);
   return {
