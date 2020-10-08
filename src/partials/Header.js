@@ -13,7 +13,7 @@ import logo from 'img/logo.png';
 import logoDark from 'img/logo-dark.png';
 import classes from './Header.module.scss';
 
-const version = '4.4.1';
+const version = '4.4.2';
 
 const isDarkMode =
   window.matchMedia &&
@@ -53,6 +53,7 @@ const Header = () => {
                 >
                   <button
                     className={classames('navbar-burger', classes.burger)}
+                    type="button"
                     onClick={() => {
                       setMenuBurgerOpen(!menuBurgerOpen);
                     }}
@@ -107,6 +108,7 @@ const Header = () => {
                           key={language}
                           disabled={settings.language === language}
                           className="button"
+                          type="button"
                           onClick={() => changeLanguage(language)}
                         >
                           {language.toUpperCase()}
@@ -141,6 +143,7 @@ const Header = () => {
                     >
                       <button
                         className="navbar-link"
+                        type="button"
                         onClick={() => {
                           setMenuDropdownOpen(!menuDropdownOpen);
                         }}

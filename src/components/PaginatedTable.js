@@ -77,6 +77,7 @@ const PaginatedTable = ({
           <button
             className="pagination-previous"
             disabled={page === 1}
+            type="button"
             onClick={() => {
               changePage(page - 1);
             }}
@@ -86,6 +87,7 @@ const PaginatedTable = ({
           <button
             className="pagination-next"
             disabled={page === Math.ceil(array.length / itemsPerPage)}
+            type="button"
             onClick={() => {
               changePage(page + 1);
             }}
@@ -98,6 +100,7 @@ const PaginatedTable = ({
                 className={classnames('pagination-link', {
                   'is-current': page === 1,
                 })}
+                type="button"
                 onClick={() => {
                   changePage(1);
                 }}
@@ -114,6 +117,7 @@ const PaginatedTable = ({
               <li>
                 <button
                   className="pagination-link is-current"
+                  type="button"
                   onClick={() => {}}
                 >
                   {page}
@@ -130,6 +134,7 @@ const PaginatedTable = ({
                 className={classnames('pagination-link', {
                   'is-current': page === numberOfPages,
                 })}
+                type="button"
                 onClick={() => {
                   changePage(numberOfPages);
                 }}

@@ -54,6 +54,7 @@ const Message = () => {
               'is-info',
               classes.button
             )}
+            type="button"
             onClick={() => setModal(true)}
             aria-label={i18n._(t`Enviar mensagem`)}
           >

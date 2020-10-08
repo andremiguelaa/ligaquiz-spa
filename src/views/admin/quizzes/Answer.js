@@ -25,6 +25,7 @@ const Answer = ({ answer, correctAnswers }) => (
             'is-success': !answer.correct,
           })}
           disabled={answer.correct || answer.loading}
+          type="button"
           onClick={() => {
             correctAnswers(answer.id, answer.question_id, true);
           }}
@@ -38,6 +39,7 @@ const Answer = ({ answer, correctAnswers }) => (
             'is-danger': answer.correct || !answer.corrected,
           })}
           disabled={(answer.corrected && !answer.correct) || answer.loading}
+          type="button"
           onClick={() => {
             correctAnswers(answer.id, answer.question_id, false);
           }}

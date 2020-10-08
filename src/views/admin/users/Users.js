@@ -106,7 +106,10 @@ const Users = () => {
                 <thead>
                   <tr>
                     <th className="sortable">
-                      <button onClick={() => sortUsersBy('fullName')}>
+                      <button
+                        type="button"
+                        onClick={() => sortUsersBy('fullName')}
+                      >
                         <Trans>Nome</Trans>
                         <span className="icon">
                           <i
@@ -135,6 +138,7 @@ const Users = () => {
                       )}
                     >
                       <button
+                        type="button"
                         onClick={() => sortUsersBy('roles.regular_player')}
                       >
                         <Trans>Subscrição p/ quizzes da liga</Trans>
@@ -158,6 +162,7 @@ const Users = () => {
                       )}
                     >
                       <button
+                        type="button"
                         onClick={() => sortUsersBy('roles.special_quiz_player')}
                       >
                         <Trans>Subscrição p/ quizzes especiais</Trans>
@@ -343,6 +348,7 @@ const Users = () => {
                             <button
                               className="button"
                               disabled={user.id === authUser.id}
+                              type="button"
                               onClick={() => {
                                 setUserToEdit({
                                   ...user,

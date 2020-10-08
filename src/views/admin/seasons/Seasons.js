@@ -120,6 +120,7 @@ const Seasons = () => {
                               </Link>
                               <button
                                 className="button is-danger"
+                                type="button"
                                 onClick={() => {
                                   setSeasonToDelete(item.id);
                                 }}

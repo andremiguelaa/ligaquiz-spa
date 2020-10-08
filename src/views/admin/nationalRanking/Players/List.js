@@ -139,6 +139,7 @@ const List = () => {
                         </Link>
                         <button
                           className="button is-danger"
+                          type="button"
                           onClick={() => setPlayerToDelete(player.id)}
                         >
                           <span className="icon">

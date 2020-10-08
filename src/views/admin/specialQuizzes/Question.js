@@ -122,6 +122,7 @@ const Question = ({
         <>
           <button
             className="button is-danger"
+            type="button"
             onClick={() => {
               setMediaId();
               setMedia();

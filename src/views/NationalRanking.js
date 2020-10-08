@@ -194,7 +194,7 @@ const NationalRanking = () => {
                     <Trans>Nome</Trans>
                   </th>
                   <th className="sortable">
-                    <button onClick={() => sortRankingByPath('score')}>
+                    <button type="button" onClick={() => sortRankingByPath('score')}>
                       <Trans>Pontos</Trans>
                       <span className="icon">
                         <i
@@ -208,7 +208,7 @@ const NationalRanking = () => {
                     </button>
                   </th>
                   <th className="sortable">
-                    <button onClick={() => sortRankingByPath('sum')}>
+                    <button type="button" onClick={() => sortRankingByPath('sum')}>
                       <Trans>Soma</Trans>
                       <span className="icon">
                         <i
@@ -222,7 +222,7 @@ const NationalRanking = () => {
                     </button>
                   </th>
                   <th className="sortable">
-                    <button onClick={() => sortRankingByPath('average')}>
+                    <button type="button" onClick={() => sortRankingByPath('average')}>
                       <Trans>Média</Trans>
                       <span className="icon">
                         <i
@@ -236,7 +236,7 @@ const NationalRanking = () => {
                     </button>
                   </th>
                   <th className="sortable">
-                    <button onClick={() => sortRankingByPath('quiz_count')}>
+                    <button type="button" onClick={() => sortRankingByPath('quiz_count')}>
                       <Trans>Quizzes</Trans>
                       <span className="icon">
                         <i

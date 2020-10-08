@@ -150,6 +150,7 @@ const Quizzes = () => {
                               user.valid_roles.quiz_editor) && (
                               <button
                                 className="button is-danger"
+                                type="button"
                                 onClick={() => {
                                   setQuizToDelete(item.id);
                                 }}

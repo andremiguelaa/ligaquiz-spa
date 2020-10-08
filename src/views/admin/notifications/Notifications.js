@@ -52,6 +52,7 @@ const Notifications = () => {
         ) : (
           <>
             <button
+              type="button"
               onClick={() => {
                 setCreateModal(true);
               }}
@@ -109,6 +110,7 @@ const Notifications = () => {
                           <div className="buttons has-addons is-pulled-right">
                             <button
                               className="button"
+                              type="button"
                               onClick={() =>
                                 setNotificationToEdit(notification)
                               }
@@ -119,6 +121,7 @@ const Notifications = () => {
                             </button>
                             <button
                               className="button is-danger"
+                              type="button"
                               onClick={() =>
                                 setNotificationToDelete(notification.id)
                               }

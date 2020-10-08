@@ -125,6 +125,7 @@ const List = () => {
                           </Link>
                           <button
                             className="button is-danger"
+                            type="button"
                             onClick={() => setMonthToDelete(entry)}
                           >
                             <span className="icon">

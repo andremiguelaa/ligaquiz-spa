@@ -94,6 +94,7 @@ const Rankings = () => {
             {validMonthListOptions.length && (
               <>
                 <button
+                  type="button"
                   onClick={() => {
                     setPublishModal(true);
                   }}
@@ -141,6 +142,7 @@ const Rankings = () => {
                           <div className="buttons has-addons is-pulled-right">
                             <button
                               className="button is-danger"
+                              type="button"
                               onClick={() => setMonthToDelete(month)}
                             >
                               <span className="icon">
