@@ -404,11 +404,18 @@ const QuizForm = ({ data, userAnswers }) => {
                       </h2>
                       <p className={classes.opponentName}>
                         {opponent.name} {opponent.surname}
-                        {opponent.birthday &&
-                          ` (${differenceInYears(
-                            new Date(),
-                            new Date(opponent.birthday)
-                          )} anos)`}
+                        {opponent.birthday && (
+                          <>
+                            {' '}
+                            <Trans>
+                              ({differenceInYears(
+                                new Date(),
+                                new Date(opponent.birthday)
+                              )}{' '}
+                              anos)
+                            </Trans>
+                          </>
+                        )}
                         {opponent.region && (
                           <>
                             <br />

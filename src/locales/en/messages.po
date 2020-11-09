@@ -13,6 +13,10 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#: src/views/Quiz/QuizForm.js:410
+msgid "({0} anos)"
+msgstr "({0} years old)"
+
 #: src/views/Home.js:10
 msgid "<0>A Liga Quiz é um jogo de cultura geral onde a confiança na honestidade dos jogadores é crucial.</0><1><2>É expressamente proibido usar qualquer fonte externa para obter respostas às perguntas.</2> Isto inclui:</1><3><4>Pedir pistas/respostas a outras pessoas.</4><5>Usar a Internet, livros ou outro material de consulta para pesquisa de pistas/respostas.</5><6>Usar calculadoras, instrumentos musicais ou outros equipamentos para ajudar à resposta.</6></3><7>Apenas papel e caneta/lápis são permitidos.</7><8><9>Pede-se também a todos os jogadores que joguem todos os dias.</9> As faltas adulteram a veracidade da classificação final e podem levar à descida de divisão ao incumpridor.</8>"
 msgstr "<0>Quiz League is a general knowledge game where the trust in players honesty is essential.</0><1><2>It's completly forbidden the use of any external source to obtain answers.</2> This includes:</1><3><4>Ask for hints/answers to another people.</4><5>Use Internet, books or any other resource to looking for hints/answers.</5><6>Use calculators, musical instruments or any other devices to help getting the answer.</6></3><7>Only paper and pen/pencil are permitted.</7><8><9>Additionally, we ask to all players to play everyday</9>. The forfeits distort the final ranking trustiness and can lead to the relegation of the player.</8>"
@@ -105,12 +109,12 @@ msgstr "Administrator"
 msgid "Administração"
 msgstr "Administration"
 
-#: src/views/Quiz/QuizForm.js:561
+#: src/views/Quiz/QuizForm.js:581
 #: src/views/SpecialQuiz/SpecialQuizForm.js:221
 msgid "Ainda tens uma pergunta em branco."
 msgstr "You still have one blank answer."
 
-#: src/views/Quiz/QuizForm.js:559
+#: src/views/Quiz/QuizForm.js:579
 #: src/views/SpecialQuiz/SpecialQuizForm.js:219
 msgid "Ainda tens {blankAnsers} perguntas em branco."
 msgstr "You still have {blankAnsers} blank answers."
@@ -625,7 +629,7 @@ msgstr "Statistics"
 msgid "Estatísticas de {0} {1}"
 msgstr "Statistics from {0} {1}"
 
-#: src/views/Quiz/QuizForm.js:401
+#: src/views/Quiz/QuizForm.js:403
 msgid "Estatísticas do adversário"
 msgstr "Opponent Statistics"
 
@@ -1098,7 +1102,7 @@ msgstr "Month ranking could not be published."
 msgid "Não foi possível submeter o quiz especial."
 msgstr "Special quiz could not be submitted."
 
-#: src/views/Quiz/QuizForm.js:156
+#: src/views/Quiz/QuizForm.js:158
 msgid "Não foi possível submeter o quiz."
 msgstr "Quiz could not be submitted."
 
@@ -1156,8 +1160,8 @@ msgstr "More details about ranking calculation can be found in this article (onl
 #: src/views/Game.js:133
 #: src/views/GenreRanking/Table.js:48
 #: src/views/Quiz/QuizDone.js:53
-#: src/views/Quiz/QuizForm.js:438
-#: src/views/Quiz/QuizForm.js:499
+#: src/views/Quiz/QuizForm.js:458
+#: src/views/Quiz/QuizForm.js:519
 #: src/views/SpecialQuiz/SpecialQuizDone.js:181
 #: src/views/Statistics.js:282
 msgid "Percentagem de acerto"
@@ -1206,7 +1210,7 @@ msgstr "Question"
 
 #: src/views/Game.js:101
 #: src/views/Quiz/QuizDone.js:16
-#: src/views/Quiz/QuizForm.js:191
+#: src/views/Quiz/QuizForm.js:193
 #: src/views/SpecialQuiz/SpecialQuizDone.js:140
 #: src/views/SpecialQuiz/SpecialQuizForm.js:92
 #: src/views/admin/quizzes/Question.js:63
@@ -1241,7 +1245,7 @@ msgstr "Nowadays Politics"
 msgid "Pontos"
 msgstr "Points"
 
-#: src/views/Quiz/QuizForm.js:242
+#: src/views/Quiz/QuizForm.js:244
 msgid "Pontos a atribuir ao adversário"
 msgstr "Points to be assigned to your opponent"
 
@@ -1388,7 +1392,7 @@ msgstr "Special quiz | Edit"
 msgid "Quiz gravado com sucesso."
 msgstr "Quiz successfully saved."
 
-#: src/views/Quiz/QuizForm.js:152
+#: src/views/Quiz/QuizForm.js:154
 msgid "Quiz submetido com sucesso."
 msgstr "Quiz successfully submitted."
 
@@ -1538,7 +1542,7 @@ msgstr "Delete event"
 msgid "Remover última divisão"
 msgstr "Remove last tier"
 
-#: src/views/Quiz/QuizForm.js:212
+#: src/views/Quiz/QuizForm.js:214
 #: src/views/SpecialQuiz/SpecialQuizForm.js:113
 #: src/views/admin/quizzes/Question.js:106
 #: src/views/admin/search/Search.js:97
@@ -1666,19 +1670,19 @@ msgstr "Squizzed"
 msgid "Subiu"
 msgstr "Move up"
 
-#: src/views/Quiz/QuizForm.js:377
+#: src/views/Quiz/QuizForm.js:379
 #: src/views/RecoverPassword.js:98
 #: src/views/ResetPassword.js:140
 #: src/views/SpecialQuiz/SpecialQuizForm.js:175
 msgid "Submeter"
 msgstr "Submit"
 
-#: src/views/Quiz/QuizForm.js:553
+#: src/views/Quiz/QuizForm.js:573
 #: src/views/SpecialQuiz/SpecialQuizForm.js:213
 msgid "Submeter quiz"
 msgstr "Submit quiz"
 
-#: src/views/Quiz/QuizForm.js:539
+#: src/views/Quiz/QuizForm.js:559
 msgid "Submissão inválida"
 msgstr "Invalid submission"
 
@@ -1690,12 +1694,12 @@ msgstr "League quizzes subscription"
 msgid "Subscrição p/ quizzes especiais"
 msgstr "Special quizzes subscription"
 
-#: src/views/Quiz/QuizForm.js:477
+#: src/views/Quiz/QuizForm.js:497
 msgid "Subtema"
 msgstr "Subgenre"
 
-#: src/views/Quiz/QuizForm.js:427
-#: src/views/Quiz/QuizForm.js:488
+#: src/views/Quiz/QuizForm.js:447
+#: src/views/Quiz/QuizForm.js:508
 #: src/views/Statistics.js:272
 msgid "T"
 msgstr "T"
@@ -1712,7 +1716,7 @@ msgstr "Technology and Inventions"
 msgid "Televisão"
 msgstr "TV"
 
-#: src/views/Quiz/QuizForm.js:416
+#: src/views/Quiz/QuizForm.js:436
 #: src/views/SpecialQuizzes.js:75
 #: src/views/Statistics.js:251
 #: src/views/admin/specialQuizzes/SpecialQuizForm.js:188
@@ -1796,12 +1800,12 @@ msgstr "Do you really want to delete this quiz?"
 msgid "Tens a certeza que queres apagar este ranking mensal?"
 msgstr "Do you really want to delete this month ranking?"
 
-#: src/views/Quiz/QuizForm.js:566
+#: src/views/Quiz/QuizForm.js:586
 #: src/views/SpecialQuiz/SpecialQuizForm.js:226
 msgid "Tens a certeza que queres submeter o quiz?"
 msgstr "Do you really want to submit the quiz?"
 
-#: src/views/Quiz/QuizForm.js:541
+#: src/views/Quiz/QuizForm.js:561
 msgid "Tens pontos por atribuir.<0/>Atribui-os antes de fazer a submissão."
 msgstr "You have points to be assigned.<0/>Assigned them before submit."
 
@@ -1817,8 +1821,8 @@ msgstr "Notification type"
 msgid "Total"
 msgstr "Total"
 
-#: src/views/Quiz/QuizForm.js:424
-#: src/views/Quiz/QuizForm.js:485
+#: src/views/Quiz/QuizForm.js:444
+#: src/views/Quiz/QuizForm.js:505
 #: src/views/Statistics.js:270
 msgid "Total de respostas"
 msgstr "Total of given answers"

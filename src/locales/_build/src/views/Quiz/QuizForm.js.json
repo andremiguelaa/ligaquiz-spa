@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        152
+        154
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        156
+        158
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        191
+        193
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        212
+        214
       ]
     ]
   },
@@ -35,7 +35,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        242
+        244
       ]
     ]
   },
@@ -43,7 +43,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        377
+        379
       ]
     ]
   },
@@ -51,7 +51,15 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        401
+        403
+      ]
+    ]
+  },
+  "({0} anos)": {
+    "origin": [
+      [
+        "src/views/Quiz/QuizForm.js",
+        410
       ]
     ]
   },
@@ -59,7 +67,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        416
+        436
       ]
     ]
   },
@@ -67,11 +75,11 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        424
+        444
       ],
       [
         "src/views/Quiz/QuizForm.js",
-        485
+        505
       ]
     ]
   },
@@ -79,11 +87,11 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        427
+        447
       ],
       [
         "src/views/Quiz/QuizForm.js",
-        488
+        508
       ]
     ]
   },
@@ -91,11 +99,11 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        438
+        458
       ],
       [
         "src/views/Quiz/QuizForm.js",
-        499
+        519
       ]
     ]
   },
@@ -103,7 +111,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        477
+        497
       ]
     ]
   },
@@ -111,7 +119,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        539
+        559
       ]
     ]
   },
@@ -119,7 +127,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        541
+        561
       ]
     ]
   },
@@ -127,7 +135,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        553
+        573
       ]
     ]
   },
@@ -135,7 +143,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        559
+        579
       ]
     ]
   },
@@ -143,7 +151,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        561
+        581
       ]
     ]
   },
@@ -151,7 +159,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        566
+        586
       ]
     ]
   }
