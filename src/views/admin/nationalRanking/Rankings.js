@@ -181,31 +181,29 @@ const Rankings = () => {
           open={publishModal}
           title={<Trans>Publicar ranking mensal</Trans>}
           body={
-            <>
-              <div className="field">
-                <label className="label">
-                  <Trans>Mês</Trans>
-                </label>
-                <div className="control has-icons-left">
-                  <div className="select">
-                    <select
-                      onChange={(event) => {
-                        setMonthToPublish(event.target.value);
-                      }}
-                    >
-                      {validMonthListOptions.map((month) => (
-                        <option key={month} value={month}>
-                          {month}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                  <div className="icon is-small is-left">
-                    <i className="fa fa-calendar"></i>
-                  </div>
+            <div className="field">
+              <label className="label">
+                <Trans>Mês</Trans>
+              </label>
+              <div className="control has-icons-left">
+                <div className="select">
+                  <select
+                    onChange={(event) => {
+                      setMonthToPublish(event.target.value);
+                    }}
+                  >
+                    {validMonthListOptions.map((month) => (
+                      <option key={month} value={month}>
+                        {month}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <div className="icon is-small is-left">
+                  <i className="fa fa-calendar"></i>
                 </div>
               </div>
-            </>
+            </div>
           }
           action={() => {
             setPublishing(true);

@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Trans } from '@lingui/macro';
 import { omit } from 'lodash';
 import classames from 'classnames';
 import { toast } from 'react-toastify';
 
 import { convertToLongDate } from 'utils/formatDate';
+import { getRegionsTranslations } from 'utils/getRegionTranslation';
 import { useStateValue } from 'state/State';
 import PageHeader from 'components/PageHeader';
+import Loading from 'components/Loading';
 import Error from 'components/Error';
 import ApiRequest from 'utils/ApiRequest';
 import Avatar from './Account/Avatar';
@@ -19,6 +21,7 @@ const Account = () => {
     },
     dispatch,
   ] = useStateValue();
+  const [regions, setRegions] = useState();
   const [error, setError] = useState(null);
   const [submitting, setSubmitting] = useState(false);
   const [formData, setFormData] = useState({
@@ -31,8 +34,26 @@ const Account = () => {
     reminders: user?.reminders,
   });
 
+  useEffect(() => {
+    ApiRequest.get(`regions`)
+      .then(({ data }) => {
+        setRegions(data);
+      })
+      .catch(({ response }) => {
+        setError(response?.status);
+      });
+  }, []);
+
   if (!user) {
     return <Error status={401} />;
+  }
+
+  if (error) {
+    return <Error status={error} />;
+  }
+
+  if (!regions) {
+    return <Loading />;
   }
 
   const handleSubmit = (event) => {
@@ -147,6 +168,35 @@ const Account = () => {
                       <Trans>Já existe uma conta com este e-mail.</Trans>
                     </p>
                   )}
+              </div>
+              <div className="field">
+                <label className="label">
+                  <Trans>Distrito/Região</Trans>
+                </label>
+                <div className="control has-icons-left">
+                  <div className="select">
+                    <select
+                      defaultValue={user.region}
+                      onChange={(event) => {
+                        setFormData({
+                          ...formData,
+                          region: event.target.value,
+                        });
+                      }}
+                    >
+                      <option value="">-</option>
+                      {regions.map((region) =>
+                        getRegionsTranslations(
+                          region,
+                          <option value={region} />
+                        )
+                      )}
+                    </select>
+                  </div>
+                  <div className="icon is-small is-left">
+                    <i className="fa fa-calendar"></i>
+                  </div>
+                </div>
               </div>
               <div className="field">
                 <label className="label">
