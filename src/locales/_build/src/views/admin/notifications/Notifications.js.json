@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/views/admin/notifications/Notifications.js",
-        64
+        65
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/views/admin/notifications/Notifications.js",
-        74
+        75
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/views/admin/notifications/Notifications.js",
-        77
+        78
       ]
     ]
   },
@@ -35,7 +35,7 @@
     "origin": [
       [
         "src/views/admin/notifications/Notifications.js",
-        80
+        81
       ]
     ]
   },
@@ -43,7 +43,7 @@
     "origin": [
       [
         "src/views/admin/notifications/Notifications.js",
-        83
+        84
       ]
     ]
   },
@@ -51,7 +51,7 @@
     "origin": [
       [
         "src/views/admin/notifications/Notifications.js",
-        86
+        87
       ]
     ]
   },
@@ -59,7 +59,7 @@
     "origin": [
       [
         "src/views/admin/notifications/Notifications.js",
-        139
+        142
       ]
     ]
   }

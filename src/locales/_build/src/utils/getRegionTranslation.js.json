@@ -1,0 +1,162 @@
+{
+  "Açores": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        7
+      ]
+    ]
+  },
+  "Aveiro": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        12
+      ]
+    ]
+  },
+  "Beja": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        17
+      ]
+    ]
+  },
+  "Braga": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        22
+      ]
+    ]
+  },
+  "Bragança": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        27
+      ]
+    ]
+  },
+  "Castelo Branco": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        32
+      ]
+    ]
+  },
+  "Coimbra": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        37
+      ]
+    ]
+  },
+  "Évora": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        42
+      ]
+    ]
+  },
+  "Faro": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        47
+      ]
+    ]
+  },
+  "Guarda": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        52
+      ]
+    ]
+  },
+  "Leiria": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        57
+      ]
+    ]
+  },
+  "Lisboa": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        62
+      ]
+    ]
+  },
+  "Madeira": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        67
+      ]
+    ]
+  },
+  "Portalegre": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        72
+      ]
+    ]
+  },
+  "Porto": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        77
+      ]
+    ]
+  },
+  "Santarém": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        82
+      ]
+    ]
+  },
+  "Setúbal": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        87
+      ]
+    ]
+  },
+  "Viana do Castelo": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        92
+      ]
+    ]
+  },
+  "Vila Real": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        97
+      ]
+    ]
+  },
+  "Viseu": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        102
+      ]
+    ]
+  }
+}

@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/Register.js",
-        50
+        91
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/views/Register.js",
-        58
+        99
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/views/Register.js",
-        80
+        121
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/views/Register.js",
-        102
+        143
       ]
     ]
   },
@@ -35,7 +35,23 @@
     "origin": [
       [
         "src/views/Register.js",
-        127
+        168
+      ]
+    ]
+  },
+  "Data de nascimento": {
+    "origin": [
+      [
+        "src/views/Register.js",
+        175
+      ]
+    ]
+  },
+  "Distrito/Região": {
+    "origin": [
+      [
+        "src/views/Register.js",
+        247
       ]
     ]
   },
@@ -43,7 +59,7 @@
     "origin": [
       [
         "src/views/Register.js",
-        133
+        275
       ]
     ]
   },
@@ -51,7 +67,7 @@
     "origin": [
       [
         "src/views/Register.js",
-        157
+        299
       ]
     ]
   },
@@ -59,7 +75,7 @@
     "origin": [
       [
         "src/views/Register.js",
-        185
+        327
       ]
     ]
   },
@@ -67,7 +83,7 @@
     "origin": [
       [
         "src/views/Register.js",
-        199
+        341
       ]
     ]
   },
@@ -75,7 +91,7 @@
     "origin": [
       [
         "src/views/Register.js",
-        205
+        347
       ]
     ]
   }

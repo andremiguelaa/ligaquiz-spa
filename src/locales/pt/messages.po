@@ -67,9 +67,9 @@ msgstr "A tua subscrição para jogar quizzes especiais termina hoje."
 
 #: src/views/admin/nationalRanking/Events/List.js:99
 #: src/views/admin/nationalRanking/Players/List.js:109
-#: src/views/admin/nationalRanking/Rankings.js:121
-#: src/views/admin/notifications/Notifications.js:86
-#: src/views/admin/users/Users.js:182
+#: src/views/admin/nationalRanking/Rankings.js:122
+#: src/views/admin/notifications/Notifications.js:87
+#: src/views/admin/users/Users.js:187
 msgid "Acções"
 msgstr "Acções"
 
@@ -96,12 +96,12 @@ msgstr "Adicionar prova"
 msgid "Adicionar provas mensais"
 msgstr "Adicionar provas mensais"
 
-#: src/views/admin/users/Users.js:225
+#: src/views/admin/users/Users.js:230
 #: src/views/admin/users/modals/EditPermissionsModal.js:79
 msgid "Administrador"
 msgstr "Administrador"
 
-#: src/partials/Header.js:155
+#: src/partials/Header.js:158
 msgid "Administração"
 msgstr "Administração"
 
@@ -115,7 +115,7 @@ msgstr "Ainda tens uma pergunta em branco."
 msgid "Ainda tens {blankAnsers} perguntas em branco."
 msgstr "Ainda tens {blankAnsers} perguntas em branco."
 
-#: src/components/PaginatedTable.js:84
+#: src/components/PaginatedTable.js:85
 #: src/views/Ranking/Rounds.js:32
 msgid "Anterior"
 msgstr "Anterior"
@@ -124,7 +124,7 @@ msgstr "Anterior"
 msgid "Apagar divisão"
 msgstr "Apagar divisão"
 
-#: src/views/admin/nationalRanking/Players/List.js:157
+#: src/views/admin/nationalRanking/Players/List.js:158
 msgid "Apagar jogador"
 msgstr "Apagar jogador"
 
@@ -132,28 +132,28 @@ msgstr "Apagar jogador"
 msgid "Apagar notificação"
 msgstr "Apagar notificação"
 
-#: src/views/admin/nationalRanking/Events/List.js:144
+#: src/views/admin/nationalRanking/Events/List.js:145
 msgid "Apagar provas mensais"
 msgstr "Apagar provas mensais"
 
-#: src/views/admin/quizzes/Quizzes.js:198
+#: src/views/admin/quizzes/Quizzes.js:199
 msgid "Apagar quiz"
 msgstr "Apagar quiz"
 
-#: src/views/admin/specialQuizzes/SpecialQuizzes.js:206
+#: src/views/admin/specialQuizzes/SpecialQuizzes.js:207
 msgid "Apagar quiz especial"
 msgstr "Apagar quiz especial"
 
-#: src/views/admin/nationalRanking/Rankings.js:168
+#: src/views/admin/nationalRanking/Rankings.js:170
 msgid "Apagar ranking mensal"
 msgstr "Apagar ranking mensal"
 
-#: src/views/admin/seasons/Seasons.js:157
+#: src/views/admin/seasons/Seasons.js:158
 msgid "Apagar temporada"
 msgstr "Apagar temporada"
 
-#: src/views/Account.js:98
-#: src/views/Register.js:80
+#: src/views/Account.js:133
+#: src/views/Register.js:121
 #: src/views/admin/nationalRanking/Players/Form.js:192
 msgid "Apelido"
 msgstr "Apelido"
@@ -166,19 +166,19 @@ msgstr "Arquitectura"
 msgid "Arquivo"
 msgstr "Arquivo"
 
-#: src/partials/Header.js:260
+#: src/partials/Header.js:263
 #: src/routes.js:119
 #: src/views/Quizzes.js:49
 msgid "Arquivo de quizzes"
 msgstr "Arquivo de quizzes"
 
-#: src/partials/Header.js:271
+#: src/partials/Header.js:274
 #: src/routes.js:124
 #: src/views/SpecialQuizzes.js:65
 msgid "Arquivo de quizzes especiais"
 msgstr "Arquivo de quizzes especiais"
 
-#: src/partials/Header.js:256
+#: src/partials/Header.js:259
 #: src/routes.js:114
 #: src/views/Seasons.js:50
 msgid "Arquivo de temporadas"
@@ -188,7 +188,7 @@ msgstr "Arquivo de temporadas"
 msgid "Artesanato"
 msgstr "Artesanato"
 
-#: src/partials/Header.js:92
+#: src/partials/Header.js:93
 #: src/views/Statistics.js:153
 msgid "As minhas estatísticas"
 msgstr "As minhas estatísticas"
@@ -198,13 +198,25 @@ msgstr "As minhas estatísticas"
 msgid "Autor"
 msgstr "Autor"
 
+#: src/utils/getRegionTranslation.js:12
+msgid "Aveiro"
+msgstr "Aveiro"
+
 #: src/views/admin/notifications/utils/notificationTypes.js:14
 msgid "Aviso"
 msgstr "Aviso"
 
+#: src/utils/getRegionTranslation.js:7
+msgid "Açores"
+msgstr "Açores"
+
 #: src/utils/getGenreTranslation.js:38
 msgid "Banda Desenhada"
 msgstr "Banda Desenhada"
+
+#: src/utils/getRegionTranslation.js:17
+msgid "Beja"
+msgstr "Beja"
 
 #: src/utils/getGenreTranslation.js:33
 msgid "Belas Artes"
@@ -214,10 +226,18 @@ msgstr "Belas Artes"
 msgid "Biologia"
 msgstr "Biologia"
 
-#: src/views/admin/users/Users.js:315
+#: src/views/admin/users/Users.js:320
 #: src/views/admin/users/modals/EditPermissionsModal.js:312
 msgid "Bloqueado"
 msgstr "Bloqueado"
+
+#: src/utils/getRegionTranslation.js:22
+msgid "Braga"
+msgstr "Braga"
+
+#: src/utils/getRegionTranslation.js:27
+msgid "Bragança"
+msgstr "Bragança"
 
 #: src/views/Statistics.js:260
 msgid "C"
@@ -243,6 +263,10 @@ msgstr "Campeonato Nacional de Quiz"
 msgid "Cancelar"
 msgstr "Cancelar"
 
+#: src/utils/getRegionTranslation.js:32
+msgid "Castelo Branco"
+msgstr "Castelo Branco"
+
 #: src/utils/getGenreTranslation.js:41
 msgid "Cinema"
 msgstr "Cinema"
@@ -259,7 +283,7 @@ msgstr "Ciência"
 msgid "Ciências Sociais"
 msgstr "Ciências Sociais"
 
-#: src/partials/Header.js:86
+#: src/partials/Header.js:87
 #: src/routes.js:109
 #: src/views/Ranking.js:141
 #: src/views/Seasons.js:85
@@ -271,6 +295,10 @@ msgstr "Classificação"
 #: src/partials/Notifications.js:178
 msgid "Clica <0>aqui</0> para saber como renovar."
 msgstr "Clica <0>aqui</0> para saber como renovar."
+
+#: src/utils/getRegionTranslation.js:37
+msgid "Coimbra"
+msgstr "Coimbra"
 
 #: src/utils/getGenreTranslation.js:57
 msgid "Comida e Bebida"
@@ -289,15 +317,15 @@ msgstr "Comparação de Estatísticas"
 msgid "Comunicação Social e Redes Sociais"
 msgstr "Comunicação Social e Redes Sociais"
 
-#: src/views/Account.js:177
-#: src/views/Register.js:157
+#: src/views/Account.js:314
+#: src/views/Register.js:299
 #: src/views/ResetPassword.js:84
 msgid "Confirmação da palavra-passe"
 msgstr "Confirmação da palavra-passe"
 
-#: src/partials/Header.js:244
+#: src/partials/Header.js:247
 #: src/routes.js:77
-#: src/views/Account.js:68
+#: src/views/Account.js:103
 msgid "Conta"
 msgstr "Conta"
 
@@ -316,7 +344,7 @@ msgstr "Conteúdo não encontrado."
 msgid "Correcta"
 msgstr "Correcta"
 
-#: src/views/admin/users/Users.js:303
+#: src/views/admin/users/Users.js:308
 #: src/views/admin/users/modals/EditPermissionsModal.js:289
 msgid "Corrector"
 msgstr "Corrector"
@@ -339,7 +367,7 @@ msgstr "Corrigir quiz especial de {0}"
 msgid "Credenciais erradas."
 msgstr "Credenciais erradas."
 
-#: src/views/admin/notifications/Notifications.js:64
+#: src/views/admin/notifications/Notifications.js:65
 #: src/views/admin/notifications/modals/FormModal.js:52
 msgid "Criar notificação"
 msgstr "Criar notificação"
@@ -381,13 +409,18 @@ msgstr "Dança"
 msgid "Data"
 msgstr "Data"
 
-#: src/views/admin/notifications/Notifications.js:80
+#: src/views/admin/notifications/Notifications.js:81
 msgid "Data de fim"
 msgstr "Data de fim"
 
-#: src/views/admin/notifications/Notifications.js:77
+#: src/views/admin/notifications/Notifications.js:78
 msgid "Data de início"
 msgstr "Data de início"
+
+#: src/views/Account.js:189
+#: src/views/Register.js:175
+msgid "Data de nascimento"
+msgstr "Data de nascimento"
 
 #: src/views/admin/quizzes/QuizForm.js:185
 #: src/views/admin/specialQuizzes/SpecialQuizForm.js:167
@@ -433,6 +466,11 @@ msgstr "Desporto"
 msgid "Diferença de pontos"
 msgstr "Diferença de pontos"
 
+#: src/views/Account.js:261
+#: src/views/Register.js:247
+msgid "Distrito/Região"
+msgstr "Distrito/Região"
+
 #: src/views/admin/seasons/SeasonForm.js:241
 msgid "Divisões"
 msgstr "Divisões"
@@ -441,10 +479,10 @@ msgstr "Divisões"
 msgid "E"
 msgstr "E"
 
-#: src/views/Account.js:121
+#: src/views/Account.js:156
 #: src/views/Login.js:64
 #: src/views/RecoverPassword.js:56
-#: src/views/Register.js:102
+#: src/views/Register.js:143
 msgid "E-Mail"
 msgstr "E-Mail"
 
@@ -485,12 +523,12 @@ msgstr "Editar quiz especial de {0}"
 msgid "Editar temporada {season}"
 msgstr "Editar temporada {season}"
 
-#: src/views/admin/users/Users.js:277
+#: src/views/admin/users/Users.js:282
 #: src/views/admin/users/modals/EditPermissionsModal.js:241
 msgid "Editor de Quizzes"
 msgstr "Editor de Quizzes"
 
-#: src/views/admin/users/Users.js:290
+#: src/views/admin/users/Users.js:295
 #: src/views/admin/users/modals/EditPermissionsModal.js:266
 msgid "Editor de Quizzes Especiais"
 msgstr "Editor de Quizzes Especiais"
@@ -504,7 +542,7 @@ msgstr "Empates"
 msgid "Ent"
 msgstr "Ent"
 
-#: src/partials/Header.js:122
+#: src/partials/Header.js:124
 #: src/routes.js:51
 #: src/views/Login.js:57
 #: src/views/Login.js:124
@@ -521,15 +559,15 @@ msgstr "Entretenimento"
 msgid "Enunciado"
 msgstr "Enunciado"
 
-#: src/partials/Message.js:88
+#: src/partials/Message.js:89
 msgid "Enviar"
 msgstr "Enviar"
 
-#: src/partials/Message.js:58
+#: src/partials/Message.js:59
 msgid "Enviar mensagem"
 msgstr "Enviar mensagem"
 
-#: src/partials/Message.js:68
+#: src/partials/Message.js:69
 msgid "Enviar sugestão/reclamação"
 msgstr "Enviar sugestão/reclamação"
 
@@ -549,7 +587,7 @@ msgstr "Errada"
 #: src/views/Account/Avatar.js:103
 #: src/views/Login.js:111
 #: src/views/RecoverPassword.js:85
-#: src/views/Register.js:185
+#: src/views/Register.js:327
 #: src/views/ResetPassword.js:125
 msgid "Erro de servidor. Tenta mais tarde."
 msgstr "Erro de servidor. Tenta mais tarde."
@@ -612,6 +650,10 @@ msgstr "Falta"
 msgid "Faltas"
 msgstr "Faltas"
 
+#: src/utils/getRegionTranslation.js:47
+msgid "Faro"
+msgstr "Faro"
+
 #: src/utils/getGenreTranslation.js:42
 msgid "Fauna e Flora"
 msgstr "Fauna e Flora"
@@ -644,16 +686,16 @@ msgstr "Geografia"
 msgid "Geologia"
 msgstr "Geologia"
 
-#: src/views/admin/users/Users.js:264
+#: src/views/admin/users/Users.js:269
 #: src/views/admin/users/modals/EditPermissionsModal.js:218
 msgid "Gestor de Ranking Nacional"
 msgstr "Gestor de Ranking Nacional"
 
-#: src/partials/Header.js:181
+#: src/partials/Header.js:184
 msgid "Gestão de Quizzes"
 msgstr "Gestão de Quizzes"
 
-#: src/partials/Header.js:216
+#: src/partials/Header.js:219
 msgid "Gestão de Ranking Nacional"
 msgstr "Gestão de Ranking Nacional"
 
@@ -662,13 +704,17 @@ msgid "Global"
 msgstr "Global"
 
 #: src/views/Account/Avatar.js:114
-#: src/views/Account.js:305
+#: src/views/Account.js:442
 #: src/views/admin/nationalRanking/Players/Form.js:260
 #: src/views/admin/quizzes/QuizForm.js:223
 #: src/views/admin/seasons/SeasonForm.js:295
 #: src/views/admin/specialQuizzes/SpecialQuizForm.js:259
 msgid "Gravar"
 msgstr "Gravar"
+
+#: src/utils/getRegionTranslation.js:52
+msgid "Guarda"
+msgstr "Guarda"
 
 #: src/views/admin/nationalRanking/Events/Form.js:278
 msgid "Guardar provas mensais"
@@ -744,17 +790,17 @@ msgstr "Jogador criado com sucesso."
 msgid "Jogador da liga"
 msgstr "Jogador da liga"
 
-#: src/views/admin/users/Users.js:250
+#: src/views/admin/users/Users.js:255
 #: src/views/admin/users/modals/EditPermissionsModal.js:163
 msgid "Jogador de quizzes especiais"
 msgstr "Jogador de quizzes especiais"
 
-#: src/views/admin/users/Users.js:237
+#: src/views/admin/users/Users.js:242
 #: src/views/admin/users/modals/EditPermissionsModal.js:105
 msgid "Jogador regular"
 msgstr "Jogador regular"
 
-#: src/partials/Header.js:237
+#: src/partials/Header.js:240
 #: src/views/admin/nationalRanking/Players/List.js:85
 msgid "Jogadores"
 msgstr "Jogadores"
@@ -789,14 +835,18 @@ msgstr "Jornada {0}"
 msgid "Jornada {0} ({1})"
 msgstr "Jornada {0} ({1})"
 
-#: src/views/Account.js:147
-#: src/views/Register.js:127
+#: src/views/Account.js:182
+#: src/views/Register.js:168
 msgid "Já existe uma conta com este e-mail."
 msgstr "Já existe uma conta com este e-mail."
 
 #: src/views/NationalRanking/Legend.js:10
 msgid "Legenda"
 msgstr "Legenda"
+
+#: src/utils/getRegionTranslation.js:57
+msgid "Leiria"
+msgstr "Leiria"
 
 #: src/App.js:67
 #: src/routes.js:46
@@ -806,9 +856,17 @@ msgstr "Legenda"
 msgid "Liga Quiz"
 msgstr "Liga Quiz"
 
+#: src/utils/getRegionTranslation.js:62
+msgid "Lisboa"
+msgstr "Lisboa"
+
 #: src/utils/getGenreTranslation.js:34
 msgid "Literatura"
 msgstr "Literatura"
+
+#: src/utils/getRegionTranslation.js:67
+msgid "Madeira"
+msgstr "Madeira"
 
 #: src/utils/getGenreTranslation.js:43
 msgid "Matemática"
@@ -818,7 +876,7 @@ msgstr "Matemática"
 msgid "Melhor"
 msgstr "Melhor"
 
-#: src/partials/Message.js:72
+#: src/partials/Message.js:73
 msgid "Mensagem"
 msgstr "Mensagem"
 
@@ -826,7 +884,7 @@ msgstr "Mensagem"
 msgid "Mensagem enviada com sucesso."
 msgstr "Mensagem enviada com sucesso."
 
-#: src/partials/Header.js:59
+#: src/partials/Header.js:60
 msgid "Menu"
 msgstr "Menu"
 
@@ -858,8 +916,8 @@ msgstr "Média"
 #: src/views/Statistics.js:329
 #: src/views/admin/nationalRanking/Events/Form.js:212
 #: src/views/admin/nationalRanking/Events/List.js:96
-#: src/views/admin/nationalRanking/Rankings.js:118
-#: src/views/admin/nationalRanking/Rankings.js:185
+#: src/views/admin/nationalRanking/Rankings.js:119
+#: src/views/admin/nationalRanking/Rankings.js:186
 msgid "Mês"
 msgstr "Mês"
 
@@ -876,18 +934,18 @@ msgstr "Navegação primária"
 msgid "Nenhum"
 msgstr "Nenhum"
 
-#: src/views/Account.js:75
+#: src/views/Account.js:110
 #: src/views/GenreRanking/Table.js:17
 #: src/views/NationalRanking.js:194
 #: src/views/Question.js:200
 #: src/views/Ranking/TableHeader.js:13
-#: src/views/Register.js:58
+#: src/views/Register.js:99
 #: src/views/admin/nationalRanking/Players/Form.js:166
-#: src/views/admin/users/Users.js:110
+#: src/views/admin/users/Users.js:113
 msgid "Nome"
 msgstr "Nome"
 
-#: src/views/admin/notifications/Notifications.js:74
+#: src/views/admin/notifications/Notifications.js:75
 msgid "Notificação"
 msgstr "Notificação"
 
@@ -899,19 +957,19 @@ msgstr "Notificação apagada com sucesso."
 msgid "Notificação criada com sucesso."
 msgstr "Notificação criada com sucesso."
 
-#: src/views/Account.js:269
+#: src/views/Account.js:406
 msgid "Notificação de quiz especial (00h00)"
 msgstr "Notificação de quiz especial (00h00)"
 
-#: src/views/Account.js:290
+#: src/views/Account.js:427
 msgid "Notificação de quiz especial (22h00)"
 msgstr "Notificação de quiz especial (22h00)"
 
-#: src/views/Account.js:221
+#: src/views/Account.js:358
 msgid "Notificação de quiz regular (00h00)"
 msgstr "Notificação de quiz regular (00h00)"
 
-#: src/views/Account.js:242
+#: src/views/Account.js:379
 msgid "Notificação de quiz regular (22h00)"
 msgstr "Notificação de quiz regular (22h00)"
 
@@ -919,7 +977,7 @@ msgstr "Notificação de quiz regular (22h00)"
 msgid "Notificação editada com sucesso."
 msgstr "Notificação editada com sucesso."
 
-#: src/partials/Header.js:166
+#: src/partials/Header.js:169
 #: src/routes.js:184
 #: src/views/admin/notifications/Notifications.js:48
 msgid "Notificações"
@@ -945,7 +1003,7 @@ msgstr "Não existe ranking nacional disponível."
 msgid "Não foi possível abrir a edição das provas mensais."
 msgstr "Não foi possível abrir a edição das provas mensais."
 
-#: src/views/Account.js:61
+#: src/views/Account.js:90
 msgid "Não foi possível actualizar o perfil."
 msgstr "Não foi possível actualizar o perfil."
 
@@ -1080,9 +1138,9 @@ msgstr "PR"
 msgid "PaF"
 msgstr "PaF"
 
-#: src/views/Account.js:153
+#: src/views/Account.js:290
 #: src/views/Login.js:85
-#: src/views/Register.js:133
+#: src/views/Register.js:275
 #: src/views/ResetPassword.js:60
 msgid "Palavra-passe"
 msgstr "Palavra-passe"
@@ -1138,7 +1196,7 @@ msgstr "Percentagem global de acerto"
 msgid "Perdeste a ligação à internet."
 msgstr "Perdeste a ligação à internet."
 
-#: src/views/Account.js:49
+#: src/views/Account.js:78
 msgid "Perfil actualizado com sucesso."
 msgstr "Perfil actualizado com sucesso."
 
@@ -1160,11 +1218,11 @@ msgstr "Pergunta {0}"
 msgid "Perguntas respondidas"
 msgstr "Perguntas respondidas"
 
-#: src/views/admin/users/Users.js:128
+#: src/views/admin/users/Users.js:131
 msgid "Permissões"
 msgstr "Permissões"
 
-#: src/partials/Header.js:206
+#: src/partials/Header.js:209
 #: src/routes.js:249
 #: src/views/admin/search/Search.js:58
 msgid "Pesquisa de perguntas"
@@ -1207,6 +1265,14 @@ msgstr "Pontos contra"
 msgid "Pontos na liga"
 msgstr "Pontos na liga"
 
+#: src/utils/getRegionTranslation.js:72
+msgid "Portalegre"
+msgstr "Portalegre"
+
+#: src/utils/getRegionTranslation.js:77
+msgid "Porto"
+msgstr "Porto"
+
 #: src/utils/getGenreTranslation.js:64
 msgid "Produtos e Marcas"
 msgstr "Produtos e Marcas"
@@ -1219,7 +1285,7 @@ msgstr "Prova"
 msgid "Provas individuais"
 msgstr "Provas individuais"
 
-#: src/partials/Header.js:230
+#: src/partials/Header.js:233
 #: src/views/admin/nationalRanking/Events/List.js:75
 msgid "Provas mensais"
 msgstr "Provas mensais"
@@ -1236,7 +1302,7 @@ msgstr "Provas mensais apagadas com sucesso."
 msgid "Provas mensais criadas com sucesso."
 msgstr "Provas mensais criadas com sucesso."
 
-#: src/components/PaginatedTable.js:93
+#: src/components/PaginatedTable.js:95
 #: src/views/Ranking/Rounds.js:42
 msgid "Próxima"
 msgstr "Próxima"
@@ -1246,8 +1312,8 @@ msgstr "Próxima"
 msgid "Pts"
 msgstr "Pts"
 
-#: src/views/admin/nationalRanking/Rankings.js:106
-#: src/views/admin/nationalRanking/Rankings.js:180
+#: src/views/admin/nationalRanking/Rankings.js:107
+#: src/views/admin/nationalRanking/Rankings.js:182
 msgid "Publicar ranking mensal"
 msgstr "Publicar ranking mensal"
 
@@ -1338,7 +1404,7 @@ msgstr "Quiz | Criar"
 msgid "Quiz | Editar"
 msgstr "Quiz | Editar"
 
-#: src/partials/Header.js:188
+#: src/partials/Header.js:191
 #: src/routes.js:194
 #: src/views/NationalRanking.js:240
 #: src/views/admin/quizzes/Quizzes.js:83
@@ -1349,7 +1415,7 @@ msgstr "Quizzes"
 msgid "Quizzes Especiais"
 msgstr "Quizzes Especiais"
 
-#: src/partials/Header.js:199
+#: src/partials/Header.js:202
 #: src/routes.js:214
 msgid "Quizzes especiais"
 msgstr "Quizzes especiais"
@@ -1363,7 +1429,7 @@ msgstr "Química"
 msgid "RC"
 msgstr "RC"
 
-#: src/partials/Header.js:97
+#: src/partials/Header.js:98
 #: src/routes.js:103
 #: src/views/NationalRanking.js:150
 #: src/views/NationalRanking.js:175
@@ -1410,12 +1476,12 @@ msgstr "Ranking mensal apagado com sucesso."
 msgid "Ranking mensal publicado com sucesso."
 msgstr "Ranking mensal publicado com sucesso."
 
-#: src/partials/Header.js:223
+#: src/partials/Header.js:226
 #: src/views/admin/nationalRanking/Rankings.js:88
 msgid "Rankings mensais"
 msgstr "Rankings mensais"
 
-#: src/partials/Header.js:252
+#: src/partials/Header.js:255
 #: src/routes.js:88
 #: src/views/GenreRanking.js:160
 #: src/views/Seasons.js:79
@@ -1433,13 +1499,13 @@ msgstr "Recuperar palavra-passe"
 msgid "Redefinir palavra-passe"
 msgstr "Redefinir palavra-passe"
 
-#: src/partials/Header.js:125
-#: src/views/Register.js:199
+#: src/partials/Header.js:127
+#: src/views/Register.js:341
 msgid "Registar"
 msgstr "Registar"
 
 #: src/routes.js:66
-#: src/views/Register.js:50
+#: src/views/Register.js:91
 msgid "Registo"
 msgstr "Registo"
 
@@ -1447,7 +1513,7 @@ msgstr "Registo"
 msgid "Registo de acções (últimos {logsDays} dias)"
 msgstr "Registo de acções (últimos {logsDays} dias)"
 
-#: src/partials/Header.js:78
+#: src/partials/Header.js:79
 #: src/routes.js:83
 #: src/views/Rules.js:25
 #: src/views/SpecialQuiz/SpecialQuizForm.js:185
@@ -1532,10 +1598,14 @@ msgstr "Resultado no Campeonato Mundial"
 msgid "Resultado no Campeonato Nacional"
 msgstr "Resultado no Campeonato Nacional"
 
-#: src/partials/Header.js:277
+#: src/partials/Header.js:280
 #: src/routes.js:71
 msgid "Sair"
 msgstr "Sair"
+
+#: src/utils/getRegionTranslation.js:82
+msgid "Santarém"
+msgstr "Santarém"
 
 #: src/utils/getGenreTranslation.js:49
 msgid "Saúde e Corpo Humano"
@@ -1555,17 +1625,21 @@ msgstr "Selecciona os jogadores que jogaram esta prova:"
 #: src/views/Seasons.js:101
 #: src/views/SpecialQuizzes.js:121
 #: src/views/Statistics.js:421
-#: src/views/admin/nationalRanking/Events/List.js:158
-#: src/views/admin/nationalRanking/Players/List.js:168
-#: src/views/admin/nationalRanking/Rankings.js:159
-#: src/views/admin/notifications/Notifications.js:139
-#: src/views/admin/quizzes/Quizzes.js:188
+#: src/views/admin/nationalRanking/Events/List.js:159
+#: src/views/admin/nationalRanking/Players/List.js:169
+#: src/views/admin/nationalRanking/Rankings.js:161
+#: src/views/admin/notifications/Notifications.js:142
+#: src/views/admin/quizzes/Quizzes.js:189
 #: src/views/admin/search/Search.js:136
-#: src/views/admin/seasons/Seasons.js:147
-#: src/views/admin/specialQuizzes/SpecialQuizzes.js:196
-#: src/views/admin/users/Users.js:367
+#: src/views/admin/seasons/Seasons.js:148
+#: src/views/admin/specialQuizzes/SpecialQuizzes.js:197
+#: src/views/admin/users/Users.js:373
 msgid "Sem registos"
 msgstr "Sem registos"
+
+#: src/utils/getRegionTranslation.js:87
+msgid "Setúbal"
+msgstr "Setúbal"
 
 #: src/views/Question.js:228
 #: src/views/SpecialQuiz/SpecialQuizDone.js:171
@@ -1608,11 +1682,11 @@ msgstr "Submeter quiz"
 msgid "Submissão inválida"
 msgstr "Submissão inválida"
 
-#: src/views/admin/users/Users.js:140
+#: src/views/admin/users/Users.js:144
 msgid "Subscrição p/ quizzes da liga"
 msgstr "Subscrição p/ quizzes da liga"
 
-#: src/views/admin/users/Users.js:163
+#: src/views/admin/users/Users.js:168
 msgid "Subscrição p/ quizzes especiais"
 msgstr "Subscrição p/ quizzes especiais"
 
@@ -1676,13 +1750,13 @@ msgstr "Temporada | Criar"
 msgid "Temporada | Editar"
 msgstr "Temporada | Editar"
 
-#: src/partials/Header.js:170
+#: src/partials/Header.js:173
 #: src/routes.js:234
 #: src/views/admin/seasons/Seasons.js:69
 msgid "Temporadas"
 msgstr "Temporadas"
 
-#: src/views/admin/nationalRanking/Events/List.js:146
+#: src/views/admin/nationalRanking/Events/List.js:147
 msgid "Tens a certeza que queres apagar as provas deste mês e os resultados associados?"
 msgstr "Tens a certeza que queres apagar as provas deste mês e os resultados associados?"
 
@@ -1698,7 +1772,7 @@ msgstr "Tens a certeza que queres apagar esta notificação?"
 msgid "Tens a certeza que queres apagar esta prova e todos os resultados associados?"
 msgstr "Tens a certeza que queres apagar esta prova e todos os resultados associados?"
 
-#: src/views/admin/seasons/Seasons.js:158
+#: src/views/admin/seasons/Seasons.js:159
 msgid "Tens a certeza que queres apagar esta temporada?"
 msgstr "Tens a certeza que queres apagar esta temporada?"
 
@@ -1706,19 +1780,19 @@ msgstr "Tens a certeza que queres apagar esta temporada?"
 msgid "Tens a certeza que queres apagar este jogador e o resultado associado?"
 msgstr "Tens a certeza que queres apagar este jogador e o resultado associado?"
 
-#: src/views/admin/nationalRanking/Players/List.js:159
+#: src/views/admin/nationalRanking/Players/List.js:160
 msgid "Tens a certeza que queres apagar este jogador?"
 msgstr "Tens a certeza que queres apagar este jogador?"
 
-#: src/views/admin/specialQuizzes/SpecialQuizzes.js:208
+#: src/views/admin/specialQuizzes/SpecialQuizzes.js:209
 msgid "Tens a certeza que queres apagar este quiz especial?"
 msgstr "Tens a certeza que queres apagar este quiz especial?"
 
-#: src/views/admin/quizzes/Quizzes.js:199
+#: src/views/admin/quizzes/Quizzes.js:200
 msgid "Tens a certeza que queres apagar este quiz?"
 msgstr "Tens a certeza que queres apagar este quiz?"
 
-#: src/views/admin/nationalRanking/Rankings.js:170
+#: src/views/admin/nationalRanking/Rankings.js:172
 msgid "Tens a certeza que queres apagar este ranking mensal?"
 msgstr "Tens a certeza que queres apagar este ranking mensal?"
 
@@ -1731,7 +1805,7 @@ msgstr "Tens a certeza que queres submeter o quiz?"
 msgid "Tens pontos por atribuir.<0/>Atribui-os antes de fazer a submissão."
 msgstr "Tens pontos por atribuir.<0/>Atribui-os antes de fazer a submissão."
 
-#: src/views/admin/notifications/Notifications.js:83
+#: src/views/admin/notifications/Notifications.js:84
 msgid "Tipo"
 msgstr "Tipo"
 
@@ -1769,11 +1843,11 @@ msgstr "Turismo"
 msgid "Utilizador actualizado com sucesso."
 msgstr "Utilizador actualizado com sucesso."
 
-#: src/views/Register.js:205
+#: src/views/Register.js:347
 msgid "Utilizador registado com sucesso.<0/>Clica <1>aqui</1> e usa as tuas credenciais."
 msgstr "Utilizador registado com sucesso.<0/>Clica <1>aqui</1> e usa as tuas credenciais."
 
-#: src/partials/Header.js:159
+#: src/partials/Header.js:162
 #: src/routes.js:189
 #: src/views/admin/users/Users.js:98
 msgid "Utilizadores"
@@ -1788,9 +1862,21 @@ msgstr "V"
 msgid "Validade da subscrição"
 msgstr "Validade da subscrição"
 
-#: src/partials/Header.js:281
+#: src/partials/Header.js:284
 msgid "Versão {version}"
 msgstr "Versão {version}"
+
+#: src/utils/getRegionTranslation.js:92
+msgid "Viana do Castelo"
+msgstr "Viana do Castelo"
+
+#: src/utils/getRegionTranslation.js:97
+msgid "Vila Real"
+msgstr "Vila Real"
+
+#: src/utils/getRegionTranslation.js:102
+msgid "Viseu"
+msgstr "Viseu"
 
 #: src/views/Ranking/TableHeader.js:92
 #: src/views/StatisticsComparison.js:288
@@ -1802,7 +1888,7 @@ msgstr "Vitórias"
 msgid "Voltar à página inicial"
 msgstr "Voltar à página inicial"
 
-#: src/views/Account.js:154
+#: src/views/Account.js:291
 msgid "deixa em branco para não alterar"
 msgstr "deixa em branco para não alterar"
 
@@ -1831,7 +1917,7 @@ msgstr "{0, selectordinal, two {2º} few {3ª} other {#º}}"
 #: src/views/NationalRanking.js:167
 #: src/views/NationalRanking.js:310
 #: src/views/admin/nationalRanking/Events/List.js:108
-#: src/views/admin/nationalRanking/Rankings.js:131
+#: src/views/admin/nationalRanking/Rankings.js:132
 msgid "{0} de {1}"
 msgstr "{0} de {1}"
 
@@ -1847,6 +1933,10 @@ msgstr "{0}ª divisão"
 #: src/components/Error.js:16
 msgid "É necessário autenticares-te primeiro para aceder a esta página."
 msgstr "É necessário autenticares-te primeiro para aceder a esta página."
+
+#: src/utils/getRegionTranslation.js:42
+msgid "Évora"
+msgstr "Évora"
 
 #: src/utils/getGenreTranslation.js:36
 msgid "Óperas e Musicais"
