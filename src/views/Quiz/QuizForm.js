@@ -6,10 +6,12 @@ import { useHistory } from 'react-router-dom';
 import classnames from 'classnames';
 import { toast } from 'react-toastify';
 import { debounce } from 'lodash';
+import { differenceInYears } from 'date-fns';
 
 import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
 import renderMedia from 'utils/renderMedia';
+import { getRegionsTranslations } from 'utils/getRegionTranslation';
 import { getGenreTranslation } from 'utils/getGenreTranslation';
 import Markdown from 'components/Markdown';
 import Modal from 'components/Modal';
@@ -402,6 +404,17 @@ const QuizForm = ({ data, userAnswers }) => {
                       </h2>
                       <p className={classes.opponentName}>
                         {opponent.name} {opponent.surname}
+                        {opponent.birthday &&
+                          ` (${differenceInYears(
+                            new Date(),
+                            new Date(opponent.birthday)
+                          )} anos)`}
+                        {opponent.region && (
+                          <>
+                            <br />
+                            {getRegionsTranslations(opponent.region, <></>)}
+                          </>
+                        )}
                       </p>
                       <div className="table-container">
                         <table
