@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import DatePicker from 'react-datepicker';
+import { sub, getYear } from 'date-fns';
+import { range } from 'lodash';
 import { Trans } from '@lingui/macro';
 import classnames from 'classnames';
 
@@ -8,6 +11,7 @@ import Loading from 'components/Loading';
 import { useStateValue } from 'state/State';
 import { getRegionsTranslations } from 'utils/getRegionTranslation';
 import ApiRequest from 'utils/ApiRequest';
+import { formatDate, convertToLongMonth } from 'utils/formatDate';
 import Error from 'components/Error';
 
 const Register = () => {
@@ -25,7 +29,12 @@ const Register = () => {
   const [success, setSuccess] = useState(false);
   const [submitting, setSubmitting] = useState(false);
 
-  const [{ user }] = useStateValue();
+  const [
+    {
+      user,
+      settings: { language },
+    },
+  ] = useStateValue();
 
   useEffect(() => {
     ApiRequest.get(`regions`)
@@ -53,7 +62,11 @@ const Register = () => {
     event.preventDefault();
     setSubmitting(true);
     setError(null);
-    ApiRequest.post('users', formData)
+    const curatedFormData = {
+      ...formData,
+      birthday: formData.birthday ? formatDate(formData.birthday) : null,
+    };
+    ApiRequest.post('users', curatedFormData)
       .then(() => {
         setSuccess(true);
       })
@@ -66,6 +79,12 @@ const Register = () => {
         setSubmitting(false);
       });
   };
+
+  const years = range(
+    getYear(sub(new Date(), { years: 18 })),
+    getYear(sub(new Date(), { years: 100 })) - 1,
+    -1
+  );
 
   return (
     <>
@@ -151,6 +170,79 @@ const Register = () => {
                     )}
                 </div>
                 <div className="field">
+                  <div className="control">
+                    <label className="label">
+                      <Trans>Data de nascimento</Trans>
+                    </label>
+                    <div className="control has-icons-left">
+                      <DatePicker
+                        renderCustomHeader={({
+                          date,
+                          changeYear,
+                          decreaseMonth,
+                          increaseMonth,
+                          prevMonthButtonDisabled,
+                          nextMonthButtonDisabled,
+                        }) => (
+                          <>
+                            <select
+                              value={getYear(date)}
+                              onChange={({ target: { value } }) =>
+                                changeYear(value)
+                              }
+                              className="custom-year-select"
+                            >
+                              {years.map((option) => (
+                                <option key={option} value={option}>
+                                  {option}
+                                </option>
+                              ))}
+                            </select>
+                            <div className="custom-month-container">
+                              {!prevMonthButtonDisabled && (
+                                <button
+                                  type="button"
+                                  className="react-datepicker__navigation react-datepicker__navigation--previous"
+                                  aria-label="Previous Month"
+                                  onClick={decreaseMonth}
+                                >
+                                  Previous Month
+                                </button>
+                              )}
+                              {!nextMonthButtonDisabled && (
+                                <button
+                                  type="button"
+                                  className="react-datepicker__navigation react-datepicker__navigation--next"
+                                  aria-label="Next Month"
+                                  onClick={increaseMonth}
+                                >
+                                  Next Month
+                                </button>
+                              )}
+                              <div className="react-datepicker__current-month">
+                                {convertToLongMonth(date, language, true)}
+                              </div>
+                            </div>
+                          </>
+                        )}
+                        minDate={sub(new Date(), { years: 100 })}
+                        maxDate={sub(new Date(), { years: 18 })}
+                        onChange={(date) => {
+                          setFormData({
+                            ...formData,
+                            birthday: date,
+                          });
+                        }}
+                        selected={formData.birthday}
+                        dateFormat="yyyy-MM-dd"
+                      />
+                      <span className="icon is-small is-left">
+                        <i className="fa fa-calendar" />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div className="field">
                   <label className="label">
                     <Trans>Distrito/Região</Trans>
                   </label>
@@ -174,7 +266,7 @@ const Register = () => {
                       </select>
                     </div>
                     <div className="icon is-small is-left">
-                      <i className="fa fa-calendar"></i>
+                      <i className="fa fa-globe"></i>
                     </div>
                   </div>
                 </div>

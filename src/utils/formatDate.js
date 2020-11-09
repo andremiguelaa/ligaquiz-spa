@@ -18,16 +18,21 @@ export const convertToLongDate = (date, language) => {
   return longDate;
 };
 
-export const convertToLongMonth = (date, language) => {
+export const convertToLongMonth = (date, language, onlyMonth = false) => {
   let longDate = new Date(date).toLocaleDateString(language, {
     year: 'numeric',
     month: 'long',
   });
   if (language === 'pt') {
     let longDateArray = longDate.split(' ');
-    longDateArray[0] =
-      longDateArray[0].charAt(0).toUpperCase() + longDateArray[0].slice(1);
-    longDate = longDateArray.join(' ');
+    if (onlyMonth) {
+      longDate =
+        longDateArray[0].charAt(0).toUpperCase() + longDateArray[0].slice(1);
+    } else {
+      longDateArray[0] =
+        longDateArray[0].charAt(0).toUpperCase() + longDateArray[0].slice(1);
+      longDate = longDateArray.join(' ');
+    }
   }
   return longDate;
 };

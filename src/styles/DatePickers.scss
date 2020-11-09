@@ -56,6 +56,19 @@
   @media (prefers-color-scheme: dark) {
     background-color: $black-ter;
   }
+  .custom-year-select {
+    border: 1px solid $grey-light;
+    height: 2rem;
+    padding: 0 0.2rem;
+    @media (prefers-color-scheme: dark) {
+      background-color: $black-ter;
+      color: $white;
+    }
+  }
+  .custom-month-container {
+    position: relative;
+    padding: 7px 0;
+  }
 }
 
 .react-datepicker__current-month,
@@ -77,7 +90,7 @@
 .react-datepicker__day {
   @media (prefers-color-scheme: dark) {
     color: $white;
-    &:hover{
+    &:hover {
       background-color: $grey-darker;
     }
   }

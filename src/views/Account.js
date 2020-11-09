@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Trans } from '@lingui/macro';
-import { omit } from 'lodash';
+import { omit, range } from 'lodash';
 import classames from 'classnames';
 import { toast } from 'react-toastify';
+import DatePicker from 'react-datepicker';
+import { sub, getYear } from 'date-fns';
 
 import { convertToLongDate } from 'utils/formatDate';
 import { getRegionsTranslations } from 'utils/getRegionTranslation';
@@ -11,6 +13,7 @@ import PageHeader from 'components/PageHeader';
 import Loading from 'components/Loading';
 import Error from 'components/Error';
 import ApiRequest from 'utils/ApiRequest';
+import { formatDate, convertToLongMonth } from 'utils/formatDate';
 import Avatar from './Account/Avatar';
 
 const Account = () => {
@@ -29,6 +32,8 @@ const Account = () => {
     name: user?.name,
     surname: user?.surname,
     email: user?.email,
+    birthday: user?.birthday ? new Date(user?.birthday) : null,
+    region: user?.region,
     password: '',
     password2: '',
     reminders: user?.reminders,
@@ -64,6 +69,9 @@ const Account = () => {
     if (!formData.password.length) {
       newFormData = omit(formData, ['password', 'password2']);
     }
+    newFormData.birthday = formData.birthday
+      ? formatDate(formData.birthday)
+      : null;
     ApiRequest.patch('users', newFormData)
       .then(({ data: { user } }) => {
         setSubmitting(false);
@@ -83,6 +91,12 @@ const Account = () => {
         setSubmitting(false);
       });
   };
+
+  const years = range(
+    getYear(sub(new Date(), { years: 18 })),
+    getYear(sub(new Date(), { years: 100 })) - 1,
+    -1
+  );
 
   return (
     <>
@@ -168,6 +182,79 @@ const Account = () => {
                       <Trans>Já existe uma conta com este e-mail.</Trans>
                     </p>
                   )}
+              </div>
+              <div className="field">
+                <div className="control">
+                  <label className="label">
+                    <Trans>Data de nascimento</Trans>
+                  </label>
+                  <div className="control has-icons-left">
+                    <DatePicker
+                      renderCustomHeader={({
+                        date,
+                        changeYear,
+                        decreaseMonth,
+                        increaseMonth,
+                        prevMonthButtonDisabled,
+                        nextMonthButtonDisabled,
+                      }) => (
+                        <>
+                          <select
+                            value={getYear(date)}
+                            onChange={({ target: { value } }) =>
+                              changeYear(value)
+                            }
+                            className="custom-year-select"
+                          >
+                            {years.map((option) => (
+                              <option key={option} value={option}>
+                                {option}
+                              </option>
+                            ))}
+                          </select>
+                          <div className="custom-month-container">
+                            {!prevMonthButtonDisabled && (
+                              <button
+                                type="button"
+                                className="react-datepicker__navigation react-datepicker__navigation--previous"
+                                aria-label="Previous Month"
+                                onClick={decreaseMonth}
+                              >
+                                Previous Month
+                              </button>
+                            )}
+                            {!nextMonthButtonDisabled && (
+                              <button
+                                type="button"
+                                className="react-datepicker__navigation react-datepicker__navigation--next"
+                                aria-label="Next Month"
+                                onClick={increaseMonth}
+                              >
+                                Next Month
+                              </button>
+                            )}
+                            <div className="react-datepicker__current-month">
+                              {convertToLongMonth(date, language, true)}
+                            </div>
+                          </div>
+                        </>
+                      )}
+                      minDate={sub(new Date(), { years: 100 })}
+                      maxDate={sub(new Date(), { years: 18 })}
+                      onChange={(date) => {
+                        setFormData({
+                          ...formData,
+                          birthday: date,
+                        });
+                      }}
+                      selected={formData.birthday}
+                      dateFormat="yyyy-MM-dd"
+                    />
+                    <span className="icon is-small is-left">
+                      <i className="fa fa-calendar" />
+                    </span>
+                  </div>
+                </div>
               </div>
               <div className="field">
                 <label className="label">
