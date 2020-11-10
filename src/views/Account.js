@@ -281,7 +281,7 @@ const Account = () => {
                     </select>
                   </div>
                   <div className="icon is-small is-left">
-                    <i className="fa fa-calendar"></i>
+                    <i className="fa fa-globe"></i>
                   </div>
                 </div>
               </div>
