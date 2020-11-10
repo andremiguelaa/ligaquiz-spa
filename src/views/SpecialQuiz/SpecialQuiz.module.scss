@@ -2,6 +2,13 @@
 @import 'bulma/sass/utilities/derived-variables.scss';
 @import 'bulma/sass/utilities/mixins.sass';
 
+.wrapper {
+  @include mobile {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
 .description {
   padding-bottom: 3rem;
   border-bottom: 1px solid $grey-lighter;

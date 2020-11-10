@@ -73,7 +73,7 @@ const SpecialQuizForm = ({ data, userAnswers }) => {
 
   return (
     <>
-      <div className="columns">
+      <div className={classnames('columns', classes.wrapper)}>
         <div className="column is-8">
           {data.quiz.description && (
             <div className={classes.description}>
