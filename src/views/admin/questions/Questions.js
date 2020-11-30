@@ -30,10 +30,17 @@ const Translate = () => {
   const [questions, setQuestions] = useState();
   const [query, setQuery] = useState('');
   const [search, setSearch] = useState('');
+  const [searchField, setSearchField] = useState('');
   const [selectedGenre, setSelectedGenre] = useState('');
   const [selectedSubgenre, setSelectedSubgenre] = useState('');
   const [genre, setGenre] = useState();
   const [page, setPage] = useState();
+  const [historyParams, setHistoryParams] = useState({
+    search: '',
+    searchField: '',
+    genre: undefined,
+    page: 1,
+  });
 
   useEffect(() => {
     ApiRequest.get(`genres`)
@@ -66,6 +73,7 @@ const Translate = () => {
           setSelectedGenre(paramGenre.id.toString());
         }
         setGenre(params.get('genre'));
+        setHistoryParams((prev) => ({ ...prev, genre: params.get('genre') }));
       } else {
         setSelectedGenre('');
         setSelectedSubgenre('');
@@ -74,12 +82,23 @@ const Translate = () => {
       if (params.get('search')) {
         setSearch(params.get('search'));
         setQuery(params.get('search'));
+        setHistoryParams((prev) => ({ ...prev, search: params.get('search') }));
       } else {
         setSearch('');
         setQuery('');
       }
+      if (params.get('search_field')) {
+        setSearchField(params.get('search_field'));
+        setHistoryParams((prev) => ({
+          ...prev,
+          searchField: params.get('search_field'),
+        }));
+      } else {
+        setSearchField('');
+      }
       if (params.get('page')) {
         setPage(params.get('page'));
+        setHistoryParams((prev) => ({ ...prev, page: params.get('page') }));
       } else {
         setPage(1);
       }
@@ -87,11 +106,14 @@ const Translate = () => {
   }, [location.search, genres]);
 
   useEffect(() => {
+    console.log(historyParams);
     if (genres && page) {
       setQuestions();
       ApiRequest.get(
-        `questions?search=${search}${genre ? `&genre=${genre}` : ''}${
-          page ? `&page=${page}` : ''
+        `questions?search=${historyParams.search}&search_field=${
+          historyParams.searchField
+        }${historyParams.genre ? `&genre=${historyParams.genre}` : ''}&page=${
+          historyParams.page
         }`
       )
         .then(({ data }) => {
@@ -101,7 +123,17 @@ const Translate = () => {
           setError(response?.status);
         });
     }
-  }, [genres, search, genre, page]);
+  }, [genres, historyParams]);
+
+  useEffect(() => {
+    history.push(
+      `/admin/questions?search=${historyParams.search || ''}&search_field=${
+        historyParams.searchField || ''
+      }${historyParams.genre ? `&genre=${historyParams.genre}` : ''}&page=${
+        historyParams.page
+      }`
+    );
+  }, [history, historyParams]);
 
   if (!user) {
     return <Error status={401} />;
@@ -125,14 +157,6 @@ const Translate = () => {
     return <Loading />;
   }
 
-  const setHistory = ({ search, genre, page }) => {
-    history.push(
-      `/admin/questions?search=${search}${
-        genre ? `&genre=${genre}` : ''
-      }&page=${page}`
-    );
-  };
-
   const genreSubgenres =
     selectedGenre &&
     genres.find((genre) => genre.id.toString() === selectedGenre).subgenres;
@@ -144,11 +168,13 @@ const Translate = () => {
         <form
           onSubmit={(event) => {
             event.preventDefault();
-            setHistory({
+            setHistoryParams((prev) => ({
+              ...prev,
               search: query,
+              searchField: searchField,
               genre: selectedSubgenre || selectedGenre,
               page: 1,
-            });
+            }));
           }}
           className={classes.form}
         >
@@ -164,6 +190,40 @@ const Translate = () => {
                 onChange={(event) => setQuery(event.target.value)}
               />
             </div>
+            <div className={classnames('control', classes.radios)}>
+              <label className="radio">
+                <input
+                  type="radio"
+                  name="searchBy"
+                  value=""
+                  checked={searchField === ''}
+                  onChange={(event) => setSearchField(event.target.value)}
+                />
+                <Trans>Tudo</Trans>
+              </label>
+              <label className="radio">
+                <input
+                  type="radio"
+                  name="searchBy"
+                  value="content"
+                  checked={searchField === 'content'}
+                  onChange={(event) => setSearchField(event.target.value)}
+                />
+                <Trans>Pergunta</Trans>
+              </label>
+              <label className="radio">
+                <input
+                  type="radio"
+                  name="searchBy"
+                  value="answer"
+                  checked={searchField === 'answer'}
+                  onChange={(event) => setSearchField(event.target.value)}
+                />
+                <Trans>Resposta</Trans>
+              </label>
+            </div>
+          </div>
+          <div className={classnames('field', 'is-grouped', classes.fields)}>
             <label className={classnames('label', classes.label)}>
               <Trans>Tema</Trans>
             </label>
@@ -282,11 +342,10 @@ const Translate = () => {
               },
             ].filter(Boolean)}
             onChange={(newPage) => {
-              setHistory({
-                search,
-                genre,
+              setHistoryParams((prev) => ({
+                ...prev,
                 page: newPage,
-              });
+              }));
             }}
             onError={(code) => {
               setError(code);
