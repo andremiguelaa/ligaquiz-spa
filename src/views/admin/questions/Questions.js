@@ -29,17 +29,15 @@ const Translate = () => {
   const [genres, setGenres] = useState();
   const [questions, setQuestions] = useState();
   const [query, setQuery] = useState('');
-  const [search, setSearch] = useState('');
   const [searchField, setSearchField] = useState('');
   const [selectedGenre, setSelectedGenre] = useState('');
   const [selectedSubgenre, setSelectedSubgenre] = useState('');
-  const [genre, setGenre] = useState();
   const [page, setPage] = useState();
   const [historyParams, setHistoryParams] = useState({
     search: '',
     searchField: '',
     genre: undefined,
-    page: 1,
+    page: undefined,
   });
 
   useEffect(() => {
@@ -72,19 +70,15 @@ const Translate = () => {
         } else {
           setSelectedGenre(paramGenre.id.toString());
         }
-        setGenre(params.get('genre'));
         setHistoryParams((prev) => ({ ...prev, genre: params.get('genre') }));
       } else {
         setSelectedGenre('');
         setSelectedSubgenre('');
-        setGenre();
       }
       if (params.get('search')) {
-        setSearch(params.get('search'));
         setQuery(params.get('search'));
         setHistoryParams((prev) => ({ ...prev, search: params.get('search') }));
       } else {
-        setSearch('');
         setQuery('');
       }
       if (params.get('search_field')) {
@@ -106,15 +100,10 @@ const Translate = () => {
   }, [location.search, genres]);
 
   useEffect(() => {
-    console.log(historyParams);
-    if (genres && page) {
+    if (genres && location.search) {
       setQuestions();
       ApiRequest.get(
-        `questions?search=${historyParams.search}&search_field=${
-          historyParams.searchField
-        }${historyParams.genre ? `&genre=${historyParams.genre}` : ''}&page=${
-          historyParams.page
-        }`
+        `questions${location.search}`
       )
         .then(({ data }) => {
           setQuestions(data);
@@ -123,14 +112,14 @@ const Translate = () => {
           setError(response?.status);
         });
     }
-  }, [genres, historyParams]);
+  }, [genres, location.search]);
 
   useEffect(() => {
     history.push(
       `/admin/questions?search=${historyParams.search || ''}&search_field=${
         historyParams.searchField || ''
-      }${historyParams.genre ? `&genre=${historyParams.genre}` : ''}&page=${
-        historyParams.page
+      }${historyParams.genre ? `&genre=${historyParams.genre}` : ''}${
+        historyParams.page ? `&page=${historyParams.page}` : ''
       }`
     );
   }, [history, historyParams]);
