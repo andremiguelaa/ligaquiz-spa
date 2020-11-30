@@ -1,0 +1,38 @@
+@import 'bulma/sass/utilities/initial-variables.sass';
+@import 'bulma/sass/utilities/derived-variables.scss';
+@import 'bulma/sass/utilities/mixins.sass';
+
+.questions {
+  .form {
+    margin-bottom: 2rem;
+  }
+  .fields {
+    flex-direction: column;
+    @include widescreen {
+      flex-direction: row;
+    }
+    .control {
+      &:last-child{
+        margin-top: 1rem;
+        @include widescreen {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+  .label {
+    line-height: 2.5rem;
+    padding-right: 1rem;
+    margin-bottom: 0;
+    
+  }
+  .question {
+    min-width: 600px;
+  }
+  .answer {
+    width: 200px;
+  }
+  .quiz {
+    min-width: 200px;
+  }
+}

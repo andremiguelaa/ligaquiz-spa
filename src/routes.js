@@ -37,7 +37,7 @@ import SpecialQuizForm from 'views/admin/specialQuizzes/SpecialQuizForm';
 import SpecialQuizCorrect from 'views/admin/specialQuizzes/SpecialQuizCorrect';
 import SeasonsAdmin from 'views/admin/seasons/Seasons';
 import SeasonForm from 'views/admin/seasons/SeasonForm';
-import Search from 'views/admin/search/Search';
+import Questions from 'views/admin/questions/Questions';
 
 import NoMatch from 'components/NoMatch';
 
@@ -247,8 +247,8 @@ export default [
   },
   {
     title: <Trans>Pesquisa de perguntas</Trans>,
-    path: '/admin/search/:string?/:page?',
-    component: Search,
+    path: '/admin/questions',
+    component: Questions,
   },
   {
     title: <Trans>Página não encontrada</Trans>,

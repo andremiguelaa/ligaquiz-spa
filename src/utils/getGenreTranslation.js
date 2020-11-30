@@ -21,6 +21,7 @@ export const getGenreTranslationAbbr = (slug, language) => {
 export const getGenreTranslation = (slug, language) => {
   i18n.activate(language);
   return {
+    all: i18n._('Todos'),
     culture: i18n._('Cultura'),
     entertainment: i18n._('Entretenimento'),
     history: i18n._('História'),

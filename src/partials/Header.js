@@ -178,7 +178,8 @@ const Header = () => {
                       {(user.valid_roles.admin ||
                         user.valid_roles.quiz_editor ||
                         user.valid_roles.special_quiz_editor ||
-                        user.valid_roles.answer_reviewer) && (
+                        user.valid_roles.answer_reviewer ||
+                        user.valid_roles.translator) && (
                         <>
                           <div className="navbar-item">
                             <Trans>Gestão de Quizzes</Trans>
@@ -203,8 +204,9 @@ const Header = () => {
                             </Link>
                           )}
                           {(user.valid_roles.admin ||
-                            user.valid_roles.quiz_editor) && (
-                            <Link to="/admin/search" className="navbar-item">
+                            user.valid_roles.quiz_editor ||
+                            user.valid_roles.translator) && (
+                            <Link to="/admin/questions" className="navbar-item">
                               <i className="fa fa-btn fa-search" />
                               &nbsp;<Trans>Pesquisa de perguntas</Trans>
                             </Link>

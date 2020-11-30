@@ -12,10 +12,11 @@ const PaginatedTable = ({
   columns,
   itemsPerPage = 10,
   initialPage = 1,
+  totalRows,
   onChange = () => {},
   onError = () => {},
 }) => {
-  const numberOfPages = Math.ceil(array.length / itemsPerPage);
+  const numberOfPages = Math.ceil((totalRows || array.length) / itemsPerPage);
 
   const [page, setPage] = useState();
 
@@ -34,6 +35,10 @@ const PaginatedTable = ({
     }
   }, [initialPage, numberOfPages, onError]);
 
+  const rows = totalRows
+    ? array
+    : array.slice((page - 1) * itemsPerPage, page * itemsPerPage);
+
   return (
     <>
       <div className="table-container">
@@ -51,20 +56,18 @@ const PaginatedTable = ({
           )}
 
           <tbody>
-            {array
-              .slice((page - 1) * itemsPerPage, page * itemsPerPage)
-              .map((item) => (
-                <tr
-                  key={item[key]}
-                  className={rowClassName && rowClassName(item)}
-                >
-                  {columns.map((column) => (
-                    <td key={column.id} className={column.className}>
-                      {column.render(item)}
-                    </td>
-                  ))}
-                </tr>
-              ))}
+            {rows.map((item) => (
+              <tr
+                key={item[key]}
+                className={rowClassName && rowClassName(item)}
+              >
+                {columns.map((column) => (
+                  <td key={column.id} className={column.className}>
+                    {column.render(item)}
+                  </td>
+                ))}
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
@@ -86,7 +89,7 @@ const PaginatedTable = ({
           </button>
           <button
             className="pagination-next"
-            disabled={page === Math.ceil(array.length / itemsPerPage)}
+            disabled={page === numberOfPages}
             type="button"
             onClick={() => {
               changePage(page + 1);

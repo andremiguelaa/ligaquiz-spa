@@ -1,0 +1,102 @@
+{
+  "Pesquisa de perguntas": {
+    "origin": [
+      [
+        "src/views/admin/questions/Questions.js",
+        142
+      ]
+    ]
+  },
+  "Texto": {
+    "origin": [
+      [
+        "src/views/admin/questions/Questions.js",
+        157
+      ]
+    ]
+  },
+  "Tema": {
+    "origin": [
+      [
+        "src/views/admin/questions/Questions.js",
+        168
+      ]
+    ]
+  },
+  "Subtema": {
+    "origin": [
+      [
+        "src/views/admin/questions/Questions.js",
+        196
+      ]
+    ]
+  },
+  "Pesquisar": {
+    "origin": [
+      [
+        "src/views/admin/questions/Questions.js",
+        225
+      ]
+    ]
+  },
+  "Enunciado": {
+    "origin": [
+      [
+        "src/views/admin/questions/Questions.js",
+        239
+      ]
+    ]
+  },
+  "Resposta": {
+    "origin": [
+      [
+        "src/views/admin/questions/Questions.js",
+        249
+      ]
+    ]
+  },
+  "Quiz": {
+    "origin": [
+      [
+        "src/views/admin/questions/Questions.js",
+        255
+      ],
+      [
+        "src/views/admin/questions/Questions.js",
+        260
+      ]
+    ]
+  },
+  "Quiz especial": {
+    "origin": [
+      [
+        "src/views/admin/questions/Questions.js",
+        264
+      ]
+    ]
+  },
+  "Traduzida": {
+    "origin": [
+      [
+        "src/views/admin/questions/Questions.js",
+        273
+      ]
+    ]
+  },
+  "Usada": {
+    "origin": [
+      [
+        "src/views/admin/questions/Questions.js",
+        279
+      ]
+    ]
+  },
+  "Sem registos": {
+    "origin": [
+      [
+        "src/views/admin/questions/Questions.js",
+        298
+      ]
+    ]
+  }
+}
