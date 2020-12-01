@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { Link, useLocation } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 import classnames from 'classnames';
+import useDeepCompareEffect from 'use-deep-compare-effect';
 
 import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
@@ -112,7 +113,7 @@ const Translate = () => {
     }
   }, [genres, location.search]);
 
-  useEffect(() => {
+  useDeepCompareEffect(() => {
     history.push(
       `/admin/questions?search=${historyParams.search || ''}&search_field=${
         historyParams.searchField || ''
@@ -160,7 +161,7 @@ const Translate = () => {
               search: query,
               searchField: searchField,
               genre: selectedSubgenre || selectedGenre,
-              page: 1,
+              page: '1',
             }));
           }}
           className={classes.form}
@@ -196,7 +197,7 @@ const Translate = () => {
                   checked={searchField === 'content'}
                   onChange={(event) => setSearchField(event.target.value)}
                 />
-                <Trans>Pergunta</Trans>
+                <Trans>Enunciado</Trans>
               </label>
               <label className="radio">
                 <input
