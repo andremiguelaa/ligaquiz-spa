@@ -170,7 +170,9 @@ const EditPermissionsModal = ({
                 </label>
                 <div className="control has-icons-left">
                   <DatePicker
-                    disabled={!Boolean(userToEdit.newRoles?.special_quiz_player)}
+                    disabled={
+                      !Boolean(userToEdit.newRoles?.special_quiz_player)
+                    }
                     selected={
                       userToEdit.newRoles?.special_quiz_player
                         ? new Date(userToEdit.newRoles?.special_quiz_player)
@@ -287,6 +289,29 @@ const EditPermissionsModal = ({
               />
               <label htmlFor="answer-reviewer">
                 <Trans>Corrector</Trans>
+              </label>
+            </div>
+          </fieldset>
+          <fieldset className="fieldset">
+            <div className="field">
+              <input
+                id="translator"
+                type="checkbox"
+                className="switch"
+                value="true"
+                onClick={(event) => {
+                  setUserToEdit({
+                    ...userToEdit,
+                    newRoles: {
+                      ...userToEdit.newRoles,
+                      translator: event.target.checked,
+                    },
+                  });
+                }}
+                defaultChecked={Boolean(userToEdit.newRoles?.translator)}
+              />
+              <label htmlFor="translator">
+                <Trans>Tradutor</Trans>
               </label>
             </div>
           </fieldset>
