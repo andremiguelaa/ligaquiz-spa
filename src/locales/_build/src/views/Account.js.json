@@ -39,27 +39,11 @@
       ]
     ]
   },
-  "E-Mail": {
-    "origin": [
-      [
-        "src/views/Account.js",
-        156
-      ]
-    ]
-  },
-  "Já existe uma conta com este e-mail.": {
-    "origin": [
-      [
-        "src/views/Account.js",
-        182
-      ]
-    ]
-  },
   "Data de nascimento": {
     "origin": [
       [
         "src/views/Account.js",
-        189
+        157
       ]
     ]
   },
@@ -67,7 +51,23 @@
     "origin": [
       [
         "src/views/Account.js",
-        261
+        229
+      ]
+    ]
+  },
+  "E-Mail": {
+    "origin": [
+      [
+        "src/views/Account.js",
+        258
+      ]
+    ]
+  },
+  "Já existe uma conta com este e-mail.": {
+    "origin": [
+      [
+        "src/views/Account.js",
+        284
       ]
     ]
   },

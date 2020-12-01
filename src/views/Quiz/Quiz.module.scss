@@ -37,9 +37,7 @@
   .missing {
     line-height: 0.9em;
     display: block;
-    & + .missing{
-      margin-top: 0.5em;
-    }
+    margin-top: 0.5em;
   }
   .genresTable {
     .total {

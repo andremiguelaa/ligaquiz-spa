@@ -63,11 +63,27 @@
       ]
     ]
   },
+  "Preenche a tua data de nascimento para veres a idade do teu adversário": {
+    "origin": [
+      [
+        "src/views/Quiz/QuizForm.js",
+        430
+      ]
+    ]
+  },
+  "Preenche a tua região para veres a região do teu adversário": {
+    "origin": [
+      [
+        "src/views/Quiz/QuizForm.js",
+        441
+      ]
+    ]
+  },
   "Tema": {
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        436
+        458
       ]
     ]
   },
@@ -75,11 +91,11 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        444
+        466
       ],
       [
         "src/views/Quiz/QuizForm.js",
-        505
+        527
       ]
     ]
   },
@@ -87,11 +103,11 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        447
+        469
       ],
       [
         "src/views/Quiz/QuizForm.js",
-        508
+        530
       ]
     ]
   },
@@ -99,11 +115,11 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        458
+        480
       ],
       [
         "src/views/Quiz/QuizForm.js",
-        519
+        541
       ]
     ]
   },
@@ -111,7 +127,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        497
+        519
       ]
     ]
   },
@@ -119,7 +135,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        559
+        581
       ]
     ]
   },
@@ -127,7 +143,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        561
+        583
       ]
     ]
   },
@@ -135,7 +151,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        573
+        595
       ]
     ]
   },
@@ -143,7 +159,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        579
+        601
       ]
     ]
   },
@@ -151,7 +167,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        581
+        603
       ]
     ]
   },
@@ -159,7 +175,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        586
+        608
       ]
     ]
   }

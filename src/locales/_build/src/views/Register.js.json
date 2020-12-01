@@ -23,27 +23,23 @@
       ]
     ]
   },
-  "E-Mail": {
-    "origin": [
-      [
-        "src/views/Register.js",
-        143
-      ]
-    ]
-  },
-  "Já existe uma conta com este e-mail.": {
-    "origin": [
-      [
-        "src/views/Register.js",
-        168
-      ]
-    ]
-  },
   "Data de nascimento": {
     "origin": [
       [
         "src/views/Register.js",
-        175
+        144
+      ]
+    ]
+  },
+  "Opcional": {
+    "origin": [
+      [
+        "src/views/Register.js",
+        144
+      ],
+      [
+        "src/views/Register.js",
+        216
       ]
     ]
   },
@@ -51,7 +47,23 @@
     "origin": [
       [
         "src/views/Register.js",
-        247
+        216
+      ]
+    ]
+  },
+  "E-Mail": {
+    "origin": [
+      [
+        "src/views/Register.js",
+        244
+      ]
+    ]
+  },
+  "Já existe uma conta com este e-mail.": {
+    "origin": [
+      [
+        "src/views/Register.js",
+        269
       ]
     ]
   },
