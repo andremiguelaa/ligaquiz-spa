@@ -152,38 +152,6 @@ const Account = () => {
                 </div>
               </div>
               <div className="field">
-                <label className="label">
-                  <Trans>E-Mail</Trans>
-                </label>
-                <div className="control has-icons-left">
-                  <input
-                    type="email"
-                    required
-                    className={classames('input', {
-                      'is-danger': error && error.data && error.data.email,
-                    })}
-                    defaultValue={user.email}
-                    onChange={(event) => {
-                      setFormData({
-                        ...formData,
-                        email: event.target.value,
-                      });
-                    }}
-                  />
-                  <span className="icon is-small is-left">
-                    <i className="fa fa-envelope" />
-                  </span>
-                </div>
-                {error &&
-                  error.data &&
-                  error.data.email &&
-                  error.data.email.includes('validation.unique') && (
-                    <p className="help is-danger">
-                      <Trans>Já existe uma conta com este e-mail.</Trans>
-                    </p>
-                  )}
-              </div>
-              <div className="field">
                 <div className="control">
                   <label className="label">
                     <Trans>Data de nascimento</Trans>
@@ -284,6 +252,38 @@ const Account = () => {
                     <i className="fa fa-globe"></i>
                   </div>
                 </div>
+              </div>
+              <div className="field">
+                <label className="label">
+                  <Trans>E-Mail</Trans>
+                </label>
+                <div className="control has-icons-left">
+                  <input
+                    type="email"
+                    required
+                    className={classames('input', {
+                      'is-danger': error && error.data && error.data.email,
+                    })}
+                    defaultValue={user.email}
+                    onChange={(event) => {
+                      setFormData({
+                        ...formData,
+                        email: event.target.value,
+                      });
+                    }}
+                  />
+                  <span className="icon is-small is-left">
+                    <i className="fa fa-envelope" />
+                  </span>
+                </div>
+                {error &&
+                  error.data &&
+                  error.data.email &&
+                  error.data.email.includes('validation.unique') && (
+                    <p className="help is-danger">
+                      <Trans>Já existe uma conta com este e-mail.</Trans>
+                    </p>
+                  )}
               </div>
               <div className="field">
                 <label className="label">

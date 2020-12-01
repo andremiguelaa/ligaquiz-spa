@@ -404,7 +404,7 @@ const QuizForm = ({ data, userAnswers }) => {
                       </h2>
                       <p className={classes.opponentName}>
                         {opponent.name} {opponent.surname}
-                        {opponent.birthday && (
+                        {opponent.birthday && opponent.birthday !== 'hidden' && (
                           <>
                             {' '}
                             <Trans>
@@ -416,11 +416,33 @@ const QuizForm = ({ data, userAnswers }) => {
                             </Trans>
                           </>
                         )}
-                        {opponent.region && (
+                        {opponent.region && opponent.region !== 'hidden' && (
                           <>
                             <br />
                             {getRegionsTranslations(opponent.region, <></>)}
                           </>
+                        )}
+                        {opponent.birthday === 'hidden' && (
+                          <small className={classes.missing}>
+                            <span class="icon has-text-warning">
+                              <i class="fa fa-exclamation-triangle"></i>
+                            </span>
+                            <Trans>
+                              Preenche a tua data de nascimento para veres a
+                              idade do teu adversário
+                            </Trans>
+                          </small>
+                        )}
+                        {opponent.region === 'hidden' && (
+                          <small className={classes.missing}>
+                            <span class="icon has-text-warning">
+                              <i class="fa fa-exclamation-triangle"></i>
+                            </span>
+                            <Trans>
+                              Preenche a tua região para veres a região do teu
+                              adversário
+                            </Trans>
+                          </small>
                         )}
                       </p>
                       <div className="table-container">
