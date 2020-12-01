@@ -20,6 +20,9 @@
 
 .answersTable {
   margin-top: 2rem;
+  td {
+    word-break: break-word;
+  }
   .statusCell {
     width: 100px;
   }

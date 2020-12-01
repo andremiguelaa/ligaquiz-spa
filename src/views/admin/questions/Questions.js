@@ -102,9 +102,7 @@ const Translate = () => {
   useEffect(() => {
     if (genres && location.search) {
       setQuestions();
-      ApiRequest.get(
-        `questions${location.search}`
-      )
+      ApiRequest.get(`questions${location.search}`)
         .then(({ data }) => {
           setQuestions(data);
         })
@@ -320,14 +318,38 @@ const Translate = () => {
               (user.valid_roles.admin || user.valid_roles.translator) && {
                 id: 'translated',
                 label: <Trans>Traduzida</Trans>,
-                render: (item) => <>{item.translated}</>,
+                render: (item) => (
+                  <>
+                    {item.translated ? (
+                      <span className="icon has-text-success">
+                        <i className="fa fa-check-circle"></i>
+                      </span>
+                    ) : (
+                      <span className="icon has-text-danger">
+                        <i className="fa fa-times-circle"></i>
+                      </span>
+                    )}
+                  </>
+                ),
                 className: classes.translated,
               },
               user.valid_roles.admin && {
                 id: 'used',
                 label: <Trans>Usada</Trans>,
-                render: (item) => <>{item.used}</>,
                 className: classes.used,
+                render: (item) => (
+                  <>
+                    {item.used ? (
+                      <span className="icon has-text-success">
+                        <i className="fa fa-check-circle"></i>
+                      </span>
+                    ) : (
+                      <span className="icon has-text-danger">
+                        <i className="fa fa-times-circle"></i>
+                      </span>
+                    )}
+                  </>
+                ),
               },
             ].filter(Boolean)}
             onChange={(newPage) => {
