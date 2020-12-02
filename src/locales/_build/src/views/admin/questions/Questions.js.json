@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/admin/questions/Questions.js",
-        153
+        154
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/views/admin/questions/Questions.js",
-        170
+        171
       ]
     ]
   },
@@ -19,51 +19,7 @@
     "origin": [
       [
         "src/views/admin/questions/Questions.js",
-        189
-      ]
-    ]
-  },
-  "Pergunta": {
-    "origin": [
-      [
-        "src/views/admin/questions/Questions.js",
-        199
-      ]
-    ]
-  },
-  "Resposta": {
-    "origin": [
-      [
-        "src/views/admin/questions/Questions.js",
-        209
-      ],
-      [
-        "src/views/admin/questions/Questions.js",
-        296
-      ]
-    ]
-  },
-  "Tema": {
-    "origin": [
-      [
-        "src/views/admin/questions/Questions.js",
-        215
-      ]
-    ]
-  },
-  "Subtema": {
-    "origin": [
-      [
-        "src/views/admin/questions/Questions.js",
-        243
-      ]
-    ]
-  },
-  "Pesquisar": {
-    "origin": [
-      [
-        "src/views/admin/questions/Questions.js",
-        272
+        190
       ]
     ]
   },
@@ -71,7 +27,47 @@
     "origin": [
       [
         "src/views/admin/questions/Questions.js",
-        286
+        200
+      ],
+      [
+        "src/views/admin/questions/Questions.js",
+        287
+      ]
+    ]
+  },
+  "Resposta": {
+    "origin": [
+      [
+        "src/views/admin/questions/Questions.js",
+        210
+      ],
+      [
+        "src/views/admin/questions/Questions.js",
+        299
+      ]
+    ]
+  },
+  "Tema": {
+    "origin": [
+      [
+        "src/views/admin/questions/Questions.js",
+        216
+      ]
+    ]
+  },
+  "Subtema": {
+    "origin": [
+      [
+        "src/views/admin/questions/Questions.js",
+        244
+      ]
+    ]
+  },
+  "Pesquisar": {
+    "origin": [
+      [
+        "src/views/admin/questions/Questions.js",
+        273
       ]
     ]
   },
@@ -79,11 +75,11 @@
     "origin": [
       [
         "src/views/admin/questions/Questions.js",
-        302
+        305
       ],
       [
         "src/views/admin/questions/Questions.js",
-        307
+        310
       ]
     ]
   },
@@ -91,7 +87,7 @@
     "origin": [
       [
         "src/views/admin/questions/Questions.js",
-        311
+        314
       ]
     ]
   },
@@ -99,7 +95,7 @@
     "origin": [
       [
         "src/views/admin/questions/Questions.js",
-        320
+        323
       ]
     ]
   },
@@ -107,7 +103,15 @@
     "origin": [
       [
         "src/views/admin/questions/Questions.js",
-        338
+        341
+      ]
+    ]
+  },
+  "Acções": {
+    "origin": [
+      [
+        "src/views/admin/questions/Questions.js",
+        359
       ]
     ]
   },
@@ -115,7 +119,7 @@
     "origin": [
       [
         "src/views/admin/questions/Questions.js",
-        368
+        388
       ]
     ]
   }

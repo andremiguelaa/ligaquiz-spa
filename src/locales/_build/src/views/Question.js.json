@@ -1,4 +1,12 @@
 {
+  "Estatísticas de pergunta": {
+    "origin": [
+      [
+        "src/views/Question.js",
+        93
+      ]
+    ]
+  },
   "Resposta correcta": {
     "origin": [
       [
