@@ -38,6 +38,9 @@
   }
   .question {
     min-width: 600px;
+    &.admin {
+      min-width: 550px;
+    }
   }
   .answer {
     width: 200px;
@@ -45,10 +48,12 @@
   .quiz {
     min-width: 200px;
   }
-  .translated{
+  .translated,
+  .used {
     text-align: center;
   }
-  .used{
-    text-align: center;
+  td.translated,
+  td.used {
+    line-height: 35px;
   }
 }

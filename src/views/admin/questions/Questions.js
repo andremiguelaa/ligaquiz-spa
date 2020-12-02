@@ -290,7 +290,9 @@ const Translate = () => {
                     <Markdown content={item.content} />
                   </div>
                 ),
-                className: classes.question,
+                className: `${classes.question} ${
+                  user.valid_roles.admin ? classes.admin : ''
+                }`,
               },
               {
                 id: 'answer',
@@ -319,20 +321,20 @@ const Translate = () => {
               (user.valid_roles.admin || user.valid_roles.translator) && {
                 id: 'translated',
                 label: <Trans>Traduzida</Trans>,
+                className: classes.translated,
                 render: (item) => (
                   <>
                     {item.translated ? (
                       <span className="icon has-text-success">
-                        <i className="fa fa-check-circle"></i>
+                        <i className="fa fa-lg fa-check-circle"></i>
                       </span>
                     ) : (
                       <span className="icon has-text-danger">
-                        <i className="fa fa-times-circle"></i>
+                        <i className="fa fa-lg fa-times-circle"></i>
                       </span>
                     )}
                   </>
                 ),
-                className: classes.translated,
               },
               user.valid_roles.admin && {
                 id: 'used',
@@ -342,15 +344,27 @@ const Translate = () => {
                   <>
                     {item.used ? (
                       <span className="icon has-text-success">
-                        <i className="fa fa-check-circle"></i>
+                        <i className="fa fa-lg fa-check-circle"></i>
                       </span>
                     ) : (
                       <span className="icon has-text-danger">
-                        <i className="fa fa-times-circle"></i>
+                        <i className="fa fa-lg fa-times-circle"></i>
                       </span>
                     )}
                   </>
                 ),
+              },
+              (user.valid_roles.admin || user.valid_roles.translator) && {
+                id: 'translated',
+                label: <Trans>Acções</Trans>,
+                render: (item) => (
+                  <Link className="button" to={`/admin/translate/${item.id}`}>
+                    <span className="icon">
+                      <i className="fa fa-language"></i>
+                    </span>
+                  </Link>
+                ),
+                className: classes.translated,
               },
             ].filter(Boolean)}
             onChange={(newPage) => {

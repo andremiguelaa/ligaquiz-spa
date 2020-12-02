@@ -90,7 +90,7 @@ const Question = () => {
 
   return (
     <>
-      <PageHeader title="Estatísticas de pergunta" />
+      <PageHeader title={<Trans>Estatísticas de pergunta</Trans>} />
       <section className="section content">
         <div className={classes.question}>
           <div>

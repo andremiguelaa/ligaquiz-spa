@@ -38,6 +38,7 @@ import SpecialQuizCorrect from 'views/admin/specialQuizzes/SpecialQuizCorrect';
 import SeasonsAdmin from 'views/admin/seasons/Seasons';
 import SeasonForm from 'views/admin/seasons/SeasonForm';
 import Questions from 'views/admin/questions/Questions';
+import Translate from 'views/admin/translate/Translate';
 
 import NoMatch from 'components/NoMatch';
 
@@ -249,6 +250,11 @@ export default [
     title: <Trans>Pesquisa de perguntas</Trans>,
     path: '/admin/questions',
     component: Questions,
+  },
+  {
+    title: <Trans>Pergunta | Traduzir</Trans>,
+    path: '/admin/translate/:id',
+    component: Translate,
   },
   {
     title: <Trans>Página não encontrada</Trans>,
