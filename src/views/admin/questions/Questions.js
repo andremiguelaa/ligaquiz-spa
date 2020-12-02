@@ -357,13 +357,18 @@ const Translate = () => {
               (user.valid_roles.admin || user.valid_roles.translator) && {
                 id: 'translated',
                 label: <Trans>Acções</Trans>,
-                render: (item) => (
-                  <Link className="button" to={`/admin/translate/${item.id}`}>
-                    <span className="icon">
-                      <i className="fa fa-language"></i>
-                    </span>
-                  </Link>
-                ),
+                render: (item) =>
+                  !(
+                    user.valid_roles.translator && item.translator !== user.id
+                  ) || !item.translated ? (
+                    <Link className="button" to={`/admin/translate/${item.id}`}>
+                      <span className="icon">
+                        <i className="fa fa-language"></i>
+                      </span>
+                    </Link>
+                  ) : (
+                    ''
+                  ),
                 className: classes.translated,
               },
             ].filter(Boolean)}
