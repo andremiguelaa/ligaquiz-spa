@@ -11,10 +11,6 @@ import Error from 'components/Error';
 
 const Login = ({ refresh }) => {
   const history = useHistory();
-  const [formData, setFormData] = useState({
-    email: '',
-    password: '',
-  });
 
   const [errorMessage, setErrorMessage] = useState(null);
   const [submitting, setSubmitting] = useState(false);
@@ -32,7 +28,7 @@ const Login = ({ refresh }) => {
     event.preventDefault();
     setSubmitting(true);
     setErrorMessage(null);
-    ApiRequest.post('session', formData)
+    ApiRequest.post('session', new FormData(event.target))
       .then(({ data }) => {
         if (refresh) {
           setLoginData(data);
@@ -58,23 +54,18 @@ const Login = ({ refresh }) => {
       <div className="section content">
         <div className="columns">
           <div className="column is-4-widescreen is-6-tablet">
-            <form onSubmit={handleSubmit}>
+            <form
+              onSubmit={(event) => {
+                event.persist();
+                handleSubmit(event);
+              }}
+            >
               <div className="field">
                 <label className="label">
                   <Trans>E-Mail</Trans>
                 </label>
                 <div className="control has-icons-left">
-                  <input
-                    className="input"
-                    type="email"
-                    required
-                    onChange={(event) => {
-                      setFormData({
-                        ...formData,
-                        email: event.target.value,
-                      });
-                    }}
-                  />
+                  <input className="input" type="email" name="email" required />
                   <span className="icon is-small is-left">
                     <i className="fa fa-envelope" />
                   </span>
@@ -90,12 +81,6 @@ const Login = ({ refresh }) => {
                     type="password"
                     name="password"
                     required
-                    onChange={(event) => {
-                      setFormData({
-                        ...formData,
-                        password: event.target.value,
-                      });
-                    }}
                   />
                   <span className="icon is-small is-left">
                     <i className="fa fa-key" />
