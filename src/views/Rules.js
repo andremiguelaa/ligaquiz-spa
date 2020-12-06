@@ -185,15 +185,14 @@ const Rules = () => {
               promovido mais um jogador da divisão abaixo.
             </li>
             <li>
-              A divisão Carolina Beatriz Ângelo é de acesso exclusivo a
-              jogadores com ranking nacional, ou seja, que tenham um jogo ao
-              vivo a contar para o ranking nos últimos 12 meses. Serão feitos os
-              ajustes necessários às subidas/descidas para que isso se
-              verifique.
+              A primeira divisão é de acesso exclusivo a jogadores com ranking
+              nacional, ou seja, que tenham um jogo ao vivo a contar para o
+              ranking nos últimos 12 meses. Serão feitos os ajustes necessários
+              às subidas/descidas para que isso se verifique.
             </li>
             <li>
-              O primeiro classificado da divisão Carolina Beatriz Ângelo no
-              final dos 20 jogos é declarado o campeão mensal da Liga Quiz.
+              O primeiro classificado da primeira divisão no final dos 20 jogos
+              é declarado o campeão mensal da Liga Quiz.
             </li>
             <li>
               <span>

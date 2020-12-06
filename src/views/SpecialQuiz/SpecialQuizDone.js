@@ -89,14 +89,15 @@ const SpecialQuizDone = ({ data, userAnswers, setError }) => {
                               {getAcronym(users[player.user_id].surname)}
                             </abbr>
                           </Link>
-                          {users[player.user_id].national_rank && (
-                            <Link
-                              to="/national-ranking"
-                              className={classes.nationalRank}
-                            >
-                              {users[player.user_id].national_rank}
-                            </Link>
-                          )}
+                          {process.env.REACT_APP_NATIONAL_RANKING === 'true' &&
+                            users[player.user_id].national_rank && (
+                              <Link
+                                to="/national-ranking"
+                                className={classes.nationalRank}
+                              >
+                                {users[player.user_id].national_rank}
+                              </Link>
+                            )}
                         </td>
                         {data.quiz.questions.map((question) => (
                           <td

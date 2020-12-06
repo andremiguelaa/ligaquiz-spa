@@ -13,7 +13,7 @@ import logo from 'img/logo.png';
 import logoDark from 'img/logo-dark.png';
 import classes from './Header.module.scss';
 
-const version = '4.8.2';
+const version = '4.9.0';
 
 const isDarkMode =
   window.matchMedia &&
@@ -93,10 +93,12 @@ const Header = () => {
                     &nbsp;<Trans>As minhas estatísticas</Trans>
                   </Link>
                 )}
-                <Link to="/national-ranking/" className="navbar-item">
-                  <i className="fa fa-btn fa-trophy" />
-                  &nbsp;<Trans>Ranking Nacional</Trans>
-                </Link>
+                {process.env.REACT_APP_NATIONAL_RANKING === 'true' && (
+                  <Link to="/national-ranking/" className="navbar-item">
+                    <i className="fa fa-btn fa-trophy" />
+                    &nbsp;<Trans>Ranking Nacional</Trans>
+                  </Link>
+                )}
               </div>
 
               <div className="navbar-end">
@@ -214,36 +216,37 @@ const Header = () => {
                           <hr className="navbar-divider" />
                         </>
                       )}
-                      {(user.valid_roles.admin ||
-                        user.valid_roles.national_ranking_manager) && (
-                        <>
-                          <div className="navbar-item">
-                            <Trans>Gestão de Ranking Nacional</Trans>
-                          </div>
-                          <Link
-                            to="/admin/national-ranking/ranking"
-                            className="navbar-item"
-                          >
-                            <i className="fa fa-btn fa-trophy" />
-                            &nbsp;<Trans>Rankings mensais</Trans>
-                          </Link>
-                          <Link
-                            to="/admin/national-ranking/events"
-                            className="navbar-item"
-                          >
-                            <i className="fa fa-btn fa-calendar" />
-                            &nbsp;<Trans>Provas mensais</Trans>
-                          </Link>
-                          <Link
-                            to="/admin/national-ranking/players"
-                            className="navbar-item"
-                          >
-                            <i className="fa fa-btn fa-users" />
-                            &nbsp;<Trans>Jogadores</Trans>
-                          </Link>
-                          <hr className="navbar-divider" />
-                        </>
-                      )}
+                      {process.env.REACT_APP_NATIONAL_RANKING === 'true' &&
+                        (user.valid_roles.admin ||
+                          user.valid_roles.national_ranking_manager) && (
+                          <>
+                            <div className="navbar-item">
+                              <Trans>Gestão de Ranking Nacional</Trans>
+                            </div>
+                            <Link
+                              to="/admin/national-ranking/ranking"
+                              className="navbar-item"
+                            >
+                              <i className="fa fa-btn fa-trophy" />
+                              &nbsp;<Trans>Rankings mensais</Trans>
+                            </Link>
+                            <Link
+                              to="/admin/national-ranking/events"
+                              className="navbar-item"
+                            >
+                              <i className="fa fa-btn fa-calendar" />
+                              &nbsp;<Trans>Provas mensais</Trans>
+                            </Link>
+                            <Link
+                              to="/admin/national-ranking/players"
+                              className="navbar-item"
+                            >
+                              <i className="fa fa-btn fa-users" />
+                              &nbsp;<Trans>Jogadores</Trans>
+                            </Link>
+                            <hr className="navbar-divider" />
+                          </>
+                        )}
                       <Link to="/account/" className="navbar-item">
                         <i className="fa fa-btn fa-user" />
                         &nbsp;<Trans>Conta</Trans>

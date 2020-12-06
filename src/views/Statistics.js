@@ -67,7 +67,11 @@ const Statistics = () => {
   }, [userId, authUser]);
 
   useEffect(() => {
-    if (user && user.individual_quiz_player_id) {
+    if (
+      process.env.REACT_APP_NATIONAL_RANKING === 'true' &&
+      user &&
+      user.individual_quiz_player_id
+    ) {
       ApiRequest.get(
         `individual-quizzes?results&individual_quiz_player_id[]=${user.individual_quiz_player_id}`
       ).then(({ data }) => {
@@ -172,20 +176,23 @@ const Statistics = () => {
               <a href={`mailto:${user.email}`}>{user.email}</a>
             </div>
           )}
-          {user.national_rank && (
-            <div>
-              <Trans>
-                Número {user.national_rank} no{' '}
-                <Link to="/national-ranking">Ranking Nacional</Link>
-              </Trans>
-            </div>
-          )}
+          {process.env.REACT_APP_NATIONAL_RANKING === 'true' &&
+            user.national_rank && (
+              <div>
+                <Trans>
+                  Número {user.national_rank} no{' '}
+                  <Link to="/national-ranking">Ranking Nacional</Link>
+                </Trans>
+              </div>
+            )}
         </div>
       </section>
       <section className="section content">
-        <h1 className="has-text-weight-bold is-size-4">
-          <Trans>Liga Quiz</Trans>
-        </h1>
+        {process.env.REACT_APP_NATIONAL_RANKING === 'true' && (
+          <h1 className="has-text-weight-bold is-size-4">
+            <Trans>Liga Quiz</Trans>
+          </h1>
+        )}
         <div className={classes.chart}>
           <Radar
             data={{

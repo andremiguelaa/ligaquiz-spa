@@ -39,7 +39,7 @@ const Player = ({ player, index, tierNumber, users }) => (
           {getAcronym(users[player.id].surname)}
         </abbr>
       </Link>
-      {users[player.id].national_rank && (
+      {process.env.REACT_APP_NATIONAL_RANKING === 'true' && users[player.id].national_rank && (
         <Link to="/national-ranking" className={classes.nationalRank}>
           {users[player.id].national_rank}
         </Link>
