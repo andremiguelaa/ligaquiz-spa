@@ -132,7 +132,7 @@ msgstr "Albânia"
 msgid "Alemanha"
 msgstr "Alemanha"
 
-#: src/views/admin/externalQuestions/ExternalQuestions.js:305
+#: src/views/admin/externalQuestions/ExternalQuestions.js:353
 msgid "Alterar estado"
 msgstr "Alterar estado"
 
@@ -400,7 +400,7 @@ msgstr "Campeonato Nacional de Quiz"
 msgid "Canadá"
 msgstr "Canadá"
 
-#: src/components/Modal.js:48
+#: src/components/Modal.js:50
 msgid "Cancelar"
 msgstr "Cancelar"
 
@@ -773,8 +773,8 @@ msgstr "Entrar"
 msgid "Entretenimento"
 msgstr "Entretenimento"
 
-#: src/views/admin/externalQuestions/ExternalQuestions.js:206
-#: src/views/admin/externalQuestions/ExternalQuestions.js:263
+#: src/views/admin/externalQuestions/ExternalQuestions.js:221
+#: src/views/admin/externalQuestions/ExternalQuestions.js:288
 #: src/views/admin/questions/Questions.js:200
 #: src/views/admin/questions/Questions.js:287
 #: src/views/admin/quizzes/Question.js:90
@@ -1390,6 +1390,8 @@ msgstr "Montenegro"
 msgid "Moçambique"
 msgstr "Moçambique"
 
+#: src/views/admin/externalQuestions/ExternalQuestions.js:306
+#: src/views/admin/externalQuestions/ExternalQuestions.js:416
 #: src/views/admin/quizzes/Question.js:119
 #: src/views/admin/specialQuizzes/Question.js:82
 msgid "Multimédia"
@@ -1549,7 +1551,7 @@ msgstr "Não foi possível actualizar o perfil."
 msgid "Não foi possível actualizar o utilizador."
 msgstr "Não foi possível actualizar o utilizador."
 
-#: src/views/admin/externalQuestions/ExternalQuestions.js:151
+#: src/views/admin/externalQuestions/ExternalQuestions.js:166
 msgid "Não foi possível alterar o estado."
 msgstr "Não foi possível alterar o estado."
 
@@ -1672,7 +1674,7 @@ msgstr "O pedido de redefinição de palavra-passe expirou"
 msgid "O pedido de redefinição de palavra-passe é inválido"
 msgstr "O pedido de redefinição de palavra-passe é inválido"
 
-#: src/components/Modal.js:40
+#: src/components/Modal.js:41
 msgid "OK"
 msgstr "OK"
 
@@ -1689,7 +1691,8 @@ msgstr "Omã"
 msgid "Opcional"
 msgstr "Opcional"
 
-#: src/views/admin/externalQuestions/ExternalQuestions.js:281
+#: src/views/admin/externalQuestions/ExternalQuestions.js:241
+#: src/views/admin/externalQuestions/ExternalQuestions.js:329
 msgid "Origem"
 msgstr "Origem"
 
@@ -1833,11 +1836,11 @@ msgstr "Pesquisa de perguntas"
 
 #: src/partials/Header.js:220
 #: src/routes.js:256
-#: src/views/admin/externalQuestions/ExternalQuestions.js:160
+#: src/views/admin/externalQuestions/ExternalQuestions.js:175
 msgid "Pesquisa de perguntas externas"
 msgstr "Pesquisa de perguntas externas"
 
-#: src/views/admin/externalQuestions/ExternalQuestions.js:249
+#: src/views/admin/externalQuestions/ExternalQuestions.js:274
 #: src/views/admin/questions/Questions.js:273
 msgid "Pesquisar"
 msgstr "Pesquisar"
@@ -2198,8 +2201,8 @@ msgstr "República do Congo"
 
 #: src/views/Quiz/QuizForm.js:214
 #: src/views/SpecialQuiz/SpecialQuizForm.js:113
-#: src/views/admin/externalQuestions/ExternalQuestions.js:216
-#: src/views/admin/externalQuestions/ExternalQuestions.js:275
+#: src/views/admin/externalQuestions/ExternalQuestions.js:231
+#: src/views/admin/externalQuestions/ExternalQuestions.js:300
 #: src/views/admin/questions/Questions.js:210
 #: src/views/admin/questions/Questions.js:299
 #: src/views/admin/quizzes/Question.js:106
@@ -2320,7 +2323,7 @@ msgstr "Selecciona os jogadores que jogaram esta prova:"
 #: src/views/Seasons.js:101
 #: src/views/SpecialQuizzes.js:121
 #: src/views/Statistics.js:428
-#: src/views/admin/externalQuestions/ExternalQuestions.js:360
+#: src/views/admin/externalQuestions/ExternalQuestions.js:408
 #: src/views/admin/nationalRanking/Events/List.js:159
 #: src/views/admin/nationalRanking/Players/List.js:169
 #: src/views/admin/nationalRanking/Rankings.js:161
@@ -2488,7 +2491,7 @@ msgstr "Televisão"
 #: src/views/Quiz/QuizForm.js:458
 #: src/views/SpecialQuizzes.js:75
 #: src/views/Statistics.js:258
-#: src/views/admin/externalQuestions/ExternalQuestions.js:222
+#: src/views/admin/externalQuestions/ExternalQuestions.js:247
 #: src/views/admin/questions/Questions.js:216
 #: src/views/admin/specialQuizzes/SpecialQuizForm.js:188
 msgid "Tema"
@@ -2580,7 +2583,7 @@ msgstr "Tens a certeza que queres submeter o quiz?"
 msgid "Tens pontos por atribuir.<0/>Atribui-os antes de fazer a submissão."
 msgstr "Tens pontos por atribuir.<0/>Atribui-os antes de fazer a submissão."
 
-#: src/views/admin/externalQuestions/ExternalQuestions.js:177
+#: src/views/admin/externalQuestions/ExternalQuestions.js:192
 #: src/views/admin/questions/Questions.js:171
 msgid "Texto"
 msgstr "Texto"
@@ -2656,7 +2659,7 @@ msgstr "Trinidade e Tobago"
 msgid "Trivialidades"
 msgstr "Trivialidades"
 
-#: src/views/admin/externalQuestions/ExternalQuestions.js:196
+#: src/views/admin/externalQuestions/ExternalQuestions.js:211
 #: src/views/admin/questions/Questions.js:190
 msgid "Tudo"
 msgstr "Tudo"
@@ -2693,7 +2696,7 @@ msgstr "Uganda"
 msgid "Uruguai"
 msgstr "Uruguai"
 
-#: src/views/admin/externalQuestions/ExternalQuestions.js:287
+#: src/views/admin/externalQuestions/ExternalQuestions.js:335
 #: src/views/admin/questions/Questions.js:341
 msgid "Usada"
 msgstr "Usada"

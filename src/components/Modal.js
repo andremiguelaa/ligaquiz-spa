@@ -13,6 +13,7 @@ const Modal = ({
   doingAction,
   onClose,
   confirmButtonText,
+  hideCancel,
 }) => (
   <article className={`modal ${open && 'is-active'}`}>
     <div className="modal-background"></div>
@@ -39,14 +40,16 @@ const Modal = ({
           >
             {confirmButtonText ? confirmButtonText : <Trans>OK</Trans>}
           </button>
-          <button
-            type="button"
-            className="button"
-            onClick={onClose}
-            disabled={doingAction}
-          >
-            <Trans>Cancelar</Trans>
-          </button>
+          {!hideCancel && (
+            <button
+              type="button"
+              className="button"
+              onClick={onClose}
+              disabled={doingAction}
+            >
+              <Trans>Cancelar</Trans>
+            </button>
+          )}
         </div>
       </article>
     </div>
@@ -59,6 +62,7 @@ Error.defaultProps = {
   actionDisabled: false,
   doingAction: false,
   onClose: () => {},
+  hideCancel: false,
 };
 
 export default Modal;

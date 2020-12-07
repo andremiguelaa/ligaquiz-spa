@@ -45,13 +45,15 @@
   .answer {
     width: 200px;
   }
-  .origin{
+  .origin {
     width: 200px;
   }
   th.actions,
+  .media,
   .used {
     text-align: center;
   }
+  td.media,
   td.used {
     line-height: 35px;
   }
@@ -60,5 +62,18 @@
   }
   .buttons {
     justify-content: center;
+  }
+}
+
+.mediaContainer {
+  width: 300px;
+  max-width: 100%;
+  margin: 1rem auto;
+  &.image {
+    background-color: $white;
+  }
+  & > * {
+    width: 100%;
+    vertical-align: top;
   }
 }

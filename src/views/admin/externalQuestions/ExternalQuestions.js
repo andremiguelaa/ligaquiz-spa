@@ -8,12 +8,14 @@ import { toast } from 'react-toastify';
 
 import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
+import renderMedia from 'utils/renderMedia';
 import Loading from 'components/Loading';
 import Error from 'components/Error';
 import PageHeader from 'components/PageHeader';
 import EmptyState from 'components/EmptyState';
 import Markdown from 'components/Markdown';
 import PaginatedTable from 'components/PaginatedTable';
+import Modal from 'components/Modal';
 import { getGenreTranslation } from 'utils/getGenreTranslation';
 
 import classes from './ExternalQuestions.module.scss';
@@ -28,6 +30,14 @@ const genres = [
   'science',
   'world',
 ];
+
+const mimeTypes = {
+  png: 'image',
+  jpg: 'image',
+  jpeg: 'image',
+  mp4: 'video',
+  mp3: 'audio',
+};
 
 const ExternalQuestions = () => {
   const history = useHistory();
@@ -52,6 +62,7 @@ const ExternalQuestions = () => {
     page: undefined,
   });
   const [saving, setSaving] = useState();
+  const [modal, setModal] = useState();
 
   useEffect(() => {
     const params = new URLSearchParams(location.search);
@@ -126,6 +137,10 @@ const ExternalQuestions = () => {
   if (!questions) {
     return <Loading />;
   }
+
+  const mimeType = modal
+    ? mimeTypes[/(?:\.([^.]+))?$/.exec(modal.media)[1].toLowerCase()]
+    : null;
 
   const updateItem = (data) => {
     setSaving(true);
@@ -215,6 +230,16 @@ const ExternalQuestions = () => {
                 />
                 <Trans>Resposta</Trans>
               </label>
+              <label className="radio">
+                <input
+                  type="radio"
+                  name="searchBy"
+                  value="origin"
+                  checked={searchField === 'origin'}
+                  onChange={(event) => setSearchField(event.target.value)}
+                />
+                <Trans>Origem</Trans>
+              </label>
             </div>
           </div>
           <div className={classnames('field', 'is-grouped', classes.fields)}>
@@ -275,6 +300,29 @@ const ExternalQuestions = () => {
                 label: <Trans>Resposta</Trans>,
                 render: (item) => <Markdown content={item.answer} />,
                 className: classes.answer,
+              },
+              {
+                id: 'media',
+                label: <Trans>Multimédia</Trans>,
+                render: (item) => (
+                  <>
+                    {item.media && item.media !== '404' ? (
+                      <button
+                        className="button"
+                        onClick={() => {
+                          setModal(item);
+                        }}
+                      >
+                        <span className="icon">
+                          <i className="fa fa-eye"></i>
+                        </span>
+                      </button>
+                    ) : (
+                      '-'
+                    )}
+                  </>
+                ),
+                className: classes.media,
               },
               {
                 id: 'origin',
@@ -361,6 +409,21 @@ const ExternalQuestions = () => {
           </EmptyState>
         )}
       </section>
+      {modal && (
+        <Modal
+          type="info"
+          open
+          title={<Trans>Multimédia</Trans>}
+          body={
+            <div className={classes.mediaContainer}>
+              {renderMedia(mimeType, modal.media, modal.id)}
+            </div>
+          }
+          action={() => setModal()}
+          onClose={() => setModal()}
+          hideCancel
+        />
+      )}
     </>
   );
 };
