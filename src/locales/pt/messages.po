@@ -26,8 +26,8 @@ msgid "<0>Cada pergunta certa num quiz especial vale 20 pontos.</0><1>Em cada qu
 msgstr "<0>Cada pergunta certa num quiz especial vale 20 pontos.</0><1>Em cada quiz especial podes usar até 5 jokers.</1><2>Ao usares um joker numa pergunta, caso acertes, ganhas pontos adicionais consoante a percentagem de pessoas que erraram essa pergunta.</2><3><4>Exemplo:</4> Se acertares uma pergunta onde usaste um joker e 60% dos jogadores falharem ganhas 80 pontos (20+60).</3><5>Caso uses um joker e falhes a pergunta, perdes 20 pontos!</5>"
 
 #: src/views/Rules.js:27
-msgid "<0>Liga Quiz</0><1><2><3>A Liga Quiz é um jogo de cultura geral onde a confiança na honestidade dos jogadores é crucial. É expressamente proibido usar qualquer fonte externa para obter respostas às perguntas. Isto inclui:</3><4><5>Pedir pistas/respostas a outras pessoas</5><6>Usar a Internet, livros ou outro material de consulta para pesquisa de pistas/respostas</6><7>Usar calculadoras, instrumentos musicais ou outros equipamentos para ajudar à resposta</7></4><8>Apenas papel e caneta/lápis são permitidos.</8></2><9>A organização reserva-se ao direito de inibir o acesso à Liga Quiz a qualquer jogador que não cumpra este critério.</9><10>Para receber um convite para entrar na Liga Quiz, todos os novos jogadores deverão ser referidos por um jogador activo na Liga Quiz, que irá atestar da honestidade e integridade do novo membro. A Liga Quiz é uma liga por convite.</10><11>Todos os estreantes na Liga Quiz serão colocados na divisão mais baixa. A preferência de entrada numa divisão é a ordem de entrada na lista de espera.</11><12>Caso um jogador saia da Liga Quiz temporariamente sem aviso e reentre novamente na Liga Quiz será colocado na divisão mais baixa disponível.<13/>Caso um jogador saia da Liga Quiz temporariamente com aviso prévio, por um período máximo de 3 meses, será colocado na mesma divisão em que estava quando saiu; existindo os naturais ajustes de descidas de divisão.<14/>Um jogador perde o privilégio de voltar à mesma divisão, mesmo com aviso prévio, caso esteja mais que três meses de fora no último período de 12 meses.</12><15>As várias divisões da Liga Quiz terão, no máximo, 10 jogadores.</15><16>Cada jogador jogará 20 jogos a partir da primeira segunda-feira de cada mês e nos 19 dias úteis seguintes: duas vezes contra cada um dos outros membros da mesma divisão e duas vezes sem adversário (no 10º dia e no 20º dia).</16><17>Cada jogo terá oito perguntas, cada uma de um tema diferente.</17><18>Os jogadores poderão submeter as respostas a um jogo das 0h até às 24h (hora de Lisboa) do respectivo dia.</18><19>Respostas com erros ortográficos serão aceites desde que não se altere a fonética da resposta e não esteja explícito na pergunta que a correcção ortográfica é obrigatória. Este não é um jogo de ortografia mas sim de cultural geral.</19><20>Quando a resposta é o nome de uma pessoa é aceite como certa se for respondido apenas o apelido ou nome pelo qual é mais conhecido, excepto se na pergunta estiver explícito que é pedido mais isso.<21/>Apesar disso, caso um jogador responda com um apelido certo mas o primeiro nome esteja errado, a resposta será considerada errada.</20><22>Caso um jogador coloque no campo da resposta várias respostas, caso alguma esteja errada, será marcado errado.</22><23>As respostas serão aceites na língua portuguesa, inglesa ou na original (no caso de um livro/filme/etc.) a não ser que esteja indicado o contrário.<24/>Caso a reposta não seja numa destas línguas deverão indicar entre parênteses qual a língua da vossa resposta, caso contrário a resposta poderá ser marcada como errada.</23><25>Além de responder às perguntas, cada jogador deverá atribuir uma pontuação à pergunta (à excepção das jornadas 10 e 20). Essa pontuação corresponderá aos pontos que o adversário ganhará se acertar à pergunta.</25><26><27>Num jogo, um jogador deverá distribuir a pontuação às perguntas da seguinte forma:</27><28><29>1 pergunta a valer 3 pontos</29><30>3 perguntas a valer 2 pontos</30><31>3 perguntas a valer 1 ponto</31><32>1 pergunta a valer 0 pontos</32></28></26><33>O jogador que conseguir mais pontos num jogo é declarado vencedor e ganhará 3 pontos na classificação.</33><34>Em caso de empate ambos os jogadores terão 2 pontos atribuídos na classificação.</34><35>Em caso de derrota, o jogador terá atribuído 1 ponto.</35><36><37>Em caso de um jogador não ter submetido respostas a um jogo não terá atribuído qualquer ponto na classificação e o adversário será declarado vencedor. O vencedor terá atribuído nesse jogo (não na classificação) os seguintes pontos totais:</37><38><39>12 pontos caso acerte 8 perguntas</39><40>10 pontos caso acerte 7 perguntas</40><41>9 pontos caso acerte 6 perguntas</41><42>8 pontos caso acerte 5 perguntas</42><43>6 pontos caso acerte 4 perguntas</43><44>5 pontos caso acerte 3 perguntas</44><45>3 pontos caso acerte 2 perguntas</45><46>2 pontos caso acerte 1 pergunta</46><47>0 pontos caso acerte 0 perguntas</47></38></36><48>No 10º e no 20º dia, os jogos não terão adversário e a pontuação para a classificação é atribuída da seguinte forma: meio ponto por cada resposta correcta e um ponto por participar na ronda, ou seja, um máximo de 5 pontos.</48><49>No final dos 20 jogos os 2 piores classificados serão relegados para a divisão imediatamente inferior (caso exista) e os 2 melhores classificados serão promovidos à divisão imediatamente acima (caso exista).</49><50>Adicionalmente, caso um (ou mais) dos outros oito jogadores tenha mais de 3 faltas ao fim dos 20 jogos, será relegado para a divisão imediatamente inferior (caso exista). Em sua substituição será promovido mais um jogador da divisão abaixo.</50><51>A divisão Carolina Beatriz Ângelo é de acesso exclusivo a jogadores com ranking nacional, ou seja, que tenham um jogo ao vivo a contar para o ranking nos últimos 12 meses. Serão feitos os ajustes necessários às subidas/descidas para que isso se verifique.</51><52>O primeiro classificado da divisão Carolina Beatriz Ângelo no final dos 20 jogos é declarado o campeão mensal da Liga Quiz.</52><53><54>Se houver empates na classificação, os critérios de desempate serão aplicados por esta ordem:</54><55><56>Maior diferencial de pontos obtidos nos jogos de cada dia</56><57>Maior total de pontos obtidos nos jogos de cada dia</57><58>Maior total de vitórias</58><59>Maior total de perguntas respondidas acertadamente</59></55><60>Se após a aplicação dos critérios de desempate persistir o empate, será atribuída a mesma classificação aos dois jogadores.</60></53></1><61>Quizzes Especiais</61><62><63><64>Tal como nos jogos da Liga Quiz é expressamente proibido usar qualquer fonte externa para obter respostas às perguntas. Isto inclui:</64><65><66>Pedir pistas/respostas a outras pessoas</66><67>Usar a Internet, livros ou outro material de consulta para pesquisa de pistas/respostas</67><68>Usar calculadoras, instrumentos musicais ou outros equipamentos para ajudar à resposta</68></65><69>Apenas papel e caneta/lápis são permitidos.</69></63><70>Os quizzes especiais são compostos por 12 perguntas.</70><71>Cada pergunta certa num quiz especial vale 20 pontos.</71><72>Em cada quiz especial podes usar até 5 jokers.</72><73>Ao usares um joker numa pergunta, caso acertes, ganhas pontos adicionais consoante a percentagem de pessoas que erraram essa pergunta.<74/> <75>Exemplo:</75> Se acertares uma pergunta onde usaste um joker e 60% dos jogadores falharem ganhas 80 pontos (20+60).</73><76>Caso uses um joker e falhes a pergunta, perdes 20 pontos!</76></62><77>Subscrição</77><78>Os novos participantes têm um mês de experiência totalmente gratuito.<79/>A partir desse primeiro mês o preço da participação será de acordo com a tabela abaixo:</78><80><81><82><83>Duração</83><84>Preço</84><85>Desconto</85></82></81><86><87><88>1 mês</88><89>3 euros</89><90>-</90></87><91><92>3 meses</92><93>8.5 euros</93><94>6%</94></91><95><96>6 meses</96><97>16 euros</97><98>11%</98></95><99><100>12 meses</100><101>30 euros</101><102>17% (dois meses grátis)</102></99></86></80><103>Os jogadores terão direito a jogar, pelo menos, 20 jogos de 8 perguntas por mês perfazendo um total de 160 perguntas.</103><104>Adicionalmente serão feitos alguns quizzes especiais temáticos de 12 perguntas que não contarão para a classificação da liga havendo apenas uma classificação do respectivo quiz.</104><105>O pagamento das inscrições poderá ser feito das seguintes formas:</105><106><107>Em mão a qualquer elemento da organização:<108>André Ascensão, Sofia Santos ou Paulo Martins</108></107><109>Por transferência bancária para a conta com o seguinte IBAN enviando o comprovativo para <110>andremiguelaa@gmail.com</110>: <111>PT50 0018 000344544914020 29</111></109><112>Por MB WAY usando o seguinte número: <113>916682562</113></112></106><114>O prazo limite de pagamento para uma determinada temporada será o final do dia de sábado antes do início da mesma. Cada temporada mensal começa na primeira segunda-feira de cada mês.</114>"
-msgstr "<0>Liga Quiz</0><1><2><3>A Liga Quiz é um jogo de cultura geral onde a confiança na honestidade dos jogadores é crucial. É expressamente proibido usar qualquer fonte externa para obter respostas às perguntas. Isto inclui:</3><4><5>Pedir pistas/respostas a outras pessoas</5><6>Usar a Internet, livros ou outro material de consulta para pesquisa de pistas/respostas</6><7>Usar calculadoras, instrumentos musicais ou outros equipamentos para ajudar à resposta</7></4><8>Apenas papel e caneta/lápis são permitidos.</8></2><9>A organização reserva-se ao direito de inibir o acesso à Liga Quiz a qualquer jogador que não cumpra este critério.</9><10>Para receber um convite para entrar na Liga Quiz, todos os novos jogadores deverão ser referidos por um jogador activo na Liga Quiz, que irá atestar da honestidade e integridade do novo membro. A Liga Quiz é uma liga por convite.</10><11>Todos os estreantes na Liga Quiz serão colocados na divisão mais baixa. A preferência de entrada numa divisão é a ordem de entrada na lista de espera.</11><12>Caso um jogador saia da Liga Quiz temporariamente sem aviso e reentre novamente na Liga Quiz será colocado na divisão mais baixa disponível.<13/>Caso um jogador saia da Liga Quiz temporariamente com aviso prévio, por um período máximo de 3 meses, será colocado na mesma divisão em que estava quando saiu; existindo os naturais ajustes de descidas de divisão.<14/>Um jogador perde o privilégio de voltar à mesma divisão, mesmo com aviso prévio, caso esteja mais que três meses de fora no último período de 12 meses.</12><15>As várias divisões da Liga Quiz terão, no máximo, 10 jogadores.</15><16>Cada jogador jogará 20 jogos a partir da primeira segunda-feira de cada mês e nos 19 dias úteis seguintes: duas vezes contra cada um dos outros membros da mesma divisão e duas vezes sem adversário (no 10º dia e no 20º dia).</16><17>Cada jogo terá oito perguntas, cada uma de um tema diferente.</17><18>Os jogadores poderão submeter as respostas a um jogo das 0h até às 24h (hora de Lisboa) do respectivo dia.</18><19>Respostas com erros ortográficos serão aceites desde que não se altere a fonética da resposta e não esteja explícito na pergunta que a correcção ortográfica é obrigatória. Este não é um jogo de ortografia mas sim de cultural geral.</19><20>Quando a resposta é o nome de uma pessoa é aceite como certa se for respondido apenas o apelido ou nome pelo qual é mais conhecido, excepto se na pergunta estiver explícito que é pedido mais isso.<21/>Apesar disso, caso um jogador responda com um apelido certo mas o primeiro nome esteja errado, a resposta será considerada errada.</20><22>Caso um jogador coloque no campo da resposta várias respostas, caso alguma esteja errada, será marcado errado.</22><23>As respostas serão aceites na língua portuguesa, inglesa ou na original (no caso de um livro/filme/etc.) a não ser que esteja indicado o contrário.<24/>Caso a reposta não seja numa destas línguas deverão indicar entre parênteses qual a língua da vossa resposta, caso contrário a resposta poderá ser marcada como errada.</23><25>Além de responder às perguntas, cada jogador deverá atribuir uma pontuação à pergunta (à excepção das jornadas 10 e 20). Essa pontuação corresponderá aos pontos que o adversário ganhará se acertar à pergunta.</25><26><27>Num jogo, um jogador deverá distribuir a pontuação às perguntas da seguinte forma:</27><28><29>1 pergunta a valer 3 pontos</29><30>3 perguntas a valer 2 pontos</30><31>3 perguntas a valer 1 ponto</31><32>1 pergunta a valer 0 pontos</32></28></26><33>O jogador que conseguir mais pontos num jogo é declarado vencedor e ganhará 3 pontos na classificação.</33><34>Em caso de empate ambos os jogadores terão 2 pontos atribuídos na classificação.</34><35>Em caso de derrota, o jogador terá atribuído 1 ponto.</35><36><37>Em caso de um jogador não ter submetido respostas a um jogo não terá atribuído qualquer ponto na classificação e o adversário será declarado vencedor. O vencedor terá atribuído nesse jogo (não na classificação) os seguintes pontos totais:</37><38><39>12 pontos caso acerte 8 perguntas</39><40>10 pontos caso acerte 7 perguntas</40><41>9 pontos caso acerte 6 perguntas</41><42>8 pontos caso acerte 5 perguntas</42><43>6 pontos caso acerte 4 perguntas</43><44>5 pontos caso acerte 3 perguntas</44><45>3 pontos caso acerte 2 perguntas</45><46>2 pontos caso acerte 1 pergunta</46><47>0 pontos caso acerte 0 perguntas</47></38></36><48>No 10º e no 20º dia, os jogos não terão adversário e a pontuação para a classificação é atribuída da seguinte forma: meio ponto por cada resposta correcta e um ponto por participar na ronda, ou seja, um máximo de 5 pontos.</48><49>No final dos 20 jogos os 2 piores classificados serão relegados para a divisão imediatamente inferior (caso exista) e os 2 melhores classificados serão promovidos à divisão imediatamente acima (caso exista).</49><50>Adicionalmente, caso um (ou mais) dos outros oito jogadores tenha mais de 3 faltas ao fim dos 20 jogos, será relegado para a divisão imediatamente inferior (caso exista). Em sua substituição será promovido mais um jogador da divisão abaixo.</50><51>A divisão Carolina Beatriz Ângelo é de acesso exclusivo a jogadores com ranking nacional, ou seja, que tenham um jogo ao vivo a contar para o ranking nos últimos 12 meses. Serão feitos os ajustes necessários às subidas/descidas para que isso se verifique.</51><52>O primeiro classificado da divisão Carolina Beatriz Ângelo no final dos 20 jogos é declarado o campeão mensal da Liga Quiz.</52><53><54>Se houver empates na classificação, os critérios de desempate serão aplicados por esta ordem:</54><55><56>Maior diferencial de pontos obtidos nos jogos de cada dia</56><57>Maior total de pontos obtidos nos jogos de cada dia</57><58>Maior total de vitórias</58><59>Maior total de perguntas respondidas acertadamente</59></55><60>Se após a aplicação dos critérios de desempate persistir o empate, será atribuída a mesma classificação aos dois jogadores.</60></53></1><61>Quizzes Especiais</61><62><63><64>Tal como nos jogos da Liga Quiz é expressamente proibido usar qualquer fonte externa para obter respostas às perguntas. Isto inclui:</64><65><66>Pedir pistas/respostas a outras pessoas</66><67>Usar a Internet, livros ou outro material de consulta para pesquisa de pistas/respostas</67><68>Usar calculadoras, instrumentos musicais ou outros equipamentos para ajudar à resposta</68></65><69>Apenas papel e caneta/lápis são permitidos.</69></63><70>Os quizzes especiais são compostos por 12 perguntas.</70><71>Cada pergunta certa num quiz especial vale 20 pontos.</71><72>Em cada quiz especial podes usar até 5 jokers.</72><73>Ao usares um joker numa pergunta, caso acertes, ganhas pontos adicionais consoante a percentagem de pessoas que erraram essa pergunta.<74/> <75>Exemplo:</75> Se acertares uma pergunta onde usaste um joker e 60% dos jogadores falharem ganhas 80 pontos (20+60).</73><76>Caso uses um joker e falhes a pergunta, perdes 20 pontos!</76></62><77>Subscrição</77><78>Os novos participantes têm um mês de experiência totalmente gratuito.<79/>A partir desse primeiro mês o preço da participação será de acordo com a tabela abaixo:</78><80><81><82><83>Duração</83><84>Preço</84><85>Desconto</85></82></81><86><87><88>1 mês</88><89>3 euros</89><90>-</90></87><91><92>3 meses</92><93>8.5 euros</93><94>6%</94></91><95><96>6 meses</96><97>16 euros</97><98>11%</98></95><99><100>12 meses</100><101>30 euros</101><102>17% (dois meses grátis)</102></99></86></80><103>Os jogadores terão direito a jogar, pelo menos, 20 jogos de 8 perguntas por mês perfazendo um total de 160 perguntas.</103><104>Adicionalmente serão feitos alguns quizzes especiais temáticos de 12 perguntas que não contarão para a classificação da liga havendo apenas uma classificação do respectivo quiz.</104><105>O pagamento das inscrições poderá ser feito das seguintes formas:</105><106><107>Em mão a qualquer elemento da organização:<108>André Ascensão, Sofia Santos ou Paulo Martins</108></107><109>Por transferência bancária para a conta com o seguinte IBAN enviando o comprovativo para <110>andremiguelaa@gmail.com</110>: <111>PT50 0018 000344544914020 29</111></109><112>Por MB WAY usando o seguinte número: <113>916682562</113></112></106><114>O prazo limite de pagamento para uma determinada temporada será o final do dia de sábado antes do início da mesma. Cada temporada mensal começa na primeira segunda-feira de cada mês.</114>"
+msgid "<0>Liga Quiz</0><1><2><3>A Liga Quiz é um jogo de cultura geral onde a confiança na honestidade dos jogadores é crucial. É expressamente proibido usar qualquer fonte externa para obter respostas às perguntas. Isto inclui:</3><4><5>Pedir pistas/respostas a outras pessoas</5><6>Usar a Internet, livros ou outro material de consulta para pesquisa de pistas/respostas</6><7>Usar calculadoras, instrumentos musicais ou outros equipamentos para ajudar à resposta</7></4><8>Apenas papel e caneta/lápis são permitidos.</8></2><9>A organização reserva-se ao direito de inibir o acesso à Liga Quiz a qualquer jogador que não cumpra este critério.</9><10>Para receber um convite para entrar na Liga Quiz, todos os novos jogadores deverão ser referidos por um jogador activo na Liga Quiz, que irá atestar da honestidade e integridade do novo membro. A Liga Quiz é uma liga por convite.</10><11>Todos os estreantes na Liga Quiz serão colocados na divisão mais baixa. A preferência de entrada numa divisão é a ordem de entrada na lista de espera.</11><12>Caso um jogador saia da Liga Quiz temporariamente sem aviso e reentre novamente na Liga Quiz será colocado na divisão mais baixa disponível.<13/>Caso um jogador saia da Liga Quiz temporariamente com aviso prévio, por um período máximo de 3 meses, será colocado na mesma divisão em que estava quando saiu; existindo os naturais ajustes de descidas de divisão.<14/>Um jogador perde o privilégio de voltar à mesma divisão, mesmo com aviso prévio, caso esteja mais que três meses de fora no último período de 12 meses.</12><15>As várias divisões da Liga Quiz terão, no máximo, 10 jogadores.</15><16>Cada jogador jogará 20 jogos a partir da primeira segunda-feira de cada mês e nos 19 dias úteis seguintes: duas vezes contra cada um dos outros membros da mesma divisão e duas vezes sem adversário (no 10º dia e no 20º dia).</16><17>Cada jogo terá oito perguntas, cada uma de um tema diferente.</17><18>Os jogadores poderão submeter as respostas a um jogo das 0h até às 24h (hora de Lisboa) do respectivo dia.</18><19>Respostas com erros ortográficos serão aceites desde que não se altere a fonética da resposta e não esteja explícito na pergunta que a correcção ortográfica é obrigatória. Este não é um jogo de ortografia mas sim de cultural geral.</19><20>Quando a resposta é o nome de uma pessoa é aceite como certa se for respondido apenas o apelido ou nome pelo qual é mais conhecido, excepto se na pergunta estiver explícito que é pedido mais isso.<21/>Apesar disso, caso um jogador responda com um apelido certo mas o primeiro nome esteja errado, a resposta será considerada errada.</20><22>Caso um jogador coloque no campo da resposta várias respostas, caso alguma esteja errada, será marcado errado.</22><23>As respostas serão aceites na língua portuguesa, inglesa ou na original (no caso de um livro/filme/etc.) a não ser que esteja indicado o contrário.<24/>Caso a reposta não seja numa destas línguas deverão indicar entre parênteses qual a língua da vossa resposta, caso contrário a resposta poderá ser marcada como errada.</23><25>Além de responder às perguntas, cada jogador deverá atribuir uma pontuação à pergunta (à excepção das jornadas 10 e 20). Essa pontuação corresponderá aos pontos que o adversário ganhará se acertar à pergunta.</25><26><27>Num jogo, um jogador deverá distribuir a pontuação às perguntas da seguinte forma:</27><28><29>1 pergunta a valer 3 pontos</29><30>3 perguntas a valer 2 pontos</30><31>3 perguntas a valer 1 ponto</31><32>1 pergunta a valer 0 pontos</32></28></26><33>O jogador que conseguir mais pontos num jogo é declarado vencedor e ganhará 3 pontos na classificação.</33><34>Em caso de empate ambos os jogadores terão 2 pontos atribuídos na classificação.</34><35>Em caso de derrota, o jogador terá atribuído 1 ponto.</35><36><37>Em caso de um jogador não ter submetido respostas a um jogo não terá atribuído qualquer ponto na classificação e o adversário será declarado vencedor. O vencedor terá atribuído nesse jogo (não na classificação) os seguintes pontos totais:</37><38><39>12 pontos caso acerte 8 perguntas</39><40>10 pontos caso acerte 7 perguntas</40><41>9 pontos caso acerte 6 perguntas</41><42>8 pontos caso acerte 5 perguntas</42><43>6 pontos caso acerte 4 perguntas</43><44>5 pontos caso acerte 3 perguntas</44><45>3 pontos caso acerte 2 perguntas</45><46>2 pontos caso acerte 1 pergunta</46><47>0 pontos caso acerte 0 perguntas</47></38></36><48>No 10º e no 20º dia, os jogos não terão adversário e a pontuação para a classificação é atribuída da seguinte forma: meio ponto por cada resposta correcta e um ponto por participar na ronda, ou seja, um máximo de 5 pontos.</48><49>No final dos 20 jogos os 2 piores classificados serão relegados para a divisão imediatamente inferior (caso exista) e os 2 melhores classificados serão promovidos à divisão imediatamente acima (caso exista).</49><50>Adicionalmente, caso um (ou mais) dos outros oito jogadores tenha mais de 3 faltas ao fim dos 20 jogos, será relegado para a divisão imediatamente inferior (caso exista). Em sua substituição será promovido mais um jogador da divisão abaixo.</50><51>A primeira divisão é de acesso exclusivo a jogadores com ranking nacional, ou seja, que tenham um jogo ao vivo a contar para o ranking nos últimos 12 meses. Serão feitos os ajustes necessários às subidas/descidas para que isso se verifique.</51><52>O primeiro classificado da primeira divisão no final dos 20 jogos é declarado o campeão mensal da Liga Quiz.</52><53><54>Se houver empates na classificação, os critérios de desempate serão aplicados por esta ordem:</54><55><56>Maior diferencial de pontos obtidos nos jogos de cada dia</56><57>Maior total de pontos obtidos nos jogos de cada dia</57><58>Maior total de vitórias</58><59>Maior total de perguntas respondidas acertadamente</59></55><60>Se após a aplicação dos critérios de desempate persistir o empate, será atribuída a mesma classificação aos dois jogadores.</60></53></1><61>Quizzes Especiais</61><62><63><64>Tal como nos jogos da Liga Quiz é expressamente proibido usar qualquer fonte externa para obter respostas às perguntas. Isto inclui:</64><65><66>Pedir pistas/respostas a outras pessoas</66><67>Usar a Internet, livros ou outro material de consulta para pesquisa de pistas/respostas</67><68>Usar calculadoras, instrumentos musicais ou outros equipamentos para ajudar à resposta</68></65><69>Apenas papel e caneta/lápis são permitidos.</69></63><70>Os quizzes especiais são compostos por 12 perguntas.</70><71>Cada pergunta certa num quiz especial vale 20 pontos.</71><72>Em cada quiz especial podes usar até 5 jokers.</72><73>Ao usares um joker numa pergunta, caso acertes, ganhas pontos adicionais consoante a percentagem de pessoas que erraram essa pergunta.<74/> <75>Exemplo:</75> Se acertares uma pergunta onde usaste um joker e 60% dos jogadores falharem ganhas 80 pontos (20+60).</73><76>Caso uses um joker e falhes a pergunta, perdes 20 pontos!</76></62><77>Subscrição</77><78>Os novos participantes têm um mês de experiência totalmente gratuito.<79/>A partir desse primeiro mês o preço da participação será de acordo com a tabela abaixo:</78><80><81><82><83>Duração</83><84>Preço</84><85>Desconto</85></82></81><86><87><88>1 mês</88><89>3 euros</89><90>-</90></87><91><92>3 meses</92><93>8.5 euros</93><94>6%</94></91><95><96>6 meses</96><97>16 euros</97><98>11%</98></95><99><100>12 meses</100><101>30 euros</101><102>17% (dois meses grátis)</102></99></86></80><103>Os jogadores terão direito a jogar, pelo menos, 20 jogos de 8 perguntas por mês perfazendo um total de 160 perguntas.</103><104>Adicionalmente serão feitos alguns quizzes especiais temáticos de 12 perguntas que não contarão para a classificação da liga havendo apenas uma classificação do respectivo quiz.</104><105>O pagamento das inscrições poderá ser feito das seguintes formas:</105><106><107>Em mão a qualquer elemento da organização:<108>André Ascensão, Sofia Santos ou Paulo Martins</108></107><109>Por transferência bancária para a conta com o seguinte IBAN enviando o comprovativo para <110>andremiguelaa@gmail.com</110>: <111>PT50 0018 000344544914020 29</111></109><112>Por MB WAY usando o seguinte número: <113>916682562</113></112></106><114>O prazo limite de pagamento para uma determinada temporada será o final do dia de sábado antes do início da mesma. Cada temporada mensal começa na primeira segunda-feira de cada mês.</114>"
+msgstr "<0>Liga Quiz</0><1><2><3>A Liga Quiz é um jogo de cultura geral onde a confiança na honestidade dos jogadores é crucial. É expressamente proibido usar qualquer fonte externa para obter respostas às perguntas. Isto inclui:</3><4><5>Pedir pistas/respostas a outras pessoas</5><6>Usar a Internet, livros ou outro material de consulta para pesquisa de pistas/respostas</6><7>Usar calculadoras, instrumentos musicais ou outros equipamentos para ajudar à resposta</7></4><8>Apenas papel e caneta/lápis são permitidos.</8></2><9>A organização reserva-se ao direito de inibir o acesso à Liga Quiz a qualquer jogador que não cumpra este critério.</9><10>Para receber um convite para entrar na Liga Quiz, todos os novos jogadores deverão ser referidos por um jogador activo na Liga Quiz, que irá atestar da honestidade e integridade do novo membro. A Liga Quiz é uma liga por convite.</10><11>Todos os estreantes na Liga Quiz serão colocados na divisão mais baixa. A preferência de entrada numa divisão é a ordem de entrada na lista de espera.</11><12>Caso um jogador saia da Liga Quiz temporariamente sem aviso e reentre novamente na Liga Quiz será colocado na divisão mais baixa disponível.<13/>Caso um jogador saia da Liga Quiz temporariamente com aviso prévio, por um período máximo de 3 meses, será colocado na mesma divisão em que estava quando saiu; existindo os naturais ajustes de descidas de divisão.<14/>Um jogador perde o privilégio de voltar à mesma divisão, mesmo com aviso prévio, caso esteja mais que três meses de fora no último período de 12 meses.</12><15>As várias divisões da Liga Quiz terão, no máximo, 10 jogadores.</15><16>Cada jogador jogará 20 jogos a partir da primeira segunda-feira de cada mês e nos 19 dias úteis seguintes: duas vezes contra cada um dos outros membros da mesma divisão e duas vezes sem adversário (no 10º dia e no 20º dia).</16><17>Cada jogo terá oito perguntas, cada uma de um tema diferente.</17><18>Os jogadores poderão submeter as respostas a um jogo das 0h até às 24h (hora de Lisboa) do respectivo dia.</18><19>Respostas com erros ortográficos serão aceites desde que não se altere a fonética da resposta e não esteja explícito na pergunta que a correcção ortográfica é obrigatória. Este não é um jogo de ortografia mas sim de cultural geral.</19><20>Quando a resposta é o nome de uma pessoa é aceite como certa se for respondido apenas o apelido ou nome pelo qual é mais conhecido, excepto se na pergunta estiver explícito que é pedido mais isso.<21/>Apesar disso, caso um jogador responda com um apelido certo mas o primeiro nome esteja errado, a resposta será considerada errada.</20><22>Caso um jogador coloque no campo da resposta várias respostas, caso alguma esteja errada, será marcado errado.</22><23>As respostas serão aceites na língua portuguesa, inglesa ou na original (no caso de um livro/filme/etc.) a não ser que esteja indicado o contrário.<24/>Caso a reposta não seja numa destas línguas deverão indicar entre parênteses qual a língua da vossa resposta, caso contrário a resposta poderá ser marcada como errada.</23><25>Além de responder às perguntas, cada jogador deverá atribuir uma pontuação à pergunta (à excepção das jornadas 10 e 20). Essa pontuação corresponderá aos pontos que o adversário ganhará se acertar à pergunta.</25><26><27>Num jogo, um jogador deverá distribuir a pontuação às perguntas da seguinte forma:</27><28><29>1 pergunta a valer 3 pontos</29><30>3 perguntas a valer 2 pontos</30><31>3 perguntas a valer 1 ponto</31><32>1 pergunta a valer 0 pontos</32></28></26><33>O jogador que conseguir mais pontos num jogo é declarado vencedor e ganhará 3 pontos na classificação.</33><34>Em caso de empate ambos os jogadores terão 2 pontos atribuídos na classificação.</34><35>Em caso de derrota, o jogador terá atribuído 1 ponto.</35><36><37>Em caso de um jogador não ter submetido respostas a um jogo não terá atribuído qualquer ponto na classificação e o adversário será declarado vencedor. O vencedor terá atribuído nesse jogo (não na classificação) os seguintes pontos totais:</37><38><39>12 pontos caso acerte 8 perguntas</39><40>10 pontos caso acerte 7 perguntas</40><41>9 pontos caso acerte 6 perguntas</41><42>8 pontos caso acerte 5 perguntas</42><43>6 pontos caso acerte 4 perguntas</43><44>5 pontos caso acerte 3 perguntas</44><45>3 pontos caso acerte 2 perguntas</45><46>2 pontos caso acerte 1 pergunta</46><47>0 pontos caso acerte 0 perguntas</47></38></36><48>No 10º e no 20º dia, os jogos não terão adversário e a pontuação para a classificação é atribuída da seguinte forma: meio ponto por cada resposta correcta e um ponto por participar na ronda, ou seja, um máximo de 5 pontos.</48><49>No final dos 20 jogos os 2 piores classificados serão relegados para a divisão imediatamente inferior (caso exista) e os 2 melhores classificados serão promovidos à divisão imediatamente acima (caso exista).</49><50>Adicionalmente, caso um (ou mais) dos outros oito jogadores tenha mais de 3 faltas ao fim dos 20 jogos, será relegado para a divisão imediatamente inferior (caso exista). Em sua substituição será promovido mais um jogador da divisão abaixo.</50><51>A primeira divisão é de acesso exclusivo a jogadores com ranking nacional, ou seja, que tenham um jogo ao vivo a contar para o ranking nos últimos 12 meses. Serão feitos os ajustes necessários às subidas/descidas para que isso se verifique.</51><52>O primeiro classificado da primeira divisão no final dos 20 jogos é declarado o campeão mensal da Liga Quiz.</52><53><54>Se houver empates na classificação, os critérios de desempate serão aplicados por esta ordem:</54><55><56>Maior diferencial de pontos obtidos nos jogos de cada dia</56><57>Maior total de pontos obtidos nos jogos de cada dia</57><58>Maior total de vitórias</58><59>Maior total de perguntas respondidas acertadamente</59></55><60>Se após a aplicação dos critérios de desempate persistir o empate, será atribuída a mesma classificação aos dois jogadores.</60></53></1><61>Quizzes Especiais</61><62><63><64>Tal como nos jogos da Liga Quiz é expressamente proibido usar qualquer fonte externa para obter respostas às perguntas. Isto inclui:</64><65><66>Pedir pistas/respostas a outras pessoas</66><67>Usar a Internet, livros ou outro material de consulta para pesquisa de pistas/respostas</67><68>Usar calculadoras, instrumentos musicais ou outros equipamentos para ajudar à resposta</68></65><69>Apenas papel e caneta/lápis são permitidos.</69></63><70>Os quizzes especiais são compostos por 12 perguntas.</70><71>Cada pergunta certa num quiz especial vale 20 pontos.</71><72>Em cada quiz especial podes usar até 5 jokers.</72><73>Ao usares um joker numa pergunta, caso acertes, ganhas pontos adicionais consoante a percentagem de pessoas que erraram essa pergunta.<74/> <75>Exemplo:</75> Se acertares uma pergunta onde usaste um joker e 60% dos jogadores falharem ganhas 80 pontos (20+60).</73><76>Caso uses um joker e falhes a pergunta, perdes 20 pontos!</76></62><77>Subscrição</77><78>Os novos participantes têm um mês de experiência totalmente gratuito.<79/>A partir desse primeiro mês o preço da participação será de acordo com a tabela abaixo:</78><80><81><82><83>Duração</83><84>Preço</84><85>Desconto</85></82></81><86><87><88>1 mês</88><89>3 euros</89><90>-</90></87><91><92>3 meses</92><93>8.5 euros</93><94>6%</94></91><95><96>6 meses</96><97>16 euros</97><98>11%</98></95><99><100>12 meses</100><101>30 euros</101><102>17% (dois meses grátis)</102></99></86></80><103>Os jogadores terão direito a jogar, pelo menos, 20 jogos de 8 perguntas por mês perfazendo um total de 160 perguntas.</103><104>Adicionalmente serão feitos alguns quizzes especiais temáticos de 12 perguntas que não contarão para a classificação da liga havendo apenas uma classificação do respectivo quiz.</104><105>O pagamento das inscrições poderá ser feito das seguintes formas:</105><106><107>Em mão a qualquer elemento da organização:<108>André Ascensão, Sofia Santos ou Paulo Martins</108></107><109>Por transferência bancária para a conta com o seguinte IBAN enviando o comprovativo para <110>andremiguelaa@gmail.com</110>: <111>PT50 0018 000344544914020 29</111></109><112>Por MB WAY usando o seguinte número: <113>916682562</113></112></106><114>O prazo limite de pagamento para uma determinada temporada será o final do dia de sábado antes do início da mesma. Cada temporada mensal começa na primeira segunda-feira de cada mês.</114>"
 
 #: src/views/admin/quizzes/QuizForm.js:167
 msgid "<0>Não devem ser feitos quizzes com a seguinte combinação de temas:</0><1><2>Literatura / Banda Desenhada</2><3>Literatura / Filosofia</3><4>Óperas e Musicais / Música</4><5>Belas Artes / Museus</5></1>"
@@ -106,9 +106,13 @@ msgstr "Adicionar provas mensais"
 msgid "Administrador"
 msgstr "Administrador"
 
-#: src/partials/Header.js:158
+#: src/partials/Header.js:160
 msgid "Administração"
 msgstr "Administração"
+
+#: src/utils/getRegionTranslation.js:117
+msgid "Afeganistão"
+msgstr "Afeganistão"
 
 #: src/views/Quiz/QuizForm.js:603
 #: src/views/SpecialQuiz/SpecialQuizForm.js:221
@@ -120,10 +124,30 @@ msgstr "Ainda tens uma pergunta em branco."
 msgid "Ainda tens {blankAnsers} perguntas em branco."
 msgstr "Ainda tens {blankAnsers} perguntas em branco."
 
+#: src/utils/getRegionTranslation.js:127
+msgid "Albânia"
+msgstr "Albânia"
+
+#: src/utils/getRegionTranslation.js:322
+msgid "Alemanha"
+msgstr "Alemanha"
+
+#: src/utils/getRegionTranslation.js:107
+msgid "Andorra"
+msgstr "Andorra"
+
+#: src/utils/getRegionTranslation.js:137
+msgid "Angola"
+msgstr "Angola"
+
 #: src/components/PaginatedTable.js:88
 #: src/views/Ranking/Rounds.js:32
 msgid "Anterior"
 msgstr "Anterior"
+
+#: src/utils/getRegionTranslation.js:122
+msgid "Antígua and Barbuda"
+msgstr "Antígua and Barbuda"
 
 #: src/views/admin/seasons/Tier.js:137
 msgid "Apagar divisão"
@@ -163,6 +187,18 @@ msgstr "Apagar temporada"
 msgid "Apelido"
 msgstr "Apelido"
 
+#: src/utils/getRegionTranslation.js:142
+msgid "Argentina"
+msgstr "Argentina"
+
+#: src/utils/getRegionTranslation.js:347
+msgid "Argélia"
+msgstr "Argélia"
+
+#: src/utils/getRegionTranslation.js:132
+msgid "Arménia"
+msgstr "Arménia"
+
 #: src/utils/getGenreTranslation.js:33
 msgid "Arquitectura"
 msgstr "Arquitectura"
@@ -171,19 +207,19 @@ msgstr "Arquitectura"
 msgid "Arquivo"
 msgstr "Arquivo"
 
-#: src/partials/Header.js:265
+#: src/partials/Header.js:268
 #: src/routes.js:120
 #: src/views/Quizzes.js:49
 msgid "Arquivo de quizzes"
 msgstr "Arquivo de quizzes"
 
-#: src/partials/Header.js:276
+#: src/partials/Header.js:279
 #: src/routes.js:125
 #: src/views/SpecialQuizzes.js:65
 msgid "Arquivo de quizzes especiais"
 msgstr "Arquivo de quizzes especiais"
 
-#: src/partials/Header.js:261
+#: src/partials/Header.js:264
 #: src/routes.js:115
 #: src/views/Seasons.js:50
 msgid "Arquivo de temporadas"
@@ -193,10 +229,18 @@ msgstr "Arquivo de temporadas"
 msgid "Artesanato"
 msgstr "Artesanato"
 
+#: src/utils/getRegionTranslation.js:867
+msgid "Arábia Saudita"
+msgstr "Arábia Saudita"
+
 #: src/partials/Header.js:93
-#: src/views/Statistics.js:153
+#: src/views/Statistics.js:157
 msgid "As minhas estatísticas"
 msgstr "As minhas estatísticas"
+
+#: src/utils/getRegionTranslation.js:152
+msgid "Austrália"
+msgstr "Austrália"
 
 #: src/views/SpecialQuizzes.js:88
 #: src/views/admin/specialQuizzes/SpecialQuizForm.js:217
@@ -211,13 +255,33 @@ msgstr "Aveiro"
 msgid "Aviso"
 msgstr "Aviso"
 
+#: src/utils/getRegionTranslation.js:157
+msgid "Azerbaijão"
+msgstr "Azerbaijão"
+
 #: src/utils/getRegionTranslation.js:7
 msgid "Açores"
 msgstr "Açores"
 
+#: src/utils/getRegionTranslation.js:222
+msgid "Bahamas"
+msgstr "Bahamas"
+
+#: src/utils/getRegionTranslation.js:192
+msgid "Bahrein"
+msgstr "Bahrein"
+
 #: src/utils/getGenreTranslation.js:39
 msgid "Banda Desenhada"
 msgstr "Banda Desenhada"
+
+#: src/utils/getRegionTranslation.js:172
+msgid "Bangladesh"
+msgstr "Bangladesh"
+
+#: src/utils/getRegionTranslation.js:167
+msgid "Barbados"
+msgstr "Barbados"
 
 #: src/utils/getRegionTranslation.js:17
 msgid "Beja"
@@ -226,6 +290,18 @@ msgstr "Beja"
 #: src/utils/getGenreTranslation.js:34
 msgid "Belas Artes"
 msgstr "Belas Artes"
+
+#: src/utils/getRegionTranslation.js:242
+msgid "Belize"
+msgstr "Belize"
+
+#: src/utils/getRegionTranslation.js:202
+msgid "Benim"
+msgstr "Benim"
+
+#: src/utils/getRegionTranslation.js:237
+msgid "Bielorrússia"
+msgstr "Bielorrússia"
 
 #: src/utils/getGenreTranslation.js:47
 msgid "Biologia"
@@ -236,6 +312,14 @@ msgstr "Biologia"
 msgid "Bloqueado"
 msgstr "Bloqueado"
 
+#: src/utils/getRegionTranslation.js:212
+msgid "Bolívia"
+msgstr "Bolívia"
+
+#: src/utils/getRegionTranslation.js:232
+msgid "Botswana"
+msgstr "Botswana"
+
 #: src/utils/getRegionTranslation.js:22
 msgid "Braga"
 msgstr "Braga"
@@ -244,13 +328,57 @@ msgstr "Braga"
 msgid "Bragança"
 msgstr "Bragança"
 
-#: src/views/Statistics.js:260
+#: src/utils/getRegionTranslation.js:217
+msgid "Brasil"
+msgstr "Brasil"
+
+#: src/utils/getRegionTranslation.js:207
+msgid "Brunei"
+msgstr "Brunei"
+
+#: src/utils/getRegionTranslation.js:187
+msgid "Bulgária"
+msgstr "Bulgária"
+
+#: src/utils/getRegionTranslation.js:182
+msgid "Burkina Faso"
+msgstr "Burkina Faso"
+
+#: src/utils/getRegionTranslation.js:197
+msgid "Burundi"
+msgstr "Burundi"
+
+#: src/utils/getRegionTranslation.js:227
+msgid "Butão"
+msgstr "Butão"
+
+#: src/utils/getRegionTranslation.js:177
+msgid "Bélgica"
+msgstr "Bélgica"
+
+#: src/utils/getRegionTranslation.js:162
+msgid "Bósnia e Herzegovina"
+msgstr "Bósnia e Herzegovina"
+
+#: src/views/Statistics.js:267
 msgid "C"
 msgstr "C"
+
+#: src/utils/getRegionTranslation.js:307
+msgid "Cabo Verde"
+msgstr "Cabo Verde"
 
 #: src/views/Ranking/Rounds.js:35
 msgid "Calendário"
 msgstr "Calendário"
+
+#: src/utils/getRegionTranslation.js:282
+msgid "Camarões"
+msgstr "Camarões"
+
+#: src/utils/getRegionTranslation.js:552
+msgid "Cambodja"
+msgstr "Cambodja"
 
 #: src/views/admin/nationalRanking/utils/options.js:12
 msgid "Campeonato Europeu de Quiz"
@@ -264,6 +392,10 @@ msgstr "Campeonato Mundial de Quiz"
 msgid "Campeonato Nacional de Quiz"
 msgstr "Campeonato Nacional de Quiz"
 
+#: src/utils/getRegionTranslation.js:247
+msgid "Canadá"
+msgstr "Canadá"
+
 #: src/components/Modal.js:48
 msgid "Cancelar"
 msgstr "Cancelar"
@@ -271,6 +403,30 @@ msgstr "Cancelar"
 #: src/utils/getRegionTranslation.js:32
 msgid "Castelo Branco"
 msgstr "Castelo Branco"
+
+#: src/utils/getRegionTranslation.js:587
+msgid "Cazaquistão"
+msgstr "Cazaquistão"
+
+#: src/utils/getRegionTranslation.js:957
+msgid "Chade"
+msgstr "Chade"
+
+#: src/utils/getRegionTranslation.js:277
+msgid "Chile"
+msgstr "Chile"
+
+#: src/utils/getRegionTranslation.js:287
+msgid "China"
+msgstr "China"
+
+#: src/utils/getRegionTranslation.js:312
+msgid "Chipre"
+msgstr "Chipre"
+
+#: src/utils/getRegionTranslation.js:317
+msgid "Chéquia"
+msgstr "Chéquia"
 
 #: src/utils/getGenreTranslation.js:42
 msgid "Cinema"
@@ -305,11 +461,19 @@ msgstr "Clica <0>aqui</0> para saber como renovar."
 msgid "Coimbra"
 msgstr "Coimbra"
 
+#: src/utils/getRegionTranslation.js:292
+msgid "Colômbia"
+msgstr "Colômbia"
+
 #: src/utils/getGenreTranslation.js:58
 msgid "Comida e Bebida"
 msgstr "Comida e Bebida"
 
-#: src/views/Statistics.js:238
+#: src/utils/getRegionTranslation.js:562
+msgid "Comoros"
+msgstr "Comoros"
+
+#: src/views/Statistics.js:245
 msgid "Comparar comigo"
 msgstr "Comparar comigo"
 
@@ -328,7 +492,7 @@ msgstr "Comunicação Social e Redes Sociais"
 msgid "Confirmação da palavra-passe"
 msgstr "Confirmação da palavra-passe"
 
-#: src/partials/Header.js:249
+#: src/partials/Header.js:252
 #: src/routes.js:78
 #: src/views/Account.js:103
 msgid "Conta"
@@ -341,6 +505,14 @@ msgstr "Conteúdo"
 #: src/components/Error.js:11
 msgid "Conteúdo não encontrado."
 msgstr "Conteúdo não encontrado."
+
+#: src/utils/getRegionTranslation.js:572
+msgid "Coreia do Norte"
+msgstr "Coreia do Norte"
+
+#: src/utils/getRegionTranslation.js:577
+msgid "Coreia do Sul"
+msgstr "Coreia do Sul"
 
 #: src/views/Game.js:165
 #: src/views/Game.js:205
@@ -368,7 +540,15 @@ msgstr "Corrigir quiz de {0}"
 msgid "Corrigir quiz especial de {0}"
 msgstr "Corrigir quiz especial de {0}"
 
-#: src/views/Login.js:109
+#: src/utils/getRegionTranslation.js:297
+msgid "Costa Rica"
+msgstr "Costa Rica"
+
+#: src/utils/getRegionTranslation.js:272
+msgid "Costa do Marfim"
+msgstr "Costa do Marfim"
+
+#: src/views/Login.js:94
 msgid "Credenciais erradas."
 msgstr "Credenciais erradas."
 
@@ -391,6 +571,14 @@ msgstr "Criar quiz especial"
 #: src/views/admin/seasons/Seasons.js:80
 msgid "Criar temporada"
 msgstr "Criar temporada"
+
+#: src/utils/getRegionTranslation.js:472
+msgid "Croácia"
+msgstr "Croácia"
+
+#: src/utils/getRegionTranslation.js:302
+msgid "Cuba"
+msgstr "Cuba"
 
 #: src/utils/getGenreTranslation.js:10
 msgid "Cul"
@@ -451,9 +639,9 @@ msgstr "Des"
 msgid "Desceu"
 msgstr "Desceu"
 
-#: src/views/SpecialQuiz/SpecialQuizDone.js:130
+#: src/views/SpecialQuiz/SpecialQuizDone.js:131
 #: src/views/SpecialQuiz/SpecialQuizForm.js:81
-#: src/views/Statistics.js:388
+#: src/views/Statistics.js:395
 #: src/views/admin/specialQuizzes/SpecialQuizForm.js:201
 msgid "Descrição"
 msgstr "Descrição"
@@ -470,6 +658,10 @@ msgstr "Desporto"
 msgid "Diferença de pontos"
 msgstr "Diferença de pontos"
 
+#: src/utils/getRegionTranslation.js:332
+msgid "Dinamarca"
+msgstr "Dinamarca"
+
 #: src/views/Account.js:229
 #: src/views/Register.js:216
 msgid "Distrito/Região"
@@ -479,12 +671,20 @@ msgstr "Distrito/Região"
 msgid "Divisões"
 msgstr "Divisões"
 
+#: src/utils/getRegionTranslation.js:327
+msgid "Djibuti"
+msgstr "Djibuti"
+
+#: src/utils/getRegionTranslation.js:337
+msgid "Dominica"
+msgstr "Dominica"
+
 #: src/views/Ranking/TableHeader.js:106
 msgid "E"
 msgstr "E"
 
 #: src/views/Account.js:258
-#: src/views/Login.js:64
+#: src/views/Login.js:65
 #: src/views/RecoverPassword.js:56
 #: src/views/Register.js:244
 msgid "E-Mail"
@@ -537,6 +737,18 @@ msgstr "Editor de Quizzes"
 msgid "Editor de Quizzes Especiais"
 msgstr "Editor de Quizzes Especiais"
 
+#: src/utils/getRegionTranslation.js:362
+msgid "Egipto"
+msgstr "Egipto"
+
+#: src/utils/getRegionTranslation.js:942
+msgid "El Salvador"
+msgstr "El Salvador"
+
+#: src/utils/getRegionTranslation.js:112
+msgid "Emirados Árabes Unidos"
+msgstr "Emirados Árabes Unidos"
+
 #: src/views/Ranking/TableHeader.js:104
 #: src/views/StatisticsComparison.js:313
 msgid "Empates"
@@ -546,10 +758,10 @@ msgstr "Empates"
 msgid "Ent"
 msgstr "Ent"
 
-#: src/partials/Header.js:124
+#: src/partials/Header.js:126
 #: src/routes.js:52
-#: src/views/Login.js:57
-#: src/views/Login.js:124
+#: src/views/Login.js:53
+#: src/views/Login.js:109
 msgid "Entrar"
 msgstr "Entrar"
 
@@ -582,6 +794,14 @@ msgstr "Enviar sugestão/reclamação"
 msgid "Enviámos-te um e-mail, segue as instruções para definir uma nova palavra-passe."
 msgstr "Enviámos-te um e-mail, segue as instruções para definir uma nova palavra-passe."
 
+#: src/utils/getRegionTranslation.js:352
+msgid "Equador"
+msgstr "Equador"
+
+#: src/utils/getRegionTranslation.js:372
+msgid "Eritreia"
+msgstr "Eritreia"
+
 #: src/views/Game.js:167
 #: src/views/Game.js:207
 #: src/views/Question.js:233
@@ -592,7 +812,7 @@ msgstr "Errada"
 #: src/components/Error.js:31
 #: src/components/Error.js:52
 #: src/views/Account/Avatar.js:103
-#: src/views/Login.js:111
+#: src/views/Login.js:96
 #: src/views/RecoverPassword.js:85
 #: src/views/Register.js:327
 #: src/views/ResetPassword.js:125
@@ -616,13 +836,37 @@ msgstr "Escolhe uma imagem"
 msgid "Escolher tipo de prova"
 msgstr "Escolher tipo de prova"
 
+#: src/utils/getRegionTranslation.js:902
+msgid "Eslováquia"
+msgstr "Eslováquia"
+
+#: src/utils/getRegionTranslation.js:897
+msgid "Eslovénia"
+msgstr "Eslovénia"
+
+#: src/utils/getRegionTranslation.js:377
+msgid "Espanha"
+msgstr "Espanha"
+
 #: src/utils/getGenreTranslation.js:49
 msgid "Espaço"
 msgstr "Espaço"
 
+#: src/utils/getRegionTranslation.js:952
+msgid "Essuatíni"
+msgstr "Essuatíni"
+
 #: src/components/Blocked.js:12
 msgid "Esta conta encontra-se bloqueada."
 msgstr "Esta conta encontra-se bloqueada."
+
+#: src/utils/getRegionTranslation.js:397
+msgid "Estados Federados da Micronésia"
+msgstr "Estados Federados da Micronésia"
+
+#: src/utils/getRegionTranslation.js:1032
+msgid "Estados Unidos da América"
+msgstr "Estados Unidos da América"
 
 #: src/routes.js:94
 msgid "Estatísticas"
@@ -632,7 +876,7 @@ msgstr "Estatísticas"
 msgid "Estatísticas de pergunta"
 msgstr "Estatísticas de pergunta"
 
-#: src/views/Statistics.js:149
+#: src/views/Statistics.js:153
 msgid "Estatísticas de {0} {1}"
 msgstr "Estatísticas de {0} {1}"
 
@@ -647,6 +891,14 @@ msgstr "Estilo de Vida"
 #: src/components/Error.js:35
 msgid "Estás sem ligação à internet."
 msgstr "Estás sem ligação à internet."
+
+#: src/utils/getRegionTranslation.js:357
+msgid "Estónia"
+msgstr "Estónia"
+
+#: src/utils/getRegionTranslation.js:382
+msgid "Etiópia"
+msgstr "Etiópia"
 
 #: src/views/Ranking/TableHeader.js:82
 msgid "F"
@@ -673,6 +925,14 @@ msgstr "Fauna e Flora"
 msgid "Ficheiro inválido."
 msgstr "Ficheiro inválido."
 
+#: src/utils/getRegionTranslation.js:392
+msgid "Fiji"
+msgstr "Fiji"
+
+#: src/utils/getRegionTranslation.js:807
+msgid "Filipinas"
+msgstr "Filipinas"
+
 #: src/utils/getGenreTranslation.js:62
 msgid "Filosofia"
 msgstr "Filosofia"
@@ -681,9 +941,25 @@ msgstr "Filosofia"
 msgid "Fim"
 msgstr "Fim"
 
+#: src/utils/getRegionTranslation.js:387
+msgid "Finlândia"
+msgstr "Finlândia"
+
+#: src/utils/getRegionTranslation.js:402
+msgid "França"
+msgstr "França"
+
 #: src/utils/getGenreTranslation.js:45
 msgid "Física"
 msgstr "Física"
+
+#: src/utils/getRegionTranslation.js:407
+msgid "Gabão"
+msgstr "Gabão"
+
+#: src/utils/getRegionTranslation.js:427
+msgid "Gana"
+msgstr "Gana"
 
 #: src/utils/getGenreTranslation.js:15
 msgid "Geo"
@@ -702,17 +978,25 @@ msgstr "Geologia"
 msgid "Gestor de Ranking Nacional"
 msgstr "Gestor de Ranking Nacional"
 
-#: src/partials/Header.js:185
+#: src/partials/Header.js:187
 msgid "Gestão de Quizzes"
 msgstr "Gestão de Quizzes"
 
-#: src/partials/Header.js:221
+#: src/partials/Header.js:224
 msgid "Gestão de Ranking Nacional"
 msgstr "Gestão de Ranking Nacional"
+
+#: src/utils/getRegionTranslation.js:422
+msgid "Geórgia"
+msgstr "Geórgia"
 
 #: src/views/GenreRanking.js:172
 msgid "Global"
 msgstr "Global"
+
+#: src/utils/getRegionTranslation.js:417
+msgid "Granada"
+msgstr "Granada"
 
 #: src/views/Account/Avatar.js:114
 #: src/views/Account.js:442
@@ -724,6 +1008,10 @@ msgstr "Global"
 msgid "Gravar"
 msgstr "Gravar"
 
+#: src/utils/getRegionTranslation.js:447
+msgid "Grécia"
+msgstr "Grécia"
+
 #: src/utils/getRegionTranslation.js:52
 msgid "Guarda"
 msgstr "Guarda"
@@ -732,9 +1020,37 @@ msgstr "Guarda"
 msgid "Guardar provas mensais"
 msgstr "Guardar provas mensais"
 
+#: src/utils/getRegionTranslation.js:452
+msgid "Guatemala"
+msgstr "Guatemala"
+
+#: src/utils/getRegionTranslation.js:462
+msgid "Guiana"
+msgstr "Guiana"
+
+#: src/utils/getRegionTranslation.js:437
+msgid "Guiné"
+msgstr "Guiné"
+
+#: src/utils/getRegionTranslation.js:442
+msgid "Guiné Equatorial"
+msgstr "Guiné Equatorial"
+
+#: src/utils/getRegionTranslation.js:457
+msgid "Guiné-Bissau"
+msgstr "Guiné-Bissau"
+
+#: src/utils/getRegionTranslation.js:432
+msgid "Gâmbia"
+msgstr "Gâmbia"
+
 #: src/views/admin/nationalRanking/utils/options.js:32
 msgid "HOT 100"
 msgstr "HOT 100"
+
+#: src/utils/getRegionTranslation.js:477
+msgid "Haiti"
+msgstr "Haiti"
 
 #: src/utils/getGenreTranslation.js:12
 msgid "His"
@@ -744,9 +1060,25 @@ msgstr "His"
 msgid "História"
 msgstr "História"
 
-#: src/views/Statistics.js:391
+#: src/utils/getRegionTranslation.js:467
+msgid "Honduras"
+msgstr "Honduras"
+
+#: src/views/Statistics.js:398
 msgid "Hora"
 msgstr "Hora"
+
+#: src/utils/getRegionTranslation.js:482
+msgid "Hungria"
+msgstr "Hungria"
+
+#: src/utils/getRegionTranslation.js:672
+msgid "Ilhas Marshall"
+msgstr "Ilhas Marshall"
+
+#: src/utils/getRegionTranslation.js:872
+msgid "Ilhas Salomão"
+msgstr "Ilhas Salomão"
 
 #: src/utils/renderMedia.js:11
 msgid "Imagem da pergunta {index}"
@@ -765,6 +1097,10 @@ msgstr "Imagem de perfil actualizada com sucesso."
 msgid "Incompleto"
 msgstr "Incompleto"
 
+#: src/utils/getRegionTranslation.js:487
+msgid "Indonésia"
+msgstr "Indonésia"
+
 #: src/views/admin/notifications/utils/notificationTypes.js:9
 msgid "Informação"
 msgstr "Informação"
@@ -777,9 +1113,45 @@ msgstr "Inquizição"
 msgid "Início"
 msgstr "Início"
 
+#: src/utils/getRegionTranslation.js:507
+msgid "Iraque"
+msgstr "Iraque"
+
+#: src/utils/getRegionTranslation.js:492
+msgid "Irlanda"
+msgstr "Irlanda"
+
+#: src/utils/getRegionTranslation.js:512
+msgid "Irão"
+msgstr "Irão"
+
+#: src/utils/getRegionTranslation.js:517
+msgid "Islândia"
+msgstr "Islândia"
+
+#: src/utils/getRegionTranslation.js:497
+msgid "Israel"
+msgstr "Israel"
+
+#: src/utils/getRegionTranslation.js:522
+msgid "Itália"
+msgstr "Itália"
+
+#: src/utils/getRegionTranslation.js:1077
+msgid "Iémen"
+msgstr "Iémen"
+
 #: src/views/Ranking/TableHeader.js:70
 msgid "J"
 msgstr "J"
+
+#: src/utils/getRegionTranslation.js:527
+msgid "Jamaica"
+msgstr "Jamaica"
+
+#: src/utils/getRegionTranslation.js:537
+msgid "Japão"
+msgstr "Japão"
 
 #: src/views/SpecialQuiz/SpecialQuizDone.js:48
 #: src/views/admin/nationalRanking/Players/List.js:106
@@ -812,7 +1184,7 @@ msgstr "Jogador de quizzes especiais"
 msgid "Jogador regular"
 msgstr "Jogador regular"
 
-#: src/partials/Header.js:242
+#: src/partials/Header.js:245
 #: src/views/admin/nationalRanking/Players/List.js:85
 msgid "Jogadores"
 msgstr "Jogadores"
@@ -835,9 +1207,13 @@ msgstr "Jogos e Passatempos"
 msgid "Joker"
 msgstr "Joker"
 
-#: src/views/SpecialQuiz/SpecialQuizDone.js:168
+#: src/views/SpecialQuiz/SpecialQuizDone.js:169
 msgid "Joker usado"
 msgstr "Joker usado"
+
+#: src/utils/getRegionTranslation.js:532
+msgid "Jordânia"
+msgstr "Jordânia"
 
 #: src/views/admin/seasons/SeasonForm.js:203
 msgid "Jornada {0}"
@@ -852,6 +1228,18 @@ msgstr "Jornada {0} ({1})"
 msgid "Já existe uma conta com este e-mail."
 msgstr "Já existe uma conta com este e-mail."
 
+#: src/utils/getRegionTranslation.js:557
+msgid "Kiribati"
+msgstr "Kiribati"
+
+#: src/utils/getRegionTranslation.js:582
+msgid "Kuwait"
+msgstr "Kuwait"
+
+#: src/utils/getRegionTranslation.js:592
+msgid "Laos"
+msgstr "Laos"
+
 #: src/views/NationalRanking/Legend.js:10
 msgid "Legenda"
 msgstr "Legenda"
@@ -860,10 +1248,26 @@ msgstr "Legenda"
 msgid "Leiria"
 msgstr "Leiria"
 
+#: src/utils/getRegionTranslation.js:622
+msgid "Lesoto"
+msgstr "Lesoto"
+
+#: src/utils/getRegionTranslation.js:637
+msgid "Letónia"
+msgstr "Letónia"
+
+#: src/utils/getRegionTranslation.js:617
+msgid "Libéria"
+msgstr "Libéria"
+
+#: src/utils/getRegionTranslation.js:607
+msgid "Liechtenstein"
+msgstr "Liechtenstein"
+
 #: src/App.js:67
 #: src/routes.js:47
 #: src/views/Home.js:8
-#: src/views/Statistics.js:187
+#: src/views/Statistics.js:193
 #: src/views/StatisticsComparison.js:201
 msgid "Liga Quiz"
 msgstr "Liga Quiz"
@@ -876,13 +1280,69 @@ msgstr "Lisboa"
 msgid "Literatura"
 msgstr "Literatura"
 
+#: src/utils/getRegionTranslation.js:627
+msgid "Lituânia"
+msgstr "Lituânia"
+
+#: src/utils/getRegionTranslation.js:632
+msgid "Luxemburgo"
+msgstr "Luxemburgo"
+
+#: src/utils/getRegionTranslation.js:597
+msgid "Líbano"
+msgstr "Líbano"
+
+#: src/utils/getRegionTranslation.js:642
+msgid "Líbia"
+msgstr "Líbia"
+
+#: src/utils/getRegionTranslation.js:677
+msgid "Macedónia do Norte"
+msgstr "Macedónia do Norte"
+
+#: src/utils/getRegionTranslation.js:667
+msgid "Madagáscar"
+msgstr "Madagáscar"
+
 #: src/utils/getRegionTranslation.js:67
 msgid "Madeira"
 msgstr "Madeira"
 
+#: src/utils/getRegionTranslation.js:717
+msgid "Malawi"
+msgstr "Malawi"
+
+#: src/utils/getRegionTranslation.js:712
+msgid "Maldivas"
+msgstr "Maldivas"
+
+#: src/utils/getRegionTranslation.js:682
+msgid "Mali"
+msgstr "Mali"
+
+#: src/utils/getRegionTranslation.js:702
+msgid "Malta"
+msgstr "Malta"
+
+#: src/utils/getRegionTranslation.js:727
+msgid "Malásia"
+msgstr "Malásia"
+
+#: src/utils/getRegionTranslation.js:647
+msgid "Marrocos"
+msgstr "Marrocos"
+
 #: src/utils/getGenreTranslation.js:44
 msgid "Matemática"
 msgstr "Matemática"
+
+#: src/utils/getRegionTranslation.js:697
+msgid "Mauritânia"
+msgstr "Mauritânia"
+
+#: src/utils/getRegionTranslation.js:707
+msgid "Maurícia"
+msgstr "Maurícia"
 
 #: src/views/NationalRanking/Legend.js:75
 msgid "Melhor"
@@ -908,6 +1368,22 @@ msgstr "Mitologia"
 msgid "Moda"
 msgstr "Moda"
 
+#: src/utils/getRegionTranslation.js:657
+msgid "Moldávia"
+msgstr "Moldávia"
+
+#: src/utils/getRegionTranslation.js:692
+msgid "Mongólia"
+msgstr "Mongólia"
+
+#: src/utils/getRegionTranslation.js:662
+msgid "Montenegro"
+msgstr "Montenegro"
+
+#: src/utils/getRegionTranslation.js:732
+msgid "Moçambique"
+msgstr "Moçambique"
+
 #: src/views/admin/quizzes/Question.js:119
 #: src/views/admin/specialQuizzes/Question.js:82
 msgid "Multimédia"
@@ -917,6 +1393,10 @@ msgstr "Multimédia"
 msgid "Museus"
 msgstr "Museus"
 
+#: src/utils/getRegionTranslation.js:687
+msgid "Myanmar"
+msgstr "Myanmar"
+
 #: src/views/Account/Avatar.js:90
 msgid "Máximo 200 KB"
 msgstr "Máximo 200 KB"
@@ -925,7 +1405,11 @@ msgstr "Máximo 200 KB"
 msgid "Média"
 msgstr "Média"
 
-#: src/views/Statistics.js:329
+#: src/utils/getRegionTranslation.js:722
+msgid "México"
+msgstr "México"
+
+#: src/views/Statistics.js:336
 #: src/views/admin/nationalRanking/Events/Form.js:212
 #: src/views/admin/nationalRanking/Events/List.js:96
 #: src/views/admin/nationalRanking/Rankings.js:119
@@ -933,9 +1417,21 @@ msgstr "Média"
 msgid "Mês"
 msgstr "Mês"
 
+#: src/utils/getRegionTranslation.js:652
+msgid "Mónaco"
+msgstr "Mónaco"
+
 #: src/utils/getGenreTranslation.js:40
 msgid "Música"
 msgstr "Música"
+
+#: src/utils/getRegionTranslation.js:737
+msgid "Namíbia"
+msgstr "Namíbia"
+
+#: src/utils/getRegionTranslation.js:772
+msgid "Nauru"
+msgstr "Nauru"
 
 #: src/partials/Header.js:42
 msgid "Navegação primária"
@@ -945,6 +1441,22 @@ msgstr "Navegação primária"
 #: src/views/admin/specialQuizzes/SpecialQuizForm.js:228
 msgid "Nenhum"
 msgstr "Nenhum"
+
+#: src/utils/getRegionTranslation.js:767
+msgid "Nepal"
+msgstr "Nepal"
+
+#: src/utils/getRegionTranslation.js:752
+msgid "Nicarágua"
+msgstr "Nicarágua"
+
+#: src/utils/getRegionTranslation.js:747
+msgid "Nigéria"
+msgstr "Nigéria"
+
+#: src/utils/getRegionTranslation.js:777
+msgid "Niue"
+msgstr "Niue"
 
 #: src/views/Account.js:110
 #: src/views/GenreRanking/Table.js:17
@@ -956,6 +1468,10 @@ msgstr "Nenhum"
 #: src/views/admin/users/Users.js:113
 msgid "Nome"
 msgstr "Nome"
+
+#: src/utils/getRegionTranslation.js:762
+msgid "Noruega"
+msgstr "Noruega"
 
 #: src/views/admin/notifications/Notifications.js:75
 msgid "Notificação"
@@ -989,17 +1505,21 @@ msgstr "Notificação de quiz regular (22h00)"
 msgid "Notificação editada com sucesso."
 msgstr "Notificação editada com sucesso."
 
-#: src/partials/Header.js:169
+#: src/partials/Header.js:171
 #: src/routes.js:185
 #: src/views/admin/notifications/Notifications.js:48
 msgid "Notificações"
 msgstr "Notificações"
 
+#: src/utils/getRegionTranslation.js:782
+msgid "Nova Zelândia"
+msgstr "Nova Zelândia"
+
 #: src/views/NationalRanking/Player/RankChange.js:13
 msgid "Nova entrada para o ranking"
 msgstr "Nova entrada para o ranking"
 
-#: src/views/SpecialQuiz/SpecialQuizDone.js:173
+#: src/views/SpecialQuiz/SpecialQuizDone.js:174
 msgid "Não"
 msgstr "Não"
 
@@ -1126,7 +1646,11 @@ msgstr "Não foi possível submeter o quiz."
 msgid "Não tens acesso a esta página."
 msgstr "Não tens acesso a esta página."
 
-#: src/views/Statistics.js:177
+#: src/utils/getRegionTranslation.js:742
+msgid "Níger"
+msgstr "Níger"
+
+#: src/views/Statistics.js:182
 msgid "Número {0} no <0>Ranking Nacional</0>"
 msgstr "Número {0} no <0>Ranking Nacional</0>"
 
@@ -1146,6 +1670,10 @@ msgstr "OK"
 msgid "Obrigado pela tua inscrição! O teu registo encontra-se a aguardar aprovação da equipa da Liga Quiz."
 msgstr "Obrigado pela tua inscrição! O teu registo encontra-se a aguardar aprovação da equipa da Liga Quiz."
 
+#: src/utils/getRegionTranslation.js:787
+msgid "Omã"
+msgstr "Omã"
+
 #: src/views/Register.js:144
 #: src/views/Register.js:216
 msgid "Opcional"
@@ -1163,8 +1691,12 @@ msgstr "PR"
 msgid "PaF"
 msgstr "PaF"
 
+#: src/utils/getRegionTranslation.js:832
+msgid "Palau"
+msgstr "Palau"
+
 #: src/views/Account.js:290
-#: src/views/Login.js:85
+#: src/views/Login.js:76
 #: src/views/Register.js:275
 #: src/views/ResetPassword.js:60
 msgid "Palavra-passe"
@@ -1174,17 +1706,41 @@ msgstr "Palavra-passe"
 msgid "Palavra-passe alterada com sucesso.<0/>Clica <1>aqui</1> e usa as novas credenciais."
 msgstr "Palavra-passe alterada com sucesso.<0/>Clica <1>aqui</1> e usa as novas credenciais."
 
+#: src/utils/getRegionTranslation.js:822
+msgid "Palestina"
+msgstr "Palestina"
+
+#: src/utils/getRegionTranslation.js:792
+msgid "Panamá"
+msgstr "Panamá"
+
+#: src/utils/getRegionTranslation.js:802
+msgid "Papua-Nova Guiné"
+msgstr "Papua-Nova Guiné"
+
+#: src/utils/getRegionTranslation.js:812
+msgid "Paquistão"
+msgstr "Paquistão"
+
 #: src/views/NationalRanking/Legend.js:85
 msgid "Para mais pormenores de como o ranking é calculado deve ser consultado este artigo:"
 msgstr "Para mais pormenores de como o ranking é calculado deve ser consultado este artigo:"
+
+#: src/utils/getRegionTranslation.js:837
+msgid "Paraguai"
+msgstr "Paraguai"
+
+#: src/utils/getRegionTranslation.js:757
+msgid "Países Baixos"
+msgstr "Países Baixos"
 
 #: src/views/Game.js:133
 #: src/views/GenreRanking/Table.js:48
 #: src/views/Quiz/QuizDone.js:53
 #: src/views/Quiz/QuizForm.js:480
 #: src/views/Quiz/QuizForm.js:541
-#: src/views/SpecialQuiz/SpecialQuizDone.js:181
-#: src/views/Statistics.js:282
+#: src/views/SpecialQuiz/SpecialQuizDone.js:182
+#: src/views/Statistics.js:289
 msgid "Percentagem de acerto"
 msgstr "Percentagem de acerto"
 
@@ -1232,7 +1788,7 @@ msgstr "Pergunta"
 #: src/views/Game.js:101
 #: src/views/Quiz/QuizDone.js:16
 #: src/views/Quiz/QuizForm.js:193
-#: src/views/SpecialQuiz/SpecialQuizDone.js:140
+#: src/views/SpecialQuiz/SpecialQuizDone.js:141
 #: src/views/SpecialQuiz/SpecialQuizForm.js:92
 #: src/views/admin/quizzes/Question.js:63
 #: src/views/admin/specialQuizzes/Question.js:49
@@ -1251,7 +1807,11 @@ msgstr "Perguntas respondidas"
 msgid "Permissões"
 msgstr "Permissões"
 
-#: src/partials/Header.js:211
+#: src/utils/getRegionTranslation.js:797
+msgid "Peru"
+msgstr "Peru"
+
+#: src/partials/Header.js:213
 #: src/routes.js:250
 #: src/views/admin/questions/Questions.js:154
 msgid "Pesquisa de perguntas"
@@ -1265,8 +1825,12 @@ msgstr "Pesquisar"
 msgid "Política Actual"
 msgstr "Política Actual"
 
+#: src/utils/getRegionTranslation.js:817
+msgid "Polónia"
+msgstr "Polónia"
+
 #: src/views/NationalRanking.js:198
-#: src/views/Statistics.js:336
+#: src/views/Statistics.js:343
 msgid "Pontos"
 msgstr "Pontos"
 
@@ -1302,6 +1866,10 @@ msgstr "Portalegre"
 msgid "Porto"
 msgstr "Porto"
 
+#: src/utils/getRegionTranslation.js:827
+msgid "Portugal"
+msgstr "Portugal"
+
 #: src/views/Quiz/QuizForm.js:430
 msgid "Preenche a tua data de nascimento para veres a idade do teu adversário"
 msgstr "Preenche a tua data de nascimento para veres a idade do teu adversário"
@@ -1314,15 +1882,15 @@ msgstr "Preenche a tua região para veres a região do teu adversário"
 msgid "Produtos e Marcas"
 msgstr "Produtos e Marcas"
 
-#: src/views/Statistics.js:326
+#: src/views/Statistics.js:333
 msgid "Prova"
 msgstr "Prova"
 
-#: src/views/Statistics.js:320
+#: src/views/Statistics.js:327
 msgid "Provas individuais"
 msgstr "Provas individuais"
 
-#: src/partials/Header.js:235
+#: src/partials/Header.js:238
 #: src/views/admin/nationalRanking/Events/List.js:75
 msgid "Provas mensais"
 msgstr "Provas mensais"
@@ -1345,7 +1913,7 @@ msgid "Próxima"
 msgstr "Próxima"
 
 #: src/views/Ranking/TableHeader.js:22
-#: src/views/Statistics.js:339
+#: src/views/Statistics.js:346
 msgid "Pts"
 msgstr "Pts"
 
@@ -1358,6 +1926,14 @@ msgstr "Publicar ranking mensal"
 #: src/routes.js:260
 msgid "Página não encontrada"
 msgstr "Página não encontrada"
+
+#: src/utils/getRegionTranslation.js:842
+msgid "Qatar"
+msgstr "Qatar"
+
+#: src/utils/getRegionTranslation.js:547
+msgid "Quirguistão"
+msgstr "Quirguistão"
 
 #: src/routes.js:140
 #: src/views/admin/questions/Questions.js:305
@@ -1441,7 +2017,7 @@ msgstr "Quiz | Criar"
 msgid "Quiz | Editar"
 msgstr "Quiz | Editar"
 
-#: src/partials/Header.js:192
+#: src/partials/Header.js:194
 #: src/routes.js:195
 #: src/views/NationalRanking.js:240
 #: src/views/admin/quizzes/Quizzes.js:83
@@ -1452,10 +2028,14 @@ msgstr "Quizzes"
 msgid "Quizzes Especiais"
 msgstr "Quizzes Especiais"
 
-#: src/partials/Header.js:203
+#: src/partials/Header.js:205
 #: src/routes.js:215
 msgid "Quizzes especiais"
 msgstr "Quizzes especiais"
+
+#: src/utils/getRegionTranslation.js:542
+msgid "Quénia"
+msgstr "Quénia"
 
 #: src/utils/getGenreTranslation.js:46
 msgid "Química"
@@ -1466,7 +2046,7 @@ msgstr "Química"
 msgid "RC"
 msgstr "RC"
 
-#: src/partials/Header.js:98
+#: src/partials/Header.js:99
 #: src/routes.js:104
 #: src/views/NationalRanking.js:150
 #: src/views/NationalRanking.js:175
@@ -1513,12 +2093,12 @@ msgstr "Ranking mensal apagado com sucesso."
 msgid "Ranking mensal publicado com sucesso."
 msgstr "Ranking mensal publicado com sucesso."
 
-#: src/partials/Header.js:228
+#: src/partials/Header.js:231
 #: src/views/admin/nationalRanking/Rankings.js:88
 msgid "Rankings mensais"
 msgstr "Rankings mensais"
 
-#: src/partials/Header.js:257
+#: src/partials/Header.js:260
 #: src/routes.js:89
 #: src/views/GenreRanking.js:160
 #: src/views/Seasons.js:79
@@ -1526,7 +2106,7 @@ msgid "Rankings temáticos"
 msgstr "Rankings temáticos"
 
 #: src/routes.js:57
-#: src/views/Login.js:129
+#: src/views/Login.js:114
 #: src/views/RecoverPassword.js:48
 msgid "Recuperar palavra-passe"
 msgstr "Recuperar palavra-passe"
@@ -1536,7 +2116,7 @@ msgstr "Recuperar palavra-passe"
 msgid "Redefinir palavra-passe"
 msgstr "Redefinir palavra-passe"
 
-#: src/partials/Header.js:127
+#: src/partials/Header.js:129
 #: src/views/Register.js:341
 msgid "Registar"
 msgstr "Registar"
@@ -1546,7 +2126,7 @@ msgstr "Registar"
 msgid "Registo"
 msgstr "Registo"
 
-#: src/views/Statistics.js:380
+#: src/views/Statistics.js:387
 msgid "Registo de acções (últimos {logsDays} dias)"
 msgstr "Registo de acções (últimos {logsDays} dias)"
 
@@ -1556,6 +2136,10 @@ msgstr "Registo de acções (últimos {logsDays} dias)"
 #: src/views/SpecialQuiz/SpecialQuizForm.js:185
 msgid "Regras"
 msgstr "Regras"
+
+#: src/utils/getRegionTranslation.js:412
+msgid "Reino Unido"
+msgstr "Reino Unido"
 
 #: src/utils/getGenreTranslation.js:55
 msgid "Religião e Crenças"
@@ -1575,6 +2159,22 @@ msgstr "Remover prova"
 msgid "Remover última divisão"
 msgstr "Remover última divisão"
 
+#: src/utils/getRegionTranslation.js:257
+msgid "República Centro-Africana"
+msgstr "República Centro-Africana"
+
+#: src/utils/getRegionTranslation.js:252
+msgid "República Democrática do Congo"
+msgstr "República Democrática do Congo"
+
+#: src/utils/getRegionTranslation.js:342
+msgid "República Dominicana"
+msgstr "República Dominicana"
+
+#: src/utils/getRegionTranslation.js:262
+msgid "República do Congo"
+msgstr "República do Congo"
+
 #: src/views/Quiz/QuizForm.js:214
 #: src/views/SpecialQuiz/SpecialQuizForm.js:113
 #: src/views/admin/questions/Questions.js:210
@@ -1588,14 +2188,14 @@ msgstr "Resposta"
 
 #: src/views/Question.js:112
 #: src/views/Quiz/QuizDone.js:26
-#: src/views/SpecialQuiz/SpecialQuizDone.js:150
+#: src/views/SpecialQuiz/SpecialQuizDone.js:151
 #: src/views/admin/quizzes/QuizCorrect.js:134
 #: src/views/admin/specialQuizzes/SpecialQuizCorrect.js:134
 msgid "Resposta correcta"
 msgstr "Resposta correcta"
 
 #: src/views/Quiz/QuizDone.js:35
-#: src/views/SpecialQuiz/SpecialQuizDone.js:160
+#: src/views/SpecialQuiz/SpecialQuizDone.js:161
 #: src/views/admin/quizzes/QuizCorrect.js:149
 #: src/views/admin/specialQuizzes/SpecialQuizCorrect.js:149
 msgid "Resposta dada"
@@ -1603,13 +2203,13 @@ msgstr "Resposta dada"
 
 #: src/views/GenreRanking/Table.js:24
 #: src/views/Ranking/TableHeader.js:128
-#: src/views/Statistics.js:258
+#: src/views/Statistics.js:265
 #: src/views/StatisticsComparison.js:326
 #: src/views/StatisticsComparison.js:333
 msgid "Respostas correctas"
 msgstr "Respostas correctas"
 
-#: src/views/Statistics.js:332
+#: src/views/Statistics.js:339
 #: src/views/StatisticsComparison.js:355
 msgid "Resultado"
 msgstr "Resultado"
@@ -1638,10 +2238,38 @@ msgstr "Resultado no Campeonato Mundial"
 msgid "Resultado no Campeonato Nacional"
 msgstr "Resultado no Campeonato Nacional"
 
-#: src/partials/Header.js:282
+#: src/utils/getRegionTranslation.js:847
+msgid "Roménia"
+msgstr "Roménia"
+
+#: src/utils/getRegionTranslation.js:862
+msgid "Ruanda"
+msgstr "Ruanda"
+
+#: src/utils/getRegionTranslation.js:857
+msgid "Rússia"
+msgstr "Rússia"
+
+#: src/utils/getRegionTranslation.js:367
+msgid "Saara Ocidental"
+msgstr "Saara Ocidental"
+
+#: src/partials/Header.js:285
 #: src/routes.js:72
 msgid "Sair"
 msgstr "Sair"
+
+#: src/utils/getRegionTranslation.js:1072
+msgid "Samoa"
+msgstr "Samoa"
+
+#: src/utils/getRegionTranslation.js:912
+msgid "San Marino"
+msgstr "San Marino"
+
+#: src/utils/getRegionTranslation.js:602
+msgid "Santa Lúcia"
+msgstr "Santa Lúcia"
 
 #: src/utils/getRegionTranslation.js:82
 msgid "Santarém"
@@ -1650,6 +2278,10 @@ msgstr "Santarém"
 #: src/utils/getGenreTranslation.js:50
 msgid "Saúde e Corpo Humano"
 msgstr "Saúde e Corpo Humano"
+
+#: src/utils/getRegionTranslation.js:877
+msgid "Seicheles"
+msgstr "Seicheles"
 
 #: src/views/admin/seasons/Tier.js:85
 msgid "Selecciona os jogadores que farão parte desta divisão:"
@@ -1664,7 +2296,7 @@ msgstr "Selecciona os jogadores que jogaram esta prova:"
 #: src/views/Ranking.js:185
 #: src/views/Seasons.js:101
 #: src/views/SpecialQuizzes.js:121
-#: src/views/Statistics.js:421
+#: src/views/Statistics.js:428
 #: src/views/admin/nationalRanking/Events/List.js:159
 #: src/views/admin/nationalRanking/Players/List.js:169
 #: src/views/admin/nationalRanking/Rankings.js:161
@@ -1677,14 +2309,26 @@ msgstr "Selecciona os jogadores que jogaram esta prova:"
 msgid "Sem registos"
 msgstr "Sem registos"
 
+#: src/utils/getRegionTranslation.js:917
+msgid "Senegal"
+msgstr "Senegal"
+
+#: src/utils/getRegionTranslation.js:907
+msgid "Serra Leoa"
+msgstr "Serra Leoa"
+
 #: src/utils/getRegionTranslation.js:87
 msgid "Setúbal"
 msgstr "Setúbal"
 
 #: src/views/Question.js:228
-#: src/views/SpecialQuiz/SpecialQuizDone.js:171
+#: src/views/SpecialQuiz/SpecialQuizDone.js:172
 msgid "Sim"
 msgstr "Sim"
+
+#: src/utils/getRegionTranslation.js:892
+msgid "Singapura"
+msgstr "Singapura"
 
 #: src/utils/getGenreTranslation.js:17
 msgid "Soc"
@@ -1698,9 +2342,17 @@ msgstr "Sociedade"
 msgid "Soma"
 msgstr "Soma"
 
+#: src/utils/getRegionTranslation.js:922
+msgid "Somália"
+msgstr "Somália"
+
 #: src/views/admin/nationalRanking/utils/options.js:22
 msgid "Squizzed"
 msgstr "Squizzed"
+
+#: src/utils/getRegionTranslation.js:612
+msgid "Sri Lanka"
+msgstr "Sri Lanka"
 
 #: src/views/NationalRanking/Player/RankChange.js:25
 msgid "Subiu"
@@ -1735,11 +2387,67 @@ msgstr "Subscrição p/ quizzes especiais"
 msgid "Subtema"
 msgstr "Subtema"
 
+#: src/utils/getRegionTranslation.js:882
+msgid "Sudão"
+msgstr "Sudão"
+
+#: src/utils/getRegionTranslation.js:932
+msgid "Sudão do Sul"
+msgstr "Sudão do Sul"
+
+#: src/utils/getRegionTranslation.js:927
+msgid "Suriname"
+msgstr "Suriname"
+
+#: src/utils/getRegionTranslation.js:887
+msgid "Suécia"
+msgstr "Suécia"
+
+#: src/utils/getRegionTranslation.js:267
+msgid "Suíça"
+msgstr "Suíça"
+
+#: src/utils/getRegionTranslation.js:567
+msgid "São Cristóvão e Nevis"
+msgstr "São Cristóvão e Nevis"
+
+#: src/utils/getRegionTranslation.js:937
+msgid "São Tomé e Príncipe"
+msgstr "São Tomé e Príncipe"
+
+#: src/utils/getRegionTranslation.js:1052
+msgid "São Vicente e Granadinas"
+msgstr "São Vicente e Granadinas"
+
+#: src/utils/getRegionTranslation.js:852
+msgid "Sérvia"
+msgstr "Sérvia"
+
+#: src/utils/getRegionTranslation.js:947
+msgid "Síria"
+msgstr "Síria"
+
 #: src/views/Quiz/QuizForm.js:469
 #: src/views/Quiz/QuizForm.js:530
-#: src/views/Statistics.js:272
+#: src/views/Statistics.js:279
 msgid "T"
 msgstr "T"
+
+#: src/utils/getRegionTranslation.js:967
+msgid "Tailândia"
+msgstr "Tailândia"
+
+#: src/utils/getRegionTranslation.js:1012
+msgid "Taiwan"
+msgstr "Taiwan"
+
+#: src/utils/getRegionTranslation.js:972
+msgid "Tajiquistão"
+msgstr "Tajiquistão"
+
+#: src/utils/getRegionTranslation.js:1017
+msgid "Tanzânia"
+msgstr "Tanzânia"
 
 #: src/utils/getGenreTranslation.js:38
 msgid "Teatro"
@@ -1755,7 +2463,7 @@ msgstr "Televisão"
 
 #: src/views/Quiz/QuizForm.js:458
 #: src/views/SpecialQuizzes.js:75
-#: src/views/Statistics.js:251
+#: src/views/Statistics.js:258
 #: src/views/admin/questions/Questions.js:216
 #: src/views/admin/specialQuizzes/SpecialQuizForm.js:188
 msgid "Tema"
@@ -1792,7 +2500,7 @@ msgstr "Temporada | Criar"
 msgid "Temporada | Editar"
 msgstr "Temporada | Editar"
 
-#: src/partials/Header.js:173
+#: src/partials/Header.js:175
 #: src/routes.js:235
 #: src/views/admin/seasons/Seasons.js:69
 msgid "Temporadas"
@@ -1851,6 +2559,10 @@ msgstr "Tens pontos por atribuir.<0/>Atribui-os antes de fazer a submissão."
 msgid "Texto"
 msgstr "Texto"
 
+#: src/utils/getRegionTranslation.js:977
+msgid "Timor-Leste"
+msgstr "Timor-Leste"
+
 #: src/views/admin/notifications/Notifications.js:84
 msgid "Tipo"
 msgstr "Tipo"
@@ -1863,13 +2575,21 @@ msgstr "Tipo de notificação"
 msgid "Todos"
 msgstr "Todos"
 
+#: src/utils/getRegionTranslation.js:962
+msgid "Togo"
+msgstr "Togo"
+
+#: src/utils/getRegionTranslation.js:992
+msgid "Tonga"
+msgstr "Tonga"
+
 #: src/views/SpecialQuiz/SpecialQuizDone.js:56
 msgid "Total"
 msgstr "Total"
 
 #: src/views/Quiz/QuizForm.js:466
 #: src/views/Quiz/QuizForm.js:527
-#: src/views/Statistics.js:270
+#: src/views/Statistics.js:277
 msgid "Total de respostas"
 msgstr "Total de respostas"
 
@@ -1902,6 +2622,10 @@ msgstr "Tradução gravada com sucesso."
 msgid "Transportes"
 msgstr "Transportes"
 
+#: src/utils/getRegionTranslation.js:1002
+msgid "Trinidade e Tobago"
+msgstr "Trinidade e Tobago"
+
 #: src/utils/getGenreTranslation.js:68
 msgid "Trivialidades"
 msgstr "Trivialidades"
@@ -1910,9 +2634,37 @@ msgstr "Trivialidades"
 msgid "Tudo"
 msgstr "Tudo"
 
+#: src/utils/getRegionTranslation.js:987
+msgid "Tunísia"
+msgstr "Tunísia"
+
 #: src/utils/getGenreTranslation.js:59
 msgid "Turismo"
 msgstr "Turismo"
+
+#: src/utils/getRegionTranslation.js:982
+msgid "Turquemenistão"
+msgstr "Turquemenistão"
+
+#: src/utils/getRegionTranslation.js:997
+msgid "Turquia"
+msgstr "Turquia"
+
+#: src/utils/getRegionTranslation.js:1007
+msgid "Tuvalu"
+msgstr "Tuvalu"
+
+#: src/utils/getRegionTranslation.js:1022
+msgid "Ucrânia"
+msgstr "Ucrânia"
+
+#: src/utils/getRegionTranslation.js:1027
+msgid "Uganda"
+msgstr "Uganda"
+
+#: src/utils/getRegionTranslation.js:1037
+msgid "Uruguai"
+msgstr "Uruguai"
 
 #: src/views/admin/questions/Questions.js:341
 msgid "Usada"
@@ -1926,11 +2678,15 @@ msgstr "Utilizador actualizado com sucesso."
 msgid "Utilizador registado com sucesso.<0/>Clica <1>aqui</1> e usa as tuas credenciais."
 msgstr "Utilizador registado com sucesso.<0/>Clica <1>aqui</1> e usa as tuas credenciais."
 
-#: src/partials/Header.js:162
+#: src/partials/Header.js:164
 #: src/routes.js:190
 #: src/views/admin/users/Users.js:98
 msgid "Utilizadores"
 msgstr "Utilizadores"
+
+#: src/utils/getRegionTranslation.js:1042
+msgid "Uzbequistão"
+msgstr "Uzbequistão"
 
 #: src/views/Ranking/TableHeader.js:94
 msgid "V"
@@ -1941,13 +2697,29 @@ msgstr "V"
 msgid "Validade da subscrição"
 msgstr "Validade da subscrição"
 
-#: src/partials/Header.js:286
+#: src/utils/getRegionTranslation.js:1067
+msgid "Vanuatu"
+msgstr "Vanuatu"
+
+#: src/utils/getRegionTranslation.js:1047
+msgid "Vaticano"
+msgstr "Vaticano"
+
+#: src/utils/getRegionTranslation.js:1057
+msgid "Venezuela"
+msgstr "Venezuela"
+
+#: src/partials/Header.js:289
 msgid "Versão {version}"
 msgstr "Versão {version}"
 
 #: src/utils/getRegionTranslation.js:92
 msgid "Viana do Castelo"
 msgstr "Viana do Castelo"
+
+#: src/utils/getRegionTranslation.js:1062
+msgid "Vietname"
+msgstr "Vietname"
 
 #: src/utils/getRegionTranslation.js:97
 msgid "Vila Real"
@@ -1966,6 +2738,14 @@ msgstr "Vitórias"
 #: src/views/NationalRanking.js:156
 msgid "Voltar à página inicial"
 msgstr "Voltar à página inicial"
+
+#: src/utils/getRegionTranslation.js:1092
+msgid "Zimbabwe"
+msgstr "Zimbabwe"
+
+#: src/utils/getRegionTranslation.js:1087
+msgid "Zâmbia"
+msgstr "Zâmbia"
 
 #: src/views/Account.js:291
 msgid "deixa em branco para não alterar"
@@ -2009,6 +2789,14 @@ msgstr "{0} {1} e {2} {3}"
 msgid "{0}ª divisão"
 msgstr "{0}ª divisão"
 
+#: src/utils/getRegionTranslation.js:1082
+msgid "África do Sul"
+msgstr "África do Sul"
+
+#: src/utils/getRegionTranslation.js:147
+msgid "Áustria"
+msgstr "Áustria"
+
 #: src/components/Error.js:16
 msgid "É necessário autenticares-te primeiro para aceder a esta página."
 msgstr "É necessário autenticares-te primeiro para aceder a esta página."
@@ -2016,6 +2804,10 @@ msgstr "É necessário autenticares-te primeiro para aceder a esta página."
 #: src/utils/getRegionTranslation.js:42
 msgid "Évora"
 msgstr "Évora"
+
+#: src/utils/getRegionTranslation.js:502
+msgid "Índia"
+msgstr "Índia"
 
 #: src/utils/getGenreTranslation.js:37
 msgid "Óperas e Musicais"

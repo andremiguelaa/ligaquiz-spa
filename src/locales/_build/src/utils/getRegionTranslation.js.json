@@ -158,5 +158,1589 @@
         102
       ]
     ]
+  },
+  "Andorra": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        107
+      ]
+    ]
+  },
+  "Emirados Árabes Unidos": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        112
+      ]
+    ]
+  },
+  "Afeganistão": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        117
+      ]
+    ]
+  },
+  "Antígua and Barbuda": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        122
+      ]
+    ]
+  },
+  "Albânia": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        127
+      ]
+    ]
+  },
+  "Arménia": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        132
+      ]
+    ]
+  },
+  "Angola": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        137
+      ]
+    ]
+  },
+  "Argentina": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        142
+      ]
+    ]
+  },
+  "Áustria": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        147
+      ]
+    ]
+  },
+  "Austrália": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        152
+      ]
+    ]
+  },
+  "Azerbaijão": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        157
+      ]
+    ]
+  },
+  "Bósnia e Herzegovina": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        162
+      ]
+    ]
+  },
+  "Barbados": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        167
+      ]
+    ]
+  },
+  "Bangladesh": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        172
+      ]
+    ]
+  },
+  "Bélgica": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        177
+      ]
+    ]
+  },
+  "Burkina Faso": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        182
+      ]
+    ]
+  },
+  "Bulgária": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        187
+      ]
+    ]
+  },
+  "Bahrein": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        192
+      ]
+    ]
+  },
+  "Burundi": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        197
+      ]
+    ]
+  },
+  "Benim": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        202
+      ]
+    ]
+  },
+  "Brunei": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        207
+      ]
+    ]
+  },
+  "Bolívia": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        212
+      ]
+    ]
+  },
+  "Brasil": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        217
+      ]
+    ]
+  },
+  "Bahamas": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        222
+      ]
+    ]
+  },
+  "Butão": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        227
+      ]
+    ]
+  },
+  "Botswana": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        232
+      ]
+    ]
+  },
+  "Bielorrússia": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        237
+      ]
+    ]
+  },
+  "Belize": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        242
+      ]
+    ]
+  },
+  "Canadá": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        247
+      ]
+    ]
+  },
+  "República Democrática do Congo": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        252
+      ]
+    ]
+  },
+  "República Centro-Africana": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        257
+      ]
+    ]
+  },
+  "República do Congo": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        262
+      ]
+    ]
+  },
+  "Suíça": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        267
+      ]
+    ]
+  },
+  "Costa do Marfim": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        272
+      ]
+    ]
+  },
+  "Chile": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        277
+      ]
+    ]
+  },
+  "Camarões": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        282
+      ]
+    ]
+  },
+  "China": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        287
+      ]
+    ]
+  },
+  "Colômbia": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        292
+      ]
+    ]
+  },
+  "Costa Rica": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        297
+      ]
+    ]
+  },
+  "Cuba": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        302
+      ]
+    ]
+  },
+  "Cabo Verde": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        307
+      ]
+    ]
+  },
+  "Chipre": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        312
+      ]
+    ]
+  },
+  "Chéquia": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        317
+      ]
+    ]
+  },
+  "Alemanha": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        322
+      ]
+    ]
+  },
+  "Djibuti": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        327
+      ]
+    ]
+  },
+  "Dinamarca": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        332
+      ]
+    ]
+  },
+  "Dominica": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        337
+      ]
+    ]
+  },
+  "República Dominicana": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        342
+      ]
+    ]
+  },
+  "Argélia": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        347
+      ]
+    ]
+  },
+  "Equador": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        352
+      ]
+    ]
+  },
+  "Estónia": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        357
+      ]
+    ]
+  },
+  "Egipto": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        362
+      ]
+    ]
+  },
+  "Saara Ocidental": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        367
+      ]
+    ]
+  },
+  "Eritreia": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        372
+      ]
+    ]
+  },
+  "Espanha": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        377
+      ]
+    ]
+  },
+  "Etiópia": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        382
+      ]
+    ]
+  },
+  "Finlândia": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        387
+      ]
+    ]
+  },
+  "Fiji": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        392
+      ]
+    ]
+  },
+  "Estados Federados da Micronésia": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        397
+      ]
+    ]
+  },
+  "França": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        402
+      ]
+    ]
+  },
+  "Gabão": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        407
+      ]
+    ]
+  },
+  "Reino Unido": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        412
+      ]
+    ]
+  },
+  "Granada": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        417
+      ]
+    ]
+  },
+  "Geórgia": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        422
+      ]
+    ]
+  },
+  "Gana": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        427
+      ]
+    ]
+  },
+  "Gâmbia": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        432
+      ]
+    ]
+  },
+  "Guiné": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        437
+      ]
+    ]
+  },
+  "Guiné Equatorial": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        442
+      ]
+    ]
+  },
+  "Grécia": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        447
+      ]
+    ]
+  },
+  "Guatemala": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        452
+      ]
+    ]
+  },
+  "Guiné-Bissau": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        457
+      ]
+    ]
+  },
+  "Guiana": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        462
+      ]
+    ]
+  },
+  "Honduras": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        467
+      ]
+    ]
+  },
+  "Croácia": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        472
+      ]
+    ]
+  },
+  "Haiti": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        477
+      ]
+    ]
+  },
+  "Hungria": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        482
+      ]
+    ]
+  },
+  "Indonésia": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        487
+      ]
+    ]
+  },
+  "Irlanda": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        492
+      ]
+    ]
+  },
+  "Israel": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        497
+      ]
+    ]
+  },
+  "Índia": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        502
+      ]
+    ]
+  },
+  "Iraque": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        507
+      ]
+    ]
+  },
+  "Irão": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        512
+      ]
+    ]
+  },
+  "Islândia": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        517
+      ]
+    ]
+  },
+  "Itália": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        522
+      ]
+    ]
+  },
+  "Jamaica": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        527
+      ]
+    ]
+  },
+  "Jordânia": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        532
+      ]
+    ]
+  },
+  "Japão": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        537
+      ]
+    ]
+  },
+  "Quénia": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        542
+      ]
+    ]
+  },
+  "Quirguistão": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        547
+      ]
+    ]
+  },
+  "Cambodja": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        552
+      ]
+    ]
+  },
+  "Kiribati": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        557
+      ]
+    ]
+  },
+  "Comoros": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        562
+      ]
+    ]
+  },
+  "São Cristóvão e Nevis": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        567
+      ]
+    ]
+  },
+  "Coreia do Norte": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        572
+      ]
+    ]
+  },
+  "Coreia do Sul": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        577
+      ]
+    ]
+  },
+  "Kuwait": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        582
+      ]
+    ]
+  },
+  "Cazaquistão": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        587
+      ]
+    ]
+  },
+  "Laos": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        592
+      ]
+    ]
+  },
+  "Líbano": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        597
+      ]
+    ]
+  },
+  "Santa Lúcia": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        602
+      ]
+    ]
+  },
+  "Liechtenstein": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        607
+      ]
+    ]
+  },
+  "Sri Lanka": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        612
+      ]
+    ]
+  },
+  "Libéria": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        617
+      ]
+    ]
+  },
+  "Lesoto": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        622
+      ]
+    ]
+  },
+  "Lituânia": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        627
+      ]
+    ]
+  },
+  "Luxemburgo": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        632
+      ]
+    ]
+  },
+  "Letónia": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        637
+      ]
+    ]
+  },
+  "Líbia": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        642
+      ]
+    ]
+  },
+  "Marrocos": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        647
+      ]
+    ]
+  },
+  "Mónaco": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        652
+      ]
+    ]
+  },
+  "Moldávia": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        657
+      ]
+    ]
+  },
+  "Montenegro": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        662
+      ]
+    ]
+  },
+  "Madagáscar": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        667
+      ]
+    ]
+  },
+  "Ilhas Marshall": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        672
+      ]
+    ]
+  },
+  "Macedónia do Norte": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        677
+      ]
+    ]
+  },
+  "Mali": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        682
+      ]
+    ]
+  },
+  "Myanmar": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        687
+      ]
+    ]
+  },
+  "Mongólia": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        692
+      ]
+    ]
+  },
+  "Mauritânia": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        697
+      ]
+    ]
+  },
+  "Malta": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        702
+      ]
+    ]
+  },
+  "Maurícia": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        707
+      ]
+    ]
+  },
+  "Maldivas": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        712
+      ]
+    ]
+  },
+  "Malawi": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        717
+      ]
+    ]
+  },
+  "México": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        722
+      ]
+    ]
+  },
+  "Malásia": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        727
+      ]
+    ]
+  },
+  "Moçambique": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        732
+      ]
+    ]
+  },
+  "Namíbia": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        737
+      ]
+    ]
+  },
+  "Níger": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        742
+      ]
+    ]
+  },
+  "Nigéria": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        747
+      ]
+    ]
+  },
+  "Nicarágua": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        752
+      ]
+    ]
+  },
+  "Países Baixos": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        757
+      ]
+    ]
+  },
+  "Noruega": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        762
+      ]
+    ]
+  },
+  "Nepal": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        767
+      ]
+    ]
+  },
+  "Nauru": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        772
+      ]
+    ]
+  },
+  "Niue": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        777
+      ]
+    ]
+  },
+  "Nova Zelândia": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        782
+      ]
+    ]
+  },
+  "Omã": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        787
+      ]
+    ]
+  },
+  "Panamá": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        792
+      ]
+    ]
+  },
+  "Peru": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        797
+      ]
+    ]
+  },
+  "Papua-Nova Guiné": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        802
+      ]
+    ]
+  },
+  "Filipinas": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        807
+      ]
+    ]
+  },
+  "Paquistão": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        812
+      ]
+    ]
+  },
+  "Polónia": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        817
+      ]
+    ]
+  },
+  "Palestina": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        822
+      ]
+    ]
+  },
+  "Portugal": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        827
+      ]
+    ]
+  },
+  "Palau": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        832
+      ]
+    ]
+  },
+  "Paraguai": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        837
+      ]
+    ]
+  },
+  "Qatar": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        842
+      ]
+    ]
+  },
+  "Roménia": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        847
+      ]
+    ]
+  },
+  "Sérvia": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        852
+      ]
+    ]
+  },
+  "Rússia": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        857
+      ]
+    ]
+  },
+  "Ruanda": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        862
+      ]
+    ]
+  },
+  "Arábia Saudita": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        867
+      ]
+    ]
+  },
+  "Ilhas Salomão": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        872
+      ]
+    ]
+  },
+  "Seicheles": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        877
+      ]
+    ]
+  },
+  "Sudão": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        882
+      ]
+    ]
+  },
+  "Suécia": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        887
+      ]
+    ]
+  },
+  "Singapura": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        892
+      ]
+    ]
+  },
+  "Eslovénia": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        897
+      ]
+    ]
+  },
+  "Eslováquia": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        902
+      ]
+    ]
+  },
+  "Serra Leoa": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        907
+      ]
+    ]
+  },
+  "San Marino": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        912
+      ]
+    ]
+  },
+  "Senegal": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        917
+      ]
+    ]
+  },
+  "Somália": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        922
+      ]
+    ]
+  },
+  "Suriname": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        927
+      ]
+    ]
+  },
+  "Sudão do Sul": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        932
+      ]
+    ]
+  },
+  "São Tomé e Príncipe": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        937
+      ]
+    ]
+  },
+  "El Salvador": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        942
+      ]
+    ]
+  },
+  "Síria": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        947
+      ]
+    ]
+  },
+  "Essuatíni": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        952
+      ]
+    ]
+  },
+  "Chade": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        957
+      ]
+    ]
+  },
+  "Togo": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        962
+      ]
+    ]
+  },
+  "Tailândia": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        967
+      ]
+    ]
+  },
+  "Tajiquistão": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        972
+      ]
+    ]
+  },
+  "Timor-Leste": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        977
+      ]
+    ]
+  },
+  "Turquemenistão": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        982
+      ]
+    ]
+  },
+  "Tunísia": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        987
+      ]
+    ]
+  },
+  "Tonga": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        992
+      ]
+    ]
+  },
+  "Turquia": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        997
+      ]
+    ]
+  },
+  "Trinidade e Tobago": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        1002
+      ]
+    ]
+  },
+  "Tuvalu": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        1007
+      ]
+    ]
+  },
+  "Taiwan": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        1012
+      ]
+    ]
+  },
+  "Tanzânia": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        1017
+      ]
+    ]
+  },
+  "Ucrânia": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        1022
+      ]
+    ]
+  },
+  "Uganda": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        1027
+      ]
+    ]
+  },
+  "Estados Unidos da América": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        1032
+      ]
+    ]
+  },
+  "Uruguai": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        1037
+      ]
+    ]
+  },
+  "Uzbequistão": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        1042
+      ]
+    ]
+  },
+  "Vaticano": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        1047
+      ]
+    ]
+  },
+  "São Vicente e Granadinas": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        1052
+      ]
+    ]
+  },
+  "Venezuela": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        1057
+      ]
+    ]
+  },
+  "Vietname": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        1062
+      ]
+    ]
+  },
+  "Vanuatu": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        1067
+      ]
+    ]
+  },
+  "Samoa": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        1072
+      ]
+    ]
+  },
+  "Iémen": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        1077
+      ]
+    ]
+  },
+  "África do Sul": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        1082
+      ]
+    ]
+  },
+  "Zâmbia": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        1087
+      ]
+    ]
+  },
+  "Zimbabwe": {
+    "origin": [
+      [
+        "src/utils/getRegionTranslation.js",
+        1092
+      ]
+    ]
   }
 }
