@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 import classnames from 'classnames';
 import useDeepCompareEffect from 'use-deep-compare-effect';
+import { toast } from 'react-toastify';
 
 import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
@@ -15,9 +16,20 @@ import Markdown from 'components/Markdown';
 import PaginatedTable from 'components/PaginatedTable';
 import { getGenreTranslation } from 'utils/getGenreTranslation';
 
-import classes from './Questions.module.scss';
+import classes from './ExternalQuestions.module.scss';
 
-const Questions = () => {
+const genres = [
+  'culture',
+  'entertainment',
+  'history',
+  'lifestyle',
+  'media',
+  'sport',
+  'science',
+  'world',
+];
+
+const ExternalQuestions = () => {
   const history = useHistory();
   const location = useLocation();
   const [
@@ -27,7 +39,6 @@ const Questions = () => {
     },
   ] = useStateValue();
   const [error, setError] = useState(false);
-  const [genres, setGenres] = useState();
   const [questions, setQuestions] = useState();
   const [query, setQuery] = useState('');
   const [searchField, setSearchField] = useState('');
@@ -40,70 +51,47 @@ const Questions = () => {
     genre: undefined,
     page: undefined,
   });
+  const [saving, setSaving] = useState();
 
   useEffect(() => {
-    ApiRequest.get(`genres`)
-      .then(({ data }) => {
-        setGenres(data);
-      })
-      .catch(({ response }) => {
-        setError(response?.status);
-      });
-  }, []);
-
-  useEffect(() => {
-    if (genres) {
-      const params = new URLSearchParams(location.search);
-      if (params.get('genre')) {
-        const paramGenre = genres.find(
-          (item) => item.id === parseInt(params.get('genre'))
-        );
-        if (!paramGenre) {
-          genres.forEach((item) => {
-            const subgenre = item.subgenres.find(
-              (item) => item.id === parseInt(params.get('genre'))
-            );
-            if (subgenre) {
-              setSelectedGenre(item.id.toString());
-              setSelectedSubgenre(subgenre.id.toString());
-            }
-          });
-        } else {
-          setSelectedGenre(paramGenre.id.toString());
-        }
-        setHistoryParams((prev) => ({ ...prev, genre: params.get('genre') }));
-      } else {
-        setSelectedGenre('');
-        setSelectedSubgenre('');
+    const params = new URLSearchParams(location.search);
+    if (params.get('genre')) {
+      const paramGenre = genres.find((item) => item === params.get('genre'));
+      if (paramGenre) {
+        setSelectedGenre(paramGenre);
       }
-      if (params.get('search')) {
-        setQuery(params.get('search'));
-        setHistoryParams((prev) => ({ ...prev, search: params.get('search') }));
-      } else {
-        setQuery('');
-      }
-      if (params.get('search_field')) {
-        setSearchField(params.get('search_field'));
-        setHistoryParams((prev) => ({
-          ...prev,
-          searchField: params.get('search_field'),
-        }));
-      } else {
-        setSearchField('');
-      }
-      if (params.get('page')) {
-        setPage(params.get('page'));
-        setHistoryParams((prev) => ({ ...prev, page: params.get('page') }));
-      } else {
-        setPage(1);
-      }
+      setHistoryParams((prev) => ({ ...prev, genre: params.get('genre') }));
+    } else {
+      setSelectedGenre('');
+      setSelectedSubgenre('');
     }
-  }, [location.search, genres]);
+    if (params.get('search')) {
+      setQuery(params.get('search'));
+      setHistoryParams((prev) => ({ ...prev, search: params.get('search') }));
+    } else {
+      setQuery('');
+    }
+    if (params.get('search_field')) {
+      setSearchField(params.get('search_field'));
+      setHistoryParams((prev) => ({
+        ...prev,
+        searchField: params.get('search_field'),
+      }));
+    } else {
+      setSearchField('');
+    }
+    if (params.get('page')) {
+      setPage(params.get('page'));
+      setHistoryParams((prev) => ({ ...prev, page: params.get('page') }));
+    } else {
+      setPage(1);
+    }
+  }, [location.search]);
 
   useEffect(() => {
-    if (genres && location.search) {
+    if (location.search) {
       setQuestions();
-      ApiRequest.get(`questions${location.search}`)
+      ApiRequest.get(`external-questions${location.search}`)
         .then(({ data }) => {
           setQuestions(data);
         })
@@ -111,15 +99,15 @@ const Questions = () => {
           setError(response?.status);
         });
     }
-  }, [genres, location.search]);
+  }, [location.search]);
 
   useDeepCompareEffect(() => {
     history.push(
-      `/admin/questions?search=${historyParams.search || ''}&search_field=${
-        historyParams.searchField || ''
-      }${historyParams.genre ? `&genre=${historyParams.genre}` : ''}${
-        historyParams.page ? `&page=${historyParams.page}` : ''
-      }`
+      `/admin/external-questions?search=${
+        historyParams.search || ''
+      }&search_field=${historyParams.searchField || ''}${
+        historyParams.genre ? `&genre=${historyParams.genre}` : ''
+      }${historyParams.page ? `&page=${historyParams.page}` : ''}`
     );
   }, [history, historyParams]);
 
@@ -127,13 +115,7 @@ const Questions = () => {
     return <Error status={401} />;
   }
 
-  if (
-    !(
-      user.valid_roles.admin ||
-      user.valid_roles.quiz_editor ||
-      user.valid_roles.translator
-    )
-  ) {
+  if (!(user.valid_roles.admin || user.valid_roles.quiz_editor)) {
     return <Error status={403} />;
   }
 
@@ -145,13 +127,37 @@ const Questions = () => {
     return <Loading />;
   }
 
-  const genreSubgenres =
-    selectedGenre &&
-    genres.find((genre) => genre.id.toString() === selectedGenre).subgenres;
+  const updateItem = (data) => {
+    setSaving(true);
+    ApiRequest.patch(`external-questions`, data)
+      .then(() => {
+        setQuestions((prev) => {
+          const newData = prev.data.map((item) => {
+            if (item.id === data.id) {
+              return {
+                ...item,
+                used: data.used,
+              };
+            }
+            return item;
+          });
+          return {
+            ...prev,
+            data: newData,
+          };
+        });
+      })
+      .catch(() => {
+        toast.error(<Trans>Não foi possível alterar o estado.</Trans>);
+      })
+      .finally(() => {
+        setSaving(false);
+      });
+  };
 
   return (
     <>
-      <PageHeader title={<Trans>Pesquisa de perguntas</Trans>} />
+      <PageHeader title={<Trans>Pesquisa de perguntas externas</Trans>} />
       <section className={classnames('section', classes.questions)}>
         <form
           onSubmit={(event) => {
@@ -193,8 +199,8 @@ const Questions = () => {
                 <input
                   type="radio"
                   name="searchBy"
-                  value="content"
-                  checked={searchField === 'content'}
+                  value="formulation"
+                  checked={searchField === 'formulation'}
                   onChange={(event) => setSearchField(event.target.value)}
                 />
                 <Trans>Enunciado</Trans>
@@ -228,8 +234,8 @@ const Questions = () => {
                     {getGenreTranslation('all', language)}
                   </option>
                   {genres.map((genre) => (
-                    <option value={genre.id} key={genre.slug}>
-                      {getGenreTranslation(genre.slug, language)}
+                    <option value={genre} key={genre}>
+                      {genre}
                     </option>
                   ))}
                 </select>
@@ -238,36 +244,6 @@ const Questions = () => {
                 <i className="fa fa-book"></i>
               </div>
             </div>
-            {genreSubgenres && genreSubgenres.length > 1 && (
-              <>
-                <label className={classnames('label', classes.label)}>
-                  <Trans>Subtema</Trans>
-                </label>
-                <div className="control has-icons-left">
-                  <div className="select">
-                    <select
-                      value={selectedSubgenre}
-                      onChange={(event) => {
-                        setSelectedSubgenre(event.target.value);
-                      }}
-                    >
-                      <option value="">
-                        {getGenreTranslation('all', language)}
-                      </option>
-                      {genreSubgenres &&
-                        genreSubgenres.map((subgenre) => (
-                          <option value={subgenre.id} key={subgenre.slug}>
-                            {getGenreTranslation(subgenre.slug, language)}
-                          </option>
-                        ))}
-                    </select>
-                  </div>
-                  <div className="icon is-small is-left">
-                    <i className="fa fa-book"></i>
-                  </div>
-                </div>
-              </>
-            )}
             <div className={classnames('control', classes.control)}>
               <button className="button is-primary">
                 <Trans>Pesquisar</Trans>
@@ -283,11 +259,11 @@ const Questions = () => {
             initialPage={page}
             columns={[
               {
-                id: 'content',
+                id: 'formulation',
                 label: <Trans>Enunciado</Trans>,
                 render: (item) => (
                   <div className="content">
-                    <Markdown content={item.content} />
+                    <Markdown content={item.formulation} />
                   </div>
                 ),
                 className: `${classes.question} ${
@@ -301,42 +277,12 @@ const Questions = () => {
                 className: classes.answer,
               },
               {
-                id: 'quiz',
-                label: <Trans>Quiz</Trans>,
-                render: (item) => (
-                  <>
-                    {item.quiz?.type === 'quiz' ? (
-                      <Link to={`/quiz/${item.quiz?.date}`}>
-                        <Trans>Quiz</Trans> {item.quiz?.date}
-                      </Link>
-                    ) : (
-                      <Link to={`/special-quiz/${item.quiz?.date}`}>
-                        <Trans>Quiz especial</Trans> ({item.quiz?.date})
-                      </Link>
-                    )}
-                  </>
-                ),
-                className: classes.quiz,
+                id: 'origin',
+                label: <Trans>Origem</Trans>,
+                render: (item) => item.origin,
+                className: classes.origin,
               },
-              (user.valid_roles.admin || user.valid_roles.translator) && {
-                id: 'translated',
-                label: <Trans>Traduzida</Trans>,
-                className: classes.translated,
-                render: (item) => (
-                  <>
-                    {item.translated ? (
-                      <span className="icon has-text-success">
-                        <i className="fa fa-lg fa-check-circle"></i>
-                      </span>
-                    ) : (
-                      <span className="icon has-text-danger">
-                        <i className="fa fa-lg fa-times-circle"></i>
-                      </span>
-                    )}
-                  </>
-                ),
-              },
-              user.valid_roles.admin && {
+              {
                 id: 'used',
                 label: <Trans>Usada</Trans>,
                 className: classes.used,
@@ -354,21 +300,47 @@ const Questions = () => {
                   </>
                 ),
               },
-              (user.valid_roles.admin || user.valid_roles.translator) && {
+              {
                 id: 'actions',
-                label: <Trans>Acções</Trans>,
-                render: (item) =>
-                  !(
-                    user.valid_roles.translator && item.translator !== user.id
-                  ) || !item.translated ? (
-                    <Link className="button" to={`/admin/translate/${item.id}`}>
+                label: <Trans>Alterar estado</Trans>,
+                render: (item) => (
+                  <div
+                    className={classnames(
+                      'buttons',
+                      'has-addons',
+                      classes.buttons
+                    )}
+                  >
+                    <button
+                      className={classnames('button', {
+                        'is-success': !item.used,
+                      })}
+                      disabled={item.used || saving}
+                      type="button"
+                      onClick={() => {
+                        updateItem({ id: item.id, used: true });
+                      }}
+                    >
                       <span className="icon">
-                        <i className="fa fa-language"></i>
+                        <i className="fa fa-check"></i>
                       </span>
-                    </Link>
-                  ) : (
-                    ''
-                  ),
+                    </button>
+                    <button
+                      className={classnames('button', {
+                        'is-danger': item.used,
+                      })}
+                      disabled={!item.used || saving}
+                      type="button"
+                      onClick={() => {
+                        updateItem({ id: item.id, used: false });
+                      }}
+                    >
+                      <span className="icon">
+                        <i className="fa fa-times"></i>
+                      </span>
+                    </button>
+                  </div>
+                ),
                 className: classes.actions,
               },
             ].filter(Boolean)}
@@ -393,4 +365,4 @@ const Questions = () => {
   );
 };
 
-export default Questions;
+export default ExternalQuestions;

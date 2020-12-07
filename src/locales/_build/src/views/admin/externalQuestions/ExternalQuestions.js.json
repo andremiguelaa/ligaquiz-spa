@@ -1,0 +1,106 @@
+{
+  "Não foi possível alterar o estado.": {
+    "origin": [
+      [
+        "src/views/admin/externalQuestions/ExternalQuestions.js",
+        151
+      ]
+    ]
+  },
+  "Pesquisa de perguntas externas": {
+    "origin": [
+      [
+        "src/views/admin/externalQuestions/ExternalQuestions.js",
+        160
+      ]
+    ]
+  },
+  "Texto": {
+    "origin": [
+      [
+        "src/views/admin/externalQuestions/ExternalQuestions.js",
+        177
+      ]
+    ]
+  },
+  "Tudo": {
+    "origin": [
+      [
+        "src/views/admin/externalQuestions/ExternalQuestions.js",
+        196
+      ]
+    ]
+  },
+  "Enunciado": {
+    "origin": [
+      [
+        "src/views/admin/externalQuestions/ExternalQuestions.js",
+        206
+      ],
+      [
+        "src/views/admin/externalQuestions/ExternalQuestions.js",
+        263
+      ]
+    ]
+  },
+  "Resposta": {
+    "origin": [
+      [
+        "src/views/admin/externalQuestions/ExternalQuestions.js",
+        216
+      ],
+      [
+        "src/views/admin/externalQuestions/ExternalQuestions.js",
+        275
+      ]
+    ]
+  },
+  "Tema": {
+    "origin": [
+      [
+        "src/views/admin/externalQuestions/ExternalQuestions.js",
+        222
+      ]
+    ]
+  },
+  "Pesquisar": {
+    "origin": [
+      [
+        "src/views/admin/externalQuestions/ExternalQuestions.js",
+        249
+      ]
+    ]
+  },
+  "Origem": {
+    "origin": [
+      [
+        "src/views/admin/externalQuestions/ExternalQuestions.js",
+        281
+      ]
+    ]
+  },
+  "Usada": {
+    "origin": [
+      [
+        "src/views/admin/externalQuestions/ExternalQuestions.js",
+        287
+      ]
+    ]
+  },
+  "Alterar estado": {
+    "origin": [
+      [
+        "src/views/admin/externalQuestions/ExternalQuestions.js",
+        305
+      ]
+    ]
+  },
+  "Sem registos": {
+    "origin": [
+      [
+        "src/views/admin/externalQuestions/ExternalQuestions.js",
+        360
+      ]
+    ]
+  }
+}

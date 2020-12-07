@@ -13,7 +13,7 @@ import logo from 'img/logo.png';
 import logoDark from 'img/logo-dark.png';
 import classes from './Header.module.scss';
 
-const version = '4.9.1';
+const version = '4.10.0';
 
 const isDarkMode =
   window.matchMedia &&
@@ -211,6 +211,13 @@ const Header = () => {
                             <Link to="/admin/questions" className="navbar-item">
                               <i className="fa fa-btn fa-search" />
                               &nbsp;<Trans>Pesquisa de perguntas</Trans>
+                            </Link>
+                          )}
+                          {(user.valid_roles.admin ||
+                            user.valid_roles.quiz_editor) && (
+                            <Link to="/admin/external-questions" className="navbar-item">
+                              <i className="fa fa-btn fa-search" />
+                              &nbsp;<Trans>Pesquisa de perguntas externas</Trans>
                             </Link>
                           )}
                           <hr className="navbar-divider" />

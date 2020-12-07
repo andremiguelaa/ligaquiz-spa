@@ -127,15 +127,15 @@
       ]
     ]
   },
-  "Gestão de Ranking Nacional": {
+  "Pesquisa de perguntas externas": {
     "origin": [
       [
         "src/partials/Header.js",
-        224
+        220
       ]
     ]
   },
-  "Rankings mensais": {
+  "Gestão de Ranking Nacional": {
     "origin": [
       [
         "src/partials/Header.js",
@@ -143,7 +143,7 @@
       ]
     ]
   },
-  "Provas mensais": {
+  "Rankings mensais": {
     "origin": [
       [
         "src/partials/Header.js",
@@ -151,7 +151,7 @@
       ]
     ]
   },
-  "Jogadores": {
+  "Provas mensais": {
     "origin": [
       [
         "src/partials/Header.js",
@@ -159,7 +159,7 @@
       ]
     ]
   },
-  "Conta": {
+  "Jogadores": {
     "origin": [
       [
         "src/partials/Header.js",
@@ -167,11 +167,19 @@
       ]
     ]
   },
+  "Conta": {
+    "origin": [
+      [
+        "src/partials/Header.js",
+        259
+      ]
+    ]
+  },
   "Rankings temáticos": {
     "origin": [
       [
         "src/partials/Header.js",
-        260
+        267
       ]
     ]
   },
@@ -179,7 +187,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        264
+        271
       ]
     ]
   },
@@ -187,7 +195,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        268
+        275
       ]
     ]
   },
@@ -195,7 +203,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        279
+        286
       ]
     ]
   },
@@ -203,7 +211,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        285
+        292
       ]
     ]
   },
@@ -211,7 +219,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        289
+        296
       ]
     ]
   }

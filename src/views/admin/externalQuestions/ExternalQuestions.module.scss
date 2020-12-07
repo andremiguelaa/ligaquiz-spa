@@ -45,16 +45,20 @@
   .answer {
     width: 200px;
   }
-  .quiz {
-    min-width: 200px;
+  .origin{
+    width: 200px;
   }
-  .actions,
-  .translated,
+  th.actions,
   .used {
     text-align: center;
   }
-  td.translated,
   td.used {
     line-height: 35px;
+  }
+  td.actions {
+    min-width: 125px;
+  }
+  .buttons {
+    justify-content: center;
   }
 }

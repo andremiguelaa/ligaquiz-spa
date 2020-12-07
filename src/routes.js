@@ -38,6 +38,7 @@ import SpecialQuizCorrect from 'views/admin/specialQuizzes/SpecialQuizCorrect';
 import SeasonsAdmin from 'views/admin/seasons/Seasons';
 import SeasonForm from 'views/admin/seasons/SeasonForm';
 import Questions from 'views/admin/questions/Questions';
+import ExternalQuestions from 'views/admin/externalQuestions/ExternalQuestions';
 import Translate from 'views/admin/translate/Translate';
 
 import NoMatch from 'components/NoMatch';
@@ -250,6 +251,11 @@ export default [
     title: <Trans>Pesquisa de perguntas</Trans>,
     path: '/admin/questions',
     component: Questions,
+  },
+  {
+    title: <Trans>Pesquisa de perguntas externas</Trans>,
+    path: '/admin/external-questions',
+    component: ExternalQuestions,
   },
   {
     title: <Trans>Pergunta | Traduzir</Trans>,
