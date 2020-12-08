@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useHistory, useLocation } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 import { omit, range } from 'lodash';
 import classames from 'classnames';
@@ -15,6 +16,7 @@ import Error from 'components/Error';
 import ApiRequest from 'utils/ApiRequest';
 import { formatDate, convertToLongMonth } from 'utils/formatDate';
 import Avatar from './Account/Avatar';
+import PayPal from './Account/PayPal';
 
 const Account = () => {
   const [
@@ -24,6 +26,8 @@ const Account = () => {
     },
     dispatch,
   ] = useStateValue();
+  const history = useHistory();
+  const location = useLocation();
   const [regions, setRegions] = useState();
   const [error, setError] = useState(null);
   const [submitting, setSubmitting] = useState(false);
@@ -38,6 +42,7 @@ const Account = () => {
     password2: '',
     reminders: user?.reminders,
   });
+  const [renewing, setRenewing] = useState(false);
 
   useEffect(() => {
     ApiRequest.get(`regions`)
@@ -49,6 +54,33 @@ const Account = () => {
       });
   }, []);
 
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    if (params.get('token')) {
+      setRenewing(true);
+      ApiRequest.post(`payment/check`, { token: params.get('token') })
+        .then(({ data }) => {
+          if (data.status === 'COMPLETED') {
+            toast.success(<Trans>Subscrição renovada com sucesso.</Trans>);
+            dispatch({
+              type: 'user.patch',
+              payload: data.user,
+            });
+          }
+          if (data.status === 'CREATED') {
+            toast.warning(<Trans>O pagamento não foi bem sucedido.</Trans>);
+          }
+          history.push('/account');
+        })
+        .catch(() => {
+          toast.error(<Trans>Não foi possível renovar a subscrição.</Trans>);
+        })
+        .finally(() => {
+          setRenewing(false);
+        });
+    }
+  }, [history, dispatch, location.search]);
+
   if (!user) {
     return <Error status={401} />;
   }
@@ -57,7 +89,7 @@ const Account = () => {
     return <Error status={error} />;
   }
 
-  if (!regions) {
+  if (!regions || renewing) {
     return <Loading />;
   }
 
@@ -452,7 +484,9 @@ const Account = () => {
               <>
                 <hr />
                 <div>
-                  <div className="label">Validade da subscrição</div>
+                  <div className="label">
+                    <Trans>Validade da subscrição</Trans>
+                  </div>
                   <div>
                     {convertToLongDate(
                       user.roles.regular_player ||
@@ -460,6 +494,24 @@ const Account = () => {
                       language
                     )}
                   </div>
+                </div>
+              </>
+            )}
+            {process.env.REACT_APP_PAYPAL === 'true' && (
+              <>
+                <hr />
+                <div>
+                  <div className="label">
+                    <Trans>Renovação da subscrição via Paypal</Trans>
+                  </div>
+                  <PayPal />
+                  <p>
+                    <Trans>
+                      Se preferires fazer a renovação em mão, através de
+                      transferência bancária ou por MB WAY, vê como{' '}
+                      <Link to="/rules#subscription">aqui</Link>
+                    </Trans>
+                  </p>
                 </div>
               </>
             )}

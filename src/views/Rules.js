@@ -315,6 +315,9 @@ const Rules = () => {
             <li>
               Por MB WAY usando o seguinte número: <strong>916682562</strong>
             </li>
+            <li>
+              Por Paypal na <a href="/account">página da tua conta</a> (ainda não disponível)
+            </li>
           </ul>
           <p>
             O prazo limite de pagamento para uma determinada temporada será o

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useHistory, useLocation } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 import classnames from 'classnames';
 import useDeepCompareEffect from 'use-deep-compare-effect';
