@@ -45,7 +45,7 @@ import NoMatch from 'components/NoMatch';
 
 export default [
   {
-    title: <Trans>Liga Quiz</Trans>,
+    title: process.env.REACT_APP_NAME,
     path: '/',
     component: Home,
   },

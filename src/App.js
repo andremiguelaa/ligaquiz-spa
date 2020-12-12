@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Switch } from 'react-router-dom';
-import { I18nProvider, I18n } from '@lingui/react';
-import { t, Trans } from '@lingui/macro';
+import { I18nProvider } from '@lingui/react';
+import { Trans } from '@lingui/macro';
 import { ToastContainer, toast } from 'react-toastify';
 import { registerLocale, setDefaultLocale } from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
@@ -57,31 +57,25 @@ const App = () => {
           <main className="section">
             <div className="container">
               {online ? (
-                <I18n>
-                  {({ i18n }) => (
-                    <Switch>
-                      {routes.map((route) => {
-                        const title =
-                          route.path === '/'
-                            ? catalogs[language].messages[route.title.props.id]
-                            : `${i18n._(t`Liga Quiz`)} | ${
-                                catalogs[language].messages[
-                                  route.title.props.id
-                                ]
-                              }`;
-                        const newProps = {
-                          ...route,
-                          title,
-                          exact: !!route.path && !route.loose,
-                        };
-                        if (user && user.valid_roles.blocked && !route.free) {
-                          newProps.component = Blocked;
-                        }
-                        return <RouteWithTitle key={title} {...newProps} />;
-                      })}
-                    </Switch>
-                  )}
-                </I18n>
+                <Switch>
+                  {routes.map((route) => {
+                    const title =
+                      route.path === '/'
+                        ? process.env.REACT_APP_NAME
+                        : `${process.env.REACT_APP_NAME} | ${
+                            catalogs[language].messages[route.title.props.id]
+                          }`;
+                    const newProps = {
+                      ...route,
+                      title,
+                      exact: !!route.path && !route.loose,
+                    };
+                    if (user && user.valid_roles.blocked && !route.free) {
+                      newProps.component = Blocked;
+                    }
+                    return <RouteWithTitle key={title} {...newProps} />;
+                  })}
+                </Switch>
               ) : (
                 <Error status={666} />
               )}
