@@ -15,19 +15,11 @@
       ]
     ]
   },
-  "Liga Quiz": {
-    "origin": [
-      [
-        "src/views/StatisticsComparison.js",
-        201
-      ]
-    ]
-  },
   "Jogos": {
     "origin": [
       [
         "src/views/StatisticsComparison.js",
-        281
+        283
       ]
     ]
   },
@@ -35,11 +27,11 @@
     "origin": [
       [
         "src/views/StatisticsComparison.js",
-        288
+        290
       ],
       [
         "src/views/StatisticsComparison.js",
-        301
+        303
       ]
     ]
   },
@@ -47,7 +39,7 @@
     "origin": [
       [
         "src/views/StatisticsComparison.js",
-        313
+        315
       ]
     ]
   },
@@ -55,11 +47,11 @@
     "origin": [
       [
         "src/views/StatisticsComparison.js",
-        326
+        328
       ],
       [
         "src/views/StatisticsComparison.js",
-        333
+        335
       ]
     ]
   },
@@ -67,7 +59,7 @@
     "origin": [
       [
         "src/views/StatisticsComparison.js",
-        352
+        354
       ]
     ]
   },
@@ -75,7 +67,7 @@
     "origin": [
       [
         "src/views/StatisticsComparison.js",
-        355
+        357
       ]
     ]
   }

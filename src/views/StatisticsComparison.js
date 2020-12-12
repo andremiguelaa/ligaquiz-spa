@@ -197,9 +197,11 @@ const Statistics = () => {
         }
       />
       <section className="section content">
-        <h1 className="has-text-weight-bold is-size-4">
-          <Trans>Liga Quiz</Trans>
-        </h1>
+        {process.env.REACT_APP_NATIONAL_RANKING === 'true' && (
+          <h1 className="has-text-weight-bold is-size-4">
+            {process.env.REACT_APP_NAME}
+          </h1>
+        )}
         <div className={classes.chart}>
           <Radar
             data={{

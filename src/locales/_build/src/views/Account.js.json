@@ -1,29 +1,29 @@
 {
+  "Subscrição renovada com sucesso.": {
+    "origin": [
+      [
+        "src/views/Account.js",
+        64
+      ]
+    ]
+  },
+  "O pagamento não foi bem sucedido.": {
+    "origin": [
+      [
+        "src/views/Account.js",
+        71
+      ]
+    ]
+  },
+  "Não foi possível renovar a subscrição.": {
+    "origin": [
+      [
+        "src/views/Account.js",
+        76
+      ]
+    ]
+  },
   "Perfil actualizado com sucesso.": {
-    "origin": [
-      [
-        "src/views/Account.js",
-        78
-      ]
-    ]
-  },
-  "Não foi possível actualizar o perfil.": {
-    "origin": [
-      [
-        "src/views/Account.js",
-        90
-      ]
-    ]
-  },
-  "Conta": {
-    "origin": [
-      [
-        "src/views/Account.js",
-        103
-      ]
-    ]
-  },
-  "Nome": {
     "origin": [
       [
         "src/views/Account.js",
@@ -31,11 +31,35 @@
       ]
     ]
   },
+  "Não foi possível actualizar o perfil.": {
+    "origin": [
+      [
+        "src/views/Account.js",
+        122
+      ]
+    ]
+  },
+  "Conta": {
+    "origin": [
+      [
+        "src/views/Account.js",
+        135
+      ]
+    ]
+  },
+  "Nome": {
+    "origin": [
+      [
+        "src/views/Account.js",
+        142
+      ]
+    ]
+  },
   "Apelido": {
     "origin": [
       [
         "src/views/Account.js",
-        133
+        165
       ]
     ]
   },
@@ -43,7 +67,7 @@
     "origin": [
       [
         "src/views/Account.js",
-        157
+        189
       ]
     ]
   },
@@ -51,7 +75,7 @@
     "origin": [
       [
         "src/views/Account.js",
-        229
+        261
       ]
     ]
   },
@@ -59,7 +83,7 @@
     "origin": [
       [
         "src/views/Account.js",
-        258
+        290
       ]
     ]
   },
@@ -67,7 +91,7 @@
     "origin": [
       [
         "src/views/Account.js",
-        284
+        316
       ]
     ]
   },
@@ -75,7 +99,7 @@
     "origin": [
       [
         "src/views/Account.js",
-        290
+        322
       ]
     ]
   },
@@ -83,7 +107,7 @@
     "origin": [
       [
         "src/views/Account.js",
-        291
+        323
       ]
     ]
   },
@@ -91,7 +115,7 @@
     "origin": [
       [
         "src/views/Account.js",
-        314
+        346
       ]
     ]
   },
@@ -99,7 +123,7 @@
     "origin": [
       [
         "src/views/Account.js",
-        358
+        390
       ]
     ]
   },
@@ -107,7 +131,7 @@
     "origin": [
       [
         "src/views/Account.js",
-        379
+        411
       ]
     ]
   },
@@ -115,7 +139,7 @@
     "origin": [
       [
         "src/views/Account.js",
-        406
+        438
       ]
     ]
   },
@@ -123,7 +147,7 @@
     "origin": [
       [
         "src/views/Account.js",
-        427
+        459
       ]
     ]
   },
@@ -131,7 +155,31 @@
     "origin": [
       [
         "src/views/Account.js",
-        442
+        474
+      ]
+    ]
+  },
+  "Validade da subscrição": {
+    "origin": [
+      [
+        "src/views/Account.js",
+        488
+      ]
+    ]
+  },
+  "Renovação da subscrição via Paypal": {
+    "origin": [
+      [
+        "src/views/Account.js",
+        505
+      ]
+    ]
+  },
+  "Se preferires fazer a renovação em mão, através de transferência bancária ou por MB WAY, vê como <0>aqui</0>": {
+    "origin": [
+      [
+        "src/views/Account.js",
+        509
       ]
     ]
   }

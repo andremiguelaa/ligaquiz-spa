@@ -25,14 +25,14 @@ const Rules = () => {
       <PageHeader title={<Trans>Regras</Trans>} />
       <div className="section content">
         <Trans>
-          <h2 className="subtitle">Liga Quiz</h2>
+          <h2 className="subtitle">{process.env.REACT_APP_NAME}</h2>
           <ol className="rules">
             <li>
               <span>
-                A Liga Quiz é um jogo de cultura geral onde a confiança na
-                honestidade dos jogadores é crucial. É expressamente proibido
-                usar qualquer fonte externa para obter respostas às perguntas.
-                Isto inclui:
+                A {process.env.REACT_APP_NAME} é um jogo de cultura geral onde a
+                confiança na honestidade dos jogadores é crucial. É
+                expressamente proibido usar qualquer fonte externa para obter
+                respostas às perguntas. Isto inclui:
               </span>
               <ul>
                 <li>Pedir pistas/respostas a outras pessoas</li>
@@ -48,36 +48,40 @@ const Rules = () => {
               <span>Apenas papel e caneta/lápis são permitidos.</span>
             </li>
             <li>
-              A organização reserva-se ao direito de inibir o acesso à Liga Quiz
-              a qualquer jogador que não cumpra este critério.
+              A organização reserva-se ao direito de inibir o acesso à{' '}
+              {process.env.REACT_APP_NAME}a qualquer jogador que não cumpra este
+              critério.
             </li>
             <li>
-              Para receber um convite para entrar na Liga Quiz, todos os novos
-              jogadores deverão ser referidos por um jogador activo na Liga
-              Quiz, que irá atestar da honestidade e integridade do novo membro.
-              A Liga Quiz é uma liga por convite.
+              Para receber um convite para entrar na{' '}
+              {process.env.REACT_APP_NAME}, todos os novos jogadores deverão ser
+              referidos por um jogador activo na {process.env.REACT_APP_NAME},
+              que irá atestar da honestidade e integridade do novo membro. A{' '}
+              {process.env.REACT_APP_NAME} é uma liga por convite.
             </li>
             <li>
-              Todos os estreantes na Liga Quiz serão colocados na divisão mais
-              baixa. A preferência de entrada numa divisão é a ordem de entrada
-              na lista de espera.
+              Todos os estreantes na {process.env.REACT_APP_NAME} serão
+              colocados na divisão mais baixa. A preferência de entrada numa
+              divisão é a ordem de entrada na lista de espera.
             </li>
             <li>
-              Caso um jogador saia da Liga Quiz temporariamente sem aviso e
-              reentre novamente na Liga Quiz será colocado na divisão mais baixa
+              Caso um jogador saia da {process.env.REACT_APP_NAME}{' '}
+              temporariamente sem aviso e reentre novamente na{' '}
+              {process.env.REACT_APP_NAME} será colocado na divisão mais baixa
               disponível.
               <br />
-              Caso um jogador saia da Liga Quiz temporariamente com aviso
-              prévio, por um período máximo de 3 meses, será colocado na mesma
-              divisão em que estava quando saiu; existindo os naturais ajustes
-              de descidas de divisão.
+              Caso um jogador saia da {process.env.REACT_APP_NAME}{' '}
+              temporariamente com aviso prévio, por um período máximo de 3
+              meses, será colocado na mesma divisão em que estava quando saiu;
+              existindo os naturais ajustes de descidas de divisão.
               <br />
               Um jogador perde o privilégio de voltar à mesma divisão, mesmo com
               aviso prévio, caso esteja mais que três meses de fora no último
               período de 12 meses.
             </li>
             <li>
-              As várias divisões da Liga Quiz terão, no máximo, 10 jogadores.
+              As várias divisões da {process.env.REACT_APP_NAME} terão, no
+              máximo, 10 jogadores.
             </li>
             <li>
               Cada jogador jogará 20 jogos a partir da primeira segunda-feira de
@@ -192,7 +196,7 @@ const Rules = () => {
             </li>
             <li>
               O primeiro classificado da primeira divisão no final dos 20 jogos
-              é declarado o campeão mensal da Liga Quiz.
+              é declarado o campeão mensal da {process.env.REACT_APP_NAME}.
             </li>
             <li>
               <span>
@@ -217,9 +221,9 @@ const Rules = () => {
           <ol className="rules">
             <li>
               <span>
-                Tal como nos jogos da Liga Quiz é expressamente proibido usar
-                qualquer fonte externa para obter respostas às perguntas. Isto
-                inclui:
+                Tal como nos jogos da {process.env.REACT_APP_NAME} é
+                expressamente proibido usar qualquer fonte externa para obter
+                respostas às perguntas. Isto inclui:
               </span>
               <ul>
                 <li>Pedir pistas/respostas a outras pessoas</li>
@@ -316,7 +320,8 @@ const Rules = () => {
               Por MB WAY usando o seguinte número: <strong>916682562</strong>
             </li>
             <li>
-              Por Paypal na <a href="/account">página da tua conta</a> (ainda não disponível)
+              Por Paypal na <a href="/account">página da tua conta</a> (ainda
+              não disponível)
             </li>
           </ul>
           <p>

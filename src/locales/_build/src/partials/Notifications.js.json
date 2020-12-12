@@ -1,5 +1,5 @@
 {
-  "Obrigado pela tua inscrição! O teu registo encontra-se a aguardar aprovação da equipa da Liga Quiz.": {
+  "Obrigado pela tua inscrição! O teu registo encontra-se a aguardar aprovação da equipa da {0}.": {
     "origin": [
       [
         "src/partials/Notifications.js",

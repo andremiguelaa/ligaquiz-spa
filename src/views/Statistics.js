@@ -190,7 +190,7 @@ const Statistics = () => {
       <section className="section content">
         {process.env.REACT_APP_NATIONAL_RANKING === 'true' && (
           <h1 className="has-text-weight-bold is-size-4">
-            <Trans>Liga Quiz</Trans>
+            {process.env.REACT_APP_NAME}
           </h1>
         )}
         <div className={classes.chart}>

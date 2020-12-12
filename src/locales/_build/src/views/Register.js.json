@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/Register.js",
-        91
+        88
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/views/Register.js",
-        99
+        101
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/views/Register.js",
-        121
+        117
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/views/Register.js",
-        144
+        134
       ]
     ]
   },
@@ -35,11 +35,11 @@
     "origin": [
       [
         "src/views/Register.js",
-        144
+        134
       ],
       [
         "src/views/Register.js",
-        216
+        201
       ]
     ]
   },
@@ -47,7 +47,7 @@
     "origin": [
       [
         "src/views/Register.js",
-        216
+        201
       ]
     ]
   },
@@ -55,7 +55,7 @@
     "origin": [
       [
         "src/views/Register.js",
-        244
+        222
       ]
     ]
   },
@@ -63,7 +63,7 @@
     "origin": [
       [
         "src/views/Register.js",
-        269
+        242
       ]
     ]
   },
@@ -71,7 +71,7 @@
     "origin": [
       [
         "src/views/Register.js",
-        275
+        248
       ]
     ]
   },
@@ -79,7 +79,15 @@
     "origin": [
       [
         "src/views/Register.js",
-        299
+        267
+      ]
+    ]
+  },
+  "As palavras-passes não coincidem.": {
+    "origin": [
+      [
+        "src/views/Register.js",
+        285
       ]
     ]
   },
@@ -87,7 +95,7 @@
     "origin": [
       [
         "src/views/Register.js",
-        327
+        295
       ]
     ]
   },
@@ -95,7 +103,7 @@
     "origin": [
       [
         "src/views/Register.js",
-        341
+        307
       ]
     ]
   },
@@ -103,7 +111,7 @@
     "origin": [
       [
         "src/views/Register.js",
-        347
+        313
       ]
     ]
   }

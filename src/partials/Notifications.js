@@ -111,7 +111,7 @@ const Notifications = () => {
           <div className={`notification is-info`}>
             <Trans>
               Obrigado pela tua inscrição! O teu registo encontra-se a aguardar
-              aprovação da equipa da Liga Quiz.
+              aprovação da equipa da {process.env.REACT_APP_NAME}.
             </Trans>
           </div>
         )}

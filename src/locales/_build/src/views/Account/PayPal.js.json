@@ -1,0 +1,42 @@
+{
+  "Não foi possível renovar a subscrição.": {
+    "origin": [
+      [
+        "src/views/Account/PayPal.js",
+        22
+      ]
+    ]
+  },
+  "1 mês (3€)": {
+    "origin": [
+      [
+        "src/views/Account/PayPal.js",
+        45
+      ]
+    ]
+  },
+  "3 meses (8.5€)": {
+    "origin": [
+      [
+        "src/views/Account/PayPal.js",
+        63
+      ]
+    ]
+  },
+  "6 meses (16€)": {
+    "origin": [
+      [
+        "src/views/Account/PayPal.js",
+        81
+      ]
+    ]
+  },
+  "12 meses (30€)": {
+    "origin": [
+      [
+        "src/views/Account/PayPal.js",
+        100
+      ]
+    ]
+  }
+}

@@ -5,11 +5,11 @@ import PageHeader from 'components/PageHeader';
 
 const Home = () => (
   <>
-    <PageHeader title={<Trans>Liga Quiz</Trans>} />
+    <PageHeader title={process.env.REACT_APP_NAME} />
     <div className="section content">
       <Trans>
         <p>
-          A Liga Quiz é um jogo de cultura geral onde a confiança na honestidade
+          A {process.env.REACT_APP_NAME} é um jogo de cultura geral onde a confiança na honestidade
           dos jogadores é crucial.
         </p>
         <p>
