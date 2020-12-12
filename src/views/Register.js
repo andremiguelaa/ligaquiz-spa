@@ -15,16 +15,9 @@ import { formatDate, convertToLongMonth } from 'utils/formatDate';
 import Error from 'components/Error';
 
 const Register = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    surname: '',
-    email: '',
-    password: '',
-    password2: '',
-  });
-
   const [regions, setRegions] = useState();
-
+  const [birthday, setBirthday] = useState();
+  const [loadingError, setLoadingError] = useState();
   const [error, setError] = useState();
   const [success, setSuccess] = useState(false);
   const [submitting, setSubmitting] = useState(false);
@@ -42,7 +35,7 @@ const Register = () => {
         setRegions(data);
       })
       .catch(({ response }) => {
-        setError(response?.status);
+        setLoadingError(response?.status);
       });
   }, []);
 
@@ -50,7 +43,7 @@ const Register = () => {
     return <Error status={403} />;
   }
 
-  if (error) {
+  if (loadingError) {
     return <Error status={error} />;
   }
 
@@ -60,13 +53,17 @@ const Register = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setSubmitting(true);
     setError(null);
-    const curatedFormData = {
-      ...formData,
-      birthday: formData.birthday ? formatDate(formData.birthday) : null,
-    };
-    ApiRequest.post('users', curatedFormData)
+    const formData = new FormData(event.target);
+    console.log(formData.get('password'), formData.get('password2'));
+    if (formData.get('password') !== formData.get('password2')) {
+      setError({ message: 'password_mismatch' });
+      return;
+    }
+    formData.set('birthday', birthday ? formatDate(birthday) : null);
+    formData.set('language', language);
+    setSubmitting(true);
+    ApiRequest.post('users', formData)
       .then(() => {
         setSuccess(true);
       })
@@ -93,23 +90,22 @@ const Register = () => {
         <div className="columns">
           <div className="column is-4-widescreen is-6-tablet">
             {!success ? (
-              <form onSubmit={handleSubmit}>
+              <form
+                onSubmit={(event) => {
+                  event.persist();
+                  handleSubmit(event);
+                }}
+              >
                 <div className="field">
                   <label className="label">
                     <Trans>Nome</Trans>
                   </label>
                   <div className="control has-icons-left">
                     <input
-                      type="name"
+                      name="name"
                       required
                       maxLength={255}
                       className="input"
-                      onChange={(event) => {
-                        setFormData({
-                          ...formData,
-                          name: event.target.value,
-                        });
-                      }}
                     />
                     <span className="icon is-small is-left">
                       <i className="fa fa-user" />
@@ -122,16 +118,10 @@ const Register = () => {
                   </label>
                   <div className="control has-icons-left">
                     <input
-                      type="surname"
+                      name="surname"
                       required
                       maxLength={255}
                       className="input"
-                      onChange={(event) => {
-                        setFormData({
-                          ...formData,
-                          surname: event.target.value,
-                        });
-                      }}
                     />
                     <span className="icon is-small is-left">
                       <i className="fa fa-user" />
@@ -196,14 +186,9 @@ const Register = () => {
                         )}
                         minDate={sub(new Date(), { years: 100 })}
                         maxDate={sub(new Date(), { years: 18 })}
-                        onChange={(date) => {
-                          setFormData({
-                            ...formData,
-                            birthday: date,
-                          });
-                        }}
-                        selected={formData.birthday}
+                        selected={birthday}
                         dateFormat="yyyy-MM-dd"
+                        onChange={(date) => setBirthday(date)}
                       />
                       <span className="icon is-small is-left">
                         <i className="fa fa-calendar" />
@@ -217,14 +202,7 @@ const Register = () => {
                   </label>
                   <div className="control has-icons-left">
                     <div className="select">
-                      <select
-                        onChange={(event) => {
-                          setFormData({
-                            ...formData,
-                            region: event.target.value,
-                          });
-                        }}
-                      >
+                      <select name="region">
                         <option value="">-</option>
                         {regions.map((region) =>
                           getRegionsTranslations(
@@ -246,16 +224,11 @@ const Register = () => {
                   <div className="control has-icons-left">
                     <input
                       type="email"
+                      name="email"
                       required
                       className={classnames('input', {
                         'is-danger': error && error.data && error.data.email,
                       })}
-                      onChange={(event) => {
-                        setFormData({
-                          ...formData,
-                          email: event.target.value,
-                        });
-                      }}
                     />
                     <span className="icon is-small is-left">
                       <i className="fa fa-envelope" />
@@ -277,17 +250,12 @@ const Register = () => {
                   <div className="control has-icons-left">
                     <input
                       type="password"
+                      name="password"
                       required
                       minLength={6}
                       maxLength={255}
                       className="input"
                       autoComplete="new-password"
-                      onChange={(event) => {
-                        setFormData({
-                          ...formData,
-                          password: event.target.value,
-                        });
-                      }}
                     />
                     <span className="icon is-small is-left">
                       <i className="fa fa-key" />
@@ -301,42 +269,40 @@ const Register = () => {
                   <div className="control has-icons-left">
                     <input
                       type="password"
+                      name="password2"
                       required
                       minLength={6}
                       maxLength={255}
-                      className={`input ${
-                        formData.password2.length &&
-                        formData.password !== formData.password2 &&
-                        'is-danger'
-                      }`}
-                      onChange={(event) => {
-                        setFormData({
-                          ...formData,
-                          password2: event.target.value,
-                        });
-                      }}
+                      className="input"
                     />
                     <span className="icon is-small is-left">
                       <i className="fa fa-key" />
                     </span>
                   </div>
+                  {error && error.message === 'password_mismatch' && (
+                    <div className="field">
+                      <p className="help is-danger">
+                        <Trans>As palavras-passes não coincidem.</Trans>
+                      </p>
+                    </div>
+                  )}
                 </div>
-                {error && error.message !== 'validation_error' && (
-                  <div className="field">
-                    <p className="help is-danger">
-                      <Trans>Erro de servidor. Tenta mais tarde.</Trans>
-                    </p>
-                  </div>
-                )}
+                {error &&
+                  error.message !== 'validation_error' &&
+                  error.message !== 'password_mismatch' && (
+                    <div className="field">
+                      <p className="help is-danger">
+                        <Trans>Erro de servidor. Tenta mais tarde.</Trans>
+                      </p>
+                    </div>
+                  )}
                 <div className="field">
                   <div className="control">
                     <button
                       className={`button is-primary ${
                         submitting && 'is-loading'
                       }`}
-                      disabled={
-                        submitting || formData.password !== formData.password2
-                      }
+                      disabled={submitting}
                     >
                       <Trans>Registar</Trans>
                     </button>

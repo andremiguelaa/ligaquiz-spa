@@ -2707,7 +2707,7 @@ msgstr "User successfully updated."
 
 #: src/views/Register.js:347
 msgid "Utilizador registado com sucesso.<0/>Clica <1>aqui</1> e usa as tuas credenciais."
-msgstr "User registerd successfully.<0/>Click <1>here</1> and use your credentials."
+msgstr "User registered successfully.<0/>Click <1>here</1> and use your credentials."
 
 #: src/partials/Header.js:164
 #: src/routes.js:191
