@@ -1290,14 +1290,6 @@ msgstr "Liberia"
 msgid "Liechtenstein"
 msgstr "Liechtenstein"
 
-#: src/App.js:67
-#: src/routes.js:48
-#: src/views/Home.js:8
-#: src/views/Statistics.js:193
-#: src/views/StatisticsComparison.js:201
-#~ msgid "Liga Quiz"
-#~ msgstr "Quiz League"
-
 #: src/utils/getRegionTranslation.js:62
 msgid "Lisboa"
 msgstr "Lisbon"
@@ -1706,10 +1698,6 @@ msgstr "Your password change request is not valid"
 #: src/components/Modal.js:41
 msgid "OK"
 msgstr "OK"
-
-#: src/partials/Notifications.js:112
-#~ msgid "Obrigado pela tua inscrição! O teu registo encontra-se a aguardar aprovação da equipa da Liga Quiz."
-#~ msgstr "Thank you for you registration! Your registration is pending approval from the Liga Quiz team."
 
 #: src/partials/Notifications.js:112
 msgid "Obrigado pela tua inscrição! O teu registo encontra-se a aguardar aprovação da equipa da {0}."
