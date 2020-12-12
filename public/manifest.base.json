@@ -1,6 +1,6 @@
 {
-    "name": "Liga Quiz",
-    "short_name": "Liga Quiz",
+    "name": "%REACT_APP_NAME%",
+    "short_name": "%REACT_APP_NAME%",
     "icons": [
       {
         "src": "/android-chrome-192x192.png",

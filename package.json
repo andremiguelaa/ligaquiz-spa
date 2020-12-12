@@ -1,13 +1,13 @@
 {
   "name": "liga-quiz-spa",
-  "version": "0.1.0",
+  "version": "4.11.2",
   "private": true,
-  "homepage": "https://ligaquiz.pt",
   "dependencies": {
     "@creativebulma/bulma-tooltip": "^1.2.0",
     "bulma-switch": "^2.0.0",
     "chart.js": "^2.9.3",
     "date-fns": "^2.15.0",
+    "dotenv": "^8.2.0",
     "marked": "^1.1.1",
     "react": "^16.9.0",
     "react-chartjs-2": "^2.9.0",
@@ -15,18 +15,20 @@
     "react-dom": "^16.9.0",
     "react-indiana-drag-scroll": "^1.6.1",
     "react-scripts": "3.4.3",
+    "replace-in-file": "^6.1.0",
     "slugify": "^1.4.5",
     "use-deep-compare-effect": "^1.5.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "prod": "git pull && yarn && react-scripts build && rm -rf prod && mv ./build ./prod",
+    "prod": "git pull && yarn && yarn manifest &&  react-scripts build && rm -rf prod && mv ./build ./prod",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "add-locale": "lingui add-locale",
     "extract": "lingui extract",
-    "compile": "lingui compile"
+    "compile": "lingui compile",
+    "manifest": "rm ./public/manifest.json && cp ./public/manifest.base.json ./public/manifest.json && node ./scripts/generateManifest.js"
   },
   "eslintConfig": {
     "extends": "react-app"
