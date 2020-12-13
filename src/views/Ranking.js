@@ -119,6 +119,11 @@ const Ranking = () => {
               .catch(({ response }) => {
                 setError(response?.status);
               });
+          } else {
+            setSeasonData({
+              leagues: [],
+            });
+            setLoading(false);
           }
         })
         .catch(({ response }) => {
@@ -139,29 +144,35 @@ const Ranking = () => {
     <>
       <PageHeader
         title={<Trans>Classificação</Trans>}
-        subtitle={<Trans>Temporada {seasonNumber}</Trans>}
+        subtitle={
+          seasonData.leagues.length > 0 && (
+            <Trans>Temporada {seasonNumber}</Trans>
+          )
+        }
       />
-      <div className="section">
-        <div className="tabs is-fullwidth">
-          <ul>
-            {seasonData.leagues.map((league) => (
-              <li
-                key={league.tier}
-                className={classnames({
-                  'is-active': league.tier === tierNumber,
-                })}
-              >
-                <Link to={`/ranking/${seasonNumber}/${league.tier}`}>
-                  <Trans>{league.tier}ª divisão</Trans>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-      <section className={classnames('section', 'content', classes.ranking)}>
-        {seasonData ? (
-          <>
+      {seasonData.leagues.length > 0 ? (
+        <>
+          <div className="section">
+            <div className="tabs is-fullwidth">
+              <ul>
+                {seasonData.leagues.map((league) => (
+                  <li
+                    key={league.tier}
+                    className={classnames({
+                      'is-active': league.tier === tierNumber,
+                    })}
+                  >
+                    <Link to={`/ranking/${seasonNumber}/${league.tier}`}>
+                      <Trans>{league.tier}ª divisão</Trans>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+          <section
+            className={classnames('section', 'content', classes.ranking)}
+          >
             <div className="table-container">
               <table className="table is-fullwidth">
                 <TableHeader />
@@ -179,13 +190,13 @@ const Ranking = () => {
               </table>
             </div>
             <Rounds rounds={seasonData.rounds} users={users} />
-          </>
-        ) : (
-          <EmptyState>
-            <Trans>Sem registos</Trans>
-          </EmptyState>
-        )}
-      </section>
+          </section>
+        </>
+      ) : (
+        <EmptyState>
+          <Trans>Sem registos</Trans>
+        </EmptyState>
+      )}
     </>
   );
 };
