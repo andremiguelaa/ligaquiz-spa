@@ -129,6 +129,8 @@ const GenreRanking = () => {
             }
             setSeasonNumber(lastSeason.season);
             getStatistics(lastSeason.season);
+          } else {
+            setStatistics({});
           }
         })
         .catch(({ response }) => {
