@@ -1,9 +1,9 @@
 import { useRef, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import ApiRequest from 'utils/ApiRequest';
 
 const Logger = () => {
-  const history = useHistory();
+  const location = useLocation();
   const load = useRef();
 
   useEffect(() => {
@@ -92,15 +92,15 @@ const Logger = () => {
   useEffect(() => {
     if (!load.current) {
       ApiRequest.post(`logs`, {
-        action: `Page load: ${history.location.pathname}`,
+        action: `Page load: ${location.pathname}`,
       });
       load.current = true;
       return;
     }
     ApiRequest.post(`logs`, {
-      action: `Page change: ${history.location.pathname}`,
+      action: `Page change: ${location.pathname}`,
     });
-  }, [history.location.pathname]);
+  }, [location]);
   return null;
 };
 

@@ -1,6 +1,6 @@
 {
   "name": "liga-quiz-spa",
-  "version": "4.12.0",
+  "version": "4.12.1",
   "private": true,
   "dependencies": {
     "@creativebulma/bulma-tooltip": "^1.2.0",
