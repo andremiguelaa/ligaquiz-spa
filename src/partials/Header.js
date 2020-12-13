@@ -13,7 +13,7 @@ import logo from 'img/logo.png';
 import logoDark from 'img/logo-dark.png';
 import classes from './Header.module.scss';
 
-const version = '4.11.4';
+const version = '4.12.0';
 
 const isDarkMode =
   window.matchMedia &&
@@ -262,6 +262,10 @@ const Header = () => {
                         (user.valid_roles.admin ||
                           user.valid_roles.regular_player) && (
                           <>
+                            <Link to="/invitations" className="navbar-item">
+                              <i className="fa fa-btn fa-share-alt" />
+                              &nbsp;<Trans>Convites</Trans>
+                            </Link>
                             <Link to="/genre-rankings" className="navbar-item">
                               <i className="fa fa-btn fa-shield" />
                               &nbsp;<Trans>Rankings temáticos</Trans>

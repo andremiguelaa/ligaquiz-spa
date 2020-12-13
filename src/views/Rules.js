@@ -49,8 +49,8 @@ const Rules = () => {
             </li>
             <li>
               A organização reserva-se ao direito de inibir o acesso à{' '}
-              {process.env.REACT_APP_NAME}a qualquer jogador que não cumpra este
-              critério.
+              {process.env.REACT_APP_NAME} a qualquer jogador que não cumpra
+              este critério.
             </li>
             <li>
               Para receber um convite para entrar na{' '}

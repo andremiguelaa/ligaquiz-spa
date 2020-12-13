@@ -40,67 +40,73 @@ const GenreRanking = () => {
             return `?id[]=${item}`;
           }
         }, '');
-        ApiRequest.get(`questions${params}`)
-          .then(({ data: questions }) => {
-            ApiRequest.get(`genres`)
-              .then(({ data: genres }) => {
-                setGenres(genres);
-                const mappedGenres = genres.reduce((acc, genre) => {
-                  const subgenresMap = genre.subgenres.reduce(
-                    (innerAcc, subgenre) => {
-                      innerAcc[subgenre.id] = genre.id;
-                      return innerAcc;
+        if (params) {
+          ApiRequest.get(`questions${params}`)
+            .then(({ data: questions }) => {
+              ApiRequest.get(`genres`)
+                .then(({ data: genres }) => {
+                  setGenres(genres);
+                  const mappedGenres = genres.reduce((acc, genre) => {
+                    const subgenresMap = genre.subgenres.reduce(
+                      (innerAcc, subgenre) => {
+                        innerAcc[subgenre.id] = genre.id;
+                        return innerAcc;
+                      },
+                      {}
+                    );
+                    return {
+                      ...acc,
+                      ...subgenresMap,
+                    };
+                  }, {});
+                  const mapppedQuestionsGenres = questions.reduce(
+                    (acc, question) => {
+                      acc[question.id] = question.genre_id;
+                      return acc;
                     },
                     {}
                   );
-                  return {
-                    ...acc,
-                    ...subgenresMap,
-                  };
-                }, {});
-                const mapppedQuestionsGenres = questions.reduce(
-                  (acc, question) => {
-                    acc[question.id] = question.genre_id;
-                    return acc;
-                  },
-                  {}
-                );
-                const computedStatistics = []
-                  .concat(...Object.values(answers))
-                  .reduce((acc, answer) => {
-                    if (!acc[answer.user_id]) {
-                      acc[answer.user_id] = {
-                        user: answer.user_id,
-                        total: 0,
-                        correct: 0,
-                        genres: {},
-                      };
-                    }
-                    const genre =
-                      mappedGenres[mapppedQuestionsGenres[answer.question_id]];
-                    if (!acc[answer.user_id].genres[genre]) {
-                      acc[answer.user_id].genres[genre] = {
-                        total: 0,
-                        correct: 0,
-                      };
-                    }
-                    acc[answer.user_id].total++;
-                    acc[answer.user_id].genres[genre].total++;
-                    if (answer.correct) {
-                      acc[answer.user_id].correct++;
-                      acc[answer.user_id].genres[genre].correct++;
-                    }
-                    return acc;
-                  }, {});
-                setStatistics(computedStatistics);
-              })
-              .catch(({ response }) => {
-                setError(response?.status);
-              });
-          })
-          .catch(({ response }) => {
-            setError(response?.status);
-          });
+                  const computedStatistics = []
+                    .concat(...Object.values(answers))
+                    .reduce((acc, answer) => {
+                      if (!acc[answer.user_id]) {
+                        acc[answer.user_id] = {
+                          user: answer.user_id,
+                          total: 0,
+                          correct: 0,
+                          genres: {},
+                        };
+                      }
+                      const genre =
+                        mappedGenres[
+                          mapppedQuestionsGenres[answer.question_id]
+                        ];
+                      if (!acc[answer.user_id].genres[genre]) {
+                        acc[answer.user_id].genres[genre] = {
+                          total: 0,
+                          correct: 0,
+                        };
+                      }
+                      acc[answer.user_id].total++;
+                      acc[answer.user_id].genres[genre].total++;
+                      if (answer.correct) {
+                        acc[answer.user_id].correct++;
+                        acc[answer.user_id].genres[genre].correct++;
+                      }
+                      return acc;
+                    }, {});
+                  setStatistics(computedStatistics);
+                })
+                .catch(({ response }) => {
+                  setError(response?.status);
+                });
+            })
+            .catch(({ response }) => {
+              setError(response?.status);
+            });
+        } else {
+          setStatistics({});
+        }
       })
       .catch(({ response }) => {
         setError(response?.status);
@@ -160,44 +166,44 @@ const GenreRanking = () => {
         title={<Trans>Rankings temáticos</Trans>}
         subtitle={<Trans>Temporada {seasonNumber}</Trans>}
       />
-      <div className="section">
-        <div className="tabs is-fullwidth">
-          <ul>
-            <li
-              className={classnames({
-                'is-active': !genre,
-              })}
-            >
-              <Link to={`/genre-rankings/${seasonNumber}`}>
-                <Trans>Global</Trans>
-              </Link>
-            </li>
-            {genres.map((item) => (
-              <li
-                key={item.id}
-                className={classnames({
-                  'is-active': item.id === parseInt(genre),
-                })}
-              >
-                <Link to={`/genre-rankings/${seasonNumber}/${item.id}`}>
-                  <span className="is-hidden-touch">
-                    {getGenreTranslation(item.slug, language)}
-                  </span>
-                  <abbr
-                    className="is-hidden-desktop has-tooltip-left"
-                    data-tooltip={getGenreTranslation(item.slug, language)}
+      {Object.keys(statistics).length > 0 ? (
+        <>
+          <div className="section">
+            <div className="tabs is-fullwidth">
+              <ul>
+                <li
+                  className={classnames({
+                    'is-active': !genre,
+                  })}
+                >
+                  <Link to={`/genre-rankings/${seasonNumber}`}>
+                    <Trans>Global</Trans>
+                  </Link>
+                </li>
+                {genres.map((item) => (
+                  <li
+                    key={item.id}
+                    className={classnames({
+                      'is-active': item.id === parseInt(genre),
+                    })}
                   >
-                    {getGenreTranslationAbbr(item.slug, language)}
-                  </abbr>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-      <div className="section content">
-        {Object.keys(statistics).length > 0 ? (
-          <>
+                    <Link to={`/genre-rankings/${seasonNumber}/${item.id}`}>
+                      <span className="is-hidden-touch">
+                        {getGenreTranslation(item.slug, language)}
+                      </span>
+                      <abbr
+                        className="is-hidden-desktop has-tooltip-left"
+                        data-tooltip={getGenreTranslation(item.slug, language)}
+                      >
+                        {getGenreTranslationAbbr(item.slug, language)}
+                      </abbr>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+          <div className="section content">
             {!genre ? (
               <Table
                 data={Object.values(statistics).sort(
@@ -219,13 +225,13 @@ const GenreRanking = () => {
                 users={users}
               />
             )}
-          </>
-        ) : (
-          <EmptyState>
-            <Trans>Sem registos</Trans>
-          </EmptyState>
-        )}
-      </div>
+          </div>
+        </>
+      ) : (
+        <EmptyState>
+          <Trans>Sem registos</Trans>
+        </EmptyState>
+      )}
     </>
   );
 };

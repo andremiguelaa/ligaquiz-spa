@@ -505,13 +505,15 @@ const Account = () => {
                     <Trans>Renovação da subscrição via Paypal</Trans>
                   </div>
                   <PayPal />
-                  <p>
-                    <Trans>
-                      Se preferires fazer a renovação em mão, através de
-                      transferência bancária ou por MB WAY, vê como{' '}
-                      <Link to="/rules#subscription">aqui</Link>
-                    </Trans>
-                  </p>
+                  {!(process.env.REACT_APP_ONLY_PAYPAL === 'true') && (
+                    <p>
+                      <Trans>
+                        Se preferires fazer a renovação em mão, através de
+                        transferência bancária ou por MB WAY, vê como{' '}
+                        <Link to="/rules#subscription">aqui</Link>
+                      </Trans>
+                    </p>
+                  )}
                 </div>
               </>
             )}

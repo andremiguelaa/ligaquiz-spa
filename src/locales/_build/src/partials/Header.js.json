@@ -175,7 +175,7 @@
       ]
     ]
   },
-  "Rankings temáticos": {
+  "Convites": {
     "origin": [
       [
         "src/partials/Header.js",
@@ -183,7 +183,7 @@
       ]
     ]
   },
-  "Arquivo de temporadas": {
+  "Rankings temáticos": {
     "origin": [
       [
         "src/partials/Header.js",
@@ -191,7 +191,7 @@
       ]
     ]
   },
-  "Arquivo de quizzes": {
+  "Arquivo de temporadas": {
     "origin": [
       [
         "src/partials/Header.js",
@@ -199,11 +199,19 @@
       ]
     ]
   },
+  "Arquivo de quizzes": {
+    "origin": [
+      [
+        "src/partials/Header.js",
+        279
+      ]
+    ]
+  },
   "Arquivo de quizzes especiais": {
     "origin": [
       [
         "src/partials/Header.js",
-        286
+        290
       ]
     ]
   },
@@ -211,7 +219,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        292
+        296
       ]
     ]
   },
@@ -219,7 +227,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        296
+        300
       ]
     ]
   }

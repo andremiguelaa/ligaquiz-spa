@@ -1,0 +1,66 @@
+{
+  "Convite enviado com sucesso.": {
+    "origin": [
+      [
+        "src/views/Invitations.js",
+        51
+      ]
+    ]
+  },
+  "Não foi possível enviar o convite.<0/>Já existe um jogador com este e-mail ou já foi enviado um convite para este e-mail.": {
+    "origin": [
+      [
+        "src/views/Invitations.js",
+        56
+      ]
+    ]
+  },
+  "Não foi possível enviar o convite. Tenta mais tarde.": {
+    "origin": [
+      [
+        "src/views/Invitations.js",
+        65
+      ]
+    ]
+  },
+  "Convites": {
+    "origin": [
+      [
+        "src/views/Invitations.js",
+        77
+      ]
+    ]
+  },
+  "Nesta página podes convidar outros jogadores a participar na {0}": {
+    "origin": [
+      [
+        "src/views/Invitations.js",
+        79
+      ]
+    ]
+  },
+  "E-Mail": {
+    "origin": [
+      [
+        "src/views/Invitations.js",
+        96
+      ]
+    ]
+  },
+  "Enviar convite": {
+    "origin": [
+      [
+        "src/views/Invitations.js",
+        113
+      ]
+    ]
+  },
+  "Convites já enviados": {
+    "origin": [
+      [
+        "src/views/Invitations.js",
+        123
+      ]
+    ]
+  }
+}

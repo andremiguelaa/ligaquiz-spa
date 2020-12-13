@@ -20,6 +20,7 @@ import Question from 'views/Question';
 import Quiz from 'views/Quiz';
 import SpecialQuiz from 'views/SpecialQuiz';
 import Rules from 'views/Rules';
+import Invitations from 'views/Invitations';
 import GenreRanking from 'views/GenreRanking';
 
 import NationalRankingAdminRankings from 'views/admin/nationalRanking/Rankings';
@@ -85,6 +86,11 @@ export default [
     title: <Trans>Regras</Trans>,
     path: '/rules',
     component: Rules,
+  },
+  {
+    title: <Trans>Convites</Trans>,
+    path: '/invitations',
+    component: Invitations,
   },
   {
     title: <Trans>Rankings temáticos</Trans>,
