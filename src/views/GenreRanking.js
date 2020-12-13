@@ -166,7 +166,11 @@ const GenreRanking = () => {
     <>
       <PageHeader
         title={<Trans>Rankings temáticos</Trans>}
-        subtitle={<Trans>Temporada {seasonNumber}</Trans>}
+        subtitle={
+          Object.keys(statistics).length > 0 && (
+            <Trans>Temporada {seasonNumber}</Trans>
+          )
+        }
       />
       {Object.keys(statistics).length > 0 ? (
         <>
