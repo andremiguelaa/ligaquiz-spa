@@ -470,7 +470,7 @@ msgstr "Ciências Sociais"
 
 #: src/partials/Header.js:87
 #: src/routes.js:117
-#: src/views/Ranking.js:141
+#: src/views/Ranking.js:146
 #: src/views/Seasons.js:85
 #: src/views/SpecialQuiz/SpecialQuizDone.js:40
 msgid "Classificação"
@@ -1035,7 +1035,7 @@ msgstr "Gestão de Ranking Nacional"
 msgid "Geórgia"
 msgstr "Geórgia"
 
-#: src/views/GenreRanking.js:180
+#: src/views/GenreRanking.js:186
 msgid "Global"
 msgstr "Global"
 
@@ -2176,7 +2176,7 @@ msgstr "Rankings mensais"
 
 #: src/partials/Header.js:271
 #: src/routes.js:96
-#: src/views/GenreRanking.js:166
+#: src/views/GenreRanking.js:168
 #: src/views/Seasons.js:79
 msgid "Rankings temáticos"
 msgstr "Rankings temáticos"
@@ -2377,9 +2377,9 @@ msgstr "Selecciona os jogadores que farão parte desta divisão:"
 msgid "Selecciona os jogadores que jogaram esta prova:"
 msgstr "Selecciona os jogadores que jogaram esta prova:"
 
-#: src/views/GenreRanking.js:232
+#: src/views/GenreRanking.js:238
 #: src/views/Quizzes.js:76
-#: src/views/Ranking.js:185
+#: src/views/Ranking.js:197
 #: src/views/Seasons.js:101
 #: src/views/SpecialQuizzes.js:121
 #: src/views/Statistics.js:428
@@ -2579,8 +2579,8 @@ msgstr "Temporada gravada com sucesso."
 msgid "Temporada {0}"
 msgstr "Temporada {0}"
 
-#: src/views/GenreRanking.js:167
-#: src/views/Ranking.js:142
+#: src/views/GenreRanking.js:171
+#: src/views/Ranking.js:149
 msgid "Temporada {seasonNumber}"
 msgstr "Temporada {seasonNumber}"
 
@@ -2880,7 +2880,7 @@ msgstr "{0} de {1}"
 msgid "{0} {1} e {2} {3}"
 msgstr "{0} {1} e {2} {3}"
 
-#: src/views/Ranking.js:155
+#: src/views/Ranking.js:166
 #: src/views/admin/seasons/Tier.js:29
 msgid "{0}ª divisão"
 msgstr "{0}ª divisão"
