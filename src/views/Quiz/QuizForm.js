@@ -11,7 +11,7 @@ import { differenceInYears } from 'date-fns';
 import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
 import renderMedia from 'utils/renderMedia';
-import { getRegionsTranslations } from 'utils/getRegionTranslation';
+import { getRegionTranslations } from 'utils/getRegionTranslation';
 import { getGenreTranslation } from 'utils/getGenreTranslation';
 import Markdown from 'components/Markdown';
 import Modal from 'components/Modal';
@@ -419,7 +419,7 @@ const QuizForm = ({ data, userAnswers }) => {
                         {opponent.region && opponent.region !== 'hidden' && (
                           <>
                             <br />
-                            {getRegionsTranslations(opponent.region, <></>)}
+                            {getRegionTranslations(opponent.region, language)}
                           </>
                         )}
                         {opponent.birthday === 'hidden' && (

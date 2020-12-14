@@ -1,1096 +1,230 @@
-import React from 'react';
-import { Trans } from '@lingui/macro';
+import { setupI18n } from '@lingui/core';
+import { catalogs } from 'utils/catalogs';
 
-export const getRegionsTranslations = (type, render) =>
-  ({
-    'PT.AC': (
-      <Trans key={type} render={render}>
-        Açores
-      </Trans>
-    ),
-    'PT.AV': (
-      <Trans key={type} render={render}>
-        Aveiro
-      </Trans>
-    ),
-    'PT.BE': (
-      <Trans key={type} render={render}>
-        Beja
-      </Trans>
-    ),
-    'PT.BR': (
-      <Trans key={type} render={render}>
-        Braga
-      </Trans>
-    ),
-    'PT.BA': (
-      <Trans key={type} render={render}>
-        Bragança
-      </Trans>
-    ),
-    'PT.CB': (
-      <Trans key={type} render={render}>
-        Castelo Branco
-      </Trans>
-    ),
-    'PT.CO': (
-      <Trans key={type} render={render}>
-        Coimbra
-      </Trans>
-    ),
-    'PT.EV': (
-      <Trans key={type} render={render}>
-        Évora
-      </Trans>
-    ),
-    'PT.FA': (
-      <Trans key={type} render={render}>
-        Faro
-      </Trans>
-    ),
-    'PT.GU': (
-      <Trans key={type} render={render}>
-        Guarda
-      </Trans>
-    ),
-    'PT.LE': (
-      <Trans key={type} render={render}>
-        Leiria
-      </Trans>
-    ),
-    'PT.LI': (
-      <Trans key={type} render={render}>
-        Lisboa
-      </Trans>
-    ),
-    'PT.MA': (
-      <Trans key={type} render={render}>
-        Madeira
-      </Trans>
-    ),
-    'PT.PA': (
-      <Trans key={type} render={render}>
-        Portalegre
-      </Trans>
-    ),
-    'PT.PO': (
-      <Trans key={type} render={render}>
-        Porto
-      </Trans>
-    ),
-    'PT.SA': (
-      <Trans key={type} render={render}>
-        Santarém
-      </Trans>
-    ),
-    'PT.SE': (
-      <Trans key={type} render={render}>
-        Setúbal
-      </Trans>
-    ),
-    'PT.VC': (
-      <Trans key={type} render={render}>
-        Viana do Castelo
-      </Trans>
-    ),
-    'PT.VR': (
-      <Trans key={type} render={render}>
-        Vila Real
-      </Trans>
-    ),
-    'PT.VI': (
-      <Trans key={type} render={render}>
-        Viseu
-      </Trans>
-    ),
-    AD: (
-      <Trans key={type} render={render}>
-        Andorra
-      </Trans>
-    ),
-    AE: (
-      <Trans key={type} render={render}>
-        Emirados Árabes Unidos
-      </Trans>
-    ),
-    AF: (
-      <Trans key={type} render={render}>
-        Afeganistão
-      </Trans>
-    ),
-    AG: (
-      <Trans key={type} render={render}>
-        Antígua and Barbuda
-      </Trans>
-    ),
-    AL: (
-      <Trans key={type} render={render}>
-        Albânia
-      </Trans>
-    ),
-    AM: (
-      <Trans key={type} render={render}>
-        Arménia
-      </Trans>
-    ),
-    AO: (
-      <Trans key={type} render={render}>
-        Angola
-      </Trans>
-    ),
-    AR: (
-      <Trans key={type} render={render}>
-        Argentina
-      </Trans>
-    ),
-    AT: (
-      <Trans key={type} render={render}>
-        Áustria
-      </Trans>
-    ),
-    AU: (
-      <Trans key={type} render={render}>
-        Austrália
-      </Trans>
-    ),
-    AZ: (
-      <Trans key={type} render={render}>
-        Azerbaijão
-      </Trans>
-    ),
-    BA: (
-      <Trans key={type} render={render}>
-        Bósnia e Herzegovina
-      </Trans>
-    ),
-    BB: (
-      <Trans key={type} render={render}>
-        Barbados
-      </Trans>
-    ),
-    BD: (
-      <Trans key={type} render={render}>
-        Bangladesh
-      </Trans>
-    ),
-    BE: (
-      <Trans key={type} render={render}>
-        Bélgica
-      </Trans>
-    ),
-    BF: (
-      <Trans key={type} render={render}>
-        Burkina Faso
-      </Trans>
-    ),
-    BG: (
-      <Trans key={type} render={render}>
-        Bulgária
-      </Trans>
-    ),
-    BH: (
-      <Trans key={type} render={render}>
-        Bahrein
-      </Trans>
-    ),
-    BI: (
-      <Trans key={type} render={render}>
-        Burundi
-      </Trans>
-    ),
-    BJ: (
-      <Trans key={type} render={render}>
-        Benim
-      </Trans>
-    ),
-    BN: (
-      <Trans key={type} render={render}>
-        Brunei
-      </Trans>
-    ),
-    BO: (
-      <Trans key={type} render={render}>
-        Bolívia
-      </Trans>
-    ),
-    BR: (
-      <Trans key={type} render={render}>
-        Brasil
-      </Trans>
-    ),
-    BS: (
-      <Trans key={type} render={render}>
-        Bahamas
-      </Trans>
-    ),
-    BT: (
-      <Trans key={type} render={render}>
-        Butão
-      </Trans>
-    ),
-    BW: (
-      <Trans key={type} render={render}>
-        Botswana
-      </Trans>
-    ),
-    BY: (
-      <Trans key={type} render={render}>
-        Bielorrússia
-      </Trans>
-    ),
-    BZ: (
-      <Trans key={type} render={render}>
-        Belize
-      </Trans>
-    ),
-    CA: (
-      <Trans key={type} render={render}>
-        Canadá
-      </Trans>
-    ),
-    CD: (
-      <Trans key={type} render={render}>
-        República Democrática do Congo
-      </Trans>
-    ),
-    CF: (
-      <Trans key={type} render={render}>
-        República Centro-Africana
-      </Trans>
-    ),
-    CG: (
-      <Trans key={type} render={render}>
-        República do Congo
-      </Trans>
-    ),
-    CH: (
-      <Trans key={type} render={render}>
-        Suíça
-      </Trans>
-    ),
-    CI: (
-      <Trans key={type} render={render}>
-        Costa do Marfim
-      </Trans>
-    ),
-    CL: (
-      <Trans key={type} render={render}>
-        Chile
-      </Trans>
-    ),
-    CM: (
-      <Trans key={type} render={render}>
-        Camarões
-      </Trans>
-    ),
-    CN: (
-      <Trans key={type} render={render}>
-        China
-      </Trans>
-    ),
-    CO: (
-      <Trans key={type} render={render}>
-        Colômbia
-      </Trans>
-    ),
-    CR: (
-      <Trans key={type} render={render}>
-        Costa Rica
-      </Trans>
-    ),
-    CU: (
-      <Trans key={type} render={render}>
-        Cuba
-      </Trans>
-    ),
-    CV: (
-      <Trans key={type} render={render}>
-        Cabo Verde
-      </Trans>
-    ),
-    CY: (
-      <Trans key={type} render={render}>
-        Chipre
-      </Trans>
-    ),
-    CZ: (
-      <Trans key={type} render={render}>
-        Chéquia
-      </Trans>
-    ),
-    DE: (
-      <Trans key={type} render={render}>
-        Alemanha
-      </Trans>
-    ),
-    DJ: (
-      <Trans key={type} render={render}>
-        Djibuti
-      </Trans>
-    ),
-    DK: (
-      <Trans key={type} render={render}>
-        Dinamarca
-      </Trans>
-    ),
-    DM: (
-      <Trans key={type} render={render}>
-        Dominica
-      </Trans>
-    ),
-    DO: (
-      <Trans key={type} render={render}>
-        República Dominicana
-      </Trans>
-    ),
-    DZ: (
-      <Trans key={type} render={render}>
-        Argélia
-      </Trans>
-    ),
-    EC: (
-      <Trans key={type} render={render}>
-        Equador
-      </Trans>
-    ),
-    EE: (
-      <Trans key={type} render={render}>
-        Estónia
-      </Trans>
-    ),
-    EG: (
-      <Trans key={type} render={render}>
-        Egipto
-      </Trans>
-    ),
-    EH: (
-      <Trans key={type} render={render}>
-        Saara Ocidental
-      </Trans>
-    ),
-    ER: (
-      <Trans key={type} render={render}>
-        Eritreia
-      </Trans>
-    ),
-    ES: (
-      <Trans key={type} render={render}>
-        Espanha
-      </Trans>
-    ),
-    ET: (
-      <Trans key={type} render={render}>
-        Etiópia
-      </Trans>
-    ),
-    FI: (
-      <Trans key={type} render={render}>
-        Finlândia
-      </Trans>
-    ),
-    FJ: (
-      <Trans key={type} render={render}>
-        Fiji
-      </Trans>
-    ),
-    FM: (
-      <Trans key={type} render={render}>
-        Estados Federados da Micronésia
-      </Trans>
-    ),
-    FR: (
-      <Trans key={type} render={render}>
-        França
-      </Trans>
-    ),
-    GA: (
-      <Trans key={type} render={render}>
-        Gabão
-      </Trans>
-    ),
-    GB: (
-      <Trans key={type} render={render}>
-        Reino Unido
-      </Trans>
-    ),
-    GD: (
-      <Trans key={type} render={render}>
-        Granada
-      </Trans>
-    ),
-    GE: (
-      <Trans key={type} render={render}>
-        Geórgia
-      </Trans>
-    ),
-    GH: (
-      <Trans key={type} render={render}>
-        Gana
-      </Trans>
-    ),
-    GM: (
-      <Trans key={type} render={render}>
-        Gâmbia
-      </Trans>
-    ),
-    GN: (
-      <Trans key={type} render={render}>
-        Guiné
-      </Trans>
-    ),
-    GQ: (
-      <Trans key={type} render={render}>
-        Guiné Equatorial
-      </Trans>
-    ),
-    GR: (
-      <Trans key={type} render={render}>
-        Grécia
-      </Trans>
-    ),
-    GT: (
-      <Trans key={type} render={render}>
-        Guatemala
-      </Trans>
-    ),
-    GW: (
-      <Trans key={type} render={render}>
-        Guiné-Bissau
-      </Trans>
-    ),
-    GY: (
-      <Trans key={type} render={render}>
-        Guiana
-      </Trans>
-    ),
-    HN: (
-      <Trans key={type} render={render}>
-        Honduras
-      </Trans>
-    ),
-    HR: (
-      <Trans key={type} render={render}>
-        Croácia
-      </Trans>
-    ),
-    HT: (
-      <Trans key={type} render={render}>
-        Haiti
-      </Trans>
-    ),
-    HU: (
-      <Trans key={type} render={render}>
-        Hungria
-      </Trans>
-    ),
-    ID: (
-      <Trans key={type} render={render}>
-        Indonésia
-      </Trans>
-    ),
-    IE: (
-      <Trans key={type} render={render}>
-        Irlanda
-      </Trans>
-    ),
-    IL: (
-      <Trans key={type} render={render}>
-        Israel
-      </Trans>
-    ),
-    IN: (
-      <Trans key={type} render={render}>
-        Índia
-      </Trans>
-    ),
-    IQ: (
-      <Trans key={type} render={render}>
-        Iraque
-      </Trans>
-    ),
-    IR: (
-      <Trans key={type} render={render}>
-        Irão
-      </Trans>
-    ),
-    IS: (
-      <Trans key={type} render={render}>
-        Islândia
-      </Trans>
-    ),
-    IT: (
-      <Trans key={type} render={render}>
-        Itália
-      </Trans>
-    ),
-    JM: (
-      <Trans key={type} render={render}>
-        Jamaica
-      </Trans>
-    ),
-    JO: (
-      <Trans key={type} render={render}>
-        Jordânia
-      </Trans>
-    ),
-    JP: (
-      <Trans key={type} render={render}>
-        Japão
-      </Trans>
-    ),
-    KE: (
-      <Trans key={type} render={render}>
-        Quénia
-      </Trans>
-    ),
-    KG: (
-      <Trans key={type} render={render}>
-        Quirguistão
-      </Trans>
-    ),
-    KH: (
-      <Trans key={type} render={render}>
-        Cambodja
-      </Trans>
-    ),
-    KI: (
-      <Trans key={type} render={render}>
-        Kiribati
-      </Trans>
-    ),
-    KM: (
-      <Trans key={type} render={render}>
-        Comoros
-      </Trans>
-    ),
-    KN: (
-      <Trans key={type} render={render}>
-        São Cristóvão e Nevis
-      </Trans>
-    ),
-    KP: (
-      <Trans key={type} render={render}>
-        Coreia do Norte
-      </Trans>
-    ),
-    KR: (
-      <Trans key={type} render={render}>
-        Coreia do Sul
-      </Trans>
-    ),
-    KW: (
-      <Trans key={type} render={render}>
-        Kuwait
-      </Trans>
-    ),
-    KZ: (
-      <Trans key={type} render={render}>
-        Cazaquistão
-      </Trans>
-    ),
-    LA: (
-      <Trans key={type} render={render}>
-        Laos
-      </Trans>
-    ),
-    LB: (
-      <Trans key={type} render={render}>
-        Líbano
-      </Trans>
-    ),
-    LC: (
-      <Trans key={type} render={render}>
-        Santa Lúcia
-      </Trans>
-    ),
-    LI: (
-      <Trans key={type} render={render}>
-        Liechtenstein
-      </Trans>
-    ),
-    LK: (
-      <Trans key={type} render={render}>
-        Sri Lanka
-      </Trans>
-    ),
-    LR: (
-      <Trans key={type} render={render}>
-        Libéria
-      </Trans>
-    ),
-    LS: (
-      <Trans key={type} render={render}>
-        Lesoto
-      </Trans>
-    ),
-    LT: (
-      <Trans key={type} render={render}>
-        Lituânia
-      </Trans>
-    ),
-    LU: (
-      <Trans key={type} render={render}>
-        Luxemburgo
-      </Trans>
-    ),
-    LV: (
-      <Trans key={type} render={render}>
-        Letónia
-      </Trans>
-    ),
-    LY: (
-      <Trans key={type} render={render}>
-        Líbia
-      </Trans>
-    ),
-    MA: (
-      <Trans key={type} render={render}>
-        Marrocos
-      </Trans>
-    ),
-    MC: (
-      <Trans key={type} render={render}>
-        Mónaco
-      </Trans>
-    ),
-    MD: (
-      <Trans key={type} render={render}>
-        Moldávia
-      </Trans>
-    ),
-    ME: (
-      <Trans key={type} render={render}>
-        Montenegro
-      </Trans>
-    ),
-    MG: (
-      <Trans key={type} render={render}>
-        Madagáscar
-      </Trans>
-    ),
-    MH: (
-      <Trans key={type} render={render}>
-        Ilhas Marshall
-      </Trans>
-    ),
-    MK: (
-      <Trans key={type} render={render}>
-        Macedónia do Norte
-      </Trans>
-    ),
-    ML: (
-      <Trans key={type} render={render}>
-        Mali
-      </Trans>
-    ),
-    MM: (
-      <Trans key={type} render={render}>
-        Myanmar
-      </Trans>
-    ),
-    MN: (
-      <Trans key={type} render={render}>
-        Mongólia
-      </Trans>
-    ),
-    MR: (
-      <Trans key={type} render={render}>
-        Mauritânia
-      </Trans>
-    ),
-    MT: (
-      <Trans key={type} render={render}>
-        Malta
-      </Trans>
-    ),
-    MU: (
-      <Trans key={type} render={render}>
-        Maurícia
-      </Trans>
-    ),
-    MV: (
-      <Trans key={type} render={render}>
-        Maldivas
-      </Trans>
-    ),
-    MW: (
-      <Trans key={type} render={render}>
-        Malawi
-      </Trans>
-    ),
-    MX: (
-      <Trans key={type} render={render}>
-        México
-      </Trans>
-    ),
-    MY: (
-      <Trans key={type} render={render}>
-        Malásia
-      </Trans>
-    ),
-    MZ: (
-      <Trans key={type} render={render}>
-        Moçambique
-      </Trans>
-    ),
-    NA: (
-      <Trans key={type} render={render}>
-        Namíbia
-      </Trans>
-    ),
-    NE: (
-      <Trans key={type} render={render}>
-        Níger
-      </Trans>
-    ),
-    NG: (
-      <Trans key={type} render={render}>
-        Nigéria
-      </Trans>
-    ),
-    NI: (
-      <Trans key={type} render={render}>
-        Nicarágua
-      </Trans>
-    ),
-    NL: (
-      <Trans key={type} render={render}>
-        Países Baixos
-      </Trans>
-    ),
-    NO: (
-      <Trans key={type} render={render}>
-        Noruega
-      </Trans>
-    ),
-    NP: (
-      <Trans key={type} render={render}>
-        Nepal
-      </Trans>
-    ),
-    NR: (
-      <Trans key={type} render={render}>
-        Nauru
-      </Trans>
-    ),
-    NU: (
-      <Trans key={type} render={render}>
-        Niue
-      </Trans>
-    ),
-    NZ: (
-      <Trans key={type} render={render}>
-        Nova Zelândia
-      </Trans>
-    ),
-    OM: (
-      <Trans key={type} render={render}>
-        Omã
-      </Trans>
-    ),
-    PA: (
-      <Trans key={type} render={render}>
-        Panamá
-      </Trans>
-    ),
-    PE: (
-      <Trans key={type} render={render}>
-        Peru
-      </Trans>
-    ),
-    PG: (
-      <Trans key={type} render={render}>
-        Papua-Nova Guiné
-      </Trans>
-    ),
-    PH: (
-      <Trans key={type} render={render}>
-        Filipinas
-      </Trans>
-    ),
-    PK: (
-      <Trans key={type} render={render}>
-        Paquistão
-      </Trans>
-    ),
-    PL: (
-      <Trans key={type} render={render}>
-        Polónia
-      </Trans>
-    ),
-    PS: (
-      <Trans key={type} render={render}>
-        Palestina
-      </Trans>
-    ),
-    PT: (
-      <Trans key={type} render={render}>
-        Portugal
-      </Trans>
-    ),
-    PW: (
-      <Trans key={type} render={render}>
-        Palau
-      </Trans>
-    ),
-    PY: (
-      <Trans key={type} render={render}>
-        Paraguai
-      </Trans>
-    ),
-    QA: (
-      <Trans key={type} render={render}>
-        Qatar
-      </Trans>
-    ),
-    RO: (
-      <Trans key={type} render={render}>
-        Roménia
-      </Trans>
-    ),
-    RS: (
-      <Trans key={type} render={render}>
-        Sérvia
-      </Trans>
-    ),
-    RU: (
-      <Trans key={type} render={render}>
-        Rússia
-      </Trans>
-    ),
-    RW: (
-      <Trans key={type} render={render}>
-        Ruanda
-      </Trans>
-    ),
-    SA: (
-      <Trans key={type} render={render}>
-        Arábia Saudita
-      </Trans>
-    ),
-    SB: (
-      <Trans key={type} render={render}>
-        Ilhas Salomão
-      </Trans>
-    ),
-    SC: (
-      <Trans key={type} render={render}>
-        Seicheles
-      </Trans>
-    ),
-    SD: (
-      <Trans key={type} render={render}>
-        Sudão
-      </Trans>
-    ),
-    SE: (
-      <Trans key={type} render={render}>
-        Suécia
-      </Trans>
-    ),
-    SG: (
-      <Trans key={type} render={render}>
-        Singapura
-      </Trans>
-    ),
-    SI: (
-      <Trans key={type} render={render}>
-        Eslovénia
-      </Trans>
-    ),
-    SK: (
-      <Trans key={type} render={render}>
-        Eslováquia
-      </Trans>
-    ),
-    SL: (
-      <Trans key={type} render={render}>
-        Serra Leoa
-      </Trans>
-    ),
-    SM: (
-      <Trans key={type} render={render}>
-        San Marino
-      </Trans>
-    ),
-    SN: (
-      <Trans key={type} render={render}>
-        Senegal
-      </Trans>
-    ),
-    SO: (
-      <Trans key={type} render={render}>
-        Somália
-      </Trans>
-    ),
-    SR: (
-      <Trans key={type} render={render}>
-        Suriname
-      </Trans>
-    ),
-    SS: (
-      <Trans key={type} render={render}>
-        Sudão do Sul
-      </Trans>
-    ),
-    ST: (
-      <Trans key={type} render={render}>
-        São Tomé e Príncipe
-      </Trans>
-    ),
-    SV: (
-      <Trans key={type} render={render}>
-        El Salvador
-      </Trans>
-    ),
-    SY: (
-      <Trans key={type} render={render}>
-        Síria
-      </Trans>
-    ),
-    SZ: (
-      <Trans key={type} render={render}>
-        Essuatíni
-      </Trans>
-    ),
-    TD: (
-      <Trans key={type} render={render}>
-        Chade
-      </Trans>
-    ),
-    TG: (
-      <Trans key={type} render={render}>
-        Togo
-      </Trans>
-    ),
-    TH: (
-      <Trans key={type} render={render}>
-        Tailândia
-      </Trans>
-    ),
-    TJ: (
-      <Trans key={type} render={render}>
-        Tajiquistão
-      </Trans>
-    ),
-    TL: (
-      <Trans key={type} render={render}>
-        Timor-Leste
-      </Trans>
-    ),
-    TM: (
-      <Trans key={type} render={render}>
-        Turquemenistão
-      </Trans>
-    ),
-    TN: (
-      <Trans key={type} render={render}>
-        Tunísia
-      </Trans>
-    ),
-    TO: (
-      <Trans key={type} render={render}>
-        Tonga
-      </Trans>
-    ),
-    TR: (
-      <Trans key={type} render={render}>
-        Turquia
-      </Trans>
-    ),
-    TT: (
-      <Trans key={type} render={render}>
-        Trinidade e Tobago
-      </Trans>
-    ),
-    TV: (
-      <Trans key={type} render={render}>
-        Tuvalu
-      </Trans>
-    ),
-    TW: (
-      <Trans key={type} render={render}>
-        Taiwan
-      </Trans>
-    ),
-    TZ: (
-      <Trans key={type} render={render}>
-        Tanzânia
-      </Trans>
-    ),
-    UA: (
-      <Trans key={type} render={render}>
-        Ucrânia
-      </Trans>
-    ),
-    UG: (
-      <Trans key={type} render={render}>
-        Uganda
-      </Trans>
-    ),
-    US: (
-      <Trans key={type} render={render}>
-        Estados Unidos da América
-      </Trans>
-    ),
-    UY: (
-      <Trans key={type} render={render}>
-        Uruguai
-      </Trans>
-    ),
-    UZ: (
-      <Trans key={type} render={render}>
-        Uzbequistão
-      </Trans>
-    ),
-    VA: (
-      <Trans key={type} render={render}>
-        Vaticano
-      </Trans>
-    ),
-    VC: (
-      <Trans key={type} render={render}>
-        São Vicente e Granadinas
-      </Trans>
-    ),
-    VE: (
-      <Trans key={type} render={render}>
-        Venezuela
-      </Trans>
-    ),
-    VN: (
-      <Trans key={type} render={render}>
-        Vietname
-      </Trans>
-    ),
-    VU: (
-      <Trans key={type} render={render}>
-        Vanuatu
-      </Trans>
-    ),
-    WS: (
-      <Trans key={type} render={render}>
-        Samoa
-      </Trans>
-    ),
-    YE: (
-      <Trans key={type} render={render}>
-        Iémen
-      </Trans>
-    ),
-    ZA: (
-      <Trans key={type} render={render}>
-        África do Sul
-      </Trans>
-    ),
-    ZM: (
-      <Trans key={type} render={render}>
-        Zâmbia
-      </Trans>
-    ),
-    ZW: (
-      <Trans key={type} render={render}>
-        Zimbabwe
-      </Trans>
-    ),
-  }[type]);
+const i18n = setupI18n();
+i18n.load(catalogs);
+
+export const getRegionTranslations = (code, language) => {
+  i18n.activate(language);
+
+  return {
+    'PT.AC': i18n._('Açores'),
+    'PT.AV': i18n._('Aveiro'),
+    'PT.BE': i18n._('Beja'),
+    'PT.BR': i18n._('Braga'),
+    'PT.BA': i18n._('Bragança'),
+    'PT.CB': i18n._('Castelo Branco'),
+    'PT.CO': i18n._('Coimbra'),
+    'PT.EV': i18n._('Évora'),
+    'PT.FA': i18n._('Faro'),
+    'PT.GU': i18n._('Guarda'),
+    'PT.LE': i18n._('Leiria'),
+    'PT.LI': i18n._('Lisboa'),
+    'PT.MA': i18n._('Madeira'),
+    'PT.PA': i18n._('Portalegre'),
+    'PT.PO': i18n._('Porto'),
+    'PT.SA': i18n._('Santarém'),
+    'PT.SE': i18n._('Setúbal'),
+    'PT.VC': i18n._('Viana do Castelo'),
+    'PT.VR': i18n._('Vila Real'),
+    'PT.VI': i18n._('Viseu'),
+    AD: i18n._('Andorra'),
+    AE: i18n._('Emirados Árabes Unidos'),
+    AF: i18n._('Afeganistão'),
+    AG: i18n._('Antígua and Barbuda'),
+    AL: i18n._('Albânia'),
+    AM: i18n._('Arménia'),
+    AO: i18n._('Angola'),
+    AR: i18n._('Argentina'),
+    AT: i18n._('Áustria'),
+    AU: i18n._('Austrália'),
+    AZ: i18n._('Azerbaijão'),
+    BA: i18n._('Bósnia e Herzegovina'),
+    BB: i18n._('Barbados'),
+    BD: i18n._('Bangladesh'),
+    BE: i18n._('Bélgica'),
+    BF: i18n._('Burkina Faso'),
+    BG: i18n._('Bulgária'),
+    BH: i18n._('Bahrein'),
+    BI: i18n._('Burundi'),
+    BJ: i18n._('Benim'),
+    BN: i18n._('Brunei'),
+    BO: i18n._('Bolívia'),
+    BR: i18n._('Brasil'),
+    BS: i18n._('Bahamas'),
+    BT: i18n._('Butão'),
+    BW: i18n._('Botswana'),
+    BY: i18n._('Bielorrússia'),
+    BZ: i18n._('Belize'),
+    CA: i18n._('Canadá'),
+    CD: i18n._('República Democrática do Congo'),
+    CF: i18n._('República Centro-Africana'),
+    CG: i18n._('República do Congo'),
+    CH: i18n._('Suíça'),
+    CI: i18n._('Costa do Marfim'),
+    CL: i18n._('Chile'),
+    CM: i18n._('Camarões'),
+    CN: i18n._('China'),
+    CO: i18n._('Colômbia'),
+    CR: i18n._('Costa Rica'),
+    CU: i18n._('Cuba'),
+    CV: i18n._('Cabo Verde'),
+    CY: i18n._('Chipre'),
+    CZ: i18n._('Chéquia'),
+    DE: i18n._('Alemanha'),
+    DJ: i18n._('Djibuti'),
+    DK: i18n._('Dinamarca'),
+    DM: i18n._('Dominica'),
+    DO: i18n._('República Dominicana'),
+    DZ: i18n._('Argélia'),
+    EC: i18n._('Equador'),
+    EE: i18n._('Estónia'),
+    EG: i18n._('Egipto'),
+    EH: i18n._('Saara Ocidental'),
+    ER: i18n._('Eritreia'),
+    ES: i18n._('Espanha'),
+    ET: i18n._('Etiópia'),
+    FI: i18n._('Finlândia'),
+    FJ: i18n._('Fiji'),
+    FM: i18n._('Estados Federados da Micronésia'),
+    FR: i18n._('França'),
+    GA: i18n._('Gabão'),
+    GB: i18n._('Reino Unido'),
+    GD: i18n._('Granada'),
+    GE: i18n._('Geórgia'),
+    GH: i18n._('Gana'),
+    GM: i18n._('Gâmbia'),
+    GN: i18n._('Guiné'),
+    GQ: i18n._('Guiné Equatorial'),
+    GR: i18n._('Grécia'),
+    GT: i18n._('Guatemala'),
+    GW: i18n._('Guiné-Bissau'),
+    GY: i18n._('Guiana'),
+    HN: i18n._('Honduras'),
+    HR: i18n._('Croácia'),
+    HT: i18n._('Haiti'),
+    HU: i18n._('Hungria'),
+    ID: i18n._('Indonésia'),
+    IE: i18n._('Irlanda'),
+    IL: i18n._('Israel'),
+    IN: i18n._('Índia'),
+    IQ: i18n._('Iraque'),
+    IR: i18n._('Irão'),
+    IS: i18n._('Islândia'),
+    IT: i18n._('Itália'),
+    JM: i18n._('Jamaica'),
+    JO: i18n._('Jordânia'),
+    JP: i18n._('Japão'),
+    KE: i18n._('Quénia'),
+    KG: i18n._('Quirguistão'),
+    KH: i18n._('Cambodja'),
+    KI: i18n._('Kiribati'),
+    KM: i18n._('Comoros'),
+    KN: i18n._('São Cristóvão e Nevis'),
+    KP: i18n._('Coreia do Norte'),
+    KR: i18n._('Coreia do Sul'),
+    KW: i18n._('Kuwait'),
+    KZ: i18n._('Cazaquistão'),
+    LA: i18n._('Laos'),
+    LB: i18n._('Líbano'),
+    LC: i18n._('Santa Lúcia'),
+    LI: i18n._('Liechtenstein'),
+    LK: i18n._('Sri Lanka'),
+    LR: i18n._('Libéria'),
+    LS: i18n._('Lesoto'),
+    LT: i18n._('Lituânia'),
+    LU: i18n._('Luxemburgo'),
+    LV: i18n._('Letónia'),
+    LY: i18n._('Líbia'),
+    MA: i18n._('Marrocos'),
+    MC: i18n._('Mónaco'),
+    MD: i18n._('Moldávia'),
+    ME: i18n._('Montenegro'),
+    MG: i18n._('Madagáscar'),
+    MH: i18n._('Ilhas Marshall'),
+    MK: i18n._('Macedónia do Norte'),
+    ML: i18n._('Mali'),
+    MM: i18n._('Myanmar'),
+    MN: i18n._('Mongólia'),
+    MR: i18n._('Mauritânia'),
+    MT: i18n._('Malta'),
+    MU: i18n._('Maurícia'),
+    MV: i18n._('Maldivas'),
+    MW: i18n._('Malawi'),
+    MX: i18n._('México'),
+    MY: i18n._('Malásia'),
+    MZ: i18n._('Moçambique'),
+    NA: i18n._('Namíbia'),
+    NE: i18n._('Níger'),
+    NG: i18n._('Nigéria'),
+    NI: i18n._('Nicarágua'),
+    NL: i18n._('Países Baixos'),
+    NO: i18n._('Noruega'),
+    NP: i18n._('Nepal'),
+    NR: i18n._('Nauru'),
+    NU: i18n._('Niue'),
+    NZ: i18n._('Nova Zelândia'),
+    OM: i18n._('Omã'),
+    PA: i18n._('Panamá'),
+    PE: i18n._('Peru'),
+    PG: i18n._('Papua-Nova Guiné'),
+    PH: i18n._('Filipinas'),
+    PK: i18n._('Paquistão'),
+    PL: i18n._('Polónia'),
+    PS: i18n._('Palestina'),
+    PT: i18n._('Portugal'),
+    PW: i18n._('Palau'),
+    PY: i18n._('Paraguai'),
+    QA: i18n._('Qatar'),
+    RO: i18n._('Roménia'),
+    RS: i18n._('Sérvia'),
+    RU: i18n._('Rússia'),
+    RW: i18n._('Ruanda'),
+    SA: i18n._('Arábia Saudita'),
+    SB: i18n._('Ilhas Salomão'),
+    SC: i18n._('Seicheles'),
+    SD: i18n._('Sudão'),
+    SE: i18n._('Suécia'),
+    SG: i18n._('Singapura'),
+    SI: i18n._('Eslovénia'),
+    SK: i18n._('Eslováquia'),
+    SL: i18n._('Serra Leoa'),
+    SM: i18n._('San Marino'),
+    SN: i18n._('Senegal'),
+    SO: i18n._('Somália'),
+    SR: i18n._('Suriname'),
+    SS: i18n._('Sudão do Sul'),
+    ST: i18n._('São Tomé e Príncipe'),
+    SV: i18n._('El Salvador'),
+    SY: i18n._('Síria'),
+    SZ: i18n._('Essuatíni'),
+    TD: i18n._('Chade'),
+    TG: i18n._('Togo'),
+    TH: i18n._('Tailândia'),
+    TJ: i18n._('Tajiquistão'),
+    TL: i18n._('Timor-Leste'),
+    TM: i18n._('Turquemenistão'),
+    TN: i18n._('Tunísia'),
+    TO: i18n._('Tonga'),
+    TR: i18n._('Turquia'),
+    TT: i18n._('Trinidade e Tobago'),
+    TV: i18n._('Tuvalu'),
+    TW: i18n._('Taiwan'),
+    TZ: i18n._('Tanzânia'),
+    UA: i18n._('Ucrânia'),
+    UG: i18n._('Uganda'),
+    US: i18n._('Estados Unidos da América'),
+    UY: i18n._('Uruguai'),
+    UZ: i18n._('Uzbequistão'),
+    VA: i18n._('Vaticano'),
+    VC: i18n._('São Vicente e Granadinas'),
+    VE: i18n._('Venezuela'),
+    VN: i18n._('Vietname'),
+    VU: i18n._('Vanuatu'),
+    WS: i18n._('Samoa'),
+    YE: i18n._('Iémen'),
+    ZA: i18n._('África do Sul'),
+    ZM: i18n._('Zâmbia'),
+    ZW: i18n._('Zimbabwe'),
+  }[code];
+};

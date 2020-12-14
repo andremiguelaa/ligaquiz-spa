@@ -126,7 +126,7 @@ msgstr "Administrator"
 msgid "Administração"
 msgstr "Administration"
 
-#: src/utils/getRegionTranslation.js:117
+#: src/utils/getRegionTranslation.js:33
 msgid "Afeganistão"
 msgstr "Afghanistan"
 
@@ -140,11 +140,11 @@ msgstr "You still have one blank answer."
 msgid "Ainda tens {blankAnsers} perguntas em branco."
 msgstr "You still have {blankAnsers} blank answers."
 
-#: src/utils/getRegionTranslation.js:127
+#: src/utils/getRegionTranslation.js:35
 msgid "Albânia"
 msgstr "Albania"
 
-#: src/utils/getRegionTranslation.js:322
+#: src/utils/getRegionTranslation.js:74
 msgid "Alemanha"
 msgstr "Germany"
 
@@ -152,11 +152,11 @@ msgstr "Germany"
 msgid "Alterar estado"
 msgstr "Change status"
 
-#: src/utils/getRegionTranslation.js:107
+#: src/utils/getRegionTranslation.js:31
 msgid "Andorra"
 msgstr "Andorra"
 
-#: src/utils/getRegionTranslation.js:137
+#: src/utils/getRegionTranslation.js:37
 msgid "Angola"
 msgstr "Angola"
 
@@ -165,7 +165,7 @@ msgstr "Angola"
 msgid "Anterior"
 msgstr "Previous"
 
-#: src/utils/getRegionTranslation.js:122
+#: src/utils/getRegionTranslation.js:34
 msgid "Antígua and Barbuda"
 msgstr "Antigua and Barbuda"
 
@@ -201,21 +201,21 @@ msgstr "Delete month ranking"
 msgid "Apagar temporada"
 msgstr "Delete season"
 
-#: src/views/Account.js:165
-#: src/views/Register.js:117
+#: src/views/Account.js:169
+#: src/views/Register.js:121
 #: src/views/admin/nationalRanking/Players/Form.js:192
 msgid "Apelido"
 msgstr "Surname"
 
-#: src/utils/getRegionTranslation.js:142
+#: src/utils/getRegionTranslation.js:38
 msgid "Argentina"
 msgstr "Argentina"
 
-#: src/utils/getRegionTranslation.js:347
+#: src/utils/getRegionTranslation.js:79
 msgid "Argélia"
 msgstr "Algeria"
 
-#: src/utils/getRegionTranslation.js:132
+#: src/utils/getRegionTranslation.js:36
 msgid "Arménia"
 msgstr "Armenia"
 
@@ -249,7 +249,7 @@ msgstr "Seasons archive"
 msgid "Artesanato"
 msgstr "Handicraft"
 
-#: src/utils/getRegionTranslation.js:867
+#: src/utils/getRegionTranslation.js:183
 msgid "Arábia Saudita"
 msgstr "Saudi Arabia"
 
@@ -258,11 +258,11 @@ msgstr "Saudi Arabia"
 msgid "As minhas estatísticas"
 msgstr "My statistics"
 
-#: src/views/Register.js:285
+#: src/views/Register.js:289
 msgid "As palavras-passes não coincidem."
 msgstr "Passwords mismatch"
 
-#: src/utils/getRegionTranslation.js:152
+#: src/utils/getRegionTranslation.js:40
 msgid "Austrália"
 msgstr "Australia"
 
@@ -279,19 +279,19 @@ msgstr "Aveiro"
 msgid "Aviso"
 msgstr "Warning"
 
-#: src/utils/getRegionTranslation.js:157
+#: src/utils/getRegionTranslation.js:41
 msgid "Azerbaijão"
 msgstr "Azerbaijan"
 
-#: src/utils/getRegionTranslation.js:7
+#: src/utils/getRegionTranslation.js:11
 msgid "Açores"
 msgstr "Azores"
 
-#: src/utils/getRegionTranslation.js:222
+#: src/utils/getRegionTranslation.js:54
 msgid "Bahamas"
 msgstr "Bahamas"
 
-#: src/utils/getRegionTranslation.js:192
+#: src/utils/getRegionTranslation.js:48
 msgid "Bahrein"
 msgstr "Bahrain"
 
@@ -299,15 +299,15 @@ msgstr "Bahrain"
 msgid "Banda Desenhada"
 msgstr "Comics"
 
-#: src/utils/getRegionTranslation.js:172
+#: src/utils/getRegionTranslation.js:44
 msgid "Bangladesh"
 msgstr "Bangladesh"
 
-#: src/utils/getRegionTranslation.js:167
+#: src/utils/getRegionTranslation.js:43
 msgid "Barbados"
 msgstr "Barbados"
 
-#: src/utils/getRegionTranslation.js:17
+#: src/utils/getRegionTranslation.js:13
 msgid "Beja"
 msgstr "Beja"
 
@@ -315,15 +315,15 @@ msgstr "Beja"
 msgid "Belas Artes"
 msgstr "Fine Arts"
 
-#: src/utils/getRegionTranslation.js:242
+#: src/utils/getRegionTranslation.js:58
 msgid "Belize"
 msgstr "Belize"
 
-#: src/utils/getRegionTranslation.js:202
+#: src/utils/getRegionTranslation.js:50
 msgid "Benim"
 msgstr "Benin"
 
-#: src/utils/getRegionTranslation.js:237
+#: src/utils/getRegionTranslation.js:57
 msgid "Bielorrússia"
 msgstr "Belarus"
 
@@ -336,51 +336,51 @@ msgstr "Biology"
 msgid "Bloqueado"
 msgstr "Blocked"
 
-#: src/utils/getRegionTranslation.js:212
+#: src/utils/getRegionTranslation.js:52
 msgid "Bolívia"
 msgstr "Bolivia"
 
-#: src/utils/getRegionTranslation.js:232
+#: src/utils/getRegionTranslation.js:56
 msgid "Botswana"
 msgstr "Botswana"
 
-#: src/utils/getRegionTranslation.js:22
+#: src/utils/getRegionTranslation.js:14
 msgid "Braga"
 msgstr "Braga"
 
-#: src/utils/getRegionTranslation.js:27
+#: src/utils/getRegionTranslation.js:15
 msgid "Bragança"
 msgstr "Bragança"
 
-#: src/utils/getRegionTranslation.js:217
+#: src/utils/getRegionTranslation.js:53
 msgid "Brasil"
 msgstr "Brazil"
 
-#: src/utils/getRegionTranslation.js:207
+#: src/utils/getRegionTranslation.js:51
 msgid "Brunei"
 msgstr "Brunei"
 
-#: src/utils/getRegionTranslation.js:187
+#: src/utils/getRegionTranslation.js:47
 msgid "Bulgária"
 msgstr "Bulgaria"
 
-#: src/utils/getRegionTranslation.js:182
+#: src/utils/getRegionTranslation.js:46
 msgid "Burkina Faso"
 msgstr "Burkina Faso"
 
-#: src/utils/getRegionTranslation.js:197
+#: src/utils/getRegionTranslation.js:49
 msgid "Burundi"
 msgstr "Burundi"
 
-#: src/utils/getRegionTranslation.js:227
+#: src/utils/getRegionTranslation.js:55
 msgid "Butão"
 msgstr "Buthan"
 
-#: src/utils/getRegionTranslation.js:177
+#: src/utils/getRegionTranslation.js:45
 msgid "Bélgica"
 msgstr "Belgium"
 
-#: src/utils/getRegionTranslation.js:162
+#: src/utils/getRegionTranslation.js:42
 msgid "Bósnia e Herzegovina"
 msgstr "Bosnia and Herzegovina"
 
@@ -388,7 +388,7 @@ msgstr "Bosnia and Herzegovina"
 msgid "C"
 msgstr "C"
 
-#: src/utils/getRegionTranslation.js:307
+#: src/utils/getRegionTranslation.js:71
 msgid "Cabo Verde"
 msgstr "Cabo Verde"
 
@@ -396,11 +396,11 @@ msgstr "Cabo Verde"
 msgid "Calendário"
 msgstr "Fixtures"
 
-#: src/utils/getRegionTranslation.js:282
+#: src/utils/getRegionTranslation.js:66
 msgid "Camarões"
 msgstr "Camerron"
 
-#: src/utils/getRegionTranslation.js:552
+#: src/utils/getRegionTranslation.js:120
 msgid "Cambodja"
 msgstr "Cambodia"
 
@@ -416,7 +416,7 @@ msgstr "World Quizzing Championship"
 msgid "Campeonato Nacional de Quiz"
 msgstr "Portuguese Quizzing Championship"
 
-#: src/utils/getRegionTranslation.js:247
+#: src/utils/getRegionTranslation.js:59
 msgid "Canadá"
 msgstr "Canada"
 
@@ -424,31 +424,31 @@ msgstr "Canada"
 msgid "Cancelar"
 msgstr "Cancel"
 
-#: src/utils/getRegionTranslation.js:32
+#: src/utils/getRegionTranslation.js:16
 msgid "Castelo Branco"
 msgstr "Castelo Branco"
 
-#: src/utils/getRegionTranslation.js:587
+#: src/utils/getRegionTranslation.js:127
 msgid "Cazaquistão"
 msgstr "Kazakhstan"
 
-#: src/utils/getRegionTranslation.js:957
+#: src/utils/getRegionTranslation.js:201
 msgid "Chade"
 msgstr "Chad"
 
-#: src/utils/getRegionTranslation.js:277
+#: src/utils/getRegionTranslation.js:65
 msgid "Chile"
 msgstr "Chile"
 
-#: src/utils/getRegionTranslation.js:287
+#: src/utils/getRegionTranslation.js:67
 msgid "China"
 msgstr "China"
 
-#: src/utils/getRegionTranslation.js:312
+#: src/utils/getRegionTranslation.js:72
 msgid "Chipre"
 msgstr "Cyprus"
 
-#: src/utils/getRegionTranslation.js:317
+#: src/utils/getRegionTranslation.js:73
 msgid "Chéquia"
 msgstr "Czechia"
 
@@ -481,11 +481,11 @@ msgstr "Ranking"
 msgid "Clica <0>aqui</0> para saber como renovar."
 msgstr "Click <0>here</0> to find out how to renew."
 
-#: src/utils/getRegionTranslation.js:37
+#: src/utils/getRegionTranslation.js:17
 msgid "Coimbra"
 msgstr "Coimbra"
 
-#: src/utils/getRegionTranslation.js:292
+#: src/utils/getRegionTranslation.js:68
 msgid "Colômbia"
 msgstr "Colombia"
 
@@ -493,7 +493,7 @@ msgstr "Colombia"
 msgid "Comida e Bebida"
 msgstr "Food and Beverage"
 
-#: src/utils/getRegionTranslation.js:562
+#: src/utils/getRegionTranslation.js:122
 msgid "Comoros"
 msgstr "Comoros"
 
@@ -510,15 +510,15 @@ msgstr "Statistics Comparison"
 msgid "Comunicação Social e Redes Sociais"
 msgstr "Press and Social Networks"
 
-#: src/views/Account.js:346
-#: src/views/Register.js:267
+#: src/views/Account.js:349
+#: src/views/Register.js:271
 #: src/views/ResetPassword.js:84
 msgid "Confirmação da palavra-passe"
 msgstr "Password confirmation"
 
 #: src/partials/Header.js:259
 #: src/routes.js:80
-#: src/views/Account.js:135
+#: src/views/Account.js:139
 msgid "Conta"
 msgstr "Account"
 
@@ -544,11 +544,11 @@ msgstr "Invitations"
 msgid "Convites já enviados"
 msgstr "Previously sent invitations"
 
-#: src/utils/getRegionTranslation.js:572
+#: src/utils/getRegionTranslation.js:124
 msgid "Coreia do Norte"
 msgstr "North Korea"
 
-#: src/utils/getRegionTranslation.js:577
+#: src/utils/getRegionTranslation.js:125
 msgid "Coreia do Sul"
 msgstr "South Korea"
 
@@ -578,11 +578,11 @@ msgstr "Correct {0}'s quiz"
 msgid "Corrigir quiz especial de {0}"
 msgstr "Correct {0}'s special quiz"
 
-#: src/utils/getRegionTranslation.js:297
+#: src/utils/getRegionTranslation.js:69
 msgid "Costa Rica"
 msgstr "Costa Rica"
 
-#: src/utils/getRegionTranslation.js:272
+#: src/utils/getRegionTranslation.js:64
 msgid "Costa do Marfim"
 msgstr "Côte d'Ivoire"
 
@@ -610,11 +610,11 @@ msgstr "Create special quiz"
 msgid "Criar temporada"
 msgstr "Create season"
 
-#: src/utils/getRegionTranslation.js:472
+#: src/utils/getRegionTranslation.js:104
 msgid "Croácia"
 msgstr "Croatia"
 
-#: src/utils/getRegionTranslation.js:302
+#: src/utils/getRegionTranslation.js:70
 msgid "Cuba"
 msgstr "Cuba"
 
@@ -647,8 +647,8 @@ msgstr "End date"
 msgid "Data de início"
 msgstr "Begin date"
 
-#: src/views/Account.js:189
-#: src/views/Register.js:134
+#: src/views/Account.js:193
+#: src/views/Register.js:138
 msgid "Data de nascimento"
 msgstr "Birthdate"
 
@@ -696,12 +696,12 @@ msgstr "Sports"
 msgid "Diferença de pontos"
 msgstr "Point difference"
 
-#: src/utils/getRegionTranslation.js:332
+#: src/utils/getRegionTranslation.js:76
 msgid "Dinamarca"
 msgstr "Denmark"
 
-#: src/views/Account.js:261
-#: src/views/Register.js:201
+#: src/views/Account.js:265
+#: src/views/Register.js:206
 msgid "Distrito/Região"
 msgstr "Country"
 
@@ -709,11 +709,11 @@ msgstr "Country"
 msgid "Divisões"
 msgstr "Tiers"
 
-#: src/utils/getRegionTranslation.js:327
+#: src/utils/getRegionTranslation.js:75
 msgid "Djibuti"
 msgstr "Djibouti"
 
-#: src/utils/getRegionTranslation.js:337
+#: src/utils/getRegionTranslation.js:77
 msgid "Dominica"
 msgstr "Dominica"
 
@@ -721,11 +721,11 @@ msgstr "Dominica"
 msgid "E"
 msgstr "D"
 
-#: src/views/Account.js:290
+#: src/views/Account.js:293
 #: src/views/Invitations.js:96
 #: src/views/Login.js:65
 #: src/views/RecoverPassword.js:56
-#: src/views/Register.js:222
+#: src/views/Register.js:226
 msgid "E-Mail"
 msgstr "E-Mail"
 
@@ -776,15 +776,15 @@ msgstr "Quiz Editor"
 msgid "Editor de Quizzes Especiais"
 msgstr "Special Quiz Editor"
 
-#: src/utils/getRegionTranslation.js:362
+#: src/utils/getRegionTranslation.js:82
 msgid "Egipto"
 msgstr "Egypt"
 
-#: src/utils/getRegionTranslation.js:942
+#: src/utils/getRegionTranslation.js:198
 msgid "El Salvador"
 msgstr "El Salvador"
 
-#: src/utils/getRegionTranslation.js:112
+#: src/utils/getRegionTranslation.js:32
 msgid "Emirados Árabes Unidos"
 msgstr "United Arab Emirates"
 
@@ -839,11 +839,11 @@ msgstr "Send suggestion/complain"
 msgid "Enviámos-te um e-mail, segue as instruções para definir uma nova palavra-passe."
 msgstr "We sent you an e-mail, follow its instructions to set a new password"
 
-#: src/utils/getRegionTranslation.js:352
+#: src/utils/getRegionTranslation.js:80
 msgid "Equador"
 msgstr "Ecuador"
 
-#: src/utils/getRegionTranslation.js:372
+#: src/utils/getRegionTranslation.js:84
 msgid "Eritreia"
 msgstr "Eritrea"
 
@@ -859,7 +859,7 @@ msgstr "Wrong"
 #: src/views/Account/Avatar.js:103
 #: src/views/Login.js:96
 #: src/views/RecoverPassword.js:85
-#: src/views/Register.js:295
+#: src/views/Register.js:299
 #: src/views/ResetPassword.js:125
 msgid "Erro de servidor. Tenta mais tarde."
 msgstr "Server error. Try again later."
@@ -881,15 +881,15 @@ msgstr "Choose an image"
 msgid "Escolher tipo de prova"
 msgstr "Choose type of event"
 
-#: src/utils/getRegionTranslation.js:902
+#: src/utils/getRegionTranslation.js:190
 msgid "Eslováquia"
 msgstr "Slovakia"
 
-#: src/utils/getRegionTranslation.js:897
+#: src/utils/getRegionTranslation.js:189
 msgid "Eslovénia"
 msgstr "Slovenia"
 
-#: src/utils/getRegionTranslation.js:377
+#: src/utils/getRegionTranslation.js:85
 msgid "Espanha"
 msgstr "Spain"
 
@@ -897,7 +897,7 @@ msgstr "Spain"
 msgid "Espaço"
 msgstr "Space"
 
-#: src/utils/getRegionTranslation.js:952
+#: src/utils/getRegionTranslation.js:200
 msgid "Essuatíni"
 msgstr "Eswatini"
 
@@ -905,11 +905,11 @@ msgstr "Eswatini"
 msgid "Esta conta encontra-se bloqueada."
 msgstr "This account is blocked."
 
-#: src/utils/getRegionTranslation.js:397
+#: src/utils/getRegionTranslation.js:89
 msgid "Estados Federados da Micronésia"
 msgstr "Federated States of Micronesia"
 
-#: src/utils/getRegionTranslation.js:1032
+#: src/utils/getRegionTranslation.js:216
 msgid "Estados Unidos da América"
 msgstr "United States of America"
 
@@ -937,11 +937,11 @@ msgstr "Lifestyle"
 msgid "Estás sem ligação à internet."
 msgstr "No internet access."
 
-#: src/utils/getRegionTranslation.js:357
+#: src/utils/getRegionTranslation.js:81
 msgid "Estónia"
 msgstr "Estonia"
 
-#: src/utils/getRegionTranslation.js:382
+#: src/utils/getRegionTranslation.js:86
 msgid "Etiópia"
 msgstr "Ethiopia"
 
@@ -958,7 +958,7 @@ msgstr "Forfeit"
 msgid "Faltas"
 msgstr "Forfeits"
 
-#: src/utils/getRegionTranslation.js:47
+#: src/utils/getRegionTranslation.js:19
 msgid "Faro"
 msgstr "Faro"
 
@@ -970,11 +970,11 @@ msgstr "Fauna and Flora"
 msgid "Ficheiro inválido."
 msgstr "Invalid file."
 
-#: src/utils/getRegionTranslation.js:392
+#: src/utils/getRegionTranslation.js:88
 msgid "Fiji"
 msgstr "Fiji"
 
-#: src/utils/getRegionTranslation.js:807
+#: src/utils/getRegionTranslation.js:171
 msgid "Filipinas"
 msgstr "Philippines"
 
@@ -986,11 +986,11 @@ msgstr "Philosophy"
 msgid "Fim"
 msgstr "End"
 
-#: src/utils/getRegionTranslation.js:387
+#: src/utils/getRegionTranslation.js:87
 msgid "Finlândia"
 msgstr "Finland"
 
-#: src/utils/getRegionTranslation.js:402
+#: src/utils/getRegionTranslation.js:90
 msgid "França"
 msgstr "France"
 
@@ -998,11 +998,11 @@ msgstr "France"
 msgid "Física"
 msgstr "Physics"
 
-#: src/utils/getRegionTranslation.js:407
+#: src/utils/getRegionTranslation.js:91
 msgid "Gabão"
 msgstr "Gabon"
 
-#: src/utils/getRegionTranslation.js:427
+#: src/utils/getRegionTranslation.js:95
 msgid "Gana"
 msgstr "Ghana"
 
@@ -1031,7 +1031,7 @@ msgstr "Quiz Management"
 msgid "Gestão de Ranking Nacional"
 msgstr "National Ranking Management"
 
-#: src/utils/getRegionTranslation.js:422
+#: src/utils/getRegionTranslation.js:94
 msgid "Geórgia"
 msgstr "Georgia"
 
@@ -1039,12 +1039,12 @@ msgstr "Georgia"
 msgid "Global"
 msgstr "Global"
 
-#: src/utils/getRegionTranslation.js:417
+#: src/utils/getRegionTranslation.js:93
 msgid "Granada"
 msgstr "Grenada"
 
 #: src/views/Account/Avatar.js:114
-#: src/views/Account.js:474
+#: src/views/Account.js:477
 #: src/views/admin/nationalRanking/Players/Form.js:260
 #: src/views/admin/quizzes/QuizForm.js:223
 #: src/views/admin/seasons/SeasonForm.js:295
@@ -1053,11 +1053,11 @@ msgstr "Grenada"
 msgid "Gravar"
 msgstr "Save"
 
-#: src/utils/getRegionTranslation.js:447
+#: src/utils/getRegionTranslation.js:99
 msgid "Grécia"
 msgstr "Greece"
 
-#: src/utils/getRegionTranslation.js:52
+#: src/utils/getRegionTranslation.js:20
 msgid "Guarda"
 msgstr "Guarda"
 
@@ -1065,27 +1065,27 @@ msgstr "Guarda"
 msgid "Guardar provas mensais"
 msgstr "Save month events"
 
-#: src/utils/getRegionTranslation.js:452
+#: src/utils/getRegionTranslation.js:100
 msgid "Guatemala"
 msgstr "Guatemala"
 
-#: src/utils/getRegionTranslation.js:462
+#: src/utils/getRegionTranslation.js:102
 msgid "Guiana"
 msgstr "Guyana"
 
-#: src/utils/getRegionTranslation.js:437
+#: src/utils/getRegionTranslation.js:97
 msgid "Guiné"
 msgstr "Guinea"
 
-#: src/utils/getRegionTranslation.js:442
+#: src/utils/getRegionTranslation.js:98
 msgid "Guiné Equatorial"
 msgstr "Equatorial Guinea"
 
-#: src/utils/getRegionTranslation.js:457
+#: src/utils/getRegionTranslation.js:101
 msgid "Guiné-Bissau"
 msgstr "Guinea-Bissau"
 
-#: src/utils/getRegionTranslation.js:432
+#: src/utils/getRegionTranslation.js:96
 msgid "Gâmbia"
 msgstr "Gambia"
 
@@ -1093,7 +1093,7 @@ msgstr "Gambia"
 msgid "HOT 100"
 msgstr "HOT 100"
 
-#: src/utils/getRegionTranslation.js:477
+#: src/utils/getRegionTranslation.js:105
 msgid "Haiti"
 msgstr "Haiti"
 
@@ -1105,7 +1105,7 @@ msgstr "His"
 msgid "História"
 msgstr "History"
 
-#: src/utils/getRegionTranslation.js:467
+#: src/utils/getRegionTranslation.js:103
 msgid "Honduras"
 msgstr "Honduras"
 
@@ -1113,15 +1113,15 @@ msgstr "Honduras"
 msgid "Hora"
 msgstr "Time"
 
-#: src/utils/getRegionTranslation.js:482
+#: src/utils/getRegionTranslation.js:106
 msgid "Hungria"
 msgstr "Hungary"
 
-#: src/utils/getRegionTranslation.js:672
+#: src/utils/getRegionTranslation.js:144
 msgid "Ilhas Marshall"
 msgstr "Marshall Islands"
 
-#: src/utils/getRegionTranslation.js:872
+#: src/utils/getRegionTranslation.js:184
 msgid "Ilhas Salomão"
 msgstr "Solomon Islands"
 
@@ -1142,7 +1142,7 @@ msgstr "Profile image updated successfully."
 msgid "Incompleto"
 msgstr "Incomplete"
 
-#: src/utils/getRegionTranslation.js:487
+#: src/utils/getRegionTranslation.js:107
 msgid "Indonésia"
 msgstr "Indonesia"
 
@@ -1158,31 +1158,31 @@ msgstr "Inquizição"
 msgid "Início"
 msgstr "Begin"
 
-#: src/utils/getRegionTranslation.js:507
+#: src/utils/getRegionTranslation.js:111
 msgid "Iraque"
 msgstr "Iraq"
 
-#: src/utils/getRegionTranslation.js:492
+#: src/utils/getRegionTranslation.js:108
 msgid "Irlanda"
 msgstr "Ireland"
 
-#: src/utils/getRegionTranslation.js:512
+#: src/utils/getRegionTranslation.js:112
 msgid "Irão"
 msgstr "Iran"
 
-#: src/utils/getRegionTranslation.js:517
+#: src/utils/getRegionTranslation.js:113
 msgid "Islândia"
 msgstr "Iceland"
 
-#: src/utils/getRegionTranslation.js:497
+#: src/utils/getRegionTranslation.js:109
 msgid "Israel"
 msgstr "Israel"
 
-#: src/utils/getRegionTranslation.js:522
+#: src/utils/getRegionTranslation.js:114
 msgid "Itália"
 msgstr "Italy"
 
-#: src/utils/getRegionTranslation.js:1077
+#: src/utils/getRegionTranslation.js:225
 msgid "Iémen"
 msgstr "Yemen"
 
@@ -1190,11 +1190,11 @@ msgstr "Yemen"
 msgid "J"
 msgstr "G"
 
-#: src/utils/getRegionTranslation.js:527
+#: src/utils/getRegionTranslation.js:115
 msgid "Jamaica"
 msgstr "Jamaica"
 
-#: src/utils/getRegionTranslation.js:537
+#: src/utils/getRegionTranslation.js:117
 msgid "Japão"
 msgstr "Japan"
 
@@ -1256,7 +1256,7 @@ msgstr "Jester"
 msgid "Joker usado"
 msgstr "Used Jester"
 
-#: src/utils/getRegionTranslation.js:532
+#: src/utils/getRegionTranslation.js:116
 msgid "Jordânia"
 msgstr "Jordan"
 
@@ -1268,20 +1268,20 @@ msgstr "Round {0}"
 msgid "Jornada {0} ({1})"
 msgstr "Round {0} ({1})"
 
-#: src/views/Account.js:316
-#: src/views/Register.js:242
+#: src/views/Account.js:319
+#: src/views/Register.js:246
 msgid "Já existe uma conta com este e-mail."
 msgstr "There is another account using this e-mail."
 
-#: src/utils/getRegionTranslation.js:557
+#: src/utils/getRegionTranslation.js:121
 msgid "Kiribati"
 msgstr "Kiribati"
 
-#: src/utils/getRegionTranslation.js:582
+#: src/utils/getRegionTranslation.js:126
 msgid "Kuwait"
 msgstr "Kuwait"
 
-#: src/utils/getRegionTranslation.js:592
+#: src/utils/getRegionTranslation.js:128
 msgid "Laos"
 msgstr "Laos"
 
@@ -1289,27 +1289,27 @@ msgstr "Laos"
 msgid "Legenda"
 msgstr "Legend"
 
-#: src/utils/getRegionTranslation.js:57
+#: src/utils/getRegionTranslation.js:21
 msgid "Leiria"
 msgstr "Leiria"
 
-#: src/utils/getRegionTranslation.js:622
+#: src/utils/getRegionTranslation.js:134
 msgid "Lesoto"
 msgstr "Lesotho"
 
-#: src/utils/getRegionTranslation.js:637
+#: src/utils/getRegionTranslation.js:137
 msgid "Letónia"
 msgstr "Latvia"
 
-#: src/utils/getRegionTranslation.js:617
+#: src/utils/getRegionTranslation.js:133
 msgid "Libéria"
 msgstr "Liberia"
 
-#: src/utils/getRegionTranslation.js:607
+#: src/utils/getRegionTranslation.js:131
 msgid "Liechtenstein"
 msgstr "Liechtenstein"
 
-#: src/utils/getRegionTranslation.js:62
+#: src/utils/getRegionTranslation.js:22
 msgid "Lisboa"
 msgstr "Lisbon"
 
@@ -1317,55 +1317,55 @@ msgstr "Lisbon"
 msgid "Literatura"
 msgstr "Literature"
 
-#: src/utils/getRegionTranslation.js:627
+#: src/utils/getRegionTranslation.js:135
 msgid "Lituânia"
 msgstr "Lithuania"
 
-#: src/utils/getRegionTranslation.js:632
+#: src/utils/getRegionTranslation.js:136
 msgid "Luxemburgo"
 msgstr "Luxembourg"
 
-#: src/utils/getRegionTranslation.js:597
+#: src/utils/getRegionTranslation.js:129
 msgid "Líbano"
 msgstr "Lebanon"
 
-#: src/utils/getRegionTranslation.js:642
+#: src/utils/getRegionTranslation.js:138
 msgid "Líbia"
 msgstr "Libya"
 
-#: src/utils/getRegionTranslation.js:677
+#: src/utils/getRegionTranslation.js:145
 msgid "Macedónia do Norte"
 msgstr "North Macedonia"
 
-#: src/utils/getRegionTranslation.js:667
+#: src/utils/getRegionTranslation.js:143
 msgid "Madagáscar"
 msgstr "Madagascar"
 
-#: src/utils/getRegionTranslation.js:67
+#: src/utils/getRegionTranslation.js:23
 msgid "Madeira"
 msgstr "Madeira"
 
-#: src/utils/getRegionTranslation.js:717
+#: src/utils/getRegionTranslation.js:153
 msgid "Malawi"
 msgstr "Malawi"
 
-#: src/utils/getRegionTranslation.js:712
+#: src/utils/getRegionTranslation.js:152
 msgid "Maldivas"
 msgstr "Maldives"
 
-#: src/utils/getRegionTranslation.js:682
+#: src/utils/getRegionTranslation.js:146
 msgid "Mali"
 msgstr "Mali"
 
-#: src/utils/getRegionTranslation.js:702
+#: src/utils/getRegionTranslation.js:150
 msgid "Malta"
 msgstr "Malta"
 
-#: src/utils/getRegionTranslation.js:727
+#: src/utils/getRegionTranslation.js:155
 msgid "Malásia"
 msgstr "Malaysia"
 
-#: src/utils/getRegionTranslation.js:647
+#: src/utils/getRegionTranslation.js:139
 msgid "Marrocos"
 msgstr "Morocco"
 
@@ -1373,11 +1373,11 @@ msgstr "Morocco"
 msgid "Matemática"
 msgstr "Math"
 
-#: src/utils/getRegionTranslation.js:697
+#: src/utils/getRegionTranslation.js:149
 msgid "Mauritânia"
 msgstr "Mauritania"
 
-#: src/utils/getRegionTranslation.js:707
+#: src/utils/getRegionTranslation.js:151
 msgid "Maurícia"
 msgstr "Mauritius"
 
@@ -1405,19 +1405,19 @@ msgstr "Mythology"
 msgid "Moda"
 msgstr "Fashion"
 
-#: src/utils/getRegionTranslation.js:657
+#: src/utils/getRegionTranslation.js:141
 msgid "Moldávia"
 msgstr "Moldova"
 
-#: src/utils/getRegionTranslation.js:692
+#: src/utils/getRegionTranslation.js:148
 msgid "Mongólia"
 msgstr "Mongolia"
 
-#: src/utils/getRegionTranslation.js:662
+#: src/utils/getRegionTranslation.js:142
 msgid "Montenegro"
 msgstr "Montenegro"
 
-#: src/utils/getRegionTranslation.js:732
+#: src/utils/getRegionTranslation.js:156
 msgid "Moçambique"
 msgstr "Mozambique"
 
@@ -1432,7 +1432,7 @@ msgstr "Media"
 msgid "Museus"
 msgstr "Museums"
 
-#: src/utils/getRegionTranslation.js:687
+#: src/utils/getRegionTranslation.js:147
 msgid "Myanmar"
 msgstr "Myanmar"
 
@@ -1444,7 +1444,7 @@ msgstr "Max. 200 KB"
 msgid "Média"
 msgstr "Average"
 
-#: src/utils/getRegionTranslation.js:722
+#: src/utils/getRegionTranslation.js:154
 msgid "México"
 msgstr "Mexico"
 
@@ -1456,7 +1456,7 @@ msgstr "Mexico"
 msgid "Mês"
 msgstr "Month"
 
-#: src/utils/getRegionTranslation.js:652
+#: src/utils/getRegionTranslation.js:140
 msgid "Mónaco"
 msgstr "Monaco"
 
@@ -1464,11 +1464,11 @@ msgstr "Monaco"
 msgid "Música"
 msgstr "Music"
 
-#: src/utils/getRegionTranslation.js:737
+#: src/utils/getRegionTranslation.js:157
 msgid "Namíbia"
 msgstr "Namibia"
 
-#: src/utils/getRegionTranslation.js:772
+#: src/utils/getRegionTranslation.js:164
 msgid "Nauru"
 msgstr "Nauru"
 
@@ -1481,7 +1481,7 @@ msgstr "Main navigation"
 msgid "Nenhum"
 msgstr "None"
 
-#: src/utils/getRegionTranslation.js:767
+#: src/utils/getRegionTranslation.js:163
 msgid "Nepal"
 msgstr "Nepal"
 
@@ -1489,30 +1489,30 @@ msgstr "Nepal"
 msgid "Nesta página podes convidar outros jogadores a participar na {0}"
 msgstr "On this page you can invite other players to participate in {0}"
 
-#: src/utils/getRegionTranslation.js:752
+#: src/utils/getRegionTranslation.js:160
 msgid "Nicarágua"
 msgstr "Nicaragua"
 
-#: src/utils/getRegionTranslation.js:747
+#: src/utils/getRegionTranslation.js:159
 msgid "Nigéria"
 msgstr "Nigeria"
 
-#: src/utils/getRegionTranslation.js:777
+#: src/utils/getRegionTranslation.js:165
 msgid "Niue"
 msgstr "Niue"
 
-#: src/views/Account.js:142
+#: src/views/Account.js:146
 #: src/views/GenreRanking/Table.js:17
 #: src/views/NationalRanking.js:194
 #: src/views/Question.js:200
 #: src/views/Ranking/TableHeader.js:13
-#: src/views/Register.js:101
+#: src/views/Register.js:105
 #: src/views/admin/nationalRanking/Players/Form.js:166
 #: src/views/admin/users/Users.js:113
 msgid "Nome"
 msgstr "Name"
 
-#: src/utils/getRegionTranslation.js:762
+#: src/utils/getRegionTranslation.js:162
 msgid "Noruega"
 msgstr "Norway"
 
@@ -1528,19 +1528,19 @@ msgstr "Notification successfully deleted."
 msgid "Notificação criada com sucesso."
 msgstr "Notification successfully created."
 
-#: src/views/Account.js:438
+#: src/views/Account.js:441
 msgid "Notificação de quiz especial (00h00)"
 msgstr "Special quiz notification (12.00a.m.)"
 
-#: src/views/Account.js:459
+#: src/views/Account.js:462
 msgid "Notificação de quiz especial (22h00)"
 msgstr "Special quiz notification (22.00p.m.)"
 
-#: src/views/Account.js:390
+#: src/views/Account.js:393
 msgid "Notificação de quiz regular (00h00)"
 msgstr "Regular quiz notification (12.00a.m.)"
 
-#: src/views/Account.js:411
+#: src/views/Account.js:414
 msgid "Notificação de quiz regular (22h00)"
 msgstr "Regular quiz notification (22.00p.m.)"
 
@@ -1554,7 +1554,7 @@ msgstr "Notification successfully edited."
 msgid "Notificações"
 msgstr "Notifications"
 
-#: src/utils/getRegionTranslation.js:782
+#: src/utils/getRegionTranslation.js:166
 msgid "Nova Zelândia"
 msgstr "New Zealand"
 
@@ -1578,7 +1578,7 @@ msgstr "There is no national ranking available."
 msgid "Não foi possível abrir a edição das provas mensais."
 msgstr "Month events edit page could not be loaded."
 
-#: src/views/Account.js:122
+#: src/views/Account.js:126
 msgid "Não foi possível actualizar o perfil."
 msgstr "Profile could not be update."
 
@@ -1690,7 +1690,7 @@ msgid "Não foi possível publicar o ranking mensal."
 msgstr "Month ranking could not be published."
 
 #: src/views/Account/PayPal.js:22
-#: src/views/Account.js:76
+#: src/views/Account.js:80
 msgid "Não foi possível renovar a subscrição."
 msgstr "Subscription could not be renewed."
 
@@ -1706,7 +1706,7 @@ msgstr "Quiz could not be submitted."
 msgid "Não tens acesso a esta página."
 msgstr "You don't have access to this page."
 
-#: src/utils/getRegionTranslation.js:742
+#: src/utils/getRegionTranslation.js:158
 msgid "Níger"
 msgstr "Niger"
 
@@ -1714,7 +1714,7 @@ msgstr "Niger"
 msgid "Número {0} no <0>Ranking Nacional</0>"
 msgstr "<0>National Ranking</0>'s number {0}"
 
-#: src/views/Account.js:71
+#: src/views/Account.js:75
 msgid "O pagamento não foi bem sucedido."
 msgstr "Payment could not be processed."
 
@@ -1734,12 +1734,12 @@ msgstr "OK"
 msgid "Obrigado pela tua inscrição! O teu registo encontra-se a aguardar aprovação da equipa da {0}."
 msgstr "Thank you for signing up! Your registration is pending approval from the {0} team."
 
-#: src/utils/getRegionTranslation.js:787
+#: src/utils/getRegionTranslation.js:167
 msgid "Omã"
 msgstr "Oman"
 
-#: src/views/Register.js:134
-#: src/views/Register.js:201
+#: src/views/Register.js:138
+#: src/views/Register.js:206
 msgid "Opcional"
 msgstr "Optional"
 
@@ -1760,13 +1760,13 @@ msgstr "AQ"
 msgid "PaF"
 msgstr "PF"
 
-#: src/utils/getRegionTranslation.js:832
+#: src/utils/getRegionTranslation.js:176
 msgid "Palau"
 msgstr "Palau"
 
-#: src/views/Account.js:322
+#: src/views/Account.js:325
 #: src/views/Login.js:76
-#: src/views/Register.js:248
+#: src/views/Register.js:252
 #: src/views/ResetPassword.js:60
 msgid "Palavra-passe"
 msgstr "Password"
@@ -1775,19 +1775,19 @@ msgstr "Password"
 msgid "Palavra-passe alterada com sucesso.<0/>Clica <1>aqui</1> e usa as novas credenciais."
 msgstr "Password changed successfully.<0/>Click <1>here</1> and use the new credentials."
 
-#: src/utils/getRegionTranslation.js:822
+#: src/utils/getRegionTranslation.js:174
 msgid "Palestina"
 msgstr "Palestine"
 
-#: src/utils/getRegionTranslation.js:792
+#: src/utils/getRegionTranslation.js:168
 msgid "Panamá"
 msgstr "Panama"
 
-#: src/utils/getRegionTranslation.js:802
+#: src/utils/getRegionTranslation.js:170
 msgid "Papua-Nova Guiné"
 msgstr "Papua New Guinea"
 
-#: src/utils/getRegionTranslation.js:812
+#: src/utils/getRegionTranslation.js:172
 msgid "Paquistão"
 msgstr "Pakistan"
 
@@ -1795,11 +1795,11 @@ msgstr "Pakistan"
 msgid "Para mais pormenores de como o ranking é calculado deve ser consultado este artigo:"
 msgstr "More details about ranking calculation can be found in this article (only in portuguese):"
 
-#: src/utils/getRegionTranslation.js:837
+#: src/utils/getRegionTranslation.js:177
 msgid "Paraguai"
 msgstr "Paraguay"
 
-#: src/utils/getRegionTranslation.js:757
+#: src/utils/getRegionTranslation.js:161
 msgid "Países Baixos"
 msgstr "Netherlands"
 
@@ -1846,7 +1846,7 @@ msgstr "Global percentage of correct answers"
 msgid "Perdeste a ligação à internet."
 msgstr "Internet connection lost."
 
-#: src/views/Account.js:110
+#: src/views/Account.js:114
 msgid "Perfil actualizado com sucesso."
 msgstr "Profile successfully updated."
 
@@ -1876,7 +1876,7 @@ msgstr "Answered questions"
 msgid "Permissões"
 msgstr "Permissions"
 
-#: src/utils/getRegionTranslation.js:797
+#: src/utils/getRegionTranslation.js:169
 msgid "Peru"
 msgstr "Peru"
 
@@ -1901,7 +1901,7 @@ msgstr "Search"
 msgid "Política Actual"
 msgstr "Nowadays Politics"
 
-#: src/utils/getRegionTranslation.js:817
+#: src/utils/getRegionTranslation.js:173
 msgid "Polónia"
 msgstr "Poland"
 
@@ -1934,15 +1934,15 @@ msgstr "Points against"
 msgid "Pontos na liga"
 msgstr "League points"
 
-#: src/utils/getRegionTranslation.js:72
+#: src/utils/getRegionTranslation.js:24
 msgid "Portalegre"
 msgstr "Portalegre"
 
-#: src/utils/getRegionTranslation.js:77
+#: src/utils/getRegionTranslation.js:25
 msgid "Porto"
 msgstr "Oporto"
 
-#: src/utils/getRegionTranslation.js:827
+#: src/utils/getRegionTranslation.js:175
 msgid "Portugal"
 msgstr "Portugal"
 
@@ -2003,11 +2003,11 @@ msgstr "Publish month ranking"
 msgid "Página não encontrada"
 msgstr "Page not found"
 
-#: src/utils/getRegionTranslation.js:842
+#: src/utils/getRegionTranslation.js:178
 msgid "Qatar"
 msgstr "Qatar"
 
-#: src/utils/getRegionTranslation.js:547
+#: src/utils/getRegionTranslation.js:119
 msgid "Quirguistão"
 msgstr "Kyrgyzstan"
 
@@ -2109,7 +2109,7 @@ msgstr "Special Quizzes"
 msgid "Quizzes especiais"
 msgstr "Special quizzes"
 
-#: src/utils/getRegionTranslation.js:542
+#: src/utils/getRegionTranslation.js:118
 msgid "Quénia"
 msgstr "Kenya"
 
@@ -2193,12 +2193,12 @@ msgid "Redefinir palavra-passe"
 msgstr "Reset password"
 
 #: src/partials/Header.js:129
-#: src/views/Register.js:307
+#: src/views/Register.js:311
 msgid "Registar"
 msgstr "Sign up"
 
 #: src/routes.js:69
-#: src/views/Register.js:88
+#: src/views/Register.js:92
 msgid "Registo"
 msgstr "Sign up"
 
@@ -2213,7 +2213,7 @@ msgstr "Action long (last {logsDays} days)"
 msgid "Regras"
 msgstr "Rules"
 
-#: src/utils/getRegionTranslation.js:412
+#: src/utils/getRegionTranslation.js:92
 msgid "Reino Unido"
 msgstr "United Kingdom"
 
@@ -2235,23 +2235,23 @@ msgstr "Delete event"
 msgid "Remover última divisão"
 msgstr "Remove last tier"
 
-#: src/views/Account.js:505
+#: src/views/Account.js:508
 msgid "Renovação da subscrição via Paypal"
 msgstr "Subscription renewal"
 
-#: src/utils/getRegionTranslation.js:257
+#: src/utils/getRegionTranslation.js:61
 msgid "República Centro-Africana"
 msgstr "Central African Republic"
 
-#: src/utils/getRegionTranslation.js:252
+#: src/utils/getRegionTranslation.js:60
 msgid "República Democrática do Congo"
 msgstr "Democratic Republic of the Congo"
 
-#: src/utils/getRegionTranslation.js:342
+#: src/utils/getRegionTranslation.js:78
 msgid "República Dominicana"
 msgstr "Dominican Republic"
 
-#: src/utils/getRegionTranslation.js:262
+#: src/utils/getRegionTranslation.js:62
 msgid "República do Congo"
 msgstr "Republic of the Congo"
 
@@ -2320,19 +2320,19 @@ msgstr "World Quizzing Championship result"
 msgid "Resultado no Campeonato Nacional"
 msgstr "National Championship result"
 
-#: src/utils/getRegionTranslation.js:847
+#: src/utils/getRegionTranslation.js:179
 msgid "Roménia"
 msgstr "Romania"
 
-#: src/utils/getRegionTranslation.js:862
+#: src/utils/getRegionTranslation.js:182
 msgid "Ruanda"
 msgstr "Rwanda"
 
-#: src/utils/getRegionTranslation.js:857
+#: src/utils/getRegionTranslation.js:181
 msgid "Rússia"
 msgstr "Russia"
 
-#: src/utils/getRegionTranslation.js:367
+#: src/utils/getRegionTranslation.js:83
 msgid "Saara Ocidental"
 msgstr "Western Sahara"
 
@@ -2341,19 +2341,19 @@ msgstr "Western Sahara"
 msgid "Sair"
 msgstr "Logout"
 
-#: src/utils/getRegionTranslation.js:1072
+#: src/utils/getRegionTranslation.js:224
 msgid "Samoa"
 msgstr "Samoa"
 
-#: src/utils/getRegionTranslation.js:912
+#: src/utils/getRegionTranslation.js:192
 msgid "San Marino"
 msgstr "San Marina"
 
-#: src/utils/getRegionTranslation.js:602
+#: src/utils/getRegionTranslation.js:130
 msgid "Santa Lúcia"
 msgstr "Saint Lucia"
 
-#: src/utils/getRegionTranslation.js:82
+#: src/utils/getRegionTranslation.js:26
 msgid "Santarém"
 msgstr "Santarém"
 
@@ -2361,11 +2361,11 @@ msgstr "Santarém"
 msgid "Saúde e Corpo Humano"
 msgstr "Health and Human Body"
 
-#: src/views/Account.js:510
+#: src/views/Account.js:513
 msgid "Se preferires fazer a renovação em mão, através de transferência bancária ou por MB WAY, vê como <0>aqui</0>"
 msgstr "If you rather renew in person, with a bank transfer or through MB WAY, see how <0>here</0>"
 
-#: src/utils/getRegionTranslation.js:877
+#: src/utils/getRegionTranslation.js:185
 msgid "Seicheles"
 msgstr "Seychelles"
 
@@ -2396,15 +2396,15 @@ msgstr "Select players for this event:"
 msgid "Sem registos"
 msgstr "No records"
 
-#: src/utils/getRegionTranslation.js:917
+#: src/utils/getRegionTranslation.js:193
 msgid "Senegal"
 msgstr "Senegal"
 
-#: src/utils/getRegionTranslation.js:907
+#: src/utils/getRegionTranslation.js:191
 msgid "Serra Leoa"
 msgstr "Sierra Leone"
 
-#: src/utils/getRegionTranslation.js:87
+#: src/utils/getRegionTranslation.js:27
 msgid "Setúbal"
 msgstr "Setúbal"
 
@@ -2413,7 +2413,7 @@ msgstr "Setúbal"
 msgid "Sim"
 msgstr "Yes"
 
-#: src/utils/getRegionTranslation.js:892
+#: src/utils/getRegionTranslation.js:188
 msgid "Singapura"
 msgstr "Singapore"
 
@@ -2429,7 +2429,7 @@ msgstr "Society"
 msgid "Soma"
 msgstr "Sum"
 
-#: src/utils/getRegionTranslation.js:922
+#: src/utils/getRegionTranslation.js:194
 msgid "Somália"
 msgstr "Somalia"
 
@@ -2437,7 +2437,7 @@ msgstr "Somalia"
 msgid "Squizzed"
 msgstr "Squizzed"
 
-#: src/utils/getRegionTranslation.js:612
+#: src/utils/getRegionTranslation.js:132
 msgid "Sri Lanka"
 msgstr "Sri Lanka"
 
@@ -2469,7 +2469,7 @@ msgstr "League quizzes subscription"
 msgid "Subscrição p/ quizzes especiais"
 msgstr "Special quizzes subscription"
 
-#: src/views/Account.js:64
+#: src/views/Account.js:68
 msgid "Subscrição renovada com sucesso."
 msgstr "Subscription successfully renewed."
 
@@ -2478,43 +2478,43 @@ msgstr "Subscription successfully renewed."
 msgid "Subtema"
 msgstr "Subgenre"
 
-#: src/utils/getRegionTranslation.js:882
+#: src/utils/getRegionTranslation.js:186
 msgid "Sudão"
 msgstr "Sudan"
 
-#: src/utils/getRegionTranslation.js:932
+#: src/utils/getRegionTranslation.js:196
 msgid "Sudão do Sul"
 msgstr "South Sudan"
 
-#: src/utils/getRegionTranslation.js:927
+#: src/utils/getRegionTranslation.js:195
 msgid "Suriname"
 msgstr "Suriname"
 
-#: src/utils/getRegionTranslation.js:887
+#: src/utils/getRegionTranslation.js:187
 msgid "Suécia"
 msgstr "Sweden"
 
-#: src/utils/getRegionTranslation.js:267
+#: src/utils/getRegionTranslation.js:63
 msgid "Suíça"
 msgstr "Switzerland"
 
-#: src/utils/getRegionTranslation.js:567
+#: src/utils/getRegionTranslation.js:123
 msgid "São Cristóvão e Nevis"
 msgstr "Saint Kitts and Nevis"
 
-#: src/utils/getRegionTranslation.js:937
+#: src/utils/getRegionTranslation.js:197
 msgid "São Tomé e Príncipe"
 msgstr "São Tomé and Príncipe"
 
-#: src/utils/getRegionTranslation.js:1052
+#: src/utils/getRegionTranslation.js:220
 msgid "São Vicente e Granadinas"
 msgstr "Saint Vincent and the Grenadines"
 
-#: src/utils/getRegionTranslation.js:852
+#: src/utils/getRegionTranslation.js:180
 msgid "Sérvia"
 msgstr "Serbia"
 
-#: src/utils/getRegionTranslation.js:947
+#: src/utils/getRegionTranslation.js:199
 msgid "Síria"
 msgstr "Syria"
 
@@ -2524,19 +2524,19 @@ msgstr "Syria"
 msgid "T"
 msgstr "T"
 
-#: src/utils/getRegionTranslation.js:967
+#: src/utils/getRegionTranslation.js:203
 msgid "Tailândia"
 msgstr "Thailand"
 
-#: src/utils/getRegionTranslation.js:1012
+#: src/utils/getRegionTranslation.js:212
 msgid "Taiwan"
 msgstr "Taiwan"
 
-#: src/utils/getRegionTranslation.js:972
+#: src/utils/getRegionTranslation.js:204
 msgid "Tajiquistão"
 msgstr "Tajikistan"
 
-#: src/utils/getRegionTranslation.js:1017
+#: src/utils/getRegionTranslation.js:213
 msgid "Tanzânia"
 msgstr "Tanzania"
 
@@ -2652,7 +2652,7 @@ msgstr "You have points to be assigned.<0/>Assigned them before submit."
 msgid "Texto"
 msgstr "Text"
 
-#: src/utils/getRegionTranslation.js:977
+#: src/utils/getRegionTranslation.js:205
 msgid "Timor-Leste"
 msgstr "Timor-Leste"
 
@@ -2668,11 +2668,11 @@ msgstr "Notification type"
 msgid "Todos"
 msgstr "All"
 
-#: src/utils/getRegionTranslation.js:962
+#: src/utils/getRegionTranslation.js:202
 msgid "Togo"
 msgstr "Togo"
 
-#: src/utils/getRegionTranslation.js:992
+#: src/utils/getRegionTranslation.js:208
 msgid "Tonga"
 msgstr "Tonga"
 
@@ -2715,7 +2715,7 @@ msgstr "Translation successfully saved."
 msgid "Transportes"
 msgstr "Transportation"
 
-#: src/utils/getRegionTranslation.js:1002
+#: src/utils/getRegionTranslation.js:210
 msgid "Trinidade e Tobago"
 msgstr "Trinidad and Tobago"
 
@@ -2728,7 +2728,7 @@ msgstr "Trivialities"
 msgid "Tudo"
 msgstr "All"
 
-#: src/utils/getRegionTranslation.js:987
+#: src/utils/getRegionTranslation.js:207
 msgid "Tunísia"
 msgstr "Tunisia"
 
@@ -2736,27 +2736,27 @@ msgstr "Tunisia"
 msgid "Turismo"
 msgstr "Tourism"
 
-#: src/utils/getRegionTranslation.js:982
+#: src/utils/getRegionTranslation.js:206
 msgid "Turquemenistão"
 msgstr "Turkmenistan"
 
-#: src/utils/getRegionTranslation.js:997
+#: src/utils/getRegionTranslation.js:209
 msgid "Turquia"
 msgstr "Turkeuy"
 
-#: src/utils/getRegionTranslation.js:1007
+#: src/utils/getRegionTranslation.js:211
 msgid "Tuvalu"
 msgstr "Tuvalu"
 
-#: src/utils/getRegionTranslation.js:1022
+#: src/utils/getRegionTranslation.js:214
 msgid "Ucrânia"
 msgstr "Ukraine"
 
-#: src/utils/getRegionTranslation.js:1027
+#: src/utils/getRegionTranslation.js:215
 msgid "Uganda"
 msgstr "Uganda"
 
-#: src/utils/getRegionTranslation.js:1037
+#: src/utils/getRegionTranslation.js:217
 msgid "Uruguai"
 msgstr "Uruguay"
 
@@ -2769,7 +2769,7 @@ msgstr "Used"
 msgid "Utilizador actualizado com sucesso."
 msgstr "User successfully updated."
 
-#: src/views/Register.js:313
+#: src/views/Register.js:317
 msgid "Utilizador registado com sucesso.<0/>Clica <1>aqui</1> e usa as tuas credenciais."
 msgstr "User registered successfully.<0/>Click <1>here</1> and use your credentials."
 
@@ -2779,7 +2779,7 @@ msgstr "User registered successfully.<0/>Click <1>here</1> and use your credenti
 msgid "Utilizadores"
 msgstr "Users"
 
-#: src/utils/getRegionTranslation.js:1042
+#: src/utils/getRegionTranslation.js:218
 msgid "Uzbequistão"
 msgstr "Uzbekistan"
 
@@ -2787,21 +2787,21 @@ msgstr "Uzbekistan"
 msgid "V"
 msgstr "W"
 
-#: src/views/Account.js:488
+#: src/views/Account.js:491
 #: src/views/admin/users/modals/EditPermissionsModal.js:111
 #: src/views/admin/users/modals/EditPermissionsModal.js:169
 msgid "Validade da subscrição"
 msgstr "Subscription deadline"
 
-#: src/utils/getRegionTranslation.js:1067
+#: src/utils/getRegionTranslation.js:223
 msgid "Vanuatu"
 msgstr "Vanuatu"
 
-#: src/utils/getRegionTranslation.js:1047
+#: src/utils/getRegionTranslation.js:219
 msgid "Vaticano"
 msgstr "Vatican City"
 
-#: src/utils/getRegionTranslation.js:1057
+#: src/utils/getRegionTranslation.js:221
 msgid "Venezuela"
 msgstr "Venezuela"
 
@@ -2809,19 +2809,19 @@ msgstr "Venezuela"
 msgid "Versão {version}"
 msgstr "Version {version}"
 
-#: src/utils/getRegionTranslation.js:92
+#: src/utils/getRegionTranslation.js:28
 msgid "Viana do Castelo"
 msgstr "Viana do Castelo"
 
-#: src/utils/getRegionTranslation.js:1062
+#: src/utils/getRegionTranslation.js:222
 msgid "Vietname"
 msgstr "Vietname"
 
-#: src/utils/getRegionTranslation.js:97
+#: src/utils/getRegionTranslation.js:29
 msgid "Vila Real"
 msgstr "Vila Real"
 
-#: src/utils/getRegionTranslation.js:102
+#: src/utils/getRegionTranslation.js:30
 msgid "Viseu"
 msgstr "Viseu"
 
@@ -2835,15 +2835,15 @@ msgstr "Wins"
 msgid "Voltar à página inicial"
 msgstr "Return to homepage"
 
-#: src/utils/getRegionTranslation.js:1092
+#: src/utils/getRegionTranslation.js:228
 msgid "Zimbabwe"
 msgstr "Zimbabwe"
 
-#: src/utils/getRegionTranslation.js:1087
+#: src/utils/getRegionTranslation.js:227
 msgid "Zâmbia"
 msgstr "Zambia"
 
-#: src/views/Account.js:323
+#: src/views/Account.js:326
 msgid "deixa em branco para não alterar"
 msgstr "leave it blank to keep"
 
@@ -2885,11 +2885,11 @@ msgstr "{0} {1} and {2} {3}"
 msgid "{0}ª divisão"
 msgstr "Tier {0}"
 
-#: src/utils/getRegionTranslation.js:1082
+#: src/utils/getRegionTranslation.js:226
 msgid "África do Sul"
 msgstr "South Africa"
 
-#: src/utils/getRegionTranslation.js:147
+#: src/utils/getRegionTranslation.js:39
 msgid "Áustria"
 msgstr "Austria"
 
@@ -2897,11 +2897,11 @@ msgstr "Austria"
 msgid "É necessário autenticares-te primeiro para aceder a esta página."
 msgstr "You need to login before visit this page."
 
-#: src/utils/getRegionTranslation.js:42
+#: src/utils/getRegionTranslation.js:18
 msgid "Évora"
 msgstr "Évora"
 
-#: src/utils/getRegionTranslation.js:502
+#: src/utils/getRegionTranslation.js:110
 msgid "Índia"
 msgstr "India"
 

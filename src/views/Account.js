@@ -8,7 +8,7 @@ import DatePicker from 'react-datepicker';
 import { sub, getYear } from 'date-fns';
 
 import { convertToLongDate } from 'utils/formatDate';
-import { getRegionsTranslations } from 'utils/getRegionTranslation';
+import { getRegionTranslations } from 'utils/getRegionTranslation';
 import { useStateValue } from 'state/State';
 import PageHeader from 'components/PageHeader';
 import Loading from 'components/Loading';
@@ -47,12 +47,16 @@ const Account = () => {
   useEffect(() => {
     ApiRequest.get(`regions`)
       .then(({ data }) => {
-        setRegions(data);
+        const mappedRegions = data.map((item) => ({
+          code: item,
+          name: getRegionTranslations(item, language),
+        }));
+        setRegions(mappedRegions.sort((a, b) => a.name.localeCompare(b.name)));
       })
       .catch(({ response }) => {
         setError(response?.status);
       });
-  }, []);
+  }, [language]);
 
   useEffect(() => {
     const params = new URLSearchParams(location.search);
@@ -272,12 +276,11 @@ const Account = () => {
                       }}
                     >
                       <option value="">-</option>
-                      {regions.map((region) =>
-                        getRegionsTranslations(
-                          region,
-                          <option value={region} />
-                        )
-                      )}
+                      {regions.map((region) => (
+                        <option value={region.code} key={region.code}>
+                          {region.name}
+                        </option>
+                      ))}
                     </select>
                   </div>
                   <div className="icon is-small is-left">

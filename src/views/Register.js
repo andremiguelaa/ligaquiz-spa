@@ -9,7 +9,7 @@ import classnames from 'classnames';
 import PageHeader from 'components/PageHeader';
 import Loading from 'components/Loading';
 import { useStateValue } from 'state/State';
-import { getRegionsTranslations } from 'utils/getRegionTranslation';
+import { getRegionTranslations } from 'utils/getRegionTranslation';
 import ApiRequest from 'utils/ApiRequest';
 import { formatDate, convertToLongMonth } from 'utils/formatDate';
 import Error from 'components/Error';
@@ -32,12 +32,16 @@ const Register = () => {
   useEffect(() => {
     ApiRequest.get(`regions`)
       .then(({ data }) => {
-        setRegions(data);
+        const mappedRegions = data.map((item) => ({
+          code: item,
+          name: getRegionTranslations(item, language),
+        }));
+        setRegions(mappedRegions.sort((a, b) => a.name.localeCompare(b.name)));
       })
       .catch(({ response }) => {
         setLoadingError(response?.status);
       });
-  }, []);
+  }, [language]);
 
   if (user) {
     return <Error status={403} />;
@@ -131,7 +135,8 @@ const Register = () => {
                 <div className="field">
                   <div className="control">
                     <label className="label">
-                      <Trans>Data de nascimento</Trans> (<Trans>Opcional</Trans>)
+                      <Trans>Data de nascimento</Trans> (<Trans>Opcional</Trans>
+                      )
                     </label>
                     <div className="control has-icons-left">
                       <DatePicker
@@ -204,12 +209,11 @@ const Register = () => {
                     <div className="select">
                       <select name="region">
                         <option value="">-</option>
-                        {regions.map((region) =>
-                          getRegionsTranslations(
-                            region,
-                            <option value={region} />
-                          )
-                        )}
+                        {regions.map((region) => (
+                          <option value={region.code} key={region.code}>
+                            {region.name}
+                          </option>
+                        ))}
                       </select>
                     </div>
                     <div className="icon is-small is-left">
