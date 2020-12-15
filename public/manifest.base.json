@@ -3,24 +3,24 @@
     "short_name": "%REACT_APP_NAME%",
     "icons": [
       {
-        "src": "/android-chrome-192x192.png",
+        "src": "/%REACT_APP_SLUG%/android-chrome-192x192.png",
         "sizes": "192x192",
         "type": "image/png"
       },
       {
-        "src": "/android-chrome-512x512.png",
+        "src": "/%REACT_APP_SLUG%/android-chrome-512x512.png",
         "sizes": "512x512",
         "type": "image/png"
       },
       {
-        "src": "/maskable_icon.png",
+        "src": "/%REACT_APP_SLUG%/maskable_icon.png",
         "sizes": "568x568",
         "type": "image/png",
         "purpose": "maskable"
       }
     ],
-    "theme_color": "#f5bc41",
-    "background_color": "#f5bc41",
+    "theme_color": "%REACT_APP_COLOR%",
+    "background_color": "%REACT_APP_COLOR%",
     "start_url": ".",
     "display": "standalone"
   }

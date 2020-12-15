@@ -1,6 +1,6 @@
 {
   "name": "liga-quiz-spa",
-  "version": "4.13.0",
+  "version": "4.13.1",
   "private": true,
   "dependencies": {
     "@creativebulma/bulma-tooltip": "^1.2.0",
@@ -28,7 +28,7 @@
     "add-locale": "lingui add-locale",
     "extract": "lingui extract",
     "compile": "lingui compile",
-    "manifest": "rm ./public/manifest.json && cp ./public/manifest.base.json ./public/manifest.json && node ./scripts/generateManifest.js"
+    "manifest": "rm ./public/manifest.json && cp ./public/manifest.base.json ./public/manifest.json && rm ./public/browserconfig.xml && cp ./public/browserconfig.base.xml ./public/browserconfig.xml && node ./scripts/generateManifest.js"
   },
   "eslintConfig": {
     "extends": "react-app"

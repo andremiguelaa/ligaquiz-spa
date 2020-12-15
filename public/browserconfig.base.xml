@@ -2,8 +2,8 @@
 <browserconfig>
     <msapplication>
         <tile>
-            <square150x150logo src="/equizition/mstile-150x150.png"/>
-            <TileColor>#1494f2</TileColor>
+            <square150x150logo src="/%REACT_APP_SLUG%/mstile-150x150.png"/>
+            <TileColor>%REACT_APP_COLOR%</TileColor>
         </tile>
     </msapplication>
 </browserconfig>
