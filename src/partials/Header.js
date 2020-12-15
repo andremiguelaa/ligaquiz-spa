@@ -9,11 +9,13 @@ import Cookies from 'js-cookie';
 
 import { catalogs } from 'utils/catalogs';
 import { useStateValue } from 'state/State';
-import logo from 'img/logo.png';
-import logoDark from 'img/logo-dark.png';
+import logoLigaquiz from 'img/logo_ligaquiz.png';
+import logoLigaquizDark from 'img/logo_ligaquiz_dark.png';
+import logoEquizition from 'img/logo_equizition.png';
+import logoEquizitionDark from 'img/logo_equizition_dark.png';
 import classes from './Header.module.scss';
 
-const version = '4.12.6';
+const version = '4.13.0';
 
 const isDarkMode =
   window.matchMedia &&
@@ -32,6 +34,15 @@ const Header = () => {
     });
   };
 
+  const logo =
+    process.env.REACT_APP_NAME === 'Equizition'
+      ? isDarkMode
+        ? logoEquizitionDark
+        : logoEquizition
+      : isDarkMode
+      ? logoLigaquizDark
+      : logoLigaquiz;
+
   return (
     <I18n>
       {({ i18n }) => (
@@ -43,7 +54,7 @@ const Header = () => {
           >
             <div className="navbar-brand">
               <Link to="/" className="navbar-item">
-                <img src={isDarkMode ? logoDark : logo} alt="logo" />
+                <img src={logo} alt="logo" />
               </Link>
               <div className={classes.burgerWrapper}>
                 <OutsideClickHandler
@@ -215,9 +226,13 @@ const Header = () => {
                           )}
                           {(user.valid_roles.admin ||
                             user.valid_roles.quiz_editor) && (
-                            <Link to="/admin/external-questions" className="navbar-item">
+                            <Link
+                              to="/admin/external-questions"
+                              className="navbar-item"
+                            >
                               <i className="fa fa-btn fa-search" />
-                              &nbsp;<Trans>Pesquisa de perguntas externas</Trans>
+                              &nbsp;
+                              <Trans>Pesquisa de perguntas externas</Trans>
                             </Link>
                           )}
                           <hr className="navbar-divider" />
