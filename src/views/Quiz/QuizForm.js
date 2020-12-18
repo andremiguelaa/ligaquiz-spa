@@ -52,10 +52,16 @@ const QuizForm = ({ data, userAnswers }) => {
     event.preventDefault();
     if (!data.quiz.solo || data.quiz.cupOpponent) {
       const missingPoints = formData.answers.some(
-        (answer) => answer.points === undefined || answer.points === -1
+        (answer) =>
+          answer.points === undefined ||
+          answer.points === null ||
+          answer.points === -1
       );
       const cupMissingPoints = formData.answers.some(
-        (answer) => answer.cup_points === undefined || answer.cup_points === -1
+        (answer) =>
+          answer.cup_points === undefined ||
+          answer.cup_points === null ||
+          answer.cup_points === -1
       );
       if (
         (!data.quiz.solo && missingPoints) ||
@@ -81,8 +87,7 @@ const QuizForm = ({ data, userAnswers }) => {
         toast.success(<Trans>Quiz submetido com sucesso.</Trans>);
         history.push(`/quiz/${data.quiz.date}`);
       })
-      .catch((err) => {
-        console.log(err.message);
+      .catch(() => {
         toast.error(<Trans>Não foi possível submeter o quiz.</Trans>);
       })
       .finally(() => {
