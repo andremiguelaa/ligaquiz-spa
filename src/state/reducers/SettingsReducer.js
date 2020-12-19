@@ -4,7 +4,7 @@ import { catalogs } from 'utils/catalogs';
 const userLanguage = navigator.language.substring(0, 2);
 const defaultLanguage = Object.keys(catalogs).includes(userLanguage)
   ? userLanguage
-  : 'pt';
+  : process.env.REACT_APP_LANGUAGE;
 
 export const settingsInitialState = {
   language:
