@@ -26,6 +26,7 @@ const SpecialQuiz = () => {
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState();
   const [userAnswers, setUserAnswers] = useState();
+  const [users, setUsers] = useState();
   const [author, setAuthor] = useState();
 
   useEffect(() => {
@@ -38,22 +39,28 @@ const SpecialQuiz = () => {
         }
         setData(data);
         ApiRequest.get(`answers?special_quiz=${data.quiz.id}&mine=true`)
-          .then(({ data }) => {
-            setUserAnswers(data);
+          .then(({ data: userAnswersData }) => {
+            setUserAnswers(userAnswersData);
             setLoading(false);
           })
           .catch(({ response }) => {
             setError(response?.status);
           });
-        if (data.quiz.user_id) {
-          ApiRequest.get(`users?id[]=${data.quiz.user_id}`)
-            .then(({ data }) => {
-              setAuthor(data[0]);
-            })
-            .catch(({ response }) => {
-              setError(response?.status);
-            });
-        }
+        ApiRequest.get(`users`)
+          .then(({ data: usersData }) => {
+            const mappedUsers = usersData.reduce((acc, user) => {
+              acc[user.id] = user;
+              return acc;
+            }, {});
+            setUsers(mappedUsers);
+            console.log('here');
+            if (data.quiz.user_id) {
+              setAuthor(mappedUsers[data.quiz.user_id]);
+            }
+          })
+          .catch(({ response }) => {
+            setError(response?.status);
+          });
       })
       .catch(({ response }) => {
         setError(response?.status);
@@ -64,7 +71,7 @@ const SpecialQuiz = () => {
     return <Error status={error} />;
   }
 
-  if (loading) {
+  if (loading || !users) {
     return <Loading />;
   }
 
@@ -108,8 +115,8 @@ const SpecialQuiz = () => {
         {(date && !data.quiz.today) || data.quiz.submitted ? (
           <SpecialQuizDone
             data={data}
+            users={users}
             userAnswers={userAnswers}
-            setError={setError}
           />
         ) : (
           <SpecialQuizForm data={data} userAnswers={userAnswers} />
