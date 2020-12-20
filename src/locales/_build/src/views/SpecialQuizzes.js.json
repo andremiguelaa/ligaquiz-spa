@@ -23,7 +23,7 @@
       ]
     ]
   },
-  "Data": {
+  "Vencedor": {
     "origin": [
       [
         "src/views/SpecialQuizzes.js",
@@ -31,11 +31,27 @@
       ]
     ]
   },
+  "Vitória partilhada": {
+    "origin": [
+      [
+        "src/views/SpecialQuizzes.js",
+        115
+      ]
+    ]
+  },
+  "Data": {
+    "origin": [
+      [
+        "src/views/SpecialQuizzes.js",
+        127
+      ]
+    ]
+  },
   "Sem registos": {
     "origin": [
       [
         "src/views/SpecialQuizzes.js",
-        121
+        143
       ]
     ]
   }

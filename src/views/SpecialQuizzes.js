@@ -101,6 +101,28 @@ const SpecialQuizzes = () => {
                   className: classes.author,
                 },
                 {
+                  id: 'winner',
+                  label: <Trans>Vencedor</Trans>,
+                  render: (item) => (
+                    <>
+                      {item.winners ? (
+                        <>
+                          {item.winners.length === 1 ? (
+                            `${users[item.winners[0]].name} ${
+                              users[item.winners[0]].surname
+                            }`
+                          ) : (
+                            <Trans>Vitória partilhada</Trans>
+                          )}
+                        </>
+                      ) : (
+                        '-'
+                      )}
+                    </>
+                  ),
+                  className: classes.winner,
+                },
+                {
                   id: 'date',
                   label: <Trans>Data</Trans>,
                   render: (item) => (
