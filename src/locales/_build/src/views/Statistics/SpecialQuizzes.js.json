@@ -1,0 +1,50 @@
+{
+  "Sem registos": {
+    "origin": [
+      [
+        "src/views/Statistics/SpecialQuizzes.js",
+        41
+      ]
+    ]
+  },
+  "Tema": {
+    "origin": [
+      [
+        "src/views/Statistics/SpecialQuizzes.js",
+        52
+      ]
+    ]
+  },
+  "Classificação": {
+    "origin": [
+      [
+        "src/views/Statistics/SpecialQuizzes.js",
+        55
+      ]
+    ]
+  },
+  "Data": {
+    "origin": [
+      [
+        "src/views/Statistics/SpecialQuizzes.js",
+        58
+      ]
+    ]
+  },
+  "Campeão": {
+    "origin": [
+      [
+        "src/views/Statistics/SpecialQuizzes.js",
+        74
+      ]
+    ]
+  },
+  "{0, selectordinal, two {2º} few {3º} other {#º}}": {
+    "origin": [
+      [
+        "src/views/Statistics/SpecialQuizzes.js",
+        78
+      ]
+    ]
+  }
+}

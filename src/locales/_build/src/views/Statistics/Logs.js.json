@@ -1,0 +1,26 @@
+{
+  "Descrição": {
+    "origin": [
+      [
+        "src/views/Statistics/Logs.js",
+        54
+      ]
+    ]
+  },
+  "Hora": {
+    "origin": [
+      [
+        "src/views/Statistics/Logs.js",
+        57
+      ]
+    ]
+  },
+  "Sem registos": {
+    "origin": [
+      [
+        "src/views/Statistics/Logs.js",
+        87
+      ]
+    ]
+  }
+}

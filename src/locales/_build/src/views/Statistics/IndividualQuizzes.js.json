@@ -1,0 +1,50 @@
+{
+  "Sem registos": {
+    "origin": [
+      [
+        "src/views/Statistics/IndividualQuizzes.js",
+        39
+      ]
+    ]
+  },
+  "Prova": {
+    "origin": [
+      [
+        "src/views/Statistics/IndividualQuizzes.js",
+        50
+      ]
+    ]
+  },
+  "Mês": {
+    "origin": [
+      [
+        "src/views/Statistics/IndividualQuizzes.js",
+        53
+      ]
+    ]
+  },
+  "Resultado": {
+    "origin": [
+      [
+        "src/views/Statistics/IndividualQuizzes.js",
+        56
+      ]
+    ]
+  },
+  "Pontos": {
+    "origin": [
+      [
+        "src/views/Statistics/IndividualQuizzes.js",
+        60
+      ]
+    ]
+  },
+  "Pts": {
+    "origin": [
+      [
+        "src/views/Statistics/IndividualQuizzes.js",
+        63
+      ]
+    ]
+  }
+}
