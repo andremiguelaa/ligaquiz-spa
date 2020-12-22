@@ -53,7 +53,6 @@ const SpecialQuiz = () => {
               return acc;
             }, {});
             setUsers(mappedUsers);
-            console.log('here');
             if (data.quiz.user_id) {
               setAuthor(mappedUsers[data.quiz.user_id]);
             }

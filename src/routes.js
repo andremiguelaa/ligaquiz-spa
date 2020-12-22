@@ -99,7 +99,7 @@ export default [
   },
   {
     title: <Trans>Estatísticas</Trans>,
-    path: '/statistics/:id?',
+    path: '/statistics/:id?/:tab?',
     component: Statistics,
   },
   {

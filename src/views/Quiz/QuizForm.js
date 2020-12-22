@@ -424,8 +424,8 @@ const QuizForm = ({ data, userAnswers }) => {
                         )}
                         {opponent.birthday === 'hidden' && (
                           <small className={classes.missing}>
-                            <span class="icon has-text-warning">
-                              <i class="fa fa-exclamation-triangle"></i>
+                            <span className="icon has-text-warning">
+                              <i className="fa fa-exclamation-triangle"></i>
                             </span>
                             <Trans>
                               Preenche a tua data de nascimento para veres a
@@ -435,8 +435,8 @@ const QuizForm = ({ data, userAnswers }) => {
                         )}
                         {opponent.region === 'hidden' && (
                           <small className={classes.missing}>
-                            <span class="icon has-text-warning">
-                              <i class="fa fa-exclamation-triangle"></i>
+                            <span className="icon has-text-warning">
+                              <i className="fa fa-exclamation-triangle"></i>
                             </span>
                             <Trans>
                               Preenche a tua região para veres a região do teu

@@ -59,7 +59,6 @@ const Register = () => {
     event.preventDefault();
     setError(null);
     const formData = new FormData(event.target);
-    console.log(formData.get('password'), formData.get('password2'));
     if (formData.get('password') !== formData.get('password2')) {
       setError({ message: 'password_mismatch' });
       return;
