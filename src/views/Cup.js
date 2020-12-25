@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 import classnames from 'classnames';
 
-import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
 import PageHeader from 'components/PageHeader';
 import Error from 'components/Error';
@@ -13,7 +12,6 @@ import Loading from 'components/Loading';
 import classes from './Ranking/Ranking.module.scss';
 
 const Ranking = () => {
-  const [{ user }] = useStateValue();
   const { season } = useParams();
   const [users, setUsers] = useState();
   const [loading, setLoading] = useState(true);

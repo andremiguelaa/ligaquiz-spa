@@ -1,35 +1,24 @@
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Trans } from '@lingui/macro';
-import { I18n } from '@lingui/react';
-import { t } from '@lingui/macro';
 import classnames from 'classnames';
-import { differenceInYears } from 'date-fns';
 
 import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
-import { getRegionTranslations } from 'utils/getRegionTranslation';
-import { getGenreTranslation } from 'utils/getGenreTranslation';
 import Loading from 'components/Loading';
 import Error from 'components/Error';
+import OpponentStats from './OpponentStats';
 
 import classes from './Quiz.module.scss';
 
 const OpponentsStats = ({ quiz }) => {
-  const [
-    {
-      user,
-      settings: { language },
-    },
-  ] = useStateValue();
+  const [{ user }] = useStateValue();
   const [genres, setGenres] = useState();
   const [leagueOpponent, setLeagueOpponent] = useState();
   const [opponents, setOpponents] = useState();
   const [statsError, setStatsError] = useState(false);
+  const [tab, setTab] = useState(!quiz.solo && quiz.game ? 'league' : 'cup');
 
   useEffect(() => {
-    ApiRequest.post(`logs`, {
-      action: `Quiz form opened`,
-    });
     if ((!quiz.solo && quiz.game) || quiz.cupOpponent) {
       const opponent =
         quiz.game?.user_id_1 === user.id
@@ -134,192 +123,45 @@ const OpponentsStats = ({ quiz }) => {
                     >
                       <Trans>Estatísticas do adversário</Trans>
                     </h2>
-                    {leagueOpponent && opponents[leagueOpponent] && (
-                      <>
-                        <p className={classes.opponentName}>
-                          {opponents[leagueOpponent].name}{' '}
-                          {opponents[leagueOpponent].surname}
-                          {opponents[leagueOpponent].birthday &&
-                            opponents[leagueOpponent].birthday !== 'hidden' && (
-                              <>
-                                {' '}
-                                <Trans>
-                                  (
-                                  {differenceInYears(
-                                    new Date(),
-                                    new Date(opponents[leagueOpponent].birthday)
-                                  )}{' '}
-                                  anos)
-                                </Trans>
-                              </>
-                            )}
-                          {opponents[leagueOpponent].region &&
-                            opponents[leagueOpponent].region !== 'hidden' && (
-                              <>
-                                <br />
-                                {getRegionTranslations(
-                                  opponents[leagueOpponent].region,
-                                  language
-                                )}
-                              </>
-                            )}
-                          {opponents[leagueOpponent].birthday === 'hidden' && (
-                            <small className={classes.missing}>
-                              <span className="icon has-text-warning">
-                                <i className="fa fa-exclamation-triangle"></i>
-                              </span>
-                              <Trans>
-                                Preenche a tua data de nascimento para veres a
-                                idade do teu adversário
-                              </Trans>
-                            </small>
+                    {leagueOpponent && quiz.cupOpponent && (
+                      <div className="tabs is-fullwidth">
+                        <ul>
+                          {leagueOpponent && opponents[leagueOpponent] && (
+                            <li
+                              className={classnames({
+                                'is-active': tab === 'league',
+                              })}
+                            >
+                              <a onClick={() => setTab('league')}>
+                                <Trans>Liga</Trans>
+                              </a>
+                            </li>
                           )}
-                          {opponents[leagueOpponent].region === 'hidden' && (
-                            <small className={classes.missing}>
-                              <span className="icon has-text-warning">
-                                <i className="fa fa-exclamation-triangle"></i>
-                              </span>
-                              <Trans>
-                                Preenche a tua região para veres a região do teu
-                                adversário
-                              </Trans>
-                            </small>
+                          {quiz.cupOpponent && opponents[quiz.cupOpponent] && (
+                            <li
+                              className={classnames({
+                                'is-active': tab === 'cup',
+                              })}
+                              onClick={() => setTab('cup')}
+                            >
+                              <a onClick={() => setTab('cup')}>
+                                <Trans>Taça</Trans>
+                              </a>
+                            </li>
                           )}
-                        </p>
-                        <div className="table-container">
-                          <table
-                            className={classnames(
-                              'table is-fullwidth is-hoverable',
-                              classes.genresTable
-                            )}
-                          >
-                            <thead>
-                              <tr>
-                                <th>
-                                  <Trans>Tema</Trans>
-                                </th>
-                                <th className={classes.total}>
-                                  <I18n>
-                                    {({ i18n }) => (
-                                      <span
-                                        className="icon has-tooltip-bottom"
-                                        data-tooltip={i18n._(
-                                          t`Total de respostas`
-                                        )}
-                                      >
-                                        <Trans>T</Trans>
-                                      </span>
-                                    )}
-                                  </I18n>
-                                </th>
-                                <th className={classes.percentage}>
-                                  <I18n>
-                                    {({ i18n }) => (
-                                      <span
-                                        className="icon has-tooltip-bottom has-tooltip-left"
-                                        data-tooltip={i18n._(
-                                          t`Percentagem de acerto`
-                                        )}
-                                      >
-                                        %
-                                      </span>
-                                    )}
-                                  </I18n>
-                                </th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              {opponents[leagueOpponent].genreStats.map(
-                                (genre) => (
-                                  <Fragment key={genre.id}>
-                                    <tr>
-                                      <th>
-                                        {getGenreTranslation(
-                                          genre.slug,
-                                          language
-                                        )}
-                                      </th>
-                                      <td className={classes.total}>
-                                        {genre.total}
-                                      </td>
-                                      <td className={classes.percentage}>
-                                        {Math.round(genre.percentage)}%
-                                      </td>
-                                    </tr>
-                                  </Fragment>
-                                )
-                              )}
-                            </tbody>
-                          </table>
-                        </div>
-                        <div className="table-container">
-                          <table
-                            className={classnames(
-                              'table is-fullwidth is-hoverable',
-                              classes.genresTable
-                            )}
-                          >
-                            <thead>
-                              <tr>
-                                <th>
-                                  <Trans>Subtema</Trans>
-                                </th>
-                                <th className={classes.total}>
-                                  <I18n>
-                                    {({ i18n }) => (
-                                      <span
-                                        className="icon has-tooltip-bottom"
-                                        data-tooltip={i18n._(
-                                          t`Total de respostas`
-                                        )}
-                                      >
-                                        <Trans>T</Trans>
-                                      </span>
-                                    )}
-                                  </I18n>
-                                </th>
-                                <th className={classes.percentage}>
-                                  <I18n>
-                                    {({ i18n }) => (
-                                      <span
-                                        className="icon has-tooltip-bottom has-tooltip-left"
-                                        data-tooltip={i18n._(
-                                          t`Percentagem de acerto`
-                                        )}
-                                      >
-                                        %
-                                      </span>
-                                    )}
-                                  </I18n>
-                                </th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              {opponents[leagueOpponent].subgenreStats.map(
-                                (genre) => (
-                                  <Fragment key={genre.id}>
-                                    <tr>
-                                      <th>
-                                        {getGenreTranslation(
-                                          genre.slug,
-                                          language
-                                        )}
-                                      </th>
-                                      <td className={classes.total}>
-                                        {genre.total}
-                                      </td>
-                                      <td className={classes.percentage}>
-                                        {Math.round(genre.percentage)}%
-                                      </td>
-                                    </tr>
-                                  </Fragment>
-                                )
-                              )}
-                            </tbody>
-                          </table>
-                        </div>
-                      </>
+                        </ul>
+                      </div>
                     )}
+                    {leagueOpponent &&
+                      opponents[leagueOpponent] &&
+                      tab === 'league' && (
+                        <OpponentStats opponent={opponents[leagueOpponent]} />
+                      )}
+                    {quiz.cupOpponent &&
+                      opponents[quiz.cupOpponent] &&
+                      tab === 'cup' && (
+                        <OpponentStats opponent={opponents[quiz.cupOpponent]} />
+                      )}
                   </div>
                 </div>
               )}

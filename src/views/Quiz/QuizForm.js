@@ -26,7 +26,7 @@ const saveDraft = debounce((id, text, points, cup_points) => {
 }, 1000);
 
 const QuizForm = ({ data, userAnswers }) => {
-  const [dispatch] = useStateValue();
+  const [, dispatch] = useStateValue();
   const history = useHistory();
   const [submitting, setSubmitting] = useState(false);
   const [formData, setFormData] = useState({
@@ -75,7 +75,8 @@ const QuizForm = ({ data, userAnswers }) => {
         toast.success(<Trans>Quiz submetido com sucesso.</Trans>);
         history.push(`/quiz/${data.quiz.date}`);
       })
-      .catch(() => {
+      .catch((err) => {
+        console.log(err.message);
         toast.error(<Trans>Não foi possível submeter o quiz.</Trans>);
       })
       .finally(() => {
