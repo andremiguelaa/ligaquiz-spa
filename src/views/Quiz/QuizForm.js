@@ -20,11 +20,12 @@ import Error from 'components/Error';
 
 import classes from './Quiz.module.scss';
 
-const saveDraft = debounce((id, text, points) => {
+const saveDraft = debounce((id, text, points, cup_points) => {
   ApiRequest.post(`answers`, {
     question_id: id,
     text,
     points: points === -1 ? undefined : points,
+    cup_points: cup_points === -1 ? undefined : cup_points,
   });
 }, 1000);
 
@@ -43,6 +44,9 @@ const QuizForm = ({ data, userAnswers }) => {
       question_id: question.id,
       text: userAnswers[question.id]?.[0].text,
       points: data.quiz.solo ? undefined : userAnswers[question.id]?.[0].points,
+      cup_points: !data.quiz.cupOpponent
+        ? undefined
+        : userAnswers[question.id]?.[0].cup_points,
     })),
   });
   const [missingPointsModal, setMissingPointsModal] = useState(false);
@@ -180,6 +184,24 @@ const QuizForm = ({ data, userAnswers }) => {
     );
   }
 
+  let cupPointsGiven;
+  if (data.quiz.cupOpponent) {
+    cupPointsGiven = formData.answers.reduce(
+      (acc, item) => {
+        if (item.cup_points >= 0) {
+          acc[item.cup_points]++;
+        }
+        return acc;
+      },
+      {
+        0: 0,
+        1: 0,
+        2: 0,
+        3: 0,
+      }
+    );
+  }
+
   const blankAnsers = formData.answers.filter((item) => !item.text).length;
 
   return (
@@ -226,7 +248,8 @@ const QuizForm = ({ data, userAnswers }) => {
                       saveDraft(
                         question.id,
                         event.target.value,
-                        formData.answers[index].points
+                        formData.answers[index].points,
+                        formData.answers[index].cup_points
                       );
                     }}
                     onPaste={(event) => {
@@ -241,7 +264,7 @@ const QuizForm = ({ data, userAnswers }) => {
                 {!data.quiz.solo && (
                   <>
                     <label className="label">
-                      <Trans>Pontos a atribuir ao adversário</Trans>
+                      <Trans>Pontos a atribuir ao adversário da Liga</Trans>
                     </label>
                     <div className="field has-addons">
                       <div className="control">
@@ -260,7 +283,8 @@ const QuizForm = ({ data, userAnswers }) => {
                               formData.answers[index].text,
                               formData.answers[index].points === 0
                                 ? undefined
-                                : 0
+                                : 0,
+                              formData.answers[index].cup_points
                             );
                             setFormData((prev) => {
                               const newFormData = { ...prev };
@@ -291,7 +315,8 @@ const QuizForm = ({ data, userAnswers }) => {
                               formData.answers[index].text,
                               formData.answers[index].points === 1
                                 ? undefined
-                                : 1
+                                : 1,
+                              formData.answers[index].cup_points
                             );
                             setFormData((prev) => {
                               const newFormData = { ...prev };
@@ -322,7 +347,8 @@ const QuizForm = ({ data, userAnswers }) => {
                               formData.answers[index].text,
                               formData.answers[index].points === 2
                                 ? undefined
-                                : 2
+                                : 2,
+                              formData.answers[index].cup_points
                             );
                             setFormData((prev) => {
                               const newFormData = { ...prev };
@@ -353,12 +379,154 @@ const QuizForm = ({ data, userAnswers }) => {
                               formData.answers[index].text,
                               formData.answers[index].points === 3
                                 ? undefined
-                                : 3
+                                : 3,
+                              formData.answers[index].cup_points
                             );
                             setFormData((prev) => {
                               const newFormData = { ...prev };
                               newFormData.answers[index].points =
                                 formData.answers[index].points === 3
+                                  ? undefined
+                                  : 3;
+                              return newFormData;
+                            });
+                          }}
+                        >
+                          3
+                        </button>
+                      </div>
+                    </div>
+                  </>
+                )}
+                {data.quiz.cupOpponent && (
+                  <>
+                    <label className="label">
+                      <Trans>Pontos a atribuir ao adversário da Taça</Trans>
+                    </label>
+                    <div className="field has-addons">
+                      <div className="control">
+                        <button
+                          disabled={
+                            cupPointsGiven[0] === 1 &&
+                            formData.answers[index].cup_points !== 0
+                          }
+                          type="button"
+                          className={classnames('button', {
+                            'is-success':
+                              formData.answers[index].cup_points === 0,
+                          })}
+                          onClick={() => {
+                            saveDraft(
+                              question.id,
+                              formData.answers[index].text,
+                              formData.answers[index].points,
+                              formData.answers[index].cup_points === 0
+                                ? undefined
+                                : 0
+                            );
+                            setFormData((prev) => {
+                              const newFormData = { ...prev };
+                              newFormData.answers[index].cup_points =
+                                formData.answers[index].cup_points === 0
+                                  ? undefined
+                                  : 0;
+                              return newFormData;
+                            });
+                          }}
+                        >
+                          0
+                        </button>
+                      </div>
+                      <div className="control">
+                        <button
+                          disabled={
+                            cupPointsGiven[1] === 3 &&
+                            formData.answers[index].cup_points !== 1
+                          }
+                          type="button"
+                          className={classnames('button', {
+                            'is-warning':
+                              formData.answers[index].cup_points === 1,
+                          })}
+                          onClick={() => {
+                            saveDraft(
+                              question.id,
+                              formData.answers[index].text,
+                              formData.answers[index].points,
+                              formData.answers[index].cup_points === 1
+                                ? undefined
+                                : 1
+                            );
+                            setFormData((prev) => {
+                              const newFormData = { ...prev };
+                              newFormData.answers[index].cup_points =
+                                formData.answers[index].cup_points === 1
+                                  ? undefined
+                                  : 1;
+                              return newFormData;
+                            });
+                          }}
+                        >
+                          1
+                        </button>
+                      </div>
+                      <div className="control">
+                        <button
+                          disabled={
+                            cupPointsGiven[2] === 3 &&
+                            formData.answers[index].cup_points !== 2
+                          }
+                          type="button"
+                          className={classnames('button', {
+                            'is-warning':
+                              formData.answers[index].cup_points === 2,
+                          })}
+                          onClick={() => {
+                            saveDraft(
+                              question.id,
+                              formData.answers[index].text,
+                              formData.answers[index].points,
+                              formData.answers[index].cup_points === 2
+                                ? undefined
+                                : 2
+                            );
+                            setFormData((prev) => {
+                              const newFormData = { ...prev };
+                              newFormData.answers[index].cup_points =
+                                formData.answers[index].cup_points === 2
+                                  ? undefined
+                                  : 2;
+                              return newFormData;
+                            });
+                          }}
+                        >
+                          2
+                        </button>
+                      </div>
+                      <div className="control">
+                        <button
+                          disabled={
+                            cupPointsGiven[3] === 1 &&
+                            formData.answers[index].cup_points !== 3
+                          }
+                          type="button"
+                          className={classnames('button', {
+                            'is-danger':
+                              formData.answers[index].cup_points === 3,
+                          })}
+                          onClick={() => {
+                            saveDraft(
+                              question.id,
+                              formData.answers[index].text,
+                              formData.answers[index].points,
+                              formData.answers[index].cup_points === 3
+                                ? undefined
+                                : 3
+                            );
+                            setFormData((prev) => {
+                              const newFormData = { ...prev };
+                              newFormData.answers[index].cup_points =
+                                formData.answers[index].cup_points === 3
                                   ? undefined
                                   : 3;
                               return newFormData;
@@ -408,7 +576,8 @@ const QuizForm = ({ data, userAnswers }) => {
                           <>
                             {' '}
                             <Trans>
-                              ({differenceInYears(
+                              (
+                              {differenceInYears(
                                 new Date(),
                                 new Date(opponent.birthday)
                               )}{' '}
