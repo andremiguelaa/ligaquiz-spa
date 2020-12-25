@@ -68,7 +68,7 @@ const SpecialQuizzes = ({ user, setError }) => {
                 </Link>
               </td>
               <td>
-                {specialQuiz.user_rank.past ? (
+                {specialQuiz.past ? (
                   <>
                     {specialQuiz.user_rank === 1 && (
                       <>
