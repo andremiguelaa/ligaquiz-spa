@@ -50,11 +50,17 @@ const QuizForm = ({ data, userAnswers }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (!data.quiz.solo) {
+    if (!data.quiz.solo || data.quiz.cupOpponent) {
       const missingPoints = formData.answers.some(
         (answer) => answer.points === undefined || answer.points === -1
       );
-      if (missingPoints) {
+      const cupMissingPoints = formData.answers.some(
+        (answer) => answer.cup_points === undefined || answer.cup_points === -1
+      );
+      if (
+        (!data.quiz.solo && missingPoints) ||
+        (data.quiz.cupOpponent && cupMissingPoints)
+      ) {
         setMissingPointsModal(true);
         return;
       }
