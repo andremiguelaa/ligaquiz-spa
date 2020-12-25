@@ -68,19 +68,25 @@ const SpecialQuizzes = ({ user, setError }) => {
                 </Link>
               </td>
               <td>
-                {specialQuiz.user_rank === 1 && (
+                {specialQuiz.user_rank.past ? (
                   <>
-                    <i className="fa fa-trophy" aria-hidden="true"></i>{' '}
-                    <Trans>Campeão</Trans>
+                    {specialQuiz.user_rank === 1 && (
+                      <>
+                        <i className="fa fa-trophy" aria-hidden="true"></i>{' '}
+                        <Trans>Campeão</Trans>
+                      </>
+                    )}
+                    {specialQuiz.user_rank > 1 && (
+                      <SelectOrdinal
+                        value={specialQuiz.user_rank}
+                        two="2º"
+                        few="3º"
+                        other="#º"
+                      />
+                    )}
                   </>
-                )}
-                {specialQuiz.user_rank > 1 && (
-                  <SelectOrdinal
-                    value={specialQuiz.user_rank}
-                    two="2º"
-                    few="3º"
-                    other="#º"
-                  />
+                ) : (
+                  '-'
                 )}
               </td>
               <td>{convertToLongDate(specialQuiz.date, language)}</td>
