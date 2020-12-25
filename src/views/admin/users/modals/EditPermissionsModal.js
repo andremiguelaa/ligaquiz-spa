@@ -210,11 +210,13 @@ const EditPermissionsModal = ({
                     ...userToEdit,
                     newRoles: {
                       ...userToEdit.newRoles,
-                      ranking_manager: event.target.checked,
+                      national_ranking_manager: event.target.checked,
                     },
                   });
                 }}
-                defaultChecked={Boolean(userToEdit.newRoles?.ranking_manager)}
+                defaultChecked={Boolean(
+                  userToEdit.newRoles?.national_ranking_manager
+                )}
               />
               <label htmlFor="national-ranking-manager">
                 <Trans>Gestor de Ranking Nacional</Trans>

@@ -260,7 +260,7 @@ const Users = () => {
                               )}
                             </I18n>
                           )}
-                          {user.valid_roles?.ranking_manager && (
+                          {user.valid_roles?.national_ranking_manager && (
                             <I18n>
                               {({ i18n }) => (
                                 <span
