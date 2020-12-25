@@ -21,9 +21,11 @@ const OpponentsStats = ({ quiz }) => {
   useEffect(() => {
     if ((!quiz.solo && quiz.game) || quiz.cupOpponent) {
       const opponent =
-        quiz.game?.user_id_1 === user.id
-          ? quiz.game?.user_id_2
-          : quiz.game?.user_id_1;
+        !quiz.solo && quiz.game
+          ? quiz.game?.user_id_1 === user.id
+            ? quiz.game?.user_id_2
+            : quiz.game?.user_id_1
+          : undefined;
       setLeagueOpponent(opponent);
       const opponents = [opponent, quiz.cupOpponent].filter((item) => item);
       ApiRequest.get(`genres`)
@@ -103,7 +105,7 @@ const OpponentsStats = ({ quiz }) => {
 
   return (
     <>
-      {!quiz.solo && quiz.game && (
+      {((!quiz.solo && quiz.game) || quiz.cupOpponent) && (
         <div className="column is-4">
           {statsError ? (
             <Error status={statsError} />
@@ -132,9 +134,12 @@ const OpponentsStats = ({ quiz }) => {
                                 'is-active': tab === 'league',
                               })}
                             >
-                              <a onClick={() => setTab('league')}>
+                              <button
+                                className="is-link"
+                                onClick={() => setTab('league')}
+                              >
                                 <Trans>Liga</Trans>
-                              </a>
+                              </button>
                             </li>
                           )}
                           {quiz.cupOpponent && opponents[quiz.cupOpponent] && (
@@ -144,9 +149,12 @@ const OpponentsStats = ({ quiz }) => {
                               })}
                               onClick={() => setTab('cup')}
                             >
-                              <a onClick={() => setTab('cup')}>
+                              <button
+                                className="is-link"
+                                onClick={() => setTab('cup')}
+                              >
                                 <Trans>Taça</Trans>
-                              </a>
+                              </button>
                             </li>
                           )}
                         </ul>

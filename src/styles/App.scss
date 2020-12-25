@@ -65,8 +65,39 @@ button.navbar-link {
   text-align: left;
 }
 
-.tabs {
+div.tabs {
   padding: 0 0.1px;
+  a,
+  .is-link {
+    font-family: inherit;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    align-items: center;
+    border-bottom-color: #dbdbdb;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    color: #4a4a4a;
+    display: flex;
+    justify-content: center;
+    margin-bottom: -1px;
+    padding: 0.5em 1em;
+    vertical-align: top;
+    cursor: pointer;
+    font-size: inherit;
+  }
+  .is-active {
+    a:not(.button):not(.tag),
+    .is-link:not(.button):not(.tag) {
+      color: #3298dc;
+      border-bottom-color: #3298dc;
+    }
+  }
+  a:hover,
+  .is-link:hover {
+    color: #3298dc;
+    border-bottom-color: #3298dc;
+  }
 }
 
 .message .tabs a:not(.button):not(.tag):not(.dropdown-item) {

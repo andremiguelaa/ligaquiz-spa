@@ -274,7 +274,8 @@
     color: $white-bis;
   }
   div.tabs {
-    a {
+    a,
+    .is-link {
       color: $white;
       border-bottom-color: $white;
       &:hover {
@@ -283,7 +284,8 @@
       }
     }
     .is-active {
-      a:not(.button):not(.tag) {
+      a:not(.button):not(.tag),
+      .is-link:not(.button):not(.tag) {
         color: $cyan;
         border-bottom-color: $cyan;
       }
