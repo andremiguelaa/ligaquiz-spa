@@ -108,33 +108,37 @@ const Ranking = () => {
         <section className={classnames('section', 'content', classes.cup)}>
           {cupData.rounds.map((round) => (
             <>
-              <h2 className="is-size-5">
-                {renderRoundTitle(round.games.length)}
-              </h2>
-              <ul>
-                {round.games.map((game) => (
-                  <li>
-                    {game.user_id_1 && game.user_id_2 && (
-                      <>
-                        {users[game.user_id_1].name}{' '}
-                        {users[game.user_id_1].surname} -{' '}
-                        {users[game.user_id_2].name}{' '}
-                        {users[game.user_id_2].surname}
-                      </>
-                    )}
-                    {game.user_id_1 && !game.user_id_2 && (
-                      <>
-                        {users[game.user_id_1].name}{' '}
-                        {users[game.user_id_1].surname} (
-                        <Trans>Isento para a próxima eliminatória</Trans>)
-                      </>
-                    )}
-                    {!game.user_id_1 && !game.user_id_2 && (
-                      <Trans>Jogo a definir</Trans>
-                    )}
-                  </li>
-                ))}
-              </ul>
+              {round.games.length > 0 && (
+                <>
+                  <h2 className="is-size-5">
+                    {renderRoundTitle(round.games.length)}
+                  </h2>
+                  <ul>
+                    {round.games.map((game) => (
+                      <li>
+                        {game.user_id_1 && game.user_id_2 && (
+                          <>
+                            {users[game.user_id_1].name}{' '}
+                            {users[game.user_id_1].surname} -{' '}
+                            {users[game.user_id_2].name}{' '}
+                            {users[game.user_id_2].surname}
+                          </>
+                        )}
+                        {game.user_id_1 && !game.user_id_2 && (
+                          <>
+                            {users[game.user_id_1].name}{' '}
+                            {users[game.user_id_1].surname} (
+                            <Trans>Isento para a próxima eliminatória</Trans>)
+                          </>
+                        )}
+                        {!game.user_id_1 && !game.user_id_2 && (
+                          <Trans>Jogo a definir</Trans>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              )}
             </>
           ))}
         </section>
