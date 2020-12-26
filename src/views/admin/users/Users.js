@@ -269,7 +269,7 @@ const Users = () => {
                                     t`Gestor de Ranking Nacional`
                                   )}
                                 >
-                                  <i className="fa fa-trophy"></i>
+                                  <i className="fa fa-star"></i>
                                 </span>
                               )}
                             </I18n>

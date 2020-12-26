@@ -303,7 +303,7 @@ const Form = () => {
                   </select>
                 </div>
                 <div className="icon is-small is-left">
-                  <i className="fa fa-trophy"></i>
+                  <i className="fa fa-star"></i>
                 </div>
               </div>
             }

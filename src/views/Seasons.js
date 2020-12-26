@@ -21,16 +21,29 @@ const Seasons = () => {
 
   useEffect(() => {
     ApiRequest.get(`seasons`)
-      .then(({ data }) => {
-        setSeasonsList(
-          data.reduce((acc, season) => {
-            if (season.public && season.leagues.length > 0) {
-              acc.push(season);
-            }
-            return acc;
-          }, [])
-        );
-        setLoading(false);
+      .then(({ data: seasonsData }) => {
+        ApiRequest.get(`cups`)
+          .then(({ data: cupsData }) => {
+            const cupsBySeasonId = cupsData.reduce((acc, item) => {
+              acc[item.season_id] = item;
+              return acc;
+            }, {});
+            setSeasonsList(
+              seasonsData.reduce((acc, season) => {
+                if (season.public && season.leagues.length > 0) {
+                  acc.push({
+                    ...season,
+                    hasCup: Boolean(cupsBySeasonId[season.id]),
+                  });
+                }
+                return acc;
+              }, [])
+            );
+            setLoading(false);
+          })
+          .catch(({ response }) => {
+            setError(response?.status);
+          });
       })
       .catch(({ response }) => {
         setError(response?.status);
@@ -72,6 +85,14 @@ const Seasons = () => {
                         ),
                         render: (item) => (
                           <>
+                            {item.hasCup && (
+                              <Link
+                                to={`/cup/${item.season}`}
+                                className={classes.action}
+                              >
+                                <Trans>Taça</Trans>
+                              </Link>
+                            )}
                             <Link
                               to={`/genre-rankings/${item.season}`}
                               className={classes.action}
