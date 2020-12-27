@@ -116,23 +116,41 @@ const Ranking = () => {
                   <ul>
                     {round.games.map((game) => (
                       <li>
-                        {game.user_id_1 && game.user_id_2 && (
+                        {game.user_id_1 && game.user_id_2 ? (
                           <>
                             {users[game.user_id_1].name}{' '}
-                            {users[game.user_id_1].surname} -{' '}
+                            {users[game.user_id_1].surname}{' '}
+                            {game.done &&
+                            game.hasOwnProperty('user_id_1_game_points') &&
+                            game.hasOwnProperty('user_id_2_game_points') ? (
+                              <>
+                                {game.corrected && (
+                                  <>
+                                    {game.user_id_1_game_points}
+                                    {game.user_id_1_game_points !== 'F' && (
+                                      <> ({game.user_id_1_correct_answers})</>
+                                    )}{' '}
+                                    -{' '}
+                                    {game.user_id_2_game_points !== 'F' && (
+                                      <>({game.user_id_2_correct_answers})</>
+                                    )}{' '}
+                                    {game.user_id_2_game_points}{' '}
+                                  </>
+                                )}
+                              </>
+                            ) : (
+                              'vs.'
+                            )}
+                            {game.done && !game.corrected && <>P</>}{' '}
                             {users[game.user_id_2].name}{' '}
                             {users[game.user_id_2].surname}
                           </>
-                        )}
-                        {game.user_id_1 && !game.user_id_2 && (
+                        ) : (
                           <>
                             {users[game.user_id_1].name}{' '}
                             {users[game.user_id_1].surname} (
                             <Trans>Isento para a próxima eliminatória</Trans>)
                           </>
-                        )}
-                        {!game.user_id_1 && !game.user_id_2 && (
-                          <Trans>Jogo a definir</Trans>
                         )}
                       </li>
                     ))}
