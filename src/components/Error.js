@@ -24,7 +24,7 @@ const error = {
   },
   404: {
     icon: <i className="fa fa-exclamation-triangle" />,
-    message: <Trans>Página não encontrada</Trans>,
+    message: <Trans>Conteúdo não encontrado.</Trans>,
   },
   500: {
     icon: <i className="fa fa-bomb" />,

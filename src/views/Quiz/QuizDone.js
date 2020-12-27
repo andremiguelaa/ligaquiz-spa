@@ -42,9 +42,17 @@ const QuizDone = ({ data, userAnswers }) => (
         {!data.quiz.solo && userAnswers?.[question.id]?.[0] && (
           <div>
             <strong>
-              <Trans>Pontos atribuídos ao adversário</Trans>:
+              <Trans>Pontos atribuídos ao adversário da Liga</Trans>:
             </strong>{' '}
             {userAnswers[question.id][0].points}
+          </div>
+        )}
+        {data.quiz.cupOpponent && userAnswers?.[question.id]?.[0] && (
+          <div>
+            <strong>
+              <Trans>Pontos atribuídos ao adversário da Taça</Trans>:
+            </strong>{' '}
+            {userAnswers[question.id][0].cup_points}
           </div>
         )}
         {question.hasOwnProperty('percentage') && (

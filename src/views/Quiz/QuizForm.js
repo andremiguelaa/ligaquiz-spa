@@ -1,41 +1,32 @@
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Trans } from '@lingui/macro';
-import { I18n } from '@lingui/react';
-import { t } from '@lingui/macro';
 import { useHistory } from 'react-router-dom';
 import classnames from 'classnames';
 import { toast } from 'react-toastify';
 import { debounce } from 'lodash';
-import { differenceInYears } from 'date-fns';
 
 import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
 import renderMedia from 'utils/renderMedia';
-import { getRegionTranslations } from 'utils/getRegionTranslation';
-import { getGenreTranslation } from 'utils/getGenreTranslation';
+
 import Markdown from 'components/Markdown';
 import Modal from 'components/Modal';
-import Loading from 'components/Loading';
-import Error from 'components/Error';
+
+import OpponentsStats from './OpponentsStats';
 
 import classes from './Quiz.module.scss';
 
-const saveDraft = debounce((id, text, points) => {
+const saveDraft = debounce((id, text, points, cup_points) => {
   ApiRequest.post(`answers`, {
     question_id: id,
     text,
     points: points === -1 ? undefined : points,
+    cup_points: cup_points === -1 ? undefined : cup_points,
   });
 }, 1000);
 
 const QuizForm = ({ data, userAnswers }) => {
-  const [
-    {
-      settings: { language },
-      user,
-    },
-    dispatch,
-  ] = useStateValue();
+  const [, dispatch] = useStateValue();
   const history = useHistory();
   const [submitting, setSubmitting] = useState(false);
   const [formData, setFormData] = useState({
@@ -43,97 +34,39 @@ const QuizForm = ({ data, userAnswers }) => {
       question_id: question.id,
       text: userAnswers[question.id]?.[0].text,
       points: data.quiz.solo ? undefined : userAnswers[question.id]?.[0].points,
+      cup_points: !data.quiz.cupOpponent
+        ? undefined
+        : userAnswers[question.id]?.[0].cup_points,
     })),
   });
   const [missingPointsModal, setMissingPointsModal] = useState(false);
   const [submitModal, setSubmitModal] = useState(false);
-  const [genres, setGenres] = useState();
-  const [opponent, setOpponent] = useState();
-  const [opponentGenreStats, setOpponentGenreStats] = useState();
-  const [opponentSubgenreStats, setOpponentSubgenreStats] = useState();
-  const [statsError, setStatsError] = useState(false);
 
   useEffect(() => {
     ApiRequest.post(`logs`, {
       action: `Quiz form opened`,
     });
-    if (!data.quiz.solo && data.quiz.game) {
-      const opponent =
-        data.quiz.game.user_id_1 === user.id
-          ? data.quiz.game.user_id_2
-          : data.quiz.game.user_id_1;
-      ApiRequest.get(`genres`)
-        .then(({ data: genres }) => {
-          setGenres(genres);
-          ApiRequest.get(`users?id[]=${opponent}&statistics=true`)
-            .then(({ data }) => {
-              const user = data[0];
-              const computedGenreStatistics = genres.map((genre) => {
-                let genreStatistics = {
-                  id: genre.id,
-                  slug: genre.slug,
-                  total: 0,
-                  correct: 0,
-                  percentage: 0,
-                  subgenres: [],
-                };
-                genre.subgenres.forEach((subgenre) => {
-                  genreStatistics.total +=
-                    user.statistics[subgenre.id]?.total || 0;
-                  genreStatistics.correct +=
-                    user.statistics[subgenre.id]?.correct || 0;
-                });
-                genreStatistics.percentage =
-                  ((genreStatistics?.correct || 0) /
-                    (genreStatistics?.total || 1)) *
-                  100;
-                return genreStatistics;
-              });
-              setOpponent(user);
-              setOpponentGenreStats(
-                computedGenreStatistics.sort(
-                  (a, b) => b.percentage - a.percentage
-                )
-              );
-              const computedSubgenreStatistics = genres.reduce((acc, genre) => {
-                genre.subgenres.forEach((subgenre) => {
-                  acc.push({
-                    id: subgenre.id,
-                    slug: subgenre.slug,
-                    total: user.statistics[subgenre.id]?.total || 0,
-                    correct: user.statistics[subgenre.id]?.correct || 0,
-                    percentage:
-                      (user.statistics[subgenre.id]?.correct
-                        ? user.statistics[subgenre.id]?.correct /
-                          user.statistics[subgenre.id]?.total
-                        : 0) * 100,
-                  });
-                });
-                return acc;
-              }, []);
-              setOpponentSubgenreStats(
-                computedSubgenreStatistics.sort(
-                  (a, b) => b.percentage - a.percentage
-                )
-              );
-            })
-            .catch(({ response }) => {
-              setStatsError(response?.status);
-            });
-        })
-        .catch(({ response }) => {
-          setStatsError(response?.status);
-        });
-    }
-  }, [data.quiz, user]);
+  }, []);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (!data.quiz.solo) {
+    if (!data.quiz.solo || data.quiz.cupOpponent) {
       const missingPoints = formData.answers.some(
-        (answer) => answer.points === undefined || answer.points === -1
+        (answer) =>
+          answer.points === undefined ||
+          answer.points === null ||
+          answer.points === -1
       );
-      if (missingPoints) {
+      const cupMissingPoints = formData.answers.some(
+        (answer) =>
+          answer.cup_points === undefined ||
+          answer.cup_points === null ||
+          answer.cup_points === -1
+      );
+      if (
+        (!data.quiz.solo && missingPoints) ||
+        (data.quiz.cupOpponent && cupMissingPoints)
+      ) {
         setMissingPointsModal(true);
         return;
       }
@@ -168,6 +101,24 @@ const QuizForm = ({ data, userAnswers }) => {
       (acc, item) => {
         if (item.points >= 0) {
           acc[item.points]++;
+        }
+        return acc;
+      },
+      {
+        0: 0,
+        1: 0,
+        2: 0,
+        3: 0,
+      }
+    );
+  }
+
+  let cupPointsGiven;
+  if (data.quiz.cupOpponent) {
+    cupPointsGiven = formData.answers.reduce(
+      (acc, item) => {
+        if (item.cup_points >= 0) {
+          acc[item.cup_points]++;
         }
         return acc;
       },
@@ -226,7 +177,8 @@ const QuizForm = ({ data, userAnswers }) => {
                       saveDraft(
                         question.id,
                         event.target.value,
-                        formData.answers[index].points
+                        formData.answers[index].points,
+                        formData.answers[index].cup_points
                       );
                     }}
                     onPaste={(event) => {
@@ -241,7 +193,7 @@ const QuizForm = ({ data, userAnswers }) => {
                 {!data.quiz.solo && (
                   <>
                     <label className="label">
-                      <Trans>Pontos a atribuir ao adversário</Trans>
+                      <Trans>Pontos a atribuir ao adversário da Liga</Trans>
                     </label>
                     <div className="field has-addons">
                       <div className="control">
@@ -260,7 +212,8 @@ const QuizForm = ({ data, userAnswers }) => {
                               formData.answers[index].text,
                               formData.answers[index].points === 0
                                 ? undefined
-                                : 0
+                                : 0,
+                              formData.answers[index].cup_points
                             );
                             setFormData((prev) => {
                               const newFormData = { ...prev };
@@ -291,7 +244,8 @@ const QuizForm = ({ data, userAnswers }) => {
                               formData.answers[index].text,
                               formData.answers[index].points === 1
                                 ? undefined
-                                : 1
+                                : 1,
+                              formData.answers[index].cup_points
                             );
                             setFormData((prev) => {
                               const newFormData = { ...prev };
@@ -322,7 +276,8 @@ const QuizForm = ({ data, userAnswers }) => {
                               formData.answers[index].text,
                               formData.answers[index].points === 2
                                 ? undefined
-                                : 2
+                                : 2,
+                              formData.answers[index].cup_points
                             );
                             setFormData((prev) => {
                               const newFormData = { ...prev };
@@ -353,12 +308,154 @@ const QuizForm = ({ data, userAnswers }) => {
                               formData.answers[index].text,
                               formData.answers[index].points === 3
                                 ? undefined
-                                : 3
+                                : 3,
+                              formData.answers[index].cup_points
                             );
                             setFormData((prev) => {
                               const newFormData = { ...prev };
                               newFormData.answers[index].points =
                                 formData.answers[index].points === 3
+                                  ? undefined
+                                  : 3;
+                              return newFormData;
+                            });
+                          }}
+                        >
+                          3
+                        </button>
+                      </div>
+                    </div>
+                  </>
+                )}
+                {data.quiz.cupOpponent && (
+                  <>
+                    <label className="label">
+                      <Trans>Pontos a atribuir ao adversário da Taça</Trans>
+                    </label>
+                    <div className="field has-addons">
+                      <div className="control">
+                        <button
+                          disabled={
+                            cupPointsGiven[0] === 1 &&
+                            formData.answers[index].cup_points !== 0
+                          }
+                          type="button"
+                          className={classnames('button', {
+                            'is-success':
+                              formData.answers[index].cup_points === 0,
+                          })}
+                          onClick={() => {
+                            saveDraft(
+                              question.id,
+                              formData.answers[index].text,
+                              formData.answers[index].points,
+                              formData.answers[index].cup_points === 0
+                                ? undefined
+                                : 0
+                            );
+                            setFormData((prev) => {
+                              const newFormData = { ...prev };
+                              newFormData.answers[index].cup_points =
+                                formData.answers[index].cup_points === 0
+                                  ? undefined
+                                  : 0;
+                              return newFormData;
+                            });
+                          }}
+                        >
+                          0
+                        </button>
+                      </div>
+                      <div className="control">
+                        <button
+                          disabled={
+                            cupPointsGiven[1] === 3 &&
+                            formData.answers[index].cup_points !== 1
+                          }
+                          type="button"
+                          className={classnames('button', {
+                            'is-warning':
+                              formData.answers[index].cup_points === 1,
+                          })}
+                          onClick={() => {
+                            saveDraft(
+                              question.id,
+                              formData.answers[index].text,
+                              formData.answers[index].points,
+                              formData.answers[index].cup_points === 1
+                                ? undefined
+                                : 1
+                            );
+                            setFormData((prev) => {
+                              const newFormData = { ...prev };
+                              newFormData.answers[index].cup_points =
+                                formData.answers[index].cup_points === 1
+                                  ? undefined
+                                  : 1;
+                              return newFormData;
+                            });
+                          }}
+                        >
+                          1
+                        </button>
+                      </div>
+                      <div className="control">
+                        <button
+                          disabled={
+                            cupPointsGiven[2] === 3 &&
+                            formData.answers[index].cup_points !== 2
+                          }
+                          type="button"
+                          className={classnames('button', {
+                            'is-warning':
+                              formData.answers[index].cup_points === 2,
+                          })}
+                          onClick={() => {
+                            saveDraft(
+                              question.id,
+                              formData.answers[index].text,
+                              formData.answers[index].points,
+                              formData.answers[index].cup_points === 2
+                                ? undefined
+                                : 2
+                            );
+                            setFormData((prev) => {
+                              const newFormData = { ...prev };
+                              newFormData.answers[index].cup_points =
+                                formData.answers[index].cup_points === 2
+                                  ? undefined
+                                  : 2;
+                              return newFormData;
+                            });
+                          }}
+                        >
+                          2
+                        </button>
+                      </div>
+                      <div className="control">
+                        <button
+                          disabled={
+                            cupPointsGiven[3] === 1 &&
+                            formData.answers[index].cup_points !== 3
+                          }
+                          type="button"
+                          className={classnames('button', {
+                            'is-danger':
+                              formData.answers[index].cup_points === 3,
+                          })}
+                          onClick={() => {
+                            saveDraft(
+                              question.id,
+                              formData.answers[index].text,
+                              formData.answers[index].points,
+                              formData.answers[index].cup_points === 3
+                                ? undefined
+                                : 3
+                            );
+                            setFormData((prev) => {
+                              const newFormData = { ...prev };
+                              newFormData.answers[index].cup_points =
+                                formData.answers[index].cup_points === 3
                                   ? undefined
                                   : 3;
                               return newFormData;
@@ -382,198 +479,7 @@ const QuizForm = ({ data, userAnswers }) => {
             </div>
           </form>
         </div>
-        {!data.quiz.solo && data.quiz.game && (
-          <div className="column is-4">
-            {statsError ? (
-              <Error status={statsError} />
-            ) : (
-              <>
-                {!opponentGenreStats || !opponentSubgenreStats || !genres ? (
-                  <Loading />
-                ) : (
-                  <div className={classnames('card', classes.statistics)}>
-                    <div className="card-content">
-                      <h2
-                        className={classnames(
-                          'subtitle',
-                          'has-text-weight-bold',
-                          classes.opponentTitle
-                        )}
-                      >
-                        <Trans>Estatísticas do adversário</Trans>
-                      </h2>
-                      <p className={classes.opponentName}>
-                        {opponent.name} {opponent.surname}
-                        {opponent.birthday && opponent.birthday !== 'hidden' && (
-                          <>
-                            {' '}
-                            <Trans>
-                              ({differenceInYears(
-                                new Date(),
-                                new Date(opponent.birthday)
-                              )}{' '}
-                              anos)
-                            </Trans>
-                          </>
-                        )}
-                        {opponent.region && opponent.region !== 'hidden' && (
-                          <>
-                            <br />
-                            {getRegionTranslations(opponent.region, language)}
-                          </>
-                        )}
-                        {opponent.birthday === 'hidden' && (
-                          <small className={classes.missing}>
-                            <span className="icon has-text-warning">
-                              <i className="fa fa-exclamation-triangle"></i>
-                            </span>
-                            <Trans>
-                              Preenche a tua data de nascimento para veres a
-                              idade do teu adversário
-                            </Trans>
-                          </small>
-                        )}
-                        {opponent.region === 'hidden' && (
-                          <small className={classes.missing}>
-                            <span className="icon has-text-warning">
-                              <i className="fa fa-exclamation-triangle"></i>
-                            </span>
-                            <Trans>
-                              Preenche a tua região para veres a região do teu
-                              adversário
-                            </Trans>
-                          </small>
-                        )}
-                      </p>
-                      <div className="table-container">
-                        <table
-                          className={classnames(
-                            'table is-fullwidth is-hoverable',
-                            classes.genresTable
-                          )}
-                        >
-                          <thead>
-                            <tr>
-                              <th>
-                                <Trans>Tema</Trans>
-                              </th>
-                              <th className={classes.total}>
-                                <I18n>
-                                  {({ i18n }) => (
-                                    <span
-                                      className="icon has-tooltip-bottom"
-                                      data-tooltip={i18n._(
-                                        t`Total de respostas`
-                                      )}
-                                    >
-                                      <Trans>T</Trans>
-                                    </span>
-                                  )}
-                                </I18n>
-                              </th>
-                              <th className={classes.percentage}>
-                                <I18n>
-                                  {({ i18n }) => (
-                                    <span
-                                      className="icon has-tooltip-bottom has-tooltip-left"
-                                      data-tooltip={i18n._(
-                                        t`Percentagem de acerto`
-                                      )}
-                                    >
-                                      %
-                                    </span>
-                                  )}
-                                </I18n>
-                              </th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            {opponentGenreStats.map((genre) => (
-                              <Fragment key={genre.id}>
-                                <tr>
-                                  <th>
-                                    {getGenreTranslation(genre.slug, language)}
-                                  </th>
-                                  <td className={classes.total}>
-                                    {genre.total}
-                                  </td>
-                                  <td className={classes.percentage}>
-                                    {Math.round(genre.percentage)}%
-                                  </td>
-                                </tr>
-                              </Fragment>
-                            ))}
-                          </tbody>
-                        </table>
-                      </div>
-                      <div className="table-container">
-                        <table
-                          className={classnames(
-                            'table is-fullwidth is-hoverable',
-                            classes.genresTable
-                          )}
-                        >
-                          <thead>
-                            <tr>
-                              <th>
-                                <Trans>Subtema</Trans>
-                              </th>
-                              <th className={classes.total}>
-                                <I18n>
-                                  {({ i18n }) => (
-                                    <span
-                                      className="icon has-tooltip-bottom"
-                                      data-tooltip={i18n._(
-                                        t`Total de respostas`
-                                      )}
-                                    >
-                                      <Trans>T</Trans>
-                                    </span>
-                                  )}
-                                </I18n>
-                              </th>
-                              <th className={classes.percentage}>
-                                <I18n>
-                                  {({ i18n }) => (
-                                    <span
-                                      className="icon has-tooltip-bottom has-tooltip-left"
-                                      data-tooltip={i18n._(
-                                        t`Percentagem de acerto`
-                                      )}
-                                    >
-                                      %
-                                    </span>
-                                  )}
-                                </I18n>
-                              </th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            {opponentSubgenreStats.map((genre) => (
-                              <Fragment key={genre.id}>
-                                <tr>
-                                  <th>
-                                    {getGenreTranslation(genre.slug, language)}
-                                  </th>
-                                  <td className={classes.total}>
-                                    {genre.total}
-                                  </td>
-                                  <td className={classes.percentage}>
-                                    {Math.round(genre.percentage)}%
-                                  </td>
-                                </tr>
-                              </Fragment>
-                            ))}
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </>
-            )}
-          </div>
-        )}
+        <OpponentsStats quiz={data.quiz} />
       </div>
       <Modal
         type="danger"

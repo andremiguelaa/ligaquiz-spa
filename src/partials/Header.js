@@ -15,7 +15,7 @@ import logoEquizition from 'img/logo_equizition.png';
 import logoEquizitionDark from 'img/logo_equizition_dark.png';
 import classes from './Header.module.scss';
 
-const version = '4.15.4';
+const version = '4.16.0';
 
 const isDarkMode =
   window.matchMedia &&
@@ -93,10 +93,16 @@ const Header = () => {
                 {user &&
                   (user.valid_roles.admin ||
                     user.valid_roles.regular_player) && (
-                    <Link to="/ranking" className="navbar-item">
-                      <i className="fa fa-btn fa-diamond" />
-                      &nbsp;<Trans>Classificação</Trans>
-                    </Link>
+                    <>
+                      <Link to="/ranking" className="navbar-item">
+                        <i className="fa fa-btn fa-diamond" />
+                        &nbsp;<Trans>Classificação</Trans>
+                      </Link>
+                      <Link to="/cup" className="navbar-item">
+                        <i className="fa fa-btn fa-trophy" />
+                        &nbsp;<Trans>Taça</Trans>
+                      </Link>
+                    </>
                   )}
                 {user && (
                   <Link to="/statistics" className="navbar-item">
@@ -106,7 +112,7 @@ const Header = () => {
                 )}
                 {process.env.REACT_APP_NATIONAL_RANKING === 'true' && (
                   <Link to="/national-ranking/" className="navbar-item">
-                    <i className="fa fa-btn fa-trophy" />
+                    <i className="fa fa-btn fa-star" />
                     &nbsp;<Trans>Ranking Nacional</Trans>
                   </Link>
                 )}
@@ -249,7 +255,7 @@ const Header = () => {
                               to="/admin/national-ranking/ranking"
                               className="navbar-item"
                             >
-                              <i className="fa fa-btn fa-trophy" />
+                              <i className="fa fa-btn fa-star" />
                               &nbsp;<Trans>Rankings mensais</Trans>
                             </Link>
                             <Link

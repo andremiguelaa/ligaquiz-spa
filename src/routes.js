@@ -12,6 +12,7 @@ import Statistics from 'views/Statistics';
 import StatisticsComparison from 'views/StatisticsComparison';
 import NationalRanking from 'views/NationalRanking';
 import Ranking from 'views/Ranking';
+import Cup from 'views/Cup';
 import Seasons from 'views/Seasons';
 import Quizzes from 'views/Quizzes';
 import SpecialQuizzes from 'views/SpecialQuizzes';
@@ -117,6 +118,11 @@ export default [
     title: <Trans>Classificação</Trans>,
     path: '/ranking/:season?/:tier?',
     component: Ranking,
+  },
+  {
+    title: <Trans>Taça</Trans>,
+    path: '/cup/:season?',
+    component: Cup,
   },
   {
     title: <Trans>Arquivo de temporadas</Trans>,
