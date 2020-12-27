@@ -51,7 +51,8 @@ const Statistics = () => {
     }
     ApiRequest.get(`users?id[]=${userId1}&id[]=${userId2}&statistics=true`)
       .then(({ data }) => {
-        const userData = userId1 > userId2 ? data.reverse() : data;
+        const userData =
+          parseInt(userId1) > parseInt(userId2) ? data.reverse() : data;
         setUsers(userData);
         ApiRequest.get(`games?user=${userId1}&opponent=${userId2}`)
           .then(({ data }) => {
