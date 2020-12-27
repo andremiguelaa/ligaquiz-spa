@@ -9,6 +9,7 @@ import PageHeader from 'components/PageHeader';
 import Error from 'components/Error';
 import EmptyState from 'components/EmptyState';
 import Loading from 'components/Loading';
+import ConditionalWrapper from 'components/ConditionalWrapper';
 
 const Cup = () => {
   const [
@@ -124,8 +125,13 @@ const Cup = () => {
                     <div>
                       {game.user_id_1 && game.user_id_2 ? (
                         <>
-                          {users[game.user_id_1].name}{' '}
-                          {users[game.user_id_1].surname}{' '}
+                          <ConditionalWrapper
+                            condition={game.winner === game.user_id_2}
+                            wrapper={(children) => <del>{children}</del>}
+                          >
+                            {users[game.user_id_1].name}{' '}
+                            {users[game.user_id_1].surname}
+                          </ConditionalWrapper>{' '}
                           {game.done &&
                           game.hasOwnProperty('user_id_1_game_points') &&
                           game.hasOwnProperty('user_id_2_game_points') ? (
@@ -148,8 +154,13 @@ const Cup = () => {
                             'vs.'
                           )}
                           {game.done && !game.corrected && <>P</>}{' '}
-                          {users[game.user_id_2].name}{' '}
-                          {users[game.user_id_2].surname}
+                          <ConditionalWrapper
+                            condition={game.winner === game.user_id_1}
+                            wrapper={(children) => <del>{children}</del>}
+                          >
+                            {users[game.user_id_2].name}{' '}
+                            {users[game.user_id_2].surname}
+                          </ConditionalWrapper>
                         </>
                       ) : (
                         <>
