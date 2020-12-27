@@ -1,0 +1,82 @@
+{
+  "Oitavos-de-Final": {
+    "origin": [
+      [
+        "src/views/Cup.js",
+        93
+      ]
+    ]
+  },
+  "Quartos-de-Final": {
+    "origin": [
+      [
+        "src/views/Cup.js",
+        95
+      ]
+    ]
+  },
+  "Meias-finais": {
+    "origin": [
+      [
+        "src/views/Cup.js",
+        97
+      ]
+    ]
+  },
+  "Final": {
+    "origin": [
+      [
+        "src/views/Cup.js",
+        99
+      ]
+    ]
+  },
+  "{0}-avos-de-Final": {
+    "origin": [
+      [
+        "src/views/Cup.js",
+        102
+      ]
+    ]
+  },
+  "Taça": {
+    "origin": [
+      [
+        "src/views/Cup.js",
+        110
+      ]
+    ]
+  },
+  "Temporada {seasonNumber}": {
+    "origin": [
+      [
+        "src/views/Cup.js",
+        111
+      ]
+    ]
+  },
+  "Isento para a próxima eliminatória": {
+    "origin": [
+      [
+        "src/views/Cup.js",
+        158
+      ]
+    ]
+  },
+  "A definir": {
+    "origin": [
+      [
+        "src/views/Cup.js",
+        172
+      ]
+    ]
+  },
+  "Sem registos": {
+    "origin": [
+      [
+        "src/views/Cup.js",
+        180
+      ]
+    ]
+  }
+}

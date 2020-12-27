@@ -1,0 +1,26 @@
+{
+  "Estatísticas do adversário": {
+    "origin": [
+      [
+        "src/views/Quiz/OpponentsStats.js",
+        126
+      ]
+    ]
+  },
+  "Liga": {
+    "origin": [
+      [
+        "src/views/Quiz/OpponentsStats.js",
+        141
+      ]
+    ]
+  },
+  "Taça": {
+    "origin": [
+      [
+        "src/views/Quiz/OpponentsStats.js",
+        156
+      ]
+    ]
+  }
+}

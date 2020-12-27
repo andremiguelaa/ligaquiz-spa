@@ -320,8 +320,7 @@ const Rules = () => {
               Por MB WAY usando o seguinte número: <strong>916682562</strong>
             </li>
             <li>
-              Por Paypal na <a href="/account">página da tua conta</a> (ainda
-              não disponível)
+              Por Paypal na <a href="/account">página da tua conta</a>
             </li>
           </ul>
           <p>

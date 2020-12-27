@@ -23,7 +23,7 @@
       ]
     ]
   },
-  "Pontos atribuídos ao adversário": {
+  "Pontos atribuídos ao adversário da Liga": {
     "origin": [
       [
         "src/views/Quiz/QuizDone.js",
@@ -31,11 +31,19 @@
       ]
     ]
   },
-  "Percentagem de acerto": {
+  "Pontos atribuídos ao adversário da Taça": {
     "origin": [
       [
         "src/views/Quiz/QuizDone.js",
         53
+      ]
+    ]
+  },
+  "Percentagem de acerto": {
+    "origin": [
+      [
+        "src/views/Quiz/QuizDone.js",
+        61
       ]
     ]
   }

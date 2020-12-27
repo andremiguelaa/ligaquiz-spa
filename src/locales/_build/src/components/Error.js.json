@@ -4,6 +4,10 @@
       [
         "src/components/Error.js",
         11
+      ],
+      [
+        "src/components/Error.js",
+        27
       ]
     ]
   },
@@ -20,14 +24,6 @@
       [
         "src/components/Error.js",
         23
-      ]
-    ]
-  },
-  "Página não encontrada": {
-    "origin": [
-      [
-        "src/components/Error.js",
-        27
       ]
     ]
   },

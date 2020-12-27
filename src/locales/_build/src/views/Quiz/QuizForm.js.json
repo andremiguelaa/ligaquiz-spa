@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        154
+        87
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        158
+        91
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        193
+        144
       ]
     ]
   },
@@ -27,15 +27,23 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        214
+        165
       ]
     ]
   },
-  "Pontos a atribuir ao adversário": {
+  "Pontos a atribuir ao adversário da Liga": {
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        244
+        196
+      ]
+    ]
+  },
+  "Pontos a atribuir ao adversário da Taça": {
+    "origin": [
+      [
+        "src/views/Quiz/QuizForm.js",
+        333
       ]
     ]
   },
@@ -43,91 +51,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        379
-      ]
-    ]
-  },
-  "Estatísticas do adversário": {
-    "origin": [
-      [
-        "src/views/Quiz/QuizForm.js",
-        403
-      ]
-    ]
-  },
-  "({0} anos)": {
-    "origin": [
-      [
-        "src/views/Quiz/QuizForm.js",
-        410
-      ]
-    ]
-  },
-  "Preenche a tua data de nascimento para veres a idade do teu adversário": {
-    "origin": [
-      [
-        "src/views/Quiz/QuizForm.js",
-        430
-      ]
-    ]
-  },
-  "Preenche a tua região para veres a região do teu adversário": {
-    "origin": [
-      [
-        "src/views/Quiz/QuizForm.js",
-        441
-      ]
-    ]
-  },
-  "Tema": {
-    "origin": [
-      [
-        "src/views/Quiz/QuizForm.js",
-        458
-      ]
-    ]
-  },
-  "Total de respostas": {
-    "origin": [
-      [
-        "src/views/Quiz/QuizForm.js",
-        466
-      ],
-      [
-        "src/views/Quiz/QuizForm.js",
-        527
-      ]
-    ]
-  },
-  "T": {
-    "origin": [
-      [
-        "src/views/Quiz/QuizForm.js",
-        469
-      ],
-      [
-        "src/views/Quiz/QuizForm.js",
-        530
-      ]
-    ]
-  },
-  "Percentagem de acerto": {
-    "origin": [
-      [
-        "src/views/Quiz/QuizForm.js",
-        480
-      ],
-      [
-        "src/views/Quiz/QuizForm.js",
-        541
-      ]
-    ]
-  },
-  "Subtema": {
-    "origin": [
-      [
-        "src/views/Quiz/QuizForm.js",
-        519
+        476
       ]
     ]
   },
@@ -135,7 +59,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        581
+        487
       ]
     ]
   },
@@ -143,7 +67,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        583
+        489
       ]
     ]
   },
@@ -151,7 +75,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        595
+        501
       ]
     ]
   },
@@ -159,7 +83,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        601
+        507
       ]
     ]
   },
@@ -167,7 +91,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        603
+        509
       ]
     ]
   },
@@ -175,7 +99,7 @@
     "origin": [
       [
         "src/views/Quiz/QuizForm.js",
-        608
+        514
       ]
     ]
   }

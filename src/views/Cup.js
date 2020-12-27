@@ -98,7 +98,9 @@ const Cup = () => {
       case 1:
         return <Trans>Final</Trans>;
       default:
-        return <Trans>{games}-avos-de-Final</Trans>;
+        return (
+          <Trans>{language === 'pt' ? games : games * 2}-avos-de-Final</Trans>
+        );
     }
   };
 
