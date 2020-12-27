@@ -1,17 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
-import classnames from 'classnames';
 
+import { convertToLongDate } from 'utils/formatDate';
+import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
 import PageHeader from 'components/PageHeader';
 import Error from 'components/Error';
 import EmptyState from 'components/EmptyState';
 import Loading from 'components/Loading';
 
-import classes from './Ranking/Ranking.module.scss';
-
-const Ranking = () => {
+const Cup = () => {
+  const [
+    {
+      settings: { language },
+    },
+  ] = useStateValue();
   const { season } = useParams();
   const [users, setUsers] = useState();
   const [loading, setLoading] = useState(true);
@@ -105,56 +109,65 @@ const Ranking = () => {
         subtitle={cupData && <Trans>Temporada {seasonNumber}</Trans>}
       />
       {cupData ? (
-        <section className={classnames('section', 'content', classes.cup)}>
-          {cupData.rounds.map((round) => (
+        <section className="section content">
+          {cupData.rounds.map((round, index) => (
             <>
-              {round.games.length > 0 && (
+              {round.games.length > 0 ? (
                 <>
                   <h2 className="is-size-5">
-                    {renderRoundTitle(round.games.length)}
+                    {renderRoundTitle(round.games.length)} (
+                    {convertToLongDate(round.date, language)})
                   </h2>
-                  <ul>
-                    {round.games.map((game) => (
-                      <li>
-                        {game.user_id_1 && game.user_id_2 ? (
-                          <>
-                            {users[game.user_id_1].name}{' '}
-                            {users[game.user_id_1].surname}{' '}
-                            {game.done &&
-                            game.hasOwnProperty('user_id_1_game_points') &&
-                            game.hasOwnProperty('user_id_2_game_points') ? (
-                              <>
-                                {game.corrected && (
-                                  <>
-                                    {game.user_id_1_game_points}
-                                    {game.user_id_1_game_points !== 'F' && (
-                                      <> ({game.user_id_1_correct_answers})</>
-                                    )}{' '}
-                                    -{' '}
-                                    {game.user_id_2_game_points !== 'F' && (
-                                      <>({game.user_id_2_correct_answers})</>
-                                    )}{' '}
-                                    {game.user_id_2_game_points}{' '}
-                                  </>
-                                )}
-                              </>
-                            ) : (
-                              'vs.'
-                            )}
-                            {game.done && !game.corrected && <>P</>}{' '}
-                            {users[game.user_id_2].name}{' '}
-                            {users[game.user_id_2].surname}
-                          </>
-                        ) : (
-                          <>
-                            {users[game.user_id_1].name}{' '}
-                            {users[game.user_id_1].surname} (
-                            <Trans>Isento para a próxima eliminatória</Trans>)
-                          </>
-                        )}
-                      </li>
-                    ))}
-                  </ul>
+                  {round.games.map((game) => (
+                    <div>
+                      {game.user_id_1 && game.user_id_2 ? (
+                        <>
+                          {users[game.user_id_1].name}{' '}
+                          {users[game.user_id_1].surname}{' '}
+                          {game.done &&
+                          game.hasOwnProperty('user_id_1_game_points') &&
+                          game.hasOwnProperty('user_id_2_game_points') ? (
+                            <>
+                              {game.corrected && (
+                                <>
+                                  {game.user_id_1_game_points}
+                                  {game.user_id_1_game_points !== 'F' && (
+                                    <> ({game.user_id_1_correct_answers})</>
+                                  )}{' '}
+                                  -{' '}
+                                  {game.user_id_2_game_points !== 'F' && (
+                                    <>({game.user_id_2_correct_answers})</>
+                                  )}{' '}
+                                  {game.user_id_2_game_points}{' '}
+                                </>
+                              )}
+                            </>
+                          ) : (
+                            'vs.'
+                          )}
+                          {game.done && !game.corrected && <>P</>}{' '}
+                          {users[game.user_id_2].name}{' '}
+                          {users[game.user_id_2].surname}
+                        </>
+                      ) : (
+                        <>
+                          {users[game.user_id_1].name}{' '}
+                          {users[game.user_id_1].surname} (
+                          <Trans>Isento para a próxima eliminatória</Trans>)
+                        </>
+                      )}
+                    </div>
+                  ))}
+                </>
+              ) : (
+                <>
+                  <h2 className="is-size-5">
+                    {renderRoundTitle(
+                      cupData.rounds[0].games.length / (2 * index)
+                    )}{' '}
+                    ({convertToLongDate(round.date, language)})
+                  </h2>
+                  <Trans>A definir</Trans>
                 </>
               )}
             </>
@@ -169,4 +182,4 @@ const Ranking = () => {
   );
 };
 
-export default Ranking;
+export default Cup;
