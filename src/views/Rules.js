@@ -217,6 +217,48 @@ const Rules = () => {
               </span>
             </li>
           </ol>
+          <h2 className="subtitle">Taça</h2>
+          <ol className="rules">
+            <li>
+              Paralelamente à liga, existe uma taça em cada temporada usando os
+              mesmos quizzes que são jogados para a liga.
+            </li>
+            <li>
+              A taça terá o número de eliminatórias necessárias para que seja
+              permitida a participação de todos os jogadores.
+            </li>
+            <li>
+              Em cada eliminatória, um jogador terá um adversário ou ficará
+              isento para a próxima eliminatória caso não haja adversários
+              suficientes.
+            </li>
+            <li>
+              Os adversários de cada eliminatória são definidos com recurso a um
+              sorteio.
+            </li>
+            <li>
+              Nos dias em que um jogador tenha jogo para a taça, deverá atribuir
+              também pontos ao adversário da taça.
+            </li>
+            <li>
+              <span>
+                Caso haja empate num jogo da taça, o desempate será feito da
+                seguinte forma:
+              </span>
+              <ol>
+                <li>Vence o jogador da divisão inferior</li>
+                <li>
+                  Vence o jogador que tenha ficado pior classificado na
+                  temporada anterior
+                </li>
+              </ol>
+              <span>
+                Caso os critérios anteriores não possam ser aplicados (por o
+                jogador não estar em nenhuma divisão ou não ter jogado na
+                temporada anterior), vence o jogador mais recente na Liga Quiz.
+              </span>
+            </li>
+          </ol>
           <h2 className="subtitle">Quizzes Especiais</h2>
           <ol className="rules">
             <li>
