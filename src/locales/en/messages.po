@@ -53,7 +53,7 @@ msgstr "<0>{0}</0> result counting to national ranking"
 msgid "<0>{0}</0><1><2><3>A {1} é um jogo de cultura geral onde a confiança na honestidade dos jogadores é crucial. É expressamente proibido usar qualquer fonte externa para obter respostas às perguntas. Isto inclui:</3><4><5>Pedir pistas/respostas a outras pessoas</5><6>Usar a Internet, livros ou outro material de consulta para pesquisa de pistas/respostas</6><7>Usar calculadoras, instrumentos musicais ou outros equipamentos para ajudar à resposta</7></4><8>Apenas papel e caneta/lápis são permitidos.</8></2><9>A organização reserva-se ao direito de inibir o acesso à {2} a qualquer jogador que não cumpra este critério.</9><10>Para receber um convite para entrar na {3}, todos os novos jogadores deverão ser referidos por um jogador activo na {4}, que irá atestar da honestidade e integridade do novo membro. A {5} é uma liga por convite.</10><11>Todos os estreantes na {6} serão colocados na divisão mais baixa. A preferência de entrada numa divisão é a ordem de entrada na lista de espera.</11><12>Caso um jogador saia da {7} temporariamente sem aviso e reentre novamente na {8} será colocado na divisão mais baixa disponível.<13/>Caso um jogador saia da {9} temporariamente com aviso prévio, por um período máximo de 3 meses, será colocado na mesma divisão em que estava quando saiu; existindo os naturais ajustes de descidas de divisão.<14/>Um jogador perde o privilégio de voltar à mesma divisão, mesmo com aviso prévio, caso esteja mais que três meses de fora no último período de 12 meses.</12><15>As várias divisões da {10} terão, no máximo, 10 jogadores.</15><16>Cada jogador jogará 20 jogos a partir da primeira segunda-feira de cada mês e nos 19 dias úteis seguintes: duas vezes contra cada um dos outros membros da mesma divisão e duas vezes sem adversário (no 10º dia e no 20º dia).</16><17>Cada jogo terá oito perguntas, cada uma de um tema diferente.</17><18>Os jogadores poderão submeter as respostas a um jogo das 0h até às 24h (hora de Lisboa) do respectivo dia.</18><19>Respostas com erros ortográficos serão aceites desde que não se altere a fonética da resposta e não esteja explícito na pergunta que a correcção ortográfica é obrigatória. Este não é um jogo de ortografia mas sim de cultural geral.</19><20>Quando a resposta é o nome de uma pessoa é aceite como certa se for respondido apenas o apelido ou nome pelo qual é mais conhecido, excepto se na pergunta estiver explícito que é pedido mais isso.<21/>Apesar disso, caso um jogador responda com um apelido certo mas o primeiro nome esteja errado, a resposta será considerada errada.</20><22>Caso um jogador coloque no campo da resposta várias respostas, caso alguma esteja errada, será marcado errado.</22><23>As respostas serão aceites na língua portuguesa, inglesa ou na original (no caso de um livro/filme/etc.) a não ser que esteja indicado o contrário.<24/>Caso a reposta não seja numa destas línguas deverão indicar entre parênteses qual a língua da vossa resposta, caso contrário a resposta poderá ser marcada como errada.</23><25>Além de responder às perguntas, cada jogador deverá atribuir uma pontuação à pergunta (à excepção das jornadas 10 e 20). Essa pontuação corresponderá aos pontos que o adversário ganhará se acertar à pergunta.</25><26><27>Num jogo, um jogador deverá distribuir a pontuação às perguntas da seguinte forma:</27><28><29>1 pergunta a valer 3 pontos</29><30>3 perguntas a valer 2 pontos</30><31>3 perguntas a valer 1 ponto</31><32>1 pergunta a valer 0 pontos</32></28></26><33>O jogador que conseguir mais pontos num jogo é declarado vencedor e ganhará 3 pontos na classificação.</33><34>Em caso de empate ambos os jogadores terão 2 pontos atribuídos na classificação.</34><35>Em caso de derrota, o jogador terá atribuído 1 ponto.</35><36><37>Em caso de um jogador não ter submetido respostas a um jogo não terá atribuído qualquer ponto na classificação e o adversário será declarado vencedor. O vencedor terá atribuído nesse jogo (não na classificação) os seguintes pontos totais:</37><38><39>12 pontos caso acerte 8 perguntas</39><40>10 pontos caso acerte 7 perguntas</40><41>9 pontos caso acerte 6 perguntas</41><42>8 pontos caso acerte 5 perguntas</42><43>6 pontos caso acerte 4 perguntas</43><44>5 pontos caso acerte 3 perguntas</44><45>3 pontos caso acerte 2 perguntas</45><46>2 pontos caso acerte 1 pergunta</46><47>0 pontos caso acerte 0 perguntas</47></38></36><48>No 10º e no 20º dia, os jogos não terão adversário e a pontuação para a classificação é atribuída da seguinte forma: meio ponto por cada resposta correcta e um ponto por participar na ronda, ou seja, um máximo de 5 pontos.</48><49>No final dos 20 jogos os 2 piores classificados serão relegados para a divisão imediatamente inferior (caso exista) e os 2 melhores classificados serão promovidos à divisão imediatamente acima (caso exista).</49><50>Adicionalmente, caso um (ou mais) dos outros oito jogadores tenha mais de 3 faltas ao fim dos 20 jogos, será relegado para a divisão imediatamente inferior (caso exista). Em sua substituição será promovido mais um jogador da divisão abaixo.</50><51>A primeira divisão é de acesso exclusivo a jogadores com ranking nacional, ou seja, que tenham um jogo ao vivo a contar para o ranking nos últimos 12 meses. Serão feitos os ajustes necessários às subidas/descidas para que isso se verifique.</51><52>O primeiro classificado da primeira divisão no final dos 20 jogos é declarado o campeão mensal da {11}.</52><53><54>Se houver empates na classificação, os critérios de desempate serão aplicados por esta ordem:</54><55><56>Maior diferencial de pontos obtidos nos jogos de cada dia</56><57>Maior total de pontos obtidos nos jogos de cada dia</57><58>Maior total de vitórias</58><59>Maior total de perguntas respondidas acertadamente</59></55><60>Se após a aplicação dos critérios de desempate persistir o empate, será atribuída a mesma classificação aos dois jogadores.</60></53></1><61>Taça</61><62><63>Paralelamente à liga, existe uma taça em cada temporada usando os mesmos quizzes que são jogados para a liga.</63><64>A taça terá o número de eliminatórias necessárias para que seja permitida a participação de todos os jogadores.</64><65>Em cada eliminatória, um jogador terá um adversário ou ficará isento para a próxima eliminatória caso não haja adversários suficientes.</65><66>Os adversários de cada eliminatória são definidos com recurso a um sorteio.</66><67>Nos dias em que um jogador tenha jogo para a taça, deverá atribuir também pontos ao adversário da taça.</67><68><69>Caso haja empate num jogo da taça, o desempate será feito da seguinte forma:</69><70><71>Vence o jogador da divisão inferior</71><72>Vence o jogador que tenha ficado pior classificado na temporada anterior</72></70><73>Caso os critérios anteriores não possam ser aplicados (por o jogador não estar em nenhuma divisão ou não ter jogado na temporada anterior), vence o jogador mais recente na Liga Quiz.</73></68></62><74>Quizzes Especiais</74><75><76><77>Tal como nos jogos da {12} é expressamente proibido usar qualquer fonte externa para obter respostas às perguntas. Isto inclui:</77><78><79>Pedir pistas/respostas a outras pessoas</79><80>Usar a Internet, livros ou outro material de consulta para pesquisa de pistas/respostas</80><81>Usar calculadoras, instrumentos musicais ou outros equipamentos para ajudar à resposta</81></78><82>Apenas papel e caneta/lápis são permitidos.</82></76><83>Os quizzes especiais são compostos por 12 perguntas.</83><84>Cada pergunta certa num quiz especial vale 20 pontos.</84><85>Em cada quiz especial podes usar até 5 jokers.</85><86>Ao usares um joker numa pergunta, caso acertes, ganhas pontos adicionais consoante a percentagem de pessoas que erraram essa pergunta.<87/> <88>Exemplo:</88> Se acertares uma pergunta onde usaste um joker e 60% dos jogadores falharem ganhas 80 pontos (20+60).</86><89>Caso uses um joker e falhes a pergunta, perdes 20 pontos!</89></75><90>Subscrição</90><91>Os novos participantes têm um mês de experiência totalmente gratuito.<92/>A partir desse primeiro mês o preço da participação será de acordo com a tabela abaixo:</91><93><94><95><96>Duração</96><97>Preço</97><98>Desconto</98></95></94><99><100><101>1 mês</101><102>3 euros</102><103>-</103></100><104><105>3 meses</105><106>8.5 euros</106><107>6%</107></104><108><109>6 meses</109><110>16 euros</110><111>11%</111></108><112><113>12 meses</113><114>30 euros</114><115>17% (dois meses grátis)</115></112></99></93><116>Os jogadores terão direito a jogar, pelo menos, 20 jogos de 8 perguntas por mês perfazendo um total de 160 perguntas.</116><117>Adicionalmente serão feitos alguns quizzes especiais temáticos de 12 perguntas que não contarão para a classificação da liga havendo apenas uma classificação do respectivo quiz.</117><118>O pagamento das inscrições poderá ser feito das seguintes formas:</118><119><120>Em mão a qualquer elemento da organização:<121>André Ascensão, Sofia Santos ou Paulo Martins</121></120><122>Por transferência bancária para a conta com o seguinte IBAN enviando o comprovativo para <123>andremiguelaa@gmail.com</123>: <124>PT50 0018 000344544914020 29</124></122><125>Por MB WAY usando o seguinte número: <126>916682562</126></125><127>Por Paypal na <128>página da tua conta</128></127></119><129>O prazo limite de pagamento para uma determinada temporada será o final do dia de sábado antes do início da mesma. Cada temporada mensal começa na primeira segunda-feira de cada mês.</129>"
 msgstr "<0>{0}</0><1><2>{1} is a general knowledge game in which trust in players' honesty is essential. It's completely forbidden the use of external sources to get answers.</2><9>The organization reserves the right to ban any player who does not meet this criterion.</9><11>All rookies will be placed in the lowest tier.</11><12>If a player leaves {7} and rejoins later, that player will be placed in the lowest available tier.</12><15>Each tier will have a maximum of 10 players.</15><16>Each player will play 20 games from the first Monday of each month and in the following 19 working days: twice against each other player of the same tier and twice without an opponent (on the 10th and 20th rounds).</16><17>Each game will have eight questions, each one about a different genre.</17><18>Players will be able to submit answers to a game from 0 a.m. until midnight (Lisbon time) of the respective day.</18><19>Misspelled answers will be accepted as long as the answer's phonetics are not significantly changed and it's not stated in the question that spelling correction is mandatory.</19><20>When the answer is a person's name, the surname or name by which that person is best known will suffice unless the question explicitly states that more is required.<21/>However, if a player answers with a correct surname but the first name is wrong, the answer will be considered wrong.</20><22>If a player gives several answers, if any is wrong, it will be marked wrong.</22><23>Answers will be accepted in English or in the original language (in the case of a book/film/etc.) unless stated otherwise.<24/>If the answer is not in one of these languages, you must indicate in parentheses which language is your answer, otherwise the answer may be marked as wrong.</23><25>In addition to answering the questions, each player must assign a score to the question (with the exception of rounds 10 and 20). This score will correspond to the points that the opponent will earn if he answers the question correctly.</25><26><27>In a game, a player must distribute the score to the questions as follows:</27><28><29>3 points for 1 question</29><30>2 points for 3 questions</30><31>1 point for 3 questions</31><32>0 points for 1 question</32></28></26><33>The player who gets the most points in a game is declared the winner and will earn 3 points in the ranking.</33><34>In the event of a draw, both players will be awarded 2 points in the ranking.</34><35>In case of defeat, the player will be awarded 1 point.</35><36><37>If a player has not submitted answers to a game, that player will not have awarded any points in the ranking and the opponent will be declared the winner. The winner will have awarded in this game the following total points:</37><38><39>12 points for 8 correct answers</39><40>10 points for 7 correct answers</40><41>9 points for 6 correct answers</41><42>8 points for 5 correct answers</42><43>6 points for 4 correct answers</43><44>5 points for 3 correct answers</44><45>3 points for 2 correct answers</45><46>2 points for 1 correct answer</46><47>0 points for 0 correct answers</47></38></36><48>On the 10th and 20th round, the games will have no opponent and the score for the ranking is attributed as follows: half a point for each correct answer and one point for participating in the round, that is, a maximum of 5 points.</48><49>At the end of the 20 games, the 2 worst classified players will be relegated to the next lowest tier (if any) and the 2 best classified players will be promoted to the immediately above tier (if any).</49><50>Additionally, if one (or more) of the other eight players has more than 3 forfeits at the end of the 20 games, they will be relegated to the next lowest tier (if any). In their place, players from the tier below will be promoted.</50><52>The first-placed player in the first tier at the end of the 20 games is declared {11} monthly champion.</52><53><54>If there are ties in the ranking, the tiebreaker criteria will be applied in this order:</54><55><56>Highest differential of points obtained in the games of each round</56><57>Highest total points obtained in the games of each round</57><58>Highest total wins</58><59>Highest total of questions answered correctly</59></55><60>If, after applying the tiebreaker criteria, a tie persists, the two players will be awarded the same place.</60></53></1><61>Special Quizzes</61><62><63>As in the other games, it is strictly forbidden to use any external source to obtain answers to questions.</63><70>Special quizzes consist of 12 questions.</70><71>For each correct answer in a special quiz, you get 20 points.</71><72>You can use up to 5 jesters in each special quiz.</72><73>When you use a jester in a question and get it right, you earn extra points depending on the percentage of players who got that question wrong.<74/><75>Example:</75> If you get a question right with a jester and 60% of the players failed to give the correct answer you get 80 points (20+60).</73><76>But if you use a jester and miss the correct answer, you get 20 negative points!</76></62><77>Subscription</77><78>New players have a one-month free trial.<79/>After that, the price will be according to the table below:</78><80><81><82><83>Duration</83><84>Price</84></82></81><86><87><88>1 month</88><89>€ 4.99/month</89></87><91><92>3 months</92><93>€ 4.66/month</93></91><95><96>6 months</96><97>€ 4.33/month</97></95><99><100>12 months</100><101>€ 3.99/month</101></99></86></80><103>Players will be entitled to play at least 20 games of 8 questions per month for a total of 160 questions.</103><104>In addition, there will be some special quizzes with 12 questions.</104><105>Payment for the subscription can be made via Paypal on your <115>account page</115>.</105><116>The payment deadline for a given season will be the end of Saturday before the season begins. Each monthly season begins on the first Monday of each month.</116>"
 
-#: src/views/Cup.js:172
+#: src/views/Cup.js:189
 msgid "A definir"
 msgstr "TBD"
 
@@ -232,19 +232,19 @@ msgid "Arquivo"
 msgstr "Archive"
 
 #: src/partials/Header.js:300
-#: src/routes.js:133
+#: src/routes.js:134
 #: src/views/Quizzes.js:49
 msgid "Arquivo de quizzes"
 msgstr "Quizzes archive"
 
 #: src/partials/Header.js:311
-#: src/routes.js:138
+#: src/routes.js:139
 #: src/views/SpecialQuizzes.js:65
 msgid "Arquivo de quizzes especiais"
 msgstr "Special quizzes archive"
 
 #: src/partials/Header.js:296
-#: src/routes.js:128
+#: src/routes.js:129
 #: src/views/Seasons.js:63
 msgid "Arquivo de temporadas"
 msgstr "Seasons archive"
@@ -477,7 +477,7 @@ msgid "Ciências Sociais"
 msgstr "Social Sciences"
 
 #: src/partials/Header.js:99
-#: src/routes.js:118
+#: src/routes.js:119
 #: src/views/Ranking.js:146
 #: src/views/Seasons.js:106
 #: src/views/SpecialQuiz/SpecialQuizDone.js:20
@@ -510,7 +510,7 @@ msgstr "Comoros"
 msgid "Comparar comigo"
 msgstr "Compare with me"
 
-#: src/routes.js:107
+#: src/routes.js:108
 #: src/views/StatisticsComparison.js:192
 msgid "Comparação de Estatísticas"
 msgstr "Statistics Comparison"
@@ -526,7 +526,7 @@ msgid "Confirmação da palavra-passe"
 msgstr "Password confirmation"
 
 #: src/partials/Header.js:280
-#: src/routes.js:81
+#: src/routes.js:82
 #: src/views/Account.js:139
 msgid "Conta"
 msgstr "Account"
@@ -545,7 +545,7 @@ msgid "Convite enviado com sucesso."
 msgstr "Invitation sent successfully"
 
 #: src/partials/Header.js:288
-#: src/routes.js:92
+#: src/routes.js:93
 #: src/views/Invitations.js:77
 msgid "Convites"
 msgstr "Invitations"
@@ -562,6 +562,8 @@ msgstr "North Korea"
 msgid "Coreia do Sul"
 msgstr "South Korea"
 
+#: src/views/CupGame.js:165
+#: src/views/CupGame.js:205
 #: src/views/Game.js:165
 #: src/views/Game.js:205
 #: src/views/Question.js:231
@@ -809,7 +811,7 @@ msgid "Ent"
 msgstr "Ent"
 
 #: src/partials/Header.js:143
-#: src/routes.js:55
+#: src/routes.js:56
 #: src/views/Login.js:53
 #: src/views/Login.js:109
 msgid "Entrar"
@@ -858,6 +860,8 @@ msgstr "Ecuador"
 msgid "Eritreia"
 msgstr "Eritrea"
 
+#: src/views/CupGame.js:167
+#: src/views/CupGame.js:207
 #: src/views/Game.js:167
 #: src/views/Game.js:207
 #: src/views/Question.js:233
@@ -924,7 +928,7 @@ msgstr "Federated States of Micronesia"
 msgid "Estados Unidos da América"
 msgstr "United States of America"
 
-#: src/routes.js:102
+#: src/routes.js:103
 msgid "Estatísticas"
 msgstr "Statistics"
 
@@ -960,6 +964,8 @@ msgstr "Ethiopia"
 msgid "F"
 msgstr "F"
 
+#: src/views/CupGame.js:173
+#: src/views/CupGame.js:213
 #: src/views/Game.js:173
 #: src/views/Game.js:213
 msgid "Falta"
@@ -997,7 +1003,7 @@ msgstr "Philosophy"
 msgid "Fim"
 msgstr "End"
 
-#: src/views/Cup.js:99
+#: src/views/Cup.js:100
 msgid "Final"
 msgstr "Final"
 
@@ -1185,7 +1191,7 @@ msgstr "Ireland"
 msgid "Irão"
 msgstr "Iran"
 
-#: src/views/Cup.js:158
+#: src/views/Cup.js:175
 msgid "Isento para a próxima eliminatória"
 msgstr "Straight to the next round"
 
@@ -1253,9 +1259,13 @@ msgstr "Regular player"
 msgid "Jogadores"
 msgstr "Players"
 
-#: src/routes.js:143
-msgid "Jogo"
-msgstr "Game"
+#: src/routes.js:144
+msgid "Jogo da Liga"
+msgstr "League Game"
+
+#: src/routes.js:149
+msgid "Jogo da Taça"
+msgstr "Cup Game"
 
 #: src/views/Ranking/TableHeader.js:68
 #: src/views/StatisticsComparison.js:284
@@ -1404,7 +1414,7 @@ msgstr "Mauritania"
 msgid "Maurícia"
 msgstr "Mauritius"
 
-#: src/views/Cup.js:97
+#: src/views/Cup.js:98
 msgid "Meias-finais"
 msgstr "Semi-finals"
 
@@ -1576,7 +1586,7 @@ msgid "Notificação editada com sucesso."
 msgstr "Notification successfully edited."
 
 #: src/partials/Header.js:188
-#: src/routes.js:198
+#: src/routes.js:204
 #: src/views/admin/notifications/Notifications.js:48
 msgid "Notificações"
 msgstr "Notifications"
@@ -1761,7 +1771,7 @@ msgstr "OK"
 msgid "Obrigado pela tua inscrição! O teu registo encontra-se a aguardar aprovação da equipa da {0}."
 msgstr "Thank you for signing up! Your registration is pending approval from the {0} team."
 
-#: src/views/Cup.js:93
+#: src/views/Cup.js:94
 msgid "Oitavos-de-Final"
 msgstr "Round of 16"
 
@@ -1834,6 +1844,7 @@ msgstr "Paraguay"
 msgid "Países Baixos"
 msgstr "Netherlands"
 
+#: src/views/CupGame.js:133
 #: src/views/Game.js:133
 #: src/views/GenreRanking/Table.js:48
 #: src/views/Quiz/OpponentStats.js:90
@@ -1881,10 +1892,11 @@ msgstr "Internet connection lost."
 msgid "Perfil actualizado com sucesso."
 msgstr "Profile successfully updated."
 
-#: src/routes.js:148
+#: src/routes.js:154
 msgid "Pergunta"
 msgstr "Question"
 
+#: src/views/CupGame.js:101
 #: src/views/Game.js:101
 #: src/views/Quiz/QuizDone.js:16
 #: src/views/Quiz/QuizForm.js:144
@@ -1895,7 +1907,7 @@ msgstr "Question"
 msgid "Pergunta {0}"
 msgstr "Question {0}"
 
-#: src/routes.js:273
+#: src/routes.js:279
 msgid "Pergunta | Traduzir"
 msgstr "Question | Translate"
 
@@ -1912,13 +1924,13 @@ msgid "Peru"
 msgstr "Peru"
 
 #: src/partials/Header.js:230
-#: src/routes.js:263
+#: src/routes.js:269
 #: src/views/admin/questions/Questions.js:153
 msgid "Pesquisa de perguntas"
 msgstr "Question search"
 
 #: src/partials/Header.js:241
-#: src/routes.js:268
+#: src/routes.js:274
 #: src/views/admin/externalQuestions/ExternalQuestions.js:174
 msgid "Pesquisa de perguntas externas"
 msgstr "External questions search"
@@ -2037,7 +2049,7 @@ msgstr "Pts"
 msgid "Publicar ranking mensal"
 msgstr "Publish month ranking"
 
-#: src/routes.js:278
+#: src/routes.js:284
 msgid "Página não encontrada"
 msgstr "Page not found"
 
@@ -2045,7 +2057,7 @@ msgstr "Page not found"
 msgid "Qatar"
 msgstr "Qatar"
 
-#: src/views/Cup.js:95
+#: src/views/Cup.js:96
 msgid "Quartos-de-Final"
 msgstr "Quarter-finals"
 
@@ -2053,13 +2065,13 @@ msgstr "Quarter-finals"
 msgid "Quirguistão"
 msgstr "Kyrgyzstan"
 
-#: src/routes.js:153
+#: src/routes.js:159
 #: src/views/admin/questions/Questions.js:304
 #: src/views/admin/questions/Questions.js:309
 msgid "Quiz"
 msgstr "Quiz"
 
-#: src/routes.js:158
+#: src/routes.js:164
 msgid "Quiz Especial"
 msgstr "Special Quiz"
 
@@ -2103,15 +2115,15 @@ msgstr "Special quiz successfully saved."
 msgid "Quiz especial submetido com sucesso."
 msgstr "Special quiz successfully submitted."
 
-#: src/routes.js:238
+#: src/routes.js:244
 msgid "Quiz especial | Corrigir"
 msgstr "Special quiz | Correct"
 
-#: src/routes.js:233
+#: src/routes.js:239
 msgid "Quiz especial | Criar"
 msgstr "Special quiz | Create"
 
-#: src/routes.js:243
+#: src/routes.js:249
 msgid "Quiz especial | Editar"
 msgstr "Special quiz | Edit"
 
@@ -2123,20 +2135,20 @@ msgstr "Quiz successfully saved."
 msgid "Quiz submetido com sucesso."
 msgstr "Quiz successfully submitted."
 
-#: src/routes.js:218
+#: src/routes.js:224
 msgid "Quiz | Corrigir"
 msgstr "Quiz | Correct"
 
-#: src/routes.js:213
+#: src/routes.js:219
 msgid "Quiz | Criar"
 msgstr "Quiz | Create"
 
-#: src/routes.js:223
+#: src/routes.js:229
 msgid "Quiz | Editar"
 msgstr "Quiz | Edit"
 
 #: src/partials/Header.js:211
-#: src/routes.js:208
+#: src/routes.js:214
 #: src/views/NationalRanking.js:240
 #: src/views/admin/quizzes/Quizzes.js:83
 msgid "Quizzes"
@@ -2147,7 +2159,7 @@ msgid "Quizzes Especiais"
 msgstr "Special Quizzes"
 
 #: src/partials/Header.js:222
-#: src/routes.js:228
+#: src/routes.js:234
 #: src/views/Statistics.js:83
 msgid "Quizzes especiais"
 msgstr "Special quizzes"
@@ -2166,7 +2178,7 @@ msgid "RC"
 msgstr "CA"
 
 #: src/partials/Header.js:116
-#: src/routes.js:112
+#: src/routes.js:113
 #: src/views/NationalRanking.js:150
 #: src/views/NationalRanking.js:175
 msgid "Ranking Nacional"
@@ -2176,31 +2188,31 @@ msgstr "National Ranking"
 msgid "Ranking Nacional de Quiz"
 msgstr "Quiz National Ranking"
 
-#: src/routes.js:183
+#: src/routes.js:189
 msgid "Ranking Nacional | Jogadores"
 msgstr "National Ranking | Players"
 
-#: src/routes.js:188
+#: src/routes.js:194
 msgid "Ranking Nacional | Jogadores | Criar"
 msgstr "National Ranking | Players | Create"
 
-#: src/routes.js:193
+#: src/routes.js:199
 msgid "Ranking Nacional | Jogadores | Editar"
 msgstr "National Ranking | Players | Edit"
 
-#: src/routes.js:168
+#: src/routes.js:174
 msgid "Ranking Nacional | Provas mensais"
 msgstr "National Ranking | Month events"
 
-#: src/routes.js:173
+#: src/routes.js:179
 msgid "Ranking Nacional | Provas mensais | Criar"
 msgstr "National Ranking | Month events | Create"
 
-#: src/routes.js:178
+#: src/routes.js:184
 msgid "Ranking Nacional | Provas mensais | Editar"
 msgstr "National Ranking | Month events | Edit"
 
-#: src/routes.js:163
+#: src/routes.js:169
 msgid "Ranking Nacional | Ranking"
 msgstr "National Ranking | Ranking"
 
@@ -2218,19 +2230,19 @@ msgid "Rankings mensais"
 msgstr "Month rankings"
 
 #: src/partials/Header.js:292
-#: src/routes.js:97
+#: src/routes.js:98
 #: src/views/GenreRanking.js:168
 #: src/views/Seasons.js:100
 msgid "Rankings temáticos"
 msgstr "Genre rankings"
 
-#: src/routes.js:60
+#: src/routes.js:61
 #: src/views/Login.js:114
 #: src/views/RecoverPassword.js:48
 msgid "Recuperar palavra-passe"
 msgstr "Recover password"
 
-#: src/routes.js:65
+#: src/routes.js:66
 #: src/views/ResetPassword.js:52
 msgid "Redefinir palavra-passe"
 msgstr "Reset password"
@@ -2240,7 +2252,7 @@ msgstr "Reset password"
 msgid "Registar"
 msgstr "Sign up"
 
-#: src/routes.js:70
+#: src/routes.js:71
 #: src/views/Register.js:91
 msgid "Registo"
 msgstr "Sign up"
@@ -2250,7 +2262,7 @@ msgid "Registo de acções (últimos {logsDays} dias)"
 msgstr "Action long (last {logsDays} days)"
 
 #: src/partials/Header.js:90
-#: src/routes.js:87
+#: src/routes.js:88
 #: src/views/Rules.js:25
 #: src/views/SpecialQuiz/SpecialQuizForm.js:185
 msgid "Regras"
@@ -2380,7 +2392,7 @@ msgid "Saara Ocidental"
 msgstr "Western Sahara"
 
 #: src/partials/Header.js:317
-#: src/routes.js:75
+#: src/routes.js:76
 msgid "Sair"
 msgstr "Logout"
 
@@ -2420,7 +2432,7 @@ msgstr "Select players for this tier:"
 msgid "Selecciona os jogadores que jogaram esta prova:"
 msgstr "Select players for this event:"
 
-#: src/views/Cup.js:180
+#: src/views/Cup.js:197
 #: src/views/GenreRanking.js:238
 #: src/views/Quizzes.js:76
 #: src/views/Ranking.js:197
@@ -2587,8 +2599,8 @@ msgid "Tanzânia"
 msgstr "Tanzania"
 
 #: src/partials/Header.js:103
-#: src/routes.js:123
-#: src/views/Cup.js:110
+#: src/routes.js:124
+#: src/views/Cup.js:111
 #: src/views/Quiz/OpponentsStats.js:156
 #: src/views/Seasons.js:93
 msgid "Taça"
@@ -2634,22 +2646,22 @@ msgstr "Season successfully saved."
 msgid "Temporada {0}"
 msgstr "Season {0}"
 
-#: src/views/Cup.js:111
+#: src/views/Cup.js:112
 #: src/views/GenreRanking.js:171
 #: src/views/Ranking.js:149
 msgid "Temporada {seasonNumber}"
 msgstr "Season {seasonNumber}"
 
-#: src/routes.js:253
+#: src/routes.js:259
 msgid "Temporada | Criar"
 msgstr "Season | Create"
 
-#: src/routes.js:258
+#: src/routes.js:264
 msgid "Temporada | Editar"
 msgstr "Season | Edit"
 
 #: src/partials/Header.js:192
-#: src/routes.js:248
+#: src/routes.js:254
 #: src/views/admin/seasons/Seasons.js:69
 msgid "Temporadas"
 msgstr "Seasons"
@@ -2830,7 +2842,7 @@ msgid "Utilizador registado com sucesso.<0/>Clica <1>aqui</1> e usa as tuas cred
 msgstr "User registered successfully.<0/>Click <1>here</1> and use your credentials."
 
 #: src/partials/Header.js:181
-#: src/routes.js:203
+#: src/routes.js:209
 #: src/views/admin/users/Users.js:98
 msgid "Utilizadores"
 msgstr "Users"
@@ -2945,7 +2957,7 @@ msgstr "{0} {1}"
 msgid "{0} {1} e {2} {3}"
 msgstr "{0} {1} and {2} {3}"
 
-#: src/views/Cup.js:102
+#: src/views/Cup.js:103
 msgid "{0}-avos-de-Final"
 msgstr "Round of {0}"
 

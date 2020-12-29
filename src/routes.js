@@ -17,6 +17,7 @@ import Seasons from 'views/Seasons';
 import Quizzes from 'views/Quizzes';
 import SpecialQuizzes from 'views/SpecialQuizzes';
 import Game from 'views/Game';
+import CupGame from 'views/CupGame';
 import Question from 'views/Question';
 import Quiz from 'views/Quiz';
 import SpecialQuiz from 'views/SpecialQuiz';
@@ -140,9 +141,14 @@ export default [
     component: SpecialQuizzes,
   },
   {
-    title: <Trans>Jogo</Trans>,
+    title: <Trans>Jogo da Liga</Trans>,
     path: '/game/:date/:user1/:user2?',
     component: Game,
+  },
+  {
+    title: <Trans>Jogo da Taça</Trans>,
+    path: '/cup-game/:date/:user1/:user2',
+    component: CupGame,
   },
   {
     title: <Trans>Pergunta</Trans>,

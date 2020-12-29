@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { Fragment, useState, useEffect } from 'react';
+import { Link, useParams } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 
 import { convertToLongDate } from 'utils/formatDate';
@@ -114,7 +114,7 @@ const Cup = () => {
       {cupData ? (
         <section className="section content">
           {cupData.rounds.map((round, index) => (
-            <>
+            <Fragment key={round.date}>
               {round.games.length > 0 ? (
                 <>
                   <h2 className="is-size-5">
@@ -122,7 +122,7 @@ const Cup = () => {
                     {convertToLongDate(round.date, language)})
                   </h2>
                   {round.games.map((game) => (
-                    <div>
+                    <div key={game.user_id_1}>
                       {game.user_id_1 && game.user_id_2 ? (
                         <>
                           <ConditionalWrapper
@@ -135,21 +135,27 @@ const Cup = () => {
                           {game.done &&
                           game.hasOwnProperty('user_id_1_game_points') &&
                           game.hasOwnProperty('user_id_2_game_points') ? (
-                            <>
+                            <Link
+                              to={`/cup-game/${round.date}/${game.user_id_1}/${game.user_id_2}`}
+                            >
                               {game.corrected && (
                                 <>
-                                  {game.user_id_1_game_points}
-                                  {game.user_id_1_game_points !== 'F' && (
-                                    <> ({game.user_id_1_correct_answers})</>
-                                  )}{' '}
-                                  -{' '}
-                                  {game.user_id_2_game_points !== 'F' && (
-                                    <>({game.user_id_2_correct_answers})</>
-                                  )}{' '}
-                                  {game.user_id_2_game_points}{' '}
+                                  {game.corrected && (
+                                    <>
+                                      {game.user_id_1_game_points}
+                                      {game.user_id_1_game_points !== 'F' && (
+                                        <> ({game.user_id_1_correct_answers})</>
+                                      )}{' '}
+                                      -{' '}
+                                      {game.user_id_2_game_points !== 'F' && (
+                                        <>({game.user_id_2_correct_answers})</>
+                                      )}{' '}
+                                      {game.user_id_2_game_points}{' '}
+                                    </>
+                                  )}
                                 </>
                               )}
-                            </>
+                            </Link>
                           ) : (
                             'vs.'
                           )}
@@ -183,7 +189,7 @@ const Cup = () => {
                   <Trans>A definir</Trans>
                 </>
               )}
-            </>
+            </Fragment>
           ))}
         </section>
       ) : (

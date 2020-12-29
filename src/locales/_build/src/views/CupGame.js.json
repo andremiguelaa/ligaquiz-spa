@@ -1,0 +1,54 @@
+{
+  "Pergunta {0}": {
+    "origin": [
+      [
+        "src/views/CupGame.js",
+        101
+      ]
+    ]
+  },
+  "Percentagem de acerto": {
+    "origin": [
+      [
+        "src/views/CupGame.js",
+        133
+      ]
+    ]
+  },
+  "Correcta": {
+    "origin": [
+      [
+        "src/views/CupGame.js",
+        165
+      ],
+      [
+        "src/views/CupGame.js",
+        205
+      ]
+    ]
+  },
+  "Errada": {
+    "origin": [
+      [
+        "src/views/CupGame.js",
+        167
+      ],
+      [
+        "src/views/CupGame.js",
+        207
+      ]
+    ]
+  },
+  "Falta": {
+    "origin": [
+      [
+        "src/views/CupGame.js",
+        173
+      ],
+      [
+        "src/views/CupGame.js",
+        213
+      ]
+    ]
+  }
+}
