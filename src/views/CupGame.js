@@ -157,7 +157,7 @@ const Game = () => {
                           {game.answers?.[question.id]?.[user1] ? (
                             <>
                               {game.answers?.[question.id]?.[user2] ? (
-                                game.answers[question.id][user2].points
+                                game.answers[question.id][user2].cup_points
                               ) : (
                                 <>
                                   {game.answers?.[question.id]?.[user1]
@@ -197,7 +197,7 @@ const Game = () => {
                             {game.answers?.[question.id]?.[user2] ? (
                               <>
                                 {game.answers?.[question.id]?.[user1] ? (
-                                  game.answers[question.id][user1].points
+                                  game.answers[question.id][user1].cup_points
                                 ) : (
                                   <>
                                     {game.answers?.[question.id]?.[user2]
