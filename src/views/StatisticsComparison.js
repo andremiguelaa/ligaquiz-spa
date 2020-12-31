@@ -29,6 +29,8 @@ const Statistics = () => {
   const [error, setError] = useState(false);
   const [genres, setGenres] = useState();
   const [chartSeries, setChartSeries] = useState();
+  const [leagueGames, setLeagueGames] = useState();
+  const [cupGames, setCupGames] = useState();
   const [games, setGames] = useState();
   const [gameStatistics, setGameStatistics] = useState();
 
@@ -45,7 +47,6 @@ const Statistics = () => {
   useEffect(() => {
     setUsers();
     setChartSeries();
-    setGames();
     if (userId1 === userId2) {
       return;
     }
@@ -54,73 +55,16 @@ const Statistics = () => {
         const userData =
           parseInt(userId1) > parseInt(userId2) ? data.reverse() : data;
         setUsers(userData);
+        ApiRequest.get(`cup-games?user=${userId1}&opponent=${userId2}`)
+          .then(({ data }) => {
+            setCupGames(data);
+          })
+          .catch(({ response }) => {
+            setError(response?.status);
+          });
         ApiRequest.get(`games?user=${userId1}&opponent=${userId2}`)
           .then(({ data }) => {
-            const statistics = {
-              total: 0,
-              wins: 0,
-              draws: 0,
-              losses: 0,
-              user1correctAnswers: 0,
-              user2correctAnswers: 0,
-            };
-            setGames(
-              data.results.reverse().map((game) => {
-                const mappedGame = {
-                  id: game.id,
-                  corrected: game.corrected,
-                  done: game.done,
-                  date: game.round.date,
-                  originalUser1: game.user_id_1,
-                  originalUser2: game.user_id_2,
-                  user1_points:
-                    game.user_id_1 === parseInt(userId1)
-                      ? game.user_id_1_game_points
-                      : game.user_id_2_game_points,
-                  user1_answers:
-                    game.user_id_1 === parseInt(userId1)
-                      ? game.user_id_1_correct_answers
-                      : game.user_id_2_correct_answers,
-                  user2_points:
-                    game.user_id_2 === parseInt(userId2)
-                      ? game.user_id_2_game_points
-                      : game.user_id_1_game_points,
-                  user2_answers:
-                    game.user_id_2 === parseInt(userId2)
-                      ? game.user_id_2_correct_answers
-                      : game.user_id_1_correct_answers,
-                };
-                if (game.done && game.corrected) {
-                  statistics.total++;
-                  statistics.user1correctAnswers += mappedGame.user1_answers;
-                  statistics.user2correctAnswers += mappedGame.user2_answers;
-                  if (
-                    !(
-                      mappedGame.user1_points === 'F' &&
-                      mappedGame.user2_points === 'F'
-                    )
-                  ) {
-                    if (mappedGame.user1_points === 'F') {
-                      statistics.losses++;
-                    } else if (mappedGame.user2_points === 'F') {
-                      statistics.wins++;
-                    } else if (
-                      mappedGame.user1_points > mappedGame.user2_points
-                    ) {
-                      statistics.wins++;
-                    } else if (
-                      mappedGame.user1_points < mappedGame.user2_points
-                    ) {
-                      statistics.losses++;
-                    } else {
-                      statistics.draws++;
-                    }
-                  }
-                }
-                return mappedGame;
-              })
-            );
-            setGameStatistics(statistics);
+            setLeagueGames(data.results);
           })
           .catch(({ response }) => {
             setError(response?.status);
@@ -130,6 +74,79 @@ const Statistics = () => {
         setError(response?.status);
       });
   }, [userId1, userId2]);
+
+  useEffect(() => {
+    setGames();
+    setGameStatistics();
+    if (leagueGames && cupGames) {
+      const statistics = {
+        total: 0,
+        wins: 0,
+        draws: 0,
+        losses: 0,
+        user1correctAnswers: 0,
+        user2correctAnswers: 0,
+      };
+      setGames(
+        leagueGames
+          .concat(cupGames)
+          .map((game) => {
+            const mappedGame = {
+              id: game.id,
+              corrected: game.corrected,
+              done: game.done,
+              date: game.round?.date || game.cup_round?.round.date,
+              type: game.round ? 'league' : 'cup',
+              originalUser1: game.user_id_1,
+              originalUser2: game.user_id_2,
+              user1_points:
+                game.user_id_1 === parseInt(userId1)
+                  ? game.user_id_1_game_points
+                  : game.user_id_2_game_points,
+              user1_answers:
+                game.user_id_1 === parseInt(userId1)
+                  ? game.user_id_1_correct_answers
+                  : game.user_id_2_correct_answers,
+              user2_points:
+                game.user_id_2 === parseInt(userId2)
+                  ? game.user_id_2_game_points
+                  : game.user_id_1_game_points,
+              user2_answers:
+                game.user_id_2 === parseInt(userId2)
+                  ? game.user_id_2_correct_answers
+                  : game.user_id_1_correct_answers,
+            };
+            if (game.done && game.corrected) {
+              statistics.total++;
+              statistics.user1correctAnswers += mappedGame.user1_answers;
+              statistics.user2correctAnswers += mappedGame.user2_answers;
+              if (
+                !(
+                  mappedGame.user1_points === 'F' &&
+                  mappedGame.user2_points === 'F'
+                )
+              ) {
+                if (mappedGame.user1_points === 'F') {
+                  statistics.losses++;
+                } else if (mappedGame.user2_points === 'F') {
+                  statistics.wins++;
+                } else if (mappedGame.user1_points > mappedGame.user2_points) {
+                  statistics.wins++;
+                } else if (mappedGame.user1_points < mappedGame.user2_points) {
+                  statistics.losses++;
+                } else {
+                  statistics.draws++;
+                }
+              }
+            }
+            return mappedGame;
+          })
+          .sort((game) => game.date)
+          .reverse()
+      );
+      setGameStatistics(statistics);
+    }
+  }, [leagueGames, cupGames, userId1, userId2]);
 
   useEffect(() => {
     if (users && genres) {
@@ -371,7 +388,11 @@ const Statistics = () => {
                             </td>
                             <td>
                               <Link
-                                to={`/game/${game.date}/${game.originalUser1}/${game.originalUser2}`}
+                                to={`/${
+                                  game.type === 'cup' ? 'cup-' : ''
+                                }game/${game.date}/${game.originalUser1}/${
+                                  game.originalUser2
+                                }`}
                               >
                                 {users[0].name} {users[0].surname}{' '}
                                 {game.user1_points}
