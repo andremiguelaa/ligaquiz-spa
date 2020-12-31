@@ -56,10 +56,10 @@ const Profile = () => {
         title={
           userStatisticsId && userStatisticsId !== authUser.id ? (
             <Trans>
-              Estatísticas de {user.name} {user.surname}
+              Perfil de {user.name} {user.surname}
             </Trans>
           ) : (
-            <Trans>As minhas estatísticas</Trans>
+            <Trans>O meu perfil</Trans>
           )
         }
       />
