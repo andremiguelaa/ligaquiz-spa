@@ -12,7 +12,7 @@ import Loading from 'components/Loading';
 import Error from 'components/Error';
 import PageHeader from 'components/PageHeader';
 
-import classes from './Statistics/Statistics.module.scss';
+import classes from './Profile/Statistics.module.scss';
 
 const isDarkMode =
   window.matchMedia &&
