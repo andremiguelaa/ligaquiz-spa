@@ -17,7 +17,7 @@ const Player = ({ player, index, tierNumber, users }) => (
   >
     <td className={classes.rankCell}>{player.rank}</td>
     <td className={classes.userCellContent}>
-      <Link to={`/statistics/${player.id}`}>
+      <Link to={`/profile/${player.id}`}>
         <div className={classes.avatar}>
           {users[player.id].avatar ? (
             <img

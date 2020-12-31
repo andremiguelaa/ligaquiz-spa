@@ -28,6 +28,7 @@ const League = ({ user, setError }) => {
   const [genres, setGenres] = useState();
   const [statistics, setStatistics] = useState();
   const [chartSeries, setChartSeries] = useState();
+  const [seasons, setSeasons] = useState();
 
   useEffect(() => {
     ApiRequest.get(`genres`)
@@ -76,7 +77,19 @@ const League = ({ user, setError }) => {
     }
   }, [user, genres]);
 
-  if (!genres || !statistics) {
+  useEffect(() => {
+    ApiRequest.get(`seasons?user=${user.id}`)
+      .then(({ data }) => {
+        const seasonsData = [...data];
+        seasonsData.shift();
+        setSeasons(seasonsData.filter((item) => item.user_rank));
+      })
+      .catch(({ response }) => {
+        setError(response?.status);
+      });
+  }, [user, setError]);
+
+  if (!genres || !statistics || !seasons) {
     return <Loading />;
   }
 

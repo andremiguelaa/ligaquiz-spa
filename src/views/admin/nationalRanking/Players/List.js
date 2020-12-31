@@ -117,7 +117,7 @@ const List = () => {
                       <ConditionalWrapper
                         condition={player.info}
                         wrapper={(children) => (
-                          <Link to={`/statistics/${player.info.id}`}>
+                          <Link to={`/profile/${player.info.id}`}>
                             {children}
                           </Link>
                         )}

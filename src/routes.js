@@ -8,7 +8,7 @@ import ResetPassword from 'views/ResetPassword';
 import Register from 'views/Register';
 import Logout from 'views/Logout';
 import Account from 'views/Account';
-import Statistics from 'views/Statistics';
+import Profile from 'views/Profile';
 import StatisticsComparison from 'views/StatisticsComparison';
 import NationalRanking from 'views/NationalRanking';
 import Ranking from 'views/Ranking';
@@ -100,9 +100,9 @@ export default [
     component: GenreRanking,
   },
   {
-    title: <Trans>Estatísticas</Trans>,
-    path: '/statistics/:id?/:tab?',
-    component: Statistics,
+    title: <Trans>Perfil</Trans>,
+    path: '/profile/:id?/:tab?',
+    component: Profile,
   },
   {
     title: <Trans>Comparação de Estatísticas</Trans>,

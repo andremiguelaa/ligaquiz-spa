@@ -195,7 +195,7 @@ const Users = () => {
                         <td className="is-vertical-middle">
                           <div className={classes.userCellContent}>
                             <Link
-                              to={`/statistics${
+                              to={`/profile${
                                 user.id !== authUser.id ? `/${user.id}` : ''
                               }`}
                             >

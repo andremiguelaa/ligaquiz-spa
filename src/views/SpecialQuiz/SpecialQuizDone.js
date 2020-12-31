@@ -42,7 +42,7 @@ const SpecialQuizDone = ({ data, users, userAnswers }) => (
                     <tr key={player.user_id}>
                       <td>{player.rank}</td>
                       <td className={classes.userCellContent}>
-                        <Link to={`/statistics/${player.user_id}`}>
+                        <Link to={`/profile/${player.user_id}`}>
                           <div className={classes.avatar}>
                             {users[player.user_id].avatar ? (
                               <img

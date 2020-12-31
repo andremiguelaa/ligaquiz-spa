@@ -2,7 +2,7 @@
   "Descrição": {
     "origin": [
       [
-        "src/views/Statistics/Logs.js",
+        "src/views/Profile/Logs.js",
         54
       ]
     ]
@@ -10,7 +10,7 @@
   "Hora": {
     "origin": [
       [
-        "src/views/Statistics/Logs.js",
+        "src/views/Profile/Logs.js",
         57
       ]
     ]
@@ -18,7 +18,7 @@
   "Sem registos": {
     "origin": [
       [
-        "src/views/Statistics/Logs.js",
+        "src/views/Profile/Logs.js",
         87
       ]
     ]

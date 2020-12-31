@@ -2,40 +2,48 @@
   "Estatísticas de {0} {1}": {
     "origin": [
       [
-        "src/views/Statistics.js",
-        57
+        "src/views/Profile.js",
+        58
       ]
     ]
   },
   "As minhas estatísticas": {
     "origin": [
       [
-        "src/views/Statistics.js",
-        61
+        "src/views/Profile.js",
+        62
+      ]
+    ]
+  },
+  "Estatísticas": {
+    "origin": [
+      [
+        "src/views/Profile.js",
+        75
       ]
     ]
   },
   "Quizzes especiais": {
     "origin": [
       [
-        "src/views/Statistics.js",
-        83
+        "src/views/Profile.js",
+        93
       ]
     ]
   },
   "Provas individuais": {
     "origin": [
       [
-        "src/views/Statistics.js",
-        93
+        "src/views/Profile.js",
+        103
       ]
     ]
   },
   "Registo de acções (últimos {logsDays} dias)": {
     "origin": [
       [
-        "src/views/Statistics.js",
-        104
+        "src/views/Profile.js",
+        114
       ]
     ]
   }

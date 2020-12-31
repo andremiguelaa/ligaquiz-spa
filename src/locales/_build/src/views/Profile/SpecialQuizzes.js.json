@@ -2,7 +2,7 @@
   "Sem registos": {
     "origin": [
       [
-        "src/views/Statistics/SpecialQuizzes.js",
+        "src/views/Profile/SpecialQuizzes.js",
         41
       ]
     ]
@@ -10,7 +10,7 @@
   "Tema": {
     "origin": [
       [
-        "src/views/Statistics/SpecialQuizzes.js",
+        "src/views/Profile/SpecialQuizzes.js",
         52
       ]
     ]
@@ -18,7 +18,7 @@
   "Classificação": {
     "origin": [
       [
-        "src/views/Statistics/SpecialQuizzes.js",
+        "src/views/Profile/SpecialQuizzes.js",
         55
       ]
     ]
@@ -26,7 +26,7 @@
   "Data": {
     "origin": [
       [
-        "src/views/Statistics/SpecialQuizzes.js",
+        "src/views/Profile/SpecialQuizzes.js",
         58
       ]
     ]
@@ -34,7 +34,7 @@
   "Campeão": {
     "origin": [
       [
-        "src/views/Statistics/SpecialQuizzes.js",
+        "src/views/Profile/SpecialQuizzes.js",
         76
       ]
     ]
@@ -42,7 +42,7 @@
   "{0, selectordinal, two {2º} few {3º} other {#º}}": {
     "origin": [
       [
-        "src/views/Statistics/SpecialQuizzes.js",
+        "src/views/Profile/SpecialQuizzes.js",
         80
       ]
     ]

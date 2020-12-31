@@ -15,7 +15,7 @@ import logoEquizition from 'img/logo_equizition.png';
 import logoEquizitionDark from 'img/logo_equizition_dark.png';
 import classes from './Header.module.scss';
 
-const version = '4.17.3';
+const version = '4.18.0';
 
 const isDarkMode =
   window.matchMedia &&
@@ -105,9 +105,9 @@ const Header = () => {
                     </>
                   )}
                 {user && (
-                  <Link to="/statistics" className="navbar-item">
-                    <i className="fa fa-btn fa-line-chart" />
-                    &nbsp;<Trans>As minhas estatísticas</Trans>
+                  <Link to="/profile" className="navbar-item">
+                    <i className="fa fa-btn fa-certificate" />
+                    &nbsp;<Trans>O meu perfil</Trans>
                   </Link>
                 )}
                 {process.env.REACT_APP_NATIONAL_RANKING === 'true' && (

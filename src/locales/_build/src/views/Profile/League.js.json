@@ -1,0 +1,66 @@
+{
+  "Temporada": {
+    "origin": [
+      [
+        "src/views/Profile/League.js",
+        35
+      ]
+    ]
+  },
+  "Divisão": {
+    "origin": [
+      [
+        "src/views/Profile/League.js",
+        38
+      ]
+    ]
+  },
+  "Classificação": {
+    "origin": [
+      [
+        "src/views/Profile/League.js",
+        41
+      ]
+    ]
+  },
+  "Temporada {0}": {
+    "origin": [
+      [
+        "src/views/Profile/League.js",
+        50
+      ]
+    ]
+  },
+  "{0, selectordinal, one {1ª} two {2ª} few {3ª} other {#ª}}": {
+    "origin": [
+      [
+        "src/views/Profile/League.js",
+        54
+      ]
+    ]
+  },
+  "Campeão": {
+    "origin": [
+      [
+        "src/views/Profile/League.js",
+        66
+      ]
+    ]
+  },
+  "{0, selectordinal, one {1º} two {2º} few {3º} other {#º}}": {
+    "origin": [
+      [
+        "src/views/Profile/League.js",
+        70
+      ]
+    ]
+  },
+  "Sem registos": {
+    "origin": [
+      [
+        "src/views/Profile/League.js",
+        85
+      ]
+    ]
+  }
+}

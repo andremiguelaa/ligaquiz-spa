@@ -79,11 +79,11 @@ const Ranking = () => {
         });
     } else {
       ApiRequest.get(`seasons`)
-        .then(({ data }) => {
-          if (data.length) {
-            let lastSeason = data.find((season) => season.public);
+        .then(({ data: seasonsData }) => {
+          if (seasonsData.length) {
+            let lastSeason = seasonsData.find((season) => season.public);
             if (!lastSeason) {
-              lastSeason = data[0];
+              lastSeason = seasonsData[0];
             }
             const userLeague = lastSeason.leagues.find(({ user_ids }) =>
               user_ids.includes(user.id)
@@ -99,22 +99,19 @@ const Ranking = () => {
                 const seasonNumber = parseInt(lastSeason.season);
                 setSeasonNumber(seasonNumber);
                 setTierNumber(defaultTier);
-                ApiRequest.get(`seasons?season=${seasonNumber}`)
-                  .then(({ data }) => {
-                    const newSeasonData = {
-                      leagues: data.leagues,
-                      ranking: seasonData.ranking,
-                      rounds: data.rounds.map((round) => ({
-                        ...round,
-                        games: seasonData.rounds[round.round],
-                      })),
-                    };
-                    setSeasonData(newSeasonData);
-                    setLoading(false);
-                  })
-                  .catch(({ response }) => {
-                    setError(response?.status);
-                  });
+                const lastSeasonData = seasonsData.find(
+                  (item) => item.season === seasonNumber
+                );
+                const newSeasonData = {
+                  leagues: lastSeasonData.leagues,
+                  ranking: seasonData.ranking,
+                  rounds: lastSeasonData.rounds.map((round) => ({
+                    ...round,
+                    games: seasonData.rounds[round.round],
+                  })),
+                };
+                setSeasonData(newSeasonData);
+                setLoading(false);
               })
               .catch(({ response }) => {
                 setError(response?.status);

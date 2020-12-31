@@ -9,14 +9,15 @@ import Loading from 'components/Loading';
 import Error from 'components/Error';
 import PageHeader from 'components/PageHeader';
 
-import League from './Statistics/League';
-import SpecialQuizzes from './Statistics/SpecialQuizzes';
-import IndividualQuizzes from './Statistics/IndividualQuizzes';
-import Logs from './Statistics/Logs';
+import Statistics from './Profile/Statistics';
+import League from './Profile/League';
+import SpecialQuizzes from './Profile/SpecialQuizzes';
+import IndividualQuizzes from './Profile/IndividualQuizzes';
+import Logs from './Profile/Logs';
 
 const logsDays = 2;
 
-const Statistics = () => {
+const Profile = () => {
   const { id: userId, tab } = useParams();
   const [{ user: authUser }] = useStateValue();
   const [error, setError] = useState(false);
@@ -67,10 +68,19 @@ const Statistics = () => {
           <ul>
             <li
               className={classnames({
-                'is-active': !tab || tab === 'league',
+                'is-active': !tab || tab === 'statistics',
               })}
             >
-              <Link to={`/statistics/${userStatisticsId}/league`}>
+              <Link to={`/profile/${userStatisticsId}/statistics`}>
+                <Trans>Estatísticas</Trans>
+              </Link>
+            </li>
+            <li
+              className={classnames({
+                'is-active': tab === 'league',
+              })}
+            >
+              <Link to={`/profile/${userStatisticsId}/league`}>
                 {process.env.REACT_APP_NAME}
               </Link>
             </li>
@@ -79,7 +89,7 @@ const Statistics = () => {
                 'is-active': tab === 'special-quizzes',
               })}
             >
-              <Link to={`/statistics/${userStatisticsId}/special-quizzes`}>
+              <Link to={`/profile/${userStatisticsId}/special-quizzes`}>
                 <Trans>Quizzes especiais</Trans>
               </Link>
             </li>
@@ -89,7 +99,7 @@ const Statistics = () => {
                   'is-active': tab === 'individual-quizzes',
                 })}
               >
-                <Link to={`/statistics/${userStatisticsId}/individual-quizzes`}>
+                <Link to={`/profile/${userStatisticsId}/individual-quizzes`}>
                   <Trans>Provas individuais</Trans>
                 </Link>
               </li>
@@ -100,7 +110,7 @@ const Statistics = () => {
                   'is-active': tab === 'logs',
                 })}
               >
-                <Link to={`/statistics/${userStatisticsId}/logs`}>
+                <Link to={`/profile/${userStatisticsId}/logs`}>
                   <Trans>Registo de acções (últimos {logsDays} dias)</Trans>
                 </Link>
               </li>
@@ -108,7 +118,10 @@ const Statistics = () => {
           </ul>
         </div>
       </div>
-      {(!tab || tab === 'league') && <League user={user} setError={setError} />}
+      {(!tab || tab === 'statistics') && (
+        <Statistics user={user} setError={setError} />
+      )}
+      {tab === 'league' && <League user={user} setError={setError} />}
       {tab === 'special-quizzes' && (
         <SpecialQuizzes user={user} setError={setError} />
       )}
@@ -123,4 +136,4 @@ const Statistics = () => {
   );
 };
 
-export default Statistics;
+export default Profile;

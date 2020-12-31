@@ -253,8 +253,7 @@ msgstr "Artesanato"
 msgid "Arábia Saudita"
 msgstr "Arábia Saudita"
 
-#: src/partials/Header.js:110
-#: src/views/Statistics.js:61
+#: src/views/Profile.js:62
 msgid "As minhas estatísticas"
 msgstr "As minhas estatísticas"
 
@@ -384,7 +383,7 @@ msgstr "Bélgica"
 msgid "Bósnia e Herzegovina"
 msgstr "Bósnia e Herzegovina"
 
-#: src/views/Statistics/League.js:186
+#: src/views/Profile/Statistics.js:199
 msgid "C"
 msgstr "C"
 
@@ -416,7 +415,8 @@ msgstr "Campeonato Mundial de Quiz"
 msgid "Campeonato Nacional de Quiz"
 msgstr "Campeonato Nacional de Quiz"
 
-#: src/views/Statistics/SpecialQuizzes.js:76
+#: src/views/Profile/League.js:66
+#: src/views/Profile/SpecialQuizzes.js:76
 msgid "Campeão"
 msgstr "Campeão"
 
@@ -474,10 +474,11 @@ msgstr "Ciências Sociais"
 
 #: src/partials/Header.js:99
 #: src/routes.js:119
-#: src/views/Ranking.js:146
+#: src/views/Profile/League.js:41
+#: src/views/Profile/SpecialQuizzes.js:55
+#: src/views/Ranking.js:143
 #: src/views/Seasons.js:106
 #: src/views/SpecialQuiz/SpecialQuizDone.js:20
-#: src/views/Statistics/SpecialQuizzes.js:55
 msgid "Classificação"
 msgstr "Classificação"
 
@@ -502,12 +503,12 @@ msgstr "Comida e Bebida"
 msgid "Comoros"
 msgstr "Comoros"
 
-#: src/views/Statistics/League.js:164
+#: src/views/Profile/Statistics.js:177
 msgid "Comparar comigo"
 msgstr "Comparar comigo"
 
 #: src/routes.js:108
-#: src/views/StatisticsComparison.js:192
+#: src/views/StatisticsComparison.js:209
 msgid "Comparação de Estatísticas"
 msgstr "Comparação de Estatísticas"
 
@@ -642,9 +643,9 @@ msgstr "D"
 msgid "Dança"
 msgstr "Dança"
 
+#: src/views/Profile/SpecialQuizzes.js:58
 #: src/views/SpecialQuizzes.js:127
-#: src/views/Statistics/SpecialQuizzes.js:58
-#: src/views/StatisticsComparison.js:355
+#: src/views/StatisticsComparison.js:372
 msgid "Data"
 msgstr "Data"
 
@@ -686,9 +687,9 @@ msgstr "Des"
 msgid "Desceu"
 msgstr "Desceu"
 
+#: src/views/Profile/Logs.js:54
 #: src/views/SpecialQuiz/SpecialQuizDone.js:111
 #: src/views/SpecialQuiz/SpecialQuizForm.js:81
-#: src/views/Statistics/Logs.js:54
 #: src/views/admin/specialQuizzes/SpecialQuizForm.js:201
 msgid "Descrição"
 msgstr "Descrição"
@@ -713,6 +714,10 @@ msgstr "Dinamarca"
 #: src/views/Register.js:205
 msgid "Distrito/Região"
 msgstr "Distrito/Região"
+
+#: src/views/Profile/League.js:38
+msgid "Divisão"
+msgstr "Divisão"
 
 #: src/views/admin/seasons/SeasonForm.js:241
 msgid "Divisões"
@@ -798,7 +803,7 @@ msgid "Emirados Árabes Unidos"
 msgstr "Emirados Árabes Unidos"
 
 #: src/views/Ranking/TableHeader.js:104
-#: src/views/StatisticsComparison.js:316
+#: src/views/StatisticsComparison.js:333
 msgid "Empates"
 msgstr "Empates"
 
@@ -924,7 +929,7 @@ msgstr "Estados Federados da Micronésia"
 msgid "Estados Unidos da América"
 msgstr "Estados Unidos da América"
 
-#: src/routes.js:103
+#: src/views/Profile.js:75
 msgid "Estatísticas"
 msgstr "Estatísticas"
 
@@ -932,7 +937,7 @@ msgstr "Estatísticas"
 msgid "Estatísticas de pergunta"
 msgstr "Estatísticas de pergunta"
 
-#: src/views/Statistics.js:57
+#: src/views/Profile.js:58
 msgid "Estatísticas de {0} {1}"
 msgstr "Estatísticas de {0} {1}"
 
@@ -1126,7 +1131,7 @@ msgstr "História"
 msgid "Honduras"
 msgstr "Honduras"
 
-#: src/views/Statistics/Logs.js:57
+#: src/views/Profile/Logs.js:57
 msgid "Hora"
 msgstr "Hora"
 
@@ -1264,7 +1269,7 @@ msgid "Jogo da Taça"
 msgstr "Jogo da Taça"
 
 #: src/views/Ranking/TableHeader.js:68
-#: src/views/StatisticsComparison.js:284
+#: src/views/StatisticsComparison.js:301
 msgid "Jogos"
 msgstr "Jogos"
 
@@ -1481,7 +1486,7 @@ msgstr "Média"
 msgid "México"
 msgstr "México"
 
-#: src/views/Statistics/IndividualQuizzes.js:53
+#: src/views/Profile/IndividualQuizzes.js:53
 #: src/views/admin/nationalRanking/Events/Form.js:212
 #: src/views/admin/nationalRanking/Events/List.js:96
 #: src/views/admin/nationalRanking/Rankings.js:119
@@ -1743,9 +1748,13 @@ msgstr "Não tens acesso a esta página."
 msgid "Níger"
 msgstr "Níger"
 
-#: src/views/Statistics/League.js:106
+#: src/views/Profile/Statistics.js:119
 msgid "Número {0} no <0>Ranking Nacional</0>"
 msgstr "Número {0} no <0>Ranking Nacional</0>"
+
+#: src/partials/Header.js:110
+msgid "O meu perfil"
+msgstr "O meu perfil"
 
 #: src/views/Account.js:75
 msgid "O pagamento não foi bem sucedido."
@@ -1843,11 +1852,11 @@ msgstr "Países Baixos"
 #: src/views/CupGame.js:133
 #: src/views/Game.js:133
 #: src/views/GenreRanking/Table.js:48
+#: src/views/Profile/Statistics.js:221
 #: src/views/Quiz/OpponentStats.js:90
 #: src/views/Quiz/OpponentStats.js:143
 #: src/views/Quiz/QuizDone.js:61
 #: src/views/SpecialQuiz/SpecialQuizDone.js:162
-#: src/views/Statistics/League.js:208
 msgid "Percentagem de acerto"
 msgstr "Percentagem de acerto"
 
@@ -1883,6 +1892,10 @@ msgstr "Percentagem global de acerto"
 #: src/App.js:38
 msgid "Perdeste a ligação à internet."
 msgstr "Perdeste a ligação à internet."
+
+#: src/routes.js:103
+msgid "Perfil"
+msgstr "Perfil"
 
 #: src/views/Account.js:114
 msgid "Perfil actualizado com sucesso."
@@ -1945,7 +1958,7 @@ msgid "Polónia"
 msgstr "Polónia"
 
 #: src/views/NationalRanking.js:198
-#: src/views/Statistics/IndividualQuizzes.js:60
+#: src/views/Profile/IndividualQuizzes.js:60
 msgid "Pontos"
 msgstr "Pontos"
 
@@ -2005,11 +2018,11 @@ msgstr "Preenche a tua região para veres a região do teu adversário"
 msgid "Produtos e Marcas"
 msgstr "Produtos e Marcas"
 
-#: src/views/Statistics/IndividualQuizzes.js:50
+#: src/views/Profile/IndividualQuizzes.js:50
 msgid "Prova"
 msgstr "Prova"
 
-#: src/views/Statistics.js:93
+#: src/views/Profile.js:103
 msgid "Provas individuais"
 msgstr "Provas individuais"
 
@@ -2035,8 +2048,8 @@ msgstr "Provas mensais criadas com sucesso."
 msgid "Próxima"
 msgstr "Próxima"
 
+#: src/views/Profile/IndividualQuizzes.js:63
 #: src/views/Ranking/TableHeader.js:22
-#: src/views/Statistics/IndividualQuizzes.js:63
 msgid "Pts"
 msgstr "Pts"
 
@@ -2156,7 +2169,7 @@ msgstr "Quizzes Especiais"
 
 #: src/partials/Header.js:222
 #: src/routes.js:234
-#: src/views/Statistics.js:83
+#: src/views/Profile.js:93
 msgid "Quizzes especiais"
 msgstr "Quizzes especiais"
 
@@ -2253,7 +2266,7 @@ msgstr "Registar"
 msgid "Registo"
 msgstr "Registo"
 
-#: src/views/Statistics.js:104
+#: src/views/Profile.js:114
 msgid "Registo de acções (últimos {logsDays} dias)"
 msgstr "Registo de acções (últimos {logsDays} dias)"
 
@@ -2335,15 +2348,15 @@ msgid "Resposta dada"
 msgstr "Resposta dada"
 
 #: src/views/GenreRanking/Table.js:24
+#: src/views/Profile/Statistics.js:197
 #: src/views/Ranking/TableHeader.js:128
-#: src/views/Statistics/League.js:184
-#: src/views/StatisticsComparison.js:329
-#: src/views/StatisticsComparison.js:336
+#: src/views/StatisticsComparison.js:346
+#: src/views/StatisticsComparison.js:353
 msgid "Respostas correctas"
 msgstr "Respostas correctas"
 
-#: src/views/Statistics/IndividualQuizzes.js:56
-#: src/views/StatisticsComparison.js:358
+#: src/views/Profile/IndividualQuizzes.js:56
+#: src/views/StatisticsComparison.js:375
 msgid "Resultado"
 msgstr "Resultado"
 
@@ -2430,13 +2443,14 @@ msgstr "Selecciona os jogadores que jogaram esta prova:"
 
 #: src/views/Cup.js:197
 #: src/views/GenreRanking.js:238
+#: src/views/Profile/IndividualQuizzes.js:39
+#: src/views/Profile/League.js:85
+#: src/views/Profile/Logs.js:87
+#: src/views/Profile/SpecialQuizzes.js:41
 #: src/views/Quizzes.js:76
-#: src/views/Ranking.js:197
+#: src/views/Ranking.js:194
 #: src/views/Seasons.js:122
 #: src/views/SpecialQuizzes.js:143
-#: src/views/Statistics/IndividualQuizzes.js:39
-#: src/views/Statistics/Logs.js:87
-#: src/views/Statistics/SpecialQuizzes.js:41
 #: src/views/admin/externalQuestions/ExternalQuestions.js:407
 #: src/views/admin/nationalRanking/Events/List.js:159
 #: src/views/admin/nationalRanking/Players/List.js:169
@@ -2572,9 +2586,9 @@ msgstr "Sérvia"
 msgid "Síria"
 msgstr "Síria"
 
+#: src/views/Profile/Statistics.js:211
 #: src/views/Quiz/OpponentStats.js:80
 #: src/views/Quiz/OpponentStats.js:133
-#: src/views/Statistics/League.js:198
 msgid "T"
 msgstr "T"
 
@@ -2614,15 +2628,19 @@ msgstr "Tecnologia e Invenções"
 msgid "Televisão"
 msgstr "Televisão"
 
+#: src/views/Profile/SpecialQuizzes.js:52
+#: src/views/Profile/Statistics.js:190
 #: src/views/Quiz/OpponentStats.js:71
 #: src/views/SpecialQuizzes.js:75
-#: src/views/Statistics/League.js:177
-#: src/views/Statistics/SpecialQuizzes.js:52
 #: src/views/admin/externalQuestions/ExternalQuestions.js:246
 #: src/views/admin/questions/Questions.js:215
 #: src/views/admin/specialQuizzes/SpecialQuizForm.js:188
 msgid "Tema"
 msgstr "Tema"
+
+#: src/views/Profile/League.js:35
+msgid "Temporada"
+msgstr "Temporada"
 
 #: src/views/admin/seasons/Seasons.js:43
 msgid "Temporada apagada com sucesso."
@@ -2636,6 +2654,7 @@ msgstr "Temporada criada com sucesso."
 msgid "Temporada gravada com sucesso."
 msgstr "Temporada gravada com sucesso."
 
+#: src/views/Profile/League.js:50
 #: src/views/Seasons.js:77
 #: src/views/admin/seasons/Seasons.js:98
 #: src/views/admin/seasons/Seasons.js:101
@@ -2644,7 +2663,7 @@ msgstr "Temporada {0}"
 
 #: src/views/Cup.js:112
 #: src/views/GenreRanking.js:171
-#: src/views/Ranking.js:149
+#: src/views/Ranking.js:146
 msgid "Temporada {seasonNumber}"
 msgstr "Temporada {seasonNumber}"
 
@@ -2744,9 +2763,9 @@ msgstr "Tonga"
 msgid "Total"
 msgstr "Total"
 
+#: src/views/Profile/Statistics.js:209
 #: src/views/Quiz/OpponentStats.js:78
 #: src/views/Quiz/OpponentStats.js:131
-#: src/views/Statistics/League.js:196
 msgid "Total de respostas"
 msgstr "Total de respostas"
 
@@ -2898,8 +2917,8 @@ msgid "Vitória partilhada"
 msgstr "Vitória partilhada"
 
 #: src/views/Ranking/TableHeader.js:92
-#: src/views/StatisticsComparison.js:291
-#: src/views/StatisticsComparison.js:304
+#: src/views/StatisticsComparison.js:308
+#: src/views/StatisticsComparison.js:321
 msgid "Vitórias"
 msgstr "Vitórias"
 
@@ -2937,8 +2956,16 @@ msgstr "posição"
 msgid "posições"
 msgstr "posições"
 
+#: src/views/Profile/League.js:54
+msgid "{0, selectordinal, one {1ª} two {2ª} few {3ª} other {#ª}}"
+msgstr "{0, selectordinal, one {1ª} two {2ª} few {3ª} other {#ª}}"
+
+#: src/views/Profile/League.js:70
+msgid "{0, selectordinal, one {1º} two {2º} few {3º} other {#º}}"
+msgstr "{0, selectordinal, one {1º} two {2º} few {3º} other {#º}}"
+
 #: src/views/NationalRanking/Legend.js:66
-#: src/views/Statistics/SpecialQuizzes.js:80
+#: src/views/Profile/SpecialQuizzes.js:80
 msgid "{0, selectordinal, two {2º} few {3º} other {#º}}"
 msgstr "{0, selectordinal, two {2º} few {3ª} other {#º}}"
 
@@ -2949,7 +2976,7 @@ msgstr "{0, selectordinal, two {2º} few {3ª} other {#º}}"
 msgid "{0} de {1}"
 msgstr "{0} de {1}"
 
-#: src/views/StatisticsComparison.js:194
+#: src/views/StatisticsComparison.js:211
 msgid "{0} {1} e {2} {3}"
 msgstr "{0} {1} e {2} {3}"
 
@@ -2957,7 +2984,7 @@ msgstr "{0} {1} e {2} {3}"
 msgid "{0}-avos-de-Final"
 msgstr "{0}-avos-de-Final"
 
-#: src/views/Ranking.js:166
+#: src/views/Ranking.js:163
 #: src/views/admin/seasons/Tier.js:29
 msgid "{0}ª divisão"
 msgstr "{0}ª divisão"

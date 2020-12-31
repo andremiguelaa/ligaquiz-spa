@@ -72,7 +72,7 @@ const Player = ({ player, quizzes }) => {
             condition={player.data.info}
             wrapper={(children) => (
               <Link
-                to={`/statistics${
+                to={`profile${
                   player.data.info.id !== user?.id
                     ? `/${player.data.info.id}`
                     : ''
