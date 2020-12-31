@@ -253,10 +253,6 @@ msgstr "Artesanato"
 msgid "Arábia Saudita"
 msgstr "Arábia Saudita"
 
-#: src/views/Profile.js:62
-msgid "As minhas estatísticas"
-msgstr "As minhas estatísticas"
-
 #: src/views/Register.js:288
 msgid "As palavras-passes não coincidem."
 msgstr "As palavras-passes não coincidem."
@@ -938,8 +934,8 @@ msgid "Estatísticas de pergunta"
 msgstr "Estatísticas de pergunta"
 
 #: src/views/Profile.js:58
-msgid "Estatísticas de {0} {1}"
-msgstr "Estatísticas de {0} {1}"
+#~ msgid "Estatísticas de {0} {1}"
+#~ msgstr "Estatísticas de {0} {1}"
 
 #: src/views/Quiz/OpponentsStats.js:126
 msgid "Estatísticas do adversário"
@@ -1753,6 +1749,7 @@ msgid "Número {0} no <0>Ranking Nacional</0>"
 msgstr "Número {0} no <0>Ranking Nacional</0>"
 
 #: src/partials/Header.js:110
+#: src/views/Profile.js:62
 msgid "O meu perfil"
 msgstr "O meu perfil"
 
@@ -1900,6 +1897,10 @@ msgstr "Perfil"
 #: src/views/Account.js:114
 msgid "Perfil actualizado com sucesso."
 msgstr "Perfil actualizado com sucesso."
+
+#: src/views/Profile.js:58
+msgid "Perfil de {0} {1}"
+msgstr "Perfil de {0} {1}"
 
 #: src/routes.js:154
 msgid "Pergunta"

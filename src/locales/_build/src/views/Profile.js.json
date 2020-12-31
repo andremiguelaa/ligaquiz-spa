@@ -1,5 +1,5 @@
 {
-  "Estatísticas de {0} {1}": {
+  "Perfil de {0} {1}": {
     "origin": [
       [
         "src/views/Profile.js",
@@ -7,7 +7,7 @@
       ]
     ]
   },
-  "As minhas estatísticas": {
+  "O meu perfil": {
     "origin": [
       [
         "src/views/Profile.js",
