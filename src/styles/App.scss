@@ -65,6 +65,19 @@ button.navbar-link {
   text-align: left;
 }
 
+.is-link {
+  font-family: inherit;
+  background-color: transparent;
+  border: none;
+  color: #3298dc;
+  padding: 0;
+  cursor: pointer;
+  font-size: inherit;
+  &:hover {
+    color: #89c4eb;
+  }
+}
+
 div.tabs {
   padding: 0 0.1px;
   a,
