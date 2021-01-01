@@ -13,7 +13,7 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/views/Quiz/OpponentStats.js:27
+#: src/views/Quiz/OpponentStats.js:51
 msgid "({0} anos)"
 msgstr "({0} anos)"
 
@@ -130,12 +130,12 @@ msgstr "Administração"
 msgid "Afeganistão"
 msgstr "Afeganistão"
 
-#: src/views/Quiz/QuizForm.js:509
+#: src/views/Quiz/QuizForm.js:464
 #: src/views/SpecialQuiz/SpecialQuizForm.js:221
 msgid "Ainda tens uma pergunta em branco."
 msgstr "Ainda tens uma pergunta em branco."
 
-#: src/views/Quiz/QuizForm.js:507
+#: src/views/Quiz/QuizForm.js:462
 #: src/views/SpecialQuiz/SpecialQuizForm.js:219
 msgid "Ainda tens {blankAnsers} perguntas em branco."
 msgstr "Ainda tens {blankAnsers} perguntas em branco."
@@ -256,6 +256,10 @@ msgstr "Arábia Saudita"
 #: src/views/Register.js:288
 msgid "As palavras-passes não coincidem."
 msgstr "As palavras-passes não coincidem."
+
+#: src/views/Quiz/OpponentStats.js:94
+msgid "Atribuir pontos automaticamente"
+msgstr "Atribuir pontos automaticamente"
 
 #: src/utils/getRegionTranslation.js:40
 msgid "Austrália"
@@ -1737,7 +1741,7 @@ msgstr "Não foi possível renovar a subscrição."
 msgid "Não foi possível submeter o quiz especial."
 msgstr "Não foi possível submeter o quiz especial."
 
-#: src/views/Quiz/QuizForm.js:91
+#: src/views/Quiz/QuizForm.js:103
 msgid "Não foi possível submeter o quiz."
 msgstr "Não foi possível submeter o quiz."
 
@@ -1855,8 +1859,8 @@ msgstr "Países Baixos"
 #: src/views/Game.js:133
 #: src/views/GenreRanking/Table.js:48
 #: src/views/Profile/Statistics.js:221
-#: src/views/Quiz/OpponentStats.js:90
-#: src/views/Quiz/OpponentStats.js:143
+#: src/views/Quiz/OpponentStats.js:126
+#: src/views/Quiz/OpponentStats.js:179
 #: src/views/Quiz/QuizDone.js:83
 #: src/views/SpecialQuiz/SpecialQuizDone.js:184
 msgid "Percentagem de acerto"
@@ -1914,7 +1918,7 @@ msgstr "Pergunta"
 #: src/views/CupGame.js:101
 #: src/views/Game.js:101
 #: src/views/Quiz/QuizDone.js:24
-#: src/views/Quiz/QuizForm.js:144
+#: src/views/Quiz/QuizForm.js:180
 #: src/views/SpecialQuiz/SpecialQuizDone.js:129
 #: src/views/SpecialQuiz/SpecialQuizForm.js:92
 #: src/views/admin/quizzes/Question.js:63
@@ -1968,11 +1972,11 @@ msgstr "Polónia"
 msgid "Pontos"
 msgstr "Pontos"
 
-#: src/views/Quiz/QuizForm.js:196
+#: src/views/Quiz/QuizForm.js:227
 msgid "Pontos a atribuir ao adversário da Liga"
 msgstr "Pontos a atribuir ao adversário da Liga"
 
-#: src/views/Quiz/QuizForm.js:333
+#: src/views/Quiz/QuizForm.js:324
 msgid "Pontos a atribuir ao adversário da Taça"
 msgstr "Pontos a atribuir ao adversário da Taça"
 
@@ -2012,11 +2016,11 @@ msgstr "Porto"
 msgid "Portugal"
 msgstr "Portugal"
 
-#: src/views/Quiz/OpponentStats.js:44
+#: src/views/Quiz/OpponentStats.js:68
 msgid "Preenche a tua data de nascimento para veres a idade do teu adversário"
 msgstr "Preenche a tua data de nascimento para veres a idade do teu adversário"
 
-#: src/views/Quiz/OpponentStats.js:55
+#: src/views/Quiz/OpponentStats.js:79
 msgid "Preenche a tua região para veres a região do teu adversário"
 msgstr "Preenche a tua região para veres a região do teu adversário"
 
@@ -2146,7 +2150,7 @@ msgstr "Quiz especial | Editar"
 msgid "Quiz gravado com sucesso."
 msgstr "Quiz gravado com sucesso."
 
-#: src/views/Quiz/QuizForm.js:87
+#: src/views/Quiz/QuizForm.js:99
 msgid "Quiz submetido com sucesso."
 msgstr "Quiz submetido com sucesso."
 
@@ -2325,7 +2329,7 @@ msgstr "República Dominicana"
 msgid "República do Congo"
 msgstr "República do Congo"
 
-#: src/views/Quiz/QuizForm.js:165
+#: src/views/Quiz/QuizForm.js:201
 #: src/views/SpecialQuiz/SpecialQuizForm.js:113
 #: src/views/admin/externalQuestions/ExternalQuestions.js:230
 #: src/views/admin/externalQuestions/ExternalQuestions.js:299
@@ -2519,19 +2523,19 @@ msgstr "Sri Lanka"
 msgid "Subiu"
 msgstr "Subiu"
 
-#: src/views/Quiz/QuizForm.js:476
+#: src/views/Quiz/QuizForm.js:427
 #: src/views/RecoverPassword.js:98
 #: src/views/ResetPassword.js:140
 #: src/views/SpecialQuiz/SpecialQuizForm.js:175
 msgid "Submeter"
 msgstr "Submeter"
 
-#: src/views/Quiz/QuizForm.js:501
+#: src/views/Quiz/QuizForm.js:456
 #: src/views/SpecialQuiz/SpecialQuizForm.js:213
 msgid "Submeter quiz"
 msgstr "Submeter quiz"
 
-#: src/views/Quiz/QuizForm.js:487
+#: src/views/Quiz/QuizForm.js:442
 msgid "Submissão inválida"
 msgstr "Submissão inválida"
 
@@ -2547,7 +2551,7 @@ msgstr "Subscrição p/ quizzes especiais"
 msgid "Subscrição renovada com sucesso."
 msgstr "Subscrição renovada com sucesso."
 
-#: src/views/Quiz/OpponentStats.js:124
+#: src/views/Quiz/OpponentStats.js:160
 #: src/views/admin/questions/Questions.js:243
 msgid "Subtema"
 msgstr "Subtema"
@@ -2593,8 +2597,8 @@ msgid "Síria"
 msgstr "Síria"
 
 #: src/views/Profile/Statistics.js:211
-#: src/views/Quiz/OpponentStats.js:80
-#: src/views/Quiz/OpponentStats.js:133
+#: src/views/Quiz/OpponentStats.js:116
+#: src/views/Quiz/OpponentStats.js:169
 msgid "T"
 msgstr "T"
 
@@ -2636,7 +2640,7 @@ msgstr "Televisão"
 
 #: src/views/Profile/SpecialQuizzes.js:52
 #: src/views/Profile/Statistics.js:190
-#: src/views/Quiz/OpponentStats.js:71
+#: src/views/Quiz/OpponentStats.js:107
 #: src/views/SpecialQuizzes.js:75
 #: src/views/admin/externalQuestions/ExternalQuestions.js:246
 #: src/views/admin/questions/Questions.js:215
@@ -2727,12 +2731,12 @@ msgstr "Tens a certeza que queres apagar este quiz?"
 msgid "Tens a certeza que queres apagar este ranking mensal?"
 msgstr "Tens a certeza que queres apagar este ranking mensal?"
 
-#: src/views/Quiz/QuizForm.js:514
+#: src/views/Quiz/QuizForm.js:469
 #: src/views/SpecialQuiz/SpecialQuizForm.js:226
 msgid "Tens a certeza que queres submeter o quiz?"
 msgstr "Tens a certeza que queres submeter o quiz?"
 
-#: src/views/Quiz/QuizForm.js:489
+#: src/views/Quiz/QuizForm.js:444
 msgid "Tens pontos por atribuir.<0/>Atribui-os antes de fazer a submissão."
 msgstr "Tens pontos por atribuir.<0/>Atribui-os antes de fazer a submissão."
 
@@ -2770,8 +2774,8 @@ msgid "Total"
 msgstr "Total"
 
 #: src/views/Profile/Statistics.js:209
-#: src/views/Quiz/OpponentStats.js:78
-#: src/views/Quiz/OpponentStats.js:131
+#: src/views/Quiz/OpponentStats.js:114
+#: src/views/Quiz/OpponentStats.js:167
 msgid "Total de respostas"
 msgstr "Total de respostas"
 

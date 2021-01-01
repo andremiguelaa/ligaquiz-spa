@@ -10,7 +10,7 @@ import OpponentStats from './OpponentStats';
 
 import classes from './Quiz.module.scss';
 
-const OpponentsStats = ({ quiz }) => {
+const OpponentsStats = ({ quiz, setPoints, setCupPoints }) => {
   const [{ user }] = useStateValue();
   const [genres, setGenres] = useState();
   const [leagueOpponent, setLeagueOpponent] = useState();
@@ -33,7 +33,7 @@ const OpponentsStats = ({ quiz }) => {
           setGenres(genres);
           ApiRequest.get(
             `users?id[]=${opponents[0]}${
-              opponents[1] && `&id[]=${opponents[1]}`
+              opponents[1] ? `&id[]=${opponents[1]}` : ''
             }&statistics=true`
           )
             .then(({ data }) => {
@@ -163,12 +163,18 @@ const OpponentsStats = ({ quiz }) => {
                     {leagueOpponent &&
                       opponents[leagueOpponent] &&
                       tab === 'league' && (
-                        <OpponentStats opponent={opponents[leagueOpponent]} />
+                        <OpponentStats
+                          opponent={opponents[leagueOpponent]}
+                          setPoints={setPoints}
+                        />
                       )}
                     {quiz.cupOpponent &&
                       opponents[quiz.cupOpponent] &&
                       tab === 'cup' && (
-                        <OpponentStats opponent={opponents[quiz.cupOpponent]} />
+                        <OpponentStats
+                          opponent={opponents[quiz.cupOpponent]}
+                          setPoints={setCupPoints}
+                        />
                       )}
                   </div>
                 </div>

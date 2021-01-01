@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { Trans } from '@lingui/macro';
 import { useHistory } from 'react-router-dom';
 import classnames from 'classnames';
@@ -16,15 +16,6 @@ import OpponentsStats from './OpponentsStats';
 
 import classes from './Quiz.module.scss';
 
-const saveDraft = debounce((id, text, points, cup_points) => {
-  ApiRequest.post(`answers`, {
-    question_id: id,
-    text,
-    points: points === -1 ? undefined : points,
-    cup_points: cup_points === -1 ? undefined : cup_points,
-  });
-}, 1000);
-
 const QuizForm = ({ data, userAnswers }) => {
   const [, dispatch] = useStateValue();
   const history = useHistory();
@@ -41,6 +32,27 @@ const QuizForm = ({ data, userAnswers }) => {
   });
   const [missingPointsModal, setMissingPointsModal] = useState(false);
   const [submitModal, setSubmitModal] = useState(false);
+
+  const saveAnswerDraft = useMemo(
+    () =>
+      data.quiz.questions.map((item, index) =>
+        debounce(() => {
+          ApiRequest.post(`answers`, {
+            question_id: item.id,
+            text: formData.answers[index].text,
+            points:
+              formData.answers[index].points >= 0
+                ? formData.answers[index].points
+                : undefined,
+            cup_points:
+              formData.answers[index].cup_points >= 0
+                ? formData.answers[index].cup_points
+                : undefined,
+          });
+        }, 1000)
+      ),
+    [data.quiz.questions, formData.answers]
+  );
 
   useEffect(() => {
     ApiRequest.post(`logs`, {
@@ -93,6 +105,30 @@ const QuizForm = ({ data, userAnswers }) => {
       .finally(() => {
         setSubmitting(false);
       });
+  };
+
+  const setPoints = (index, points) => {
+    const previousPointsValue = formData.answers[index].points;
+    setFormData((prev) => {
+      const newFormData = { ...prev };
+      newFormData.answers[index].points = points;
+      return newFormData;
+    });
+    if (previousPointsValue !== points) {
+      saveAnswerDraft[index]();
+    }
+  };
+
+  const setCupPoints = (index, points) => {
+    const previousPointsValue = formData.answers[index].cup_points;
+    setFormData((prev) => {
+      const newFormData = { ...prev };
+      newFormData.answers[index].cup_points = points;
+      return newFormData;
+    });
+    if (previousPointsValue !== points) {
+      saveAnswerDraft[index]();
+    }
   };
 
   let pointsGiven;
@@ -174,12 +210,7 @@ const QuizForm = ({ data, userAnswers }) => {
                         newFormData.answers[index].text = event.target.value;
                         return newFormData;
                       });
-                      saveDraft(
-                        question.id,
-                        event.target.value,
-                        formData.answers[index].points,
-                        formData.answers[index].cup_points
-                      );
+                      saveAnswerDraft[index]();
                     }}
                     onPaste={(event) => {
                       ApiRequest.post(`logs`, {
@@ -206,24 +237,14 @@ const QuizForm = ({ data, userAnswers }) => {
                           className={classnames('button', {
                             'is-success': formData.answers[index].points === 0,
                           })}
-                          onClick={() => {
-                            saveDraft(
-                              question.id,
-                              formData.answers[index].text,
+                          onClick={() =>
+                            setPoints(
+                              index,
                               formData.answers[index].points === 0
                                 ? undefined
-                                : 0,
-                              formData.answers[index].cup_points
-                            );
-                            setFormData((prev) => {
-                              const newFormData = { ...prev };
-                              newFormData.answers[index].points =
-                                formData.answers[index].points === 0
-                                  ? undefined
-                                  : 0;
-                              return newFormData;
-                            });
-                          }}
+                                : 0
+                            )
+                          }
                         >
                           0
                         </button>
@@ -238,24 +259,14 @@ const QuizForm = ({ data, userAnswers }) => {
                           className={classnames('button', {
                             'is-warning': formData.answers[index].points === 1,
                           })}
-                          onClick={() => {
-                            saveDraft(
-                              question.id,
-                              formData.answers[index].text,
+                          onClick={() =>
+                            setPoints(
+                              index,
                               formData.answers[index].points === 1
                                 ? undefined
-                                : 1,
-                              formData.answers[index].cup_points
-                            );
-                            setFormData((prev) => {
-                              const newFormData = { ...prev };
-                              newFormData.answers[index].points =
-                                formData.answers[index].points === 1
-                                  ? undefined
-                                  : 1;
-                              return newFormData;
-                            });
-                          }}
+                                : 1
+                            )
+                          }
                         >
                           1
                         </button>
@@ -270,24 +281,14 @@ const QuizForm = ({ data, userAnswers }) => {
                           className={classnames('button', {
                             'is-warning': formData.answers[index].points === 2,
                           })}
-                          onClick={() => {
-                            saveDraft(
-                              question.id,
-                              formData.answers[index].text,
+                          onClick={() =>
+                            setPoints(
+                              index,
                               formData.answers[index].points === 2
                                 ? undefined
-                                : 2,
-                              formData.answers[index].cup_points
-                            );
-                            setFormData((prev) => {
-                              const newFormData = { ...prev };
-                              newFormData.answers[index].points =
-                                formData.answers[index].points === 2
-                                  ? undefined
-                                  : 2;
-                              return newFormData;
-                            });
-                          }}
+                                : 2
+                            )
+                          }
                         >
                           2
                         </button>
@@ -302,24 +303,14 @@ const QuizForm = ({ data, userAnswers }) => {
                           className={classnames('button', {
                             'is-danger': formData.answers[index].points === 3,
                           })}
-                          onClick={() => {
-                            saveDraft(
-                              question.id,
-                              formData.answers[index].text,
+                          onClick={() =>
+                            setPoints(
+                              index,
                               formData.answers[index].points === 3
                                 ? undefined
-                                : 3,
-                              formData.answers[index].cup_points
-                            );
-                            setFormData((prev) => {
-                              const newFormData = { ...prev };
-                              newFormData.answers[index].points =
-                                formData.answers[index].points === 3
-                                  ? undefined
-                                  : 3;
-                              return newFormData;
-                            });
-                          }}
+                                : 3
+                            )
+                          }
                         >
                           3
                         </button>
@@ -344,24 +335,14 @@ const QuizForm = ({ data, userAnswers }) => {
                             'is-success':
                               formData.answers[index].cup_points === 0,
                           })}
-                          onClick={() => {
-                            saveDraft(
-                              question.id,
-                              formData.answers[index].text,
-                              formData.answers[index].points,
+                          onClick={() =>
+                            setCupPoints(
+                              index,
                               formData.answers[index].cup_points === 0
                                 ? undefined
                                 : 0
-                            );
-                            setFormData((prev) => {
-                              const newFormData = { ...prev };
-                              newFormData.answers[index].cup_points =
-                                formData.answers[index].cup_points === 0
-                                  ? undefined
-                                  : 0;
-                              return newFormData;
-                            });
-                          }}
+                            )
+                          }
                         >
                           0
                         </button>
@@ -377,24 +358,14 @@ const QuizForm = ({ data, userAnswers }) => {
                             'is-warning':
                               formData.answers[index].cup_points === 1,
                           })}
-                          onClick={() => {
-                            saveDraft(
-                              question.id,
-                              formData.answers[index].text,
-                              formData.answers[index].points,
+                          onClick={() =>
+                            setCupPoints(
+                              index,
                               formData.answers[index].cup_points === 1
                                 ? undefined
                                 : 1
-                            );
-                            setFormData((prev) => {
-                              const newFormData = { ...prev };
-                              newFormData.answers[index].cup_points =
-                                formData.answers[index].cup_points === 1
-                                  ? undefined
-                                  : 1;
-                              return newFormData;
-                            });
-                          }}
+                            )
+                          }
                         >
                           1
                         </button>
@@ -410,24 +381,14 @@ const QuizForm = ({ data, userAnswers }) => {
                             'is-warning':
                               formData.answers[index].cup_points === 2,
                           })}
-                          onClick={() => {
-                            saveDraft(
-                              question.id,
-                              formData.answers[index].text,
-                              formData.answers[index].points,
+                          onClick={() =>
+                            setCupPoints(
+                              index,
                               formData.answers[index].cup_points === 2
                                 ? undefined
                                 : 2
-                            );
-                            setFormData((prev) => {
-                              const newFormData = { ...prev };
-                              newFormData.answers[index].cup_points =
-                                formData.answers[index].cup_points === 2
-                                  ? undefined
-                                  : 2;
-                              return newFormData;
-                            });
-                          }}
+                            )
+                          }
                         >
                           2
                         </button>
@@ -443,24 +404,14 @@ const QuizForm = ({ data, userAnswers }) => {
                             'is-danger':
                               formData.answers[index].cup_points === 3,
                           })}
-                          onClick={() => {
-                            saveDraft(
-                              question.id,
-                              formData.answers[index].text,
-                              formData.answers[index].points,
+                          onClick={() =>
+                            setCupPoints(
+                              index,
                               formData.answers[index].cup_points === 3
                                 ? undefined
                                 : 3
-                            );
-                            setFormData((prev) => {
-                              const newFormData = { ...prev };
-                              newFormData.answers[index].cup_points =
-                                formData.answers[index].cup_points === 3
-                                  ? undefined
-                                  : 3;
-                              return newFormData;
-                            });
-                          }}
+                            )
+                          }
                         >
                           3
                         </button>
@@ -479,7 +430,11 @@ const QuizForm = ({ data, userAnswers }) => {
             </div>
           </form>
         </div>
-        <OpponentsStats quiz={data.quiz} />
+        <OpponentsStats
+          quiz={data.quiz}
+          setPoints={setPoints}
+          setCupPoints={setCupPoints}
+        />
       </div>
       <Modal
         type="danger"

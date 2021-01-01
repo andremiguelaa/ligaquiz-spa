@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/Quiz/OpponentStats.js",
-        27
+        51
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/views/Quiz/OpponentStats.js",
-        44
+        68
       ]
     ]
   },
@@ -19,7 +19,15 @@
     "origin": [
       [
         "src/views/Quiz/OpponentStats.js",
-        55
+        79
+      ]
+    ]
+  },
+  "Atribuir pontos automaticamente": {
+    "origin": [
+      [
+        "src/views/Quiz/OpponentStats.js",
+        94
       ]
     ]
   },
@@ -27,7 +35,7 @@
     "origin": [
       [
         "src/views/Quiz/OpponentStats.js",
-        71
+        107
       ]
     ]
   },
@@ -35,11 +43,11 @@
     "origin": [
       [
         "src/views/Quiz/OpponentStats.js",
-        78
+        114
       ],
       [
         "src/views/Quiz/OpponentStats.js",
-        131
+        167
       ]
     ]
   },
@@ -47,11 +55,11 @@
     "origin": [
       [
         "src/views/Quiz/OpponentStats.js",
-        80
+        116
       ],
       [
         "src/views/Quiz/OpponentStats.js",
-        133
+        169
       ]
     ]
   },
@@ -59,11 +67,11 @@
     "origin": [
       [
         "src/views/Quiz/OpponentStats.js",
-        90
+        126
       ],
       [
         "src/views/Quiz/OpponentStats.js",
-        143
+        179
       ]
     ]
   },
@@ -71,7 +79,7 @@
     "origin": [
       [
         "src/views/Quiz/OpponentStats.js",
-        124
+        160
       ]
     ]
   }

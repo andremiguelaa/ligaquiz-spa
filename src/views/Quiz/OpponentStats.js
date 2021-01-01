@@ -11,12 +11,36 @@ import { getGenreTranslation } from 'utils/getGenreTranslation';
 
 import classes from './Quiz.module.scss';
 
-const OpponentsStats = ({ opponent }) => {
+const points = {
+  0: 0,
+  1: 1,
+  2: 1,
+  3: 1,
+  4: 2,
+  5: 2,
+  6: 2,
+  7: 3,
+};
+
+const OpponentsStats = ({ opponent, setPoints }) => {
   const [
     {
       settings: { language },
     },
   ] = useStateValue();
+
+  const genreOrder = [...opponent.genreStats]
+    .sort((a, b) => a.id - b.id)
+    .reduce((acc, item, index) => {
+      acc[item.id] = index;
+      return acc;
+    }, {});
+
+  const autoPoints = opponent.genreStats.reduce((acc, item, index) => {
+    acc[genreOrder[item.id]] = points[index];
+    return acc;
+  }, []);
+
   return (
     <>
       <p className={classes.opponentName}>
@@ -58,6 +82,18 @@ const OpponentsStats = ({ opponent }) => {
           </small>
         )}
       </p>
+      <div>
+        <button
+          className="button is-primary"
+          onClick={() => {
+            autoPoints.forEach((element, index) => {
+              setPoints(index, element);
+            });
+          }}
+        >
+          <Trans>Atribuir pontos automaticamente</Trans>
+        </button>
+      </div>
       <div className="table-container">
         <table
           className={classnames(

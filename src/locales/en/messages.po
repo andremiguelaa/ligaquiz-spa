@@ -13,7 +13,7 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/views/Quiz/OpponentStats.js:27
+#: src/views/Quiz/OpponentStats.js:51
 msgid "({0} anos)"
 msgstr "({0} years old)"
 
@@ -130,12 +130,12 @@ msgstr "Administration"
 msgid "Afeganistão"
 msgstr "Afghanistan"
 
-#: src/views/Quiz/QuizForm.js:509
+#: src/views/Quiz/QuizForm.js:464
 #: src/views/SpecialQuiz/SpecialQuizForm.js:221
 msgid "Ainda tens uma pergunta em branco."
 msgstr "You still have one blank answer."
 
-#: src/views/Quiz/QuizForm.js:507
+#: src/views/Quiz/QuizForm.js:462
 #: src/views/SpecialQuiz/SpecialQuizForm.js:219
 msgid "Ainda tens {blankAnsers} perguntas em branco."
 msgstr "You still have {blankAnsers} blank answers."
@@ -256,6 +256,10 @@ msgstr "Saudi Arabia"
 #: src/views/Register.js:288
 msgid "As palavras-passes não coincidem."
 msgstr "Passwords mismatch"
+
+#: src/views/Quiz/OpponentStats.js:94
+msgid "Atribuir pontos automaticamente"
+msgstr "Assign points automatically"
 
 #: src/utils/getRegionTranslation.js:40
 msgid "Austrália"
@@ -1737,7 +1741,7 @@ msgstr "Subscription could not be renewed."
 msgid "Não foi possível submeter o quiz especial."
 msgstr "Special quiz could not be submitted."
 
-#: src/views/Quiz/QuizForm.js:91
+#: src/views/Quiz/QuizForm.js:103
 msgid "Não foi possível submeter o quiz."
 msgstr "Quiz could not be submitted."
 
@@ -1855,8 +1859,8 @@ msgstr "Netherlands"
 #: src/views/Game.js:133
 #: src/views/GenreRanking/Table.js:48
 #: src/views/Profile/Statistics.js:221
-#: src/views/Quiz/OpponentStats.js:90
-#: src/views/Quiz/OpponentStats.js:143
+#: src/views/Quiz/OpponentStats.js:126
+#: src/views/Quiz/OpponentStats.js:179
 #: src/views/Quiz/QuizDone.js:83
 #: src/views/SpecialQuiz/SpecialQuizDone.js:184
 msgid "Percentagem de acerto"
@@ -1914,7 +1918,7 @@ msgstr "Question"
 #: src/views/CupGame.js:101
 #: src/views/Game.js:101
 #: src/views/Quiz/QuizDone.js:24
-#: src/views/Quiz/QuizForm.js:144
+#: src/views/Quiz/QuizForm.js:180
 #: src/views/SpecialQuiz/SpecialQuizDone.js:129
 #: src/views/SpecialQuiz/SpecialQuizForm.js:92
 #: src/views/admin/quizzes/Question.js:63
@@ -1968,11 +1972,11 @@ msgstr "Poland"
 msgid "Pontos"
 msgstr "Points"
 
-#: src/views/Quiz/QuizForm.js:196
+#: src/views/Quiz/QuizForm.js:227
 msgid "Pontos a atribuir ao adversário da Liga"
 msgstr "Points to be assigned to your league's opponent"
 
-#: src/views/Quiz/QuizForm.js:333
+#: src/views/Quiz/QuizForm.js:324
 msgid "Pontos a atribuir ao adversário da Taça"
 msgstr "Points to be assigned to your cup's opponent"
 
@@ -2012,11 +2016,11 @@ msgstr "Oporto"
 msgid "Portugal"
 msgstr "Portugal"
 
-#: src/views/Quiz/OpponentStats.js:44
+#: src/views/Quiz/OpponentStats.js:68
 msgid "Preenche a tua data de nascimento para veres a idade do teu adversário"
 msgstr "Fill your birthdate to reveal your opponent's age"
 
-#: src/views/Quiz/OpponentStats.js:55
+#: src/views/Quiz/OpponentStats.js:79
 msgid "Preenche a tua região para veres a região do teu adversário"
 msgstr "Fill your country to reveal your opponent's country"
 
@@ -2146,7 +2150,7 @@ msgstr "Special quiz | Edit"
 msgid "Quiz gravado com sucesso."
 msgstr "Quiz successfully saved."
 
-#: src/views/Quiz/QuizForm.js:87
+#: src/views/Quiz/QuizForm.js:99
 msgid "Quiz submetido com sucesso."
 msgstr "Quiz successfully submitted."
 
@@ -2325,7 +2329,7 @@ msgstr "Dominican Republic"
 msgid "República do Congo"
 msgstr "Republic of the Congo"
 
-#: src/views/Quiz/QuizForm.js:165
+#: src/views/Quiz/QuizForm.js:201
 #: src/views/SpecialQuiz/SpecialQuizForm.js:113
 #: src/views/admin/externalQuestions/ExternalQuestions.js:230
 #: src/views/admin/externalQuestions/ExternalQuestions.js:299
@@ -2519,19 +2523,19 @@ msgstr "Sri Lanka"
 msgid "Subiu"
 msgstr "Move up"
 
-#: src/views/Quiz/QuizForm.js:476
+#: src/views/Quiz/QuizForm.js:427
 #: src/views/RecoverPassword.js:98
 #: src/views/ResetPassword.js:140
 #: src/views/SpecialQuiz/SpecialQuizForm.js:175
 msgid "Submeter"
 msgstr "Submit"
 
-#: src/views/Quiz/QuizForm.js:501
+#: src/views/Quiz/QuizForm.js:456
 #: src/views/SpecialQuiz/SpecialQuizForm.js:213
 msgid "Submeter quiz"
 msgstr "Submit quiz"
 
-#: src/views/Quiz/QuizForm.js:487
+#: src/views/Quiz/QuizForm.js:442
 msgid "Submissão inválida"
 msgstr "Invalid submission"
 
@@ -2547,7 +2551,7 @@ msgstr "Special quizzes subscription"
 msgid "Subscrição renovada com sucesso."
 msgstr "Subscription successfully renewed."
 
-#: src/views/Quiz/OpponentStats.js:124
+#: src/views/Quiz/OpponentStats.js:160
 #: src/views/admin/questions/Questions.js:243
 msgid "Subtema"
 msgstr "Subgenre"
@@ -2593,8 +2597,8 @@ msgid "Síria"
 msgstr "Syria"
 
 #: src/views/Profile/Statistics.js:211
-#: src/views/Quiz/OpponentStats.js:80
-#: src/views/Quiz/OpponentStats.js:133
+#: src/views/Quiz/OpponentStats.js:116
+#: src/views/Quiz/OpponentStats.js:169
 msgid "T"
 msgstr "T"
 
@@ -2636,7 +2640,7 @@ msgstr "TV"
 
 #: src/views/Profile/SpecialQuizzes.js:52
 #: src/views/Profile/Statistics.js:190
-#: src/views/Quiz/OpponentStats.js:71
+#: src/views/Quiz/OpponentStats.js:107
 #: src/views/SpecialQuizzes.js:75
 #: src/views/admin/externalQuestions/ExternalQuestions.js:246
 #: src/views/admin/questions/Questions.js:215
@@ -2727,12 +2731,12 @@ msgstr "Do you really want to delete this quiz?"
 msgid "Tens a certeza que queres apagar este ranking mensal?"
 msgstr "Do you really want to delete this month ranking?"
 
-#: src/views/Quiz/QuizForm.js:514
+#: src/views/Quiz/QuizForm.js:469
 #: src/views/SpecialQuiz/SpecialQuizForm.js:226
 msgid "Tens a certeza que queres submeter o quiz?"
 msgstr "Do you really want to submit the quiz?"
 
-#: src/views/Quiz/QuizForm.js:489
+#: src/views/Quiz/QuizForm.js:444
 msgid "Tens pontos por atribuir.<0/>Atribui-os antes de fazer a submissão."
 msgstr "You have points to be assigned.<0/>Assigned them before submit."
 
@@ -2770,8 +2774,8 @@ msgid "Total"
 msgstr "Total"
 
 #: src/views/Profile/Statistics.js:209
-#: src/views/Quiz/OpponentStats.js:78
-#: src/views/Quiz/OpponentStats.js:131
+#: src/views/Quiz/OpponentStats.js:114
+#: src/views/Quiz/OpponentStats.js:167
 msgid "Total de respostas"
 msgstr "Total of given answers"
 
