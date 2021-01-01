@@ -15,7 +15,7 @@ import logoEquizition from 'img/logo_equizition.png';
 import logoEquizitionDark from 'img/logo_equizition_dark.png';
 import classes from './Header.module.scss';
 
-const version = '4.18.4';
+const version = '4.18.5';
 
 const isDarkMode =
   window.matchMedia &&

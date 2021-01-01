@@ -34,7 +34,7 @@ const QuizDone = ({ data, userAnswers }) => {
                 <Trans>Resposta correcta</Trans>:
               </strong>{' '}
               {question.showAnswer ? (
-                question.answer
+                question.answer || '-'
               ) : (
                 <button
                   className="is-link"

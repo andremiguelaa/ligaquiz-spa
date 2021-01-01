@@ -474,7 +474,7 @@ msgstr "Ciências Sociais"
 #: src/views/Profile/SpecialQuizzes.js:55
 #: src/views/Ranking.js:143
 #: src/views/Seasons.js:106
-#: src/views/SpecialQuiz/SpecialQuizDone.js:20
+#: src/views/SpecialQuiz/SpecialQuizDone.js:28
 msgid "Classificação"
 msgstr "Classificação"
 
@@ -684,7 +684,7 @@ msgid "Desceu"
 msgstr "Desceu"
 
 #: src/views/Profile/Logs.js:54
-#: src/views/SpecialQuiz/SpecialQuizDone.js:111
+#: src/views/SpecialQuiz/SpecialQuizDone.js:119
 #: src/views/SpecialQuiz/SpecialQuizForm.js:81
 #: src/views/admin/specialQuizzes/SpecialQuizForm.js:201
 msgid "Descrição"
@@ -1220,7 +1220,7 @@ msgstr "Jamaica"
 msgid "Japão"
 msgstr "Japão"
 
-#: src/views/SpecialQuiz/SpecialQuizDone.js:28
+#: src/views/SpecialQuiz/SpecialQuizDone.js:36
 #: src/views/admin/nationalRanking/Players/List.js:106
 msgid "Jogador"
 msgstr "Jogador"
@@ -1278,7 +1278,7 @@ msgstr "Jogos e Passatempos"
 msgid "Joker"
 msgstr "Joker"
 
-#: src/views/SpecialQuiz/SpecialQuizDone.js:149
+#: src/views/SpecialQuiz/SpecialQuizDone.js:171
 msgid "Joker usado"
 msgstr "Joker usado"
 
@@ -1451,6 +1451,11 @@ msgstr "Mongólia"
 msgid "Montenegro"
 msgstr "Montenegro"
 
+#: src/views/Quiz/QuizDone.js:49
+#: src/views/SpecialQuiz/SpecialQuizDone.js:154
+msgid "Mostrar resposta"
+msgstr "Mostrar resposta"
+
 #: src/utils/getRegionTranslation.js:156
 msgid "Moçambique"
 msgstr "Moçambique"
@@ -1596,7 +1601,7 @@ msgstr "Nova Zelândia"
 msgid "Nova entrada para o ranking"
 msgstr "Nova entrada para o ranking"
 
-#: src/views/SpecialQuiz/SpecialQuizDone.js:154
+#: src/views/SpecialQuiz/SpecialQuizDone.js:176
 msgid "Não"
 msgstr "Não"
 
@@ -1852,8 +1857,8 @@ msgstr "Países Baixos"
 #: src/views/Profile/Statistics.js:221
 #: src/views/Quiz/OpponentStats.js:90
 #: src/views/Quiz/OpponentStats.js:143
-#: src/views/Quiz/QuizDone.js:61
-#: src/views/SpecialQuiz/SpecialQuizDone.js:162
+#: src/views/Quiz/QuizDone.js:83
+#: src/views/SpecialQuiz/SpecialQuizDone.js:184
 msgid "Percentagem de acerto"
 msgstr "Percentagem de acerto"
 
@@ -1908,9 +1913,9 @@ msgstr "Pergunta"
 
 #: src/views/CupGame.js:101
 #: src/views/Game.js:101
-#: src/views/Quiz/QuizDone.js:16
+#: src/views/Quiz/QuizDone.js:24
 #: src/views/Quiz/QuizForm.js:144
-#: src/views/SpecialQuiz/SpecialQuizDone.js:121
+#: src/views/SpecialQuiz/SpecialQuizDone.js:129
 #: src/views/SpecialQuiz/SpecialQuizForm.js:92
 #: src/views/admin/quizzes/Question.js:63
 #: src/views/admin/specialQuizzes/Question.js:49
@@ -1979,11 +1984,11 @@ msgstr "Pontos a favor"
 msgid "Pontos atribuídos"
 msgstr "Pontos atribuídos"
 
-#: src/views/Quiz/QuizDone.js:45
+#: src/views/Quiz/QuizDone.js:67
 msgid "Pontos atribuídos ao adversário da Liga"
 msgstr "Pontos atribuídos ao adversário da Liga"
 
-#: src/views/Quiz/QuizDone.js:53
+#: src/views/Quiz/QuizDone.js:75
 msgid "Pontos atribuídos ao adversário da Taça"
 msgstr "Pontos atribuídos ao adversário da Taça"
 
@@ -2334,15 +2339,15 @@ msgid "Resposta"
 msgstr "Resposta"
 
 #: src/views/Question.js:112
-#: src/views/Quiz/QuizDone.js:26
-#: src/views/SpecialQuiz/SpecialQuizDone.js:131
+#: src/views/Quiz/QuizDone.js:34
+#: src/views/SpecialQuiz/SpecialQuizDone.js:139
 #: src/views/admin/quizzes/QuizCorrect.js:134
 #: src/views/admin/specialQuizzes/SpecialQuizCorrect.js:134
 msgid "Resposta correcta"
 msgstr "Resposta correcta"
 
-#: src/views/Quiz/QuizDone.js:35
-#: src/views/SpecialQuiz/SpecialQuizDone.js:141
+#: src/views/Quiz/QuizDone.js:57
+#: src/views/SpecialQuiz/SpecialQuizDone.js:163
 #: src/views/admin/quizzes/QuizCorrect.js:149
 #: src/views/admin/specialQuizzes/SpecialQuizCorrect.js:149
 msgid "Resposta dada"
@@ -2478,7 +2483,7 @@ msgid "Setúbal"
 msgstr "Setúbal"
 
 #: src/views/Question.js:228
-#: src/views/SpecialQuiz/SpecialQuizDone.js:152
+#: src/views/SpecialQuiz/SpecialQuizDone.js:174
 msgid "Sim"
 msgstr "Sim"
 
@@ -2760,7 +2765,7 @@ msgstr "Togo"
 msgid "Tonga"
 msgstr "Tonga"
 
-#: src/views/SpecialQuiz/SpecialQuizDone.js:36
+#: src/views/SpecialQuiz/SpecialQuizDone.js:44
 msgid "Total"
 msgstr "Total"
 

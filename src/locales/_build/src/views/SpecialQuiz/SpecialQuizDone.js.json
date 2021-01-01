@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/SpecialQuiz/SpecialQuizDone.js",
-        20
+        28
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/views/SpecialQuiz/SpecialQuizDone.js",
-        28
+        36
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/views/SpecialQuiz/SpecialQuizDone.js",
-        36
+        44
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/views/SpecialQuiz/SpecialQuizDone.js",
-        111
+        119
       ]
     ]
   },
@@ -35,7 +35,7 @@
     "origin": [
       [
         "src/views/SpecialQuiz/SpecialQuizDone.js",
-        121
+        129
       ]
     ]
   },
@@ -43,35 +43,11 @@
     "origin": [
       [
         "src/views/SpecialQuiz/SpecialQuizDone.js",
-        131
+        139
       ]
     ]
   },
-  "Resposta dada": {
-    "origin": [
-      [
-        "src/views/SpecialQuiz/SpecialQuizDone.js",
-        141
-      ]
-    ]
-  },
-  "Joker usado": {
-    "origin": [
-      [
-        "src/views/SpecialQuiz/SpecialQuizDone.js",
-        149
-      ]
-    ]
-  },
-  "Sim": {
-    "origin": [
-      [
-        "src/views/SpecialQuiz/SpecialQuizDone.js",
-        152
-      ]
-    ]
-  },
-  "Não": {
+  "Mostrar resposta": {
     "origin": [
       [
         "src/views/SpecialQuiz/SpecialQuizDone.js",
@@ -79,11 +55,43 @@
       ]
     ]
   },
+  "Resposta dada": {
+    "origin": [
+      [
+        "src/views/SpecialQuiz/SpecialQuizDone.js",
+        163
+      ]
+    ]
+  },
+  "Joker usado": {
+    "origin": [
+      [
+        "src/views/SpecialQuiz/SpecialQuizDone.js",
+        171
+      ]
+    ]
+  },
+  "Sim": {
+    "origin": [
+      [
+        "src/views/SpecialQuiz/SpecialQuizDone.js",
+        174
+      ]
+    ]
+  },
+  "Não": {
+    "origin": [
+      [
+        "src/views/SpecialQuiz/SpecialQuizDone.js",
+        176
+      ]
+    ]
+  },
   "Percentagem de acerto": {
     "origin": [
       [
         "src/views/SpecialQuiz/SpecialQuizDone.js",
-        162
+        184
       ]
     ]
   }
