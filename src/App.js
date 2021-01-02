@@ -17,6 +17,7 @@ import Notifications from 'partials/Notifications';
 import Message from 'partials/Message';
 import Blocked from 'components/Blocked';
 import Logger from 'components/Logger';
+import Error from 'components/Error';
 
 import pt from 'date-fns/locale/pt';
 registerLocale('pt', pt);
@@ -55,25 +56,29 @@ const App = () => {
           <Notifications />
           <main className="section">
             <div className="container">
-              <Switch>
-                {routes.map((route) => {
-                  const title =
-                    route.path === '/'
-                      ? process.env.REACT_APP_NAME
-                      : `${process.env.REACT_APP_NAME} | ${
-                          catalogs[language].messages[route.title.props.id]
-                        }`;
-                  const newProps = {
-                    ...route,
-                    title,
-                    exact: !!route.path && !route.loose,
-                  };
-                  if (user && user.valid_roles.blocked && !route.free) {
-                    newProps.component = Blocked;
-                  }
-                  return <RouteWithTitle key={title} {...newProps} />;
-                })}
-              </Switch>
+              {online ? (
+                <Switch>
+                  {routes.map((route) => {
+                    const title =
+                      route.path === '/'
+                        ? process.env.REACT_APP_NAME
+                        : `${process.env.REACT_APP_NAME} | ${
+                            catalogs[language].messages[route.title.props.id]
+                          }`;
+                    const newProps = {
+                      ...route,
+                      title,
+                      exact: !!route.path && !route.loose,
+                    };
+                    if (user && user.valid_roles.blocked && !route.free) {
+                      newProps.component = Blocked;
+                    }
+                    return <RouteWithTitle key={title} {...newProps} />;
+                  })}
+                </Switch>
+              ) : (
+                <Error status={666} />
+              )}
             </div>
           </main>
           {online && <Message />}
