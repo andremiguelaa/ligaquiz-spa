@@ -15,7 +15,7 @@ import logoEquizition from 'img/logo_equizition.png';
 import logoEquizitionDark from 'img/logo_equizition_dark.png';
 import classes from './Header.module.scss';
 
-const version = '4.19.0';
+const version = '4.20.0';
 
 const isDarkMode =
   window.matchMedia &&
@@ -102,11 +102,15 @@ const Header = () => {
                         <i className="fa fa-btn fa-trophy" />
                         &nbsp;<Trans>Taça</Trans>
                       </Link>
+                      <Link to="/genre-rankings" className="navbar-item">
+                        <i className="fa fa-btn fa-shield" />
+                        &nbsp;<Trans>Rankings temáticos</Trans>
+                      </Link>
                     </>
                   )}
                 {user && (
                   <Link to="/profile" className="navbar-item">
-                    <i className="fa fa-btn fa-certificate" />
+                    <i className="fa fa-btn fa-user" />
                     &nbsp;<Trans>O meu perfil</Trans>
                   </Link>
                 )}
@@ -287,17 +291,13 @@ const Header = () => {
                               <i className="fa fa-btn fa-share-alt" />
                               &nbsp;<Trans>Convites</Trans>
                             </Link>
-                            <Link to="/genre-rankings" className="navbar-item">
-                              <i className="fa fa-btn fa-shield" />
-                              &nbsp;<Trans>Rankings temáticos</Trans>
-                            </Link>
                             <Link to="/seasons" className="navbar-item">
-                              <i className="fa fa-btn fa-archive" />
-                              &nbsp;<Trans>Arquivo de temporadas</Trans>
+                              <i className="fa fa-btn fa-calendar" />
+                              &nbsp;<Trans>Temporadas</Trans>
                             </Link>
                             <Link to="/quizzes" className="navbar-item">
-                              <i className="fa fa-btn fa-archive" />
-                              &nbsp;<Trans>Arquivo de quizzes</Trans>
+                              <i className="fa fa-btn fa-question-circle-o" />
+                              &nbsp;<Trans>Quizzes</Trans>
                             </Link>
                           </>
                         )}
@@ -307,8 +307,8 @@ const Header = () => {
                           user.valid_roles.special_quiz_player) && (
                           <>
                             <Link to="/special-quizzes" className="navbar-item">
-                              <i className="fa fa-btn fa-archive" />
-                              &nbsp;<Trans>Arquivo de quizzes especiais</Trans>
+                              <i className="fa fa-btn fa-question-circle-o" />
+                              &nbsp;<Trans>Quizzes especiais</Trans>
                             </Link>
                           </>
                         )}

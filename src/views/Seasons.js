@@ -85,6 +85,12 @@ const Seasons = () => {
                         ),
                         render: (item) => (
                           <>
+                            <Link
+                              to={`/ranking/${item.season}`}
+                              className={classes.action}
+                            >
+                              <Trans>Liga</Trans>
+                            </Link>
                             {item.hasCup && (
                               <Link
                                 to={`/cup/${item.season}`}
@@ -98,12 +104,6 @@ const Seasons = () => {
                               className={classes.action}
                             >
                               <Trans>Rankings temáticos</Trans>
-                            </Link>
-                            <Link
-                              to={`/ranking/${item.season}`}
-                              className={classes.action}
-                            >
-                              <Trans>Classificação</Trans>
                             </Link>
                           </>
                         ),

@@ -117,6 +117,7 @@ const Tier = ({
                   </label>
                 </div>
               ))}
+              <br />
             </>
           }
           action={() => {

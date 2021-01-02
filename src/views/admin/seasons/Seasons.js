@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useParams, useHistory } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 import { toast } from 'react-toastify';
+import classnames from 'classnames';
 
 import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
@@ -11,6 +12,8 @@ import Error from 'components/Error';
 import PageHeader from 'components/PageHeader';
 import EmptyState from 'components/EmptyState';
 import PaginatedTable from 'components/PaginatedTable';
+
+import classes from './Seasons.module.scss';
 
 const Seasons = () => {
   const { page } = useParams();
@@ -28,8 +31,23 @@ const Seasons = () => {
   const getSeasons = () => {
     setSeasons();
     ApiRequest.get('seasons')
-      .then(({ data }) => {
-        setSeasons(data);
+      .then(({ data: seasonsData }) => {
+        ApiRequest.get(`cups`)
+          .then(({ data: cupsData }) => {
+            const cupsBySeasonId = cupsData.reduce((acc, item) => {
+              acc[item.season_id] = item;
+              return acc;
+            }, {});
+            setSeasons(
+              seasonsData.map((season) => ({
+                ...season,
+                hasCup: Boolean(cupsBySeasonId[season.id]),
+              }))
+            );
+          })
+          .catch(({ response }) => {
+            setError(response?.status);
+          });
       })
       .catch(({ response }) => {
         setError(response?.status);
@@ -90,15 +108,29 @@ const Seasons = () => {
                 columns={[
                   {
                     id: 'season',
+                    className: classnames('is-vertical-middle', classes.season),
+                    render: (item) => <Trans>Temporada {item.season}</Trans>,
+                  },
+                  {
+                    id: 'competitions',
                     className: 'is-vertical-middle',
                     render: (item) => (
                       <>
-                        {item.leagues.length > 0 ? (
-                          <Link to={`/ranking/${item.season}`}>
-                            <Trans>Temporada {item.season}</Trans>
+                        {item.leagues.length > 0 && (
+                          <Link
+                            to={`/ranking/${item.season}`}
+                            className={classes.competition}
+                          >
+                            <Trans>Liga</Trans>
                           </Link>
-                        ) : (
-                          <Trans>Temporada {item.season}</Trans>
+                        )}
+                        {item.hasCup && (
+                          <Link
+                            to={`/cup/${item.season}`}
+                            className={classes.competition}
+                          >
+                            <Trans>Taça</Trans>
+                          </Link>
                         )}
                       </>
                     ),

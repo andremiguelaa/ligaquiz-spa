@@ -1,0 +1,10 @@
+.season {
+  white-space: nowrap;
+  width: 160px;
+}
+.competition {
+  white-space: nowrap;
+  & + .competition {
+    margin-left: 1rem;
+  }
+}

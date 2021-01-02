@@ -182,7 +182,7 @@ const Cup = () => {
                 <>
                   <h2 className="is-size-5">
                     {renderRoundTitle(
-                      cupData.rounds[0].games.length / (2 * index)
+                      cupData.rounds[0].games.length / Math.pow(2, index)
                     )}{' '}
                     ({convertToLongDate(round.date, language)})
                   </h2>
