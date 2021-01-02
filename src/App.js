@@ -56,29 +56,25 @@ const App = () => {
           <Notifications />
           <main className="section">
             <div className="container">
-              {online ? (
-                <Switch>
-                  {routes.map((route) => {
-                    const title =
-                      route.path === '/'
-                        ? process.env.REACT_APP_NAME
-                        : `${process.env.REACT_APP_NAME} | ${
-                            catalogs[language].messages[route.title.props.id]
-                          }`;
-                    const newProps = {
-                      ...route,
-                      title,
-                      exact: !!route.path && !route.loose,
-                    };
-                    if (user && user.valid_roles.blocked && !route.free) {
-                      newProps.component = Blocked;
-                    }
-                    return <RouteWithTitle key={title} {...newProps} />;
-                  })}
-                </Switch>
-              ) : (
-                <Error status={666} />
-              )}
+              <Switch>
+                {routes.map((route) => {
+                  const title =
+                    route.path === '/'
+                      ? process.env.REACT_APP_NAME
+                      : `${process.env.REACT_APP_NAME} | ${
+                          catalogs[language].messages[route.title.props.id]
+                        }`;
+                  const newProps = {
+                    ...route,
+                    title,
+                    exact: !!route.path && !route.loose,
+                  };
+                  if (user && user.valid_roles.blocked && !route.free) {
+                    newProps.component = Blocked;
+                  }
+                  return <RouteWithTitle key={title} {...newProps} />;
+                })}
+              </Switch>
             </div>
           </main>
           {online && <Message />}

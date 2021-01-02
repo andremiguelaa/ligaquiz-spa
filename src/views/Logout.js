@@ -13,14 +13,12 @@ const Logout = () => {
 
   useEffect(() => {
     if (user) {
-      ApiRequest.delete('session').finally(() => {
-        Cookies.remove('AUTH-TOKEN');
-        dispatch({
-          type: 'user.logout',
-        });
-        history.push('/');
-        window.location.reload();
+      Cookies.remove('AUTH-TOKEN');
+      dispatch({
+        type: 'user.logout',
       });
+      history.push('/');
+      ApiRequest.delete('session');
     }
   });
 

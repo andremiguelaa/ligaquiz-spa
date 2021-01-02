@@ -65,7 +65,7 @@ button.navbar-link {
   text-align: left;
 }
 
-.is-link {
+.is-link:not(.button) {
   font-family: inherit;
   background-color: transparent;
   border: none;
