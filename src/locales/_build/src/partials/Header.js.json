@@ -39,11 +39,19 @@
       ]
     ]
   },
+  "Rankings temáticos": {
+    "origin": [
+      [
+        "src/partials/Header.js",
+        107
+      ]
+    ]
+  },
   "O meu perfil": {
     "origin": [
       [
         "src/partials/Header.js",
-        110
+        114
       ]
     ]
   },
@@ -51,7 +59,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        116
+        120
       ]
     ]
   },
@@ -59,7 +67,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        143
+        147
       ]
     ]
   },
@@ -67,7 +75,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        146
+        150
       ]
     ]
   },
@@ -75,7 +83,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        177
+        181
       ]
     ]
   },
@@ -83,7 +91,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        181
+        185
       ]
     ]
   },
@@ -91,7 +99,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        188
+        192
       ]
     ]
   },
@@ -99,7 +107,11 @@
     "origin": [
       [
         "src/partials/Header.js",
-        192
+        196
+      ],
+      [
+        "src/partials/Header.js",
+        296
       ]
     ]
   },
@@ -107,7 +119,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        204
+        208
       ]
     ]
   },
@@ -115,7 +127,11 @@
     "origin": [
       [
         "src/partials/Header.js",
-        211
+        215
+      ],
+      [
+        "src/partials/Header.js",
+        300
       ]
     ]
   },
@@ -123,7 +139,11 @@
     "origin": [
       [
         "src/partials/Header.js",
-        222
+        226
+      ],
+      [
+        "src/partials/Header.js",
+        311
       ]
     ]
   },
@@ -131,7 +151,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        230
+        234
       ]
     ]
   },
@@ -139,7 +159,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        241
+        245
       ]
     ]
   },
@@ -147,7 +167,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        252
+        256
       ]
     ]
   },
@@ -155,7 +175,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        259
+        263
       ]
     ]
   },
@@ -163,7 +183,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        266
+        270
       ]
     ]
   },
@@ -171,7 +191,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        273
+        277
       ]
     ]
   },
@@ -179,7 +199,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        280
+        284
       ]
     ]
   },
@@ -187,39 +207,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        288
-      ]
-    ]
-  },
-  "Rankings temáticos": {
-    "origin": [
-      [
-        "src/partials/Header.js",
         292
-      ]
-    ]
-  },
-  "Arquivo de temporadas": {
-    "origin": [
-      [
-        "src/partials/Header.js",
-        296
-      ]
-    ]
-  },
-  "Arquivo de quizzes": {
-    "origin": [
-      [
-        "src/partials/Header.js",
-        300
-      ]
-    ]
-  },
-  "Arquivo de quizzes especiais": {
-    "origin": [
-      [
-        "src/partials/Header.js",
-        311
       ]
     ]
   },

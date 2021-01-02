@@ -1,0 +1,142 @@
+{
+  "Taça gravada com sucesso.": {
+    "origin": [
+      [
+        "src/views/admin/seasons/Cup.js",
+        58
+      ]
+    ]
+  },
+  "Não foi possível gravar a taça.": {
+    "origin": [
+      [
+        "src/views/admin/seasons/Cup.js",
+        61
+      ]
+    ]
+  },
+  "Taça criada com sucesso.": {
+    "origin": [
+      [
+        "src/views/admin/seasons/Cup.js",
+        73
+      ]
+    ]
+  },
+  "Não foi possível criar a taça.": {
+    "origin": [
+      [
+        "src/views/admin/seasons/Cup.js",
+        76
+      ]
+    ]
+  },
+  "Taça apagada com sucesso.": {
+    "origin": [
+      [
+        "src/views/admin/seasons/Cup.js",
+        92
+      ]
+    ]
+  },
+  "Não foi possível apagar a taça.": {
+    "origin": [
+      [
+        "src/views/admin/seasons/Cup.js",
+        95
+      ]
+    ]
+  },
+  "Taça": {
+    "origin": [
+      [
+        "src/views/admin/seasons/Cup.js",
+        112
+      ]
+    ]
+  },
+  "Remover taça": {
+    "origin": [
+      [
+        "src/views/admin/seasons/Cup.js",
+        128
+      ]
+    ]
+  },
+  "Jogadores": {
+    "origin": [
+      [
+        "src/views/admin/seasons/Cup.js",
+        135
+      ]
+    ]
+  },
+  "Editar jogadores": {
+    "origin": [
+      [
+        "src/views/admin/seasons/Cup.js",
+        159
+      ],
+      [
+        "src/views/admin/seasons/Cup.js",
+        206
+      ]
+    ]
+  },
+  "Jornadas": {
+    "origin": [
+      [
+        "src/views/admin/seasons/Cup.js",
+        166
+      ]
+    ]
+  },
+  "Jornada {0}": {
+    "origin": [
+      [
+        "src/views/admin/seasons/Cup.js",
+        197
+      ]
+    ]
+  },
+  "Selecciona os jogadores que farão parte desta edição da taça:": {
+    "origin": [
+      [
+        "src/views/admin/seasons/Cup.js",
+        209
+      ]
+    ]
+  },
+  "Seleccionar todos": {
+    "origin": [
+      [
+        "src/views/admin/seasons/Cup.js",
+        222
+      ]
+    ]
+  },
+  "Gravar taça": {
+    "origin": [
+      [
+        "src/views/admin/seasons/Cup.js",
+        279
+      ]
+    ]
+  },
+  "Apagar taça": {
+    "origin": [
+      [
+        "src/views/admin/seasons/Cup.js",
+        288
+      ]
+    ]
+  },
+  "Tens a certeza que queres apagar a taça?": {
+    "origin": [
+      [
+        "src/views/admin/seasons/Cup.js",
+        289
+      ]
+    ]
+  }
+}

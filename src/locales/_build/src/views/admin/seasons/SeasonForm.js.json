@@ -1,41 +1,9 @@
 {
-  "Temporada gravada com sucesso.": {
-    "origin": [
-      [
-        "src/views/admin/seasons/SeasonForm.js",
-        125
-      ]
-    ]
-  },
-  "Não foi possível gravar a temporada.": {
-    "origin": [
-      [
-        "src/views/admin/seasons/SeasonForm.js",
-        128
-      ]
-    ]
-  },
-  "Temporada criada com sucesso.": {
-    "origin": [
-      [
-        "src/views/admin/seasons/SeasonForm.js",
-        135
-      ]
-    ]
-  },
-  "Não foi possível criar a temporada.": {
-    "origin": [
-      [
-        "src/views/admin/seasons/SeasonForm.js",
-        139
-      ]
-    ]
-  },
   "Criar temporada": {
     "origin": [
       [
         "src/views/admin/seasons/SeasonForm.js",
-        187
+        70
       ]
     ]
   },
@@ -43,47 +11,7 @@
     "origin": [
       [
         "src/views/admin/seasons/SeasonForm.js",
-        189
-      ]
-    ]
-  },
-  "Datas": {
-    "origin": [
-      [
-        "src/views/admin/seasons/SeasonForm.js",
-        197
-      ]
-    ]
-  },
-  "Jornada {0}": {
-    "origin": [
-      [
-        "src/views/admin/seasons/SeasonForm.js",
-        203
-      ]
-    ]
-  },
-  "Divisões": {
-    "origin": [
-      [
-        "src/views/admin/seasons/SeasonForm.js",
-        241
-      ]
-    ]
-  },
-  "Adicionar divisão": {
-    "origin": [
-      [
-        "src/views/admin/seasons/SeasonForm.js",
-        280
-      ]
-    ]
-  },
-  "Gravar": {
-    "origin": [
-      [
-        "src/views/admin/seasons/SeasonForm.js",
-        295
+        72
       ]
     ]
   }

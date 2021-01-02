@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/admin/seasons/Seasons.js",
-        43
+        61
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/views/admin/seasons/Seasons.js",
-        48
+        66
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/views/admin/seasons/Seasons.js",
-        69
+        87
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/views/admin/seasons/Seasons.js",
-        80
+        98
       ]
     ]
   },
@@ -35,11 +35,23 @@
     "origin": [
       [
         "src/views/admin/seasons/Seasons.js",
-        98
-      ],
+        112
+      ]
+    ]
+  },
+  "Liga": {
+    "origin": [
       [
         "src/views/admin/seasons/Seasons.js",
-        101
+        124
+      ]
+    ]
+  },
+  "Taça": {
+    "origin": [
+      [
+        "src/views/admin/seasons/Seasons.js",
+        132
       ]
     ]
   },
@@ -47,7 +59,7 @@
     "origin": [
       [
         "src/views/admin/seasons/Seasons.js",
-        148
+        180
       ]
     ]
   },
@@ -55,7 +67,7 @@
     "origin": [
       [
         "src/views/admin/seasons/Seasons.js",
-        158
+        190
       ]
     ]
   },
@@ -63,7 +75,7 @@
     "origin": [
       [
         "src/views/admin/seasons/Seasons.js",
-        159
+        191
       ]
     ]
   }

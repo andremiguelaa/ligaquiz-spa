@@ -1,0 +1,82 @@
+{
+  "Temporada gravada com sucesso.": {
+    "origin": [
+      [
+        "src/views/admin/seasons/League.js",
+        94
+      ]
+    ]
+  },
+  "Não foi possível gravar a temporada.": {
+    "origin": [
+      [
+        "src/views/admin/seasons/League.js",
+        97
+      ]
+    ]
+  },
+  "Temporada criada com sucesso.": {
+    "origin": [
+      [
+        "src/views/admin/seasons/League.js",
+        104
+      ]
+    ]
+  },
+  "Não foi possível criar a temporada.": {
+    "origin": [
+      [
+        "src/views/admin/seasons/League.js",
+        108
+      ]
+    ]
+  },
+  "Liga": {
+    "origin": [
+      [
+        "src/views/admin/seasons/League.js",
+        143
+      ]
+    ]
+  },
+  "Datas": {
+    "origin": [
+      [
+        "src/views/admin/seasons/League.js",
+        147
+      ]
+    ]
+  },
+  "Jornada {0}": {
+    "origin": [
+      [
+        "src/views/admin/seasons/League.js",
+        153
+      ]
+    ]
+  },
+  "Divisões": {
+    "origin": [
+      [
+        "src/views/admin/seasons/League.js",
+        191
+      ]
+    ]
+  },
+  "Adicionar divisão": {
+    "origin": [
+      [
+        "src/views/admin/seasons/League.js",
+        230
+      ]
+    ]
+  },
+  "Gravar liga": {
+    "origin": [
+      [
+        "src/views/admin/seasons/League.js",
+        245
+      ]
+    ]
+  }
+}

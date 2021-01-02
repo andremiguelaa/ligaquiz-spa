@@ -94,7 +94,7 @@ msgstr "A tua subscrição para jogar quizzes especiais termina hoje."
 msgid "Acções"
 msgstr "Acções"
 
-#: src/views/admin/seasons/SeasonForm.js:280
+#: src/views/admin/seasons/League.js:230
 msgid "Adicionar divisão"
 msgstr "Adicionar divisão"
 
@@ -122,7 +122,7 @@ msgstr "Adicionar provas mensais"
 msgid "Administrador"
 msgstr "Administrador"
 
-#: src/partials/Header.js:177
+#: src/partials/Header.js:181
 msgid "Administração"
 msgstr "Administração"
 
@@ -169,7 +169,7 @@ msgstr "Anterior"
 msgid "Antígua and Barbuda"
 msgstr "Antígua and Barbuda"
 
-#: src/views/admin/seasons/Tier.js:137
+#: src/views/admin/seasons/Tier.js:138
 msgid "Apagar divisão"
 msgstr "Apagar divisão"
 
@@ -197,7 +197,11 @@ msgstr "Apagar quiz especial"
 msgid "Apagar ranking mensal"
 msgstr "Apagar ranking mensal"
 
-#: src/views/admin/seasons/Seasons.js:158
+#: src/views/admin/seasons/Cup.js:288
+msgid "Apagar taça"
+msgstr "Apagar taça"
+
+#: src/views/admin/seasons/Seasons.js:190
 msgid "Apagar temporada"
 msgstr "Apagar temporada"
 
@@ -227,19 +231,16 @@ msgstr "Arquitectura"
 msgid "Arquivo"
 msgstr "Arquivo"
 
-#: src/partials/Header.js:300
 #: src/routes.js:134
 #: src/views/Quizzes.js:49
 msgid "Arquivo de quizzes"
 msgstr "Arquivo de quizzes"
 
-#: src/partials/Header.js:311
 #: src/routes.js:139
 #: src/views/SpecialQuizzes.js:65
 msgid "Arquivo de quizzes especiais"
 msgstr "Arquivo de quizzes especiais"
 
-#: src/partials/Header.js:296
 #: src/routes.js:129
 #: src/views/Seasons.js:63
 msgid "Arquivo de temporadas"
@@ -477,7 +478,6 @@ msgstr "Ciências Sociais"
 #: src/views/Profile/League.js:41
 #: src/views/Profile/SpecialQuizzes.js:55
 #: src/views/Ranking.js:143
-#: src/views/Seasons.js:106
 #: src/views/SpecialQuiz/SpecialQuizDone.js:28
 msgid "Classificação"
 msgstr "Classificação"
@@ -522,7 +522,7 @@ msgstr "Comunicação Social e Redes Sociais"
 msgid "Confirmação da palavra-passe"
 msgstr "Confirmação da palavra-passe"
 
-#: src/partials/Header.js:280
+#: src/partials/Header.js:284
 #: src/routes.js:82
 #: src/views/Account.js:139
 msgid "Conta"
@@ -541,7 +541,7 @@ msgstr "Conteúdo não encontrado."
 msgid "Convite enviado com sucesso."
 msgstr "Convite enviado com sucesso."
 
-#: src/partials/Header.js:288
+#: src/partials/Header.js:292
 #: src/routes.js:93
 #: src/views/Invitations.js:77
 msgid "Convites"
@@ -614,8 +614,8 @@ msgstr "Criar quiz"
 msgid "Criar quiz especial"
 msgstr "Criar quiz especial"
 
-#: src/views/admin/seasons/SeasonForm.js:187
-#: src/views/admin/seasons/Seasons.js:80
+#: src/views/admin/seasons/SeasonForm.js:70
+#: src/views/admin/seasons/Seasons.js:98
 msgid "Criar temporada"
 msgstr "Criar temporada"
 
@@ -667,7 +667,7 @@ msgstr "Data de nascimento"
 msgid "Data do quiz"
 msgstr "Data do quiz"
 
-#: src/views/admin/seasons/SeasonForm.js:197
+#: src/views/admin/seasons/League.js:147
 msgid "Datas"
 msgstr "Datas"
 
@@ -719,7 +719,7 @@ msgstr "Distrito/Região"
 msgid "Divisão"
 msgstr "Divisão"
 
-#: src/views/admin/seasons/SeasonForm.js:241
+#: src/views/admin/seasons/League.js:191
 msgid "Divisões"
 msgstr "Divisões"
 
@@ -751,6 +751,8 @@ msgstr "EdV"
 msgid "Editar jogador"
 msgstr "Editar jogador"
 
+#: src/views/admin/seasons/Cup.js:159
+#: src/views/admin/seasons/Cup.js:206
 #: src/views/admin/seasons/Tier.js:54
 #: src/views/admin/seasons/Tier.js:82
 msgid "Editar jogadores"
@@ -776,7 +778,7 @@ msgstr "Editar quiz de {0}"
 msgid "Editar quiz especial de {0}"
 msgstr "Editar quiz especial de {0}"
 
-#: src/views/admin/seasons/SeasonForm.js:189
+#: src/views/admin/seasons/SeasonForm.js:72
 msgid "Editar temporada {season}"
 msgstr "Editar temporada {season}"
 
@@ -811,7 +813,7 @@ msgstr "Empates"
 msgid "Ent"
 msgstr "Ent"
 
-#: src/partials/Header.js:143
+#: src/partials/Header.js:147
 #: src/routes.js:56
 #: src/views/Login.js:53
 #: src/views/Login.js:109
@@ -937,10 +939,6 @@ msgstr "Estatísticas"
 msgid "Estatísticas de pergunta"
 msgstr "Estatísticas de pergunta"
 
-#: src/views/Profile.js:58
-#~ msgid "Estatísticas de {0} {1}"
-#~ msgstr "Estatísticas de {0} {1}"
-
 #: src/views/Quiz/OpponentsStats.js:126
 msgid "Estatísticas do adversário"
 msgstr "Estatísticas do adversário"
@@ -1045,11 +1043,11 @@ msgstr "Geologia"
 msgid "Gestor de Ranking Nacional"
 msgstr "Gestor de Ranking Nacional"
 
-#: src/partials/Header.js:204
+#: src/partials/Header.js:208
 msgid "Gestão de Quizzes"
 msgstr "Gestão de Quizzes"
 
-#: src/partials/Header.js:252
+#: src/partials/Header.js:256
 msgid "Gestão de Ranking Nacional"
 msgstr "Gestão de Ranking Nacional"
 
@@ -1069,11 +1067,18 @@ msgstr "Granada"
 #: src/views/Account.js:477
 #: src/views/admin/nationalRanking/Players/Form.js:260
 #: src/views/admin/quizzes/QuizForm.js:223
-#: src/views/admin/seasons/SeasonForm.js:295
 #: src/views/admin/specialQuizzes/SpecialQuizForm.js:259
 #: src/views/admin/translate/Translate.js:158
 msgid "Gravar"
 msgstr "Gravar"
+
+#: src/views/admin/seasons/League.js:245
+msgid "Gravar liga"
+msgstr "Gravar liga"
+
+#: src/views/admin/seasons/Cup.js:279
+msgid "Gravar taça"
+msgstr "Gravar taça"
 
 #: src/utils/getRegionTranslation.js:99
 msgid "Grécia"
@@ -1255,8 +1260,9 @@ msgstr "Jogador de quizzes especiais"
 msgid "Jogador regular"
 msgstr "Jogador regular"
 
-#: src/partials/Header.js:273
+#: src/partials/Header.js:277
 #: src/views/admin/nationalRanking/Players/List.js:85
+#: src/views/admin/seasons/Cup.js:135
 msgid "Jogadores"
 msgstr "Jogadores"
 
@@ -1290,13 +1296,18 @@ msgstr "Joker usado"
 msgid "Jordânia"
 msgstr "Jordânia"
 
-#: src/views/admin/seasons/SeasonForm.js:203
+#: src/views/admin/seasons/Cup.js:197
+#: src/views/admin/seasons/League.js:153
 msgid "Jornada {0}"
 msgstr "Jornada {0}"
 
 #: src/views/Ranking/Rounds.js:54
 msgid "Jornada {0} ({1})"
 msgstr "Jornada {0} ({1})"
+
+#: src/views/admin/seasons/Cup.js:166
+msgid "Jornadas"
+msgstr "Jornadas"
 
 #: src/views/Account.js:319
 #: src/views/Register.js:245
@@ -1340,6 +1351,9 @@ msgid "Liechtenstein"
 msgstr "Liechtenstein"
 
 #: src/views/Quiz/OpponentsStats.js:141
+#: src/views/Seasons.js:92
+#: src/views/admin/seasons/League.js:143
+#: src/views/admin/seasons/Seasons.js:124
 msgid "Liga"
 msgstr "Liga"
 
@@ -1591,7 +1605,7 @@ msgstr "Notificação de quiz regular (22h00)"
 msgid "Notificação editada com sucesso."
 msgstr "Notificação editada com sucesso."
 
-#: src/partials/Header.js:188
+#: src/partials/Header.js:192
 #: src/routes.js:204
 #: src/views/admin/notifications/Notifications.js:48
 msgid "Notificações"
@@ -1633,7 +1647,11 @@ msgstr "Não foi possível actualizar o utilizador."
 msgid "Não foi possível alterar o estado."
 msgstr "Não foi possível alterar o estado."
 
-#: src/views/admin/seasons/Seasons.js:48
+#: src/views/admin/seasons/Cup.js:95
+msgid "Não foi possível apagar a taça."
+msgstr "Não foi possível apagar a taça."
+
+#: src/views/admin/seasons/Seasons.js:66
 msgid "Não foi possível apagar a temporada."
 msgstr "Não foi possível apagar a temporada."
 
@@ -1670,7 +1688,11 @@ msgstr "Não foi possível apagar o ranking mensal."
 msgid "Não foi possível criar a notificação."
 msgstr "Não foi possível criar a notificação."
 
-#: src/views/admin/seasons/SeasonForm.js:139
+#: src/views/admin/seasons/Cup.js:76
+msgid "Não foi possível criar a taça."
+msgstr "Não foi possível criar a taça."
+
+#: src/views/admin/seasons/League.js:108
 msgid "Não foi possível criar a temporada."
 msgstr "Não foi possível criar a temporada."
 
@@ -1702,7 +1724,11 @@ msgstr "Não foi possível enviar o convite. Tenta mais tarde."
 msgid "Não foi possível enviar o convite.<0/>Já existe um jogador com este e-mail ou já foi enviado um convite para este e-mail."
 msgstr "Não foi possível enviar o convite.<0/>Já existe um jogador com este e-mail ou já foi enviado um convite para este e-mail."
 
-#: src/views/admin/seasons/SeasonForm.js:128
+#: src/views/admin/seasons/Cup.js:61
+msgid "Não foi possível gravar a taça."
+msgstr "Não foi possível gravar a taça."
+
+#: src/views/admin/seasons/League.js:97
 msgid "Não foi possível gravar a temporada."
 msgstr "Não foi possível gravar a temporada."
 
@@ -1757,7 +1783,7 @@ msgstr "Níger"
 msgid "Número {0} no <0>Ranking Nacional</0>"
 msgstr "Número {0} no <0>Ranking Nacional</0>"
 
-#: src/partials/Header.js:110
+#: src/partials/Header.js:114
 #: src/views/Profile.js:62
 msgid "O meu perfil"
 msgstr "O meu perfil"
@@ -1895,7 +1921,7 @@ msgstr "Percentagem de respostas correctas"
 msgid "Percentagem global de acerto"
 msgstr "Percentagem global de acerto"
 
-#: src/App.js:38
+#: src/App.js:37
 msgid "Perdeste a ligação à internet."
 msgstr "Perdeste a ligação à internet."
 
@@ -1942,13 +1968,13 @@ msgstr "Permissões"
 msgid "Peru"
 msgstr "Peru"
 
-#: src/partials/Header.js:230
+#: src/partials/Header.js:234
 #: src/routes.js:269
 #: src/views/admin/questions/Questions.js:153
 msgid "Pesquisa de perguntas"
 msgstr "Pesquisa de perguntas"
 
-#: src/partials/Header.js:241
+#: src/partials/Header.js:245
 #: src/routes.js:274
 #: src/views/admin/externalQuestions/ExternalQuestions.js:174
 msgid "Pesquisa de perguntas externas"
@@ -2036,7 +2062,7 @@ msgstr "Prova"
 msgid "Provas individuais"
 msgstr "Provas individuais"
 
-#: src/partials/Header.js:266
+#: src/partials/Header.js:270
 #: src/views/admin/nationalRanking/Events/List.js:75
 msgid "Provas mensais"
 msgstr "Provas mensais"
@@ -2166,7 +2192,8 @@ msgstr "Quiz | Criar"
 msgid "Quiz | Editar"
 msgstr "Quiz | Editar"
 
-#: src/partials/Header.js:211
+#: src/partials/Header.js:215
+#: src/partials/Header.js:300
 #: src/routes.js:214
 #: src/views/NationalRanking.js:240
 #: src/views/admin/quizzes/Quizzes.js:83
@@ -2177,7 +2204,8 @@ msgstr "Quizzes"
 msgid "Quizzes Especiais"
 msgstr "Quizzes Especiais"
 
-#: src/partials/Header.js:222
+#: src/partials/Header.js:226
+#: src/partials/Header.js:311
 #: src/routes.js:234
 #: src/views/Profile.js:93
 msgid "Quizzes especiais"
@@ -2196,7 +2224,7 @@ msgstr "Química"
 msgid "RC"
 msgstr "RC"
 
-#: src/partials/Header.js:116
+#: src/partials/Header.js:120
 #: src/routes.js:113
 #: src/views/NationalRanking.js:150
 #: src/views/NationalRanking.js:175
@@ -2243,15 +2271,15 @@ msgstr "Ranking mensal apagado com sucesso."
 msgid "Ranking mensal publicado com sucesso."
 msgstr "Ranking mensal publicado com sucesso."
 
-#: src/partials/Header.js:259
+#: src/partials/Header.js:263
 #: src/views/admin/nationalRanking/Rankings.js:88
 msgid "Rankings mensais"
 msgstr "Rankings mensais"
 
-#: src/partials/Header.js:292
+#: src/partials/Header.js:107
 #: src/routes.js:98
 #: src/views/GenreRanking.js:168
-#: src/views/Seasons.js:100
+#: src/views/Seasons.js:106
 msgid "Rankings temáticos"
 msgstr "Rankings temáticos"
 
@@ -2266,7 +2294,7 @@ msgstr "Recuperar palavra-passe"
 msgid "Redefinir palavra-passe"
 msgstr "Redefinir palavra-passe"
 
-#: src/partials/Header.js:146
+#: src/partials/Header.js:150
 #: src/views/Register.js:310
 msgid "Registar"
 msgstr "Registar"
@@ -2304,6 +2332,10 @@ msgstr "Remover jogador"
 #: src/views/admin/nationalRanking/Events/Form/Event.js:142
 msgid "Remover prova"
 msgstr "Remover prova"
+
+#: src/views/admin/seasons/Cup.js:128
+msgid "Remover taça"
+msgstr "Remover taça"
 
 #: src/views/admin/seasons/Tier.js:73
 msgid "Remover última divisão"
@@ -2447,9 +2479,17 @@ msgstr "Seicheles"
 msgid "Selecciona os jogadores que farão parte desta divisão:"
 msgstr "Selecciona os jogadores que farão parte desta divisão:"
 
+#: src/views/admin/seasons/Cup.js:209
+msgid "Selecciona os jogadores que farão parte desta edição da taça:"
+msgstr "Selecciona os jogadores que farão parte desta edição da taça:"
+
 #: src/views/admin/nationalRanking/Events/Form/Event.js:163
 msgid "Selecciona os jogadores que jogaram esta prova:"
 msgstr "Selecciona os jogadores que jogaram esta prova:"
+
+#: src/views/admin/seasons/Cup.js:222
+msgid "Seleccionar todos"
+msgstr "Seleccionar todos"
 
 #: src/views/Cup.js:197
 #: src/views/GenreRanking.js:238
@@ -2468,7 +2508,7 @@ msgstr "Selecciona os jogadores que jogaram esta prova:"
 #: src/views/admin/notifications/Notifications.js:142
 #: src/views/admin/questions/Questions.js:387
 #: src/views/admin/quizzes/Quizzes.js:189
-#: src/views/admin/seasons/Seasons.js:148
+#: src/views/admin/seasons/Seasons.js:180
 #: src/views/admin/specialQuizzes/SpecialQuizzes.js:197
 #: src/views/admin/users/Users.js:385
 msgid "Sem registos"
@@ -2622,9 +2662,23 @@ msgstr "Tanzânia"
 #: src/routes.js:124
 #: src/views/Cup.js:111
 #: src/views/Quiz/OpponentsStats.js:156
-#: src/views/Seasons.js:93
+#: src/views/Seasons.js:99
+#: src/views/admin/seasons/Cup.js:112
+#: src/views/admin/seasons/Seasons.js:132
 msgid "Taça"
 msgstr "Taça"
+
+#: src/views/admin/seasons/Cup.js:92
+msgid "Taça apagada com sucesso."
+msgstr "Taça apagada com sucesso."
+
+#: src/views/admin/seasons/Cup.js:73
+msgid "Taça criada com sucesso."
+msgstr "Taça criada com sucesso."
+
+#: src/views/admin/seasons/Cup.js:58
+msgid "Taça gravada com sucesso."
+msgstr "Taça gravada com sucesso."
 
 #: src/utils/getGenreTranslation.js:38
 msgid "Teatro"
@@ -2652,22 +2706,21 @@ msgstr "Tema"
 msgid "Temporada"
 msgstr "Temporada"
 
-#: src/views/admin/seasons/Seasons.js:43
+#: src/views/admin/seasons/Seasons.js:61
 msgid "Temporada apagada com sucesso."
 msgstr "Temporada apagada com sucesso."
 
-#: src/views/admin/seasons/SeasonForm.js:135
+#: src/views/admin/seasons/League.js:104
 msgid "Temporada criada com sucesso."
 msgstr "Temporada criada com sucesso."
 
-#: src/views/admin/seasons/SeasonForm.js:125
+#: src/views/admin/seasons/League.js:94
 msgid "Temporada gravada com sucesso."
 msgstr "Temporada gravada com sucesso."
 
 #: src/views/Profile/League.js:50
 #: src/views/Seasons.js:77
-#: src/views/admin/seasons/Seasons.js:98
-#: src/views/admin/seasons/Seasons.js:101
+#: src/views/admin/seasons/Seasons.js:112
 msgid "Temporada {0}"
 msgstr "Temporada {0}"
 
@@ -2685,17 +2738,22 @@ msgstr "Temporada | Criar"
 msgid "Temporada | Editar"
 msgstr "Temporada | Editar"
 
-#: src/partials/Header.js:192
+#: src/partials/Header.js:196
+#: src/partials/Header.js:296
 #: src/routes.js:254
-#: src/views/admin/seasons/Seasons.js:69
+#: src/views/admin/seasons/Seasons.js:87
 msgid "Temporadas"
 msgstr "Temporadas"
+
+#: src/views/admin/seasons/Cup.js:289
+msgid "Tens a certeza que queres apagar a taça?"
+msgstr "Tens a certeza que queres apagar a taça?"
 
 #: src/views/admin/nationalRanking/Events/List.js:147
 msgid "Tens a certeza que queres apagar as provas deste mês e os resultados associados?"
 msgstr "Tens a certeza que queres apagar as provas deste mês e os resultados associados?"
 
-#: src/views/admin/seasons/Tier.js:138
+#: src/views/admin/seasons/Tier.js:139
 msgid "Tens a certeza que queres apagar esta divisão?"
 msgstr "Tens a certeza que queres apagar esta divisão?"
 
@@ -2707,7 +2765,7 @@ msgstr "Tens a certeza que queres apagar esta notificação?"
 msgid "Tens a certeza que queres apagar esta prova e todos os resultados associados?"
 msgstr "Tens a certeza que queres apagar esta prova e todos os resultados associados?"
 
-#: src/views/admin/seasons/Seasons.js:159
+#: src/views/admin/seasons/Seasons.js:191
 msgid "Tens a certeza que queres apagar esta temporada?"
 msgstr "Tens a certeza que queres apagar esta temporada?"
 
@@ -2866,7 +2924,7 @@ msgstr "Utilizador actualizado com sucesso."
 msgid "Utilizador registado com sucesso.<0/>Clica <1>aqui</1> e usa as tuas credenciais."
 msgstr "Utilizador registado com sucesso.<0/>Clica <1>aqui</1> e usa as tuas credenciais."
 
-#: src/partials/Header.js:181
+#: src/partials/Header.js:185
 #: src/routes.js:209
 #: src/views/admin/users/Users.js:98
 msgid "Utilizadores"

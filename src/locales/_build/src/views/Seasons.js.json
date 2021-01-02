@@ -15,23 +15,23 @@
       ]
     ]
   },
+  "Liga": {
+    "origin": [
+      [
+        "src/views/Seasons.js",
+        92
+      ]
+    ]
+  },
   "Taça": {
     "origin": [
       [
         "src/views/Seasons.js",
-        93
+        99
       ]
     ]
   },
   "Rankings temáticos": {
-    "origin": [
-      [
-        "src/views/Seasons.js",
-        100
-      ]
-    ]
-  },
-  "Classificação": {
     "origin": [
       [
         "src/views/Seasons.js",
