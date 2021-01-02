@@ -17,7 +17,6 @@ import Notifications from 'partials/Notifications';
 import Message from 'partials/Message';
 import Blocked from 'components/Blocked';
 import Logger from 'components/Logger';
-import Error from 'components/Error';
 
 import pt from 'date-fns/locale/pt';
 registerLocale('pt', pt);
