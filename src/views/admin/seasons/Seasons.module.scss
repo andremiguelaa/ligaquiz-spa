@@ -1,10 +1,23 @@
+@import 'bulma/sass/utilities/initial-variables.sass';
+@import 'bulma/sass/utilities/derived-variables.scss';
+@import 'bulma/sass/utilities/mixins.sass';
+
+
 .season {
   white-space: nowrap;
   width: 160px;
+  @include mobile {
+    width: auto;
+  }
 }
+
 .competition {
   white-space: nowrap;
   & + .competition {
     margin-left: 1rem;
   }
+}
+
+.actions {
+  width: 130px;
 }

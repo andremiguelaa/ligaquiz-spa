@@ -115,9 +115,6 @@ const Event = ({
                   <span className="icon">
                     <i className="fa fa-trash"></i>
                   </span>
-                  <span>
-                    <Trans>Remover prova</Trans>
-                  </span>
                 </button>
               </div>
             </div>

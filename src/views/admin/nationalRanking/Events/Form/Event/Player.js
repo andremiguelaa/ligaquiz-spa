@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { Trans } from '@lingui/macro';
+import classnames from 'classnames';
 
 import Modal from 'components/Modal';
+
+import classes from './Player.module.scss';
 
 const Player = ({
   individualQuiz,
@@ -43,7 +46,11 @@ const Player = ({
     <>
       <div className="field has-addons">
         <div className="control">
-          <div type="button" className="button" disabled>
+          <div
+            type="button"
+            className={classnames('button', classes.username)}
+            disabled
+          >
             <span className="icon">
               <i className="fa fa-user"></i>
             </span>
@@ -52,7 +59,7 @@ const Player = ({
             </span>
           </div>
         </div>
-        <div className="control has-icons-left">
+        <div className={classnames('control', 'has-icons-left', classes.score)}>
           <input
             className="input"
             type="number"
@@ -73,9 +80,6 @@ const Player = ({
           >
             <span className="icon">
               <i className="fa fa-trash"></i>
-            </span>
-            <span>
-              <Trans>Remover jogador</Trans>
             </span>
           </button>
         </div>

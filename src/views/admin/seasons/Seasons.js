@@ -109,7 +109,16 @@ const Seasons = () => {
                   {
                     id: 'season',
                     className: classnames('is-vertical-middle', classes.season),
-                    render: (item) => <Trans>Temporada {item.season}</Trans>,
+                    render: (item) => (
+                      <>
+                        <span className="is-hidden-mobile">
+                          <Trans>Temporada {item.season}</Trans>
+                        </span>
+                        <span className="is-hidden-tablet">
+                          <Trans>T. {item.season}</Trans>
+                        </span>
+                      </>
+                    ),
                   },
                   {
                     id: 'competitions',
@@ -137,6 +146,7 @@ const Seasons = () => {
                   },
                   {
                     id: 'actions',
+                    className: classes.actions,
                     render: (item) => (
                       <>
                         <div className="buttons has-addons is-pulled-right">

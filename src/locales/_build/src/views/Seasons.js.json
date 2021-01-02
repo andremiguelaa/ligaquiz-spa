@@ -11,7 +11,15 @@
     "origin": [
       [
         "src/views/Seasons.js",
-        77
+        79
+      ]
+    ]
+  },
+  "T. {0}": {
+    "origin": [
+      [
+        "src/views/Seasons.js",
+        82
       ]
     ]
   },
@@ -19,7 +27,7 @@
     "origin": [
       [
         "src/views/Seasons.js",
-        92
+        99
       ]
     ]
   },
@@ -27,7 +35,7 @@
     "origin": [
       [
         "src/views/Seasons.js",
-        99
+        106
       ]
     ]
   },
@@ -35,7 +43,7 @@
     "origin": [
       [
         "src/views/Seasons.js",
-        106
+        113
       ]
     ]
   },
@@ -43,7 +51,7 @@
     "origin": [
       [
         "src/views/Seasons.js",
-        122
+        129
       ]
     ]
   }

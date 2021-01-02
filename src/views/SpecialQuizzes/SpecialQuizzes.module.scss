@@ -2,10 +2,6 @@
 @import "bulma/sass/utilities/derived-variables.scss";
 @import "bulma/sass/utilities/mixins.sass";
 
-.subject {
-  white-space: nowrap;
-}
-
 .author,
 .winner {
   width: 205px;
@@ -22,6 +18,6 @@
   width: 190px;
   white-space: nowrap;
   @include mobile {
-    width: auto;
+    display: none;
   }
 }

@@ -254,7 +254,6 @@ const Cup = ({ season, users, validUsers, setError }) => {
                     </label>
                   </div>
                 ))}
-              <br />
             </>
           }
           action={() => {

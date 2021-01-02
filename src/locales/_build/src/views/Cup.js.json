@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/Cup.js",
-        94
+        99
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/views/Cup.js",
-        96
+        101
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/views/Cup.js",
-        98
+        103
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/views/Cup.js",
-        100
+        105
       ]
     ]
   },
@@ -35,7 +35,7 @@
     "origin": [
       [
         "src/views/Cup.js",
-        103
+        108
       ]
     ]
   },
@@ -43,7 +43,7 @@
     "origin": [
       [
         "src/views/Cup.js",
-        111
+        116
       ]
     ]
   },
@@ -51,7 +51,7 @@
     "origin": [
       [
         "src/views/Cup.js",
-        112
+        117
       ]
     ]
   },
@@ -59,7 +59,15 @@
     "origin": [
       [
         "src/views/Cup.js",
-        175
+        308
+      ]
+    ]
+  },
+  "Isento": {
+    "origin": [
+      [
+        "src/views/Cup.js",
+        311
       ]
     ]
   },
@@ -67,7 +75,7 @@
     "origin": [
       [
         "src/views/Cup.js",
-        189
+        329
       ]
     ]
   },
@@ -75,7 +83,7 @@
     "origin": [
       [
         "src/views/Cup.js",
-        197
+        337
       ]
     ]
   }

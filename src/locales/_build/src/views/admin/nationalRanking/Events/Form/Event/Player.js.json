@@ -3,11 +3,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Events/Form/Event/Player.js",
-        78
-      ],
-      [
-        "src/views/admin/nationalRanking/Events/Form/Event/Player.js",
-        87
+        91
       ]
     ]
   },
@@ -15,7 +11,7 @@
     "origin": [
       [
         "src/views/admin/nationalRanking/Events/Form/Event/Player.js",
-        89
+        93
       ]
     ]
   }

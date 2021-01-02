@@ -74,7 +74,14 @@ const Seasons = () => {
                         id: 'season',
                         className: classes.season,
                         render: (item) => (
-                          <Trans>Temporada {item.season}</Trans>
+                          <>
+                            <span className="is-hidden-mobile">
+                              <Trans>Temporada {item.season}</Trans>
+                            </span>
+                            <span className="is-hidden-tablet">
+                              <Trans>T. {item.season}</Trans>
+                            </span>
+                          </>
                         ),
                       },
                       {

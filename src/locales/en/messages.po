@@ -49,7 +49,7 @@ msgstr "<0>We must avoid to do quizzes with the following genre combinations:</0
 msgid "<0>{0}</0> resultado a contar para o ranking"
 msgstr "<0>{0}</0> result counting to national ranking"
 
-#: src/views/Cup.js:189
+#: src/views/Cup.js:329
 msgid "A definir"
 msgstr "TBD"
 
@@ -104,7 +104,7 @@ msgid "Adicionar jogador"
 msgstr "Add player"
 
 #: src/views/admin/nationalRanking/Events/Form/Event.js:105
-#: src/views/admin/nationalRanking/Events/Form/Event.js:160
+#: src/views/admin/nationalRanking/Events/Form/Event.js:157
 msgid "Adicionar jogadores"
 msgstr "Add players"
 
@@ -169,7 +169,7 @@ msgstr "Previous"
 msgid "Antígua and Barbuda"
 msgstr "Antigua and Barbuda"
 
-#: src/views/admin/seasons/Tier.js:138
+#: src/views/admin/seasons/Tier.js:137
 msgid "Apagar divisão"
 msgstr "Delete tier"
 
@@ -197,11 +197,11 @@ msgstr "Delete special quiz"
 msgid "Apagar ranking mensal"
 msgstr "Delete month ranking"
 
-#: src/views/admin/seasons/Cup.js:288
+#: src/views/admin/seasons/Cup.js:287
 msgid "Apagar taça"
 msgstr "Delete cup"
 
-#: src/views/admin/seasons/Seasons.js:190
+#: src/views/admin/seasons/Seasons.js:200
 msgid "Apagar temporada"
 msgstr "Delete season"
 
@@ -416,8 +416,8 @@ msgstr "World Quizzing Championship"
 msgid "Campeonato Nacional de Quiz"
 msgstr "Portuguese Quizzing Championship"
 
-#: src/views/Profile/League.js:66
-#: src/views/Profile/SpecialQuizzes.js:76
+#: src/views/Profile/League.js:71
+#: src/views/Profile/SpecialQuizzes.js:85
 msgid "Campeão"
 msgstr "Champion"
 
@@ -475,8 +475,8 @@ msgstr "Social Sciences"
 
 #: src/partials/Header.js:99
 #: src/routes.js:119
-#: src/views/Profile/League.js:41
-#: src/views/Profile/SpecialQuizzes.js:55
+#: src/views/Profile/League.js:42
+#: src/views/Profile/SpecialQuizzes.js:60
 #: src/views/Ranking.js:143
 #: src/views/SpecialQuiz/SpecialQuizDone.js:28
 msgid "Classificação"
@@ -643,7 +643,7 @@ msgstr "L"
 msgid "Dança"
 msgstr "Dance"
 
-#: src/views/Profile/SpecialQuizzes.js:58
+#: src/views/Profile/SpecialQuizzes.js:65
 #: src/views/SpecialQuizzes.js:127
 #: src/views/StatisticsComparison.js:372
 msgid "Data"
@@ -1002,7 +1002,7 @@ msgstr "Philosophy"
 msgid "Fim"
 msgstr "End"
 
-#: src/views/Cup.js:100
+#: src/views/Cup.js:105
 msgid "Final"
 msgstr "Final"
 
@@ -1076,7 +1076,7 @@ msgstr "Save"
 msgid "Gravar liga"
 msgstr "Save league"
 
-#: src/views/admin/seasons/Cup.js:279
+#: src/views/admin/seasons/Cup.js:278
 msgid "Gravar taça"
 msgstr "Save cup"
 
@@ -1197,9 +1197,13 @@ msgstr "Ireland"
 msgid "Irão"
 msgstr "Iran"
 
-#: src/views/Cup.js:175
+#: src/views/Cup.js:311
+msgid "Isento"
+msgstr "Bye"
+
+#: src/views/Cup.js:308
 msgid "Isento para a próxima eliminatória"
-msgstr "Straight to the next round"
+msgstr "Bye round"
 
 #: src/utils/getRegionTranslation.js:113
 msgid "Islândia"
@@ -1351,9 +1355,9 @@ msgid "Liechtenstein"
 msgstr "Liechtenstein"
 
 #: src/views/Quiz/OpponentsStats.js:141
-#: src/views/Seasons.js:92
+#: src/views/Seasons.js:99
 #: src/views/admin/seasons/League.js:143
-#: src/views/admin/seasons/Seasons.js:124
+#: src/views/admin/seasons/Seasons.js:133
 msgid "Liga"
 msgstr "League"
 
@@ -1429,7 +1433,7 @@ msgstr "Mauritania"
 msgid "Maurícia"
 msgstr "Mauritius"
 
-#: src/views/Cup.js:98
+#: src/views/Cup.js:103
 msgid "Meias-finais"
 msgstr "Semi-finals"
 
@@ -1808,7 +1812,7 @@ msgstr "OK"
 msgid "Obrigado pela tua inscrição! O teu registo encontra-se a aguardar aprovação da equipa da {0}."
 msgstr "Thank you for signing up! Your registration is pending approval from the {0} team."
 
-#: src/views/Cup.js:94
+#: src/views/Cup.js:99
 msgid "Oitavos-de-Final"
 msgstr "Round of 16"
 
@@ -1921,7 +1925,7 @@ msgstr "Percentage of correct answers"
 msgid "Percentagem global de acerto"
 msgstr "Global percentage of correct answers"
 
-#: src/App.js:37
+#: src/App.js:38
 msgid "Perdeste a ligação à internet."
 msgstr "Internet connection lost."
 
@@ -2102,7 +2106,7 @@ msgstr "Page not found"
 msgid "Qatar"
 msgstr "Qatar"
 
-#: src/views/Cup.js:96
+#: src/views/Cup.js:101
 msgid "Quartos-de-Final"
 msgstr "Quarter-finals"
 
@@ -2279,7 +2283,7 @@ msgstr "Month rankings"
 #: src/partials/Header.js:107
 #: src/routes.js:98
 #: src/views/GenreRanking.js:168
-#: src/views/Seasons.js:106
+#: src/views/Seasons.js:113
 msgid "Rankings temáticos"
 msgstr "Genre rankings"
 
@@ -2323,13 +2327,11 @@ msgstr "United Kingdom"
 msgid "Religião e Crenças"
 msgstr "Religion and Beliefs"
 
-#: src/views/admin/nationalRanking/Events/Form/Event/Player.js:78
-#: src/views/admin/nationalRanking/Events/Form/Event/Player.js:87
+#: src/views/admin/nationalRanking/Events/Form/Event/Player.js:91
 msgid "Remover jogador"
 msgstr "Delete player"
 
-#: src/views/admin/nationalRanking/Events/Form/Event.js:119
-#: src/views/admin/nationalRanking/Events/Form/Event.js:142
+#: src/views/admin/nationalRanking/Events/Form/Event.js:139
 msgid "Remover prova"
 msgstr "Delete event"
 
@@ -2483,7 +2485,7 @@ msgstr "Select players for this tier:"
 msgid "Selecciona os jogadores que farão parte desta edição da taça:"
 msgstr "Select players to be included in this season cup:"
 
-#: src/views/admin/nationalRanking/Events/Form/Event.js:163
+#: src/views/admin/nationalRanking/Events/Form/Event.js:160
 msgid "Selecciona os jogadores que jogaram esta prova:"
 msgstr "Select players for this event:"
 
@@ -2491,15 +2493,15 @@ msgstr "Select players for this event:"
 msgid "Seleccionar todos"
 msgstr "Select all"
 
-#: src/views/Cup.js:197
+#: src/views/Cup.js:337
 #: src/views/GenreRanking.js:238
 #: src/views/Profile/IndividualQuizzes.js:39
-#: src/views/Profile/League.js:85
-#: src/views/Profile/Logs.js:87
-#: src/views/Profile/SpecialQuizzes.js:41
+#: src/views/Profile/League.js:91
+#: src/views/Profile/Logs.js:89
+#: src/views/Profile/SpecialQuizzes.js:44
 #: src/views/Quizzes.js:76
 #: src/views/Ranking.js:194
-#: src/views/Seasons.js:122
+#: src/views/Seasons.js:129
 #: src/views/SpecialQuizzes.js:143
 #: src/views/admin/externalQuestions/ExternalQuestions.js:407
 #: src/views/admin/nationalRanking/Events/List.js:159
@@ -2508,7 +2510,7 @@ msgstr "Select all"
 #: src/views/admin/notifications/Notifications.js:142
 #: src/views/admin/questions/Questions.js:387
 #: src/views/admin/quizzes/Quizzes.js:189
-#: src/views/admin/seasons/Seasons.js:180
+#: src/views/admin/seasons/Seasons.js:190
 #: src/views/admin/specialQuizzes/SpecialQuizzes.js:197
 #: src/views/admin/users/Users.js:385
 msgid "Sem registos"
@@ -2642,6 +2644,11 @@ msgstr "Syria"
 msgid "T"
 msgstr "T"
 
+#: src/views/Seasons.js:82
+#: src/views/admin/seasons/Seasons.js:118
+msgid "T. {0}"
+msgstr "S. {0}"
+
 #: src/utils/getRegionTranslation.js:203
 msgid "Tailândia"
 msgstr "Thailand"
@@ -2660,11 +2667,11 @@ msgstr "Tanzania"
 
 #: src/partials/Header.js:103
 #: src/routes.js:124
-#: src/views/Cup.js:111
+#: src/views/Cup.js:116
 #: src/views/Quiz/OpponentsStats.js:156
-#: src/views/Seasons.js:99
+#: src/views/Seasons.js:106
 #: src/views/admin/seasons/Cup.js:112
-#: src/views/admin/seasons/Seasons.js:132
+#: src/views/admin/seasons/Seasons.js:141
 msgid "Taça"
 msgstr "Cup"
 
@@ -2692,7 +2699,7 @@ msgstr "Technology and Inventions"
 msgid "Televisão"
 msgstr "TV"
 
-#: src/views/Profile/SpecialQuizzes.js:52
+#: src/views/Profile/SpecialQuizzes.js:56
 #: src/views/Profile/Statistics.js:190
 #: src/views/Quiz/OpponentStats.js:107
 #: src/views/SpecialQuizzes.js:75
@@ -2718,13 +2725,13 @@ msgstr "Season successfully created."
 msgid "Temporada gravada com sucesso."
 msgstr "Season successfully saved."
 
-#: src/views/Profile/League.js:50
-#: src/views/Seasons.js:77
-#: src/views/admin/seasons/Seasons.js:112
+#: src/views/Profile/League.js:53
+#: src/views/Seasons.js:79
+#: src/views/admin/seasons/Seasons.js:115
 msgid "Temporada {0}"
 msgstr "Season {0}"
 
-#: src/views/Cup.js:112
+#: src/views/Cup.js:117
 #: src/views/GenreRanking.js:171
 #: src/views/Ranking.js:146
 msgid "Temporada {seasonNumber}"
@@ -2745,7 +2752,7 @@ msgstr "Season | Edit"
 msgid "Temporadas"
 msgstr "Seasons"
 
-#: src/views/admin/seasons/Cup.js:289
+#: src/views/admin/seasons/Cup.js:288
 msgid "Tens a certeza que queres apagar a taça?"
 msgstr "Do you really want to delete the cup?"
 
@@ -2753,7 +2760,7 @@ msgstr "Do you really want to delete the cup?"
 msgid "Tens a certeza que queres apagar as provas deste mês e os resultados associados?"
 msgstr "Do you really want to delete this month events and their related results?"
 
-#: src/views/admin/seasons/Tier.js:139
+#: src/views/admin/seasons/Tier.js:138
 msgid "Tens a certeza que queres apagar esta divisão?"
 msgstr "Do you really want to delete this tier?"
 
@@ -2761,15 +2768,15 @@ msgstr "Do you really want to delete this tier?"
 msgid "Tens a certeza que queres apagar esta notificação?"
 msgstr "Do you really want to delete this notification?"
 
-#: src/views/admin/nationalRanking/Events/Form/Event.js:144
+#: src/views/admin/nationalRanking/Events/Form/Event.js:141
 msgid "Tens a certeza que queres apagar esta prova e todos os resultados associados?"
 msgstr "Do you really want to delete this event and its related results?"
 
-#: src/views/admin/seasons/Seasons.js:191
+#: src/views/admin/seasons/Seasons.js:201
 msgid "Tens a certeza que queres apagar esta temporada?"
 msgstr "Do you really want to delete this season?"
 
-#: src/views/admin/nationalRanking/Events/Form/Event/Player.js:89
+#: src/views/admin/nationalRanking/Events/Form/Event/Player.js:93
 msgid "Tens a certeza que queres apagar este jogador e o resultado associado?"
 msgstr "Do you really want to delete this player and the related result?"
 
@@ -3024,16 +3031,16 @@ msgstr "position"
 msgid "posições"
 msgstr "positions"
 
-#: src/views/Profile/League.js:54
+#: src/views/Profile/League.js:57
 msgid "{0, selectordinal, one {1ª} two {2ª} few {3ª} other {#ª}}"
 msgstr "{0, selectordinal, one {1st} two {2nd} few {3rd} other {#th}}"
 
-#: src/views/Profile/League.js:70
+#: src/views/Profile/League.js:76
 msgid "{0, selectordinal, one {1º} two {2º} few {3º} other {#º}}"
 msgstr "{0, selectordinal, one {1st} two {2nd} few {3rd} other {#th}}"
 
 #: src/views/NationalRanking/Legend.js:66
-#: src/views/Profile/SpecialQuizzes.js:80
+#: src/views/Profile/SpecialQuizzes.js:90
 msgid "{0, selectordinal, two {2º} few {3º} other {#º}}"
 msgstr "{0, selectordinal, two {2nd} few {3nd} other {#rd}}"
 
@@ -3048,7 +3055,7 @@ msgstr "{0} {1}"
 msgid "{0} {1} e {2} {3}"
 msgstr "{0} {1} and {2} {3}"
 
-#: src/views/Cup.js:103
+#: src/views/Cup.js:108
 msgid "{0}-avos-de-Final"
 msgstr "Round of {0}"
 

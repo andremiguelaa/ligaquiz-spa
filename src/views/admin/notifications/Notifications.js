@@ -31,7 +31,7 @@ const Notifications = () => {
       });
   }, []);
 
-  if(!user){
+  if (!user) {
     return <Error status={401} />;
   }
 
@@ -74,7 +74,7 @@ const Notifications = () => {
                     <th>
                       <Trans>Notificação</Trans>
                     </th>
-                    <th>
+                    <th className="is-hidden-mobile">
                       <Trans>Data de início</Trans>
                     </th>
                     <th className="is-hidden-mobile">
@@ -97,7 +97,7 @@ const Notifications = () => {
                             notification.content.length > 10 ? '...' : ''
                           }`}
                         </td>
-                        <td className="is-vertical-middle is-nowrap">
+                        <td className="is-vertical-middle is-nowrap is-hidden-mobile">
                           {notification.start_date.slice(0, 10)}
                         </td>
                         <td className="is-vertical-middle is-nowrap is-hidden-mobile">
