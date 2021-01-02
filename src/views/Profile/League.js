@@ -38,7 +38,10 @@ const League = ({ user, setError }) => {
                 <Trans>Divisão</Trans>
               </th>
               <th>
-                <Trans>Classificação</Trans>
+                <span className="is-hidden-mobile">
+                  <Trans>Classificação</Trans>
+                </span>
+                <span className="is-hidden-tablet">#</span>
               </th>
             </tr>
           </thead>
@@ -62,8 +65,11 @@ const League = ({ user, setError }) => {
                 <td>
                   {season.user_tier === 1 && season.user_rank === 1 && (
                     <>
-                      <i className="fa fa-trophy" aria-hidden="true"></i>{' '}
-                      <Trans>Campeão</Trans>
+                      <i className="fa fa-trophy" aria-hidden="true"></i>
+                      <span className="is-hidden-mobile">
+                        {' '}
+                        <Trans>Campeão</Trans>
+                      </span>
                     </>
                   )}
                   {(season.user_tier > 1 || season.user_rank > 1) && (

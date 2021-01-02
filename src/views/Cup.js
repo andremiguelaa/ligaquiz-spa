@@ -1,7 +1,9 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
+import classnames from 'classnames';
 
+import getAcronym from 'utils/getAcronym';
 import { convertToLongDate } from 'utils/formatDate';
 import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
@@ -11,9 +13,12 @@ import EmptyState from 'components/EmptyState';
 import Loading from 'components/Loading';
 import ConditionalWrapper from 'components/ConditionalWrapper';
 
+import classes from './Cup/Cup.module.scss';
+
 const Cup = () => {
   const [
     {
+      user: authUser,
       settings: { language },
     },
   ] = useStateValue();
@@ -112,82 +117,217 @@ const Cup = () => {
         subtitle={cupData && <Trans>Temporada {seasonNumber}</Trans>}
       />
       {cupData ? (
-        <section className="section content">
+        <section className={classnames('section', 'content', classes.cup)}>
           {cupData.rounds.map((round, index) => (
             <Fragment key={round.date}>
               {round.games.length > 0 ? (
-                <>
-                  <h2 className="is-size-5">
-                    {renderRoundTitle(round.games.length)} (
-                    {convertToLongDate(round.date, language)})
+                <div className={classes.round}>
+                  <h2 className={classnames('is-size-5', classes.roundTitle)}>
+                    {renderRoundTitle(round.games.length)}
                   </h2>
-                  {round.games.map((game) => (
-                    <div key={game.user_id_1}>
-                      {game.user_id_1 && game.user_id_2 ? (
-                        <>
-                          <ConditionalWrapper
-                            condition={game.winner === game.user_id_2}
-                            wrapper={(children) => <del>{children}</del>}
-                          >
-                            {users[game.user_id_1].name}{' '}
-                            {users[game.user_id_1].surname}
-                          </ConditionalWrapper>{' '}
-                          {game.done &&
-                          game.hasOwnProperty('user_id_1_game_points') &&
-                          game.hasOwnProperty('user_id_2_game_points') ? (
-                            <Link
-                              to={`/cup-game/${round.date}/${game.user_id_1}/${game.user_id_2}`}
+                  <div className={classes.roundDate}>
+                    {convertToLongDate(round.date, language)}
+                  </div>
+                  <div className={classes.games}>
+                    {round.games.map((game) => (
+                      <Fragment key={game.user_id_1}>
+                        {game.user_id_1 && game.user_id_2 && (
+                          <div className={classes.game}>
+                            <div
+                              className={classnames(
+                                classes.nameCell,
+                                classes.home
+                              )}
                             >
-                              {game.corrected && (
-                                <>
+                              <ConditionalWrapper
+                                condition={game.winner === game.user_id_2}
+                                wrapper={(children) => <del>{children}</del>}
+                              >
+                                <ConditionalWrapper
+                                  condition={authUser?.id === game.user_id_1}
+                                  wrapper={(children) => (
+                                    <strong>{children}</strong>
+                                  )}
+                                >
+                                  <span className="is-hidden-mobile">
+                                    {users[game.user_id_1].name}{' '}
+                                    {users[game.user_id_1].surname}
+                                  </span>
+                                  <abbr
+                                    data-tooltip={`${
+                                      users[game.user_id_1].name
+                                    } ${users[game.user_id_1].surname}`}
+                                    className="is-hidden-tablet"
+                                  >
+                                    {getAcronym(users[game.user_id_1].name)}
+                                    {getAcronym(users[game.user_id_1].surname)}
+                                  </abbr>
+                                </ConditionalWrapper>
+                              </ConditionalWrapper>
+                            </div>
+                            <div className={classes.avatarCell}>
+                              <div className={classes.avatar}>
+                                {users[game.user_id_1].avatar ? (
+                                  <img
+                                    alt={`${users[game.user_id_1].name} ${
+                                      users[game.user_id_1].surname
+                                    }`}
+                                    src={users[game.user_id_1].avatar}
+                                  />
+                                ) : (
+                                  <i className="fa fa-user" />
+                                )}
+                              </div>
+                            </div>
+                            <div className={classes.resultCell}>
+                              {game.done &&
+                              game.hasOwnProperty('user_id_1_game_points') &&
+                              game.hasOwnProperty('user_id_2_game_points') ? (
+                                <Link
+                                  to={`/cup-game/${round.date}/${game.user_id_1}/${game.user_id_2}`}
+                                >
                                   {game.corrected && (
                                     <>
-                                      {game.user_id_1_game_points}
-                                      {game.user_id_1_game_points !== 'F' && (
-                                        <> ({game.user_id_1_correct_answers})</>
-                                      )}{' '}
-                                      -{' '}
-                                      {game.user_id_2_game_points !== 'F' && (
-                                        <>({game.user_id_2_correct_answers})</>
-                                      )}{' '}
-                                      {game.user_id_2_game_points}{' '}
+                                      {game.corrected && (
+                                        <>
+                                          {game.user_id_1_game_points}
+                                          {game.user_id_1_game_points !==
+                                            'F' && (
+                                            <>
+                                              {' '}
+                                              ({game.user_id_1_correct_answers})
+                                            </>
+                                          )}{' '}
+                                          -{' '}
+                                          {game.user_id_2_game_points !==
+                                            'F' && (
+                                            <>
+                                              ({game.user_id_2_correct_answers})
+                                            </>
+                                          )}{' '}
+                                          {game.user_id_2_game_points}{' '}
+                                        </>
+                                      )}
                                     </>
                                   )}
-                                </>
+                                </Link>
+                              ) : (
+                                'vs.'
                               )}
-                            </Link>
-                          ) : (
-                            'vs.'
-                          )}
-                          {game.done && !game.corrected && <>P</>}{' '}
+                            </div>
+                            <div className={classes.avatarCell}>
+                              <div className={classes.avatar}>
+                                {users[game.user_id_2].avatar ? (
+                                  <img
+                                    alt={`${users[game.user_id_2].name} ${
+                                      users[game.user_id_2].surname
+                                    }`}
+                                    src={users[game.user_id_2].avatar}
+                                  />
+                                ) : (
+                                  <i className="fa fa-user" />
+                                )}
+                              </div>
+                            </div>
+                            <div
+                              className={classnames(
+                                classes.nameCell,
+                                classes.away
+                              )}
+                            >
+                              {game.done && !game.corrected && <>P</>}{' '}
+                              <ConditionalWrapper
+                                condition={game.winner === game.user_id_1}
+                                wrapper={(children) => <del>{children}</del>}
+                              >
+                                <ConditionalWrapper
+                                  condition={authUser?.id === game.user_id_2}
+                                  wrapper={(children) => (
+                                    <strong>{children}</strong>
+                                  )}
+                                >
+                                  <span className="is-hidden-mobile">
+                                    {users[game.user_id_2].name}{' '}
+                                    {users[game.user_id_2].surname}
+                                  </span>
+                                  <abbr
+                                    data-tooltip={`${
+                                      users[game.user_id_2].name
+                                    } ${users[game.user_id_2].surname}`}
+                                    className="is-hidden-tablet"
+                                  >
+                                    {getAcronym(users[game.user_id_2].name)}
+                                    {getAcronym(users[game.user_id_2].surname)}
+                                  </abbr>
+                                </ConditionalWrapper>
+                              </ConditionalWrapper>
+                            </div>
+                          </div>
+                        )}
+                      </Fragment>
+                    ))}
+                  </div>
+                  {round.games.map((game) => (
+                    <Fragment key={game.user_id_1}>
+                      {!game.user_id_2 && (
+                        <div className={classes.soloGame}>
                           <ConditionalWrapper
-                            condition={game.winner === game.user_id_1}
-                            wrapper={(children) => <del>{children}</del>}
+                            condition={authUser?.id === game.user_id_1}
+                            wrapper={(children) => <strong>{children}</strong>}
                           >
-                            {users[game.user_id_2].name}{' '}
-                            {users[game.user_id_2].surname}
+                            <span className="is-hidden-mobile">
+                              {users[game.user_id_1].name}{' '}
+                              {users[game.user_id_1].surname}
+                            </span>
+                            <abbr
+                              data-tooltip={`${users[game.user_id_1].name} ${
+                                users[game.user_id_1].surname
+                              }`}
+                              className="is-hidden-tablet"
+                            >
+                              {getAcronym(users[game.user_id_1].name)}
+                              {getAcronym(users[game.user_id_1].surname)}
+                            </abbr>
                           </ConditionalWrapper>
-                        </>
-                      ) : (
-                        <>
-                          {users[game.user_id_1].name}{' '}
-                          {users[game.user_id_1].surname} (
-                          <Trans>Isento para a próxima eliminatória</Trans>)
-                        </>
+                          <div>
+                            <div className={classes.avatar}>
+                              {users[game.user_id_1].avatar ? (
+                                <img
+                                  alt={`${users[game.user_id_1].name} ${
+                                    users[game.user_id_1].surname
+                                  }`}
+                                  src={users[game.user_id_1].avatar}
+                                />
+                              ) : (
+                                <i className="fa fa-user" />
+                              )}
+                            </div>
+                          </div>
+                          <div>
+                            <span className="is-hidden-mobile">
+                              <Trans>Isento para a próxima eliminatória</Trans>
+                            </span>
+                            <span className="is-hidden-tablet">
+                              <Trans>Isento</Trans>
+                            </span>
+                          </div>
+                        </div>
                       )}
-                    </div>
+                    </Fragment>
                   ))}
-                </>
+                </div>
               ) : (
-                <>
-                  <h2 className="is-size-5">
+                <div className={classes.round}>
+                  <h2 className={classnames('is-size-5', classes.roundTitle)}>
                     {renderRoundTitle(
                       cupData.rounds[0].games.length / Math.pow(2, index)
-                    )}{' '}
-                    ({convertToLongDate(round.date, language)})
+                    )}
                   </h2>
+                  <div className={classes.roundDate}>
+                    {convertToLongDate(round.date, language)}
+                  </div>
                   <Trans>A definir</Trans>
-                </>
+                </div>
               )}
             </Fragment>
           ))}

@@ -70,6 +70,8 @@ const Logs = ({ logsDays, setError }) => {
                                 <br />
                                 Points: {log.points}
                                 <br />
+                                Cup Points: {log.cup_points}
+                                <br />
                                 Submitted: {log.submitted}
                                 <br />
                                 Correct: {log.correct}

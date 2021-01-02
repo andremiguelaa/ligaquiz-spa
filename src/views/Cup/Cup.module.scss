@@ -1,0 +1,82 @@
+@import 'bulma/sass/utilities/initial-variables.sass';
+@import 'bulma/sass/utilities/derived-variables.scss';
+@import 'bulma/sass/utilities/mixins.sass';
+
+.cup {
+  .round {
+    padding-bottom: 2rem;
+    max-width: 768px;
+    & + .round {
+      padding-top: 2rem;
+      border-top: 1px solid #dbdbdb;
+    }
+  }
+  .roundTitle {
+    margin-bottom: 0;
+  }
+  .roundDate {
+    margin-bottom: 1rem;
+    font-size: 0.9em;
+  }
+  .games {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    .game {
+      display: table-row;
+      height: 2.5rem;
+      & > * {
+        display: table-cell;
+        vertical-align: middle;
+        padding: 0.25rem 0;
+        &.avatarCell {
+          width: 28px;
+        }
+        &.nameCell {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          @include mobile {
+            overflow: visible;
+          }
+          &.home {
+            text-align: right;
+            padding-right: 1rem;
+          }
+          &.away {
+            padding-left: 1rem;
+          }
+        }
+        &.resultCell {
+          text-align: center;
+          width: 105px;
+        }
+      }
+    }
+  }
+  .soloGame {
+    text-align: center;
+    height: 2.5rem;
+    & > * {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 0.5rem;
+      line-height: 2.5rem;
+    }
+  }
+  .avatar {
+    height: 28px;
+    width: 28px;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    img {
+      font-size: 0;
+      min-height: 28px;
+      min-width: 28px;
+      object-fit: cover;
+    }
+  }
+}
