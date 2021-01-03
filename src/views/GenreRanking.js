@@ -115,20 +115,16 @@ const GenreRanking = () => {
 
   useEffect(() => {
     if (season) {
-      if (parseInt(season) !== seasonNumber) {
-        getStatistics(season);
-        setSeasonNumber(parseInt(season));
-      }
+      setSeasonNumber(parseInt(season));
     } else {
       ApiRequest.get(`seasons`)
         .then(({ data }) => {
           if (data.length) {
-            let lastSeason = data.find((season) => season.past);
+            let lastSeason = data.find((item) => item.past);
             if (!lastSeason) {
               lastSeason = data[data.length - 1];
             }
             setSeasonNumber(lastSeason.season);
-            getStatistics(lastSeason.season);
           } else {
             setStatistics({});
           }
@@ -137,7 +133,13 @@ const GenreRanking = () => {
           setError(response?.status);
         });
     }
-  }, [season, seasonNumber]);
+  }, [season]);
+
+  useEffect(() => {
+    if (seasonNumber) {
+      getStatistics(seasonNumber);
+    }
+  }, [seasonNumber]);
 
   useEffect(() => {
     ApiRequest.get(`users`)
