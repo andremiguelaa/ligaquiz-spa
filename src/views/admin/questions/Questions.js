@@ -126,13 +126,7 @@ const Questions = () => {
     return <Error status={401} />;
   }
 
-  if (
-    !(
-      user.valid_roles.admin ||
-      user.valid_roles.quiz_editor ||
-      user.valid_roles.translator
-    )
-  ) {
+  if (!(user.valid_roles.admin || user.valid_roles.quiz_editor)) {
     return <Error status={403} />;
   }
 
@@ -317,24 +311,6 @@ const Questions = () => {
                 ),
                 className: classes.quiz,
               },
-              (user.valid_roles.admin || user.valid_roles.translator) && {
-                id: 'translated',
-                label: <Trans>Traduzida</Trans>,
-                className: classes.translated,
-                render: (item) => (
-                  <>
-                    {item.translated ? (
-                      <span className="icon has-text-success">
-                        <i className="fa fa-lg fa-check-circle"></i>
-                      </span>
-                    ) : (
-                      <span className="icon has-text-danger">
-                        <i className="fa fa-lg fa-times-circle"></i>
-                      </span>
-                    )}
-                  </>
-                ),
-              },
               user.valid_roles.admin && {
                 id: 'used',
                 label: <Trans>Usada</Trans>,
@@ -352,23 +328,6 @@ const Questions = () => {
                     )}
                   </>
                 ),
-              },
-              (user.valid_roles.admin || user.valid_roles.translator) && {
-                id: 'actions',
-                label: <Trans>Acções</Trans>,
-                render: (item) =>
-                  !(
-                    user.valid_roles.translator && item.translator !== user.id
-                  ) || !item.translated ? (
-                    <Link className="button" to={`/admin/translate/${item.id}`}>
-                      <span className="icon">
-                        <i className="fa fa-language"></i>
-                      </span>
-                    </Link>
-                  ) : (
-                    ''
-                  ),
-                className: classes.actions,
               },
             ].filter(Boolean)}
             onChange={(newPage) => {

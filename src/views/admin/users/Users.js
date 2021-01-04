@@ -312,18 +312,6 @@ const Users = () => {
                               )}
                             </I18n>
                           )}
-                          {user.valid_roles?.translator && (
-                            <I18n>
-                              {({ i18n }) => (
-                                <span
-                                  className="icon"
-                                  data-tooltip={i18n._(t`Tradutor`)}
-                                >
-                                  <i className="fa fa-language"></i>
-                                </span>
-                              )}
-                            </I18n>
-                          )}
                           {user.valid_roles?.blocked && (
                             <I18n>
                               {({ i18n }) => (

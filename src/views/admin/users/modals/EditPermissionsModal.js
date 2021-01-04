@@ -198,31 +198,33 @@ const EditPermissionsModal = ({
               </div>
             </div>
           </fieldset>
-          <fieldset className="fieldset">
-            <div className="field">
-              <input
-                id="national-ranking-manager"
-                type="checkbox"
-                className="switch"
-                value="true"
-                onClick={(event) => {
-                  setUserToEdit({
-                    ...userToEdit,
-                    newRoles: {
-                      ...userToEdit.newRoles,
-                      national_ranking_manager: event.target.checked,
-                    },
-                  });
-                }}
-                defaultChecked={Boolean(
-                  userToEdit.newRoles?.national_ranking_manager
-                )}
-              />
-              <label htmlFor="national-ranking-manager">
-                <Trans>Gestor de Ranking Nacional</Trans>
-              </label>
-            </div>
-          </fieldset>
+          {process.env.REACT_APP_NATIONAL_RANKING === 'true' && (
+            <fieldset className="fieldset">
+              <div className="field">
+                <input
+                  id="national-ranking-manager"
+                  type="checkbox"
+                  className="switch"
+                  value="true"
+                  onClick={(event) => {
+                    setUserToEdit({
+                      ...userToEdit,
+                      newRoles: {
+                        ...userToEdit.newRoles,
+                        national_ranking_manager: event.target.checked,
+                      },
+                    });
+                  }}
+                  defaultChecked={Boolean(
+                    userToEdit.newRoles?.national_ranking_manager
+                  )}
+                />
+                <label htmlFor="national-ranking-manager">
+                  <Trans>Gestor de Ranking Nacional</Trans>
+                </label>
+              </div>
+            </fieldset>
+          )}
           <fieldset className="fieldset">
             <div className="field">
               <input
@@ -291,29 +293,6 @@ const EditPermissionsModal = ({
               />
               <label htmlFor="answer-reviewer">
                 <Trans>Corrector</Trans>
-              </label>
-            </div>
-          </fieldset>
-          <fieldset className="fieldset">
-            <div className="field">
-              <input
-                id="translator"
-                type="checkbox"
-                className="switch"
-                value="true"
-                onClick={(event) => {
-                  setUserToEdit({
-                    ...userToEdit,
-                    newRoles: {
-                      ...userToEdit.newRoles,
-                      translator: event.target.checked,
-                    },
-                  });
-                }}
-                defaultChecked={Boolean(userToEdit.newRoles?.translator)}
-              />
-              <label htmlFor="translator">
-                <Trans>Tradutor</Trans>
               </label>
             </div>
           </fieldset>

@@ -15,7 +15,7 @@ import logoEquizition from 'img/logo_equizition.png';
 import logoEquizitionDark from 'img/logo_equizition_dark.png';
 import classes from './Header.module.scss';
 
-const version = '4.20.7';
+const version = '4.21.0';
 
 const isDarkMode =
   window.matchMedia &&
@@ -201,8 +201,7 @@ const Header = () => {
                       {(user.valid_roles.admin ||
                         user.valid_roles.quiz_editor ||
                         user.valid_roles.special_quiz_editor ||
-                        user.valid_roles.answer_reviewer ||
-                        user.valid_roles.translator) && (
+                        user.valid_roles.answer_reviewer) && (
                         <>
                           <div className="navbar-item">
                             <Trans>Gestão de Quizzes</Trans>
@@ -227,8 +226,7 @@ const Header = () => {
                             </Link>
                           )}
                           {(user.valid_roles.admin ||
-                            user.valid_roles.quiz_editor ||
-                            user.valid_roles.translator) && (
+                            user.valid_roles.quiz_editor) && (
                             <Link to="/admin/questions" className="navbar-item">
                               <i className="fa fa-btn fa-search" />
                               &nbsp;<Trans>Pesquisa de perguntas</Trans>

@@ -103,7 +103,7 @@
       ]
     ]
   },
-  "Tradutor": {
+  "Bloqueado": {
     "origin": [
       [
         "src/views/admin/users/Users.js",
@@ -111,19 +111,11 @@
       ]
     ]
   },
-  "Bloqueado": {
-    "origin": [
-      [
-        "src/views/admin/users/Users.js",
-        332
-      ]
-    ]
-  },
   "Sem registos": {
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        385
+        373
       ]
     ]
   }

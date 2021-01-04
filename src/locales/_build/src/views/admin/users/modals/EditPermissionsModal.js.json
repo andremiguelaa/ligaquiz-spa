@@ -63,7 +63,7 @@
     "origin": [
       [
         "src/views/admin/users/modals/EditPermissionsModal.js",
-        222
+        223
       ]
     ]
   },
@@ -71,7 +71,7 @@
     "origin": [
       [
         "src/views/admin/users/modals/EditPermissionsModal.js",
-        245
+        247
       ]
     ]
   },
@@ -79,7 +79,7 @@
     "origin": [
       [
         "src/views/admin/users/modals/EditPermissionsModal.js",
-        270
+        272
       ]
     ]
   },
@@ -87,15 +87,7 @@
     "origin": [
       [
         "src/views/admin/users/modals/EditPermissionsModal.js",
-        293
-      ]
-    ]
-  },
-  "Tradutor": {
-    "origin": [
-      [
-        "src/views/admin/users/modals/EditPermissionsModal.js",
-        316
+        295
       ]
     ]
   },
@@ -103,7 +95,7 @@
     "origin": [
       [
         "src/views/admin/users/modals/EditPermissionsModal.js",
-        339
+        318
       ]
     ]
   }
