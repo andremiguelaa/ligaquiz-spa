@@ -311,25 +311,7 @@ const Questions = () => {
                 ),
                 className: classes.quiz,
               },
-              user.valid_roles.admin && {
-                id: 'used',
-                label: <Trans>Usada</Trans>,
-                className: classes.used,
-                render: (item) => (
-                  <>
-                    {item.used ? (
-                      <span className="icon has-text-success">
-                        <i className="fa fa-lg fa-check-circle"></i>
-                      </span>
-                    ) : (
-                      <span className="icon has-text-danger">
-                        <i className="fa fa-lg fa-times-circle"></i>
-                      </span>
-                    )}
-                  </>
-                ),
-              },
-            ].filter(Boolean)}
+            ]}
             onChange={(newPage) => {
               setHistoryParams((prev) => ({
                 ...prev,
