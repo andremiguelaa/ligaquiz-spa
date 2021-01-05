@@ -1,6 +1,8 @@
 import { useRef, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+
 import ApiRequest from 'utils/ApiRequest';
+import packageJson from 'package.json';
 
 const Logger = () => {
   const location = useLocation();
@@ -92,7 +94,7 @@ const Logger = () => {
   useEffect(() => {
     if (!load.current) {
       ApiRequest.post(`logs`, {
-        action: `Page load: ${location.pathname}`,
+        action: `Page load: ${location.pathname} (${packageJson.version})`,
       });
       load.current = true;
       return;
