@@ -214,6 +214,7 @@ const Cup = () => {
                               ) : (
                                 'vs.'
                               )}
+                              {game.done && !game.corrected && <>P</>}
                             </div>
                             <div className={classes.avatarCell}>
                               <div className={classes.avatar}>
@@ -235,7 +236,6 @@ const Cup = () => {
                                 classes.away
                               )}
                             >
-                              {game.done && !game.corrected && <>P</>}{' '}
                               <ConditionalWrapper
                                 condition={game.winner === game.user_id_1}
                                 wrapper={(children) => <del>{children}</del>}
