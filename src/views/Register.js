@@ -48,6 +48,10 @@ const Register = () => {
   }
 
   if (loadingError) {
+    return <Error status={loadingError} />;
+  }
+
+  if (error) {
     return <Error status={error} />;
   }
 
