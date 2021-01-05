@@ -121,7 +121,7 @@ msgstr "Adicionar provas mensais"
 msgid "Administrador"
 msgstr "Administrador"
 
-#: src/partials/Header.js:181
+#: src/partials/Header.js:180
 msgid "Administração"
 msgstr "Administração"
 
@@ -472,7 +472,7 @@ msgstr "Ciência"
 msgid "Ciências Sociais"
 msgstr "Ciências Sociais"
 
-#: src/partials/Header.js:99
+#: src/partials/Header.js:98
 #: src/routes.js:119
 #: src/views/Profile/League.js:42
 #: src/views/Profile/SpecialQuizzes.js:60
@@ -521,7 +521,7 @@ msgstr "Comunicação Social e Redes Sociais"
 msgid "Confirmação da palavra-passe"
 msgstr "Confirmação da palavra-passe"
 
-#: src/partials/Header.js:282
+#: src/partials/Header.js:281
 #: src/routes.js:82
 #: src/views/Account.js:139
 msgid "Conta"
@@ -540,7 +540,7 @@ msgstr "Conteúdo não encontrado."
 msgid "Convite enviado com sucesso."
 msgstr "Convite enviado com sucesso."
 
-#: src/partials/Header.js:290
+#: src/partials/Header.js:289
 #: src/routes.js:93
 #: src/views/Invitations.js:77
 msgid "Convites"
@@ -812,7 +812,7 @@ msgstr "Empates"
 msgid "Ent"
 msgstr "Ent"
 
-#: src/partials/Header.js:147
+#: src/partials/Header.js:146
 #: src/routes.js:56
 #: src/views/Login.js:53
 #: src/views/Login.js:109
@@ -1042,11 +1042,11 @@ msgstr "Geologia"
 msgid "Gestor de Ranking Nacional"
 msgstr "Gestor de Ranking Nacional"
 
-#: src/partials/Header.js:207
+#: src/partials/Header.js:206
 msgid "Gestão de Quizzes"
 msgstr "Gestão de Quizzes"
 
-#: src/partials/Header.js:254
+#: src/partials/Header.js:253
 msgid "Gestão de Ranking Nacional"
 msgstr "Gestão de Ranking Nacional"
 
@@ -1263,7 +1263,7 @@ msgstr "Jogador de quizzes especiais"
 msgid "Jogador regular"
 msgstr "Jogador regular"
 
-#: src/partials/Header.js:275
+#: src/partials/Header.js:274
 #: src/views/admin/nationalRanking/Players/List.js:85
 #: src/views/admin/seasons/Cup.js:135
 msgid "Jogadores"
@@ -1448,7 +1448,7 @@ msgstr "Mensagem"
 msgid "Mensagem enviada com sucesso."
 msgstr "Mensagem enviada com sucesso."
 
-#: src/partials/Header.js:71
+#: src/partials/Header.js:70
 msgid "Menu"
 msgstr "Menu"
 
@@ -1532,7 +1532,7 @@ msgstr "Namíbia"
 msgid "Nauru"
 msgstr "Nauru"
 
-#: src/partials/Header.js:53
+#: src/partials/Header.js:52
 msgid "Navegação primária"
 msgstr "Navegação primária"
 
@@ -1608,7 +1608,7 @@ msgstr "Notificação de quiz regular (22h00)"
 msgid "Notificação editada com sucesso."
 msgstr "Notificação editada com sucesso."
 
-#: src/partials/Header.js:192
+#: src/partials/Header.js:191
 #: src/routes.js:204
 #: src/views/admin/notifications/Notifications.js:48
 msgid "Notificações"
@@ -1786,7 +1786,7 @@ msgstr "Níger"
 msgid "Número {0} no <0>Ranking Nacional</0>"
 msgstr "Número {0} no <0>Ranking Nacional</0>"
 
-#: src/partials/Header.js:114
+#: src/partials/Header.js:113
 #: src/views/Profile.js:62
 msgid "O meu perfil"
 msgstr "O meu perfil"
@@ -1971,13 +1971,13 @@ msgstr "Permissões"
 msgid "Peru"
 msgstr "Peru"
 
-#: src/partials/Header.js:232
+#: src/partials/Header.js:231
 #: src/routes.js:269
 #: src/views/admin/questions/Questions.js:147
 msgid "Pesquisa de perguntas"
 msgstr "Pesquisa de perguntas"
 
-#: src/partials/Header.js:243
+#: src/partials/Header.js:242
 #: src/routes.js:274
 #: src/views/admin/externalQuestions/ExternalQuestions.js:174
 msgid "Pesquisa de perguntas externas"
@@ -2065,7 +2065,7 @@ msgstr "Prova"
 msgid "Provas individuais"
 msgstr "Provas individuais"
 
-#: src/partials/Header.js:268
+#: src/partials/Header.js:267
 #: src/views/admin/nationalRanking/Events/List.js:75
 msgid "Provas mensais"
 msgstr "Provas mensais"
@@ -2195,8 +2195,8 @@ msgstr "Quiz | Criar"
 msgid "Quiz | Editar"
 msgstr "Quiz | Editar"
 
-#: src/partials/Header.js:214
-#: src/partials/Header.js:298
+#: src/partials/Header.js:213
+#: src/partials/Header.js:297
 #: src/routes.js:214
 #: src/views/NationalRanking.js:240
 #: src/views/admin/quizzes/Quizzes.js:83
@@ -2207,8 +2207,8 @@ msgstr "Quizzes"
 msgid "Quizzes Especiais"
 msgstr "Quizzes Especiais"
 
-#: src/partials/Header.js:225
-#: src/partials/Header.js:309
+#: src/partials/Header.js:224
+#: src/partials/Header.js:308
 #: src/routes.js:234
 #: src/views/Profile.js:93
 msgid "Quizzes especiais"
@@ -2227,7 +2227,7 @@ msgstr "Química"
 msgid "RC"
 msgstr "RC"
 
-#: src/partials/Header.js:120
+#: src/partials/Header.js:119
 #: src/routes.js:113
 #: src/views/NationalRanking.js:150
 #: src/views/NationalRanking.js:175
@@ -2274,12 +2274,12 @@ msgstr "Ranking mensal apagado com sucesso."
 msgid "Ranking mensal publicado com sucesso."
 msgstr "Ranking mensal publicado com sucesso."
 
-#: src/partials/Header.js:261
+#: src/partials/Header.js:260
 #: src/views/admin/nationalRanking/Rankings.js:88
 msgid "Rankings mensais"
 msgstr "Rankings mensais"
 
-#: src/partials/Header.js:107
+#: src/partials/Header.js:106
 #: src/routes.js:98
 #: src/views/GenreRanking.js:170
 #: src/views/Seasons.js:113
@@ -2297,7 +2297,7 @@ msgstr "Recuperar palavra-passe"
 msgid "Redefinir palavra-passe"
 msgstr "Redefinir palavra-passe"
 
-#: src/partials/Header.js:150
+#: src/partials/Header.js:149
 #: src/views/Register.js:310
 msgid "Registar"
 msgstr "Registar"
@@ -2311,7 +2311,7 @@ msgstr "Registo"
 msgid "Registo de acções (últimos {logsDays} dias)"
 msgstr "Registo de acções (últimos {logsDays} dias)"
 
-#: src/partials/Header.js:90
+#: src/partials/Header.js:89
 #: src/routes.js:88
 #: src/views/Rules.js:28
 #: src/views/SpecialQuiz/SpecialQuizForm.js:185
@@ -2443,7 +2443,7 @@ msgstr "Rússia"
 msgid "Saara Ocidental"
 msgstr "Saara Ocidental"
 
-#: src/partials/Header.js:315
+#: src/partials/Header.js:314
 #: src/routes.js:76
 msgid "Sair"
 msgstr "Sair"
@@ -2507,7 +2507,7 @@ msgstr "Seleccionar todos"
 #: src/views/admin/nationalRanking/Players/List.js:169
 #: src/views/admin/nationalRanking/Rankings.js:161
 #: src/views/admin/notifications/Notifications.js:142
-#: src/views/admin/questions/Questions.js:346
+#: src/views/admin/questions/Questions.js:328
 #: src/views/admin/quizzes/Quizzes.js:189
 #: src/views/admin/seasons/Seasons.js:190
 #: src/views/admin/specialQuizzes/SpecialQuizzes.js:197
@@ -2664,7 +2664,7 @@ msgstr "Tajiquistão"
 msgid "Tanzânia"
 msgstr "Tanzânia"
 
-#: src/partials/Header.js:103
+#: src/partials/Header.js:102
 #: src/routes.js:124
 #: src/views/Cup.js:116
 #: src/views/Quiz/OpponentsStats.js:156
@@ -2744,8 +2744,8 @@ msgstr "Temporada | Criar"
 msgid "Temporada | Editar"
 msgstr "Temporada | Editar"
 
-#: src/partials/Header.js:196
-#: src/partials/Header.js:294
+#: src/partials/Header.js:195
+#: src/partials/Header.js:293
 #: src/routes.js:254
 #: src/views/admin/seasons/Seasons.js:87
 msgid "Temporadas"
@@ -2909,7 +2909,6 @@ msgid "Uruguai"
 msgstr "Uruguai"
 
 #: src/views/admin/externalQuestions/ExternalQuestions.js:334
-#: src/views/admin/questions/Questions.js:316
 msgid "Usada"
 msgstr "Usada"
 
@@ -2921,7 +2920,7 @@ msgstr "Utilizador actualizado com sucesso."
 msgid "Utilizador registado com sucesso.<0/>Clica <1>aqui</1> e usa as tuas credenciais."
 msgstr "Utilizador registado com sucesso.<0/>Clica <1>aqui</1> e usa as tuas credenciais."
 
-#: src/partials/Header.js:185
+#: src/partials/Header.js:184
 #: src/routes.js:209
 #: src/views/admin/users/Users.js:98
 msgid "Utilizadores"
@@ -2957,9 +2956,9 @@ msgstr "Vencedor"
 msgid "Venezuela"
 msgstr "Venezuela"
 
-#: src/partials/Header.js:319
-msgid "Versão {version}"
-msgstr "Versão {version}"
+#: src/partials/Header.js:318
+msgid "Versão {0}"
+msgstr "Versão {0}"
 
 #: src/utils/getRegionTranslation.js:28
 msgid "Viana do Castelo"

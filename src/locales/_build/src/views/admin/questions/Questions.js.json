@@ -91,19 +91,11 @@
       ]
     ]
   },
-  "Usada": {
-    "origin": [
-      [
-        "src/views/admin/questions/Questions.js",
-        316
-      ]
-    ]
-  },
   "Sem registos": {
     "origin": [
       [
         "src/views/admin/questions/Questions.js",
-        346
+        328
       ]
     ]
   }
