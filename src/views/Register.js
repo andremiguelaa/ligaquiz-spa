@@ -63,7 +63,9 @@ const Register = () => {
       setError({ message: 'password_mismatch' });
       return;
     }
-    formData.set('birthday', birthday ? formatDate(birthday) : null);
+    if (birthday) {
+      formData.set('birthday', formatDate(birthday));
+    }
     formData.set('language', language);
     setSubmitting(true);
     ApiRequest.post('users', formData)

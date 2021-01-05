@@ -105,9 +105,10 @@ const Account = () => {
     if (!formData.password.length) {
       newFormData = omit(formData, ['password', 'password2']);
     }
-    newFormData.birthday = formData.birthday
-      ? formatDate(formData.birthday)
-      : null;
+    newFormData = omit(newFormData, ['birthday']);
+    if (formData.birthday) {
+      newFormData.birthday = formatDate(formData.birthday);
+    }
     ApiRequest.patch('users', newFormData)
       .then(({ data: { user } }) => {
         setSubmitting(false);
