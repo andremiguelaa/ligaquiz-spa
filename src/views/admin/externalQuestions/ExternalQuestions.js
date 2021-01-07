@@ -19,16 +19,7 @@ import { getGenreTranslation } from 'utils/getGenreTranslation';
 
 import classes from './ExternalQuestions.module.scss';
 
-const genres = [
-  'culture',
-  'entertainment',
-  'history',
-  'lifestyle',
-  'media',
-  'sport',
-  'science',
-  'world',
-];
+const genres = JSON.parse(process.env.REACT_APP_EXTERNAL_QUESTION_GENRES);
 
 const mimeTypes = {
   png: 'image',
