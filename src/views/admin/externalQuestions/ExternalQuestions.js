@@ -34,6 +34,7 @@ const mimeTypes = {
   png: 'image',
   jpg: 'image',
   jpeg: 'image',
+  gif: 'image',
   mp4: 'video',
   mp3: 'audio',
 };
