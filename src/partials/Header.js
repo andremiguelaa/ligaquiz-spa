@@ -34,7 +34,7 @@ const Header = () => {
   };
 
   const logo =
-    process.env.REACT_APP_NAME === 'Equizition'
+    process.env.REACT_APP_SLUG === 'equizition'
       ? isDarkMode
         ? logoEquizitionDark
         : logoEquizition
