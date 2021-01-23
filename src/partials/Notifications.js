@@ -19,14 +19,11 @@ const Notifications = () => {
 
   useEffect(() => {
     const getNotifications = () => {
-      setSpecialQuizWinners();
       ApiRequest.get('notifications?current')
         .then(({ data }) => {
           dispatch({
             type: 'notifications.set',
             payload: {
-              loading: false,
-              loaded: true,
               data: data.manual,
               quiz: data.quiz,
               special_quiz: data.special_quiz,
@@ -36,17 +33,43 @@ const Notifications = () => {
               now: data.now,
             },
           });
-          ApiRequest.get(
-            `users?${data.special_quiz_yesterday.winners
-              .map((item) => `id[]=${item}`)
-              .join('&')}`
-          ).then(({ data }) => {
-            setSpecialQuizWinners(
-              data.map((user) => `${user.name} ${user.surname}`)
-            );
-          });
+          if (data.special_quiz_yesterday) {
+            ApiRequest.get(
+              `users?${data.special_quiz_yesterday.winners
+                .map((item) => `id[]=${item}`)
+                .join('&')}`
+            )
+              .then(({ data }) => {
+                setSpecialQuizWinners(
+                  data.map((user) => `${user.name} ${user.surname}`)
+                );
+                dispatch({
+                  type: 'notifications.set',
+                  payload: {
+                    loading: false,
+                    loaded: true,
+                  },
+                });
+              })
+              .catch(() => {
+                dispatch({
+                  type: 'notifications.set',
+                  payload: {
+                    loading: false,
+                  },
+                });
+              });
+          } else {
+            dispatch({
+              type: 'notifications.set',
+              payload: {
+                loading: false,
+                loaded: true,
+              },
+            });
+          }
         })
-        .finally(() => {
+        .catch(() => {
           dispatch({
             type: 'notifications.set',
             payload: {
@@ -92,10 +115,7 @@ const Notifications = () => {
     }
   }, [notifications.special_quiz]);
 
-  if (
-    notifications.loading ||
-    (notifications.special_quiz_yesterday && !specialQuizWinners)
-  ) {
+  if (notifications.loading) {
     return <Loading />;
   }
 
