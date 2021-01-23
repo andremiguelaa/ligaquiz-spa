@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
+import { I18n } from '@lingui/react';
+import { t } from '@lingui/macro';
 import { differenceInDays } from 'date-fns';
 
 import Markdown from 'components/Markdown';
@@ -13,9 +15,11 @@ const Notifications = () => {
   const [{ user, notifications }, dispatch] = useStateValue();
   const [specialQuizSubject, setSpecialQuizSubject] = useState();
   const prevUserValue = useRef();
+  const [specialQuizWinners, setSpecialQuizWinners] = useState();
 
   useEffect(() => {
     const getNotifications = () => {
+      setSpecialQuizWinners();
       ApiRequest.get('notifications?current')
         .then(({ data }) => {
           dispatch({
@@ -26,8 +30,20 @@ const Notifications = () => {
               data: data.manual,
               quiz: data.quiz,
               special_quiz: data.special_quiz,
+              special_quiz_yesterday: data.special_quiz_yesterday
+                ? data.special_quiz_yesterday
+                : false,
               now: data.now,
             },
+          });
+          ApiRequest.get(
+            `users?${data.special_quiz_yesterday.winners
+              .map((item) => `id[]=${item}`)
+              .join('&')}`
+          ).then(({ data }) => {
+            setSpecialQuizWinners(
+              data.map((user) => `${user.name} ${user.surname}`)
+            );
           });
         })
         .finally(() => {
@@ -76,7 +92,10 @@ const Notifications = () => {
     }
   }, [notifications.special_quiz]);
 
-  if (notifications.loading) {
+  if (
+    notifications.loading ||
+    (notifications.special_quiz_yesterday && !specialQuizWinners)
+  ) {
     return <Loading />;
   }
 
@@ -99,6 +118,7 @@ const Notifications = () => {
 
   if (
     notifications.data.length > 0 ||
+    notifications.special_quiz_yesterday ||
     (notifications.quiz && location.pathname !== '/quiz') ||
     (notifications.special_quiz && location.pathname !== '/special-quiz') ||
     (regularRemainingDays !== undefined && regularRemainingDays < 8) ||
@@ -179,6 +199,40 @@ const Notifications = () => {
               Clica <Link to="/rules#subscription">aqui</Link> para saber como
               renovar.
             </Trans>
+          </div>
+        )}
+        {notifications.special_quiz_yesterday && (
+          <div className={`notification is-warning`}>
+            {notifications.special_quiz_yesterday.winners.length > 1 ? (
+              <I18n>
+                {({ i18n }) => (
+                  <Trans>
+                    A vitória no quiz especial{' '}
+                    <Link
+                      to={`/special-quiz/${notifications.special_quiz_yesterday.date}`}
+                    >
+                      <em>{notifications.special_quiz_yesterday.subject}</em>
+                    </Link>{' '}
+                    é d@
+                    {specialQuizWinners.slice(0, -1).join(i18n._(t`, d@`)) +
+                      ' ' +
+                      i18n._(t`e d@`) +
+                      ' ' +
+                      specialQuizWinners.slice(-1)}. Parabéns!
+                  </Trans>
+                )}
+              </I18n>
+            ) : (
+              <Trans>
+                A vitória no quiz especial{' '}
+                <Link
+                  to={`/special-quiz/${notifications.special_quiz_yesterday.date}`}
+                >
+                  <em>{notifications.special_quiz_yesterday.subject}</em>
+                </Link>{' '}
+                é d@ {specialQuizWinners[0]}. Parabéns!
+              </Trans>
+            )}
           </div>
         )}
         {notifications.quiz && location.pathname !== '/quiz' && (

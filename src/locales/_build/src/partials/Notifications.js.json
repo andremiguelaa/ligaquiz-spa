@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/partials/Notifications.js",
-        112
+        132
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/partials/Notifications.js",
-        129
+        149
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/partials/Notifications.js",
-        135
+        155
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/partials/Notifications.js",
-        140
+        160
       ]
     ]
   },
@@ -35,7 +35,7 @@
     "origin": [
       [
         "src/partials/Notifications.js",
-        145
+        165
       ]
     ]
   },
@@ -43,11 +43,11 @@
     "origin": [
       [
         "src/partials/Notifications.js",
-        149
+        169
       ],
       [
         "src/partials/Notifications.js",
-        178
+        198
       ]
     ]
   },
@@ -55,7 +55,7 @@
     "origin": [
       [
         "src/partials/Notifications.js",
-        158
+        178
       ]
     ]
   },
@@ -63,7 +63,7 @@
     "origin": [
       [
         "src/partials/Notifications.js",
-        164
+        184
       ]
     ]
   },
@@ -71,7 +71,7 @@
     "origin": [
       [
         "src/partials/Notifications.js",
-        169
+        189
       ]
     ]
   },
@@ -79,7 +79,35 @@
     "origin": [
       [
         "src/partials/Notifications.js",
-        174
+        194
+      ]
+    ]
+  },
+  "A vitória no quiz especial <0><1>{0}</1></0> é d@ {1}. Parabéns!": {
+    "origin": [
+      [
+        "src/partials/Notifications.js",
+        209
+      ],
+      [
+        "src/partials/Notifications.js",
+        226
+      ]
+    ]
+  },
+  ", d@": {
+    "origin": [
+      [
+        "src/partials/Notifications.js",
+        217
+      ]
+    ]
+  },
+  "e d@": {
+    "origin": [
+      [
+        "src/partials/Notifications.js",
+        219
       ]
     ]
   },
@@ -87,7 +115,7 @@
     "origin": [
       [
         "src/partials/Notifications.js",
-        187
+        241
       ]
     ]
   },
@@ -95,7 +123,7 @@
     "origin": [
       [
         "src/partials/Notifications.js",
-        194
+        248
       ]
     ]
   }

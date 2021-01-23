@@ -17,6 +17,10 @@ msgstr ""
 msgid "({0} anos)"
 msgstr "({0} years old)"
 
+#: src/partials/Notifications.js:217
+msgid ", d@"
+msgstr ","
+
 #: src/views/Account/PayPal.js:45
 msgid "1 mês (3€)"
 msgstr "1 month (€ 4.99/month)"
@@ -53,37 +57,42 @@ msgstr "<0>{0}</0> result counting to national ranking"
 msgid "A definir"
 msgstr "TBD"
 
-#: src/partials/Notifications.js:145
+#: src/partials/Notifications.js:165
 msgid "A tua subscrição para jogar quizzes da liga expirou."
 msgstr "Your subscription to play league quizzes expired."
 
-#: src/partials/Notifications.js:135
+#: src/partials/Notifications.js:155
 msgid "A tua subscrição para jogar quizzes da liga termina amanhã."
 msgstr "Your subscription to play league quizzes expires tomorrow."
 
-#: src/partials/Notifications.js:129
+#: src/partials/Notifications.js:149
 msgid "A tua subscrição para jogar quizzes da liga termina daqui a {regularRemainingDays} dias."
 msgstr "Your subscription to play league quizzes will expire in {regularRemainingDays} days."
 
-#: src/partials/Notifications.js:140
+#: src/partials/Notifications.js:160
 msgid "A tua subscrição para jogar quizzes da liga termina hoje."
 msgstr "Your subscription to play league quizzes expires today."
 
-#: src/partials/Notifications.js:174
+#: src/partials/Notifications.js:194
 msgid "A tua subscrição para jogar quizzes especiais expirou."
 msgstr "Your subscription to play special quizzes expired."
 
-#: src/partials/Notifications.js:164
+#: src/partials/Notifications.js:184
 msgid "A tua subscrição para jogar quizzes especiais termina amanhã."
 msgstr "Your subscription to play special quizzes expires tomorrow."
 
-#: src/partials/Notifications.js:158
+#: src/partials/Notifications.js:178
 msgid "A tua subscrição para jogar quizzes especiais termina daqui a {specialRemainingDays} dias."
 msgstr "Your subscription to play special quizzes will expire in {specialRemainingDays} days."
 
-#: src/partials/Notifications.js:169
+#: src/partials/Notifications.js:189
 msgid "A tua subscrição para jogar quizzes especiais termina hoje."
 msgstr "Your subscription to play special quizzes expires today."
+
+#: src/partials/Notifications.js:209
+#: src/partials/Notifications.js:226
+msgid "A vitória no quiz especial <0><1>{0}</1></0> é d@ {1}. Parabéns!"
+msgstr "The victory in the special quiz <0><1>{0}</1></0> goes to {1}. Congratulations!"
 
 #: src/views/admin/nationalRanking/Events/List.js:99
 #: src/views/admin/nationalRanking/Players/List.js:109
@@ -147,7 +156,7 @@ msgstr "Albania"
 msgid "Alemanha"
 msgstr "Germany"
 
-#: src/views/admin/externalQuestions/ExternalQuestions.js:352
+#: src/views/admin/externalQuestions/ExternalQuestions.js:344
 msgid "Alterar estado"
 msgstr "Change status"
 
@@ -204,8 +213,8 @@ msgstr "Delete cup"
 msgid "Apagar temporada"
 msgstr "Delete season"
 
-#: src/views/Account.js:169
-#: src/views/Register.js:120
+#: src/views/Account.js:170
+#: src/views/Register.js:126
 #: src/views/admin/nationalRanking/Players/Form.js:192
 msgid "Apelido"
 msgstr "Surname"
@@ -253,7 +262,7 @@ msgstr "Handicraft"
 msgid "Arábia Saudita"
 msgstr "Saudi Arabia"
 
-#: src/views/Register.js:288
+#: src/views/Register.js:294
 msgid "As palavras-passes não coincidem."
 msgstr "Passwords mismatch"
 
@@ -481,8 +490,8 @@ msgstr "Social Sciences"
 msgid "Classificação"
 msgstr "Ranking"
 
-#: src/partials/Notifications.js:149
-#: src/partials/Notifications.js:178
+#: src/partials/Notifications.js:169
+#: src/partials/Notifications.js:198
 msgid "Clica <0>aqui</0> para saber como renovar."
 msgstr "Click <0>here</0> to find out how to renew."
 
@@ -515,15 +524,15 @@ msgstr "Statistics Comparison"
 msgid "Comunicação Social e Redes Sociais"
 msgstr "Press and Social Networks"
 
-#: src/views/Account.js:349
-#: src/views/Register.js:270
+#: src/views/Account.js:350
+#: src/views/Register.js:276
 #: src/views/ResetPassword.js:84
 msgid "Confirmação da palavra-passe"
 msgstr "Password confirmation"
 
 #: src/partials/Header.js:281
 #: src/routes.js:82
-#: src/views/Account.js:139
+#: src/views/Account.js:140
 msgid "Conta"
 msgstr "Account"
 
@@ -656,8 +665,8 @@ msgstr "End date"
 msgid "Data de início"
 msgstr "Begin date"
 
-#: src/views/Account.js:193
-#: src/views/Register.js:137
+#: src/views/Account.js:194
+#: src/views/Register.js:143
 msgid "Data de nascimento"
 msgstr "Birthdate"
 
@@ -709,8 +718,8 @@ msgstr "Point difference"
 msgid "Dinamarca"
 msgstr "Denmark"
 
-#: src/views/Account.js:265
-#: src/views/Register.js:205
+#: src/views/Account.js:266
+#: src/views/Register.js:211
 msgid "Distrito/Região"
 msgstr "Country"
 
@@ -734,11 +743,11 @@ msgstr "Dominica"
 msgid "E"
 msgstr "D"
 
-#: src/views/Account.js:293
+#: src/views/Account.js:294
 #: src/views/Invitations.js:96
 #: src/views/Login.js:65
 #: src/views/RecoverPassword.js:56
-#: src/views/Register.js:225
+#: src/views/Register.js:231
 msgid "E-Mail"
 msgstr "E-Mail"
 
@@ -823,8 +832,8 @@ msgstr "Login"
 msgid "Entretenimento"
 msgstr "Entertainment"
 
-#: src/views/admin/externalQuestions/ExternalQuestions.js:220
-#: src/views/admin/externalQuestions/ExternalQuestions.js:287
+#: src/views/admin/externalQuestions/ExternalQuestions.js:212
+#: src/views/admin/externalQuestions/ExternalQuestions.js:279
 #: src/views/admin/questions/Questions.js:193
 #: src/views/admin/questions/Questions.js:280
 #: src/views/admin/quizzes/Question.js:90
@@ -876,7 +885,7 @@ msgstr "Wrong"
 #: src/views/Account/Avatar.js:103
 #: src/views/Login.js:96
 #: src/views/RecoverPassword.js:85
-#: src/views/Register.js:298
+#: src/views/Register.js:304
 #: src/views/ResetPassword.js:125
 msgid "Erro de servidor. Tenta mais tarde."
 msgstr "Server error. Try again later."
@@ -1063,7 +1072,7 @@ msgid "Granada"
 msgstr "Grenada"
 
 #: src/views/Account/Avatar.js:114
-#: src/views/Account.js:477
+#: src/views/Account.js:478
 #: src/views/admin/nationalRanking/Players/Form.js:260
 #: src/views/admin/quizzes/QuizForm.js:223
 #: src/views/admin/specialQuizzes/SpecialQuizForm.js:259
@@ -1312,8 +1321,8 @@ msgstr "Round {0} ({1})"
 msgid "Jornadas"
 msgstr "Rounds"
 
-#: src/views/Account.js:319
-#: src/views/Register.js:245
+#: src/views/Account.js:320
+#: src/views/Register.js:251
 msgid "Já existe uma conta com este e-mail."
 msgstr "There is another account using this e-mail."
 
@@ -1481,8 +1490,8 @@ msgstr "Show answer"
 msgid "Moçambique"
 msgstr "Mozambique"
 
-#: src/views/admin/externalQuestions/ExternalQuestions.js:305
-#: src/views/admin/externalQuestions/ExternalQuestions.js:415
+#: src/views/admin/externalQuestions/ExternalQuestions.js:297
+#: src/views/admin/externalQuestions/ExternalQuestions.js:407
 #: src/views/admin/quizzes/Question.js:119
 #: src/views/admin/specialQuizzes/Question.js:82
 msgid "Multimédia"
@@ -1561,12 +1570,12 @@ msgstr "Nigeria"
 msgid "Niue"
 msgstr "Niue"
 
-#: src/views/Account.js:146
+#: src/views/Account.js:147
 #: src/views/GenreRanking/Table.js:17
 #: src/views/NationalRanking.js:194
 #: src/views/Question.js:200
 #: src/views/Ranking/TableHeader.js:13
-#: src/views/Register.js:104
+#: src/views/Register.js:110
 #: src/views/admin/nationalRanking/Players/Form.js:166
 #: src/views/admin/users/Users.js:113
 msgid "Nome"
@@ -1588,19 +1597,19 @@ msgstr "Notification successfully deleted."
 msgid "Notificação criada com sucesso."
 msgstr "Notification successfully created."
 
-#: src/views/Account.js:441
+#: src/views/Account.js:442
 msgid "Notificação de quiz especial (00h00)"
 msgstr "Special quiz notification (12.00a.m.)"
 
-#: src/views/Account.js:462
+#: src/views/Account.js:463
 msgid "Notificação de quiz especial (22h00)"
 msgstr "Special quiz notification (22.00p.m.)"
 
-#: src/views/Account.js:393
+#: src/views/Account.js:394
 msgid "Notificação de quiz regular (00h00)"
 msgstr "Regular quiz notification (12.00a.m.)"
 
-#: src/views/Account.js:414
+#: src/views/Account.js:415
 msgid "Notificação de quiz regular (22h00)"
 msgstr "Regular quiz notification (22.00p.m.)"
 
@@ -1638,7 +1647,7 @@ msgstr "There is no national ranking available."
 msgid "Não foi possível abrir a edição das provas mensais."
 msgstr "Month events edit page could not be loaded."
 
-#: src/views/Account.js:126
+#: src/views/Account.js:127
 msgid "Não foi possível actualizar o perfil."
 msgstr "Profile could not be update."
 
@@ -1646,7 +1655,7 @@ msgstr "Profile could not be update."
 msgid "Não foi possível actualizar o utilizador."
 msgstr "User could not be updated."
 
-#: src/views/admin/externalQuestions/ExternalQuestions.js:165
+#: src/views/admin/externalQuestions/ExternalQuestions.js:157
 msgid "Não foi possível alterar o estado."
 msgstr "Status could not be changed."
 
@@ -1807,7 +1816,7 @@ msgstr "Your password change request is not valid"
 msgid "OK"
 msgstr "OK"
 
-#: src/partials/Notifications.js:112
+#: src/partials/Notifications.js:132
 msgid "Obrigado pela tua inscrição! O teu registo encontra-se a aguardar aprovação da equipa da {0}."
 msgstr "Thank you for signing up! Your registration is pending approval from the {0} team."
 
@@ -1819,13 +1828,13 @@ msgstr "Round of 16"
 msgid "Omã"
 msgstr "Oman"
 
-#: src/views/Register.js:137
-#: src/views/Register.js:205
+#: src/views/Register.js:143
+#: src/views/Register.js:211
 msgid "Opcional"
 msgstr "Optional"
 
-#: src/views/admin/externalQuestions/ExternalQuestions.js:240
-#: src/views/admin/externalQuestions/ExternalQuestions.js:328
+#: src/views/admin/externalQuestions/ExternalQuestions.js:232
+#: src/views/admin/externalQuestions/ExternalQuestions.js:320
 msgid "Origem"
 msgstr "Origin"
 
@@ -1845,9 +1854,9 @@ msgstr "PF"
 msgid "Palau"
 msgstr "Palau"
 
-#: src/views/Account.js:325
+#: src/views/Account.js:326
 #: src/views/Login.js:76
-#: src/views/Register.js:251
+#: src/views/Register.js:257
 #: src/views/ResetPassword.js:60
 msgid "Palavra-passe"
 msgstr "Password"
@@ -1932,7 +1941,7 @@ msgstr "Internet connection lost."
 msgid "Perfil"
 msgstr "Profile"
 
-#: src/views/Account.js:114
+#: src/views/Account.js:115
 msgid "Perfil actualizado com sucesso."
 msgstr "Profile successfully updated."
 
@@ -1979,11 +1988,11 @@ msgstr "Question search"
 
 #: src/partials/Header.js:242
 #: src/routes.js:274
-#: src/views/admin/externalQuestions/ExternalQuestions.js:174
+#: src/views/admin/externalQuestions/ExternalQuestions.js:166
 msgid "Pesquisa de perguntas externas"
 msgstr "External questions search"
 
-#: src/views/admin/externalQuestions/ExternalQuestions.js:273
+#: src/views/admin/externalQuestions/ExternalQuestions.js:265
 #: src/views/admin/questions/Questions.js:266
 msgid "Pesquisar"
 msgstr "Search"
@@ -2131,7 +2140,7 @@ msgstr "Quiz successfully deleted."
 msgid "Quiz criado com sucesso."
 msgstr "Quiz successfully created."
 
-#: src/partials/Notifications.js:187
+#: src/partials/Notifications.js:241
 msgid "Quiz de hoje disponível aqui"
 msgstr "Today's quiz available here"
 
@@ -2151,7 +2160,7 @@ msgstr "Special quiz successfully deleted."
 msgid "Quiz especial criado com sucesso."
 msgstr "Special quiz successfully created."
 
-#: src/partials/Notifications.js:194
+#: src/partials/Notifications.js:248
 msgid "Quiz especial disponível aqui"
 msgstr "Special quiz available here"
 
@@ -2298,12 +2307,12 @@ msgid "Redefinir palavra-passe"
 msgstr "Reset password"
 
 #: src/partials/Header.js:149
-#: src/views/Register.js:310
+#: src/views/Register.js:316
 msgid "Registar"
 msgstr "Sign up"
 
 #: src/routes.js:71
-#: src/views/Register.js:91
+#: src/views/Register.js:97
 msgid "Registo"
 msgstr "Sign up"
 
@@ -2342,7 +2351,7 @@ msgstr "Delete cup"
 msgid "Remover última divisão"
 msgstr "Remove last tier"
 
-#: src/views/Account.js:508
+#: src/views/Account.js:509
 msgid "Renovação da subscrição via Paypal"
 msgstr "Subscription renewal"
 
@@ -2364,8 +2373,8 @@ msgstr "Republic of the Congo"
 
 #: src/views/Quiz/QuizForm.js:201
 #: src/views/SpecialQuiz/SpecialQuizForm.js:113
-#: src/views/admin/externalQuestions/ExternalQuestions.js:230
-#: src/views/admin/externalQuestions/ExternalQuestions.js:299
+#: src/views/admin/externalQuestions/ExternalQuestions.js:222
+#: src/views/admin/externalQuestions/ExternalQuestions.js:291
 #: src/views/admin/questions/Questions.js:203
 #: src/views/admin/questions/Questions.js:292
 #: src/views/admin/quizzes/Question.js:106
@@ -2468,7 +2477,7 @@ msgstr "Santarém"
 msgid "Saúde e Corpo Humano"
 msgstr "Health and Human Body"
 
-#: src/views/Account.js:513
+#: src/views/Account.js:514
 msgid "Se preferires fazer a renovação em mão, através de transferência bancária ou por MB WAY, vê como <0>aqui</0>"
 msgstr "If you rather renew in person, with a bank transfer or through MB WAY, see how <0>here</0>"
 
@@ -2502,7 +2511,7 @@ msgstr "Select all"
 #: src/views/Ranking.js:194
 #: src/views/Seasons.js:129
 #: src/views/SpecialQuizzes.js:143
-#: src/views/admin/externalQuestions/ExternalQuestions.js:407
+#: src/views/admin/externalQuestions/ExternalQuestions.js:399
 #: src/views/admin/nationalRanking/Events/List.js:159
 #: src/views/admin/nationalRanking/Players/List.js:169
 #: src/views/admin/nationalRanking/Rankings.js:161
@@ -2702,7 +2711,7 @@ msgstr "TV"
 #: src/views/Profile/Statistics.js:190
 #: src/views/Quiz/OpponentStats.js:107
 #: src/views/SpecialQuizzes.js:75
-#: src/views/admin/externalQuestions/ExternalQuestions.js:246
+#: src/views/admin/externalQuestions/ExternalQuestions.js:238
 #: src/views/admin/questions/Questions.js:209
 #: src/views/admin/specialQuizzes/SpecialQuizForm.js:188
 msgid "Tema"
@@ -2804,7 +2813,7 @@ msgstr "Do you really want to submit the quiz?"
 msgid "Tens pontos por atribuir.<0/>Atribui-os antes de fazer a submissão."
 msgstr "You have points to be assigned.<0/>Assigned them before submit."
 
-#: src/views/admin/externalQuestions/ExternalQuestions.js:191
+#: src/views/admin/externalQuestions/ExternalQuestions.js:183
 #: src/views/admin/questions/Questions.js:164
 msgid "Texto"
 msgstr "Text"
@@ -2871,7 +2880,7 @@ msgstr "Trinidad and Tobago"
 msgid "Trivialidades"
 msgstr "Trivialities"
 
-#: src/views/admin/externalQuestions/ExternalQuestions.js:210
+#: src/views/admin/externalQuestions/ExternalQuestions.js:202
 #: src/views/admin/questions/Questions.js:183
 msgid "Tudo"
 msgstr "All"
@@ -2908,7 +2917,7 @@ msgstr "Uganda"
 msgid "Uruguai"
 msgstr "Uruguay"
 
-#: src/views/admin/externalQuestions/ExternalQuestions.js:334
+#: src/views/admin/externalQuestions/ExternalQuestions.js:326
 msgid "Usada"
 msgstr "Used"
 
@@ -2916,7 +2925,7 @@ msgstr "Used"
 msgid "Utilizador actualizado com sucesso."
 msgstr "User successfully updated."
 
-#: src/views/Register.js:316
+#: src/views/Register.js:322
 msgid "Utilizador registado com sucesso.<0/>Clica <1>aqui</1> e usa as tuas credenciais."
 msgstr "User registered successfully.<0/>Click <1>here</1> and use your credentials."
 
@@ -2934,7 +2943,7 @@ msgstr "Uzbekistan"
 msgid "V"
 msgstr "W"
 
-#: src/views/Account.js:491
+#: src/views/Account.js:492
 #: src/views/admin/users/modals/EditPermissionsModal.js:111
 #: src/views/admin/users/modals/EditPermissionsModal.js:169
 msgid "Validade da subscrição"
@@ -2998,9 +3007,13 @@ msgstr "Zimbabwe"
 msgid "Zâmbia"
 msgstr "Zambia"
 
-#: src/views/Account.js:326
+#: src/views/Account.js:327
 msgid "deixa em branco para não alterar"
 msgstr "leave it blank to keep"
+
+#: src/partials/Notifications.js:219
+msgid "e d@"
+msgstr "and"
 
 #: src/views/Quiz.js:81
 msgid "hoje"

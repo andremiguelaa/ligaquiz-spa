@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/Register.js",
-        91
+        97
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/views/Register.js",
-        104
+        110
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/views/Register.js",
-        120
+        126
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/views/Register.js",
-        137
+        143
       ]
     ]
   },
@@ -35,11 +35,11 @@
     "origin": [
       [
         "src/views/Register.js",
-        137
+        143
       ],
       [
         "src/views/Register.js",
-        205
+        211
       ]
     ]
   },
@@ -47,7 +47,7 @@
     "origin": [
       [
         "src/views/Register.js",
-        205
+        211
       ]
     ]
   },
@@ -55,7 +55,7 @@
     "origin": [
       [
         "src/views/Register.js",
-        225
+        231
       ]
     ]
   },
@@ -63,7 +63,7 @@
     "origin": [
       [
         "src/views/Register.js",
-        245
+        251
       ]
     ]
   },
@@ -71,7 +71,7 @@
     "origin": [
       [
         "src/views/Register.js",
-        251
+        257
       ]
     ]
   },
@@ -79,7 +79,7 @@
     "origin": [
       [
         "src/views/Register.js",
-        270
+        276
       ]
     ]
   },
@@ -87,7 +87,7 @@
     "origin": [
       [
         "src/views/Register.js",
-        288
+        294
       ]
     ]
   },
@@ -95,7 +95,7 @@
     "origin": [
       [
         "src/views/Register.js",
-        298
+        304
       ]
     ]
   },
@@ -103,7 +103,7 @@
     "origin": [
       [
         "src/views/Register.js",
-        310
+        316
       ]
     ]
   },
@@ -111,7 +111,7 @@
     "origin": [
       [
         "src/views/Register.js",
-        316
+        322
       ]
     ]
   }
