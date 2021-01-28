@@ -53,7 +53,7 @@ const SpecialQuizzes = ({ user, setError }) => {
           <thead>
             <tr>
               <th>
-                <Trans>Tema</Trans>
+                <Trans>Título</Trans>
               </th>
               <th>
                 <span className="is-hidden-mobile">

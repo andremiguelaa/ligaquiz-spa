@@ -2707,7 +2707,6 @@ msgstr "Technology and Inventions"
 msgid "Televisão"
 msgstr "TV"
 
-#: src/views/Profile/SpecialQuizzes.js:56
 #: src/views/Profile/Statistics.js:190
 #: src/views/Quiz/OpponentStats.js:107
 #: src/views/admin/externalQuestions/ExternalQuestions.js:238
@@ -2903,6 +2902,7 @@ msgstr "Turkeuy"
 msgid "Tuvalu"
 msgstr "Tuvalu"
 
+#: src/views/Profile/SpecialQuizzes.js:56
 #: src/views/SpecialQuizzes.js:75
 #: src/views/admin/specialQuizzes/SpecialQuizForm.js:188
 msgid "Título"
