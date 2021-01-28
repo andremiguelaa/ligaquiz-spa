@@ -2042,6 +2042,10 @@ msgstr "Pontos contra"
 msgid "Pontos na liga"
 msgstr "Pontos na liga"
 
+#: src/views/SpecialQuiz.js:97
+msgid "Por {0} {1}"
+msgstr "Por {0} {1}"
+
 #: src/utils/getRegionTranslation.js:24
 msgid "Portalegre"
 msgstr "Portalegre"

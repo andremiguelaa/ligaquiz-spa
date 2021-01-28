@@ -94,9 +94,9 @@ const SpecialQuiz = () => {
           (author || globalPercentage) && (
             <>
               {author && (
-                <>
+                <Trans>
                   Por {author.name} {author.surname}
-                </>
+                </Trans>
               )}
               {author && globalPercentage && ' / '}
               {globalPercentage && (
