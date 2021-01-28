@@ -17,7 +17,7 @@ msgstr ""
 msgid "({0} anos)"
 msgstr "({0} anos)"
 
-#: src/partials/Notifications.js:217
+#: src/partials/Notifications.js:237
 msgid ", d@"
 msgstr ", d@"
 
@@ -57,40 +57,40 @@ msgstr "<0>{0}</0> resultado a contar para o ranking"
 msgid "A definir"
 msgstr "A definir"
 
-#: src/partials/Notifications.js:165
+#: src/partials/Notifications.js:185
 msgid "A tua subscrição para jogar quizzes da liga expirou."
 msgstr "A tua subscrição para jogar quizzes da liga expirou."
 
-#: src/partials/Notifications.js:155
+#: src/partials/Notifications.js:175
 msgid "A tua subscrição para jogar quizzes da liga termina amanhã."
 msgstr "A tua subscrição para jogar quizzes da liga termina amanhã."
 
-#: src/partials/Notifications.js:149
+#: src/partials/Notifications.js:169
 msgid "A tua subscrição para jogar quizzes da liga termina daqui a {regularRemainingDays} dias."
 msgstr "A tua subscrição para jogar quizzes da liga termina daqui a {regularRemainingDays} dias."
 
-#: src/partials/Notifications.js:160
+#: src/partials/Notifications.js:180
 msgid "A tua subscrição para jogar quizzes da liga termina hoje."
 msgstr "A tua subscrição para jogar quizzes da liga termina hoje."
 
-#: src/partials/Notifications.js:194
+#: src/partials/Notifications.js:214
 msgid "A tua subscrição para jogar quizzes especiais expirou."
 msgstr "A tua subscrição para jogar quizzes especiais expirou."
 
-#: src/partials/Notifications.js:184
+#: src/partials/Notifications.js:204
 msgid "A tua subscrição para jogar quizzes especiais termina amanhã."
 msgstr "A tua subscrição para jogar quizzes especiais termina amanhã."
 
-#: src/partials/Notifications.js:178
+#: src/partials/Notifications.js:198
 msgid "A tua subscrição para jogar quizzes especiais termina daqui a {specialRemainingDays} dias."
 msgstr "A tua subscrição para jogar quizzes especiais termina daqui a {specialRemainingDays} dias."
 
-#: src/partials/Notifications.js:189
+#: src/partials/Notifications.js:209
 msgid "A tua subscrição para jogar quizzes especiais termina hoje."
 msgstr "A tua subscrição para jogar quizzes especiais termina hoje."
 
-#: src/partials/Notifications.js:209
-#: src/partials/Notifications.js:226
+#: src/partials/Notifications.js:229
+#: src/partials/Notifications.js:246
 msgid "A vitória no quiz especial <0><1>{0}</1></0> é d@ {1}. Parabéns!"
 msgstr "A vitória no quiz especial <0><1>{0}</1></0> é d@ {1}. Parabéns!"
 
@@ -490,8 +490,8 @@ msgstr "Ciências Sociais"
 msgid "Classificação"
 msgstr "Classificação"
 
-#: src/partials/Notifications.js:169
-#: src/partials/Notifications.js:198
+#: src/partials/Notifications.js:189
+#: src/partials/Notifications.js:218
 msgid "Clica <0>aqui</0> para saber como renovar."
 msgstr "Clica <0>aqui</0> para saber como renovar."
 
@@ -1816,7 +1816,7 @@ msgstr "O pedido de redefinição de palavra-passe é inválido"
 msgid "OK"
 msgstr "OK"
 
-#: src/partials/Notifications.js:132
+#: src/partials/Notifications.js:152
 msgid "Obrigado pela tua inscrição! O teu registo encontra-se a aguardar aprovação da equipa da {0}."
 msgstr "Obrigado pela tua inscrição! O teu registo encontra-se a aguardar aprovação da equipa da {0}."
 
@@ -2140,7 +2140,7 @@ msgstr "Quiz apagado com sucesso."
 msgid "Quiz criado com sucesso."
 msgstr "Quiz criado com sucesso."
 
-#: src/partials/Notifications.js:241
+#: src/partials/Notifications.js:261
 msgid "Quiz de hoje disponível aqui"
 msgstr "Quiz de hoje disponível aqui"
 
@@ -2160,7 +2160,7 @@ msgstr "Quiz especial apagado com sucesso."
 msgid "Quiz especial criado com sucesso."
 msgstr "Quiz especial criado com sucesso."
 
-#: src/partials/Notifications.js:248
+#: src/partials/Notifications.js:268
 msgid "Quiz especial disponível aqui"
 msgstr "Quiz especial disponível aqui"
 
@@ -2713,7 +2713,6 @@ msgstr "Televisão"
 #: src/views/SpecialQuizzes.js:75
 #: src/views/admin/externalQuestions/ExternalQuestions.js:238
 #: src/views/admin/questions/Questions.js:209
-#: src/views/admin/specialQuizzes/SpecialQuizForm.js:188
 msgid "Tema"
 msgstr "Tema"
 
@@ -2905,6 +2904,10 @@ msgstr "Turquia"
 msgid "Tuvalu"
 msgstr "Tuvalu"
 
+#: src/views/admin/specialQuizzes/SpecialQuizForm.js:188
+msgid "Título"
+msgstr "Título"
+
 #: src/utils/getRegionTranslation.js:214
 msgid "Ucrânia"
 msgstr "Ucrânia"
@@ -3011,7 +3014,7 @@ msgstr "Zâmbia"
 msgid "deixa em branco para não alterar"
 msgstr "deixa em branco para não alterar"
 
-#: src/partials/Notifications.js:219
+#: src/partials/Notifications.js:239
 msgid "e d@"
 msgstr "e d@"
 

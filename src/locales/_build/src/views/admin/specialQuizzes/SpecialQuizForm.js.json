@@ -55,7 +55,7 @@
       ]
     ]
   },
-  "Tema": {
+  "Título": {
     "origin": [
       [
         "src/views/admin/specialQuizzes/SpecialQuizForm.js",

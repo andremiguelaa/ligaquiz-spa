@@ -312,10 +312,6 @@ const LigaQuiz = () => (
     <p>O pagamento das inscrições poderá ser feito das seguintes formas:</p>
     <ul>
       <li>
-        Em mão a qualquer elemento da organização:
-        <strong>André Ascensão, Sofia Santos ou Paulo Martins</strong>
-      </li>
-      <li>
         Por transferência bancária para a conta com o seguinte IBAN enviando o
         comprovativo para{' '}
         <a href="mailto:andremiguelaa@gmail.com">andremiguelaa@gmail.com</a>:{' '}

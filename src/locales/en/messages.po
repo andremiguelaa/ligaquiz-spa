@@ -17,7 +17,7 @@ msgstr ""
 msgid "({0} anos)"
 msgstr "({0} years old)"
 
-#: src/partials/Notifications.js:217
+#: src/partials/Notifications.js:237
 msgid ", d@"
 msgstr ","
 
@@ -57,40 +57,40 @@ msgstr "<0>{0}</0> result counting to national ranking"
 msgid "A definir"
 msgstr "TBD"
 
-#: src/partials/Notifications.js:165
+#: src/partials/Notifications.js:185
 msgid "A tua subscrição para jogar quizzes da liga expirou."
 msgstr "Your subscription to play league quizzes expired."
 
-#: src/partials/Notifications.js:155
+#: src/partials/Notifications.js:175
 msgid "A tua subscrição para jogar quizzes da liga termina amanhã."
 msgstr "Your subscription to play league quizzes expires tomorrow."
 
-#: src/partials/Notifications.js:149
+#: src/partials/Notifications.js:169
 msgid "A tua subscrição para jogar quizzes da liga termina daqui a {regularRemainingDays} dias."
 msgstr "Your subscription to play league quizzes will expire in {regularRemainingDays} days."
 
-#: src/partials/Notifications.js:160
+#: src/partials/Notifications.js:180
 msgid "A tua subscrição para jogar quizzes da liga termina hoje."
 msgstr "Your subscription to play league quizzes expires today."
 
-#: src/partials/Notifications.js:194
+#: src/partials/Notifications.js:214
 msgid "A tua subscrição para jogar quizzes especiais expirou."
 msgstr "Your subscription to play special quizzes expired."
 
-#: src/partials/Notifications.js:184
+#: src/partials/Notifications.js:204
 msgid "A tua subscrição para jogar quizzes especiais termina amanhã."
 msgstr "Your subscription to play special quizzes expires tomorrow."
 
-#: src/partials/Notifications.js:178
+#: src/partials/Notifications.js:198
 msgid "A tua subscrição para jogar quizzes especiais termina daqui a {specialRemainingDays} dias."
 msgstr "Your subscription to play special quizzes will expire in {specialRemainingDays} days."
 
-#: src/partials/Notifications.js:189
+#: src/partials/Notifications.js:209
 msgid "A tua subscrição para jogar quizzes especiais termina hoje."
 msgstr "Your subscription to play special quizzes expires today."
 
-#: src/partials/Notifications.js:209
-#: src/partials/Notifications.js:226
+#: src/partials/Notifications.js:229
+#: src/partials/Notifications.js:246
 msgid "A vitória no quiz especial <0><1>{0}</1></0> é d@ {1}. Parabéns!"
 msgstr "The victory in the special quiz <0><1>{0}</1></0> goes to {1}. Congratulations!"
 
@@ -490,8 +490,8 @@ msgstr "Social Sciences"
 msgid "Classificação"
 msgstr "Ranking"
 
-#: src/partials/Notifications.js:169
-#: src/partials/Notifications.js:198
+#: src/partials/Notifications.js:189
+#: src/partials/Notifications.js:218
 msgid "Clica <0>aqui</0> para saber como renovar."
 msgstr "Click <0>here</0> to find out how to renew."
 
@@ -1816,7 +1816,7 @@ msgstr "Your password change request is not valid"
 msgid "OK"
 msgstr "OK"
 
-#: src/partials/Notifications.js:132
+#: src/partials/Notifications.js:152
 msgid "Obrigado pela tua inscrição! O teu registo encontra-se a aguardar aprovação da equipa da {0}."
 msgstr "Thank you for signing up! Your registration is pending approval from the {0} team."
 
@@ -2140,7 +2140,7 @@ msgstr "Quiz successfully deleted."
 msgid "Quiz criado com sucesso."
 msgstr "Quiz successfully created."
 
-#: src/partials/Notifications.js:241
+#: src/partials/Notifications.js:261
 msgid "Quiz de hoje disponível aqui"
 msgstr "Today's quiz available here"
 
@@ -2160,7 +2160,7 @@ msgstr "Special quiz successfully deleted."
 msgid "Quiz especial criado com sucesso."
 msgstr "Special quiz successfully created."
 
-#: src/partials/Notifications.js:248
+#: src/partials/Notifications.js:268
 msgid "Quiz especial disponível aqui"
 msgstr "Special quiz available here"
 
@@ -2713,7 +2713,6 @@ msgstr "TV"
 #: src/views/SpecialQuizzes.js:75
 #: src/views/admin/externalQuestions/ExternalQuestions.js:238
 #: src/views/admin/questions/Questions.js:209
-#: src/views/admin/specialQuizzes/SpecialQuizForm.js:188
 msgid "Tema"
 msgstr "Genre"
 
@@ -2905,6 +2904,10 @@ msgstr "Turkeuy"
 msgid "Tuvalu"
 msgstr "Tuvalu"
 
+#: src/views/admin/specialQuizzes/SpecialQuizForm.js:188
+msgid "Título"
+msgstr "Title"
+
 #: src/utils/getRegionTranslation.js:214
 msgid "Ucrânia"
 msgstr "Ukraine"
@@ -3011,7 +3014,7 @@ msgstr "Zambia"
 msgid "deixa em branco para não alterar"
 msgstr "leave it blank to keep"
 
-#: src/partials/Notifications.js:219
+#: src/partials/Notifications.js:239
 msgid "e d@"
 msgstr "and"
 

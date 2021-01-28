@@ -185,7 +185,7 @@ const SpecialQuizForm = () => {
           )}
           <div className="field">
             <label className="label">
-              <Trans>Tema</Trans>
+              <Trans>Título</Trans>
             </label>
             <input
               disabled={submitting}
