@@ -72,7 +72,7 @@ const SpecialQuizzes = () => {
               columns={[
                 {
                   id: 'subject',
-                  label: <Trans>Tema</Trans>,
+                  label: <Trans>Título</Trans>,
                   render: (item) => (
                     <Link
                       to={`/special-quiz/${item.date}`}
