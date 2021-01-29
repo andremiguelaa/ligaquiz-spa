@@ -186,17 +186,17 @@ const Equizition = () => (
       </li>
       <li>Special quizzes consist of 12 questions.</li>
       <li>For each correct answer in a special quiz, you get 20 points.</li>
-      <li>You can use up to 5 jesters in each special quiz.</li>
+      <li>You can use up to 5 jokers in each special quiz.</li>
       <li>
-        When you use a jester in a question and get it right, you earn extra
+        When you use a joker in a question and get it right, you earn extra
         points depending on the percentage of players who got that question
         wrong.
         <br /> <strong>Example:</strong> If you get a question right with a
-        jester and 60% of the players failed to give the correct answer you get
+        joker and 60% of the players failed to give the correct answer you get
         80 points (20+60).
       </li>
       <li>
-        But if you use a jester and miss the correct answer, you get 20 negative
+        But if you use a joker and miss the correct answer, you get 20 negative
         points!
       </li>
     </ol>

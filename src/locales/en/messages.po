@@ -43,7 +43,7 @@ msgstr "<0>{0} is a general knowledge game in which trust in players' honesty is
 
 #: src/views/SpecialQuiz/SpecialQuizForm.js:188
 msgid "<0>Cada pergunta certa num quiz especial vale 20 pontos.</0><1>Em cada quiz especial podes usar até 5 jokers.</1><2>Ao usares um joker numa pergunta, caso acertes, ganhas pontos adicionais consoante a percentagem de pessoas que erraram essa pergunta.</2><3><4>Exemplo:</4> Se acertares uma pergunta onde usaste um joker e 60% dos jogadores falharem ganhas 80 pontos (20+60).</3><5>Caso uses um joker e falhes a pergunta, perdes 20 pontos!</5>"
-msgstr "<0>For each correct answer in a special quiz, you get 20 points.</0><1>You can use up to 5 jesters in each special quiz.</1><2>When you use a jester in a question and get it right, you earn extra points depending on the percentage of players who got that question wrong.</2><3><4>Example:</4> If you get a question right with a jester and 60% of the players failed to give the correct answer you get 80 points (20+60).</3><5>But if you use a jester and miss the correct answer, you get 20 negative points!</5>"
+msgstr "<0>For each correct answer in a special quiz, you get 20 points.</0><1>You can use up to 5 jokers in each special quiz.</1><2>When you use a joker in a question and get it right, you earn extra points depending on the percentage of players who got that question wrong.</2><3><4>Example:</4> If you get a question right with a joker and 60% of the players failed to give the correct answer you get 80 points (20+60).</3><5>But if you use a joker and miss the correct answer, you get 20 negative points!</5>"
 
 #: src/views/admin/quizzes/QuizForm.js:167
 msgid "<0>Não devem ser feitos quizzes com a seguinte combinação de temas:</0><1><2>Literatura / Banda Desenhada</2><3>Literatura / Filosofia</3><4>Óperas e Musicais / Música</4><5>Belas Artes / Museus</5></1>"
@@ -1298,11 +1298,11 @@ msgstr "Games and Hobbies"
 #: src/views/Question.js:209
 #: src/views/SpecialQuiz/SpecialQuizForm.js:167
 msgid "Joker"
-msgstr "Jester"
+msgstr "Joker"
 
 #: src/views/SpecialQuiz/SpecialQuizDone.js:171
 msgid "Joker usado"
-msgstr "Used Jester"
+msgstr "Used Joker"
 
 #: src/utils/getRegionTranslation.js:116
 msgid "Jordânia"
@@ -1922,7 +1922,7 @@ msgstr "Percentage of players that assign 3 points"
 
 #: src/views/Question.js:130
 msgid "Percentagem de jogadores que usaram joker"
-msgstr "Percentage of players that used a jester"
+msgstr "Percentage of players that used a joker"
 
 #: src/views/Question.js:120
 msgid "Percentagem de respostas correctas"
