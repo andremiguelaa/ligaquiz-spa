@@ -30,6 +30,8 @@ const Notifications = () => {
               special_quiz_yesterday: data.special_quiz_yesterday
                 ? data.special_quiz_yesterday
                 : false,
+              not_corrected_quizzes: data.not_corrected_quizzes,
+              not_corrected_special_quizzes: data.not_corrected_special_quizzes,
               now: data.now,
             },
           });
@@ -143,7 +145,9 @@ const Notifications = () => {
     (notifications.special_quiz && location.pathname !== '/special-quiz') ||
     (regularRemainingDays !== undefined && regularRemainingDays < 8) ||
     (specialRemainingDays !== undefined && specialRemainingDays < 8) ||
-    (user && user.roles === null)
+    (user && user.roles === null) ||
+    notifications.not_corrected_quizzes ||
+    notifications.not_corrected_special_quizzes
   ) {
     return (
       <section className="section">
@@ -238,7 +242,8 @@ const Notifications = () => {
                       ' ' +
                       i18n._(t`e d@`) +
                       ' ' +
-                      specialQuizWinners.slice(-1)}. Parabéns!
+                      specialQuizWinners.slice(-1)}
+                    . Parabéns!
                   </Trans>
                 )}
               </I18n>
@@ -268,6 +273,37 @@ const Notifications = () => {
               <Trans>Quiz especial disponível aqui</Trans>
               {specialQuizSubject && `: ${specialQuizSubject}`}
             </Link>
+          </div>
+        )}
+        {(notifications.not_corrected_quizzes ||
+          notifications.not_corrected_special_quizzes) && (
+          <div className={`notification is-warning`}>
+            {notifications.not_corrected_quizzes && (
+              <>
+                <strong>
+                  <Trans>Quizzes por corrigir:</Trans>
+                </strong>{' '}
+                {notifications.not_corrected_quizzes
+                  .map((quiz) => (
+                    <Link to={`/admin/quiz/${quiz}/correct`}>{quiz}</Link>
+                  ))
+                  .reduce((prev, curr) => [prev, ' / ', curr])}
+              </>
+            )}
+            {notifications.not_corrected_quizzes &&
+              notifications.not_corrected_special_quizzes && <br />}
+            {notifications.not_corrected_special_quizzes && (
+              <>
+                <strong>
+                  <Trans>Quizzes especiais por corrigir:</Trans>
+                </strong>{' '}
+                {notifications.not_corrected_special_quizzes
+                  .map((quiz) => (
+                    <Link to={`/admin/special-quiz/${quiz}/correct`}>{quiz}</Link>
+                  ))
+                  .reduce((prev, curr) => [prev, ' / ', curr])}
+              </>
+            )}
           </div>
         )}
       </section>
