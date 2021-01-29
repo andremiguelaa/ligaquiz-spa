@@ -242,8 +242,7 @@ const Notifications = () => {
                       ' ' +
                       i18n._(t`e d@`) +
                       ' ' +
-                      specialQuizWinners.slice(-1)}
-                    . Parabéns!
+                      specialQuizWinners.slice(-1)}. Parabéns!
                   </Trans>
                 )}
               </I18n>
@@ -281,7 +280,7 @@ const Notifications = () => {
             {notifications.not_corrected_quizzes && (
               <>
                 <strong>
-                  <Trans>Quizzes por corrigir:</Trans>
+                  <Trans>Quizzes por corrigir</Trans>:
                 </strong>{' '}
                 {notifications.not_corrected_quizzes
                   .map((quiz) => (
@@ -295,7 +294,7 @@ const Notifications = () => {
             {notifications.not_corrected_special_quizzes && (
               <>
                 <strong>
-                  <Trans>Quizzes especiais por corrigir:</Trans>
+                  <Trans>Quizzes especiais por corrigir</Trans>:
                 </strong>{' '}
                 {notifications.not_corrected_special_quizzes
                   .map((quiz) => (

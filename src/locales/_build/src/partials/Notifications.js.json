@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/partials/Notifications.js",
-        152
+        156
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/partials/Notifications.js",
-        169
+        173
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/partials/Notifications.js",
-        175
+        179
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/partials/Notifications.js",
-        180
+        184
       ]
     ]
   },
@@ -35,7 +35,7 @@
     "origin": [
       [
         "src/partials/Notifications.js",
-        185
+        189
       ]
     ]
   },
@@ -43,11 +43,11 @@
     "origin": [
       [
         "src/partials/Notifications.js",
-        189
+        193
       ],
       [
         "src/partials/Notifications.js",
-        218
+        222
       ]
     ]
   },
@@ -55,7 +55,7 @@
     "origin": [
       [
         "src/partials/Notifications.js",
-        198
+        202
       ]
     ]
   },
@@ -63,7 +63,7 @@
     "origin": [
       [
         "src/partials/Notifications.js",
-        204
+        208
       ]
     ]
   },
@@ -71,7 +71,7 @@
     "origin": [
       [
         "src/partials/Notifications.js",
-        209
+        213
       ]
     ]
   },
@@ -79,7 +79,7 @@
     "origin": [
       [
         "src/partials/Notifications.js",
-        214
+        218
       ]
     ]
   },
@@ -87,11 +87,11 @@
     "origin": [
       [
         "src/partials/Notifications.js",
-        229
+        233
       ],
       [
         "src/partials/Notifications.js",
-        246
+        250
       ]
     ]
   },
@@ -99,7 +99,7 @@
     "origin": [
       [
         "src/partials/Notifications.js",
-        237
+        241
       ]
     ]
   },
@@ -107,7 +107,7 @@
     "origin": [
       [
         "src/partials/Notifications.js",
-        239
+        243
       ]
     ]
   },
@@ -115,7 +115,7 @@
     "origin": [
       [
         "src/partials/Notifications.js",
-        261
+        265
       ]
     ]
   },
@@ -123,7 +123,23 @@
     "origin": [
       [
         "src/partials/Notifications.js",
-        268
+        272
+      ]
+    ]
+  },
+  "Quizzes por corrigir": {
+    "origin": [
+      [
+        "src/partials/Notifications.js",
+        283
+      ]
+    ]
+  },
+  "Quizzes especiais por corrigir": {
+    "origin": [
+      [
+        "src/partials/Notifications.js",
+        297
       ]
     ]
   }
