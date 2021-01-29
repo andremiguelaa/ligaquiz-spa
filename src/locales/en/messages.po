@@ -47,7 +47,7 @@ msgstr "<0>For each correct answer in a special quiz, you get 20 points.</0><1>Y
 
 #: src/views/admin/quizzes/QuizForm.js:167
 msgid "<0>Não devem ser feitos quizzes com a seguinte combinação de temas:</0><1><2>Literatura / Banda Desenhada</2><3>Literatura / Filosofia</3><4>Óperas e Musicais / Música</4><5>Belas Artes / Museus</5></1>"
-msgstr "<0>We must avoid to do quizzes with the following genre combinations:</0><1><2>Literature / Comics</2><3>Literature / Philosophy</3><4>Operas and Musicals / Music</4><5>Fine Arts / Museums</5></1>"
+msgstr "<0>We must avoid to do quizzes with the following theme combinations:</0><1><2>Literature / Comics</2><3>Literature / Philosophy</3><4>Operas and Musicals / Music</4><5>Fine Arts / Museums</5></1>"
 
 #: src/views/NationalRanking/Legend.js:62
 msgid "<0>{0}</0> resultado a contar para o ranking"
@@ -2297,7 +2297,7 @@ msgstr "Month rankings"
 #: src/views/GenreRanking.js:170
 #: src/views/Seasons.js:113
 msgid "Rankings temáticos"
-msgstr "Genre rankings"
+msgstr "Thematic rankings"
 
 #: src/routes.js:61
 #: src/views/Login.js:114
@@ -2608,7 +2608,7 @@ msgstr "Subscription successfully renewed."
 #: src/views/Quiz/OpponentStats.js:160
 #: src/views/admin/questions/Questions.js:237
 msgid "Subtema"
-msgstr "Subgenre"
+msgstr "Subtheme"
 
 #: src/utils/getRegionTranslation.js:186
 msgid "Sudão"
@@ -2716,7 +2716,7 @@ msgstr "TV"
 #: src/views/admin/externalQuestions/ExternalQuestions.js:238
 #: src/views/admin/questions/Questions.js:209
 msgid "Tema"
-msgstr "Genre"
+msgstr "Theme"
 
 #: src/views/Profile/League.js:35
 msgid "Temporada"

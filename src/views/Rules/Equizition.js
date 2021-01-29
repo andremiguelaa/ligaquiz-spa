@@ -26,7 +26,7 @@ const Equizition = () => (
         same tier and twice without an opponent (on the 10th and 20th rounds).
       </li>
       <li>
-        Each game will have eight questions, each one about a different genre.
+        Each game will have eight questions, each one about a different theme.
       </li>
       <li>
         Players will be able to submit answers to a game from 0 a.m. until
