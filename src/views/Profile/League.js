@@ -56,9 +56,9 @@ const League = ({ user, setError }) => {
                 <td>
                   <SelectOrdinal
                     value={season.user_tier}
-                    one="1ª"
-                    two="2ª"
-                    few="3ª"
+                    one="#ª"
+                    two="#ª"
+                    few="#ª"
                     other="#ª"
                   />
                 </td>
@@ -75,9 +75,9 @@ const League = ({ user, setError }) => {
                   {(season.user_tier > 1 || season.user_rank > 1) && (
                     <SelectOrdinal
                       value={season.user_rank}
-                      one="1º"
-                      two="2º"
-                      few="3º"
+                      one="#º"
+                      two="#º"
+                      few="#º"
                       other="#º"
                     />
                   )}

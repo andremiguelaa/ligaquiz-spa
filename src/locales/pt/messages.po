@@ -3051,14 +3051,14 @@ msgid "posições"
 msgstr "posições"
 
 #: src/views/Profile/League.js:57
-msgid "{0, selectordinal, one {1ª} two {2ª} few {3ª} other {#ª}}"
-msgstr "{0, selectordinal, one {1ª} two {2ª} few {3ª} other {#ª}}"
+msgid "{0, selectordinal, one {#ª} two {#ª} few {#ª} other {#ª}}"
+msgstr "{0, selectordinal, one {#ª} two {#ª} few {#ª} other {#ª}}"
 
 #: src/views/NationalRanking/Legend.js:66
 #: src/views/Profile/League.js:76
 #: src/views/Profile/SpecialQuizzes.js:90
-msgid "{0, selectordinal, one {1º} two {2º} few {3º} other {#º}}"
-msgstr "{0, selectordinal, one {1º} two {2º} few {3º} other {#º}}"
+msgid "{0, selectordinal, one {#º} two {#º} few {#º} other {#º}}"
+msgstr "{0, selectordinal, one {#º} two {#º} few {#º} other {#º}}"
 
 #: src/views/NationalRanking.js:167
 #: src/views/NationalRanking.js:310
