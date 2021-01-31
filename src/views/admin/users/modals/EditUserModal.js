@@ -7,7 +7,7 @@ import ApiRequest from 'utils/ApiRequest';
 import Modal from 'components/Modal';
 import formatDate from 'utils/formatDate';
 
-const EditPermissionsModal = ({
+const EditUserModal = ({
   userToEdit,
   setUserToEdit,
   users,
@@ -25,6 +25,8 @@ const EditPermissionsModal = ({
     }, {});
     ApiRequest.patch('users', {
       id: user.id,
+      name: user.name,
+      surname: user.surname,
       roles: newRoles,
     })
       .then(({ data: { user } }) => {
@@ -57,6 +59,54 @@ const EditPermissionsModal = ({
       }
       body={
         <>
+          <fieldset className="fieldset">
+            <div className="field">
+              <label className="label">
+                <Trans>Nome</Trans>
+              </label>
+              <div className="control has-icons-left">
+                <input
+                  type="name"
+                  required
+                  maxLength={255}
+                  className="input"
+                  defaultValue={userToEdit.name}
+                  onChange={(event) => {
+                    setUserToEdit({
+                      ...userToEdit,
+                      name: event.target.value,
+                    });
+                  }}
+                />
+                <span className="icon is-small is-left">
+                  <i className="fa fa-user" />
+                </span>
+              </div>
+            </div>
+            <div className="field">
+              <label className="label">
+                <Trans>Apelido</Trans>
+              </label>
+              <div className="control has-icons-left">
+                <input
+                  type="text"
+                  required
+                  maxLength={255}
+                  className="input"
+                  defaultValue={userToEdit.surname}
+                  onChange={(event) => {
+                    setUserToEdit({
+                      ...userToEdit,
+                      surname: event.target.value,
+                    });
+                  }}
+                />
+                <span className="icon is-small is-left">
+                  <i className="fa fa-user" />
+                </span>
+              </div>
+            </div>
+          </fieldset>
           <fieldset className="fieldset">
             <div className="field">
               <input
@@ -330,4 +380,4 @@ const EditPermissionsModal = ({
   );
 };
 
-export default EditPermissionsModal;
+export default EditUserModal;

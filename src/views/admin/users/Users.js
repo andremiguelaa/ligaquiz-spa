@@ -12,7 +12,7 @@ import Loading from 'components/Loading';
 import Error from 'components/Error';
 import PageHeader from 'components/PageHeader';
 import EmptyState from 'components/EmptyState';
-import EditPermissionsModal from './modals/EditPermissionsModal';
+import EditUserModal from './modals/EditUserModal';
 
 import classes from './Users.module.scss';
 
@@ -377,7 +377,7 @@ const Users = () => {
         )}
       </div>
       {userToEdit && (
-        <EditPermissionsModal
+        <EditUserModal
           userToEdit={userToEdit}
           setUserToEdit={setUserToEdit}
           users={users}
