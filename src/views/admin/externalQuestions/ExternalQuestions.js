@@ -46,6 +46,7 @@ const ExternalQuestions = () => {
   const [selectedGenre, setSelectedGenre] = useState('');
   const [selectedSubgenre, setSelectedSubgenre] = useState('');
   const [page, setPage] = useState();
+  const [onlyNonUsed, setOnlyNonUsed] = useState();
   const [historyParams, setHistoryParams] = useState({
     search: '',
     searchField: '',
@@ -88,12 +89,26 @@ const ExternalQuestions = () => {
     } else {
       setPage(1);
     }
+    if (params.get('onlyNonUsed')) {
+      setOnlyNonUsed(params.get('onlyNonUsed'));
+      setHistoryParams((prev) => ({
+        ...prev,
+        onlyNonUsed: params.get('onlyNonUsed'),
+      }));
+    } else {
+      setOnlyNonUsed('true');
+    }
   }, [location.search]);
 
   useEffect(() => {
     if (location.search) {
       setQuestions();
-      ApiRequest.get(`external-questions${location.search}`)
+      const searchParams = new URLSearchParams(location.search);
+      if (searchParams.get('onlyNonUsed') === 'true') {
+        searchParams.set('used', 0);
+        searchParams.delete('onlyNonUsed');
+      }
+      ApiRequest.get(`external-questions?${searchParams.toString()}`)
         .then(({ data }) => {
           setQuestions(data);
         })
@@ -109,7 +124,11 @@ const ExternalQuestions = () => {
         historyParams.search || ''
       }&search_field=${historyParams.searchField || ''}${
         historyParams.genre ? `&genre=${historyParams.genre}` : ''
-      }${historyParams.page ? `&page=${historyParams.page}` : ''}`
+      }${historyParams.page ? `&page=${historyParams.page}` : ''}${
+        historyParams.onlyNonUsed
+          ? `&onlyNonUsed=${historyParams.onlyNonUsed}`
+          : `&onlyNonUsed=true`
+      }`
     );
   }, [history, historyParams]);
 
@@ -171,9 +190,10 @@ const ExternalQuestions = () => {
             setHistoryParams((prev) => ({
               ...prev,
               search: query,
-              searchField: searchField,
+              searchField,
               genre: selectedSubgenre || selectedGenre,
               page: '1',
+              onlyNonUsed,
             }));
           }}
           className={classes.form}
@@ -259,6 +279,24 @@ const ExternalQuestions = () => {
               <div className="icon is-small is-left">
                 <i className="fa fa-book"></i>
               </div>
+            </div>
+          </div>
+          <div className={classnames('field', 'is-grouped', classes.fields)}>
+            <div className={classes.onlyNonUsed}>
+              <input
+                id="used"
+                type="checkbox"
+                className="switch"
+                name="user"
+                value={onlyNonUsed === 'true'}
+                onClick={(event) =>
+                  setOnlyNonUsed(event.target.checked ? 'true' : 'false')
+                }
+                defaultChecked={onlyNonUsed === 'true'}
+              />
+              <label htmlFor="used">
+                <Trans>Só não usadas</Trans>
+              </label>
             </div>
             <div className={classnames('control', classes.control)}>
               <button className="button is-primary">

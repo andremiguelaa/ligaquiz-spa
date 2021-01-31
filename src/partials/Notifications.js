@@ -284,7 +284,9 @@ const Notifications = () => {
                 </strong>{' '}
                 {notifications.not_corrected_quizzes
                   .map((quiz) => (
-                    <Link to={`/admin/quiz/${quiz}/correct`}>{quiz}</Link>
+                    <Link key={quiz} to={`/admin/quiz/${quiz}/correct`}>
+                      {quiz}
+                    </Link>
                   ))
                   .reduce((prev, curr) => [prev, ' / ', curr])}
               </>
@@ -298,7 +300,9 @@ const Notifications = () => {
                 </strong>{' '}
                 {notifications.not_corrected_special_quizzes
                   .map((quiz) => (
-                    <Link to={`/admin/special-quiz/${quiz}/correct`}>{quiz}</Link>
+                    <Link key={quiz} to={`/admin/special-quiz/${quiz}/correct`}>
+                      {quiz}
+                    </Link>
                   ))
                   .reduce((prev, curr) => [prev, ' / ', curr])}
               </>
