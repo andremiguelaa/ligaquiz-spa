@@ -1,0 +1,118 @@
+{
+  "Utilizador actualizado com sucesso.": {
+    "origin": [
+      [
+        "src/views/admin/users/modals/EditUserModal.js",
+        44
+      ]
+    ]
+  },
+  "Não foi possível actualizar o utilizador.": {
+    "origin": [
+      [
+        "src/views/admin/users/modals/EditUserModal.js",
+        48
+      ]
+    ]
+  },
+  "Editar permissões de {0} {1}": {
+    "origin": [
+      [
+        "src/views/admin/users/modals/EditUserModal.js",
+        56
+      ]
+    ]
+  },
+  "Nome": {
+    "origin": [
+      [
+        "src/views/admin/users/modals/EditUserModal.js",
+        65
+      ]
+    ]
+  },
+  "Apelido": {
+    "origin": [
+      [
+        "src/views/admin/users/modals/EditUserModal.js",
+        88
+      ]
+    ]
+  },
+  "Administrador": {
+    "origin": [
+      [
+        "src/views/admin/users/modals/EditUserModal.js",
+        129
+      ]
+    ]
+  },
+  "Jogador regular": {
+    "origin": [
+      [
+        "src/views/admin/users/modals/EditUserModal.js",
+        155
+      ]
+    ]
+  },
+  "Validade da subscrição": {
+    "origin": [
+      [
+        "src/views/admin/users/modals/EditUserModal.js",
+        161
+      ],
+      [
+        "src/views/admin/users/modals/EditUserModal.js",
+        219
+      ]
+    ]
+  },
+  "Jogador de quizzes especiais": {
+    "origin": [
+      [
+        "src/views/admin/users/modals/EditUserModal.js",
+        213
+      ]
+    ]
+  },
+  "Gestor de Ranking Nacional": {
+    "origin": [
+      [
+        "src/views/admin/users/modals/EditUserModal.js",
+        273
+      ]
+    ]
+  },
+  "Editor de Quizzes": {
+    "origin": [
+      [
+        "src/views/admin/users/modals/EditUserModal.js",
+        297
+      ]
+    ]
+  },
+  "Editor de Quizzes Especiais": {
+    "origin": [
+      [
+        "src/views/admin/users/modals/EditUserModal.js",
+        322
+      ]
+    ]
+  },
+  "Corrector": {
+    "origin": [
+      [
+        "src/views/admin/users/modals/EditUserModal.js",
+        345
+      ]
+    ]
+  },
+  "Bloqueado": {
+    "origin": [
+      [
+        "src/views/admin/users/modals/EditUserModal.js",
+        368
+      ]
+    ]
+  }
+}

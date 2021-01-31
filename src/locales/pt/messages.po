@@ -126,7 +126,7 @@ msgid "Adicionar provas mensais"
 msgstr "Adicionar provas mensais"
 
 #: src/views/admin/users/Users.js:230
-#: src/views/admin/users/modals/EditPermissionsModal.js:79
+#: src/views/admin/users/modals/EditUserModal.js:129
 msgid "Administrador"
 msgstr "Administrador"
 
@@ -216,6 +216,7 @@ msgstr "Apagar temporada"
 #: src/views/Account.js:170
 #: src/views/Register.js:126
 #: src/views/admin/nationalRanking/Players/Form.js:192
+#: src/views/admin/users/modals/EditUserModal.js:88
 msgid "Apelido"
 msgstr "Apelido"
 
@@ -340,7 +341,7 @@ msgid "Biologia"
 msgstr "Biologia"
 
 #: src/views/admin/users/Users.js:320
-#: src/views/admin/users/modals/EditPermissionsModal.js:318
+#: src/views/admin/users/modals/EditUserModal.js:368
 msgid "Bloqueado"
 msgstr "Bloqueado"
 
@@ -577,7 +578,7 @@ msgid "Correcta"
 msgstr "Correcta"
 
 #: src/views/admin/users/Users.js:308
-#: src/views/admin/users/modals/EditPermissionsModal.js:295
+#: src/views/admin/users/modals/EditUserModal.js:345
 msgid "Corrector"
 msgstr "Corrector"
 
@@ -770,7 +771,7 @@ msgstr "Editar jogadores"
 msgid "Editar notificação"
 msgstr "Editar notificação"
 
-#: src/views/admin/users/modals/EditPermissionsModal.js:54
+#: src/views/admin/users/modals/EditUserModal.js:56
 msgid "Editar permissões de {0} {1}"
 msgstr "Editar permissões de {0} {1}"
 
@@ -791,12 +792,12 @@ msgid "Editar temporada {season}"
 msgstr "Editar temporada {season}"
 
 #: src/views/admin/users/Users.js:282
-#: src/views/admin/users/modals/EditPermissionsModal.js:247
+#: src/views/admin/users/modals/EditUserModal.js:297
 msgid "Editor de Quizzes"
 msgstr "Editor de Quizzes"
 
 #: src/views/admin/users/Users.js:295
-#: src/views/admin/users/modals/EditPermissionsModal.js:272
+#: src/views/admin/users/modals/EditUserModal.js:322
 msgid "Editor de Quizzes Especiais"
 msgstr "Editor de Quizzes Especiais"
 
@@ -1047,7 +1048,7 @@ msgid "Geologia"
 msgstr "Geologia"
 
 #: src/views/admin/users/Users.js:269
-#: src/views/admin/users/modals/EditPermissionsModal.js:223
+#: src/views/admin/users/modals/EditUserModal.js:273
 msgid "Gestor de Ranking Nacional"
 msgstr "Gestor de Ranking Nacional"
 
@@ -1263,12 +1264,12 @@ msgid "Jogador da liga"
 msgstr "Jogador da liga"
 
 #: src/views/admin/users/Users.js:255
-#: src/views/admin/users/modals/EditPermissionsModal.js:163
+#: src/views/admin/users/modals/EditUserModal.js:213
 msgid "Jogador de quizzes especiais"
 msgstr "Jogador de quizzes especiais"
 
 #: src/views/admin/users/Users.js:242
-#: src/views/admin/users/modals/EditPermissionsModal.js:105
+#: src/views/admin/users/modals/EditUserModal.js:155
 msgid "Jogador regular"
 msgstr "Jogador regular"
 
@@ -1578,6 +1579,7 @@ msgstr "Niue"
 #: src/views/Register.js:110
 #: src/views/admin/nationalRanking/Players/Form.js:166
 #: src/views/admin/users/Users.js:113
+#: src/views/admin/users/modals/EditUserModal.js:65
 msgid "Nome"
 msgstr "Nome"
 
@@ -1651,7 +1653,7 @@ msgstr "Não foi possível abrir a edição das provas mensais."
 msgid "Não foi possível actualizar o perfil."
 msgstr "Não foi possível actualizar o perfil."
 
-#: src/views/admin/users/modals/EditPermissionsModal.js:46
+#: src/views/admin/users/modals/EditUserModal.js:48
 msgid "Não foi possível actualizar o utilizador."
 msgstr "Não foi possível actualizar o utilizador."
 
@@ -2936,7 +2938,7 @@ msgstr "Uruguai"
 msgid "Usada"
 msgstr "Usada"
 
-#: src/views/admin/users/modals/EditPermissionsModal.js:42
+#: src/views/admin/users/modals/EditUserModal.js:44
 msgid "Utilizador actualizado com sucesso."
 msgstr "Utilizador actualizado com sucesso."
 
@@ -2959,8 +2961,8 @@ msgid "V"
 msgstr "V"
 
 #: src/views/Account.js:492
-#: src/views/admin/users/modals/EditPermissionsModal.js:111
-#: src/views/admin/users/modals/EditPermissionsModal.js:169
+#: src/views/admin/users/modals/EditUserModal.js:161
+#: src/views/admin/users/modals/EditUserModal.js:219
 msgid "Validade da subscrição"
 msgstr "Validade da subscrição"
 
