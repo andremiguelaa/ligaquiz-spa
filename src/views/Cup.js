@@ -64,10 +64,31 @@ const Cup = () => {
               lastSeason = data[0];
             }
             ApiRequest.get(`cups?season=${lastSeason.season}`)
-              .then(({ data: cupsData }) => {
+              .then(({ data: seasonCupData }) => {
                 const seasonNumber = parseInt(lastSeason.season);
                 setSeasonNumber(seasonNumber);
-                setCupData(cupsData);
+                let tempCupData = seasonCupData;
+                if (authUser) {
+                  const sortedRounds = tempCupData.rounds.map((round) => {
+                    let roundGames = round.games.reduce((acc, game) => {
+                      if (
+                        game.user_id_1 === authUser.id ||
+                        game.user_id_2 === authUser.id
+                      ) {
+                        acc.unshift(game);
+                      } else {
+                        acc.push(game);
+                      }
+                      return acc;
+                    }, []);
+                    return {
+                      ...round,
+                      games: roundGames,
+                    };
+                  });
+                  tempCupData.rounds = sortedRounds;
+                }
+                setCupData(tempCupData);
                 setLoading(false);
               })
               .catch(({ response }) => {
@@ -83,7 +104,7 @@ const Cup = () => {
           setError(response?.status);
         });
     }
-  }, [season]);
+  }, [season, authUser]);
 
   if (error) {
     return <Error status={error} />;
