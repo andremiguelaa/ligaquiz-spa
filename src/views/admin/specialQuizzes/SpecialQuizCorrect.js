@@ -26,6 +26,7 @@ const SpecialQuizCorrect = () => {
   const [error, setError] = useState(false);
   const [quiz, setQuiz] = useState();
   const [answers, setAnswers] = useState();
+  const [showAll, setShowAll] = useState(false);
 
   useEffect(() => {
     ApiRequest.get(`special-quizzes?date=${date}&submitted=1`)
@@ -121,6 +122,20 @@ const SpecialQuizCorrect = () => {
         }
       />
       <div className="section">
+        <div className="field">
+          <input
+            id="show-all"
+            type="checkbox"
+            className="switch"
+            value={showAll}
+            onClick={(event) => setShowAll(event.target.checked)}
+            defaultChecked={showAll}
+          />
+          <label htmlFor="show-all">
+            <Trans>Mostrar respostas já corrigidas</Trans>
+          </label>
+        </div>
+        <hr />
         {quiz.questions.map((question) => (
           <div key={question.id} className={classes.question}>
             {question.content && (
@@ -157,6 +172,7 @@ const SpecialQuizCorrect = () => {
                   {Object.values(answers[question.id]).map((answer) => (
                     <Answer
                       key={answer.id}
+                      showIfCorrected={showAll}
                       answer={answer}
                       correctAnswers={correctAnswers}
                     />
