@@ -39,7 +39,7 @@
       ]
     ]
   },
-  "{0, selectordinal, two {2º} few {3º} other {#º}}": {
+  "{0, selectordinal, one {1º} two {2º} few {3º} other {#º}}": {
     "origin": [
       [
         "src/views/Profile/SpecialQuizzes.js",

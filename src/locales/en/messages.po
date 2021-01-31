@@ -1446,7 +1446,7 @@ msgstr "Mauritius"
 msgid "Meias-finais"
 msgstr "Semi-finals"
 
-#: src/views/NationalRanking/Legend.js:75
+#: src/views/NationalRanking/Legend.js:76
 msgid "Melhor"
 msgstr "Best"
 
@@ -1883,7 +1883,7 @@ msgstr "Papua New Guinea"
 msgid "Paquistão"
 msgstr "Pakistan"
 
-#: src/views/NationalRanking/Legend.js:85
+#: src/views/NationalRanking/Legend.js:86
 msgid "Para mais pormenores de como o ranking é calculado deve ser consultado este artigo:"
 msgstr "More details about ranking calculation can be found in this article (only in portuguese):"
 
@@ -2257,7 +2257,7 @@ msgstr "CA"
 msgid "Ranking Nacional"
 msgstr "National Ranking"
 
-#: src/views/NationalRanking/Legend.js:94
+#: src/views/NationalRanking/Legend.js:95
 msgid "Ranking Nacional de Quiz"
 msgstr "Quiz National Ranking"
 
@@ -3036,7 +3036,7 @@ msgstr "and"
 msgid "hoje"
 msgstr "Today"
 
-#: src/views/NationalRanking/Legend.js:72
+#: src/views/NationalRanking/Legend.js:73
 msgid "melhor"
 msgstr "best"
 
@@ -3054,14 +3054,11 @@ msgstr "positions"
 msgid "{0, selectordinal, one {1ª} two {2ª} few {3ª} other {#ª}}"
 msgstr "{0, selectordinal, one {1st} two {2nd} few {3rd} other {#th}}"
 
+#: src/views/NationalRanking/Legend.js:66
 #: src/views/Profile/League.js:76
+#: src/views/Profile/SpecialQuizzes.js:90
 msgid "{0, selectordinal, one {1º} two {2º} few {3º} other {#º}}"
 msgstr "{0, selectordinal, one {1st} two {2nd} few {3rd} other {#th}}"
-
-#: src/views/NationalRanking/Legend.js:66
-#: src/views/Profile/SpecialQuizzes.js:90
-msgid "{0, selectordinal, two {2º} few {3º} other {#º}}"
-msgstr "{0, selectordinal, two {2nd} few {3rd} other {#th}}"
 
 #: src/views/NationalRanking.js:167
 #: src/views/NationalRanking.js:310

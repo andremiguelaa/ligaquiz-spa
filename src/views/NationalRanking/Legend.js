@@ -65,6 +65,7 @@ const Legend = () => (
                     <>
                       <SelectOrdinal
                         value={index + 1}
+                        one="1º"
                         two="2º"
                         few="3º"
                         other="#º"

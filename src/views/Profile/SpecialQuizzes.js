@@ -89,6 +89,7 @@ const SpecialQuizzes = ({ user, setError }) => {
                       {specialQuiz.user_rank > 1 && (
                         <SelectOrdinal
                           value={specialQuiz.user_rank}
+                          one="1º"
                           two="2º"
                           few="3º"
                           other="#º"

@@ -71,7 +71,7 @@
       ]
     ]
   },
-  "{0, selectordinal, two {2º} few {3º} other {#º}}": {
+  "{0, selectordinal, one {1º} two {2º} few {3º} other {#º}}": {
     "origin": [
       [
         "src/views/NationalRanking/Legend.js",
@@ -83,7 +83,7 @@
     "origin": [
       [
         "src/views/NationalRanking/Legend.js",
-        72
+        73
       ]
     ]
   },
@@ -91,7 +91,7 @@
     "origin": [
       [
         "src/views/NationalRanking/Legend.js",
-        75
+        76
       ]
     ]
   },
@@ -99,7 +99,7 @@
     "origin": [
       [
         "src/views/NationalRanking/Legend.js",
-        85
+        86
       ]
     ]
   },
@@ -107,7 +107,7 @@
     "origin": [
       [
         "src/views/NationalRanking/Legend.js",
-        94
+        95
       ]
     ]
   }
