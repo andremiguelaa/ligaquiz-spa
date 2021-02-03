@@ -316,18 +316,28 @@ const ExternalQuestions = () => {
                 id: 'formulation',
                 label: <Trans>Enunciado</Trans>,
                 render: (item) => (
-                  <div className="content">
+                  <div
+                    className={classnames('content', {
+                      [classes.used]: item.used,
+                    })}
+                  >
                     <Markdown content={item.formulation} />
                   </div>
                 ),
-                className: `${classes.question} ${
-                  user.valid_roles.admin ? classes.admin : ''
-                }`,
+                className: classes.question,
               },
               {
                 id: 'answer',
                 label: <Trans>Resposta</Trans>,
-                render: (item) => <Markdown content={item.answer} />,
+                render: (item) => (
+                  <div
+                    className={classnames('content', {
+                      [classes.used]: item.used,
+                    })}
+                  >
+                    <Markdown content={item.answer} />
+                  </div>
+                ),
                 className: classes.answer,
               },
               {
@@ -360,24 +370,6 @@ const ExternalQuestions = () => {
                 className: classes.origin,
               },
               {
-                id: 'used',
-                label: <Trans>Usada</Trans>,
-                className: classes.used,
-                render: (item) => (
-                  <>
-                    {item.used ? (
-                      <span className="icon has-text-success">
-                        <i className="fa fa-lg fa-check-circle"></i>
-                      </span>
-                    ) : (
-                      <span className="icon has-text-danger">
-                        <i className="fa fa-lg fa-times-circle"></i>
-                      </span>
-                    )}
-                  </>
-                ),
-              },
-              {
                 id: 'actions',
                 label: <Trans>Alterar estado</Trans>,
                 render: (item) => (
@@ -399,7 +391,7 @@ const ExternalQuestions = () => {
                       }}
                     >
                       <span className="icon">
-                        <i className="fa fa-check"></i>
+                        <i className="fa fa-lock"></i>
                       </span>
                     </button>
                     <button
@@ -413,7 +405,7 @@ const ExternalQuestions = () => {
                       }}
                     >
                       <span className="icon">
-                        <i className="fa fa-times"></i>
+                        <i className="fa fa-unlock"></i>
                       </span>
                     </button>
                   </div>

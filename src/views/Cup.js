@@ -202,40 +202,51 @@ const Cup = () => {
                             </div>
                             <div className={classes.resultCell}>
                               {game.done &&
-                              game.hasOwnProperty('user_id_1_game_points') &&
-                              game.hasOwnProperty('user_id_2_game_points') ? (
-                                <Link
-                                  to={`/cup-game/${round.date}/${game.user_id_1}/${game.user_id_2}`}
-                                >
-                                  {game.corrected && (
-                                    <>
-                                      {game.corrected && (
-                                        <>
-                                          {game.user_id_1_game_points}
-                                          {game.user_id_1_game_points !==
-                                            'F' && (
-                                            <>
-                                              {' '}
-                                              ({game.user_id_1_correct_answers})
-                                            </>
-                                          )}{' '}
-                                          -{' '}
-                                          {game.user_id_2_game_points !==
-                                            'F' && (
-                                            <>
-                                              ({game.user_id_2_correct_answers})
-                                            </>
-                                          )}{' '}
-                                          {game.user_id_2_game_points}{' '}
-                                        </>
-                                      )}
-                                    </>
-                                  )}
-                                </Link>
-                              ) : (
-                                'vs.'
-                              )}
-                              {game.done && !game.corrected && <>P</>}
+                                game.hasOwnProperty('user_id_1_game_points') &&
+                                game.hasOwnProperty(
+                                  'user_id_2_game_points'
+                                ) && (
+                                  <Link
+                                    to={`/cup-game/${round.date}/${game.user_id_1}/${game.user_id_2}`}
+                                  >
+                                    {game.corrected && (
+                                      <>
+                                        {game.corrected && (
+                                          <>
+                                            {game.user_id_1_game_points}
+                                            {game.user_id_1_game_points !==
+                                              'F' && (
+                                              <>
+                                                {' '}
+                                                (
+                                                {game.user_id_1_correct_answers}
+                                                )
+                                              </>
+                                            )}{' '}
+                                            -{' '}
+                                            {game.user_id_2_game_points !==
+                                              'F' && (
+                                              <>
+                                                (
+                                                {game.user_id_2_correct_answers}
+                                                )
+                                              </>
+                                            )}{' '}
+                                            {game.user_id_2_game_points}{' '}
+                                          </>
+                                        )}
+                                      </>
+                                    )}
+                                  </Link>
+                                )}
+                              {!game.done &&
+                                game.hasOwnProperty('user_id_1_game_points') &&
+                                game.hasOwnProperty('user_id_2_game_points') &&
+                                'vs.'}
+                              {game.done &&
+                                !game.hasOwnProperty('user_id_1_game_points') &&
+                                !game.hasOwnProperty('user_id_2_game_points') &&
+                                'P'}
                             </div>
                             <div className={classes.avatarCell}>
                               <div className={classes.avatar}>

@@ -48,23 +48,24 @@
   }
   .question {
     min-width: 600px;
-    &.admin {
-      min-width: 550px;
+    .used {
+      text-decoration: line-through;
     }
   }
   .answer {
     width: 200px;
+    .used {
+      text-decoration: line-through;
+    }
   }
   .origin {
     width: 200px;
   }
   th.actions,
-  .media,
-  .used {
+  .media {
     text-align: center;
   }
-  td.media,
-  td.used {
+  td.media {
     line-height: 35px;
   }
   td.actions {

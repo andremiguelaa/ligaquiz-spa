@@ -3,7 +3,15 @@
     "origin": [
       [
         "src/views/admin/specialQuizzes/SpecialQuizCorrect.js",
-        118
+        119
+      ]
+    ]
+  },
+  "Mostrar respostas já corrigidas": {
+    "origin": [
+      [
+        "src/views/admin/specialQuizzes/SpecialQuizCorrect.js",
+        135
       ]
     ]
   },
@@ -11,7 +19,7 @@
     "origin": [
       [
         "src/views/admin/specialQuizzes/SpecialQuizCorrect.js",
-        134
+        149
       ]
     ]
   },
@@ -19,7 +27,7 @@
     "origin": [
       [
         "src/views/admin/specialQuizzes/SpecialQuizCorrect.js",
-        149
+        164
       ]
     ]
   },
@@ -27,7 +35,7 @@
     "origin": [
       [
         "src/views/admin/specialQuizzes/SpecialQuizCorrect.js",
-        152
+        167
       ]
     ]
   }

@@ -53,7 +53,7 @@ msgstr "<0>We must avoid to do quizzes with the following theme combinations:</0
 msgid "<0>{0}</0> resultado a contar para o ranking"
 msgstr "<0>{0}</0> result counting to national ranking"
 
-#: src/views/Cup.js:329
+#: src/views/Cup.js:350
 msgid "A definir"
 msgstr "TBD"
 
@@ -156,7 +156,7 @@ msgstr "Albania"
 msgid "Alemanha"
 msgstr "Germany"
 
-#: src/views/admin/externalQuestions/ExternalQuestions.js:344
+#: src/views/admin/externalQuestions/ExternalQuestions.js:382
 msgid "Alterar estado"
 msgstr "Change status"
 
@@ -573,7 +573,7 @@ msgstr "South Korea"
 #: src/views/Game.js:165
 #: src/views/Game.js:205
 #: src/views/Question.js:231
-#: src/views/admin/quizzes/Answer.js:17
+#: src/views/admin/quizzes/Answer.js:21
 msgid "Correcta"
 msgstr "Correct"
 
@@ -583,16 +583,16 @@ msgid "Corrector"
 msgstr "Answer reviewer"
 
 #: src/views/Question.js:213
-#: src/views/admin/quizzes/QuizCorrect.js:152
-#: src/views/admin/specialQuizzes/SpecialQuizCorrect.js:152
+#: src/views/admin/quizzes/QuizCorrect.js:167
+#: src/views/admin/specialQuizzes/SpecialQuizCorrect.js:167
 msgid "Correcção"
 msgstr "Correction"
 
-#: src/views/admin/quizzes/QuizCorrect.js:118
+#: src/views/admin/quizzes/QuizCorrect.js:119
 msgid "Corrigir quiz de {0}"
 msgstr "Correct {0}'s quiz"
 
-#: src/views/admin/specialQuizzes/SpecialQuizCorrect.js:118
+#: src/views/admin/specialQuizzes/SpecialQuizCorrect.js:119
 msgid "Corrigir quiz especial de {0}"
 msgstr "Correct {0}'s special quiz"
 
@@ -833,8 +833,8 @@ msgstr "Login"
 msgid "Entretenimento"
 msgstr "Entertainment"
 
-#: src/views/admin/externalQuestions/ExternalQuestions.js:212
-#: src/views/admin/externalQuestions/ExternalQuestions.js:279
+#: src/views/admin/externalQuestions/ExternalQuestions.js:232
+#: src/views/admin/externalQuestions/ExternalQuestions.js:317
 #: src/views/admin/questions/Questions.js:193
 #: src/views/admin/questions/Questions.js:280
 #: src/views/admin/quizzes/Question.js:90
@@ -877,7 +877,7 @@ msgstr "Eritrea"
 #: src/views/Game.js:167
 #: src/views/Game.js:207
 #: src/views/Question.js:233
-#: src/views/admin/quizzes/Answer.js:18
+#: src/views/admin/quizzes/Answer.js:22
 msgid "Errada"
 msgstr "Wrong"
 
@@ -1011,7 +1011,7 @@ msgstr "Philosophy"
 msgid "Fim"
 msgstr "End"
 
-#: src/views/Cup.js:105
+#: src/views/Cup.js:126
 msgid "Final"
 msgstr "Final"
 
@@ -1206,11 +1206,11 @@ msgstr "Ireland"
 msgid "Irão"
 msgstr "Iran"
 
-#: src/views/Cup.js:311
+#: src/views/Cup.js:332
 msgid "Isento"
 msgstr "Bye"
 
-#: src/views/Cup.js:308
+#: src/views/Cup.js:329
 msgid "Isento para a próxima eliminatória"
 msgstr "Bye round"
 
@@ -1442,7 +1442,7 @@ msgstr "Mauritania"
 msgid "Maurícia"
 msgstr "Mauritius"
 
-#: src/views/Cup.js:103
+#: src/views/Cup.js:124
 msgid "Meias-finais"
 msgstr "Semi-finals"
 
@@ -1487,12 +1487,17 @@ msgstr "Montenegro"
 msgid "Mostrar resposta"
 msgstr "Show answer"
 
+#: src/views/admin/quizzes/QuizCorrect.js:135
+#: src/views/admin/specialQuizzes/SpecialQuizCorrect.js:135
+msgid "Mostrar respostas já corrigidas"
+msgstr "Show already corrected answers"
+
 #: src/utils/getRegionTranslation.js:156
 msgid "Moçambique"
 msgstr "Mozambique"
 
-#: src/views/admin/externalQuestions/ExternalQuestions.js:297
-#: src/views/admin/externalQuestions/ExternalQuestions.js:407
+#: src/views/admin/externalQuestions/ExternalQuestions.js:335
+#: src/views/admin/externalQuestions/ExternalQuestions.js:445
 #: src/views/admin/quizzes/Question.js:119
 #: src/views/admin/specialQuizzes/Question.js:82
 msgid "Multimédia"
@@ -1657,7 +1662,7 @@ msgstr "Profile could not be update."
 msgid "Não foi possível actualizar o utilizador."
 msgstr "User could not be updated."
 
-#: src/views/admin/externalQuestions/ExternalQuestions.js:157
+#: src/views/admin/externalQuestions/ExternalQuestions.js:176
 msgid "Não foi possível alterar o estado."
 msgstr "Status could not be changed."
 
@@ -1822,7 +1827,7 @@ msgstr "OK"
 msgid "Obrigado pela tua inscrição! O teu registo encontra-se a aguardar aprovação da equipa da {0}."
 msgstr "Thank you for signing up! Your registration is pending approval from the {0} team."
 
-#: src/views/Cup.js:99
+#: src/views/Cup.js:120
 msgid "Oitavos-de-Final"
 msgstr "Round of 16"
 
@@ -1835,8 +1840,8 @@ msgstr "Oman"
 msgid "Opcional"
 msgstr "Optional"
 
-#: src/views/admin/externalQuestions/ExternalQuestions.js:232
-#: src/views/admin/externalQuestions/ExternalQuestions.js:320
+#: src/views/admin/externalQuestions/ExternalQuestions.js:252
+#: src/views/admin/externalQuestions/ExternalQuestions.js:358
 msgid "Origem"
 msgstr "Origin"
 
@@ -1990,11 +1995,11 @@ msgstr "Question search"
 
 #: src/partials/Header.js:242
 #: src/routes.js:274
-#: src/views/admin/externalQuestions/ExternalQuestions.js:166
+#: src/views/admin/externalQuestions/ExternalQuestions.js:185
 msgid "Pesquisa de perguntas externas"
 msgstr "External questions search"
 
-#: src/views/admin/externalQuestions/ExternalQuestions.js:265
+#: src/views/admin/externalQuestions/ExternalQuestions.js:303
 #: src/views/admin/questions/Questions.js:266
 msgid "Pesquisar"
 msgstr "Search"
@@ -2120,7 +2125,7 @@ msgstr "Page not found"
 msgid "Qatar"
 msgstr "Qatar"
 
-#: src/views/Cup.js:101
+#: src/views/Cup.js:122
 msgid "Quartos-de-Final"
 msgstr "Quarter-finals"
 
@@ -2229,7 +2234,7 @@ msgstr "Special Quizzes"
 msgid "Quizzes especiais"
 msgstr "Special quizzes"
 
-#: src/partials/Notifications.js:297
+#: src/partials/Notifications.js:299
 msgid "Quizzes especiais por corrigir"
 msgstr "Special quizzes with pending correction"
 
@@ -2387,8 +2392,8 @@ msgstr "Republic of the Congo"
 
 #: src/views/Quiz/QuizForm.js:201
 #: src/views/SpecialQuiz/SpecialQuizForm.js:113
-#: src/views/admin/externalQuestions/ExternalQuestions.js:222
-#: src/views/admin/externalQuestions/ExternalQuestions.js:291
+#: src/views/admin/externalQuestions/ExternalQuestions.js:242
+#: src/views/admin/externalQuestions/ExternalQuestions.js:329
 #: src/views/admin/questions/Questions.js:203
 #: src/views/admin/questions/Questions.js:292
 #: src/views/admin/quizzes/Question.js:106
@@ -2401,15 +2406,15 @@ msgstr "Answer"
 #: src/views/Question.js:112
 #: src/views/Quiz/QuizDone.js:34
 #: src/views/SpecialQuiz/SpecialQuizDone.js:139
-#: src/views/admin/quizzes/QuizCorrect.js:134
-#: src/views/admin/specialQuizzes/SpecialQuizCorrect.js:134
+#: src/views/admin/quizzes/QuizCorrect.js:149
+#: src/views/admin/specialQuizzes/SpecialQuizCorrect.js:149
 msgid "Resposta correcta"
 msgstr "Correct answer"
 
 #: src/views/Quiz/QuizDone.js:57
 #: src/views/SpecialQuiz/SpecialQuizDone.js:163
-#: src/views/admin/quizzes/QuizCorrect.js:149
-#: src/views/admin/specialQuizzes/SpecialQuizCorrect.js:149
+#: src/views/admin/quizzes/QuizCorrect.js:164
+#: src/views/admin/specialQuizzes/SpecialQuizCorrect.js:164
 msgid "Resposta dada"
 msgstr "Given answer"
 
@@ -2515,7 +2520,7 @@ msgstr "Select players for this event:"
 msgid "Seleccionar todos"
 msgstr "Select all"
 
-#: src/views/Cup.js:337
+#: src/views/Cup.js:358
 #: src/views/GenreRanking.js:240
 #: src/views/Profile/IndividualQuizzes.js:39
 #: src/views/Profile/League.js:91
@@ -2525,7 +2530,7 @@ msgstr "Select all"
 #: src/views/Ranking.js:194
 #: src/views/Seasons.js:129
 #: src/views/SpecialQuizzes.js:143
-#: src/views/admin/externalQuestions/ExternalQuestions.js:399
+#: src/views/admin/externalQuestions/ExternalQuestions.js:437
 #: src/views/admin/nationalRanking/Events/List.js:159
 #: src/views/admin/nationalRanking/Players/List.js:169
 #: src/views/admin/nationalRanking/Rankings.js:161
@@ -2660,6 +2665,10 @@ msgstr "Serbia"
 msgid "Síria"
 msgstr "Syria"
 
+#: src/views/admin/externalQuestions/ExternalQuestions.js:298
+msgid "Só não usadas"
+msgstr "Only non-used"
+
 #: src/views/Profile/Statistics.js:211
 #: src/views/Quiz/OpponentStats.js:116
 #: src/views/Quiz/OpponentStats.js:169
@@ -2689,7 +2698,7 @@ msgstr "Tanzania"
 
 #: src/partials/Header.js:102
 #: src/routes.js:124
-#: src/views/Cup.js:116
+#: src/views/Cup.js:137
 #: src/views/Quiz/OpponentsStats.js:156
 #: src/views/Seasons.js:106
 #: src/views/admin/seasons/Cup.js:112
@@ -2723,7 +2732,7 @@ msgstr "TV"
 
 #: src/views/Profile/Statistics.js:190
 #: src/views/Quiz/OpponentStats.js:107
-#: src/views/admin/externalQuestions/ExternalQuestions.js:238
+#: src/views/admin/externalQuestions/ExternalQuestions.js:258
 #: src/views/admin/questions/Questions.js:209
 msgid "Tema"
 msgstr "Theme"
@@ -2750,7 +2759,7 @@ msgstr "Season successfully saved."
 msgid "Temporada {0}"
 msgstr "Season {0}"
 
-#: src/views/Cup.js:117
+#: src/views/Cup.js:138
 #: src/views/GenreRanking.js:173
 #: src/views/Ranking.js:146
 msgid "Temporada {seasonNumber}"
@@ -2824,7 +2833,7 @@ msgstr "Do you really want to submit the quiz?"
 msgid "Tens pontos por atribuir.<0/>Atribui-os antes de fazer a submissão."
 msgstr "You have points to be assigned.<0/>Assigned them before submit."
 
-#: src/views/admin/externalQuestions/ExternalQuestions.js:183
+#: src/views/admin/externalQuestions/ExternalQuestions.js:203
 #: src/views/admin/questions/Questions.js:164
 msgid "Texto"
 msgstr "Text"
@@ -2891,7 +2900,7 @@ msgstr "Trinidad and Tobago"
 msgid "Trivialidades"
 msgstr "Trivialities"
 
-#: src/views/admin/externalQuestions/ExternalQuestions.js:202
+#: src/views/admin/externalQuestions/ExternalQuestions.js:222
 #: src/views/admin/questions/Questions.js:183
 msgid "Tudo"
 msgstr "All"
@@ -2934,7 +2943,7 @@ msgstr "Uganda"
 msgid "Uruguai"
 msgstr "Uruguay"
 
-#: src/views/admin/externalQuestions/ExternalQuestions.js:326
+#: src/views/admin/externalQuestions/ExternalQuestions.js:364
 msgid "Usada"
 msgstr "Used"
 
@@ -3071,7 +3080,7 @@ msgstr "{0} {1}"
 msgid "{0} {1} e {2} {3}"
 msgstr "{0} {1} and {2} {3}"
 
-#: src/views/Cup.js:108
+#: src/views/Cup.js:129
 msgid "{0}-avos-de-Final"
 msgstr "Round of {0}"
 

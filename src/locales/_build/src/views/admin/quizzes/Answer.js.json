@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/admin/quizzes/Answer.js",
-        17
+        21
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/views/admin/quizzes/Answer.js",
-        18
+        22
       ]
     ]
   }

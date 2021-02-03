@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/admin/externalQuestions/ExternalQuestions.js",
-        157
+        176
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/views/admin/externalQuestions/ExternalQuestions.js",
-        166
+        185
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/views/admin/externalQuestions/ExternalQuestions.js",
-        183
+        203
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/views/admin/externalQuestions/ExternalQuestions.js",
-        202
+        222
       ]
     ]
   },
@@ -35,11 +35,11 @@
     "origin": [
       [
         "src/views/admin/externalQuestions/ExternalQuestions.js",
-        212
+        232
       ],
       [
         "src/views/admin/externalQuestions/ExternalQuestions.js",
-        279
+        317
       ]
     ]
   },
@@ -47,11 +47,11 @@
     "origin": [
       [
         "src/views/admin/externalQuestions/ExternalQuestions.js",
-        222
+        242
       ],
       [
         "src/views/admin/externalQuestions/ExternalQuestions.js",
-        291
+        329
       ]
     ]
   },
@@ -59,11 +59,11 @@
     "origin": [
       [
         "src/views/admin/externalQuestions/ExternalQuestions.js",
-        232
+        252
       ],
       [
         "src/views/admin/externalQuestions/ExternalQuestions.js",
-        320
+        358
       ]
     ]
   },
@@ -71,7 +71,15 @@
     "origin": [
       [
         "src/views/admin/externalQuestions/ExternalQuestions.js",
-        238
+        258
+      ]
+    ]
+  },
+  "Só não usadas": {
+    "origin": [
+      [
+        "src/views/admin/externalQuestions/ExternalQuestions.js",
+        298
       ]
     ]
   },
@@ -79,7 +87,7 @@
     "origin": [
       [
         "src/views/admin/externalQuestions/ExternalQuestions.js",
-        265
+        303
       ]
     ]
   },
@@ -87,11 +95,11 @@
     "origin": [
       [
         "src/views/admin/externalQuestions/ExternalQuestions.js",
-        297
+        335
       ],
       [
         "src/views/admin/externalQuestions/ExternalQuestions.js",
-        407
+        445
       ]
     ]
   },
@@ -99,7 +107,7 @@
     "origin": [
       [
         "src/views/admin/externalQuestions/ExternalQuestions.js",
-        326
+        364
       ]
     ]
   },
@@ -107,7 +115,7 @@
     "origin": [
       [
         "src/views/admin/externalQuestions/ExternalQuestions.js",
-        344
+        382
       ]
     ]
   },
@@ -115,7 +123,7 @@
     "origin": [
       [
         "src/views/admin/externalQuestions/ExternalQuestions.js",
-        399
+        437
       ]
     ]
   }
