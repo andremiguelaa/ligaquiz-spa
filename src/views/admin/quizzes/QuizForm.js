@@ -161,7 +161,7 @@ const QuizForm = () => {
           )
         }
       />
-      <div className="section content">
+      <div className="section">
         <div className="message is-danger">
           <div className="message-body">
             <Trans>

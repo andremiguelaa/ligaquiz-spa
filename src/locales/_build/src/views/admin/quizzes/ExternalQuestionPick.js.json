@@ -1,0 +1,26 @@
+{
+  "Enunciado": {
+    "origin": [
+      [
+        "src/views/admin/quizzes/ExternalQuestionPick.js",
+        45
+      ]
+    ]
+  },
+  "Resposta": {
+    "origin": [
+      [
+        "src/views/admin/quizzes/ExternalQuestionPick.js",
+        54
+      ]
+    ]
+  },
+  "Usar": {
+    "origin": [
+      [
+        "src/views/admin/quizzes/ExternalQuestionPick.js",
+        63
+      ]
+    ]
+  }
+}

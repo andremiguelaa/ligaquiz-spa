@@ -1,10 +1,12 @@
 import React from 'react';
 import { Trans } from '@lingui/macro';
+import classnames from 'classnames';
 
 import classes from './Modal.module.scss';
 
 const Modal = ({
   type,
+  size = 'regular',
   title,
   open,
   body,
@@ -17,7 +19,7 @@ const Modal = ({
 }) => (
   <article className={`modal ${open && 'is-active'}`}>
     <div className="modal-background"></div>
-    <div className="modal-card">
+    <div className={classnames('modal-card', classes[`size-${size}`])}>
       <article className={`message ${type ? `is-${type}` : ''}`}>
         <div className="message-header">
           {title}

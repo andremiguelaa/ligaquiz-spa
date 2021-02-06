@@ -3,7 +3,19 @@
     "origin": [
       [
         "src/views/admin/quizzes/Question.js",
-        63
+        98
+      ]
+    ]
+  },
+  "Escolher pergunta externa": {
+    "origin": [
+      [
+        "src/views/admin/quizzes/Question.js",
+        131
+      ],
+      [
+        "src/views/admin/quizzes/Question.js",
+        233
       ]
     ]
   },
@@ -11,7 +23,7 @@
     "origin": [
       [
         "src/views/admin/quizzes/Question.js",
-        90
+        138
       ]
     ]
   },
@@ -19,7 +31,7 @@
     "origin": [
       [
         "src/views/admin/quizzes/Question.js",
-        106
+        154
       ]
     ]
   },
@@ -27,7 +39,7 @@
     "origin": [
       [
         "src/views/admin/quizzes/Question.js",
-        119
+        167
       ]
     ]
   },
@@ -35,7 +47,7 @@
     "origin": [
       [
         "src/views/admin/quizzes/Question.js",
-        152
+        201
       ]
     ]
   }

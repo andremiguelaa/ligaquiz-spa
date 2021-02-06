@@ -53,7 +53,7 @@ msgstr "<0>Não devem ser feitos quizzes com a seguinte combinação de temas:</
 msgid "<0>{0}</0> resultado a contar para o ranking"
 msgstr "<0>{0}</0> resultado a contar para o ranking"
 
-#: src/views/Cup.js:350
+#: src/views/Cup.js:361
 msgid "A definir"
 msgstr "A definir"
 
@@ -156,7 +156,7 @@ msgstr "Albânia"
 msgid "Alemanha"
 msgstr "Alemanha"
 
-#: src/views/admin/externalQuestions/ExternalQuestions.js:382
+#: src/views/admin/externalQuestions/ExternalQuestions.js:374
 msgid "Alterar estado"
 msgstr "Alterar estado"
 
@@ -434,7 +434,7 @@ msgstr "Campeão"
 msgid "Canadá"
 msgstr "Canadá"
 
-#: src/components/Modal.js:50
+#: src/components/Modal.js:52
 msgid "Cancelar"
 msgstr "Cancelar"
 
@@ -837,7 +837,8 @@ msgstr "Entretenimento"
 #: src/views/admin/externalQuestions/ExternalQuestions.js:317
 #: src/views/admin/questions/Questions.js:193
 #: src/views/admin/questions/Questions.js:280
-#: src/views/admin/quizzes/Question.js:90
+#: src/views/admin/quizzes/ExternalQuestionPick.js:45
+#: src/views/admin/quizzes/Question.js:138
 #: src/views/admin/specialQuizzes/Question.js:53
 #: src/views/admin/translate/Translate.js:96
 #: src/views/admin/translate/Translate.js:115
@@ -895,7 +896,7 @@ msgstr "Erro de servidor. Tenta mais tarde."
 msgid "Escala"
 msgstr "Escala"
 
-#: src/views/admin/quizzes/Question.js:152
+#: src/views/admin/quizzes/Question.js:201
 #: src/views/admin/specialQuizzes/Question.js:115
 msgid "Escolhe o ficheiro"
 msgstr "Escolhe o ficheiro"
@@ -903,6 +904,11 @@ msgstr "Escolhe o ficheiro"
 #: src/views/Account/Avatar.js:83
 msgid "Escolhe uma imagem"
 msgstr "Escolhe uma imagem"
+
+#: src/views/admin/quizzes/Question.js:131
+#: src/views/admin/quizzes/Question.js:233
+msgid "Escolher pergunta externa"
+msgstr "Escolher pergunta externa"
 
 #: src/views/admin/nationalRanking/Events/Form.js:288
 msgid "Escolher tipo de prova"
@@ -1206,11 +1212,11 @@ msgstr "Irlanda"
 msgid "Irão"
 msgstr "Irão"
 
-#: src/views/Cup.js:332
+#: src/views/Cup.js:343
 msgid "Isento"
 msgstr "Isento"
 
-#: src/views/Cup.js:329
+#: src/views/Cup.js:340
 msgid "Isento para a próxima eliminatória"
 msgstr "Isento para a próxima eliminatória"
 
@@ -1496,9 +1502,9 @@ msgstr "Mostrar respostas já corrigidas"
 msgid "Moçambique"
 msgstr "Moçambique"
 
-#: src/views/admin/externalQuestions/ExternalQuestions.js:335
-#: src/views/admin/externalQuestions/ExternalQuestions.js:445
-#: src/views/admin/quizzes/Question.js:119
+#: src/views/admin/externalQuestions/ExternalQuestions.js:345
+#: src/views/admin/externalQuestions/ExternalQuestions.js:437
+#: src/views/admin/quizzes/Question.js:167
 #: src/views/admin/specialQuizzes/Question.js:82
 msgid "Multimédia"
 msgstr "Multimédia"
@@ -1819,7 +1825,7 @@ msgstr "O pedido de redefinição de palavra-passe expirou"
 msgid "O pedido de redefinição de palavra-passe é inválido"
 msgstr "O pedido de redefinição de palavra-passe é inválido"
 
-#: src/components/Modal.js:41
+#: src/components/Modal.js:43
 msgid "OK"
 msgstr "OK"
 
@@ -1841,7 +1847,7 @@ msgid "Opcional"
 msgstr "Opcional"
 
 #: src/views/admin/externalQuestions/ExternalQuestions.js:252
-#: src/views/admin/externalQuestions/ExternalQuestions.js:358
+#: src/views/admin/externalQuestions/ExternalQuestions.js:368
 msgid "Origem"
 msgstr "Origem"
 
@@ -1966,7 +1972,7 @@ msgstr "Pergunta"
 #: src/views/Quiz/QuizForm.js:180
 #: src/views/SpecialQuiz/SpecialQuizDone.js:129
 #: src/views/SpecialQuiz/SpecialQuizForm.js:92
-#: src/views/admin/quizzes/Question.js:63
+#: src/views/admin/quizzes/Question.js:98
 #: src/views/admin/specialQuizzes/Question.js:49
 msgid "Pergunta {0}"
 msgstr "Pergunta {0}"
@@ -2393,10 +2399,11 @@ msgstr "República do Congo"
 #: src/views/Quiz/QuizForm.js:201
 #: src/views/SpecialQuiz/SpecialQuizForm.js:113
 #: src/views/admin/externalQuestions/ExternalQuestions.js:242
-#: src/views/admin/externalQuestions/ExternalQuestions.js:329
+#: src/views/admin/externalQuestions/ExternalQuestions.js:331
 #: src/views/admin/questions/Questions.js:203
 #: src/views/admin/questions/Questions.js:292
-#: src/views/admin/quizzes/Question.js:106
+#: src/views/admin/quizzes/ExternalQuestionPick.js:54
+#: src/views/admin/quizzes/Question.js:154
 #: src/views/admin/specialQuizzes/Question.js:69
 #: src/views/admin/translate/Translate.js:102
 #: src/views/admin/translate/Translate.js:135
@@ -2520,7 +2527,7 @@ msgstr "Selecciona os jogadores que jogaram esta prova:"
 msgid "Seleccionar todos"
 msgstr "Seleccionar todos"
 
-#: src/views/Cup.js:358
+#: src/views/Cup.js:369
 #: src/views/GenreRanking.js:240
 #: src/views/Profile/IndividualQuizzes.js:39
 #: src/views/Profile/League.js:91
@@ -2530,7 +2537,7 @@ msgstr "Seleccionar todos"
 #: src/views/Ranking.js:194
 #: src/views/Seasons.js:129
 #: src/views/SpecialQuizzes.js:143
-#: src/views/admin/externalQuestions/ExternalQuestions.js:437
+#: src/views/admin/externalQuestions/ExternalQuestions.js:429
 #: src/views/admin/nationalRanking/Events/List.js:159
 #: src/views/admin/nationalRanking/Players/List.js:169
 #: src/views/admin/nationalRanking/Rankings.js:161
@@ -2943,9 +2950,9 @@ msgstr "Uganda"
 msgid "Uruguai"
 msgstr "Uruguai"
 
-#: src/views/admin/externalQuestions/ExternalQuestions.js:364
-msgid "Usada"
-msgstr "Usada"
+#: src/views/admin/quizzes/ExternalQuestionPick.js:63
+msgid "Usar"
+msgstr "Usar"
 
 #: src/views/admin/users/modals/EditUserModal.js:44
 msgid "Utilizador actualizado com sucesso."

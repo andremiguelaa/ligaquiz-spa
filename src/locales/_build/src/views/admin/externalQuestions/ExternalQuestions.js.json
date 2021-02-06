@@ -51,7 +51,7 @@
       ],
       [
         "src/views/admin/externalQuestions/ExternalQuestions.js",
-        329
+        331
       ]
     ]
   },
@@ -63,7 +63,7 @@
       ],
       [
         "src/views/admin/externalQuestions/ExternalQuestions.js",
-        358
+        368
       ]
     ]
   },
@@ -95,19 +95,11 @@
     "origin": [
       [
         "src/views/admin/externalQuestions/ExternalQuestions.js",
-        335
+        345
       ],
       [
         "src/views/admin/externalQuestions/ExternalQuestions.js",
-        445
-      ]
-    ]
-  },
-  "Usada": {
-    "origin": [
-      [
-        "src/views/admin/externalQuestions/ExternalQuestions.js",
-        364
+        437
       ]
     ]
   },
@@ -115,7 +107,7 @@
     "origin": [
       [
         "src/views/admin/externalQuestions/ExternalQuestions.js",
-        382
+        374
       ]
     ]
   },
@@ -123,7 +115,7 @@
     "origin": [
       [
         "src/views/admin/externalQuestions/ExternalQuestions.js",
-        437
+        429
       ]
     ]
   }
