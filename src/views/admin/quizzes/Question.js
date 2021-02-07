@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Trans } from '@lingui/macro';
 import classnames from 'classnames';
+import { toast } from 'react-toastify';
 
 import { useStateValue } from 'state/State';
 import { getGenreTranslation } from 'utils/getGenreTranslation';
@@ -22,6 +23,8 @@ const Question = ({
   uploading,
   setUploading,
   disabled,
+  editMode,
+  setPickedExternalQuestions,
 }) => {
   const [
     {
@@ -62,14 +65,22 @@ const Question = ({
   }, [index, setFormData, content, answer, genreId, mediaId]);
 
   const externalQuestionPick =
-    user.valid_roles.admin && process.env.REACT_APP_EXTERNAL_QUESTION_PICK === 'true';
+    user.valid_roles.admin &&
+    process.env.REACT_APP_EXTERNAL_QUESTION_PICK === 'true' &&
+    genreId &&
+    !editMode;
   const [externalQuestionModal, setExternalQuestionModal] = useState(false);
 
   const grabQuestion = (question) => {
+    setPickedExternalQuestions((prev) => ({
+      ...prev,
+      [index]: question,
+    }));
     setContent(question.formulation);
     setAnswer(question.answer);
     setExternalQuestionModal(false);
     if (question.media) {
+      setUploading(true);
       fetch(question.media)
         .then((response) => response.blob())
         .then((blob) => {
@@ -83,10 +94,19 @@ const Question = ({
             headers: {
               'content-type': 'multipart/form-data',
             },
-          }).then(({ data }) => {
-            setMediaId(data.id);
-            setMedia(data);
-          });
+          })
+            .then(({ data }) => {
+              setMediaId(data.id);
+              setMedia(data);
+            })
+            .catch(() => {
+              toast.error(
+                <Trans>Não foi possível importar o ficheiro multimédia.</Trans>
+              );
+            })
+            .finally(() => {
+              setUploading(false);
+            });
         });
     }
   };
@@ -120,7 +140,7 @@ const Question = ({
             ))}
           </div>
         </div>
-        {externalQuestionPick && genreId && (
+        {externalQuestionPick && (
           <div className="field">
             <div className="control">
               <button
@@ -186,11 +206,21 @@ const Question = ({
                     headers: {
                       'content-type': 'multipart/form-data',
                     },
-                  }).then(({ data }) => {
-                    setMediaId(data.id);
-                    setMedia(data);
-                    setUploading(false);
-                  });
+                  })
+                    .then(({ data }) => {
+                      setMediaId(data.id);
+                      setMedia(data);
+                    })
+                    .catch(() => {
+                      toast.error(
+                        <Trans>
+                          Não foi possível adicionar este ficheiro multimédia.
+                        </Trans>
+                      );
+                    })
+                    .finally(() => {
+                      setUploading(false);
+                    });
                 }}
               />
               <span className="file-cta">
@@ -225,17 +255,23 @@ const Question = ({
           </>
         )}
       </fieldset>
-      {externalQuestionPick && genreId && (
+      {externalQuestionPick && (
         <Modal
           type="info"
           size="large"
           open={externalQuestionModal}
           title={<Trans>Escolher pergunta externa</Trans>}
           body={
-            <ExternalQuestionPick
-              genre={genre.subgenres.find((item) => item.id === genreId).slug}
-              grabQuestion={grabQuestion}
-            />
+            <>
+              {externalQuestionModal && (
+                <ExternalQuestionPick
+                  genre={
+                    genre.subgenres.find((item) => item.id === genreId).slug
+                  }
+                  grabQuestion={grabQuestion}
+                />
+              )}
+            </>
           }
           action={() => {
             setExternalQuestionModal(false);

@@ -10,6 +10,8 @@ import formatDate, { convertToLongDate } from 'utils/formatDate';
 import Loading from 'components/Loading';
 import Error from 'components/Error';
 import PageHeader from 'components/PageHeader';
+import Markdown from 'components/Markdown';
+
 import Question from './Question';
 
 const QuizForm = () => {
@@ -33,6 +35,7 @@ const QuizForm = () => {
     date,
     questions: [{}, {}, {}, {}, {}, {}, {}, {}],
   });
+  const [pickedExternalQuestions, setPickedExternalQuestions] = useState({});
   const editMode = Boolean(date);
 
   useEffect(() => {
@@ -91,7 +94,7 @@ const QuizForm = () => {
       });
   }, [date, editMode]);
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     setSubmitting(true);
     setError();
@@ -111,16 +114,35 @@ const QuizForm = () => {
           setSubmitting(false);
         });
     } else {
-      ApiRequest.post('quizzes', newFormData)
-        .then(() => {
-          setSubmitting(false);
-          toast.success(<Trans>Quiz criado com sucesso.</Trans>);
-          history.push(`/admin/quiz/${newFormData.date}/edit/`);
-        })
-        .catch(() => {
-          toast.error(<Trans>Não foi possível criar o quiz.</Trans>);
-          setSubmitting(false);
-        });
+      let markedAsUsed = 0;
+      const externalQuestionToBeMarkedAsUsed = Object.values(
+        pickedExternalQuestions
+      );
+      externalQuestionToBeMarkedAsUsed.forEach((item) => {
+        ApiRequest.patch(`external-questions`, { id: item.id, used: true })
+          .then(() => {
+            markedAsUsed++;
+            if (markedAsUsed === externalQuestionToBeMarkedAsUsed.length) {
+              ApiRequest.post('quizzes', newFormData)
+                .then(() => {
+                  toast.success(<Trans>Quiz criado com sucesso.</Trans>);
+                  history.push(`/admin/quiz/${newFormData.date}/edit/`);
+                })
+                .catch(() => {
+                  toast.error(<Trans>Não foi possível criar o quiz.</Trans>);
+                })
+                .finally(() => {
+                  setSubmitting(false);
+                });
+            }
+          })
+          .catch(() => {
+            toast.error(
+              <Trans>Não foi possível marcar a pergunta como usada.</Trans>
+            );
+            setSubmitting(false);
+          });
+      });
     }
   };
 
@@ -212,8 +234,28 @@ const QuizForm = () => {
               uploading={uploading}
               setUploading={setUploading}
               disabled={submitting}
+              editMode={editMode}
+              setPickedExternalQuestions={setPickedExternalQuestions}
             />
           ))}
+          {!editMode && Object.values(pickedExternalQuestions).length > 0 && (
+            <fieldset className="fieldset">
+              <legend className="legend">
+                <Trans>
+                  As seguintes perguntas vão ser marcadas como usadas:
+                </Trans>
+              </legend>
+              {Object.values(pickedExternalQuestions)
+                .map((item) => (
+                  <Markdown key={item.id} content={item.formulation} />
+                ))
+                .reduce((prev, curr) => [
+                  prev,
+                  <hr key={`${prev.id}-hr`} />,
+                  curr,
+                ])}
+            </fieldset>
+          )}
           <div className="field">
             <div className="control">
               <button
