@@ -65,7 +65,6 @@ const Question = ({
   }, [index, setFormData, content, answer, genreId, mediaId]);
 
   const externalQuestionPick =
-    user.valid_roles.admin &&
     process.env.REACT_APP_EXTERNAL_QUESTION_PICK === 'true' &&
     genreId &&
     !editMode;
