@@ -28,7 +28,6 @@ const Question = ({
 }) => {
   const [
     {
-      user,
       settings: { language },
     },
   ] = useStateValue();
