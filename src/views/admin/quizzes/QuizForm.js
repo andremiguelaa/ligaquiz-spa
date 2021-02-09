@@ -37,6 +37,8 @@ const QuizForm = () => {
   });
   const [pickedExternalQuestions, setPickedExternalQuestions] = useState({});
   const editMode = Boolean(date);
+  const externalQuestionPick =
+    process.env.REACT_APP_EXTERNAL_QUESTION_PICK === 'true';
 
   useEffect(() => {
     ApiRequest.get(`seasons`)
@@ -114,35 +116,49 @@ const QuizForm = () => {
           setSubmitting(false);
         });
     } else {
-      let markedAsUsed = 0;
-      const externalQuestionToBeMarkedAsUsed = Object.values(
-        pickedExternalQuestions
-      );
-      externalQuestionToBeMarkedAsUsed.forEach((item) => {
-        ApiRequest.patch(`external-questions`, { id: item.id, used: true })
+      if (externalQuestionPick) {
+        let markedAsUsed = 0;
+        const externalQuestionToBeMarkedAsUsed = Object.values(
+          pickedExternalQuestions
+        );
+        externalQuestionToBeMarkedAsUsed.forEach((item) => {
+          ApiRequest.patch(`external-questions`, { id: item.id, used: true })
+            .then(() => {
+              markedAsUsed++;
+              if (markedAsUsed === externalQuestionToBeMarkedAsUsed.length) {
+                ApiRequest.post('quizzes', newFormData)
+                  .then(() => {
+                    toast.success(<Trans>Quiz criado com sucesso.</Trans>);
+                    history.push(`/admin/quiz/${newFormData.date}/edit/`);
+                  })
+                  .catch(() => {
+                    toast.error(<Trans>Não foi possível criar o quiz.</Trans>);
+                  })
+                  .finally(() => {
+                    setSubmitting(false);
+                  });
+              }
+            })
+            .catch(() => {
+              toast.error(
+                <Trans>Não foi possível marcar a pergunta como usada.</Trans>
+              );
+              setSubmitting(false);
+            });
+        });
+      } else {
+        ApiRequest.post('quizzes', newFormData)
           .then(() => {
-            markedAsUsed++;
-            if (markedAsUsed === externalQuestionToBeMarkedAsUsed.length) {
-              ApiRequest.post('quizzes', newFormData)
-                .then(() => {
-                  toast.success(<Trans>Quiz criado com sucesso.</Trans>);
-                  history.push(`/admin/quiz/${newFormData.date}/edit/`);
-                })
-                .catch(() => {
-                  toast.error(<Trans>Não foi possível criar o quiz.</Trans>);
-                })
-                .finally(() => {
-                  setSubmitting(false);
-                });
-            }
+            toast.success(<Trans>Quiz criado com sucesso.</Trans>);
+            history.push(`/admin/quiz/${newFormData.date}/edit/`);
           })
           .catch(() => {
-            toast.error(
-              <Trans>Não foi possível marcar a pergunta como usada.</Trans>
-            );
+            toast.error(<Trans>Não foi possível criar o quiz.</Trans>);
+          })
+          .finally(() => {
             setSubmitting(false);
           });
-      });
+      }
     }
   };
 
