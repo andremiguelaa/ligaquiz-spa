@@ -2091,11 +2091,8 @@ msgstr "Fill your country to reveal your opponent's country"
 msgid "Produtos e Marcas"
 msgstr "Products and Brands"
 
-#: src/routes.js:169
-msgid "Propor Quiz Especial"
-msgstr "Propose Special Quiz"
-
 #: src/partials/Header.js:119
+#: src/routes.js:169
 #: src/views/SpecialQuizProposal.js:68
 msgid "Propor quiz especial"
 msgstr "Author special quiz"

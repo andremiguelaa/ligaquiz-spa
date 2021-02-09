@@ -166,7 +166,7 @@ export default [
     component: SpecialQuiz,
   },
   {
-    title: <Trans>Propor Quiz Especial</Trans>,
+    title: <Trans>Propor quiz especial</Trans>,
     path: '/create-special-quiz',
     component: SpecialQuizProposal,
   },

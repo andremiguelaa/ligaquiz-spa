@@ -2091,11 +2091,8 @@ msgstr "Preenche a tua região para veres a região do teu adversário"
 msgid "Produtos e Marcas"
 msgstr "Produtos e Marcas"
 
-#: src/routes.js:169
-msgid "Propor Quiz Especial"
-msgstr "Propor Quiz Especial"
-
 #: src/partials/Header.js:119
+#: src/routes.js:169
 #: src/views/SpecialQuizProposal.js:68
 msgid "Propor quiz especial"
 msgstr "Propor quiz especial"
