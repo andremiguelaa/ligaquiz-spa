@@ -116,7 +116,7 @@ const QuizForm = () => {
           setSubmitting(false);
         });
     } else {
-      if (externalQuestionPick) {
+      if (externalQuestionPick && externalQuestionToBeMarkedAsUsed.length > 0) {
         let markedAsUsed = 0;
         const externalQuestionToBeMarkedAsUsed = Object.values(
           pickedExternalQuestions
