@@ -1,9 +1,17 @@
 {
+  "Não foi possível importar o ficheiro multimédia.": {
+    "origin": [
+      [
+        "src/views/admin/quizzes/Question.js",
+        102
+      ]
+    ]
+  },
   "Pergunta {0}": {
     "origin": [
       [
         "src/views/admin/quizzes/Question.js",
-        98
+        116
       ]
     ]
   },
@@ -11,11 +19,11 @@
     "origin": [
       [
         "src/views/admin/quizzes/Question.js",
-        131
+        149
       ],
       [
         "src/views/admin/quizzes/Question.js",
-        233
+        261
       ]
     ]
   },
@@ -23,7 +31,7 @@
     "origin": [
       [
         "src/views/admin/quizzes/Question.js",
-        138
+        156
       ]
     ]
   },
@@ -31,7 +39,7 @@
     "origin": [
       [
         "src/views/admin/quizzes/Question.js",
-        154
+        172
       ]
     ]
   },
@@ -39,7 +47,15 @@
     "origin": [
       [
         "src/views/admin/quizzes/Question.js",
-        167
+        185
+      ]
+    ]
+  },
+  "Não foi possível adicionar este ficheiro multimédia.": {
+    "origin": [
+      [
+        "src/views/admin/quizzes/Question.js",
+        214
       ]
     ]
   },
@@ -47,7 +63,7 @@
     "origin": [
       [
         "src/views/admin/quizzes/Question.js",
-        201
+        229
       ]
     ]
   }

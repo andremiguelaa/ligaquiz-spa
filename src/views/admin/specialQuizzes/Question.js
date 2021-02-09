@@ -15,6 +15,7 @@ const Question = ({
   uploading,
   setUploading,
   disabled,
+  hidePreview,
 }) => {
   const [content, setContent] = useState(
     quizData?.quiz.questions[index]?.content || ''
@@ -61,9 +62,11 @@ const Question = ({
           }}
         ></textarea>
       </div>
-      <div className="field">
-        <Markdown content={content} />
-      </div>
+      {!hidePreview && (
+        <div className="field">
+          <Markdown content={content} />
+        </div>
+      )}
       <div className="field">
         <label className="label">
           <Trans>Resposta</Trans>

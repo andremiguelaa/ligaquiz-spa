@@ -1,0 +1,58 @@
+{
+  "Quiz especial criado com sucesso.<0/>Obrigado pela contribuição!": {
+    "origin": [
+      [
+        "src/views/SpecialQuizProposal.js",
+        37
+      ]
+    ]
+  },
+  "Não foi possível criar o quiz especial.": {
+    "origin": [
+      [
+        "src/views/SpecialQuizProposal.js",
+        46
+      ]
+    ]
+  },
+  "Propor quiz especial": {
+    "origin": [
+      [
+        "src/views/SpecialQuizProposal.js",
+        68
+      ]
+    ]
+  },
+  "Após a submissão de uma proposta de quiz especial, o quiz será revisto e publicado assim que possível": {
+    "origin": [
+      [
+        "src/views/SpecialQuizProposal.js",
+        70
+      ]
+    ]
+  },
+  "Título": {
+    "origin": [
+      [
+        "src/views/SpecialQuizProposal.js",
+        80
+      ]
+    ]
+  },
+  "Descrição": {
+    "origin": [
+      [
+        "src/views/SpecialQuizProposal.js",
+        93
+      ]
+    ]
+  },
+  "Enviar": {
+    "origin": [
+      [
+        "src/views/SpecialQuizProposal.js",
+        121
+      ]
+    ]
+  }
+}

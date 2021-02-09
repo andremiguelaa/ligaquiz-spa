@@ -113,6 +113,12 @@ const Header = () => {
                     &nbsp;<Trans>O meu perfil</Trans>
                   </Link>
                 )}
+                {user && (
+                  <Link to="/create-special-quiz" className="navbar-item">
+                    <i className="fa fa-btn fa-pencil" />
+                    &nbsp;<Trans>Propor quiz especial</Trans>
+                  </Link>
+                )}
                 {process.env.REACT_APP_NATIONAL_RANKING === 'true' && (
                   <Link to="/national-ranking/" className="navbar-item">
                     <i className="fa fa-btn fa-star" />

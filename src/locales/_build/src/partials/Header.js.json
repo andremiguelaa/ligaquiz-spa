@@ -55,7 +55,7 @@
       ]
     ]
   },
-  "Ranking Nacional": {
+  "Propor quiz especial": {
     "origin": [
       [
         "src/partials/Header.js",
@@ -63,11 +63,19 @@
       ]
     ]
   },
+  "Ranking Nacional": {
+    "origin": [
+      [
+        "src/partials/Header.js",
+        125
+      ]
+    ]
+  },
   "Entrar": {
     "origin": [
       [
         "src/partials/Header.js",
-        146
+        152
       ]
     ]
   },
@@ -75,7 +83,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        149
+        155
       ]
     ]
   },
@@ -83,7 +91,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        180
+        186
       ]
     ]
   },
@@ -91,7 +99,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        184
+        190
       ]
     ]
   },
@@ -99,7 +107,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        191
+        197
       ]
     ]
   },
@@ -107,11 +115,11 @@
     "origin": [
       [
         "src/partials/Header.js",
-        195
+        201
       ],
       [
         "src/partials/Header.js",
-        293
+        299
       ]
     ]
   },
@@ -119,7 +127,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        206
+        212
       ]
     ]
   },
@@ -127,11 +135,11 @@
     "origin": [
       [
         "src/partials/Header.js",
-        213
+        219
       ],
       [
         "src/partials/Header.js",
-        297
+        303
       ]
     ]
   },
@@ -139,11 +147,11 @@
     "origin": [
       [
         "src/partials/Header.js",
-        224
+        230
       ],
       [
         "src/partials/Header.js",
-        308
+        314
       ]
     ]
   },
@@ -151,7 +159,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        231
+        237
       ]
     ]
   },
@@ -159,7 +167,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        242
+        248
       ]
     ]
   },
@@ -167,7 +175,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        253
+        259
       ]
     ]
   },
@@ -175,7 +183,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        260
+        266
       ]
     ]
   },
@@ -183,7 +191,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        267
+        273
       ]
     ]
   },
@@ -191,7 +199,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        274
+        280
       ]
     ]
   },
@@ -199,7 +207,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        281
+        287
       ]
     ]
   },
@@ -207,7 +215,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        289
+        295
       ]
     ]
   },
@@ -215,7 +223,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        314
+        320
       ]
     ]
   },
@@ -223,7 +231,7 @@
     "origin": [
       [
         "src/partials/Header.js",
-        318
+        324
       ]
     ]
   }

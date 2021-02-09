@@ -175,7 +175,7 @@
       ]
     ]
   },
-  "Ranking Nacional | Ranking": {
+  "Propor Quiz Especial": {
     "origin": [
       [
         "src/routes.js",
@@ -183,7 +183,7 @@
       ]
     ]
   },
-  "Ranking Nacional | Provas mensais": {
+  "Ranking Nacional | Ranking": {
     "origin": [
       [
         "src/routes.js",
@@ -191,7 +191,7 @@
       ]
     ]
   },
-  "Ranking Nacional | Provas mensais | Criar": {
+  "Ranking Nacional | Provas mensais": {
     "origin": [
       [
         "src/routes.js",
@@ -199,7 +199,7 @@
       ]
     ]
   },
-  "Ranking Nacional | Provas mensais | Editar": {
+  "Ranking Nacional | Provas mensais | Criar": {
     "origin": [
       [
         "src/routes.js",
@@ -207,7 +207,7 @@
       ]
     ]
   },
-  "Ranking Nacional | Jogadores": {
+  "Ranking Nacional | Provas mensais | Editar": {
     "origin": [
       [
         "src/routes.js",
@@ -215,7 +215,7 @@
       ]
     ]
   },
-  "Ranking Nacional | Jogadores | Criar": {
+  "Ranking Nacional | Jogadores": {
     "origin": [
       [
         "src/routes.js",
@@ -223,7 +223,7 @@
       ]
     ]
   },
-  "Ranking Nacional | Jogadores | Editar": {
+  "Ranking Nacional | Jogadores | Criar": {
     "origin": [
       [
         "src/routes.js",
@@ -231,7 +231,7 @@
       ]
     ]
   },
-  "Notificações": {
+  "Ranking Nacional | Jogadores | Editar": {
     "origin": [
       [
         "src/routes.js",
@@ -239,7 +239,7 @@
       ]
     ]
   },
-  "Utilizadores": {
+  "Notificações": {
     "origin": [
       [
         "src/routes.js",
@@ -247,7 +247,7 @@
       ]
     ]
   },
-  "Quizzes": {
+  "Utilizadores": {
     "origin": [
       [
         "src/routes.js",
@@ -255,7 +255,7 @@
       ]
     ]
   },
-  "Quiz | Criar": {
+  "Quizzes": {
     "origin": [
       [
         "src/routes.js",
@@ -263,7 +263,7 @@
       ]
     ]
   },
-  "Quiz | Corrigir": {
+  "Quiz | Criar": {
     "origin": [
       [
         "src/routes.js",
@@ -271,7 +271,7 @@
       ]
     ]
   },
-  "Quiz | Editar": {
+  "Quiz | Corrigir": {
     "origin": [
       [
         "src/routes.js",
@@ -279,7 +279,7 @@
       ]
     ]
   },
-  "Quizzes especiais": {
+  "Quiz | Editar": {
     "origin": [
       [
         "src/routes.js",
@@ -287,7 +287,7 @@
       ]
     ]
   },
-  "Quiz especial | Criar": {
+  "Quizzes especiais": {
     "origin": [
       [
         "src/routes.js",
@@ -295,7 +295,7 @@
       ]
     ]
   },
-  "Quiz especial | Corrigir": {
+  "Quiz especial | Criar": {
     "origin": [
       [
         "src/routes.js",
@@ -303,7 +303,7 @@
       ]
     ]
   },
-  "Quiz especial | Editar": {
+  "Quiz especial | Corrigir": {
     "origin": [
       [
         "src/routes.js",
@@ -311,7 +311,7 @@
       ]
     ]
   },
-  "Temporadas": {
+  "Quiz especial | Editar": {
     "origin": [
       [
         "src/routes.js",
@@ -319,7 +319,7 @@
       ]
     ]
   },
-  "Temporada | Criar": {
+  "Temporadas": {
     "origin": [
       [
         "src/routes.js",
@@ -327,7 +327,7 @@
       ]
     ]
   },
-  "Temporada | Editar": {
+  "Temporada | Criar": {
     "origin": [
       [
         "src/routes.js",
@@ -335,7 +335,7 @@
       ]
     ]
   },
-  "Pesquisa de perguntas": {
+  "Temporada | Editar": {
     "origin": [
       [
         "src/routes.js",
@@ -343,7 +343,7 @@
       ]
     ]
   },
-  "Pesquisa de perguntas externas": {
+  "Pesquisa de perguntas": {
     "origin": [
       [
         "src/routes.js",
@@ -351,7 +351,7 @@
       ]
     ]
   },
-  "Pergunta | Traduzir": {
+  "Pesquisa de perguntas externas": {
     "origin": [
       [
         "src/routes.js",

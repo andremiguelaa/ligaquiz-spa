@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/admin/quizzes/QuizForm.js",
-        106
+        109
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/views/admin/quizzes/QuizForm.js",
-        110
+        113
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/views/admin/quizzes/QuizForm.js",
-        117
+        128
       ]
     ]
   },
@@ -27,7 +27,15 @@
     "origin": [
       [
         "src/views/admin/quizzes/QuizForm.js",
-        121
+        132
+      ]
+    ]
+  },
+  "Não foi possível marcar a pergunta como usada.": {
+    "origin": [
+      [
+        "src/views/admin/quizzes/QuizForm.js",
+        141
       ]
     ]
   },
@@ -35,7 +43,7 @@
     "origin": [
       [
         "src/views/admin/quizzes/QuizForm.js",
-        158
+        180
       ]
     ]
   },
@@ -43,7 +51,7 @@
     "origin": [
       [
         "src/views/admin/quizzes/QuizForm.js",
-        160
+        182
       ]
     ]
   },
@@ -51,7 +59,7 @@
     "origin": [
       [
         "src/views/admin/quizzes/QuizForm.js",
-        167
+        189
       ]
     ]
   },
@@ -59,7 +67,15 @@
     "origin": [
       [
         "src/views/admin/quizzes/QuizForm.js",
-        185
+        207
+      ]
+    ]
+  },
+  "As seguintes perguntas vão ser marcadas como usadas:": {
+    "origin": [
+      [
+        "src/views/admin/quizzes/QuizForm.js",
+        244
       ]
     ]
   },
@@ -67,7 +83,7 @@
     "origin": [
       [
         "src/views/admin/quizzes/QuizForm.js",
-        223
+        265
       ]
     ]
   }

@@ -247,8 +247,7 @@ const Notifications = () => {
                         ' ' +
                         i18n._(t`e d@`) +
                         ' ' +
-                        specialQuizWinners.slice(-1)}
-                      . Parabéns!
+                        specialQuizWinners.slice(-1)}. Parabéns!
                     </Trans>
                   )}
                 </I18n>
