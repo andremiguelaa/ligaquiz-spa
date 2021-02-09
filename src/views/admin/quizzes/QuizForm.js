@@ -116,11 +116,11 @@ const QuizForm = () => {
           setSubmitting(false);
         });
     } else {
+      const externalQuestionToBeMarkedAsUsed = Object.values(
+        pickedExternalQuestions
+      );
       if (externalQuestionPick && externalQuestionToBeMarkedAsUsed.length > 0) {
         let markedAsUsed = 0;
-        const externalQuestionToBeMarkedAsUsed = Object.values(
-          pickedExternalQuestions
-        );
         externalQuestionToBeMarkedAsUsed.forEach((item) => {
           ApiRequest.patch(`external-questions`, { id: item.id, used: true })
             .then(() => {
