@@ -14,7 +14,6 @@ import logoLigaquizDark from 'img/logo_ligaquiz_dark.png';
 import logoEquizition from 'img/logo_equizition.png';
 import logoEquizitionDark from 'img/logo_equizition_dark.png';
 import classes from './Header.module.scss';
-import packageJson from 'package.json';
 
 const isDarkMode =
   window.matchMedia &&
@@ -321,7 +320,7 @@ const Header = () => {
                       </Link>
                       <hr className="navbar-divider" />
                       <div className="navbar-item">
-                        <Trans>Versão {packageJson.version}</Trans>
+                        <Trans>Versão {process.env.REACT_APP_VERSION}</Trans>
                       </div>
                     </div>
                   </div>

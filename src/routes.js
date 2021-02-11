@@ -38,6 +38,7 @@ import QuizForm from 'views/admin/quizzes/QuizForm';
 import QuizCorrect from 'views/admin/quizzes/QuizCorrect';
 import SpecialQuizzesAdmin from 'views/admin/specialQuizzes/SpecialQuizzes';
 import SpecialQuizForm from 'views/admin/specialQuizzes/SpecialQuizForm';
+import SpecialQuizProposalEdit from 'views/admin/specialQuizzes/SpecialQuizProposalEdit';
 import SpecialQuizCorrect from 'views/admin/specialQuizzes/SpecialQuizCorrect';
 import SeasonsAdmin from 'views/admin/seasons/Seasons';
 import SeasonForm from 'views/admin/seasons/SeasonForm';
@@ -254,6 +255,11 @@ export default [
     title: <Trans>Quiz especial | Editar</Trans>,
     path: '/admin/special-quiz/:date/edit',
     component: SpecialQuizForm,
+  },
+  {
+    title: <Trans>Proposta de quiz especial | Editar</Trans>,
+    path: '/admin/special-quiz-proposal/:id/edit',
+    component: SpecialQuizProposalEdit,
   },
   {
     title: <Trans>Temporadas</Trans>,

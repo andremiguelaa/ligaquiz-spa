@@ -26,18 +26,33 @@ const SpecialQuizzes = () => {
   ] = useStateValue();
   const [error, setError] = useState(false);
   const [quizzes, setQuizzes] = useState();
+  const [proposals, setProposals] = useState();
   const [quizToDelete, setQuizToDelete] = useState();
   const [deleting, setDeleting] = useState(false);
 
   useEffect(() => {
     getQuizzes();
-  }, []);
+    if (user?.valid_roles.admin || user?.valid_roles.special_quiz_editor) {
+      getProposals();
+    }
+  }, [user]);
 
   const getQuizzes = () => {
     setQuizzes();
     ApiRequest.get('special-quizzes')
       .then(({ data }) => {
         setQuizzes(data);
+      })
+      .catch(({ response }) => {
+        setError(response?.status);
+      });
+  };
+
+  const getProposals = () => {
+    setProposals();
+    ApiRequest.get('special-quiz-proposals')
+      .then(({ data }) => {
+        setProposals(data.map((item) => ({ ...item, proposal: true })));
       })
       .catch(({ response }) => {
         setError(response?.status);
@@ -78,11 +93,13 @@ const SpecialQuizzes = () => {
     return <Error status={error} />;
   }
 
+  const allQuizzes = proposals && quizzes && proposals.concat(quizzes);
+
   return (
     <>
       <PageHeader title={<Trans>Quizzes Especiais</Trans>} />
       <section className="section">
-        {!quizzes ? (
+        {!quizzes || !proposals ? (
           <Loading />
         ) : (
           <>
@@ -106,11 +123,14 @@ const SpecialQuizzes = () => {
             )}
             {quizzes.length ? (
               <PaginatedTable
-                array={quizzes}
+                array={allQuizzes}
                 initialPage={page ? page : 1}
                 hideHeader
                 rowClassName={(item) => {
-                  if (!item.past && !item.completed) {
+                  if (
+                    (item.date && !item.past && !item.completed) ||
+                    item.proposal
+                  ) {
                     return 'has-background-danger';
                   }
                 }}
@@ -119,69 +139,88 @@ const SpecialQuizzes = () => {
                     id: 'subject',
                     className: 'is-vertical-middle',
                     render: (item) => (
-                      <Link
-                        to={`/special-quiz/${item.date}`}
-                        className={classes.subjectContent}
-                      >
-                        {item.subject} ({convertToLongDate(item.date, language)}
-                        )
-                        {!item.past && !item.completed && (
+                      <>
+                        {!item.proposal ? (
+                          <Link
+                            to={`/special-quiz/${item.date}`}
+                            className={classes.subjectContent}
+                          >
+                            {item.subject} (
+                            {convertToLongDate(item.date, language)})
+                            {!item.past && !item.completed && (
+                              <>
+                                {' '}
+                                - <Trans>Incompleto</Trans>
+                              </>
+                            )}
+                          </Link>
+                        ) : (
                           <>
-                            {' '}
-                            - <Trans>Incompleto</Trans>
+                            {item.subject} - <Trans>Proposta</Trans>
                           </>
                         )}
-                      </Link>
+                      </>
                     ),
                   },
                   {
                     id: 'actions',
                     className: classes.actions,
                     render: (item) => (
-                      <>
-                        <div className="buttons has-addons is-pulled-right">
-                          {!item.past &&
-                            (user.valid_roles.admin ||
-                              user.valid_roles.special_quiz_editor) && (
-                              <Link
-                                className="button"
-                                to={`/admin/special-quiz/${item.date}/edit`}
-                              >
-                                <span className="icon">
-                                  <i className="fa fa-edit"></i>
-                                </span>
-                              </Link>
-                            )}
-                          {!item.past &&
-                            !item.today &&
-                            (user.valid_roles.admin ||
-                              user.valid_roles.special_quiz_editor) && (
-                              <button
-                                className="button is-danger"
-                                type="button"
-                                onClick={() => {
-                                  setQuizToDelete(item.id);
-                                }}
-                              >
-                                <span className="icon">
-                                  <i className="fa fa-trash"></i>
-                                </span>
-                              </button>
-                            )}
-                          {(item.past || item.today) &&
-                            (user.valid_roles.admin ||
-                              user.valid_roles.answer_reviewer) && (
-                              <Link
-                                className="button"
-                                to={`/admin/special-quiz/${item.date}/correct`}
-                              >
-                                <span className="icon">
-                                  <i className="fa fa-check"></i>
-                                </span>
-                              </Link>
-                            )}
-                        </div>
-                      </>
+                      <div className="buttons has-addons is-pulled-right">
+                        {!item.proposal ? (
+                          <>
+                            {!item.past &&
+                              (user.valid_roles.admin ||
+                                user.valid_roles.special_quiz_editor) && (
+                                <Link
+                                  className="button"
+                                  to={`/admin/special-quiz/${item.date}/edit`}
+                                >
+                                  <span className="icon">
+                                    <i className="fa fa-edit"></i>
+                                  </span>
+                                </Link>
+                              )}
+                            {!item.past &&
+                              !item.today &&
+                              (user.valid_roles.admin ||
+                                user.valid_roles.special_quiz_editor) && (
+                                <button
+                                  className="button is-danger"
+                                  type="button"
+                                  onClick={() => {
+                                    setQuizToDelete(item.id);
+                                  }}
+                                >
+                                  <span className="icon">
+                                    <i className="fa fa-trash"></i>
+                                  </span>
+                                </button>
+                              )}
+                            {(item.past || item.today) &&
+                              (user.valid_roles.admin ||
+                                user.valid_roles.answer_reviewer) && (
+                                <Link
+                                  className="button"
+                                  to={`/admin/special-quiz/${item.date}/correct`}
+                                >
+                                  <span className="icon">
+                                    <i className="fa fa-check"></i>
+                                  </span>
+                                </Link>
+                              )}
+                          </>
+                        ) : (
+                          <Link
+                            className="button"
+                            to={`/admin/special-quiz-proposal/${item.id}/edit`}
+                          >
+                            <span className="icon">
+                              <i className="fa fa-edit"></i>
+                            </span>
+                          </Link>
+                        )}
+                      </div>
                     ),
                   },
                 ]}
