@@ -1,7 +1,7 @@
 {
   "name": "liga-quiz-spa",
   "homepage": ".",
-  "version": "4.29.0",
+  "version": "4.30.0",
   "private": true,
   "dependencies": {
     "@creativebulma/bulma-tooltip": "^1.2.0",
@@ -23,7 +23,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "prod": "git pull && yarn && yarn manifest &&  react-scripts build && rm -rf prod && mv ./build ./prod",
+    "prod": "yarn && yarn manifest &&  react-scripts build && rm -rf prod && mv ./build ./prod",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "add-locale": "lingui add-locale",

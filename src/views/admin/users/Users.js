@@ -28,8 +28,19 @@ const Users = () => {
 
   useEffect(() => {
     ApiRequest.get('users')
-      .then(({ data }) => {
-        setUsers(data);
+      .then(({ data: usersData }) => {
+        ApiRequest.get('logs?versions=true')
+          .then(({ data: versionsData }) => {
+            setUsers(
+              usersData.map((item) => ({
+                ...item,
+                version: versionsData[item.id] || '-',
+              }))
+            );
+          })
+          .catch(({ response }) => {
+            setError(response?.status);
+          });
       })
       .catch(({ response }) => {
         setError(response?.status);
@@ -124,6 +135,14 @@ const Users = () => {
                     </th>
                     <th
                       className={classames(
+                        classes.versionCell,
+                        'is-hidden-mobile'
+                      )}
+                    >
+                      <Trans>Versão</Trans>
+                    </th>
+                    <th
+                      className={classames(
                         classes.permissionsCell,
                         'is-hidden-mobile'
                       )}
@@ -214,6 +233,15 @@ const Users = () => {
                               </span>
                             </Link>
                           </div>
+                        </td>
+                        <td
+                          className={classames(
+                            'is-vertical-middle',
+                            'is-hidden-mobile',
+                            classes.versionCell
+                          )}
+                        >
+                          {user.version}
                         </td>
                         <td
                           className={classames(
