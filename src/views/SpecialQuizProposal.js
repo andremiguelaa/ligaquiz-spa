@@ -58,6 +58,16 @@ const SpecialQuizForm = () => {
     return <Error status={401} />;
   }
 
+  if (
+    !(
+      user.valid_roles.admin ||
+      user.valid_roles.regular_player ||
+      user.valid_roles.special_quiz_player
+    )
+  ) {
+    return <Error status={403} />;
+  }
+
   if (error) {
     return <Error status={error} />;
   }

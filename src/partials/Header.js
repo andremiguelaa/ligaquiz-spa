@@ -25,7 +25,7 @@ const Header = () => {
   const [menuBurgerOpen, setMenuBurgerOpen] = useState(false);
 
   const changeLanguage = (lang) => {
-    Cookies.set('language', lang, { expires: 365 });
+    Cookies.set('language', lang, { expires: 365, sameSite: 'strict' });
     dispatch({
       type: 'settings.language',
       payload: lang,
@@ -41,12 +41,16 @@ const Header = () => {
       ? logoLigaquizDark
       : logoLigaquiz;
 
+  const impersonating = Boolean(Cookies.get('impersonating'));
+
   return (
     <I18n>
       {({ i18n }) => (
         <header>
           <nav
-            className="navbar is-fixed-top has-shadow"
+            className={classames('navbar', 'is-fixed-top', 'has-shadow', {
+              [classes.impersonating]: impersonating,
+            })}
             role="navigation"
             aria-label={i18n._(t`Navegação primária`)}
           >
@@ -112,12 +116,15 @@ const Header = () => {
                     &nbsp;<Trans>O meu perfil</Trans>
                   </Link>
                 )}
-                {user && (
-                  <Link to="/create-special-quiz" className="navbar-item">
-                    <i className="fa fa-btn fa-pencil" />
-                    &nbsp;<Trans>Propor quiz especial</Trans>
-                  </Link>
-                )}
+                {user &&
+                  (user.valid_roles.admin ||
+                    user.valid_roles.regular_player ||
+                    user.valid_roles.special_quiz_player) && (
+                    <Link to="/create-special-quiz" className="navbar-item">
+                      <i className="fa fa-btn fa-pencil" />
+                      &nbsp;<Trans>Propor quiz especial</Trans>
+                    </Link>
+                  )}
                 {process.env.REACT_APP_NATIONAL_RANKING === 'true' && (
                   <Link to="/national-ranking/" className="navbar-item">
                     <i className="fa fa-btn fa-star" />
@@ -125,7 +132,6 @@ const Header = () => {
                   </Link>
                 )}
               </div>
-
               <div className="navbar-end">
                 {Object.keys(catalogs).length > 1 && (
                   <div className="navbar-item">
@@ -179,6 +185,23 @@ const Header = () => {
                       </button>
                     </OutsideClickHandler>
                     <div className="navbar-dropdown is-right">
+                      {impersonating && (
+                        <button
+                          className="navbar-item"
+                          onClick={() => {
+                            const adminToken = Cookies.get('ADMIN-TOKEN');
+                            Cookies.set('AUTH-TOKEN', adminToken, {
+                              sameSite: 'strict',
+                            });
+                            Cookies.remove('ADMIN-TOKEN');
+                            Cookies.remove('impersonating');
+                            document.location.href = '/';
+                          }}
+                        >
+                          <i className="fa fa-btn fa-user-secret" />
+                          &nbsp;<Trans>Parar de usar identidade</Trans>
+                        </button>
+                      )}
                       {user.valid_roles.admin && (
                         <>
                           <div className="navbar-item">
@@ -307,12 +330,10 @@ const Header = () => {
                         (user.valid_roles.admin ||
                           user.valid_roles.regular_player ||
                           user.valid_roles.special_quiz_player) && (
-                          <>
-                            <Link to="/special-quizzes" className="navbar-item">
-                              <i className="fa fa-btn fa-question-circle-o" />
-                              &nbsp;<Trans>Quizzes especiais</Trans>
-                            </Link>
-                          </>
+                          <Link to="/special-quizzes" className="navbar-item">
+                            <i className="fa fa-btn fa-question-circle-o" />
+                            &nbsp;<Trans>Quizzes especiais</Trans>
+                          </Link>
                         )}
                       <Link to="/logout/" className="navbar-item">
                         <i className="fa fa-btn fa-sign-out" />

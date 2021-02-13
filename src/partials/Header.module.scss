@@ -1,3 +1,6 @@
+@import 'bulma/sass/utilities/initial-variables.sass';
+@import 'bulma/sass/utilities/derived-variables.scss';
+
 .burgerWrapper {
   margin-left: auto;
 }
@@ -5,4 +8,8 @@
 .burger {
   background-color: transparent;
   border: none;
+}
+
+.impersonating {
+  box-shadow: 0 0 20px $danger !important;
 }

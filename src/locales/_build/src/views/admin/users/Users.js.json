@@ -1,21 +1,13 @@
 {
+  "Não foi possível usar a identidade deste utilizador.": {
+    "origin": [
+      [
+        "src/views/admin/users/Users.js",
+        119
+      ]
+    ]
+  },
   "Utilizadores": {
-    "origin": [
-      [
-        "src/views/admin/users/Users.js",
-        109
-      ]
-    ]
-  },
-  "Nome": {
-    "origin": [
-      [
-        "src/views/admin/users/Users.js",
-        124
-      ]
-    ]
-  },
-  "Versão": {
     "origin": [
       [
         "src/views/admin/users/Users.js",
@@ -23,11 +15,27 @@
       ]
     ]
   },
+  "Nome": {
+    "origin": [
+      [
+        "src/views/admin/users/Users.js",
+        157
+      ]
+    ]
+  },
+  "Versão": {
+    "origin": [
+      [
+        "src/views/admin/users/Users.js",
+        175
+      ]
+    ]
+  },
   "Permissões": {
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        150
+        183
       ]
     ]
   },
@@ -35,7 +43,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        163
+        196
       ]
     ]
   },
@@ -43,7 +51,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        187
+        220
       ]
     ]
   },
@@ -51,7 +59,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        206
+        239
       ]
     ]
   },
@@ -59,7 +67,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        258
+        291
       ]
     ]
   },
@@ -67,7 +75,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        270
+        303
       ]
     ]
   },
@@ -75,7 +83,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        283
+        316
       ]
     ]
   },
@@ -83,7 +91,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        297
+        330
       ]
     ]
   },
@@ -91,7 +99,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        310
+        343
       ]
     ]
   },
@@ -99,7 +107,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        323
+        356
       ]
     ]
   },
@@ -107,7 +115,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        336
+        369
       ]
     ]
   },
@@ -115,7 +123,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        348
+        381
       ]
     ]
   },
@@ -123,7 +131,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        401
+        444
       ]
     ]
   }

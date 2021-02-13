@@ -15,7 +15,10 @@ export const setLoginData = (data, dispatch) => {
         24 /
         2
     );
-    Cookies.set('AUTH-TOKEN', data.access_token, { expires: validity });
+    Cookies.set('AUTH-TOKEN', data.access_token, {
+      expires: validity,
+      sameSite: 'strict',
+    });
     setBearerToken(data.access_token);
   }
   if (dispatch) {
@@ -34,6 +37,18 @@ export default (props) => {
     if (token) {
       ApiRequest.patch('session')
         .then(({ data }) => {
+          const validity = Math.round(
+            (Date.parse(data.expires_at.replace(/ /g, 'T')) - Date.now()) /
+              1000 /
+              60 /
+              60 /
+              24 /
+              2
+          );
+          Cookies.set('AUTH-TOKEN', token, {
+            expires: validity,
+            sameSite: 'strict',
+          });
           setLoginData(data, dispatch);
         })
         .catch(({ response }) => {

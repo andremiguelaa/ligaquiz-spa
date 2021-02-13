@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/Profile/Statistics.js",
-        119
+        106
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/views/Profile/Statistics.js",
-        177
+        164
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/views/Profile/Statistics.js",
-        190
+        177
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/views/Profile/Statistics.js",
-        197
+        184
       ]
     ]
   },
@@ -35,7 +35,7 @@
     "origin": [
       [
         "src/views/Profile/Statistics.js",
-        199
+        186
       ]
     ]
   },
@@ -43,7 +43,7 @@
     "origin": [
       [
         "src/views/Profile/Statistics.js",
-        209
+        196
       ]
     ]
   },
@@ -51,7 +51,7 @@
     "origin": [
       [
         "src/views/Profile/Statistics.js",
-        211
+        198
       ]
     ]
   },
@@ -59,7 +59,7 @@
     "origin": [
       [
         "src/views/Profile/Statistics.js",
-        221
+        208
       ]
     ]
   }

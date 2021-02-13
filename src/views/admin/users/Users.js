@@ -5,6 +5,8 @@ import { I18n } from '@lingui/react';
 import { t } from '@lingui/macro';
 import classames from 'classnames';
 import { get } from 'lodash';
+import { toast } from 'react-toastify';
+import Cookies from 'js-cookie';
 
 import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
@@ -25,6 +27,7 @@ const Users = () => {
     column: 'id',
     direction: 'asc',
   });
+  const [impersonating, setImpersonating] = useState(false);
 
   useEffect(() => {
     ApiRequest.get('users')
@@ -92,6 +95,32 @@ const Users = () => {
     setOrder(newOrder);
   };
 
+  const impersonate = (userId) => {
+    setImpersonating(true);
+    ApiRequest.post('impersonate', { id: userId })
+      .then(({ data }) => {
+        const validity = Math.round(
+          (Date.parse(data.expires_at.replace(/ /g, 'T')) - Date.now()) /
+            1000 /
+            60 /
+            60 /
+            24 /
+            2
+        );
+        const adminToken = Cookies.get('AUTH-TOKEN');
+        Cookies.set('ADMIN-TOKEN', adminToken, { expires: validity, sameSite: 'strict' });
+        Cookies.set('AUTH-TOKEN', data.access_token, { expires: validity, sameSite: 'strict' });
+        Cookies.set('impersonating', true, { expires: validity, sameSite: 'strict' });
+        document.location.href = '/';
+      })
+      .catch(() => {
+        setImpersonating(false);
+        toast.error(
+          <Trans>Não foi possível usar a identidade deste utilizador.</Trans>
+        );
+      });
+  };
+
   if (!authUser) {
     return <Error status={401} />;
   }
@@ -102,6 +131,10 @@ const Users = () => {
 
   if (error) {
     return <Error status={error} />;
+  }
+
+  if (impersonating) {
+    return <Loading />;
   }
 
   return (
@@ -372,7 +405,7 @@ const Users = () => {
                           {get(user, 'roles.special_quiz_player', '-')}
                         </td>
                         <td className={classes.actionsCell}>
-                          <div className="is-pulled-right">
+                          <div className="buttons has-addons is-pulled-right">
                             <button
                               className="button"
                               disabled={user.id === authUser.id}
@@ -387,6 +420,16 @@ const Users = () => {
                             >
                               <span className="icon">
                                 <i className="fa fa-edit"></i>
+                              </span>
+                            </button>
+                            <button
+                              className="button"
+                              disabled={user.id === authUser.id}
+                              type="button"
+                              onClick={() => impersonate(user.id)}
+                            >
+                              <span className="icon">
+                                <i className="fa fa-user-secret"></i>
                               </span>
                             </button>
                           </div>

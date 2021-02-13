@@ -14,6 +14,8 @@ const Logout = () => {
   useEffect(() => {
     if (user) {
       Cookies.remove('AUTH-TOKEN');
+      Cookies.remove('ADMIN-TOKEN');
+      Cookies.remove('impersonating');
       dispatch({
         type: 'user.logout',
       });
