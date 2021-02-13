@@ -10,7 +10,12 @@ import PageHeader from 'components/PageHeader';
 import Question from 'views/admin/specialQuizzes/Question';
 
 const SpecialQuizForm = () => {
-  const [{ user }] = useStateValue();
+  const [
+    {
+      user,
+      settings: { language },
+    },
+  ] = useStateValue();
   const history = useHistory();
   const [error, setError] = useState(false);
   const [subject, setSubject] = useState('');
@@ -30,6 +35,7 @@ const SpecialQuizForm = () => {
     const newFormData = { ...formData };
     newFormData.subject = subject || '';
     newFormData.description = description || '';
+    newFormData.language = language;
     ApiRequest.post('special-quiz-proposals', newFormData)
       .then(() => {
         setSubmitting(false);
