@@ -240,8 +240,8 @@ const Cup = () => {
                                   </Link>
                                 )}
                               {!game.done &&
-                                game.hasOwnProperty('user_id_1_game_points') &&
-                                game.hasOwnProperty('user_id_2_game_points') &&
+                                game.hasOwnProperty('user_id_1') &&
+                                game.hasOwnProperty('user_id_2') &&
                                 'vs.'}
                               {game.done &&
                                 !game.hasOwnProperty('user_id_1_game_points') &&
