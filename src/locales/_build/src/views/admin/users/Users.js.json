@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        98
+        109
       ]
     ]
   },
@@ -11,7 +11,15 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        113
+        124
+      ]
+    ]
+  },
+  "Versão": {
+    "origin": [
+      [
+        "src/views/admin/users/Users.js",
+        142
       ]
     ]
   },
@@ -19,7 +27,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        131
+        150
       ]
     ]
   },
@@ -27,7 +35,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        144
+        163
       ]
     ]
   },
@@ -35,7 +43,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        168
+        187
       ]
     ]
   },
@@ -43,7 +51,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        187
+        206
       ]
     ]
   },
@@ -51,7 +59,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        230
+        258
       ]
     ]
   },
@@ -59,7 +67,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        242
+        270
       ]
     ]
   },
@@ -67,7 +75,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        255
+        283
       ]
     ]
   },
@@ -75,7 +83,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        269
+        297
       ]
     ]
   },
@@ -83,7 +91,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        282
+        310
       ]
     ]
   },
@@ -91,7 +99,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        295
+        323
       ]
     ]
   },
@@ -99,7 +107,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        308
+        336
       ]
     ]
   },
@@ -107,7 +115,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        320
+        348
       ]
     ]
   },
@@ -115,7 +123,7 @@
     "origin": [
       [
         "src/views/admin/users/Users.js",
-        373
+        401
       ]
     ]
   }

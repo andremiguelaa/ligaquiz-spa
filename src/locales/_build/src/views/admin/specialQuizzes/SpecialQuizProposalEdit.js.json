@@ -1,0 +1,82 @@
+{
+  "Quiz especial criado com sucesso.": {
+    "origin": [
+      [
+        "src/views/admin/specialQuizzes/SpecialQuizProposalEdit.js",
+        93
+      ]
+    ]
+  },
+  "Quiz especial criado mas a proposta não foi apagada da base de dados.": {
+    "origin": [
+      [
+        "src/views/admin/specialQuizzes/SpecialQuizProposalEdit.js",
+        97
+      ]
+    ]
+  },
+  "Não foi possível criar o quiz especial.": {
+    "origin": [
+      [
+        "src/views/admin/specialQuizzes/SpecialQuizProposalEdit.js",
+        109
+      ]
+    ]
+  },
+  "Editar proposta de quiz especial": {
+    "origin": [
+      [
+        "src/views/admin/specialQuizzes/SpecialQuizProposalEdit.js",
+        142
+      ]
+    ]
+  },
+  "Data do quiz": {
+    "origin": [
+      [
+        "src/views/admin/specialQuizzes/SpecialQuizProposalEdit.js",
+        149
+      ]
+    ]
+  },
+  "Título": {
+    "origin": [
+      [
+        "src/views/admin/specialQuizzes/SpecialQuizProposalEdit.js",
+        170
+      ]
+    ]
+  },
+  "Descrição": {
+    "origin": [
+      [
+        "src/views/admin/specialQuizzes/SpecialQuizProposalEdit.js",
+        183
+      ]
+    ]
+  },
+  "Autor": {
+    "origin": [
+      [
+        "src/views/admin/specialQuizzes/SpecialQuizProposalEdit.js",
+        199
+      ]
+    ]
+  },
+  "Nenhum": {
+    "origin": [
+      [
+        "src/views/admin/specialQuizzes/SpecialQuizProposalEdit.js",
+        210
+      ]
+    ]
+  },
+  "Gravar": {
+    "origin": [
+      [
+        "src/views/admin/specialQuizzes/SpecialQuizProposalEdit.js",
+        241
+      ]
+    ]
+  }
+}
