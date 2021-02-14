@@ -88,18 +88,6 @@ const Profile = () => {
               </li>
             )}
             {(authUser.valid_roles.admin ||
-              authUser.valid_roles.regular_player) && (
-              <li
-                className={classnames({
-                  'is-active': tab === 'league',
-                })}
-              >
-                <Link to={`/profile/${userStatisticsId}/league`}>
-                  {process.env.REACT_APP_NAME}
-                </Link>
-              </li>
-            )}
-            {(authUser.valid_roles.admin ||
               authUser.valid_roles.regular_player ||
               authUser.valid_roles.special_quiz_player) && (
               <li

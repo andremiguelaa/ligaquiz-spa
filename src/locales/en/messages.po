@@ -2128,7 +2128,7 @@ msgstr "Special quiz proposal | Edit"
 msgid "Prova"
 msgstr "Event"
 
-#: src/views/Profile.js:122
+#: src/views/Profile.js:110
 msgid "Provas individuais"
 msgstr "Individual quizzes"
 
@@ -2287,7 +2287,7 @@ msgstr "Special Quizzes"
 #: src/partials/Header.js:252
 #: src/partials/Header.js:335
 #: src/routes.js:240
-#: src/views/Profile.js:111
+#: src/views/Profile.js:99
 msgid "Quizzes especiais"
 msgstr "Special quizzes"
 
@@ -2392,7 +2392,7 @@ msgstr "Sign up"
 msgid "Registo"
 msgstr "Sign up"
 
-#: src/views/Profile.js:133
+#: src/views/Profile.js:121
 msgid "Registo de acções (últimos {logsDays} dias)"
 msgstr "Action long (last {logsDays} days)"
 
