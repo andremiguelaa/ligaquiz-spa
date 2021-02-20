@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/admin/specialQuizzes/Question.js",
-        50
+        51
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/views/admin/specialQuizzes/Question.js",
-        54
+        55
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/views/admin/specialQuizzes/Question.js",
-        72
+        74
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/views/admin/specialQuizzes/Question.js",
-        85
+        88
       ]
     ]
   },
@@ -35,7 +35,7 @@
     "origin": [
       [
         "src/views/admin/specialQuizzes/Question.js",
-        118
+        121
       ]
     ]
   }

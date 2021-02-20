@@ -34,6 +34,7 @@ const SpecialQuizProposalEdit = () => {
     user_id: null,
     questions: [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}],
   });
+  const [hideAnswers, setHideAnswers] = useState(true);
 
   useEffect(() => {
     ApiRequest.get(`special-quizzes`)
@@ -141,6 +142,20 @@ const SpecialQuizProposalEdit = () => {
     <>
       <PageHeader title={<Trans>Editar proposta de quiz especial</Trans>} />
       <div className="section content">
+        <div className="field">
+          <input
+            id="hide-answers"
+            type="checkbox"
+            className="switch"
+            value={hideAnswers}
+            onClick={(event) => setHideAnswers(event.target.checked)}
+            defaultChecked={hideAnswers}
+          />
+          <label htmlFor="hide-answers">
+            <Trans>Ocultar respostas</Trans>
+          </label>
+        </div>
+        <hr />
         <form onSubmit={handleSubmit}>
           {(!quizData || (!quizData.quiz.past && !quizData.quiz.today)) && (
             <div className="field">
@@ -230,13 +245,14 @@ const SpecialQuizProposalEdit = () => {
               uploading={uploading}
               setUploading={setUploading}
               disabled={submitting}
+              hideAnswer={hideAnswers}
             />
           ))}
           <div className="field">
             <div className="control">
               <button
                 className={`button is-primary ${submitting && 'is-loading'}`}
-                disabled={!quizDate || uploading || submitting}
+                disabled={!quizDate || uploading || submitting || hideAnswers}
               >
                 <Trans>Gravar</Trans>
               </button>

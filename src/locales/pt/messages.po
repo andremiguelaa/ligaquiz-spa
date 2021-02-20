@@ -285,7 +285,7 @@ msgstr "Austrália"
 
 #: src/views/SpecialQuizzes.js:88
 #: src/views/admin/specialQuizzes/SpecialQuizForm.js:217
-#: src/views/admin/specialQuizzes/SpecialQuizProposalEdit.js:199
+#: src/views/admin/specialQuizzes/SpecialQuizProposalEdit.js:214
 msgid "Autor"
 msgstr "Autor"
 
@@ -682,7 +682,7 @@ msgstr "Data de nascimento"
 
 #: src/views/admin/quizzes/QuizForm.js:223
 #: src/views/admin/specialQuizzes/SpecialQuizForm.js:167
-#: src/views/admin/specialQuizzes/SpecialQuizProposalEdit.js:149
+#: src/views/admin/specialQuizzes/SpecialQuizProposalEdit.js:164
 msgid "Data do quiz"
 msgstr "Data do quiz"
 
@@ -711,7 +711,7 @@ msgstr "Desceu"
 #: src/views/SpecialQuiz/SpecialQuizForm.js:81
 #: src/views/SpecialQuizProposal.js:109
 #: src/views/admin/specialQuizzes/SpecialQuizForm.js:201
-#: src/views/admin/specialQuizzes/SpecialQuizProposalEdit.js:183
+#: src/views/admin/specialQuizzes/SpecialQuizProposalEdit.js:198
 msgid "Descrição"
 msgstr "Descrição"
 
@@ -787,7 +787,7 @@ msgstr "Editar notificação"
 msgid "Editar permissões de {0} {1}"
 msgstr "Editar permissões de {0} {1}"
 
-#: src/views/admin/specialQuizzes/SpecialQuizProposalEdit.js:142
+#: src/views/admin/specialQuizzes/SpecialQuizProposalEdit.js:143
 msgid "Editar proposta de quiz especial"
 msgstr "Editar proposta de quiz especial"
 
@@ -855,7 +855,7 @@ msgstr "Entretenimento"
 #: src/views/admin/questions/Questions.js:280
 #: src/views/admin/quizzes/ExternalQuestionPick.js:45
 #: src/views/admin/quizzes/Question.js:156
-#: src/views/admin/specialQuizzes/Question.js:54
+#: src/views/admin/specialQuizzes/Question.js:55
 msgid "Enunciado"
 msgstr "Enunciado"
 
@@ -912,7 +912,7 @@ msgid "Escala"
 msgstr "Escala"
 
 #: src/views/admin/quizzes/Question.js:229
-#: src/views/admin/specialQuizzes/Question.js:118
+#: src/views/admin/specialQuizzes/Question.js:121
 msgid "Escolhe o ficheiro"
 msgstr "Escolhe o ficheiro"
 
@@ -1098,7 +1098,7 @@ msgstr "Granada"
 #: src/views/admin/nationalRanking/Players/Form.js:260
 #: src/views/admin/quizzes/QuizForm.js:281
 #: src/views/admin/specialQuizzes/SpecialQuizForm.js:259
-#: src/views/admin/specialQuizzes/SpecialQuizProposalEdit.js:241
+#: src/views/admin/specialQuizzes/SpecialQuizProposalEdit.js:257
 msgid "Gravar"
 msgstr "Gravar"
 
@@ -1520,7 +1520,7 @@ msgstr "Moçambique"
 #: src/views/admin/externalQuestions/ExternalQuestions.js:345
 #: src/views/admin/externalQuestions/ExternalQuestions.js:437
 #: src/views/admin/quizzes/Question.js:185
-#: src/views/admin/specialQuizzes/Question.js:85
+#: src/views/admin/specialQuizzes/Question.js:88
 msgid "Multimédia"
 msgstr "Multimédia"
 
@@ -1574,7 +1574,7 @@ msgstr "Navegação primária"
 
 #: src/views/admin/nationalRanking/Players/Form.js:236
 #: src/views/admin/specialQuizzes/SpecialQuizForm.js:228
-#: src/views/admin/specialQuizzes/SpecialQuizProposalEdit.js:210
+#: src/views/admin/specialQuizzes/SpecialQuizProposalEdit.js:225
 msgid "Nenhum"
 msgstr "Nenhum"
 
@@ -1743,7 +1743,7 @@ msgstr "Não foi possível criar a temporada."
 
 #: src/views/SpecialQuizProposal.js:52
 #: src/views/admin/specialQuizzes/SpecialQuizForm.js:116
-#: src/views/admin/specialQuizzes/SpecialQuizProposalEdit.js:109
+#: src/views/admin/specialQuizzes/SpecialQuizProposalEdit.js:110
 msgid "Não foi possível criar o quiz especial."
 msgstr "Não foi possível criar o quiz especial."
 
@@ -1859,6 +1859,10 @@ msgstr "OK"
 #: src/partials/Notifications.js:160
 msgid "Obrigado pela tua inscrição! O teu registo encontra-se a aguardar aprovação da equipa da {0}."
 msgstr "Obrigado pela tua inscrição! O teu registo encontra-se a aguardar aprovação da equipa da {0}."
+
+#: src/views/admin/specialQuizzes/SpecialQuizProposalEdit.js:155
+msgid "Ocultar respostas"
+msgstr "Ocultar respostas"
 
 #: src/views/Cup.js:120
 msgid "Oitavos-de-Final"
@@ -2004,7 +2008,7 @@ msgstr "Pergunta"
 #: src/views/SpecialQuiz/SpecialQuizDone.js:129
 #: src/views/SpecialQuiz/SpecialQuizForm.js:92
 #: src/views/admin/quizzes/Question.js:116
-#: src/views/admin/specialQuizzes/Question.js:50
+#: src/views/admin/specialQuizzes/Question.js:51
 msgid "Pergunta {0}"
 msgstr "Pergunta {0}"
 
@@ -2216,7 +2220,7 @@ msgid "Quiz especial apagado com sucesso."
 msgstr "Quiz especial apagado com sucesso."
 
 #: src/views/admin/specialQuizzes/SpecialQuizForm.js:112
-#: src/views/admin/specialQuizzes/SpecialQuizProposalEdit.js:93
+#: src/views/admin/specialQuizzes/SpecialQuizProposalEdit.js:94
 msgid "Quiz especial criado com sucesso."
 msgstr "Quiz especial criado com sucesso."
 
@@ -2224,7 +2228,7 @@ msgstr "Quiz especial criado com sucesso."
 msgid "Quiz especial criado com sucesso.<0/>Obrigado pela contribuição!"
 msgstr "Quiz especial criado com sucesso.<0/>Obrigado pela contribuição!"
 
-#: src/views/admin/specialQuizzes/SpecialQuizProposalEdit.js:97
+#: src/views/admin/specialQuizzes/SpecialQuizProposalEdit.js:98
 msgid "Quiz especial criado mas a proposta não foi apagada da base de dados."
 msgstr "Quiz especial criado mas a proposta não foi apagada da base de dados."
 
@@ -2455,7 +2459,7 @@ msgstr "República do Congo"
 #: src/views/admin/questions/Questions.js:292
 #: src/views/admin/quizzes/ExternalQuestionPick.js:54
 #: src/views/admin/quizzes/Question.js:172
-#: src/views/admin/specialQuizzes/Question.js:72
+#: src/views/admin/specialQuizzes/Question.js:74
 msgid "Resposta"
 msgstr "Resposta"
 
@@ -2973,7 +2977,7 @@ msgstr "Tuvalu"
 #: src/views/SpecialQuizProposal.js:96
 #: src/views/SpecialQuizzes.js:75
 #: src/views/admin/specialQuizzes/SpecialQuizForm.js:188
-#: src/views/admin/specialQuizzes/SpecialQuizProposalEdit.js:170
+#: src/views/admin/specialQuizzes/SpecialQuizProposalEdit.js:185
 msgid "Título"
 msgstr "Título"
 

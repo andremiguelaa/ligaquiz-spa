@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/admin/specialQuizzes/SpecialQuizProposalEdit.js",
-        93
+        94
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/views/admin/specialQuizzes/SpecialQuizProposalEdit.js",
-        97
+        98
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/views/admin/specialQuizzes/SpecialQuizProposalEdit.js",
-        109
+        110
       ]
     ]
   },
@@ -27,7 +27,15 @@
     "origin": [
       [
         "src/views/admin/specialQuizzes/SpecialQuizProposalEdit.js",
-        142
+        143
+      ]
+    ]
+  },
+  "Ocultar respostas": {
+    "origin": [
+      [
+        "src/views/admin/specialQuizzes/SpecialQuizProposalEdit.js",
+        155
       ]
     ]
   },
@@ -35,7 +43,7 @@
     "origin": [
       [
         "src/views/admin/specialQuizzes/SpecialQuizProposalEdit.js",
-        149
+        164
       ]
     ]
   },
@@ -43,7 +51,7 @@
     "origin": [
       [
         "src/views/admin/specialQuizzes/SpecialQuizProposalEdit.js",
-        170
+        185
       ]
     ]
   },
@@ -51,7 +59,7 @@
     "origin": [
       [
         "src/views/admin/specialQuizzes/SpecialQuizProposalEdit.js",
-        183
+        198
       ]
     ]
   },
@@ -59,7 +67,7 @@
     "origin": [
       [
         "src/views/admin/specialQuizzes/SpecialQuizProposalEdit.js",
-        199
+        214
       ]
     ]
   },
@@ -67,7 +75,7 @@
     "origin": [
       [
         "src/views/admin/specialQuizzes/SpecialQuizProposalEdit.js",
-        210
+        225
       ]
     ]
   },
@@ -75,7 +83,7 @@
     "origin": [
       [
         "src/views/admin/specialQuizzes/SpecialQuizProposalEdit.js",
-        241
+        257
       ]
     ]
   }

@@ -16,6 +16,7 @@ const Question = ({
   setUploading,
   disabled,
   hidePreview,
+  hideAnswer,
 }) => {
   const [content, setContent] = useState(
     quizData?.quiz.questions[index]?.content || ''
@@ -67,19 +68,21 @@ const Question = ({
           <Markdown content={content} />
         </div>
       )}
-      <div className="field">
-        <label className="label">
-          <Trans>Resposta</Trans>
-        </label>
-        <input
-          disabled={disabled}
-          defaultValue={answer}
-          className="input"
-          onChange={(event) => {
-            setAnswer(event.target.value);
-          }}
-        />
-      </div>
+      {!hideAnswer && (
+        <div className="field">
+          <label className="label">
+            <Trans>Resposta</Trans>
+          </label>
+          <input
+            disabled={disabled}
+            defaultValue={answer}
+            className="input"
+            onChange={(event) => {
+              setAnswer(event.target.value);
+            }}
+          />
+        </div>
+      )}
       <div className="field">
         <label className="label">
           <Trans>Multimédia</Trans>
