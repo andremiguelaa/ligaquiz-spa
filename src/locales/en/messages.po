@@ -1584,7 +1584,7 @@ msgstr "Nepal"
 
 #: src/views/Invitations.js:79
 msgid "Nesta página podes convidar outros jogadores a participar na {0}"
-msgstr "On this page you can invite other players to participate in {0}"
+msgstr "On this page you can invite other players to join {0}"
 
 #: src/utils/getRegionTranslation.js:160
 msgid "Nicarágua"

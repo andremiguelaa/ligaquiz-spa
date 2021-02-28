@@ -229,41 +229,40 @@ const Notifications = () => {
             </Trans>
           </div>
         )}
-        {notifications.special_quiz_yesterday &&
-          notifications.special_quiz_yesterday.winners.length > 0 && (
-            <div className={`notification is-warning`}>
-              {notifications.special_quiz_yesterday.winners.length > 1 ? (
-                <I18n>
-                  {({ i18n }) => (
-                    <Trans>
-                      A vitória no quiz especial{' '}
-                      <Link
-                        to={`/special-quiz/${notifications.special_quiz_yesterday.date}`}
-                      >
-                        <em>{notifications.special_quiz_yesterday.subject}</em>
-                      </Link>{' '}
-                      é d@
-                      {specialQuizWinners.slice(0, -1).join(i18n._(t`, d@`)) +
-                        ' ' +
-                        i18n._(t`e d@`) +
-                        ' ' +
-                        specialQuizWinners.slice(-1)}. Parabéns!
-                    </Trans>
-                  )}
-                </I18n>
-              ) : (
-                <Trans>
-                  A vitória no quiz especial{' '}
-                  <Link
-                    to={`/special-quiz/${notifications.special_quiz_yesterday.date}`}
-                  >
-                    <em>{notifications.special_quiz_yesterday.subject}</em>
-                  </Link>{' '}
-                  é d@ {specialQuizWinners[0]}. Parabéns!
-                </Trans>
-              )}
-            </div>
-          )}
+        {notifications.special_quiz_yesterday?.winners?.length > 0 && (
+          <div className={`notification is-warning`}>
+            {notifications.special_quiz_yesterday.winners.length > 1 ? (
+              <I18n>
+                {({ i18n }) => (
+                  <Trans>
+                    A vitória no quiz especial{' '}
+                    <Link
+                      to={`/special-quiz/${notifications.special_quiz_yesterday.date}`}
+                    >
+                      <em>{notifications.special_quiz_yesterday.subject}</em>
+                    </Link>{' '}
+                    é d@
+                    {specialQuizWinners.slice(0, -1).join(i18n._(t`, d@`)) +
+                      ' ' +
+                      i18n._(t`e d@`) +
+                      ' ' +
+                      specialQuizWinners.slice(-1)}. Parabéns!
+                  </Trans>
+                )}
+              </I18n>
+            ) : (
+              <Trans>
+                A vitória no quiz especial{' '}
+                <Link
+                  to={`/special-quiz/${notifications.special_quiz_yesterday.date}`}
+                >
+                  <em>{notifications.special_quiz_yesterday.subject}</em>
+                </Link>{' '}
+                é d@ {specialQuizWinners[0]}. Parabéns!
+              </Trans>
+            )}
+          </div>
+        )}
         {notifications.quiz && location.pathname !== '/quiz' && (
           <div className={`notification is-info`}>
             <Link to="/quiz">
