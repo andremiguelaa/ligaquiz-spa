@@ -92,7 +92,11 @@ const Cup = () => {
                 setLoading(false);
               })
               .catch(({ response }) => {
-                setError(response?.status);
+                if (response?.status !== 404) {
+                  setError(response?.status);
+                } else {
+                  setLoading(false);
+                }
               })
               .then(() => {});
           } else {
@@ -366,7 +370,7 @@ const Cup = () => {
         </section>
       ) : (
         <EmptyState>
-          <Trans>Sem registos</Trans>
+          <Trans>Sorteio ainda não disponível</Trans>
         </EmptyState>
       )}
     </>

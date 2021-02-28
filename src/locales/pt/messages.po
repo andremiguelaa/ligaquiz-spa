@@ -53,7 +53,7 @@ msgstr "<0>Não devem ser feitos quizzes com a seguinte combinação de temas:</
 msgid "<0>{0}</0> resultado a contar para o ranking"
 msgstr "<0>{0}</0> resultado a contar para o ranking"
 
-#: src/views/Cup.js:361
+#: src/views/Cup.js:366
 msgid "A definir"
 msgstr "A definir"
 
@@ -1032,7 +1032,7 @@ msgstr "Filosofia"
 msgid "Fim"
 msgstr "Fim"
 
-#: src/views/Cup.js:126
+#: src/views/Cup.js:131
 msgid "Final"
 msgstr "Final"
 
@@ -1227,11 +1227,11 @@ msgstr "Irlanda"
 msgid "Irão"
 msgstr "Irão"
 
-#: src/views/Cup.js:343
+#: src/views/Cup.js:348
 msgid "Isento"
 msgstr "Isento"
 
-#: src/views/Cup.js:340
+#: src/views/Cup.js:345
 msgid "Isento para a próxima eliminatória"
 msgstr "Isento para a próxima eliminatória"
 
@@ -1463,7 +1463,7 @@ msgstr "Mauritânia"
 msgid "Maurícia"
 msgstr "Maurícia"
 
-#: src/views/Cup.js:124
+#: src/views/Cup.js:129
 msgid "Meias-finais"
 msgstr "Meias-finais"
 
@@ -1864,7 +1864,7 @@ msgstr "Obrigado pela tua inscrição! O teu registo encontra-se a aguardar apro
 msgid "Ocultar respostas"
 msgstr "Ocultar respostas"
 
-#: src/views/Cup.js:120
+#: src/views/Cup.js:125
 msgid "Oitavos-de-Final"
 msgstr "Oitavos-de-Final"
 
@@ -2176,7 +2176,7 @@ msgstr "Página não encontrada"
 msgid "Qatar"
 msgstr "Qatar"
 
-#: src/views/Cup.js:122
+#: src/views/Cup.js:127
 msgid "Quartos-de-Final"
 msgstr "Quartos-de-Final"
 
@@ -2580,7 +2580,6 @@ msgstr "Selecciona os jogadores que jogaram esta prova:"
 msgid "Seleccionar todos"
 msgstr "Seleccionar todos"
 
-#: src/views/Cup.js:369
 #: src/views/GenreRanking.js:240
 #: src/views/Profile/IndividualQuizzes.js:39
 #: src/views/Profile/League.js:91
@@ -2639,6 +2638,10 @@ msgstr "Soma"
 #: src/utils/getRegionTranslation.js:194
 msgid "Somália"
 msgstr "Somália"
+
+#: src/views/Cup.js:374
+msgid "Sorteio ainda não disponível"
+msgstr "Sorteio ainda não disponível"
 
 #: src/views/admin/nationalRanking/utils/options.js:22
 msgid "Squizzed"
@@ -2758,7 +2761,7 @@ msgstr "Tanzânia"
 
 #: src/partials/Header.js:105
 #: src/routes.js:125
-#: src/views/Cup.js:137
+#: src/views/Cup.js:142
 #: src/views/Quiz/OpponentsStats.js:156
 #: src/views/Seasons.js:106
 #: src/views/admin/seasons/Cup.js:112
@@ -2819,7 +2822,7 @@ msgstr "Temporada gravada com sucesso."
 msgid "Temporada {0}"
 msgstr "Temporada {0}"
 
-#: src/views/Cup.js:138
+#: src/views/Cup.js:143
 #: src/views/GenreRanking.js:173
 #: src/views/Ranking.js:146
 msgid "Temporada {seasonNumber}"
@@ -3134,7 +3137,7 @@ msgstr "{0} de {1}"
 msgid "{0} {1} e {2} {3}"
 msgstr "{0} {1} e {2} {3}"
 
-#: src/views/Cup.js:129
+#: src/views/Cup.js:134
 msgid "{0}-avos-de-Final"
 msgstr "{0}-avos-de-Final"
 

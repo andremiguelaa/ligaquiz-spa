@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/Cup.js",
-        120
+        125
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/views/Cup.js",
-        122
+        127
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/views/Cup.js",
-        124
+        129
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/views/Cup.js",
-        126
+        131
       ]
     ]
   },
@@ -35,7 +35,7 @@
     "origin": [
       [
         "src/views/Cup.js",
-        129
+        134
       ]
     ]
   },
@@ -43,7 +43,7 @@
     "origin": [
       [
         "src/views/Cup.js",
-        137
+        142
       ]
     ]
   },
@@ -51,7 +51,7 @@
     "origin": [
       [
         "src/views/Cup.js",
-        138
+        143
       ]
     ]
   },
@@ -59,7 +59,7 @@
     "origin": [
       [
         "src/views/Cup.js",
-        340
+        345
       ]
     ]
   },
@@ -67,7 +67,7 @@
     "origin": [
       [
         "src/views/Cup.js",
-        343
+        348
       ]
     ]
   },
@@ -75,15 +75,15 @@
     "origin": [
       [
         "src/views/Cup.js",
-        361
+        366
       ]
     ]
   },
-  "Sem registos": {
+  "Sorteio ainda não disponível": {
     "origin": [
       [
         "src/views/Cup.js",
-        369
+        374
       ]
     ]
   }
