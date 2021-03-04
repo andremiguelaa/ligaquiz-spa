@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/Quiz/OpponentStats.js",
-        51
+        103
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/views/Quiz/OpponentStats.js",
-        68
+        120
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/views/Quiz/OpponentStats.js",
-        79
+        131
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/views/Quiz/OpponentStats.js",
-        94
+        146
       ]
     ]
   },
@@ -35,7 +35,7 @@
     "origin": [
       [
         "src/views/Quiz/OpponentStats.js",
-        107
+        163
       ]
     ]
   },
@@ -43,11 +43,11 @@
     "origin": [
       [
         "src/views/Quiz/OpponentStats.js",
-        114
+        184
       ],
       [
         "src/views/Quiz/OpponentStats.js",
-        167
+        279
       ]
     ]
   },
@@ -55,11 +55,11 @@
     "origin": [
       [
         "src/views/Quiz/OpponentStats.js",
-        116
+        186
       ],
       [
         "src/views/Quiz/OpponentStats.js",
-        169
+        281
       ]
     ]
   },
@@ -67,11 +67,11 @@
     "origin": [
       [
         "src/views/Quiz/OpponentStats.js",
-        126
+        210
       ],
       [
         "src/views/Quiz/OpponentStats.js",
-        179
+        305
       ]
     ]
   },
@@ -79,7 +79,7 @@
     "origin": [
       [
         "src/views/Quiz/OpponentStats.js",
-        160
+        258
       ]
     ]
   }

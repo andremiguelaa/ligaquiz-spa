@@ -6,12 +6,20 @@ import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
 import Loading from 'components/Loading';
 import Error from 'components/Error';
+import { getGenreTranslation } from 'utils/getGenreTranslation';
+
 import OpponentStats from './OpponentStats';
 
 import classes from './Quiz.module.scss';
 
 const OpponentsStats = ({ quiz, setPoints, setCupPoints }) => {
-  const [{ user }] = useStateValue();
+  const [
+    {
+      user,
+      settings: { language },
+    },
+  ] = useStateValue();
+
   const [genres, setGenres] = useState();
   const [leagueOpponent, setLeagueOpponent] = useState();
   const [opponents, setOpponents] = useState();
@@ -42,6 +50,7 @@ const OpponentsStats = ({ quiz, setPoints, setCupPoints }) => {
                   let genreStatistics = {
                     id: genre.id,
                     slug: genre.slug,
+                    name: getGenreTranslation(genre.slug, language),
                     total: 0,
                     correct: 0,
                     percentage: 0,
@@ -65,6 +74,7 @@ const OpponentsStats = ({ quiz, setPoints, setCupPoints }) => {
                       acc.push({
                         id: subgenre.id,
                         slug: subgenre.slug,
+                        name: getGenreTranslation(subgenre.slug, language),
                         total: userOpponent.statistics[subgenre.id]?.total || 0,
                         correct:
                           userOpponent.statistics[subgenre.id]?.correct || 0,
@@ -83,12 +93,8 @@ const OpponentsStats = ({ quiz, setPoints, setCupPoints }) => {
                   ...prev,
                   [userOpponent.id]: {
                     ...userOpponent,
-                    genreStats: computedGenreStatistics.sort(
-                      (a, b) => b.percentage - a.percentage
-                    ),
-                    subgenreStats: computedSubgenreStatistics.sort(
-                      (a, b) => b.percentage - a.percentage
-                    ),
+                    genreStats: computedGenreStatistics,
+                    subgenreStats: computedSubgenreStatistics,
                   },
                 }));
               });
@@ -101,7 +107,7 @@ const OpponentsStats = ({ quiz, setPoints, setCupPoints }) => {
           setStatsError(response?.status);
         });
     }
-  }, [quiz, user]);
+  }, [quiz, user, language]);
 
   return (
     <>

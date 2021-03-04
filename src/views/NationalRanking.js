@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 import { get, isEmpty } from 'lodash';
-import classames from 'classnames';
+import classnames from 'classnames';
 import ScrollContainer from 'react-indiana-drag-scroll';
 
 import PageHeader from 'components/PageHeader';
@@ -176,14 +176,14 @@ const NationalRanking = () => {
       <div className="section content">
         <div className={classes.tableWrapper}>
           <ScrollContainer
-            className={classames('table-container', classes.tableContainer)}
+            className={classnames('table-container', classes.tableContainer)}
           >
             <table className="table">
               <thead>
                 <tr>
                   <th className={classes.rankCell}>#</th>
                   <th
-                    className={classames(
+                    className={classnames(
                       classes.changeCell,
                       'has-text-centered'
                     )}
@@ -194,11 +194,14 @@ const NationalRanking = () => {
                     <Trans>Nome</Trans>
                   </th>
                   <th className="sortable">
-                    <button type="button" onClick={() => sortRankingByPath('score')}>
+                    <button
+                      type="button"
+                      onClick={() => sortRankingByPath('score')}
+                    >
                       <Trans>Pontos</Trans>
                       <span className="icon">
                         <i
-                          className={classames('fa', {
+                          className={classnames('fa', {
                             'fa-sort': order.path !== 'score',
                             [`fa-sort-numeric-${order.direction}`]:
                               order.path === 'score',
@@ -208,11 +211,14 @@ const NationalRanking = () => {
                     </button>
                   </th>
                   <th className="sortable">
-                    <button type="button" onClick={() => sortRankingByPath('sum')}>
+                    <button
+                      type="button"
+                      onClick={() => sortRankingByPath('sum')}
+                    >
                       <Trans>Soma</Trans>
                       <span className="icon">
                         <i
-                          className={classames('fa', {
+                          className={classnames('fa', {
                             'fa-sort': order.path !== 'sum',
                             [`fa-sort-numeric-${order.direction}`]:
                               order.path === 'sum',
@@ -222,11 +228,14 @@ const NationalRanking = () => {
                     </button>
                   </th>
                   <th className="sortable">
-                    <button type="button" onClick={() => sortRankingByPath('average')}>
+                    <button
+                      type="button"
+                      onClick={() => sortRankingByPath('average')}
+                    >
                       <Trans>Média</Trans>
                       <span className="icon">
                         <i
-                          className={classames('fa', {
+                          className={classnames('fa', {
                             'fa-sort': order.path !== 'average',
                             [`fa-sort-numeric-${order.direction}`]:
                               order.path === 'average',
@@ -236,11 +245,14 @@ const NationalRanking = () => {
                     </button>
                   </th>
                   <th className="sortable">
-                    <button type="button" onClick={() => sortRankingByPath('quiz_count')}>
+                    <button
+                      type="button"
+                      onClick={() => sortRankingByPath('quiz_count')}
+                    >
                       <Trans>Quizzes</Trans>
                       <span className="icon">
                         <i
-                          className={classames('fa', {
+                          className={classnames('fa', {
                             'fa-sort': order.path !== 'quiz_count',
                             [`fa-sort-numeric-${order.direction}`]:
                               order.path === 'quiz_count',
@@ -266,7 +278,7 @@ const NationalRanking = () => {
                               parseInt(date.substring(5, 7))}
                             <span className="icon">
                               <i
-                                className={classames('fa', {
+                                className={classnames('fa', {
                                   'fa-sort':
                                     order.path !==
                                     `quizzes.${quizType}.${date}.score`,

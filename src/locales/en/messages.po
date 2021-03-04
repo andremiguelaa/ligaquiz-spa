@@ -13,11 +13,11 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/views/Quiz/OpponentStats.js:51
+#: src/views/Quiz/OpponentStats.js:103
 msgid "({0} anos)"
 msgstr "({0} years old)"
 
-#: src/partials/Notifications.js:246
+#: src/partials/Notifications.js:245
 msgid ", d@"
 msgstr ","
 
@@ -53,7 +53,7 @@ msgstr "<0>We must avoid to do quizzes with the following theme combinations:</0
 msgid "<0>{0}</0> resultado a contar para o ranking"
 msgstr "<0>{0}</0> result counting to national ranking"
 
-#: src/views/Cup.js:366
+#: src/views/Cup.js:365
 msgid "A definir"
 msgstr "TBD"
 
@@ -89,8 +89,8 @@ msgstr "Your subscription to play special quizzes will expire in {specialRemaini
 msgid "A tua subscrição para jogar quizzes especiais termina hoje."
 msgstr "Your subscription to play special quizzes expires today."
 
-#: src/partials/Notifications.js:238
-#: src/partials/Notifications.js:255
+#: src/partials/Notifications.js:237
+#: src/partials/Notifications.js:254
 msgid "A vitória no quiz especial <0><1>{0}</1></0> é d@ {1}. Parabéns!"
 msgstr "The victory in the special quiz <0><1>{0}</1></0> goes to {1}. Congratulations!"
 
@@ -240,7 +240,7 @@ msgstr "Armenia"
 msgid "Arquitectura"
 msgstr "Architecture"
 
-#: src/views/NationalRanking.js:304
+#: src/views/NationalRanking.js:316
 msgid "Arquivo"
 msgstr "Archive"
 
@@ -275,7 +275,7 @@ msgstr "Passwords mismatch"
 msgid "As seguintes perguntas vão ser marcadas como usadas:"
 msgstr "The following questions will be marked as used:"
 
-#: src/views/Quiz/OpponentStats.js:94
+#: src/views/Quiz/OpponentStats.js:146
 msgid "Atribuir pontos automaticamente"
 msgstr "Assign points automatically"
 
@@ -969,7 +969,7 @@ msgstr "Statistics"
 msgid "Estatísticas de pergunta"
 msgstr "Question statistics"
 
-#: src/views/Quiz/OpponentsStats.js:126
+#: src/views/Quiz/OpponentsStats.js:132
 msgid "Estatísticas do adversário"
 msgstr "Opponent Statistics"
 
@@ -1032,7 +1032,7 @@ msgstr "Philosophy"
 msgid "Fim"
 msgstr "End"
 
-#: src/views/Cup.js:131
+#: src/views/Cup.js:130
 msgid "Final"
 msgstr "Final"
 
@@ -1227,11 +1227,11 @@ msgstr "Ireland"
 msgid "Irão"
 msgstr "Iran"
 
-#: src/views/Cup.js:348
+#: src/views/Cup.js:347
 msgid "Isento"
 msgstr "Bye"
 
-#: src/views/Cup.js:345
+#: src/views/Cup.js:344
 msgid "Isento para a próxima eliminatória"
 msgstr "Bye round"
 
@@ -1384,7 +1384,7 @@ msgstr "Liberia"
 msgid "Liechtenstein"
 msgstr "Liechtenstein"
 
-#: src/views/Quiz/OpponentsStats.js:141
+#: src/views/Quiz/OpponentsStats.js:147
 #: src/views/Seasons.js:99
 #: src/views/admin/seasons/League.js:143
 #: src/views/admin/seasons/Seasons.js:133
@@ -1463,7 +1463,7 @@ msgstr "Mauritania"
 msgid "Maurícia"
 msgstr "Mauritius"
 
-#: src/views/Cup.js:129
+#: src/views/Cup.js:128
 msgid "Meias-finais"
 msgstr "Semi-finals"
 
@@ -1536,7 +1536,7 @@ msgstr "Myanmar"
 msgid "Máximo 200 KB"
 msgstr "Max. 200 KB"
 
-#: src/views/NationalRanking.js:226
+#: src/views/NationalRanking.js:235
 msgid "Média"
 msgstr "Average"
 
@@ -1864,7 +1864,7 @@ msgstr "Thank you for signing up! Your registration is pending approval from the
 msgid "Ocultar respostas"
 msgstr "Hide answers"
 
-#: src/views/Cup.js:125
+#: src/views/Cup.js:124
 msgid "Oitavos-de-Final"
 msgstr "Round of 16"
 
@@ -1945,8 +1945,8 @@ msgstr "Netherlands"
 #: src/views/Game.js:133
 #: src/views/GenreRanking/Table.js:48
 #: src/views/Profile/Statistics.js:208
-#: src/views/Quiz/OpponentStats.js:126
-#: src/views/Quiz/OpponentStats.js:179
+#: src/views/Quiz/OpponentStats.js:210
+#: src/views/Quiz/OpponentStats.js:305
 #: src/views/Quiz/QuizDone.js:83
 #: src/views/SpecialQuiz/SpecialQuizDone.js:184
 msgid "Percentagem de acerto"
@@ -2049,7 +2049,7 @@ msgstr "Nowadays Politics"
 msgid "Polónia"
 msgstr "Poland"
 
-#: src/views/NationalRanking.js:198
+#: src/views/NationalRanking.js:201
 #: src/views/Profile/IndividualQuizzes.js:60
 msgid "Pontos"
 msgstr "Points"
@@ -2102,11 +2102,11 @@ msgstr "Oporto"
 msgid "Portugal"
 msgstr "Portugal"
 
-#: src/views/Quiz/OpponentStats.js:68
+#: src/views/Quiz/OpponentStats.js:120
 msgid "Preenche a tua data de nascimento para veres a idade do teu adversário"
 msgstr "Fill your birthdate to reveal your opponent's age"
 
-#: src/views/Quiz/OpponentStats.js:79
+#: src/views/Quiz/OpponentStats.js:131
 msgid "Preenche a tua região para veres a região do teu adversário"
 msgstr "Fill your country to reveal your opponent's country"
 
@@ -2176,7 +2176,7 @@ msgstr "Page not found"
 msgid "Qatar"
 msgstr "Qatar"
 
-#: src/views/Cup.js:127
+#: src/views/Cup.js:126
 msgid "Quartos-de-Final"
 msgstr "Quarter-finals"
 
@@ -2203,7 +2203,7 @@ msgstr "Quiz successfully deleted."
 msgid "Quiz criado com sucesso."
 msgstr "Quiz successfully created."
 
-#: src/partials/Notifications.js:270
+#: src/partials/Notifications.js:269
 msgid "Quiz de hoje disponível aqui"
 msgstr "Today's quiz available here"
 
@@ -2232,7 +2232,7 @@ msgstr "Special quiz successfully submitted.<0/>Thanks for your contribution!"
 msgid "Quiz especial criado mas a proposta não foi apagada da base de dados."
 msgstr "Special quiz successfully created but the proposal was not deleted from the database."
 
-#: src/partials/Notifications.js:277
+#: src/partials/Notifications.js:276
 msgid "Quiz especial disponível aqui"
 msgstr "Special quiz available here"
 
@@ -2279,7 +2279,7 @@ msgstr "Quiz | Edit"
 #: src/partials/Header.js:241
 #: src/partials/Header.js:325
 #: src/routes.js:220
-#: src/views/NationalRanking.js:240
+#: src/views/NationalRanking.js:252
 #: src/views/admin/quizzes/Quizzes.js:83
 msgid "Quizzes"
 msgstr "Quizzes"
@@ -2295,11 +2295,11 @@ msgstr "Special Quizzes"
 msgid "Quizzes especiais"
 msgstr "Special quizzes"
 
-#: src/partials/Notifications.js:304
+#: src/partials/Notifications.js:303
 msgid "Quizzes especiais por corrigir"
 msgstr "Special quizzes with pending correction"
 
-#: src/partials/Notifications.js:288
+#: src/partials/Notifications.js:287
 msgid "Quizzes por corrigir"
 msgstr "Quizzes with pending correction"
 
@@ -2631,7 +2631,7 @@ msgstr "Soc"
 msgid "Sociedade"
 msgstr "Society"
 
-#: src/views/NationalRanking.js:212
+#: src/views/NationalRanking.js:218
 msgid "Soma"
 msgstr "Sum"
 
@@ -2639,7 +2639,7 @@ msgstr "Sum"
 msgid "Somália"
 msgstr "Somalia"
 
-#: src/views/Cup.js:374
+#: src/views/Cup.js:373
 msgid "Sorteio ainda não disponível"
 msgstr "Draw not available yet"
 
@@ -2683,7 +2683,7 @@ msgstr "Special quizzes subscription"
 msgid "Subscrição renovada com sucesso."
 msgstr "Subscription successfully renewed."
 
-#: src/views/Quiz/OpponentStats.js:160
+#: src/views/Quiz/OpponentStats.js:258
 #: src/views/admin/questions/Questions.js:237
 msgid "Subtema"
 msgstr "Subtheme"
@@ -2733,8 +2733,8 @@ msgid "Só não usadas"
 msgstr "Only non-used"
 
 #: src/views/Profile/Statistics.js:198
-#: src/views/Quiz/OpponentStats.js:116
-#: src/views/Quiz/OpponentStats.js:169
+#: src/views/Quiz/OpponentStats.js:186
+#: src/views/Quiz/OpponentStats.js:281
 msgid "T"
 msgstr "T"
 
@@ -2761,8 +2761,8 @@ msgstr "Tanzania"
 
 #: src/partials/Header.js:105
 #: src/routes.js:125
-#: src/views/Cup.js:142
-#: src/views/Quiz/OpponentsStats.js:156
+#: src/views/Cup.js:141
+#: src/views/Quiz/OpponentsStats.js:162
 #: src/views/Seasons.js:106
 #: src/views/admin/seasons/Cup.js:112
 #: src/views/admin/seasons/Seasons.js:141
@@ -2794,7 +2794,7 @@ msgid "Televisão"
 msgstr "TV"
 
 #: src/views/Profile/Statistics.js:177
-#: src/views/Quiz/OpponentStats.js:107
+#: src/views/Quiz/OpponentStats.js:163
 #: src/views/admin/externalQuestions/ExternalQuestions.js:258
 #: src/views/admin/questions/Questions.js:209
 msgid "Tema"
@@ -2822,7 +2822,7 @@ msgstr "Season successfully saved."
 msgid "Temporada {0}"
 msgstr "Season {0}"
 
-#: src/views/Cup.js:143
+#: src/views/Cup.js:142
 #: src/views/GenreRanking.js:173
 #: src/views/Ranking.js:146
 msgid "Temporada {seasonNumber}"
@@ -2930,8 +2930,8 @@ msgid "Total"
 msgstr "Total"
 
 #: src/views/Profile/Statistics.js:196
-#: src/views/Quiz/OpponentStats.js:114
-#: src/views/Quiz/OpponentStats.js:167
+#: src/views/Quiz/OpponentStats.js:184
+#: src/views/Quiz/OpponentStats.js:279
 msgid "Total de respostas"
 msgstr "Total of given answers"
 
@@ -3094,7 +3094,7 @@ msgstr "Zambia"
 msgid "deixa em branco para não alterar"
 msgstr "leave it blank to keep"
 
-#: src/partials/Notifications.js:248
+#: src/partials/Notifications.js:247
 msgid "e d@"
 msgstr "and"
 
@@ -3127,7 +3127,7 @@ msgid "{0, selectordinal, one {#º} two {#º} few {#º} other {#º}}"
 msgstr "{0, selectordinal, one {#st} two {#nd} few {#rd} other {#th}}"
 
 #: src/views/NationalRanking.js:167
-#: src/views/NationalRanking.js:310
+#: src/views/NationalRanking.js:322
 #: src/views/admin/nationalRanking/Events/List.js:108
 #: src/views/admin/nationalRanking/Rankings.js:132
 msgid "{0} de {1}"
@@ -3137,7 +3137,7 @@ msgstr "{0} {1}"
 msgid "{0} {1} e {2} {3}"
 msgstr "{0} {1} and {2} {3}"
 
-#: src/views/Cup.js:134
+#: src/views/Cup.js:133
 msgid "{0}-avos-de-Final"
 msgstr "Round of {0}"
 
