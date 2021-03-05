@@ -17,7 +17,7 @@ msgstr ""
 msgid "({0} anos)"
 msgstr "({0} anos)"
 
-#: src/partials/Notifications.js:245
+#: src/partials/Notifications.js:343
 msgid ", d@"
 msgstr ", d@"
 
@@ -57,40 +57,40 @@ msgstr "<0>{0}</0> resultado a contar para o ranking"
 msgid "A definir"
 msgstr "A definir"
 
-#: src/partials/Notifications.js:193
+#: src/partials/Notifications.js:280
 msgid "A tua subscrição para jogar quizzes da liga expirou."
 msgstr "A tua subscrição para jogar quizzes da liga expirou."
 
-#: src/partials/Notifications.js:183
+#: src/partials/Notifications.js:270
 msgid "A tua subscrição para jogar quizzes da liga termina amanhã."
 msgstr "A tua subscrição para jogar quizzes da liga termina amanhã."
 
-#: src/partials/Notifications.js:177
+#: src/partials/Notifications.js:264
 msgid "A tua subscrição para jogar quizzes da liga termina daqui a {regularRemainingDays} dias."
 msgstr "A tua subscrição para jogar quizzes da liga termina daqui a {regularRemainingDays} dias."
 
-#: src/partials/Notifications.js:188
+#: src/partials/Notifications.js:275
 msgid "A tua subscrição para jogar quizzes da liga termina hoje."
 msgstr "A tua subscrição para jogar quizzes da liga termina hoje."
 
-#: src/partials/Notifications.js:222
+#: src/partials/Notifications.js:309
 msgid "A tua subscrição para jogar quizzes especiais expirou."
 msgstr "A tua subscrição para jogar quizzes especiais expirou."
 
-#: src/partials/Notifications.js:212
+#: src/partials/Notifications.js:299
 msgid "A tua subscrição para jogar quizzes especiais termina amanhã."
 msgstr "A tua subscrição para jogar quizzes especiais termina amanhã."
 
-#: src/partials/Notifications.js:206
+#: src/partials/Notifications.js:293
 msgid "A tua subscrição para jogar quizzes especiais termina daqui a {specialRemainingDays} dias."
 msgstr "A tua subscrição para jogar quizzes especiais termina daqui a {specialRemainingDays} dias."
 
-#: src/partials/Notifications.js:217
+#: src/partials/Notifications.js:304
 msgid "A tua subscrição para jogar quizzes especiais termina hoje."
 msgstr "A tua subscrição para jogar quizzes especiais termina hoje."
 
-#: src/partials/Notifications.js:237
-#: src/partials/Notifications.js:254
+#: src/partials/Notifications.js:335
+#: src/partials/Notifications.js:352
 msgid "A vitória no quiz especial <0><1>{0}</1></0> é d@ {1}. Parabéns!"
 msgstr "A vitória no quiz especial <0><1>{0}</1></0> é d@ {1}. Parabéns!"
 
@@ -500,8 +500,8 @@ msgstr "Ciências Sociais"
 msgid "Classificação"
 msgstr "Classificação"
 
-#: src/partials/Notifications.js:197
-#: src/partials/Notifications.js:226
+#: src/partials/Notifications.js:284
+#: src/partials/Notifications.js:313
 msgid "Clica <0>aqui</0> para saber como renovar."
 msgstr "Clica <0>aqui</0> para saber como renovar."
 
@@ -1503,6 +1503,14 @@ msgstr "Mongólia"
 msgid "Montenegro"
 msgstr "Montenegro"
 
+#: src/partials/Notifications.js:239
+msgid "Mostrar notificação oculta"
+msgstr "Mostrar notificação oculta"
+
+#: src/partials/Notifications.js:242
+msgid "Mostrar notificações ocultas"
+msgstr "Mostrar notificações ocultas"
+
 #: src/views/Quiz/QuizDone.js:49
 #: src/views/SpecialQuiz/SpecialQuizDone.js:154
 msgid "Mostrar resposta"
@@ -1856,7 +1864,7 @@ msgstr "O pedido de redefinição de palavra-passe é inválido"
 msgid "OK"
 msgstr "OK"
 
-#: src/partials/Notifications.js:160
+#: src/partials/Notifications.js:220
 msgid "Obrigado pela tua inscrição! O teu registo encontra-se a aguardar aprovação da equipa da {0}."
 msgstr "Obrigado pela tua inscrição! O teu registo encontra-se a aguardar aprovação da equipa da {0}."
 
@@ -2203,7 +2211,7 @@ msgstr "Quiz apagado com sucesso."
 msgid "Quiz criado com sucesso."
 msgstr "Quiz criado com sucesso."
 
-#: src/partials/Notifications.js:269
+#: src/partials/Notifications.js:367
 msgid "Quiz de hoje disponível aqui"
 msgstr "Quiz de hoje disponível aqui"
 
@@ -2232,7 +2240,7 @@ msgstr "Quiz especial criado com sucesso.<0/>Obrigado pela contribuição!"
 msgid "Quiz especial criado mas a proposta não foi apagada da base de dados."
 msgstr "Quiz especial criado mas a proposta não foi apagada da base de dados."
 
-#: src/partials/Notifications.js:276
+#: src/partials/Notifications.js:374
 msgid "Quiz especial disponível aqui"
 msgstr "Quiz especial disponível aqui"
 
@@ -2295,11 +2303,11 @@ msgstr "Quizzes Especiais"
 msgid "Quizzes especiais"
 msgstr "Quizzes especiais"
 
-#: src/partials/Notifications.js:303
+#: src/partials/Notifications.js:401
 msgid "Quizzes especiais por corrigir"
 msgstr "Quizzes especiais por corrigir"
 
-#: src/partials/Notifications.js:287
+#: src/partials/Notifications.js:385
 msgid "Quizzes por corrigir"
 msgstr "Quizzes por corrigir"
 
@@ -3094,7 +3102,7 @@ msgstr "Zâmbia"
 msgid "deixa em branco para não alterar"
 msgstr "deixa em branco para não alterar"
 
-#: src/partials/Notifications.js:247
+#: src/partials/Notifications.js:345
 msgid "e d@"
 msgstr "e d@"
 

@@ -3,7 +3,23 @@
     "origin": [
       [
         "src/partials/Notifications.js",
-        160
+        220
+      ]
+    ]
+  },
+  "Mostrar notificação oculta": {
+    "origin": [
+      [
+        "src/partials/Notifications.js",
+        239
+      ]
+    ]
+  },
+  "Mostrar notificações ocultas": {
+    "origin": [
+      [
+        "src/partials/Notifications.js",
+        242
       ]
     ]
   },
@@ -11,7 +27,7 @@
     "origin": [
       [
         "src/partials/Notifications.js",
-        177
+        264
       ]
     ]
   },
@@ -19,7 +35,7 @@
     "origin": [
       [
         "src/partials/Notifications.js",
-        183
+        270
       ]
     ]
   },
@@ -27,7 +43,7 @@
     "origin": [
       [
         "src/partials/Notifications.js",
-        188
+        275
       ]
     ]
   },
@@ -35,7 +51,7 @@
     "origin": [
       [
         "src/partials/Notifications.js",
-        193
+        280
       ]
     ]
   },
@@ -43,11 +59,11 @@
     "origin": [
       [
         "src/partials/Notifications.js",
-        197
+        284
       ],
       [
         "src/partials/Notifications.js",
-        226
+        313
       ]
     ]
   },
@@ -55,7 +71,7 @@
     "origin": [
       [
         "src/partials/Notifications.js",
-        206
+        293
       ]
     ]
   },
@@ -63,7 +79,7 @@
     "origin": [
       [
         "src/partials/Notifications.js",
-        212
+        299
       ]
     ]
   },
@@ -71,7 +87,7 @@
     "origin": [
       [
         "src/partials/Notifications.js",
-        217
+        304
       ]
     ]
   },
@@ -79,7 +95,7 @@
     "origin": [
       [
         "src/partials/Notifications.js",
-        222
+        309
       ]
     ]
   },
@@ -87,11 +103,11 @@
     "origin": [
       [
         "src/partials/Notifications.js",
-        237
+        335
       ],
       [
         "src/partials/Notifications.js",
-        254
+        352
       ]
     ]
   },
@@ -99,7 +115,7 @@
     "origin": [
       [
         "src/partials/Notifications.js",
-        245
+        343
       ]
     ]
   },
@@ -107,7 +123,7 @@
     "origin": [
       [
         "src/partials/Notifications.js",
-        247
+        345
       ]
     ]
   },
@@ -115,7 +131,7 @@
     "origin": [
       [
         "src/partials/Notifications.js",
-        269
+        367
       ]
     ]
   },
@@ -123,7 +139,7 @@
     "origin": [
       [
         "src/partials/Notifications.js",
-        276
+        374
       ]
     ]
   },
@@ -131,7 +147,7 @@
     "origin": [
       [
         "src/partials/Notifications.js",
-        287
+        385
       ]
     ]
   },
@@ -139,7 +155,7 @@
     "origin": [
       [
         "src/partials/Notifications.js",
-        303
+        401
       ]
     ]
   }
