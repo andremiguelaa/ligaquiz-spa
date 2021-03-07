@@ -70,6 +70,7 @@ button.navbar-item {
   border: none;
   cursor: pointer;
   font-size: inherit;
+  width: 100%;
   &:hover {
     background-color: $white-ter;
     color: $grey-darker;

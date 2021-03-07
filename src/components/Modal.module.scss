@@ -1,9 +1,10 @@
 .modalBody {
   max-height: calc(100vh - 200px);
   overflow: auto;
+  &::before,
   &::after {
     content: '';
-    height: 2rem;
+    height: 1rem;
     display: block;
   }
 }

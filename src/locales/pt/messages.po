@@ -197,7 +197,7 @@ msgstr "Apagar provas mensais"
 msgid "Apagar quiz"
 msgstr "Apagar quiz"
 
-#: src/views/admin/specialQuizzes/SpecialQuizzes.js:246
+#: src/views/admin/specialQuizzes/SpecialQuizzes.js:251
 msgid "Apagar quiz especial"
 msgstr "Apagar quiz especial"
 
@@ -213,7 +213,7 @@ msgstr "Apagar taça"
 msgid "Apagar temporada"
 msgstr "Apagar temporada"
 
-#: src/views/Account.js:170
+#: src/views/Account.js:171
 #: src/views/Register.js:126
 #: src/views/admin/nationalRanking/Players/Form.js:192
 #: src/views/admin/users/modals/EditUserModal.js:88
@@ -534,7 +534,7 @@ msgstr "Comparação de Estatísticas"
 msgid "Comunicação Social e Redes Sociais"
 msgstr "Comunicação Social e Redes Sociais"
 
-#: src/views/Account.js:350
+#: src/views/Account.js:351
 #: src/views/Register.js:276
 #: src/views/ResetPassword.js:84
 msgid "Confirmação da palavra-passe"
@@ -542,7 +542,7 @@ msgstr "Confirmação da palavra-passe"
 
 #: src/partials/Header.js:309
 #: src/routes.js:83
-#: src/views/Account.js:140
+#: src/views/Account.js:141
 msgid "Conta"
 msgstr "Conta"
 
@@ -628,7 +628,7 @@ msgid "Criar quiz"
 msgstr "Criar quiz"
 
 #: src/views/admin/specialQuizzes/SpecialQuizForm.js:153
-#: src/views/admin/specialQuizzes/SpecialQuizzes.js:117
+#: src/views/admin/specialQuizzes/SpecialQuizzes.js:122
 msgid "Criar quiz especial"
 msgstr "Criar quiz especial"
 
@@ -675,7 +675,7 @@ msgstr "Data de fim"
 msgid "Data de início"
 msgstr "Data de início"
 
-#: src/views/Account.js:194
+#: src/views/Account.js:195
 #: src/views/Register.js:143
 msgid "Data de nascimento"
 msgstr "Data de nascimento"
@@ -731,7 +731,7 @@ msgstr "Diferença de pontos"
 msgid "Dinamarca"
 msgstr "Dinamarca"
 
-#: src/views/Account.js:266
+#: src/views/Account.js:267
 #: src/views/Register.js:211
 msgid "Distrito/Região"
 msgstr "Distrito/Região"
@@ -756,13 +756,17 @@ msgstr "Dominica"
 msgid "E"
 msgstr "E"
 
-#: src/views/Account.js:294
+#: src/views/Account.js:295
 #: src/views/Invitations.js:96
 #: src/views/Login.js:65
 #: src/views/RecoverPassword.js:56
 #: src/views/Register.js:231
 msgid "E-Mail"
 msgstr "E-Mail"
+
+#: src/views/Account.js:381
+msgid "E-mails"
+msgstr "E-mails"
 
 #: src/utils/getGenreTranslation.js:16
 msgid "EdV"
@@ -1094,7 +1098,7 @@ msgid "Granada"
 msgstr "Granada"
 
 #: src/views/Account/Avatar.js:114
-#: src/views/Account.js:478
+#: src/views/Account.js:526
 #: src/views/admin/nationalRanking/Players/Form.js:260
 #: src/views/admin/quizzes/QuizForm.js:281
 #: src/views/admin/specialQuizzes/SpecialQuizForm.js:259
@@ -1195,7 +1199,7 @@ msgid "Imagem de perfil actualizada com sucesso."
 msgstr "Imagem de perfil actualizada com sucesso."
 
 #: src/views/admin/quizzes/Quizzes.js:123
-#: src/views/admin/specialQuizzes/SpecialQuizzes.js:153
+#: src/views/admin/specialQuizzes/SpecialQuizzes.js:158
 msgid "Incompleto"
 msgstr "Incompleto"
 
@@ -1343,7 +1347,7 @@ msgstr "Jornada {0} ({1})"
 msgid "Jornadas"
 msgstr "Jornadas"
 
-#: src/views/Account.js:320
+#: src/views/Account.js:321
 #: src/views/Register.js:251
 msgid "Já existe uma conta com este e-mail."
 msgstr "Já existe uma conta com este e-mail."
@@ -1367,6 +1371,14 @@ msgstr "Legenda"
 #: src/utils/getRegionTranslation.js:21
 msgid "Leiria"
 msgstr "Leiria"
+
+#: src/views/Account.js:490
+msgid "Lembrete de quiz especial não respondido"
+msgstr "Lembrete de quiz especial não respondido"
+
+#: src/views/Account.js:426
+msgid "Lembrete de quiz regular não respondido"
+msgstr "Lembrete de quiz regular não respondido"
 
 #: src/utils/getRegionTranslation.js:134
 msgid "Lesoto"
@@ -1606,7 +1618,7 @@ msgstr "Nigéria"
 msgid "Niue"
 msgstr "Niue"
 
-#: src/views/Account.js:147
+#: src/views/Account.js:148
 #: src/views/GenreRanking/Table.js:17
 #: src/views/NationalRanking.js:194
 #: src/views/Question.js:200
@@ -1634,21 +1646,13 @@ msgstr "Notificação apagada com sucesso."
 msgid "Notificação criada com sucesso."
 msgstr "Notificação criada com sucesso."
 
-#: src/views/Account.js:442
-msgid "Notificação de quiz especial (00h00)"
-msgstr "Notificação de quiz especial (00h00)"
+#: src/views/Account.js:469
+msgid "Notificação de quiz especial disponível"
+msgstr "Notificação de quiz especial disponível"
 
-#: src/views/Account.js:463
-msgid "Notificação de quiz especial (22h00)"
-msgstr "Notificação de quiz especial (22h00)"
-
-#: src/views/Account.js:394
-msgid "Notificação de quiz regular (00h00)"
-msgstr "Notificação de quiz regular (00h00)"
-
-#: src/views/Account.js:415
-msgid "Notificação de quiz regular (22h00)"
-msgstr "Notificação de quiz regular (22h00)"
+#: src/views/Account.js:405
+msgid "Notificação de quiz regular disponível"
+msgstr "Notificação de quiz regular disponível"
 
 #: src/views/admin/notifications/modals/FormModal.js:170
 msgid "Notificação editada com sucesso."
@@ -1684,7 +1688,7 @@ msgstr "Não existe ranking nacional disponível."
 msgid "Não foi possível abrir a edição das provas mensais."
 msgstr "Não foi possível abrir a edição das provas mensais."
 
-#: src/views/Account.js:127
+#: src/views/Account.js:128
 msgid "Não foi possível actualizar o perfil."
 msgstr "Não foi possível actualizar o perfil."
 
@@ -1815,7 +1819,7 @@ msgid "Não foi possível publicar o ranking mensal."
 msgstr "Não foi possível publicar o ranking mensal."
 
 #: src/views/Account/PayPal.js:22
-#: src/views/Account.js:80
+#: src/views/Account.js:81
 msgid "Não foi possível renovar a subscrição."
 msgstr "Não foi possível renovar a subscrição."
 
@@ -1848,7 +1852,7 @@ msgstr "Número {0} no <0>Ranking Nacional</0>"
 msgid "O meu perfil"
 msgstr "O meu perfil"
 
-#: src/views/Account.js:75
+#: src/views/Account.js:76
 msgid "O pagamento não foi bem sucedido."
 msgstr "O pagamento não foi bem sucedido."
 
@@ -1906,7 +1910,7 @@ msgstr "PaF"
 msgid "Palau"
 msgstr "Palau"
 
-#: src/views/Account.js:326
+#: src/views/Account.js:327
 #: src/views/Login.js:76
 #: src/views/Register.js:257
 #: src/views/ResetPassword.js:60
@@ -1997,7 +2001,7 @@ msgstr "Perdeste a ligação à internet."
 msgid "Perfil"
 msgstr "Perfil"
 
-#: src/views/Account.js:115
+#: src/views/Account.js:116
 msgid "Perfil actualizado com sucesso."
 msgstr "Perfil actualizado com sucesso."
 
@@ -2128,7 +2132,7 @@ msgstr "Produtos e Marcas"
 msgid "Propor quiz especial"
 msgstr "Propor quiz especial"
 
-#: src/views/admin/specialQuizzes/SpecialQuizzes.js:159
+#: src/views/admin/specialQuizzes/SpecialQuizzes.js:164
 msgid "Proposta"
 msgstr "Proposta"
 
@@ -2292,7 +2296,7 @@ msgstr "Quiz | Editar"
 msgid "Quizzes"
 msgstr "Quizzes"
 
-#: src/views/admin/specialQuizzes/SpecialQuizzes.js:100
+#: src/views/admin/specialQuizzes/SpecialQuizzes.js:105
 msgid "Quizzes Especiais"
 msgstr "Quizzes Especiais"
 
@@ -2439,7 +2443,7 @@ msgstr "Remover taça"
 msgid "Remover última divisão"
 msgstr "Remover última divisão"
 
-#: src/views/Account.js:509
+#: src/views/Account.js:557
 msgid "Renovação da subscrição via Paypal"
 msgstr "Renovação da subscrição via Paypal"
 
@@ -2564,7 +2568,7 @@ msgstr "Santarém"
 msgid "Saúde e Corpo Humano"
 msgstr "Saúde e Corpo Humano"
 
-#: src/views/Account.js:514
+#: src/views/Account.js:562
 msgid "Se preferires fazer a renovação em mão, através de transferência bancária ou por MB WAY, vê como <0>aqui</0>"
 msgstr "Se preferires fazer a renovação em mão, através de transferência bancária ou por MB WAY, vê como <0>aqui</0>"
 
@@ -2605,7 +2609,7 @@ msgstr "Seleccionar todos"
 #: src/views/admin/questions/Questions.js:328
 #: src/views/admin/quizzes/Quizzes.js:189
 #: src/views/admin/seasons/Seasons.js:190
-#: src/views/admin/specialQuizzes/SpecialQuizzes.js:236
+#: src/views/admin/specialQuizzes/SpecialQuizzes.js:241
 #: src/views/admin/users/Users.js:444
 msgid "Sem registos"
 msgstr "Sem registos"
@@ -2675,6 +2679,14 @@ msgstr "Submeter"
 msgid "Submeter quiz"
 msgstr "Submeter quiz"
 
+#: src/views/Account.js:511
+msgid "Submissão de quiz especial"
+msgstr "Submissão de quiz especial"
+
+#: src/views/Account.js:446
+msgid "Submissão de quiz regular"
+msgstr "Submissão de quiz regular"
+
 #: src/views/Quiz/QuizForm.js:442
 msgid "Submissão inválida"
 msgstr "Submissão inválida"
@@ -2687,7 +2699,7 @@ msgstr "Subscrição p/ quizzes da liga"
 msgid "Subscrição p/ quizzes especiais"
 msgstr "Subscrição p/ quizzes especiais"
 
-#: src/views/Account.js:68
+#: src/views/Account.js:69
 msgid "Subscrição renovada com sucesso."
 msgstr "Subscrição renovada com sucesso."
 
@@ -2883,7 +2895,7 @@ msgstr "Tens a certeza que queres apagar este jogador e o resultado associado?"
 msgid "Tens a certeza que queres apagar este jogador?"
 msgstr "Tens a certeza que queres apagar este jogador?"
 
-#: src/views/admin/specialQuizzes/SpecialQuizzes.js:248
+#: src/views/admin/specialQuizzes/SpecialQuizzes.js:253
 msgid "Tens a certeza que queres apagar este quiz especial?"
 msgstr "Tens a certeza que queres apagar este quiz especial?"
 
@@ -3030,7 +3042,7 @@ msgstr "Uzbequistão"
 msgid "V"
 msgstr "V"
 
-#: src/views/Account.js:492
+#: src/views/Account.js:540
 #: src/views/admin/users/modals/EditUserModal.js:161
 #: src/views/admin/users/modals/EditUserModal.js:219
 msgid "Validade da subscrição"
@@ -3098,7 +3110,7 @@ msgstr "Zimbabwe"
 msgid "Zâmbia"
 msgstr "Zâmbia"
 
-#: src/views/Account.js:327
+#: src/views/Account.js:328
 msgid "deixa em branco para não alterar"
 msgstr "deixa em branco para não alterar"
 

@@ -41,6 +41,7 @@ const Account = () => {
     password: '',
     password2: '',
     reminders: user?.reminders,
+    emails: user?.emails,
   });
   const [renewing, setRenewing] = useState(false);
 
@@ -371,56 +372,82 @@ const Account = () => {
                   </span>
                 </div>
               </div>
-              {(user.valid_roles.regular_player || user.valid_roles.admin) && (
-                <>
-                  <div className="field">
-                    <input
-                      id="quiz_daily"
-                      type="checkbox"
-                      className="switch"
-                      value="true"
-                      defaultChecked={formData.reminders.quiz.daily}
-                      onChange={(event) => {
-                        event.persist();
-                        setFormData((prev) => {
-                          let newFormData = { ...prev };
-                          newFormData.reminders.quiz.daily =
-                            event.target.checked;
-                          return newFormData;
-                        });
-                      }}
-                    />
-                    <label htmlFor="quiz_daily">
-                      <Trans>Notificação de quiz regular (00h00)</Trans>
-                    </label>
-                  </div>
-                  <div className="field">
-                    <input
-                      id="quiz_deadline"
-                      type="checkbox"
-                      className="switch"
-                      value="true"
-                      defaultChecked={formData.reminders.quiz.deadline}
-                      onChange={(event) => {
-                        event.persist();
-                        setFormData((prev) => {
-                          let newFormData = { ...prev };
-                          newFormData.reminders.quiz.deadline =
-                            event.target.checked;
-                          return newFormData;
-                        });
-                      }}
-                    />
-                    <label htmlFor="quiz_deadline">
-                      <Trans>Notificação de quiz regular (22h00)</Trans>
-                    </label>
-                  </div>
-                </>
-              )}
+
               {(user.valid_roles.special_quiz_player ||
                 user.valid_roles.regular_player ||
                 user.valid_roles.admin) && (
-                <>
+                <fieldset className="fieldset">
+                  <legend className="legend">
+                    <Trans>E-mails</Trans>
+                  </legend>
+
+                  {(user.valid_roles.regular_player ||
+                    user.valid_roles.admin) && (
+                    <>
+                      <div className="field">
+                        <input
+                          id="quiz_daily"
+                          type="checkbox"
+                          className="switch"
+                          value="true"
+                          defaultChecked={formData.reminders.quiz.daily}
+                          onChange={(event) => {
+                            event.persist();
+                            setFormData((prev) => {
+                              let newFormData = { ...prev };
+                              newFormData.reminders.quiz.daily =
+                                event.target.checked;
+                              return newFormData;
+                            });
+                          }}
+                        />
+                        <label htmlFor="quiz_daily">
+                          <Trans>Notificação de quiz regular disponível</Trans>
+                        </label>
+                      </div>
+                      <div className="field">
+                        <input
+                          id="quiz_deadline"
+                          type="checkbox"
+                          className="switch"
+                          value="true"
+                          defaultChecked={formData.reminders.quiz.deadline}
+                          onChange={(event) => {
+                            event.persist();
+                            setFormData((prev) => {
+                              let newFormData = { ...prev };
+                              newFormData.reminders.quiz.deadline =
+                                event.target.checked;
+                              return newFormData;
+                            });
+                          }}
+                        />
+                        <label htmlFor="quiz_deadline">
+                          <Trans>Lembrete de quiz regular não respondido</Trans>
+                        </label>
+                      </div>
+                      <div className="field">
+                        <input
+                          id="email_quiz"
+                          type="checkbox"
+                          className="switch"
+                          value="true"
+                          defaultChecked={formData.emails?.quiz}
+                          onChange={(event) => {
+                            event.persist();
+                            setFormData((prev) => {
+                              let newFormData = { ...prev };
+                              newFormData.emails.quiz = event.target.checked;
+                              return newFormData;
+                            });
+                          }}
+                        />
+                        <label htmlFor="email_quiz">
+                          <Trans>Submissão de quiz regular</Trans>
+                        </label>
+                      </div>
+                    </>
+                  )}
                   <div className="field">
                     <input
                       id="special_quiz_daily"
@@ -439,7 +466,7 @@ const Account = () => {
                       }}
                     />
                     <label htmlFor="special_quiz_daily">
-                      <Trans>Notificação de quiz especial (00h00)</Trans>
+                      <Trans>Notificação de quiz especial disponível</Trans>
                     </label>
                   </div>
                   <div className="field">
@@ -460,10 +487,31 @@ const Account = () => {
                       }}
                     />
                     <label htmlFor="special_quiz_deadline">
-                      <Trans>Notificação de quiz especial (22h00)</Trans>
+                      <Trans>Lembrete de quiz especial não respondido</Trans>
                     </label>
                   </div>
-                </>
+                  <div className="field">
+                    <input
+                      id="email_special_quiz"
+                      type="checkbox"
+                      className="switch"
+                      value="true"
+                      defaultChecked={formData.emails.special_quiz}
+                      onChange={(event) => {
+                        event.persist();
+                        setFormData((prev) => {
+                          let newFormData = { ...prev };
+                          newFormData.emails.special_quiz =
+                            event.target.checked;
+                          return newFormData;
+                        });
+                      }}
+                    />
+                    <label htmlFor="email_special_quiz">
+                      <Trans>Submissão de quiz especial</Trans>
+                    </label>
+                  </div>
+                </fieldset>
               )}
               <div className="field">
                 <div className="control">

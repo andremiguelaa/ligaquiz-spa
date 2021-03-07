@@ -93,13 +93,18 @@ const SpecialQuizzes = () => {
     return <Error status={error} />;
   }
 
-  const allQuizzes = proposals && quizzes && proposals.concat(quizzes);
+  const canSeeProposals =
+    user.valid_roles.admin || user.valid_roles.special_quiz_editor;
+
+  const allQuizzes = canSeeProposals
+    ? proposals && quizzes && proposals.concat(quizzes)
+    : quizzes;
 
   return (
     <>
       <PageHeader title={<Trans>Quizzes Especiais</Trans>} />
       <section className="section">
-        {!quizzes || !proposals ? (
+        {!quizzes || (!proposals && canSeeProposals) ? (
           <Loading />
         ) : (
           <>

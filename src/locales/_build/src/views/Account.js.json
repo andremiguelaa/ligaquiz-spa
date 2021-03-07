@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/views/Account.js",
-        68
+        69
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/views/Account.js",
-        75
+        76
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/views/Account.js",
-        80
+        81
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/views/Account.js",
-        115
+        116
       ]
     ]
   },
@@ -35,7 +35,7 @@
     "origin": [
       [
         "src/views/Account.js",
-        127
+        128
       ]
     ]
   },
@@ -43,7 +43,7 @@
     "origin": [
       [
         "src/views/Account.js",
-        140
+        141
       ]
     ]
   },
@@ -51,7 +51,7 @@
     "origin": [
       [
         "src/views/Account.js",
-        147
+        148
       ]
     ]
   },
@@ -59,7 +59,7 @@
     "origin": [
       [
         "src/views/Account.js",
-        170
+        171
       ]
     ]
   },
@@ -67,7 +67,7 @@
     "origin": [
       [
         "src/views/Account.js",
-        194
+        195
       ]
     ]
   },
@@ -75,7 +75,7 @@
     "origin": [
       [
         "src/views/Account.js",
-        266
+        267
       ]
     ]
   },
@@ -83,7 +83,7 @@
     "origin": [
       [
         "src/views/Account.js",
-        294
+        295
       ]
     ]
   },
@@ -91,7 +91,7 @@
     "origin": [
       [
         "src/views/Account.js",
-        320
+        321
       ]
     ]
   },
@@ -99,7 +99,7 @@
     "origin": [
       [
         "src/views/Account.js",
-        326
+        327
       ]
     ]
   },
@@ -107,7 +107,7 @@
     "origin": [
       [
         "src/views/Account.js",
-        327
+        328
       ]
     ]
   },
@@ -115,39 +115,63 @@
     "origin": [
       [
         "src/views/Account.js",
-        350
+        351
       ]
     ]
   },
-  "Notificação de quiz regular (00h00)": {
+  "E-mails": {
     "origin": [
       [
         "src/views/Account.js",
-        394
+        381
       ]
     ]
   },
-  "Notificação de quiz regular (22h00)": {
+  "Notificação de quiz regular disponível": {
     "origin": [
       [
         "src/views/Account.js",
-        415
+        405
       ]
     ]
   },
-  "Notificação de quiz especial (00h00)": {
+  "Lembrete de quiz regular não respondido": {
     "origin": [
       [
         "src/views/Account.js",
-        442
+        426
       ]
     ]
   },
-  "Notificação de quiz especial (22h00)": {
+  "Submissão de quiz regular": {
     "origin": [
       [
         "src/views/Account.js",
-        463
+        446
+      ]
+    ]
+  },
+  "Notificação de quiz especial disponível": {
+    "origin": [
+      [
+        "src/views/Account.js",
+        469
+      ]
+    ]
+  },
+  "Lembrete de quiz especial não respondido": {
+    "origin": [
+      [
+        "src/views/Account.js",
+        490
+      ]
+    ]
+  },
+  "Submissão de quiz especial": {
+    "origin": [
+      [
+        "src/views/Account.js",
+        511
       ]
     ]
   },
@@ -155,7 +179,7 @@
     "origin": [
       [
         "src/views/Account.js",
-        478
+        526
       ]
     ]
   },
@@ -163,7 +187,7 @@
     "origin": [
       [
         "src/views/Account.js",
-        492
+        540
       ]
     ]
   },
@@ -171,7 +195,7 @@
     "origin": [
       [
         "src/views/Account.js",
-        509
+        557
       ]
     ]
   },
@@ -179,7 +203,7 @@
     "origin": [
       [
         "src/views/Account.js",
-        514
+        562
       ]
     ]
   }

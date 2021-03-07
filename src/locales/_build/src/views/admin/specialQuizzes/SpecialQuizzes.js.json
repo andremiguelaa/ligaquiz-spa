@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/views/admin/specialQuizzes/SpecialQuizzes.js",
-        100
+        105
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/views/admin/specialQuizzes/SpecialQuizzes.js",
-        117
+        122
       ]
     ]
   },
@@ -35,7 +35,7 @@
     "origin": [
       [
         "src/views/admin/specialQuizzes/SpecialQuizzes.js",
-        153
+        158
       ]
     ]
   },
@@ -43,7 +43,7 @@
     "origin": [
       [
         "src/views/admin/specialQuizzes/SpecialQuizzes.js",
-        159
+        164
       ]
     ]
   },
@@ -51,7 +51,7 @@
     "origin": [
       [
         "src/views/admin/specialQuizzes/SpecialQuizzes.js",
-        236
+        241
       ]
     ]
   },
@@ -59,7 +59,7 @@
     "origin": [
       [
         "src/views/admin/specialQuizzes/SpecialQuizzes.js",
-        246
+        251
       ]
     ]
   },
@@ -67,7 +67,7 @@
     "origin": [
       [
         "src/views/admin/specialQuizzes/SpecialQuizzes.js",
-        248
+        253
       ]
     ]
   }
