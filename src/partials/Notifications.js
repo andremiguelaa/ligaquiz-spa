@@ -316,7 +316,8 @@ const Notifications = () => {
             </Trans>
           </div>
         )}
-        {notifications.special_quiz_yesterday?.winners?.length > 0 &&
+        {specialQuizWinners &&
+          notifications.special_quiz_yesterday?.winners?.length > 0 &&
           !dismissedNotificationsSlugs.includes(
             `special-quiz-${notifications.special_quiz_yesterday.date}`
           ) && (
