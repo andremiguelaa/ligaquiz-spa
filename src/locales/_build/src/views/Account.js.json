@@ -139,7 +139,19 @@
     "origin": [
       [
         "src/views/Account.js",
-        426
+        429
+      ]
+    ]
+  },
+  "Hora do lembrete": {
+    "origin": [
+      [
+        "src/views/Account.js",
+        437
+      ],
+      [
+        "src/views/Account.js",
+        556
       ]
     ]
   },
@@ -147,7 +159,7 @@
     "origin": [
       [
         "src/views/Account.js",
-        446
+        500
       ]
     ]
   },
@@ -155,7 +167,7 @@
     "origin": [
       [
         "src/views/Account.js",
-        469
+        524
       ]
     ]
   },
@@ -163,7 +175,7 @@
     "origin": [
       [
         "src/views/Account.js",
-        490
+        550
       ]
     ]
   },
@@ -171,7 +183,7 @@
     "origin": [
       [
         "src/views/Account.js",
-        511
+        625
       ]
     ]
   },
@@ -179,7 +191,7 @@
     "origin": [
       [
         "src/views/Account.js",
-        526
+        640
       ]
     ]
   },
@@ -187,7 +199,7 @@
     "origin": [
       [
         "src/views/Account.js",
-        540
+        654
       ]
     ]
   },
@@ -195,7 +207,7 @@
     "origin": [
       [
         "src/views/Account.js",
-        557
+        671
       ]
     ]
   },
@@ -203,7 +215,7 @@
     "origin": [
       [
         "src/views/Account.js",
-        562
+        676
       ]
     ]
   }

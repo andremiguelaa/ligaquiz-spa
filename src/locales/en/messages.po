@@ -17,7 +17,7 @@ msgstr ""
 msgid "({0} anos)"
 msgstr "({0} years old)"
 
-#: src/partials/Notifications.js:343
+#: src/partials/Notifications.js:344
 msgid ", d@"
 msgstr ","
 
@@ -89,8 +89,8 @@ msgstr "Your subscription to play special quizzes will expire in {specialRemaini
 msgid "A tua subscrição para jogar quizzes especiais termina hoje."
 msgstr "Your subscription to play special quizzes expires today."
 
-#: src/partials/Notifications.js:335
-#: src/partials/Notifications.js:352
+#: src/partials/Notifications.js:336
+#: src/partials/Notifications.js:353
 msgid "A vitória no quiz especial <0><1>{0}</1></0> é d@ {1}. Parabéns!"
 msgstr "The victory in the special quiz <0><1>{0}</1></0> goes to {1}. Congratulations!"
 
@@ -1098,7 +1098,7 @@ msgid "Granada"
 msgstr "Grenada"
 
 #: src/views/Account/Avatar.js:114
-#: src/views/Account.js:526
+#: src/views/Account.js:640
 #: src/views/admin/nationalRanking/Players/Form.js:260
 #: src/views/admin/quizzes/QuizForm.js:281
 #: src/views/admin/specialQuizzes/SpecialQuizForm.js:259
@@ -1173,6 +1173,11 @@ msgstr "Honduras"
 #: src/views/Profile/Logs.js:57
 msgid "Hora"
 msgstr "Time"
+
+#: src/views/Account.js:437
+#: src/views/Account.js:556
+msgid "Hora do lembrete"
+msgstr "Reminder time"
 
 #: src/utils/getRegionTranslation.js:106
 msgid "Hungria"
@@ -1372,11 +1377,11 @@ msgstr "Legend"
 msgid "Leiria"
 msgstr "Leiria"
 
-#: src/views/Account.js:490
+#: src/views/Account.js:550
 msgid "Lembrete de quiz especial não respondido"
 msgstr "Non-answered special quiz reminder"
 
-#: src/views/Account.js:426
+#: src/views/Account.js:429
 msgid "Lembrete de quiz regular não respondido"
 msgstr "Non-answered regular quiz reminder"
 
@@ -1646,7 +1651,7 @@ msgstr "Notification successfully deleted."
 msgid "Notificação criada com sucesso."
 msgstr "Notification successfully created."
 
-#: src/views/Account.js:469
+#: src/views/Account.js:524
 msgid "Notificação de quiz especial disponível"
 msgstr "Special quiz available notification"
 
@@ -2215,7 +2220,7 @@ msgstr "Quiz successfully deleted."
 msgid "Quiz criado com sucesso."
 msgstr "Quiz successfully created."
 
-#: src/partials/Notifications.js:367
+#: src/partials/Notifications.js:368
 msgid "Quiz de hoje disponível aqui"
 msgstr "Today's quiz available here"
 
@@ -2244,7 +2249,7 @@ msgstr "Special quiz successfully submitted.<0/>Thanks for your contribution!"
 msgid "Quiz especial criado mas a proposta não foi apagada da base de dados."
 msgstr "Special quiz successfully created but the proposal was not deleted from the database."
 
-#: src/partials/Notifications.js:374
+#: src/partials/Notifications.js:375
 msgid "Quiz especial disponível aqui"
 msgstr "Special quiz available here"
 
@@ -2307,11 +2312,11 @@ msgstr "Special Quizzes"
 msgid "Quizzes especiais"
 msgstr "Special quizzes"
 
-#: src/partials/Notifications.js:401
+#: src/partials/Notifications.js:402
 msgid "Quizzes especiais por corrigir"
 msgstr "Special quizzes with pending correction"
 
-#: src/partials/Notifications.js:385
+#: src/partials/Notifications.js:386
 msgid "Quizzes por corrigir"
 msgstr "Quizzes with pending correction"
 
@@ -2443,7 +2448,7 @@ msgstr "Delete cup"
 msgid "Remover última divisão"
 msgstr "Remove last tier"
 
-#: src/views/Account.js:557
+#: src/views/Account.js:671
 msgid "Renovação da subscrição via Paypal"
 msgstr "Subscription renewal"
 
@@ -2568,7 +2573,7 @@ msgstr "Santarém"
 msgid "Saúde e Corpo Humano"
 msgstr "Health and Human Body"
 
-#: src/views/Account.js:562
+#: src/views/Account.js:676
 msgid "Se preferires fazer a renovação em mão, através de transferência bancária ou por MB WAY, vê como <0>aqui</0>"
 msgstr "If you rather renew in person, with a bank transfer or through MB WAY, see how <0>here</0>"
 
@@ -2679,11 +2684,11 @@ msgstr "Submit"
 msgid "Submeter quiz"
 msgstr "Submit quiz"
 
-#: src/views/Account.js:511
+#: src/views/Account.js:625
 msgid "Submissão de quiz especial"
 msgstr "Special quiz submission"
 
-#: src/views/Account.js:446
+#: src/views/Account.js:500
 msgid "Submissão de quiz regular"
 msgstr "Regular quiz submission"
 
@@ -3042,7 +3047,7 @@ msgstr "Uzbekistan"
 msgid "V"
 msgstr "W"
 
-#: src/views/Account.js:540
+#: src/views/Account.js:654
 #: src/views/admin/users/modals/EditUserModal.js:161
 #: src/views/admin/users/modals/EditUserModal.js:219
 msgid "Validade da subscrição"
@@ -3114,7 +3119,7 @@ msgstr "Zambia"
 msgid "deixa em branco para não alterar"
 msgstr "leave it blank to keep"
 
-#: src/partials/Notifications.js:345
+#: src/partials/Notifications.js:346
 msgid "e d@"
 msgstr "and"
 
