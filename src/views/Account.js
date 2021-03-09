@@ -457,9 +457,7 @@ const Account = () => {
                                   }}
                                 >
                                   {[...Array(23).keys()].map((hour) => {
-                                    const date = new Date(
-                                      Date.UTC(1970, 1, 1, hour + 1, 0, 0)
-                                    );
+                                    const date = new Date(1970, 1, 1, hour + 1, 0, 0);
                                     const label = date.toLocaleTimeString(
                                       language,
                                       {
@@ -583,9 +581,7 @@ const Account = () => {
                               }}
                             >
                               {[...Array(23).keys()].map((hour) => {
-                                const date = new Date(
-                                  Date.UTC(1970, 1, 1, hour + 1, 0, 0)
-                                );
+                                const date = new Date(1970, 1, 1, hour + 1, 0, 0);
                                 const label = date.toLocaleTimeString(
                                   language,
                                   {
