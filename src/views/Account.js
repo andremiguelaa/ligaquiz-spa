@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 import { omit, range } from 'lodash';
-import classames from 'classnames';
+import classnames from 'classnames';
 import { toast } from 'react-toastify';
 import DatePicker from 'react-datepicker';
 import { sub, getYear } from 'date-fns';
@@ -298,7 +298,7 @@ const Account = () => {
                   <input
                     type="email"
                     required
-                    className={classames('input', {
+                    className={classnames('input', {
                       'is-danger': error && error.data && error.data.email,
                     })}
                     defaultValue={user.email}
@@ -405,27 +405,83 @@ const Account = () => {
                           <Trans>Notificação de quiz regular disponível</Trans>
                         </label>
                       </div>
-                      <div className="field">
-                        <input
-                          id="quiz_deadline"
-                          type="checkbox"
-                          className="switch"
-                          value="true"
-                          defaultChecked={formData.reminders.quiz.deadline}
-                          onChange={(event) => {
-                            event.persist();
-                            setFormData((prev) => {
-                              let newFormData = { ...prev };
-                              newFormData.reminders.quiz.deadline =
-                                event.target.checked;
-                              return newFormData;
-                            });
-                          }}
-                        />
-                        <label htmlFor="quiz_deadline">
-                          <Trans>Lembrete de quiz regular não respondido</Trans>
-                        </label>
-                      </div>
+                      <fieldset className="fieldset">
+                        <div className="field">
+                          <input
+                            id="quiz_deadline"
+                            type="checkbox"
+                            className="switch"
+                            value="true"
+                            defaultChecked={formData.reminders.quiz.deadline}
+                            onChange={(event) => {
+                              event.persist();
+                              setFormData((prev) => {
+                                let newFormData = { ...prev };
+                                newFormData.reminders.quiz.deadline = event
+                                  .target.checked
+                                  ? 22
+                                  : false;
+                                return newFormData;
+                              });
+                            }}
+                          />
+                          <label htmlFor="quiz_deadline">
+                            <Trans>
+                              Lembrete de quiz regular não respondido
+                            </Trans>
+                          </label>
+                        </div>
+                        <div className="field">
+                          <div className="control">
+                            <label className="label">
+                              <Trans>Hora do lembrete</Trans>
+                            </label>
+                            <div className="control has-icons-left">
+                              <div
+                                className={classnames('select', {
+                                  disabled: !formData.reminders.quiz.deadline,
+                                })}
+                              >
+                                <select
+                                  disabled={!formData.reminders.quiz.deadline}
+                                  value={formData.reminders.quiz.deadline || 22}
+                                  onChange={(event) => {
+                                    event.persist();
+                                    setFormData((prev) => {
+                                      let newFormData = { ...prev };
+                                      newFormData.reminders.quiz.deadline = parseInt(
+                                        event.target.value
+                                      );
+                                      return newFormData;
+                                    });
+                                  }}
+                                >
+                                  {[...Array(23).keys()].map((hour) => {
+                                    const date = new Date(
+                                      Date.UTC(1970, 1, 1, hour + 1, 0, 0)
+                                    );
+                                    const label = date.toLocaleTimeString(
+                                      language,
+                                      {
+                                        hour: '2-digit',
+                                        minute: '2-digit',
+                                      }
+                                    );
+                                    return (
+                                      <option value={hour + 1} key={hour}>
+                                        {label}
+                                      </option>
+                                    );
+                                  })}
+                                </select>
+                              </div>
+                              <span className="icon is-small is-left">
+                                <i className="fa fa-calendar" />
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset>
                       <div className="field">
                         <input
                           id="email_quiz"
@@ -446,6 +502,7 @@ const Account = () => {
                           <Trans>Submissão de quiz regular</Trans>
                         </label>
                       </div>
+                      <hr />
                     </>
                   )}
                   <div className="field">
@@ -469,27 +526,88 @@ const Account = () => {
                       <Trans>Notificação de quiz especial disponível</Trans>
                     </label>
                   </div>
-                  <div className="field">
-                    <input
-                      id="special_quiz_deadline"
-                      type="checkbox"
-                      className="switch"
-                      value="true"
-                      defaultChecked={formData.reminders.special_quiz.deadline}
-                      onChange={(event) => {
-                        event.persist();
-                        setFormData((prev) => {
-                          let newFormData = { ...prev };
-                          newFormData.reminders.special_quiz.deadline =
-                            event.target.checked;
-                          return newFormData;
-                        });
-                      }}
-                    />
-                    <label htmlFor="special_quiz_deadline">
-                      <Trans>Lembrete de quiz especial não respondido</Trans>
-                    </label>
-                  </div>
+                  <fieldset className="fieldset">
+                    <div className="field">
+                      <input
+                        id="special_quiz_deadline"
+                        type="checkbox"
+                        className="switch"
+                        value="true"
+                        defaultChecked={
+                          formData.reminders.special_quiz.deadline
+                        }
+                        onChange={(event) => {
+                          event.persist();
+                          setFormData((prev) => {
+                            let newFormData = { ...prev };
+                            newFormData.reminders.special_quiz.deadline = event
+                              .target.checked
+                              ? 22
+                              : false;
+                            return newFormData;
+                          });
+                        }}
+                      />
+                      <label htmlFor="special_quiz_deadline">
+                        <Trans>Lembrete de quiz especial não respondido</Trans>
+                      </label>
+                    </div>
+                    <div className="field">
+                      <div className="control">
+                        <label className="label">
+                          <Trans>Hora do lembrete</Trans>
+                        </label>
+                        <div className="control has-icons-left">
+                          <div
+                            className={classnames('select', {
+                              disabled: !formData.reminders.special_quiz
+                                .deadline,
+                            })}
+                          >
+                            <select
+                              disabled={
+                                !formData.reminders.special_quiz.deadline
+                              }
+                              value={
+                                formData.reminders.special_quiz.deadline || 22
+                              }
+                              onChange={(event) => {
+                                event.persist();
+                                setFormData((prev) => {
+                                  let newFormData = { ...prev };
+                                  newFormData.reminders.special_quiz.deadline = parseInt(
+                                    event.target.value
+                                  );
+                                  return newFormData;
+                                });
+                              }}
+                            >
+                              {[...Array(23).keys()].map((hour) => {
+                                const date = new Date(
+                                  Date.UTC(1970, 1, 1, hour + 1, 0, 0)
+                                );
+                                const label = date.toLocaleTimeString(
+                                  language,
+                                  {
+                                    hour: '2-digit',
+                                    minute: '2-digit',
+                                  }
+                                );
+                                return (
+                                  <option value={hour + 1} key={hour}>
+                                    {label}
+                                  </option>
+                                );
+                              })}
+                            </select>
+                          </div>
+                          <span className="icon is-small is-left">
+                            <i className="fa fa-calendar" />
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
                   <div className="field">
                     <input
                       id="email_special_quiz"

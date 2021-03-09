@@ -262,6 +262,10 @@
       background-color: $black-ter;
       border-color: $grey-light;
       color: $white-bis;
+      &[disabled] {
+        background-color: $grey;
+        color: $white-bis;
+      }
     }
   }
   .switch[type='checkbox'] {

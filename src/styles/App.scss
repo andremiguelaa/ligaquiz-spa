@@ -183,6 +183,14 @@ div.tabs {
   }
 }
 
+.select {
+  &.disabled {
+    &::after {
+      display: none !important;
+    }
+  }
+}
+
 .file {
   &.is-loading {
     > .file-label {
