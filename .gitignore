@@ -26,3 +26,4 @@ yarn-error.log*
 
 # public
 /public/manifest.json
+/public/browserconfig.xml
