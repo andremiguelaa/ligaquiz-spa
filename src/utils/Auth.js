@@ -29,7 +29,7 @@ export const setLoginData = (data, dispatch) => {
   }
 };
 
-export default (props) => {
+const Auth = (props) => {
   const [, dispatch] = useStateValue();
   const [loading, setLoading] = useState(true);
   useEffect(() => {
@@ -66,3 +66,5 @@ export default (props) => {
 
   return <>{!loading ? props.children : <Loading type="full" />}</>;
 };
+
+export default Auth;

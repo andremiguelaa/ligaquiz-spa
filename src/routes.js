@@ -47,7 +47,7 @@ import ExternalQuestions from 'views/admin/externalQuestions/ExternalQuestions';
 
 import NoMatch from 'components/NoMatch';
 
-export default [
+const routes = [
   {
     title: process.env.REACT_APP_NAME,
     path: '/',
@@ -291,3 +291,5 @@ export default [
     component: NoMatch,
   },
 ];
+
+export default routes;
