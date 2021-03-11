@@ -1,19 +1,19 @@
 {
-    "name": "Equizition",
-    "short_name": "Equizition",
+    "name": "Liga Quiz",
+    "short_name": "Liga Quiz",
     "icons": [
       {
-        "src": "/equizition/android-chrome-192x192.png",
+        "src": "/ligaquiz/android-chrome-192x192.png",
         "sizes": "192x192",
         "type": "image/png"
       },
       {
-        "src": "/equizition/android-chrome-512x512.png",
+        "src": "/ligaquiz/android-chrome-512x512.png",
         "sizes": "512x512",
         "type": "image/png"
       },
       {
-        "src": "/equizition/maskable_icon.png",
+        "src": "/ligaquiz/maskable_icon.png",
         "sizes": "568x568",
         "type": "image/png",
         "purpose": "maskable"

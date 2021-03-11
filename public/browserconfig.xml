@@ -2,7 +2,7 @@
 <browserconfig>
     <msapplication>
         <tile>
-            <square150x150logo src="/equizition/mstile-150x150.png"/>
+            <square150x150logo src="/ligaquiz/mstile-150x150.png"/>
             <TileColor>#1494f2</TileColor>
         </tile>
     </msapplication>

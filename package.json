@@ -1,7 +1,7 @@
 {
   "name": "liga-quiz-spa",
   "homepage": ".",
-  "version": "4.37.5",
+  "version": "4.37.6",
   "private": true,
   "dependencies": {
     "@creativebulma/bulma-tooltip": "^1.2.0",
@@ -45,7 +45,7 @@
     "extract": "lingui extract",
     "compile": "lingui compile",
     "manifest": "rm ./public/manifest.json && cp ./public/manifest.base.json ./public/manifest.json && rm ./public/browserconfig.xml && cp ./public/browserconfig.base.xml ./public/browserconfig.xml && node ./scripts/generateManifest.js",
-    "prod": "yarn && yarn manifest &&  react-scripts build && rm -rf prod && mv ./build ./prod"
+    "prod": "yarn && yarn manifest && react-scripts build && rm -rf prod && mv ./build ./prod"
   },
   "eslintConfig": {
     "extends": [
