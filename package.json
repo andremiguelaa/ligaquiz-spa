@@ -1,7 +1,7 @@
 {
   "name": "liga-quiz-spa",
   "homepage": ".",
-  "version": "4.37.4",
+  "version": "4.37.5",
   "private": true,
   "dependencies": {
     "@creativebulma/bulma-tooltip": "^1.2.0",
@@ -18,7 +18,7 @@
     "react-datepicker": "^3.3.0",
     "react-dom": "^16.9.0",
     "react-indiana-drag-scroll": "^1.6.1",
-    "react-scripts": "4.0.0",
+    "react-scripts": "4.0.3",
     "replace-in-file": "^6.1.0",
     "slugify": "^1.4.5",
     "use-deep-compare-effect": "^1.5.0",
