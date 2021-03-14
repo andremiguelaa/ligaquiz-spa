@@ -202,8 +202,44 @@ const Header = () => {
                           &nbsp;<Trans>Parar de usar identidade</Trans>
                         </button>
                       )}
+                      <Link to="/account/" className="navbar-item">
+                        <i className="fa fa-btn fa-user" />
+                        &nbsp;<Trans>Conta</Trans>
+                      </Link>
+                      {user &&
+                        (user.valid_roles.admin ||
+                          user.valid_roles.regular_player) && (
+                          <>
+                            <Link to="/invitations" className="navbar-item">
+                              <i className="fa fa-btn fa-share-alt" />
+                              &nbsp;<Trans>Convites</Trans>
+                            </Link>
+                            <Link to="/seasons" className="navbar-item">
+                              <i className="fa fa-btn fa-calendar" />
+                              &nbsp;<Trans>Temporadas</Trans>
+                            </Link>
+                            <Link to="/quizzes" className="navbar-item">
+                              <i className="fa fa-btn fa-question-circle-o" />
+                              &nbsp;<Trans>Quizzes</Trans>
+                            </Link>
+                          </>
+                        )}
+                      {user &&
+                        (user.valid_roles.admin ||
+                          user.valid_roles.regular_player ||
+                          user.valid_roles.special_quiz_player) && (
+                          <Link to="/special-quizzes" className="navbar-item">
+                            <i className="fa fa-btn fa-question-circle-o" />
+                            &nbsp;<Trans>Quizzes especiais</Trans>
+                          </Link>
+                        )}
+                      <Link to="/logout/" className="navbar-item">
+                        <i className="fa fa-btn fa-sign-out" />
+                        &nbsp;<Trans>Sair</Trans>
+                      </Link>
                       {user.valid_roles.admin && (
                         <>
+                          <hr className="navbar-divider" />
                           <div className="navbar-item">
                             <Trans>Administração</Trans>
                           </div>
@@ -222,7 +258,6 @@ const Header = () => {
                             <i className="fa fa-btn fa-calendar" />
                             &nbsp;<Trans>Temporadas</Trans>
                           </Link>
-                          <hr className="navbar-divider" />
                         </>
                       )}
                       {(user.valid_roles.admin ||
@@ -230,6 +265,7 @@ const Header = () => {
                         user.valid_roles.special_quiz_editor ||
                         user.valid_roles.answer_reviewer) && (
                         <>
+                          <hr className="navbar-divider" />
                           <div className="navbar-item">
                             <Trans>Gestão de Quizzes</Trans>
                           </div>
@@ -270,13 +306,13 @@ const Header = () => {
                               <Trans>Pesquisa de perguntas externas</Trans>
                             </Link>
                           )}
-                          <hr className="navbar-divider" />
                         </>
                       )}
                       {process.env.REACT_APP_NATIONAL_RANKING === 'true' &&
                         (user.valid_roles.admin ||
                           user.valid_roles.national_ranking_manager) && (
                           <>
+                            <hr className="navbar-divider" />
                             <div className="navbar-item">
                               <Trans>Gestão de Ranking Nacional</Trans>
                             </div>
@@ -301,44 +337,8 @@ const Header = () => {
                               <i className="fa fa-btn fa-users" />
                               &nbsp;<Trans>Jogadores</Trans>
                             </Link>
-                            <hr className="navbar-divider" />
                           </>
                         )}
-                      <Link to="/account/" className="navbar-item">
-                        <i className="fa fa-btn fa-user" />
-                        &nbsp;<Trans>Conta</Trans>
-                      </Link>
-                      {user &&
-                        (user.valid_roles.admin ||
-                          user.valid_roles.regular_player) && (
-                          <>
-                            <Link to="/invitations" className="navbar-item">
-                              <i className="fa fa-btn fa-share-alt" />
-                              &nbsp;<Trans>Convites</Trans>
-                            </Link>
-                            <Link to="/seasons" className="navbar-item">
-                              <i className="fa fa-btn fa-calendar" />
-                              &nbsp;<Trans>Temporadas</Trans>
-                            </Link>
-                            <Link to="/quizzes" className="navbar-item">
-                              <i className="fa fa-btn fa-question-circle-o" />
-                              &nbsp;<Trans>Quizzes</Trans>
-                            </Link>
-                          </>
-                        )}
-                      {user &&
-                        (user.valid_roles.admin ||
-                          user.valid_roles.regular_player ||
-                          user.valid_roles.special_quiz_player) && (
-                          <Link to="/special-quizzes" className="navbar-item">
-                            <i className="fa fa-btn fa-question-circle-o" />
-                            &nbsp;<Trans>Quizzes especiais</Trans>
-                          </Link>
-                        )}
-                      <Link to="/logout/" className="navbar-item">
-                        <i className="fa fa-btn fa-sign-out" />
-                        &nbsp;<Trans>Sair</Trans>
-                      </Link>
                       <hr className="navbar-divider" />
                       <div className="navbar-item">
                         <Trans>Versão {process.env.REACT_APP_VERSION}</Trans>

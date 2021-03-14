@@ -1,9 +1,25 @@
 {
+  "Pergunta actualizada com sucesso.": {
+    "origin": [
+      [
+        "src/views/admin/questions/Questions.js",
+        176
+      ]
+    ]
+  },
+  "Não foi possível actualizar a pergunta.": {
+    "origin": [
+      [
+        "src/views/admin/questions/Questions.js",
+        180
+      ]
+    ]
+  },
   "Pesquisa de perguntas": {
     "origin": [
       [
         "src/views/admin/questions/Questions.js",
-        147
+        189
       ]
     ]
   },
@@ -11,7 +27,7 @@
     "origin": [
       [
         "src/views/admin/questions/Questions.js",
-        164
+        206
       ]
     ]
   },
@@ -19,7 +35,7 @@
     "origin": [
       [
         "src/views/admin/questions/Questions.js",
-        183
+        225
       ]
     ]
   },
@@ -27,11 +43,11 @@
     "origin": [
       [
         "src/views/admin/questions/Questions.js",
-        193
+        235
       ],
       [
         "src/views/admin/questions/Questions.js",
-        280
+        325
       ]
     ]
   },
@@ -39,11 +55,11 @@
     "origin": [
       [
         "src/views/admin/questions/Questions.js",
-        203
+        245
       ],
       [
         "src/views/admin/questions/Questions.js",
-        292
+        337
       ]
     ]
   },
@@ -51,7 +67,15 @@
     "origin": [
       [
         "src/views/admin/questions/Questions.js",
-        209
+        251
+      ],
+      [
+        "src/views/admin/questions/Questions.js",
+        361
+      ],
+      [
+        "src/views/admin/questions/Questions.js",
+        408
       ]
     ]
   },
@@ -59,7 +83,7 @@
     "origin": [
       [
         "src/views/admin/questions/Questions.js",
-        237
+        282
       ]
     ]
   },
@@ -67,7 +91,7 @@
     "origin": [
       [
         "src/views/admin/questions/Questions.js",
-        266
+        311
       ]
     ]
   },
@@ -75,11 +99,11 @@
     "origin": [
       [
         "src/views/admin/questions/Questions.js",
-        298
+        343
       ],
       [
         "src/views/admin/questions/Questions.js",
-        303
+        348
       ]
     ]
   },
@@ -87,7 +111,7 @@
     "origin": [
       [
         "src/views/admin/questions/Questions.js",
-        307
+        352
       ]
     ]
   },
@@ -95,7 +119,15 @@
     "origin": [
       [
         "src/views/admin/questions/Questions.js",
-        328
+        396
+      ]
+    ]
+  },
+  "Editar pergunta": {
+    "origin": [
+      [
+        "src/views/admin/questions/Questions.js",
+        404
       ]
     ]
   }

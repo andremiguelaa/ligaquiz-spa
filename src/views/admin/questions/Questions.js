@@ -3,6 +3,7 @@ import { Link, useHistory, useLocation } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 import classnames from 'classnames';
 import useDeepCompareEffect from 'use-deep-compare-effect';
+import { toast } from 'react-toastify';
 
 import { useStateValue } from 'state/State';
 import ApiRequest from 'utils/ApiRequest';
@@ -11,6 +12,7 @@ import Error from 'components/Error';
 import PageHeader from 'components/PageHeader';
 import EmptyState from 'components/EmptyState';
 import Markdown from 'components/Markdown';
+import Modal from 'components/Modal';
 import PaginatedTable from 'components/PaginatedTable';
 import { getGenreTranslation } from 'utils/getGenreTranslation';
 
@@ -39,6 +41,8 @@ const Questions = () => {
     genre: undefined,
     page: undefined,
   });
+  const [questionToEdit, setQuestionToEdit] = useState();
+  const [updating, setUpdating] = useState(false);
 
   useEffect(() => {
     ApiRequest.get(`genres`)
@@ -118,7 +122,7 @@ const Questions = () => {
         historyParams.searchField || ''
       }${historyParams.genre ? `&genre=${historyParams.genre}` : ''}${
         historyParams.page ? `&page=${historyParams.page}` : ''
-      }`
+      }${historyParams.genre ? `&type=quiz` : ''}`
     );
   }, [history, historyParams]);
 
@@ -138,9 +142,47 @@ const Questions = () => {
     return <Loading />;
   }
 
+  const subGenres = genres.reduce((acc, item) => {
+    item.subgenres.forEach((subgenre) => {
+      acc[subgenre.id] = subgenre.slug;
+    });
+    return acc;
+  }, {});
+
   const genreSubgenres =
     selectedGenre &&
+    selectedGenre !== 'null' &&
     genres.find((genre) => genre.id.toString() === selectedGenre).subgenres;
+
+  const updateQuestion = (question) => {
+    setUpdating(true);
+    ApiRequest.patch(`questions`, {
+      id: question.id,
+      genre: question.genre_id,
+    })
+      .then(({ data }) => {
+        setQuestions((prev) => ({
+          ...prev,
+          data: prev.data.map((item) => {
+            if (item.id === data.id) {
+              return {
+                ...item,
+                ...data,
+              };
+            }
+            return item;
+          }),
+        }));
+        toast.success(<Trans>Pergunta actualizada com sucesso.</Trans>);
+        setQuestionToEdit();
+      })
+      .catch(() => {
+        toast.error(<Trans>Não foi possível actualizar a pergunta.</Trans>);
+      })
+      .then(() => {
+        setUpdating(false);
+      });
+  };
 
   return (
     <>
@@ -219,6 +261,9 @@ const Questions = () => {
                 >
                   <option value="">
                     {getGenreTranslation('all', language)}
+                  </option>
+                  <option value="null">
+                    {getGenreTranslation('null', language)}
                   </option>
                   {genres.map((genre) => (
                     <option value={genre.id} key={genre.slug}>
@@ -311,6 +356,29 @@ const Questions = () => {
                 ),
                 className: classes.quiz,
               },
+              {
+                id: 'genre',
+                label: <Trans>Tema</Trans>,
+                render: (item) => (
+                  <>{getGenreTranslation(subGenres[item.genre_id], language)}</>
+                ),
+                className: classes.genre,
+              },
+              {
+                id: 'actions',
+                render: (item) => (
+                  <button
+                    className="button"
+                    type="button"
+                    onClick={() => setQuestionToEdit(item)}
+                  >
+                    <span className="icon">
+                      <i className="fa fa-edit"></i>
+                    </span>
+                  </button>
+                ),
+                className: classes.action,
+              },
             ]}
             onChange={(newPage) => {
               setHistoryParams((prev) => ({
@@ -329,6 +397,46 @@ const Questions = () => {
           </EmptyState>
         )}
       </section>
+      {questionToEdit && (
+        <Modal
+          type="info"
+          open
+          title={<Trans>Editar pergunta</Trans>}
+          body={
+            <div className="field">
+              <label className="label">
+                <Trans>Tema</Trans>
+              </label>
+              <div className="control has-icons-left">
+                <div className="select">
+                  <select
+                    value={questionToEdit.genre_id}
+                    onChange={(event) => {
+                      const newValue = event.target.value;
+                      setQuestionToEdit((prev) => ({
+                        ...prev,
+                        genre_id: newValue,
+                      }));
+                    }}
+                  >
+                    {Object.entries(subGenres).map(([id, slug]) => (
+                      <option value={id} key={id}>
+                        {getGenreTranslation(slug, language)}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <div className="icon is-small is-left">
+                  <i className="fa fa-book"></i>
+                </div>
+              </div>
+            </div>
+          }
+          action={() => updateQuestion(questionToEdit)}
+          doingAction={updating}
+          onClose={() => setQuestionToEdit()}
+        />
+      )}
     </>
   );
 };

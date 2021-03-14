@@ -95,127 +95,11 @@
       ]
     ]
   },
-  "Administração": {
-    "origin": [
-      [
-        "src/partials/Header.js",
-        208
-      ]
-    ]
-  },
-  "Utilizadores": {
-    "origin": [
-      [
-        "src/partials/Header.js",
-        212
-      ]
-    ]
-  },
-  "Notificações": {
-    "origin": [
-      [
-        "src/partials/Header.js",
-        219
-      ]
-    ]
-  },
-  "Temporadas": {
-    "origin": [
-      [
-        "src/partials/Header.js",
-        223
-      ],
-      [
-        "src/partials/Header.js",
-        321
-      ]
-    ]
-  },
-  "Gestão de Quizzes": {
-    "origin": [
-      [
-        "src/partials/Header.js",
-        234
-      ]
-    ]
-  },
-  "Quizzes": {
-    "origin": [
-      [
-        "src/partials/Header.js",
-        241
-      ],
-      [
-        "src/partials/Header.js",
-        325
-      ]
-    ]
-  },
-  "Quizzes especiais": {
-    "origin": [
-      [
-        "src/partials/Header.js",
-        252
-      ],
-      [
-        "src/partials/Header.js",
-        335
-      ]
-    ]
-  },
-  "Pesquisa de perguntas": {
-    "origin": [
-      [
-        "src/partials/Header.js",
-        259
-      ]
-    ]
-  },
-  "Pesquisa de perguntas externas": {
-    "origin": [
-      [
-        "src/partials/Header.js",
-        270
-      ]
-    ]
-  },
-  "Gestão de Ranking Nacional": {
-    "origin": [
-      [
-        "src/partials/Header.js",
-        281
-      ]
-    ]
-  },
-  "Rankings mensais": {
-    "origin": [
-      [
-        "src/partials/Header.js",
-        288
-      ]
-    ]
-  },
-  "Provas mensais": {
-    "origin": [
-      [
-        "src/partials/Header.js",
-        295
-      ]
-    ]
-  },
-  "Jogadores": {
-    "origin": [
-      [
-        "src/partials/Header.js",
-        302
-      ]
-    ]
-  },
   "Conta": {
     "origin": [
       [
         "src/partials/Header.js",
-        309
+        207
       ]
     ]
   },
@@ -223,7 +107,43 @@
     "origin": [
       [
         "src/partials/Header.js",
-        317
+        215
+      ]
+    ]
+  },
+  "Temporadas": {
+    "origin": [
+      [
+        "src/partials/Header.js",
+        219
+      ],
+      [
+        "src/partials/Header.js",
+        259
+      ]
+    ]
+  },
+  "Quizzes": {
+    "origin": [
+      [
+        "src/partials/Header.js",
+        223
+      ],
+      [
+        "src/partials/Header.js",
+        277
+      ]
+    ]
+  },
+  "Quizzes especiais": {
+    "origin": [
+      [
+        "src/partials/Header.js",
+        233
+      ],
+      [
+        "src/partials/Header.js",
+        288
       ]
     ]
   },
@@ -231,7 +151,87 @@
     "origin": [
       [
         "src/partials/Header.js",
-        340
+        238
+      ]
+    ]
+  },
+  "Administração": {
+    "origin": [
+      [
+        "src/partials/Header.js",
+        244
+      ]
+    ]
+  },
+  "Utilizadores": {
+    "origin": [
+      [
+        "src/partials/Header.js",
+        248
+      ]
+    ]
+  },
+  "Notificações": {
+    "origin": [
+      [
+        "src/partials/Header.js",
+        255
+      ]
+    ]
+  },
+  "Gestão de Quizzes": {
+    "origin": [
+      [
+        "src/partials/Header.js",
+        270
+      ]
+    ]
+  },
+  "Pesquisa de perguntas": {
+    "origin": [
+      [
+        "src/partials/Header.js",
+        295
+      ]
+    ]
+  },
+  "Pesquisa de perguntas externas": {
+    "origin": [
+      [
+        "src/partials/Header.js",
+        306
+      ]
+    ]
+  },
+  "Gestão de Ranking Nacional": {
+    "origin": [
+      [
+        "src/partials/Header.js",
+        317
+      ]
+    ]
+  },
+  "Rankings mensais": {
+    "origin": [
+      [
+        "src/partials/Header.js",
+        324
+      ]
+    ]
+  },
+  "Provas mensais": {
+    "origin": [
+      [
+        "src/partials/Header.js",
+        331
+      ]
+    ]
+  },
+  "Jogadores": {
+    "origin": [
+      [
+        "src/partials/Header.js",
+        338
       ]
     ]
   },

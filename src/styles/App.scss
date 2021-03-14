@@ -71,6 +71,7 @@ button.navbar-item {
   cursor: pointer;
   font-size: inherit;
   width: 100%;
+  text-align: left;
   &:hover {
     background-color: $white-ter;
     color: $grey-darker;

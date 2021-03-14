@@ -130,7 +130,7 @@ msgstr "Adicionar provas mensais"
 msgid "Administrador"
 msgstr "Administrador"
 
-#: src/partials/Header.js:208
+#: src/partials/Header.js:244
 msgid "Administração"
 msgstr "Administração"
 
@@ -236,7 +236,7 @@ msgstr "Argélia"
 msgid "Arménia"
 msgstr "Arménia"
 
-#: src/utils/getGenreTranslation.js:33
+#: src/utils/getGenreTranslation.js:34
 msgid "Arquitectura"
 msgstr "Arquitectura"
 
@@ -259,7 +259,7 @@ msgstr "Arquivo de quizzes especiais"
 msgid "Arquivo de temporadas"
 msgstr "Arquivo de temporadas"
 
-#: src/utils/getGenreTranslation.js:54
+#: src/utils/getGenreTranslation.js:55
 msgid "Artesanato"
 msgstr "Artesanato"
 
@@ -313,7 +313,7 @@ msgstr "Bahamas"
 msgid "Bahrein"
 msgstr "Bahrein"
 
-#: src/utils/getGenreTranslation.js:39
+#: src/utils/getGenreTranslation.js:40
 msgid "Banda Desenhada"
 msgstr "Banda Desenhada"
 
@@ -329,7 +329,7 @@ msgstr "Barbados"
 msgid "Beja"
 msgstr "Beja"
 
-#: src/utils/getGenreTranslation.js:34
+#: src/utils/getGenreTranslation.js:35
 msgid "Belas Artes"
 msgstr "Belas Artes"
 
@@ -345,7 +345,7 @@ msgstr "Benim"
 msgid "Bielorrússia"
 msgstr "Bielorrússia"
 
-#: src/utils/getGenreTranslation.js:47
+#: src/utils/getGenreTranslation.js:48
 msgid "Biologia"
 msgstr "Biologia"
 
@@ -475,7 +475,7 @@ msgstr "Chipre"
 msgid "Chéquia"
 msgstr "Chéquia"
 
-#: src/utils/getGenreTranslation.js:42
+#: src/utils/getGenreTranslation.js:43
 msgid "Cinema"
 msgstr "Cinema"
 
@@ -483,11 +483,11 @@ msgstr "Cinema"
 msgid "Ciê"
 msgstr "Ciê"
 
-#: src/utils/getGenreTranslation.js:28
+#: src/utils/getGenreTranslation.js:29
 msgid "Ciência"
 msgstr "Ciência"
 
-#: src/utils/getGenreTranslation.js:63
+#: src/utils/getGenreTranslation.js:64
 msgid "Ciências Sociais"
 msgstr "Ciências Sociais"
 
@@ -513,7 +513,7 @@ msgstr "Coimbra"
 msgid "Colômbia"
 msgstr "Colômbia"
 
-#: src/utils/getGenreTranslation.js:58
+#: src/utils/getGenreTranslation.js:59
 msgid "Comida e Bebida"
 msgstr "Comida e Bebida"
 
@@ -530,7 +530,7 @@ msgstr "Comparar comigo"
 msgid "Comparação de Estatísticas"
 msgstr "Comparação de Estatísticas"
 
-#: src/utils/getGenreTranslation.js:66
+#: src/utils/getGenreTranslation.js:67
 msgid "Comunicação Social e Redes Sociais"
 msgstr "Comunicação Social e Redes Sociais"
 
@@ -540,7 +540,7 @@ msgstr "Comunicação Social e Redes Sociais"
 msgid "Confirmação da palavra-passe"
 msgstr "Confirmação da palavra-passe"
 
-#: src/partials/Header.js:309
+#: src/partials/Header.js:207
 #: src/routes.js:83
 #: src/views/Account.js:141
 msgid "Conta"
@@ -559,7 +559,7 @@ msgstr "Conteúdo não encontrado."
 msgid "Convite enviado com sucesso."
 msgstr "Convite enviado com sucesso."
 
-#: src/partials/Header.js:317
+#: src/partials/Header.js:215
 #: src/routes.js:94
 #: src/views/Invitations.js:77
 msgid "Convites"
@@ -649,7 +649,7 @@ msgstr "Cuba"
 msgid "Cul"
 msgstr "Cul"
 
-#: src/utils/getGenreTranslation.js:25
+#: src/utils/getGenreTranslation.js:26
 msgid "Cultura"
 msgstr "Cultura"
 
@@ -657,7 +657,7 @@ msgstr "Cultura"
 msgid "D"
 msgstr "D"
 
-#: src/utils/getGenreTranslation.js:36
+#: src/utils/getGenreTranslation.js:37
 msgid "Dança"
 msgstr "Dança"
 
@@ -715,11 +715,11 @@ msgstr "Desceu"
 msgid "Descrição"
 msgstr "Descrição"
 
-#: src/utils/getGenreTranslation.js:52
+#: src/utils/getGenreTranslation.js:53
 msgid "Design"
 msgstr "Design"
 
-#: src/utils/getGenreTranslation.js:29
+#: src/utils/getGenreTranslation.js:30
 msgid "Desporto"
 msgstr "Desporto"
 
@@ -787,6 +787,10 @@ msgstr "Editar jogadores"
 msgid "Editar notificação"
 msgstr "Editar notificação"
 
+#: src/views/admin/questions/Questions.js:404
+msgid "Editar pergunta"
+msgstr "Editar pergunta"
+
 #: src/views/admin/users/modals/EditUserModal.js:56
 msgid "Editar permissões de {0} {1}"
 msgstr "Editar permissões de {0} {1}"
@@ -849,14 +853,14 @@ msgstr "Ent"
 msgid "Entrar"
 msgstr "Entrar"
 
-#: src/utils/getGenreTranslation.js:26
+#: src/utils/getGenreTranslation.js:27
 msgid "Entretenimento"
 msgstr "Entretenimento"
 
 #: src/views/admin/externalQuestions/ExternalQuestions.js:232
 #: src/views/admin/externalQuestions/ExternalQuestions.js:317
-#: src/views/admin/questions/Questions.js:193
-#: src/views/admin/questions/Questions.js:280
+#: src/views/admin/questions/Questions.js:235
+#: src/views/admin/questions/Questions.js:325
 #: src/views/admin/quizzes/ExternalQuestionPick.js:45
 #: src/views/admin/quizzes/Question.js:156
 #: src/views/admin/specialQuizzes/Question.js:55
@@ -945,7 +949,7 @@ msgstr "Eslovénia"
 msgid "Espanha"
 msgstr "Espanha"
 
-#: src/utils/getGenreTranslation.js:49
+#: src/utils/getGenreTranslation.js:50
 msgid "Espaço"
 msgstr "Espaço"
 
@@ -977,7 +981,7 @@ msgstr "Estatísticas de pergunta"
 msgid "Estatísticas do adversário"
 msgstr "Estatísticas do adversário"
 
-#: src/utils/getGenreTranslation.js:31
+#: src/utils/getGenreTranslation.js:32
 msgid "Estilo de Vida"
 msgstr "Estilo de Vida"
 
@@ -1012,7 +1016,7 @@ msgstr "Faltas"
 msgid "Faro"
 msgstr "Faro"
 
-#: src/utils/getGenreTranslation.js:43
+#: src/utils/getGenreTranslation.js:44
 msgid "Fauna e Flora"
 msgstr "Fauna e Flora"
 
@@ -1028,7 +1032,7 @@ msgstr "Fiji"
 msgid "Filipinas"
 msgstr "Filipinas"
 
-#: src/utils/getGenreTranslation.js:62
+#: src/utils/getGenreTranslation.js:63
 msgid "Filosofia"
 msgstr "Filosofia"
 
@@ -1048,7 +1052,7 @@ msgstr "Finlândia"
 msgid "França"
 msgstr "França"
 
-#: src/utils/getGenreTranslation.js:45
+#: src/utils/getGenreTranslation.js:46
 msgid "Física"
 msgstr "Física"
 
@@ -1064,11 +1068,11 @@ msgstr "Gana"
 msgid "Geo"
 msgstr "Geo"
 
-#: src/utils/getGenreTranslation.js:30
+#: src/utils/getGenreTranslation.js:31
 msgid "Geografia"
 msgstr "Geografia"
 
-#: src/utils/getGenreTranslation.js:48
+#: src/utils/getGenreTranslation.js:49
 msgid "Geologia"
 msgstr "Geologia"
 
@@ -1077,11 +1081,11 @@ msgstr "Geologia"
 msgid "Gestor de Ranking Nacional"
 msgstr "Gestor de Ranking Nacional"
 
-#: src/partials/Header.js:234
+#: src/partials/Header.js:270
 msgid "Gestão de Quizzes"
 msgstr "Gestão de Quizzes"
 
-#: src/partials/Header.js:281
+#: src/partials/Header.js:317
 msgid "Gestão de Ranking Nacional"
 msgstr "Gestão de Ranking Nacional"
 
@@ -1098,7 +1102,7 @@ msgid "Granada"
 msgstr "Granada"
 
 #: src/views/Account/Avatar.js:114
-#: src/views/Account.js:640
+#: src/views/Account.js:644
 #: src/views/admin/nationalRanking/Players/Form.js:260
 #: src/views/admin/quizzes/QuizForm.js:281
 #: src/views/admin/specialQuizzes/SpecialQuizForm.js:259
@@ -1162,7 +1166,7 @@ msgstr "Haiti"
 msgid "His"
 msgstr "His"
 
-#: src/utils/getGenreTranslation.js:27
+#: src/utils/getGenreTranslation.js:28
 msgid "História"
 msgstr "História"
 
@@ -1175,7 +1179,7 @@ msgid "Hora"
 msgstr "Hora"
 
 #: src/views/Account.js:437
-#: src/views/Account.js:556
+#: src/views/Account.js:558
 msgid "Hora do lembrete"
 msgstr "Hora do lembrete"
 
@@ -1303,7 +1307,7 @@ msgstr "Jogador de quizzes especiais"
 msgid "Jogador regular"
 msgstr "Jogador regular"
 
-#: src/partials/Header.js:302
+#: src/partials/Header.js:338
 #: src/views/admin/nationalRanking/Players/List.js:85
 #: src/views/admin/seasons/Cup.js:135
 msgid "Jogadores"
@@ -1322,7 +1326,7 @@ msgstr "Jogo da Taça"
 msgid "Jogos"
 msgstr "Jogos"
 
-#: src/utils/getGenreTranslation.js:51
+#: src/utils/getGenreTranslation.js:52
 msgid "Jogos e Passatempos"
 msgstr "Jogos e Passatempos"
 
@@ -1377,7 +1381,7 @@ msgstr "Legenda"
 msgid "Leiria"
 msgstr "Leiria"
 
-#: src/views/Account.js:550
+#: src/views/Account.js:552
 msgid "Lembrete de quiz especial não respondido"
 msgstr "Lembrete de quiz especial não respondido"
 
@@ -1412,7 +1416,7 @@ msgstr "Liga"
 msgid "Lisboa"
 msgstr "Lisboa"
 
-#: src/utils/getGenreTranslation.js:35
+#: src/utils/getGenreTranslation.js:36
 msgid "Literatura"
 msgstr "Literatura"
 
@@ -1468,7 +1472,7 @@ msgstr "Malásia"
 msgid "Marrocos"
 msgstr "Marrocos"
 
-#: src/utils/getGenreTranslation.js:44
+#: src/utils/getGenreTranslation.js:45
 msgid "Matemática"
 msgstr "Matemática"
 
@@ -1500,11 +1504,11 @@ msgstr "Mensagem enviada com sucesso."
 msgid "Menu"
 msgstr "Menu"
 
-#: src/utils/getGenreTranslation.js:56
+#: src/utils/getGenreTranslation.js:57
 msgid "Mitologia"
 msgstr "Mitologia"
 
-#: src/utils/getGenreTranslation.js:53
+#: src/utils/getGenreTranslation.js:54
 msgid "Moda"
 msgstr "Moda"
 
@@ -1549,7 +1553,7 @@ msgstr "Moçambique"
 msgid "Multimédia"
 msgstr "Multimédia"
 
-#: src/utils/getGenreTranslation.js:60
+#: src/utils/getGenreTranslation.js:61
 msgid "Museus"
 msgstr "Museus"
 
@@ -1581,7 +1585,7 @@ msgstr "Mês"
 msgid "Mónaco"
 msgstr "Mónaco"
 
-#: src/utils/getGenreTranslation.js:40
+#: src/utils/getGenreTranslation.js:41
 msgid "Música"
 msgstr "Música"
 
@@ -1651,7 +1655,7 @@ msgstr "Notificação apagada com sucesso."
 msgid "Notificação criada com sucesso."
 msgstr "Notificação criada com sucesso."
 
-#: src/views/Account.js:524
+#: src/views/Account.js:526
 msgid "Notificação de quiz especial disponível"
 msgstr "Notificação de quiz especial disponível"
 
@@ -1663,7 +1667,7 @@ msgstr "Notificação de quiz regular disponível"
 msgid "Notificação editada com sucesso."
 msgstr "Notificação editada com sucesso."
 
-#: src/partials/Header.js:219
+#: src/partials/Header.js:255
 #: src/routes.js:210
 #: src/views/admin/notifications/Notifications.js:48
 msgid "Notificações"
@@ -1692,6 +1696,10 @@ msgstr "Não existe ranking nacional disponível."
 #: src/views/admin/nationalRanking/Events/Form.js:87
 msgid "Não foi possível abrir a edição das provas mensais."
 msgstr "Não foi possível abrir a edição das provas mensais."
+
+#: src/views/admin/questions/Questions.js:180
+msgid "Não foi possível actualizar a pergunta."
+msgstr "Não foi possível actualizar a pergunta."
 
 #: src/views/Account.js:128
 msgid "Não foi possível actualizar o perfil."
@@ -2018,6 +2026,10 @@ msgstr "Perfil de {0} {1}"
 msgid "Pergunta"
 msgstr "Pergunta"
 
+#: src/views/admin/questions/Questions.js:176
+msgid "Pergunta actualizada com sucesso."
+msgstr "Pergunta actualizada com sucesso."
+
 #: src/views/CupGame.js:101
 #: src/views/Game.js:101
 #: src/views/Quiz/QuizDone.js:24
@@ -2041,24 +2053,24 @@ msgstr "Permissões"
 msgid "Peru"
 msgstr "Peru"
 
-#: src/partials/Header.js:259
+#: src/partials/Header.js:295
 #: src/routes.js:280
-#: src/views/admin/questions/Questions.js:147
+#: src/views/admin/questions/Questions.js:189
 msgid "Pesquisa de perguntas"
 msgstr "Pesquisa de perguntas"
 
-#: src/partials/Header.js:270
+#: src/partials/Header.js:306
 #: src/routes.js:285
 #: src/views/admin/externalQuestions/ExternalQuestions.js:185
 msgid "Pesquisa de perguntas externas"
 msgstr "Pesquisa de perguntas externas"
 
 #: src/views/admin/externalQuestions/ExternalQuestions.js:303
-#: src/views/admin/questions/Questions.js:266
+#: src/views/admin/questions/Questions.js:311
 msgid "Pesquisar"
 msgstr "Pesquisar"
 
-#: src/utils/getGenreTranslation.js:67
+#: src/utils/getGenreTranslation.js:68
 msgid "Política Actual"
 msgstr "Política Actual"
 
@@ -2127,7 +2139,7 @@ msgstr "Preenche a tua data de nascimento para veres a idade do teu adversário"
 msgid "Preenche a tua região para veres a região do teu adversário"
 msgstr "Preenche a tua região para veres a região do teu adversário"
 
-#: src/utils/getGenreTranslation.js:65
+#: src/utils/getGenreTranslation.js:66
 msgid "Produtos e Marcas"
 msgstr "Produtos e Marcas"
 
@@ -2153,7 +2165,7 @@ msgstr "Prova"
 msgid "Provas individuais"
 msgstr "Provas individuais"
 
-#: src/partials/Header.js:295
+#: src/partials/Header.js:331
 #: src/views/admin/nationalRanking/Events/List.js:75
 msgid "Provas mensais"
 msgstr "Provas mensais"
@@ -2202,8 +2214,8 @@ msgid "Quirguistão"
 msgstr "Quirguistão"
 
 #: src/routes.js:160
-#: src/views/admin/questions/Questions.js:298
-#: src/views/admin/questions/Questions.js:303
+#: src/views/admin/questions/Questions.js:343
+#: src/views/admin/questions/Questions.js:348
 msgid "Quiz"
 msgstr "Quiz"
 
@@ -2228,7 +2240,7 @@ msgstr "Quiz de hoje disponível aqui"
 msgid "Quiz de {0}"
 msgstr "Quiz de {0}"
 
-#: src/views/admin/questions/Questions.js:307
+#: src/views/admin/questions/Questions.js:352
 msgid "Quiz especial"
 msgstr "Quiz especial"
 
@@ -2293,8 +2305,8 @@ msgstr "Quiz | Criar"
 msgid "Quiz | Editar"
 msgstr "Quiz | Editar"
 
-#: src/partials/Header.js:241
-#: src/partials/Header.js:325
+#: src/partials/Header.js:223
+#: src/partials/Header.js:277
 #: src/routes.js:220
 #: src/views/NationalRanking.js:252
 #: src/views/admin/quizzes/Quizzes.js:83
@@ -2305,8 +2317,8 @@ msgstr "Quizzes"
 msgid "Quizzes Especiais"
 msgstr "Quizzes Especiais"
 
-#: src/partials/Header.js:252
-#: src/partials/Header.js:335
+#: src/partials/Header.js:233
+#: src/partials/Header.js:288
 #: src/routes.js:240
 #: src/views/Profile.js:99
 msgid "Quizzes especiais"
@@ -2324,7 +2336,7 @@ msgstr "Quizzes por corrigir"
 msgid "Quénia"
 msgstr "Quénia"
 
-#: src/utils/getGenreTranslation.js:46
+#: src/utils/getGenreTranslation.js:47
 msgid "Química"
 msgstr "Química"
 
@@ -2380,7 +2392,7 @@ msgstr "Ranking mensal apagado com sucesso."
 msgid "Ranking mensal publicado com sucesso."
 msgstr "Ranking mensal publicado com sucesso."
 
-#: src/partials/Header.js:288
+#: src/partials/Header.js:324
 #: src/views/admin/nationalRanking/Rankings.js:88
 msgid "Rankings mensais"
 msgstr "Rankings mensais"
@@ -2428,7 +2440,7 @@ msgstr "Regras"
 msgid "Reino Unido"
 msgstr "Reino Unido"
 
-#: src/utils/getGenreTranslation.js:55
+#: src/utils/getGenreTranslation.js:56
 msgid "Religião e Crenças"
 msgstr "Religião e Crenças"
 
@@ -2448,7 +2460,7 @@ msgstr "Remover taça"
 msgid "Remover última divisão"
 msgstr "Remover última divisão"
 
-#: src/views/Account.js:671
+#: src/views/Account.js:675
 msgid "Renovação da subscrição via Paypal"
 msgstr "Renovação da subscrição via Paypal"
 
@@ -2472,8 +2484,8 @@ msgstr "República do Congo"
 #: src/views/SpecialQuiz/SpecialQuizForm.js:113
 #: src/views/admin/externalQuestions/ExternalQuestions.js:242
 #: src/views/admin/externalQuestions/ExternalQuestions.js:331
-#: src/views/admin/questions/Questions.js:203
-#: src/views/admin/questions/Questions.js:292
+#: src/views/admin/questions/Questions.js:245
+#: src/views/admin/questions/Questions.js:337
 #: src/views/admin/quizzes/ExternalQuestionPick.js:54
 #: src/views/admin/quizzes/Question.js:172
 #: src/views/admin/specialQuizzes/Question.js:74
@@ -2548,7 +2560,7 @@ msgstr "Rússia"
 msgid "Saara Ocidental"
 msgstr "Saara Ocidental"
 
-#: src/partials/Header.js:340
+#: src/partials/Header.js:238
 #: src/routes.js:77
 msgid "Sair"
 msgstr "Sair"
@@ -2569,11 +2581,11 @@ msgstr "Santa Lúcia"
 msgid "Santarém"
 msgstr "Santarém"
 
-#: src/utils/getGenreTranslation.js:50
+#: src/utils/getGenreTranslation.js:51
 msgid "Saúde e Corpo Humano"
 msgstr "Saúde e Corpo Humano"
 
-#: src/views/Account.js:676
+#: src/views/Account.js:680
 msgid "Se preferires fazer a renovação em mão, através de transferência bancária ou por MB WAY, vê como <0>aqui</0>"
 msgstr "Se preferires fazer a renovação em mão, através de transferência bancária ou por MB WAY, vê como <0>aqui</0>"
 
@@ -2611,13 +2623,17 @@ msgstr "Seleccionar todos"
 #: src/views/admin/nationalRanking/Players/List.js:169
 #: src/views/admin/nationalRanking/Rankings.js:161
 #: src/views/admin/notifications/Notifications.js:142
-#: src/views/admin/questions/Questions.js:328
+#: src/views/admin/questions/Questions.js:396
 #: src/views/admin/quizzes/Quizzes.js:189
 #: src/views/admin/seasons/Seasons.js:190
 #: src/views/admin/specialQuizzes/SpecialQuizzes.js:241
 #: src/views/admin/users/Users.js:444
 msgid "Sem registos"
 msgstr "Sem registos"
+
+#: src/utils/getGenreTranslation.js:25
+msgid "Sem tema"
+msgstr "Sem tema"
 
 #: src/utils/getRegionTranslation.js:193
 msgid "Senegal"
@@ -2644,7 +2660,7 @@ msgstr "Singapura"
 msgid "Soc"
 msgstr "Soc"
 
-#: src/utils/getGenreTranslation.js:32
+#: src/utils/getGenreTranslation.js:33
 msgid "Sociedade"
 msgstr "Sociedade"
 
@@ -2684,11 +2700,11 @@ msgstr "Submeter"
 msgid "Submeter quiz"
 msgstr "Submeter quiz"
 
-#: src/views/Account.js:625
+#: src/views/Account.js:629
 msgid "Submissão de quiz especial"
 msgstr "Submissão de quiz especial"
 
-#: src/views/Account.js:500
+#: src/views/Account.js:502
 msgid "Submissão de quiz regular"
 msgstr "Submissão de quiz regular"
 
@@ -2709,7 +2725,7 @@ msgid "Subscrição renovada com sucesso."
 msgstr "Subscrição renovada com sucesso."
 
 #: src/views/Quiz/OpponentStats.js:258
-#: src/views/admin/questions/Questions.js:237
+#: src/views/admin/questions/Questions.js:282
 msgid "Subtema"
 msgstr "Subtema"
 
@@ -2806,22 +2822,24 @@ msgstr "Taça criada com sucesso."
 msgid "Taça gravada com sucesso."
 msgstr "Taça gravada com sucesso."
 
-#: src/utils/getGenreTranslation.js:38
+#: src/utils/getGenreTranslation.js:39
 msgid "Teatro"
 msgstr "Teatro"
 
-#: src/utils/getGenreTranslation.js:64
+#: src/utils/getGenreTranslation.js:65
 msgid "Tecnologia e Invenções"
 msgstr "Tecnologia e Invenções"
 
-#: src/utils/getGenreTranslation.js:41
+#: src/utils/getGenreTranslation.js:42
 msgid "Televisão"
 msgstr "Televisão"
 
 #: src/views/Profile/Statistics.js:177
 #: src/views/Quiz/OpponentStats.js:163
 #: src/views/admin/externalQuestions/ExternalQuestions.js:258
-#: src/views/admin/questions/Questions.js:209
+#: src/views/admin/questions/Questions.js:251
+#: src/views/admin/questions/Questions.js:361
+#: src/views/admin/questions/Questions.js:408
 msgid "Tema"
 msgstr "Tema"
 
@@ -2861,8 +2879,8 @@ msgstr "Temporada | Criar"
 msgid "Temporada | Editar"
 msgstr "Temporada | Editar"
 
-#: src/partials/Header.js:223
-#: src/partials/Header.js:321
+#: src/partials/Header.js:219
+#: src/partials/Header.js:259
 #: src/routes.js:265
 #: src/views/admin/seasons/Seasons.js:87
 msgid "Temporadas"
@@ -2922,7 +2940,7 @@ msgid "Tens pontos por atribuir.<0/>Atribui-os antes de fazer a submissão."
 msgstr "Tens pontos por atribuir.<0/>Atribui-os antes de fazer a submissão."
 
 #: src/views/admin/externalQuestions/ExternalQuestions.js:203
-#: src/views/admin/questions/Questions.js:164
+#: src/views/admin/questions/Questions.js:206
 msgid "Texto"
 msgstr "Texto"
 
@@ -2960,11 +2978,11 @@ msgstr "Total"
 msgid "Total de respostas"
 msgstr "Total de respostas"
 
-#: src/utils/getGenreTranslation.js:57
+#: src/utils/getGenreTranslation.js:58
 msgid "Tradições"
 msgstr "Tradições"
 
-#: src/utils/getGenreTranslation.js:61
+#: src/utils/getGenreTranslation.js:62
 msgid "Transportes"
 msgstr "Transportes"
 
@@ -2972,12 +2990,12 @@ msgstr "Transportes"
 msgid "Trinidade e Tobago"
 msgstr "Trinidade e Tobago"
 
-#: src/utils/getGenreTranslation.js:68
+#: src/utils/getGenreTranslation.js:69
 msgid "Trivialidades"
 msgstr "Trivialidades"
 
 #: src/views/admin/externalQuestions/ExternalQuestions.js:222
-#: src/views/admin/questions/Questions.js:183
+#: src/views/admin/questions/Questions.js:225
 msgid "Tudo"
 msgstr "Tudo"
 
@@ -2985,7 +3003,7 @@ msgstr "Tudo"
 msgid "Tunísia"
 msgstr "Tunísia"
 
-#: src/utils/getGenreTranslation.js:59
+#: src/utils/getGenreTranslation.js:60
 msgid "Turismo"
 msgstr "Turismo"
 
@@ -3033,7 +3051,7 @@ msgstr "Utilizador actualizado com sucesso."
 msgid "Utilizador registado com sucesso.<0/>Clica <1>aqui</1> e usa as tuas credenciais."
 msgstr "Utilizador registado com sucesso.<0/>Clica <1>aqui</1> e usa as tuas credenciais."
 
-#: src/partials/Header.js:212
+#: src/partials/Header.js:248
 #: src/routes.js:215
 #: src/views/admin/users/Users.js:142
 msgid "Utilizadores"
@@ -3047,7 +3065,7 @@ msgstr "Uzbequistão"
 msgid "V"
 msgstr "V"
 
-#: src/views/Account.js:654
+#: src/views/Account.js:658
 #: src/views/admin/users/modals/EditUserModal.js:161
 #: src/views/admin/users/modals/EditUserModal.js:219
 msgid "Validade da subscrição"
@@ -3191,6 +3209,6 @@ msgstr "Évora"
 msgid "Índia"
 msgstr "Índia"
 
-#: src/utils/getGenreTranslation.js:37
+#: src/utils/getGenreTranslation.js:38
 msgid "Óperas e Musicais"
 msgstr "Óperas e Musicais"
