@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 import classnames from 'classnames';
-import useDeepCompareEffect from 'use-deep-compare-effect';
 import { toast } from 'react-toastify';
 
 import { useStateValue } from 'state/State';
@@ -20,7 +19,7 @@ import classes from './Questions.module.scss';
 
 const Questions = () => {
   const history = useHistory();
-  const location = useLocation();
+  const [params] = useState(new URLSearchParams(useLocation().search));
   const [
     {
       user,
@@ -36,10 +35,10 @@ const Questions = () => {
   const [selectedSubgenre, setSelectedSubgenre] = useState('');
   const [page, setPage] = useState();
   const [historyParams, setHistoryParams] = useState({
-    search: '',
-    searchField: '',
-    genre: undefined,
-    page: undefined,
+    search: params.get('search') || '',
+    searchField: params.get('search_field') || '',
+    genre: params.get('genre') || undefined,
+    page: params.get('page') || undefined,
   });
   const [questionToEdit, setQuestionToEdit] = useState();
   const [updating, setUpdating] = useState(false);
@@ -56,7 +55,6 @@ const Questions = () => {
 
   useEffect(() => {
     if (genres) {
-      const params = new URLSearchParams(location.search);
       if (params.get('genre')) {
         const paramGenre = genres.find(
           (item) => item.id === parseInt(params.get('genre'))
@@ -101,30 +99,27 @@ const Questions = () => {
         setPage(1);
       }
     }
-  }, [location.search, genres]);
+  }, [params, genres]);
 
   useEffect(() => {
-    if (genres && location.search) {
+    if (genres) {
       setQuestions();
-      ApiRequest.get(`questions${location.search}`)
+      setPage(historyParams.page);
+      const queryString = `?search=${historyParams.search || ''}&search_field=${
+        historyParams.searchField || ''
+      }${historyParams.genre ? `&genre=${historyParams.genre}` : ''}${
+        historyParams.page ? `&page=${historyParams.page}` : ''
+      }${historyParams.genre ? `&type=quiz` : ''}`;
+      ApiRequest.get(`questions${queryString}`)
         .then(({ data }) => {
           setQuestions(data);
         })
         .catch(({ response }) => {
           setError(response?.status);
         });
+      history.push(`/admin/questions${queryString}`);
     }
-  }, [genres, location.search]);
-
-  useDeepCompareEffect(() => {
-    history.push(
-      `/admin/questions?search=${historyParams.search || ''}&search_field=${
-        historyParams.searchField || ''
-      }${historyParams.genre ? `&genre=${historyParams.genre}` : ''}${
-        historyParams.page ? `&page=${historyParams.page}` : ''
-      }${historyParams.genre ? `&type=quiz` : ''}`
-    );
-  }, [history, historyParams]);
+  }, [history, genres, historyParams]);
 
   if (!user) {
     return <Error status={401} />;
