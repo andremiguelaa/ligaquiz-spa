@@ -181,8 +181,8 @@ const Notifications = () => {
       notifications.special_quiz_yesterday.winners.length > 0) ||
     (notifications.quiz && location.pathname !== '/quiz') ||
     (notifications.special_quiz && location.pathname !== '/special-quiz') ||
-    (regularRemainingDays !== undefined && regularRemainingDays < 8) ||
-    (specialRemainingDays !== undefined && specialRemainingDays < 8) ||
+    (regularRemainingDays !== undefined && regularRemainingDays < 10) ||
+    (specialRemainingDays !== undefined && specialRemainingDays < 10) ||
     (user && user.roles === null) ||
     notifications.not_corrected_quizzes ||
     notifications.not_corrected_special_quizzes
@@ -258,7 +258,7 @@ const Notifications = () => {
             <Markdown content={notification.content} />
           </div>
         ))}
-        {regularRemainingDays !== undefined && regularRemainingDays < 8 && (
+        {regularRemainingDays !== undefined && regularRemainingDays < 10 && (
           <div className={`notification is-danger`}>
             {regularRemainingDays > 1 && (
               <Trans>
@@ -287,7 +287,7 @@ const Notifications = () => {
             </Trans>
           </div>
         )}
-        {specialRemainingDays !== undefined && specialRemainingDays < 8 && (
+        {specialRemainingDays !== undefined && specialRemainingDays < 10 && (
           <div className={`notification is-danger`}>
             {specialRemainingDays > 1 && (
               <Trans>
