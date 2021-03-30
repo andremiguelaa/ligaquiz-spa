@@ -97,8 +97,7 @@ const Cup = () => {
                 } else {
                   setLoading(false);
                 }
-              })
-              .then(() => {});
+              });
           } else {
             setCupData();
             setLoading(false);
