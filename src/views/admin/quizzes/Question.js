@@ -160,7 +160,12 @@ const Question = ({
             defaultValue={content}
             className="textarea"
             onChange={(event) => {
-              setContent(event.target.value);
+              setContent(
+                event.target.value.replace(
+                  /[\x00-\x09\x0B-\x0C\x0E-\x1F\x7F-\x9F]/g,
+                  ''
+                )
+              );
             }}
           ></textarea>
         </div>
@@ -176,7 +181,12 @@ const Question = ({
             defaultValue={answer}
             className="input"
             onChange={(event) => {
-              setAnswer(event.target.value);
+              setAnswer(
+                event.target.value.replace(
+                  /[\x00-\x09\x0B-\x0C\x0E-\x1F\x7F-\x9F]/g,
+                  ''
+                )
+              );
             }}
           />
         </div>

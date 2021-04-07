@@ -1,7 +1,7 @@
 {
   "name": "liga-quiz-spa",
   "homepage": ".",
-  "version": "4.39.0",
+  "version": "4.39.1",
   "private": true,
   "dependencies": {
     "@creativebulma/bulma-tooltip": "^1.2.0",
@@ -51,7 +51,10 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "rules": {
+      "no-control-regex": 0
+    }
   },
   "browserslist": {
     "production": [
