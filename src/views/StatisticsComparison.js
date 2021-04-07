@@ -284,137 +284,143 @@ const Statistics = () => {
       </section>
       {games && gameStatistics ? (
         <>
-          {games.length > 0 && (
-            <section className="section content">
-              <div className="table-container">
-                <table
-                  className={classnames(
-                    'table',
-                    'is-fullwidth',
-                    'is-hoverable',
-                    classes.compareTables
-                  )}
-                >
-                  <tbody>
-                    <tr>
-                      <th>
-                        <Trans>Jogos</Trans>
-                      </th>
-                      <td>{gameStatistics.total}</td>
-                    </tr>
-                    <tr>
-                      <th>
-                        {users[0].name} {users[0].surname} (
-                        <Trans>Vitórias</Trans>)
-                      </th>
-                      <td>
-                        {gameStatistics.wins} (
-                        {Math.round(
-                          (gameStatistics.wins / gameStatistics.total) * 100
-                        )}
-                        %)
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>
-                        {users[1].name} {users[1].surname} (
-                        <Trans>Vitórias</Trans>)
-                      </th>
-                      <td>
-                        {gameStatistics.losses} (
-                        {Math.round(
-                          (gameStatistics.losses / gameStatistics.total) * 100
-                        )}
-                        %)
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>
-                        <Trans>Empates</Trans>
-                      </th>
-                      <td>
-                        {gameStatistics.draws} (
-                        {Math.round(
-                          (gameStatistics.draws / gameStatistics.total) * 100
-                        )}
-                        %)
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>
-                        {users[0].name} {users[0].surname} (
-                        <Trans>Respostas correctas</Trans>)
-                      </th>
-                      <td>{gameStatistics.user1correctAnswers}</td>
-                    </tr>
-                    <tr>
-                      <th>
-                        {users[1].name} {users[1].surname} (
-                        <Trans>Respostas correctas</Trans>)
-                      </th>
-                      <td>{gameStatistics.user2correctAnswers}</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div className="table-container">
-                <table
-                  className={classnames(
-                    'table',
-                    'is-fullwidth',
-                    'is-hoverable',
-                    classes.compareTables
-                  )}
-                >
-                  <thead>
-                    <tr>
-                      <th>
-                        <Trans>Data</Trans>
-                      </th>
-                      <th>
-                        <Trans>Resultado</Trans>
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {games.map((game) => (
-                      <Fragment key={game.id}>
-                        {game.done && game.corrected && (
-                          <tr>
-                            <td>
-                              <Link to={`/quiz/${game.date}`}>
-                                {convertToLongDate(game.date, language)}
-                              </Link>
-                            </td>
-                            <td>
-                              <Link
-                                to={`/${
-                                  game.type === 'cup' ? 'cup-' : ''
-                                }game/${game.date}/${game.originalUser1}/${
-                                  game.originalUser2
-                                }`}
-                              >
-                                {users[0].name} {users[0].surname}{' '}
-                                {game.user1_points}
-                                {game.user1_points !== 'F' && (
-                                  <> ({game.user1_answers})</>
-                                )}{' '}
-                                -{' '}
-                                {game.user2_points !== 'F' && (
-                                  <>({game.user2_answers})</>
-                                )}{' '}
-                                {game.user2_points} {users[1].name}{' '}
-                                {users[1].surname}
-                              </Link>
-                            </td>
-                          </tr>
-                        )}
-                      </Fragment>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </section>
+          {gameStatistics.total > 0 && (
+            <>
+              {games.length > 0 && (
+                <section className="section content">
+                  <div className="table-container">
+                    <table
+                      className={classnames(
+                        'table',
+                        'is-fullwidth',
+                        'is-hoverable',
+                        classes.compareTables
+                      )}
+                    >
+                      <tbody>
+                        <tr>
+                          <th>
+                            <Trans>Jogos</Trans>
+                          </th>
+                          <td>{gameStatistics.total}</td>
+                        </tr>
+                        <tr>
+                          <th>
+                            {users[0].name} {users[0].surname} (
+                            <Trans>Vitórias</Trans>)
+                          </th>
+                          <td>
+                            {gameStatistics.wins} (
+                            {Math.round(
+                              (gameStatistics.wins / gameStatistics.total) * 100
+                            )}
+                            %)
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>
+                            {users[1].name} {users[1].surname} (
+                            <Trans>Vitórias</Trans>)
+                          </th>
+                          <td>
+                            {gameStatistics.losses} (
+                            {Math.round(
+                              (gameStatistics.losses / gameStatistics.total) *
+                                100
+                            )}
+                            %)
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>
+                            <Trans>Empates</Trans>
+                          </th>
+                          <td>
+                            {gameStatistics.draws} (
+                            {Math.round(
+                              (gameStatistics.draws / gameStatistics.total) *
+                                100
+                            )}
+                            %)
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>
+                            {users[0].name} {users[0].surname} (
+                            <Trans>Respostas correctas</Trans>)
+                          </th>
+                          <td>{gameStatistics.user1correctAnswers}</td>
+                        </tr>
+                        <tr>
+                          <th>
+                            {users[1].name} {users[1].surname} (
+                            <Trans>Respostas correctas</Trans>)
+                          </th>
+                          <td>{gameStatistics.user2correctAnswers}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div className="table-container">
+                    <table
+                      className={classnames(
+                        'table',
+                        'is-fullwidth',
+                        'is-hoverable',
+                        classes.compareTables
+                      )}
+                    >
+                      <thead>
+                        <tr>
+                          <th>
+                            <Trans>Data</Trans>
+                          </th>
+                          <th>
+                            <Trans>Resultado</Trans>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {games.map((game) => (
+                          <Fragment key={game.id}>
+                            {game.done && game.corrected && (
+                              <tr>
+                                <td>
+                                  <Link to={`/quiz/${game.date}`}>
+                                    {convertToLongDate(game.date, language)}
+                                  </Link>
+                                </td>
+                                <td>
+                                  <Link
+                                    to={`/${
+                                      game.type === 'cup' ? 'cup-' : ''
+                                    }game/${game.date}/${game.originalUser1}/${
+                                      game.originalUser2
+                                    }`}
+                                  >
+                                    {users[0].name} {users[0].surname}{' '}
+                                    {game.user1_points}
+                                    {game.user1_points !== 'F' && (
+                                      <> ({game.user1_answers})</>
+                                    )}{' '}
+                                    -{' '}
+                                    {game.user2_points !== 'F' && (
+                                      <>({game.user2_answers})</>
+                                    )}{' '}
+                                    {game.user2_points} {users[1].name}{' '}
+                                    {users[1].surname}
+                                  </Link>
+                                </td>
+                              </tr>
+                            )}
+                          </Fragment>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </section>
+              )}
+            </>
           )}
         </>
       ) : (
