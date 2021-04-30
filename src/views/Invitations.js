@@ -76,10 +76,13 @@ const Invitations = () => {
       <PageHeader
         title={<Trans>Convites</Trans>}
         subtitle={
-          <Trans>
-            Nesta página podes convidar outros jogadores a participar na{' '}
-            {process.env.REACT_APP_NAME}
-          </Trans>
+          <>
+            <Trans>
+              Nesta página podes convidar outros jogadores a participar na{' '}
+              {process.env.REACT_APP_NAME}. Por cada jogador que convidares e se
+              tornar um subscritor pago, ganhas um mês grátis.
+            </Trans>
+          </>
         }
       />
       <div className="section content">

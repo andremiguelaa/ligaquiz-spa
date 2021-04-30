@@ -31,11 +31,11 @@
       ]
     ]
   },
-  "Nesta página podes convidar outros jogadores a participar na {0}": {
+  "Nesta página podes convidar outros jogadores a participar na {0}. Por cada jogador que convidares e se tornar um subscritor pago, ganhas um mês grátis.": {
     "origin": [
       [
         "src/views/Invitations.js",
-        79
+        80
       ]
     ]
   },
@@ -43,7 +43,7 @@
     "origin": [
       [
         "src/views/Invitations.js",
-        96
+        99
       ]
     ]
   },
@@ -51,7 +51,7 @@
     "origin": [
       [
         "src/views/Invitations.js",
-        113
+        116
       ]
     ]
   },
@@ -59,7 +59,7 @@
     "origin": [
       [
         "src/views/Invitations.js",
-        123
+        126
       ]
     ]
   }

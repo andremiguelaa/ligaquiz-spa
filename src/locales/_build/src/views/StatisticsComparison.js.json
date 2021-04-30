@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/views/StatisticsComparison.js",
-        301
+        303
       ]
     ]
   },
@@ -27,11 +27,11 @@
     "origin": [
       [
         "src/views/StatisticsComparison.js",
-        308
+        310
       ],
       [
         "src/views/StatisticsComparison.js",
-        321
+        323
       ]
     ]
   },
@@ -39,7 +39,7 @@
     "origin": [
       [
         "src/views/StatisticsComparison.js",
-        333
+        336
       ]
     ]
   },
@@ -47,11 +47,11 @@
     "origin": [
       [
         "src/views/StatisticsComparison.js",
-        346
+        350
       ],
       [
         "src/views/StatisticsComparison.js",
-        353
+        357
       ]
     ]
   },
@@ -59,7 +59,7 @@
     "origin": [
       [
         "src/views/StatisticsComparison.js",
-        372
+        376
       ]
     ]
   },
@@ -67,7 +67,7 @@
     "origin": [
       [
         "src/views/StatisticsComparison.js",
-        375
+        379
       ]
     ]
   }

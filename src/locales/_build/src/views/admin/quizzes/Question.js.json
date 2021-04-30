@@ -23,7 +23,7 @@
       ],
       [
         "src/views/admin/quizzes/Question.js",
-        261
+        271
       ]
     ]
   },
@@ -39,7 +39,7 @@
     "origin": [
       [
         "src/views/admin/quizzes/Question.js",
-        172
+        177
       ]
     ]
   },
@@ -47,7 +47,7 @@
     "origin": [
       [
         "src/views/admin/quizzes/Question.js",
-        185
+        195
       ]
     ]
   },
@@ -55,7 +55,7 @@
     "origin": [
       [
         "src/views/admin/quizzes/Question.js",
-        214
+        224
       ]
     ]
   },
@@ -63,7 +63,7 @@
     "origin": [
       [
         "src/views/admin/quizzes/Question.js",
-        229
+        239
       ]
     ]
   }
